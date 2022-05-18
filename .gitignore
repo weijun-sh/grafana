@@ -6,7 +6,6 @@ coverage/
 awsconfig
 /.awcache
 /dist
-/public/build
 /public/views/index.html
 /public/views/error.html
 /emails/dist
@@ -69,7 +68,6 @@ public/css/*.min.css
 .stylelintcache
 
 /data/*
-/bin/*
 
 # devenv
 /devenv/docker-compose.yaml
