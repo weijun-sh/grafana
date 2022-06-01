@@ -6,8 +6,6 @@ coverage/
 awsconfig
 /.awcache
 /dist
-/public/views/index.html
-/public/views/error.html
 /emails/dist
 /reports
 /e2e/tmp
