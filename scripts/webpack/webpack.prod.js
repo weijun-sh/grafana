@@ -12,7 +12,7 @@ const common = require('./webpack.common.js');
 module.exports = (env = {}) =>
   merge(common, {
     mode: 'production',
-    devtool: 'source-map',
+//  devtool: 'source-map',
 
     entry: {
       dark: './public/sass/grafana.dark.scss',
@@ -45,9 +45,9 @@ module.exports = (env = {}) =>
       nodeEnv: 'production',
       minimize: parseInt(env.noMinify, 10) !== 1,
       minimizer: [
-        new TerserPlugin({
-          parallel: false,
-        }),
+//      new TerserPlugin({
+//        parallel: false,
+//      }),
         new CssMinimizerPlugin(),
       ],
     },
