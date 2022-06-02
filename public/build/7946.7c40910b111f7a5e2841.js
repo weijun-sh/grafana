@@ -1,7 +1,7 @@
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[7946],{
 
-/***/ "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/theme/textmate.js":
-/***/ (() => {
+ "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/theme/textmate.js":
+ (() => {
 
 ace.define("ace/theme/textmate",["require","exports","module","ace/lib/dom"], function(acequire, exports, module) {
 "use strict";
@@ -134,6 +134,6 @@ dom.importCssString(exports.cssText, exports.cssClass);
 });
 
 
-/***/ })
+ })
 
 }]);

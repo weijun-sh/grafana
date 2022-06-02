@@ -1,7 +1,7 @@
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[4934],{
 
-/***/ "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/mode/sql.js":
-/***/ (() => {
+ "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/mode/sql.js":
+ (() => {
 
 ace.define("ace/mode/sql_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(acequire, exports, module) {
 "use strict";
@@ -47,16 +47,16 @@ var SqlHighlightRules = function() {
             start : "/\\*",
             end : "\\*/"
         }, {
-            token : "string",           // " string
+            token : "string",           
             regex : '".*?"'
         }, {
-            token : "string",           // ' string
+            token : "string",           
             regex : "'.*?'"
         }, {
-            token : "string",           // ` string (apache drill)
+            token : "string",           
             regex : "`.*?`"
         }, {
-            token : "constant.numeric", // float
+            token : "constant.numeric", 
             regex : "[+-]?\\d+(?:(?:\\.\\d*)?(?:[eE][+-]?\\d+)?)?\\b"
         }, {
             token : keywordMapper,
@@ -108,6 +108,6 @@ exports.Mode = Mode;
 });
 
 
-/***/ })
+ })
 
 }]);

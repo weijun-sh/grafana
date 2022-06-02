@@ -1,24 +1,20 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[3549],{
 
-/***/ "./public/app/plugins/datasource/cloud-monitoring/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/cloud-monitoring/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "plugin": () => (/* binding */ module_plugin)
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloud-monitoring/annotations_query_ctrl.ts
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 class CloudMonitoringAnnotationsQueryCtrl {
-  /** @ngInject */
   constructor($scope) {
     this.annotation = $scope.ctrl.annotation || {};
     this.annotation.target = $scope.ctrl.annotation.target || {};
@@ -33,13 +29,10 @@ class CloudMonitoringAnnotationsQueryCtrl {
 CloudMonitoringAnnotationsQueryCtrl.$inject = ["$scope"];
 
 _defineProperty(CloudMonitoringAnnotationsQueryCtrl, "templateUrl", 'partials/annotations.editor.html');
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloud-monitoring/components/CloudMonitoringCheatSheet.tsx
+;
 var _h, _p, _code, _br, _code2, _br2, _br3, _label, _br4, _li, _li2, _li3, _li4, _li5, _li6, _li7, _li8, _li9, _li10, _li11, _li12;
 
 
@@ -48,68 +41,68 @@ var _h, _p, _code, _br, _code2, _br2, _br3, _label, _br4, _li, _li2, _li3, _li4,
 
 class CloudMonitoringCheatSheet extends react.PureComponent {
   render() {
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-      children: [_h || (_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h2", {
+    return (0,jsx_runtime.jsxs)("div", {
+      children: [_h || (_h = (0,jsx_runtime.jsx)("h2", {
         children: "Cloud Monitoring alias patterns"
-      })), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-        children: [_p || (_p = /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+      })), (0,jsx_runtime.jsxs)("div", {
+        children: [_p || (_p = (0,jsx_runtime.jsx)("p", {
           children: "Format the legend keys any way you want by using alias patterns. Format the legend keys any way you want by using alias patterns."
-        })), "Example:", _code || (_code = /*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+        })), "Example:", _code || (_code = (0,jsx_runtime.jsx)("code", {
           children: `${'{{metric.name}} - {{metric.label.instance_name}}'}`
-        })), _br || (_br = /*#__PURE__*/(0,jsx_runtime.jsx)("br", {})), "Result: \xA0\xA0", _code2 || (_code2 = /*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+        })), _br || (_br = (0,jsx_runtime.jsx)("br", {})), "Result: \xA0\xA0", _code2 || (_code2 = (0,jsx_runtime.jsx)("code", {
           children: "cpu/usage_time - server1-europe-west-1"
-        })), _br2 || (_br2 = /*#__PURE__*/(0,jsx_runtime.jsx)("br", {})), _br3 || (_br3 = /*#__PURE__*/(0,jsx_runtime.jsx)("br", {})), _label || (_label = /*#__PURE__*/(0,jsx_runtime.jsx)("label", {
+        })), _br2 || (_br2 = (0,jsx_runtime.jsx)("br", {})), _br3 || (_br3 = (0,jsx_runtime.jsx)("br", {})), _label || (_label = (0,jsx_runtime.jsx)("label", {
           children: "Patterns"
-        })), _br4 || (_br4 = /*#__PURE__*/(0,jsx_runtime.jsx)("br", {})), /*#__PURE__*/(0,jsx_runtime.jsxs)("ul", {
+        })), _br4 || (_br4 = (0,jsx_runtime.jsx)("br", {})), (0,jsx_runtime.jsxs)("ul", {
           className: emotion_css_esm.css`
               list-style: none;
             `,
-          children: [_li || (_li = /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+          children: [_li || (_li = (0,jsx_runtime.jsxs)("li", {
+            children: [(0,jsx_runtime.jsx)("code", {
               children: `${'{{metric.type}}'}`
             }), " = metric type e.g. compute.googleapis.com/instance/cpu/usage_time"]
-          })), _li2 || (_li2 = /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+          })), _li2 || (_li2 = (0,jsx_runtime.jsxs)("li", {
+            children: [(0,jsx_runtime.jsx)("code", {
               children: `${'{{metric.name}}'}`
             }), " = name part of metric e.g. instance/cpu/usage_time"]
-          })), _li3 || (_li3 = /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+          })), _li3 || (_li3 = (0,jsx_runtime.jsxs)("li", {
+            children: [(0,jsx_runtime.jsx)("code", {
               children: `${'{{metric.service}}'}`
             }), " = service part of metric e.g. compute"]
-          })), _li4 || (_li4 = /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+          })), _li4 || (_li4 = (0,jsx_runtime.jsxs)("li", {
+            children: [(0,jsx_runtime.jsx)("code", {
               children: `${'{{metric.label.label_name}}'}`
             }), " = Metric label metadata e.g. metric.label.instance_name"]
-          })), _li5 || (_li5 = /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+          })), _li5 || (_li5 = (0,jsx_runtime.jsxs)("li", {
+            children: [(0,jsx_runtime.jsx)("code", {
               children: `${'{{resource.label.label_name}}'}`
             }), " = Resource label metadata e.g. resource.label.zone"]
-          })), _li6 || (_li6 = /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+          })), _li6 || (_li6 = (0,jsx_runtime.jsxs)("li", {
+            children: [(0,jsx_runtime.jsx)("code", {
               children: `${'{{metadata.system_labels.name}}'}`
             }), " = Meta data system labels e.g. metadata.system_labels.name. For this to work, the needs to be included in the group by"]
-          })), _li7 || (_li7 = /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+          })), _li7 || (_li7 = (0,jsx_runtime.jsxs)("li", {
+            children: [(0,jsx_runtime.jsx)("code", {
               children: `${'{{metadata.user_labels.name}}'}`
             }), " = Meta data user labels e.g. metadata.user_labels.name. For this to work, the needs to be included in the group by"]
-          })), _li8 || (_li8 = /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+          })), _li8 || (_li8 = (0,jsx_runtime.jsxs)("li", {
+            children: [(0,jsx_runtime.jsx)("code", {
               children: `${'{{bucket}}'}`
             }), " = bucket boundary for distribution metrics when using a heatmap in Grafana"]
-          })), _li9 || (_li9 = /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+          })), _li9 || (_li9 = (0,jsx_runtime.jsxs)("li", {
+            children: [(0,jsx_runtime.jsx)("code", {
               children: `${'{{project}}'}`
             }), " = The project name that was specified in the query editor"]
-          })), _li10 || (_li10 = /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+          })), _li10 || (_li10 = (0,jsx_runtime.jsxs)("li", {
+            children: [(0,jsx_runtime.jsx)("code", {
               children: `${'{{service}}'}`
             }), " = The service id that was specified in the SLO query editor"]
-          })), _li11 || (_li11 = /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+          })), _li11 || (_li11 = (0,jsx_runtime.jsxs)("li", {
+            children: [(0,jsx_runtime.jsx)("code", {
               children: `${'{{slo}}'}`
             }), " = The SLO id that was specified in the SLO query editor"]
-          })), _li12 || (_li12 = /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+          })), _li12 || (_li12 = (0,jsx_runtime.jsxs)("li", {
+            children: [(0,jsx_runtime.jsx)("code", {
               children: `${'{{selector}}'}`
             }), " = The Selector function that was specified in the SLO query editor"]
           }))]
@@ -119,32 +112,26 @@ class CloudMonitoringCheatSheet extends react.PureComponent {
   }
 
 }
-// EXTERNAL MODULE: ./.yarn/cache/@grafana-google-sdk-npm-0.0.3-c91663433f-9eb5e043e0.zip/node_modules/@grafana/google-sdk/index.js
 var google_sdk = __webpack_require__("./.yarn/cache/@grafana-google-sdk-npm-0.0.3-c91663433f-9eb5e043e0.zip/node_modules/@grafana/google-sdk/index.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloud-monitoring/components/ConfigEditor/ConfigEditor.tsx
+;
 
 
 
 
 class ConfigEditor extends react.PureComponent {
   render() {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(google_sdk.ConnectionConfig, Object.assign({}, this.props))
+    return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+      children: (0,jsx_runtime.jsx)(google_sdk.ConnectionConfig, Object.assign({}, this.props))
     });
   }
 
 }
-// EXTERNAL MODULE: ./public/app/plugins/datasource/cloud-monitoring/components/QueryEditor.tsx
 var QueryEditor = __webpack_require__("./public/app/plugins/datasource/cloud-monitoring/components/QueryEditor.tsx");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/cloud-monitoring/functions.ts
 var functions = __webpack_require__("./public/app/plugins/datasource/cloud-monitoring/functions.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/cloud-monitoring/types.ts
 var types = __webpack_require__("./public/app/plugins/datasource/cloud-monitoring/types.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/cloud-monitoring/components/index.ts + 14 modules
 var components = __webpack_require__("./public/app/plugins/datasource/cloud-monitoring/components/index.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloud-monitoring/components/VariableQueryEditor.tsx
+;
 var _div;
 
 const _excluded = ["metricDescriptors", "labels", "metricTypes", "services"];
@@ -166,40 +153,40 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
     super(props);
 
     VariableQueryEditor_defineProperty(this, "queryTypes", [{
-      value: types/* MetricFindQueryTypes.Projects */.Bp.Projects,
+      value: types.Bp.Projects,
       label: 'Projects'
     }, {
-      value: types/* MetricFindQueryTypes.Services */.Bp.Services,
+      value: types.Bp.Services,
       label: 'Services'
     }, {
-      value: types/* MetricFindQueryTypes.MetricTypes */.Bp.MetricTypes,
+      value: types.Bp.MetricTypes,
       label: 'Metric Types'
     }, {
-      value: types/* MetricFindQueryTypes.LabelKeys */.Bp.LabelKeys,
+      value: types.Bp.LabelKeys,
       label: 'Label Keys'
     }, {
-      value: types/* MetricFindQueryTypes.LabelValues */.Bp.LabelValues,
+      value: types.Bp.LabelValues,
       label: 'Label Values'
     }, {
-      value: types/* MetricFindQueryTypes.ResourceTypes */.Bp.ResourceTypes,
+      value: types.Bp.ResourceTypes,
       label: 'Resource Types'
     }, {
-      value: types/* MetricFindQueryTypes.Aggregations */.Bp.Aggregations,
+      value: types.Bp.Aggregations,
       label: 'Aggregations'
     }, {
-      value: types/* MetricFindQueryTypes.Aligners */.Bp.Aligners,
+      value: types.Bp.Aligners,
       label: 'Aligners'
     }, {
-      value: types/* MetricFindQueryTypes.AlignmentPeriods */.Bp.AlignmentPeriods,
+      value: types.Bp.AlignmentPeriods,
       label: 'Alignment Periods'
     }, {
-      value: types/* MetricFindQueryTypes.Selectors */.Bp.Selectors,
+      value: types.Bp.Selectors,
       label: 'Selectors'
     }, {
-      value: types/* MetricFindQueryTypes.SLOServices */.Bp.SLOServices,
+      value: types.Bp.SLOServices,
       label: 'SLO Services'
     }, {
-      value: types/* MetricFindQueryTypes.SLO */.Bp.SLO,
+      value: types.Bp.SLO,
       label: 'Service Level Objectives (SLO)'
     }]);
 
@@ -236,7 +223,7 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
   async componentDidMount() {
     const projects = await this.props.datasource.getProjects();
     const metricDescriptors = await this.props.datasource.getMetricTypes(this.props.query.projectName || this.props.datasource.getDefaultProject());
-    const services = (0,functions/* extractServicesFromMetricDescriptors */.qA)(metricDescriptors).map(m => ({
+    const services = (0,functions.qA)(metricDescriptors).map(m => ({
       value: m.service,
       label: m.serviceShortName
     }));
@@ -251,7 +238,7 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
     const {
       metricTypes,
       selectedMetricType
-    } = (0,functions/* getMetricTypes */.FL)(metricDescriptors, this.state.selectedMetricType, (0,grafana_runtime_src.getTemplateSrv)().replace(this.state.selectedMetricType), (0,grafana_runtime_src.getTemplateSrv)().replace(selectedService));
+    } = (0,functions.FL)(metricDescriptors, this.state.selectedMetricType, (0,grafana_runtime_src.getTemplateSrv)().replace(this.state.selectedMetricType), (0,grafana_runtime_src.getTemplateSrv)().replace(selectedService));
     const sloServices = await this.props.datasource.getSLOServices(this.state.projectName);
     const state = Object.assign({
       services,
@@ -280,7 +267,7 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
     const {
       metricTypes,
       selectedMetricType
-    } = (0,functions/* getMetricTypes */.FL)(metricDescriptors, this.state.selectedMetricType, (0,grafana_runtime_src.getTemplateSrv)().replace(this.state.selectedMetricType), (0,grafana_runtime_src.getTemplateSrv)().replace(this.state.selectedService));
+    } = (0,functions.FL)(metricDescriptors, this.state.selectedMetricType, (0,grafana_runtime_src.getTemplateSrv)().replace(this.state.selectedMetricType), (0,grafana_runtime_src.getTemplateSrv)().replace(this.state.selectedService));
     const sloServices = await this.props.datasource.getSLOServices(projectName);
     this.setState(Object.assign({}, labels, {
       metricTypes,
@@ -295,7 +282,7 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
     const {
       metricTypes,
       selectedMetricType
-    } = (0,functions/* getMetricTypes */.FL)(this.state.metricDescriptors, this.state.selectedMetricType, (0,grafana_runtime_src.getTemplateSrv)().replace(this.state.selectedMetricType), (0,grafana_runtime_src.getTemplateSrv)().replace(service));
+    } = (0,functions.FL)(this.state.metricDescriptors, this.state.selectedMetricType, (0,grafana_runtime_src.getTemplateSrv)().replace(this.state.selectedMetricType), (0,grafana_runtime_src.getTemplateSrv)().replace(service));
     const state = Object.assign({
       selectedService: service,
       metricTypes,
@@ -333,8 +320,8 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
       labelKey: this.state.labelKey
     };
 
-    if (selectedMetricType && selectedQueryType === types/* MetricFindQueryTypes.LabelValues */.Bp.LabelValues) {
-      const labels = await (0,functions/* getLabelKeys */.Qd)(this.props.datasource, selectedMetricType, projectName);
+    if (selectedMetricType && selectedQueryType === types.Bp.LabelValues) {
+      const labels = await (0,functions.Qd)(this.props.datasource, selectedMetricType, projectName);
       const labelKey = labels.some(l => l === (0,grafana_runtime_src.getTemplateSrv)().replace(this.state.labelKey)) ? this.state.labelKey : labels[0];
       result = {
         labels,
@@ -356,15 +343,15 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
     };
 
     switch (queryType) {
-      case types/* MetricFindQueryTypes.MetricTypes */.Bp.MetricTypes:
-        return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(components/* VariableQueryField */.Th, {
+      case types.Bp.MetricTypes:
+        return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: [(0,jsx_runtime.jsx)(components.Th, {
             allowCustomValue: true,
             value: this.state.projectName,
             options: [variableOptionGroup, ...this.state.projects],
             onChange: value => this.onProjectChange(value),
             label: "Project"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(components/* VariableQueryField */.Th, {
+          }), (0,jsx_runtime.jsx)(components.Th, {
             value: this.state.selectedService,
             options: [variableOptionGroup, ...this.state.services],
             onChange: value => this.onServiceChange(value),
@@ -372,22 +359,22 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
           })]
         });
 
-      case types/* MetricFindQueryTypes.LabelKeys */.Bp.LabelKeys:
-      case types/* MetricFindQueryTypes.LabelValues */.Bp.LabelValues:
-      case types/* MetricFindQueryTypes.ResourceTypes */.Bp.ResourceTypes:
-        return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(components/* VariableQueryField */.Th, {
+      case types.Bp.LabelKeys:
+      case types.Bp.LabelValues:
+      case types.Bp.ResourceTypes:
+        return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: [(0,jsx_runtime.jsx)(components.Th, {
             allowCustomValue: true,
             value: this.state.projectName,
             options: [variableOptionGroup, ...this.state.projects],
             onChange: value => this.onProjectChange(value),
             label: "Project"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(components/* VariableQueryField */.Th, {
+          }), (0,jsx_runtime.jsx)(components.Th, {
             value: this.state.selectedService,
             options: [variableOptionGroup, ...this.state.services],
             onChange: value => this.onServiceChange(value),
             label: "Service"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(components/* VariableQueryField */.Th, {
+          }), (0,jsx_runtime.jsx)(components.Th, {
             value: this.state.selectedMetricType,
             options: [variableOptionGroup, ...this.state.metricTypes.map(_ref => {
               let {
@@ -401,7 +388,7 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
             })],
             onChange: value => this.onMetricTypeChange(value),
             label: "Metric Type"
-          }), queryType === types/* MetricFindQueryTypes.LabelValues */.Bp.LabelValues && /*#__PURE__*/(0,jsx_runtime.jsx)(components/* VariableQueryField */.Th, {
+          }), queryType === types.Bp.LabelValues && (0,jsx_runtime.jsx)(components.Th, {
             value: this.state.labelKey,
             options: [variableOptionGroup, ...this.state.labels.map(l => ({
               value: l,
@@ -412,15 +399,15 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
           })]
         });
 
-      case types/* MetricFindQueryTypes.Aligners */.Bp.Aligners:
-      case types/* MetricFindQueryTypes.Aggregations */.Bp.Aggregations:
-        return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(components/* VariableQueryField */.Th, {
+      case types.Bp.Aligners:
+      case types.Bp.Aggregations:
+        return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: [(0,jsx_runtime.jsx)(components.Th, {
             value: this.state.selectedService,
             options: [variableOptionGroup, ...this.state.services],
             onChange: value => this.onServiceChange(value),
             label: "Service"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(components/* VariableQueryField */.Th, {
+          }), (0,jsx_runtime.jsx)(components.Th, {
             value: this.state.selectedMetricType,
             options: [variableOptionGroup, ...this.state.metricTypes.map(_ref2 => {
               let {
@@ -437,9 +424,9 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
           })]
         });
 
-      case types/* MetricFindQueryTypes.SLOServices */.Bp.SLOServices:
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(components/* VariableQueryField */.Th, {
+      case types.Bp.SLOServices:
+        return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+          children: (0,jsx_runtime.jsx)(components.Th, {
             allowCustomValue: true,
             value: this.state.projectName,
             options: [variableOptionGroup, ...this.state.projects],
@@ -448,15 +435,15 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
           })
         });
 
-      case types/* MetricFindQueryTypes.SLO */.Bp.SLO:
-        return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(components/* VariableQueryField */.Th, {
+      case types.Bp.SLO:
+        return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: [(0,jsx_runtime.jsx)(components.Th, {
             allowCustomValue: true,
             value: this.state.projectName,
             options: [variableOptionGroup, ...this.state.projects],
             onChange: value => this.onProjectChange(value),
             label: "Project"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(components/* VariableQueryField */.Th, {
+          }), (0,jsx_runtime.jsx)(components.Th, {
             value: this.state.selectedSLOService,
             options: [variableOptionGroup, ...this.state.sloServices],
             onChange: value => {
@@ -475,16 +462,16 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
 
   render() {
     if (this.state.loading) {
-      return _div || (_div = /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      return _div || (_div = (0,jsx_runtime.jsxs)("div", {
         className: "gf-form max-width-21",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+        children: [(0,jsx_runtime.jsx)("span", {
           className: "gf-form-label width-10 query-keyword",
           children: "Query Type"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        }), (0,jsx_runtime.jsx)("div", {
           className: "gf-form-select-wrapper max-width-12",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("select", {
+          children: (0,jsx_runtime.jsx)("select", {
             className: "gf-form-input",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)("option", {
+            children: (0,jsx_runtime.jsx)("option", {
               children: "Loading..."
             })
           })
@@ -492,8 +479,8 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
       }));
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(components/* VariableQueryField */.Th, {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(components.Th, {
         value: this.state.selectedQueryType,
         options: this.queryTypes,
         onChange: value => this.onQueryTypeChange(value),
@@ -503,25 +490,16 @@ class CloudMonitoringVariableQueryEditor extends react.PureComponent {
   }
 
 }
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js
 var lastValueFrom = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/from.js
 var from = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/from.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js
 var mergeMap = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js");
-// EXTERNAL MODULE: ./public/app/features/dashboard/services/TimeSrv.ts + 1 modules
 var TimeSrv = __webpack_require__("./public/app/features/dashboard/services/TimeSrv.ts");
-// EXTERNAL MODULE: ./public/app/features/templating/template_srv.ts + 1 modules
 var template_srv = __webpack_require__("./public/app/features/templating/template_srv.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/cloud-monitoring/constants.ts
 var constants = __webpack_require__("./public/app/plugins/datasource/cloud-monitoring/constants.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloud-monitoring/CloudMonitoringMetricFindQuery.ts
+;
 
 
 
@@ -539,40 +517,40 @@ class CloudMonitoringMetricFindQuery {
       }
 
       switch (query.selectedQueryType) {
-        case types/* MetricFindQueryTypes.Projects */.Bp.Projects:
+        case types.Bp.Projects:
           return this.handleProjectsQuery();
 
-        case types/* MetricFindQueryTypes.Services */.Bp.Services:
+        case types.Bp.Services:
           return this.handleServiceQuery(query);
 
-        case types/* MetricFindQueryTypes.MetricTypes */.Bp.MetricTypes:
+        case types.Bp.MetricTypes:
           return this.handleMetricTypesQuery(query);
 
-        case types/* MetricFindQueryTypes.LabelKeys */.Bp.LabelKeys:
+        case types.Bp.LabelKeys:
           return this.handleLabelKeysQuery(query);
 
-        case types/* MetricFindQueryTypes.LabelValues */.Bp.LabelValues:
+        case types.Bp.LabelValues:
           return this.handleLabelValuesQuery(query);
 
-        case types/* MetricFindQueryTypes.ResourceTypes */.Bp.ResourceTypes:
+        case types.Bp.ResourceTypes:
           return this.handleResourceTypeQuery(query);
 
-        case types/* MetricFindQueryTypes.Aligners */.Bp.Aligners:
+        case types.Bp.Aligners:
           return this.handleAlignersQuery(query);
 
-        case types/* MetricFindQueryTypes.AlignmentPeriods */.Bp.AlignmentPeriods:
+        case types.Bp.AlignmentPeriods:
           return this.handleAlignmentPeriodQuery();
 
-        case types/* MetricFindQueryTypes.Aggregations */.Bp.Aggregations:
+        case types.Bp.Aggregations:
           return this.handleAggregationQuery(query);
 
-        case types/* MetricFindQueryTypes.SLOServices */.Bp.SLOServices:
+        case types.Bp.SLOServices:
           return this.handleSLOServicesQuery(query);
 
-        case types/* MetricFindQueryTypes.SLO */.Bp.SLO:
+        case types.Bp.SLO:
           return this.handleSLOQuery(query);
 
-        case types/* MetricFindQueryTypes.Selectors */.Bp.Selectors:
+        case types.Bp.Selectors:
           return this.handleSelectorQuery();
 
         default:
@@ -598,7 +576,7 @@ class CloudMonitoringMetricFindQuery {
       projectName
     } = _ref;
     const metricDescriptors = await this.datasource.getMetricTypes(projectName);
-    const services = (0,functions/* extractServicesFromMetricDescriptors */.qA)(metricDescriptors);
+    const services = (0,functions.qA)(metricDescriptors);
     return services.map(s => ({
       text: s.serviceShortName,
       value: s.service,
@@ -617,7 +595,7 @@ class CloudMonitoringMetricFindQuery {
     }
 
     const metricDescriptors = await this.datasource.getMetricTypes(projectName);
-    return (0,functions/* getMetricTypesByService */.Qf)(metricDescriptors, this.datasource.templateSrv.replace(selectedService)).map(s => ({
+    return (0,functions.Qf)(metricDescriptors, this.datasource.templateSrv.replace(selectedService)).map(s => ({
       text: s.displayName,
       value: s.type,
       expandable: true
@@ -634,7 +612,7 @@ class CloudMonitoringMetricFindQuery {
       return [];
     }
 
-    const labelKeys = await (0,functions/* getLabelKeys */.Qd)(this.datasource, selectedMetricType, projectName);
+    const labelKeys = await (0,functions.Qd)(this.datasource, selectedMetricType, projectName);
     return labelKeys.map(this.toFindQueryResult);
   }
 
@@ -649,7 +627,7 @@ class CloudMonitoringMetricFindQuery {
       return [];
     }
 
-    const refId = 'handleLabelValuesQuery'; // REDUCE_MEAN is needed so the groupBy is not ignored
+    const refId = 'handleLabelValuesQuery'; 
 
     const labels = await this.datasource.getLabels(selectedMetricType, refId, projectName, {
       groupBys: [labelKey],
@@ -694,7 +672,7 @@ class CloudMonitoringMetricFindQuery {
       return [];
     }
 
-    return (0,functions/* getAlignmentOptionsByMetric */.oU)(descriptor.valueType, descriptor.metricKind).map(this.toFindQueryResult);
+    return (0,functions.oU)(descriptor.valueType, descriptor.metricKind).map(this.toFindQueryResult);
   }
 
   async handleAggregationQuery(_ref7) {
@@ -714,7 +692,7 @@ class CloudMonitoringMetricFindQuery {
       return [];
     }
 
-    return (0,functions/* getAggregationOptionsByMetric */.A_)(descriptor.valueType, descriptor.metricKind).map(this.toFindQueryResult);
+    return (0,functions.A_)(descriptor.valueType, descriptor.metricKind).map(this.toFindQueryResult);
   }
 
   async handleSLOServicesQuery(_ref8) {
@@ -735,11 +713,11 @@ class CloudMonitoringMetricFindQuery {
   }
 
   async handleSelectorQuery() {
-    return constants/* SELECTORS.map */.IR.map(this.toFindQueryResult);
+    return constants.IR.map(this.toFindQueryResult);
   }
 
   handleAlignmentPeriodQuery() {
-    return constants/* ALIGNMENT_PERIODS.map */.dD.map(this.toFindQueryResult);
+    return constants.dD.map(this.toFindQueryResult);
   }
 
   toFindQueryResult(x) {
@@ -752,7 +730,7 @@ class CloudMonitoringMetricFindQuery {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloud-monitoring/variables.ts
+;
 function variables_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -775,14 +753,14 @@ class CloudMonitoringVariableSupport extends src.CustomVariableSupport {
   }
 
   query(request) {
-    const executeObservable = (0,from/* from */.D)(this.metricFindQuery.execute(request.targets[0]));
-    return (0,from/* from */.D)(this.datasource.ensureGCEDefaultProject()).pipe((0,mergeMap/* mergeMap */.z)(() => executeObservable), (0,map/* map */.U)(data => ({
+    const executeObservable = (0,from.D)(this.metricFindQuery.execute(request.targets[0]));
+    return (0,from.D)(this.datasource.ensureGCEDefaultProject()).pipe((0,mergeMap.z)(() => executeObservable), (0,map.U)(data => ({
       data
     })));
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloud-monitoring/datasource.ts
+;
 const datasource_excluded = ["hide", "refId", "datasource", "key", "queryType", "maxLines", "metric", "intervalMs", "type"];
 
 function datasource_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -799,8 +777,8 @@ function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.d
 
 class CloudMonitoringDatasource extends grafana_runtime_src.DataSourceWithBackend {
   constructor(instanceSettings) {
-    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv/* getTemplateSrv */.J)();
-    let timeSrv = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (0,TimeSrv/* getTimeSrv */.$t)();
+    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv.J)();
+    let timeSrv = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (0,TimeSrv.$t)();
     super(instanceSettings);
     this.instanceSettings = instanceSettings;
     this.templateSrv = templateSrv;
@@ -845,7 +823,7 @@ class CloudMonitoringDatasource extends grafana_runtime_src.DataSourceWithBacken
       projectName: this.templateSrv.replace(annotation.target.projectName ? annotation.target.projectName : this.getDefaultProject(), options.scopedVars || {}),
       filters: this.interpolateFilters(annotation.target.filters || [], options.scopedVars)
     }];
-    return (0,lastValueFrom/* lastValueFrom */.n)((0,grafana_runtime_src.getBackendSrv)().fetch({
+    return (0,lastValueFrom.n)((0,grafana_runtime_src.getBackendSrv)().fetch({
       url: '/api/ds/query',
       method: 'POST',
       data: {
@@ -853,7 +831,7 @@ class CloudMonitoringDatasource extends grafana_runtime_src.DataSourceWithBacken
         to: options.range.to.valueOf().toString(),
         queries
       }
-    }).pipe((0,map/* map */.U)(_ref => {
+    }).pipe((0,map.U)(_ref => {
       let {
         data
       } = _ref;
@@ -911,7 +889,7 @@ class CloudMonitoringDatasource extends grafana_runtime_src.DataSourceWithBacken
       targets: [{
         refId,
         datasource: this.getRef(),
-        queryType: types/* QueryType.METRICS */.xL.METRICS,
+        queryType: types.xL.METRICS,
         metricQuery: {
           projectName: this.templateSrv.replace(projectName),
           metricType: this.templateSrv.replace(metricType),
@@ -925,12 +903,12 @@ class CloudMonitoringDatasource extends grafana_runtime_src.DataSourceWithBacken
     const queries = options.targets;
 
     if (!queries.length) {
-      return (0,lastValueFrom/* lastValueFrom */.n)((0,of.of)({
+      return (0,lastValueFrom.n)((0,of.of)({
         results: []
       }));
     }
 
-    return (0,lastValueFrom/* lastValueFrom */.n)((0,from/* from */.D)(this.ensureGCEDefaultProject()).pipe((0,mergeMap/* mergeMap */.z)(() => {
+    return (0,lastValueFrom.n)((0,from.D)(this.ensureGCEDefaultProject()).pipe((0,mergeMap.z)(() => {
       return (0,grafana_runtime_src.getBackendSrv)().fetch({
         url: '/api/ds/query',
         method: 'POST',
@@ -940,7 +918,7 @@ class CloudMonitoringDatasource extends grafana_runtime_src.DataSourceWithBacken
           queries
         }
       });
-    }), (0,map/* map */.U)(_ref3 => {
+    }), (0,map.U)(_ref3 => {
       let {
         data
       } = _ref3;
@@ -1047,7 +1025,7 @@ class CloudMonitoringDatasource extends grafana_runtime_src.DataSourceWithBacken
         intervalMs,
         type,
         hide,
-        queryType: types/* QueryType.METRICS */.xL.METRICS,
+        queryType: types.xL.METRICS,
         metricQuery: Object.assign({}, rest, {
           view: rest.view || 'FULL'
         })
@@ -1072,7 +1050,7 @@ class CloudMonitoringDatasource extends grafana_runtime_src.DataSourceWithBacken
       return false;
     }
 
-    if (query.queryType && query.queryType === types/* QueryType.SLO */.xL.SLO && query.sloQuery) {
+    if (query.queryType && query.queryType === types.xL.SLO && query.sloQuery) {
       const {
         selectorName,
         serviceId,
@@ -1082,7 +1060,7 @@ class CloudMonitoringDatasource extends grafana_runtime_src.DataSourceWithBacken
       return !!selectorName && !!serviceId && !!sloId && !!projectName;
     }
 
-    if (query.queryType && query.queryType === types/* QueryType.METRICS */.xL.METRICS && query.metricQuery.editorMode === types/* EditorMode.MQL */.je.MQL) {
+    if (query.queryType && query.queryType === types.xL.METRICS && query.metricQuery.editorMode === types.je.MQL) {
       return !!query.metricQuery.projectName && !!query.metricQuery.query;
     }
 
@@ -1136,7 +1114,7 @@ class CloudMonitoringDatasource extends grafana_runtime_src.DataSourceWithBacken
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloud-monitoring/module.ts
+;
 
 
 
@@ -1144,8 +1122,8 @@ class CloudMonitoringDatasource extends grafana_runtime_src.DataSourceWithBacken
 
 
 
-const module_plugin = new src.DataSourcePlugin(CloudMonitoringDatasource).setQueryEditorHelp(CloudMonitoringCheatSheet).setQueryEditor(QueryEditor/* QueryEditor */.W).setConfigEditor(ConfigEditor).setAnnotationQueryCtrl(CloudMonitoringAnnotationsQueryCtrl).setVariableQueryEditor(CloudMonitoringVariableQueryEditor);
+const module_plugin = new src.DataSourcePlugin(CloudMonitoringDatasource).setQueryEditorHelp(CloudMonitoringCheatSheet).setQueryEditor(QueryEditor.W).setConfigEditor(ConfigEditor).setAnnotationQueryCtrl(CloudMonitoringAnnotationsQueryCtrl).setVariableQueryEditor(CloudMonitoringVariableQueryEditor);
 
-/***/ })
+ })
 
 }]);

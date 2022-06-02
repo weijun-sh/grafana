@@ -1,14 +1,13 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[5533],{
 
-/***/ "./public/app/features/admin/utils.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/admin/utils.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "d": () => (/* binding */ highlightTrial)
-/* harmony export */ });
-/* unused harmony export isTrial */
-/* harmony import */ var _grafana_runtime_src__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "d": () => ( highlightTrial)
+ });
+ var _grafana_runtime_src__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
 
 function isTrial() {
   var _config$licenseInfo;
@@ -18,47 +17,35 @@ function isTrial() {
 }
 const highlightTrial = () => isTrial() && _grafana_runtime_src__WEBPACK_IMPORTED_MODULE_0__.config.featureToggles.featureHighlights;
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/datasources/state/actions.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/datasources/state/actions.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "J_": () => (/* binding */ addDataSource),
-  "xU": () => (/* binding */ deleteDataSource),
-  "M9": () => (/* binding */ initDataSourceSettings),
-  "gv": () => (/* binding */ loadDataSource),
-  "Kj": () => (/* binding */ loadDataSourcePlugins),
-  "bZ": () => (/* binding */ loadDataSources),
-  "kY": () => (/* binding */ testDataSource),
-  "oe": () => (/* binding */ updateDataSource)
+  "J_": () => ( addDataSource),
+  "xU": () => ( deleteDataSource),
+  "M9": () => ( initDataSourceSettings),
+  "gv": () => ( loadDataSource),
+  "Kj": () => ( loadDataSourcePlugins),
+  "bZ": () => ( loadDataSources),
+  "kY": () => ( testDataSource),
+  "oe": () => ( updateDataSource)
 });
 
-// UNUSED EXPORTS: findNewName, getDataSourceUsingUidOrId, loadDataSourceMeta, nameExits
 
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js
 var lastValueFrom = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/actions/index.ts
 var actions = __webpack_require__("./public/app/core/actions/index.ts");
-// EXTERNAL MODULE: ./public/app/core/services/backend_srv.ts + 4 modules
 var backend_srv = __webpack_require__("./public/app/core/services/backend_srv.ts");
-// EXTERNAL MODULE: ./public/app/core/utils/accessControl.ts
 var accessControl = __webpack_require__("./public/app/core/utils/accessControl.ts");
-// EXTERNAL MODULE: ./public/app/features/plugins/datasource_srv.ts
 var datasource_srv = __webpack_require__("./public/app/features/plugins/datasource_srv.ts");
-// EXTERNAL MODULE: ./public/app/features/plugins/pluginSettings.ts
 var pluginSettings = __webpack_require__("./public/app/features/plugins/pluginSettings.ts");
-// EXTERNAL MODULE: ./public/app/features/plugins/plugin_loader.ts + 147 modules
 var plugin_loader = __webpack_require__("./public/app/features/plugins/plugin_loader.ts");
-// EXTERNAL MODULE: ./public/app/core/services/context_srv.ts
 var context_srv = __webpack_require__("./public/app/core/services/context_srv.ts");
-;// CONCATENATED MODULE: ./public/app/features/datasources/state/buildCategories.ts
+;
 
 
 function buildCategories(plugins) {
@@ -97,14 +84,14 @@ function buildCategories(plugins) {
   }].filter(item => item);
   const categoryIndex = {};
   const pluginIndex = {};
-  const enterprisePlugins = getEnterprisePhantomPlugins(); // build indices
+  const enterprisePlugins = getEnterprisePhantomPlugins(); 
 
   for (const category of categories) {
     categoryIndex[category.id] = category;
   }
 
   for (const plugin of plugins) {
-    const enterprisePlugin = enterprisePlugins.find(item => item.id === plugin.id); // Force category for enterprise plugins
+    const enterprisePlugin = enterprisePlugins.find(item => item.id === plugin.id); 
 
     if (plugin.enterprise || enterprisePlugin) {
       var _enterprisePlugin$inf;
@@ -112,7 +99,7 @@ function buildCategories(plugins) {
       plugin.category = 'enterprise';
       plugin.unlicensed = !(0,grafana_runtime_src.featureEnabled)('enterprise.plugins');
       plugin.info.links = (enterprisePlugin === null || enterprisePlugin === void 0 ? void 0 : (_enterprisePlugin$inf = enterprisePlugin.info) === null || _enterprisePlugin$inf === void 0 ? void 0 : _enterprisePlugin$inf.links) || plugin.info.links;
-    } // Fix link name
+    } 
 
 
     if (plugin.info.links) {
@@ -122,16 +109,15 @@ function buildCategories(plugins) {
     }
 
     const category = categories.find(item => item.id === plugin.category) || categoryIndex['other'];
-    category.plugins.push(plugin); // add to plugin index
+    category.plugins.push(plugin); 
 
     pluginIndex[plugin.id] = plugin;
   }
 
   for (const category of categories) {
-    // add phantom plugin
     if (category.id === 'cloud') {
       category.plugins.push(getGrafanaCloudPhantomPlugin());
-    } // add phantom plugins
+    } 
 
 
     if (category.id === 'enterprise') {
@@ -143,7 +129,7 @@ function buildCategories(plugins) {
     }
 
     sortPlugins(category.plugins);
-  } // Only show categories with plugins
+  } 
 
 
   return categories.filter(c => c.plugins.length > 0);
@@ -312,13 +298,10 @@ function getPhantomPlugin(options) {
     }
   };
 }
-// EXTERNAL MODULE: ./public/app/features/datasources/state/navModel.ts
 var navModel = __webpack_require__("./public/app/features/datasources/state/navModel.ts");
-// EXTERNAL MODULE: ./public/app/features/datasources/state/reducers.ts
 var reducers = __webpack_require__("./public/app/features/datasources/state/reducers.ts");
-// EXTERNAL MODULE: ./public/app/features/datasources/state/selectors.ts
 var selectors = __webpack_require__("./public/app/features/datasources/state/selectors.ts");
-;// CONCATENATED MODULE: ./public/app/features/datasources/state/actions.ts
+;
 
 
 
@@ -337,19 +320,19 @@ const initDataSourceSettings = function (pageId) {
   let dependencies = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
     loadDataSource,
     loadDataSourceMeta,
-    getDataSource: selectors/* getDataSource */.f6,
-    getDataSourceMeta: selectors/* getDataSourceMeta */.G4,
-    importDataSourcePlugin: plugin_loader/* importDataSourcePlugin */.nL
+    getDataSource: selectors.f6,
+    getDataSourceMeta: selectors.G4,
+    importDataSourcePlugin: plugin_loader.nL
   };
   return async (dispatch, getState) => {
     if (!pageId) {
-      dispatch((0,reducers/* initDataSourceSettingsFailed */.CT)(new Error('Invalid ID')));
+      dispatch((0,reducers.CT)(new Error('Invalid ID')));
       return;
     }
 
     try {
       const loadedDataSource = await dispatch(dependencies.loadDataSource(pageId));
-      await dispatch(dependencies.loadDataSourceMeta(loadedDataSource)); // have we already loaded the plugin then we can skip the steps below?
+      await dispatch(dependencies.loadDataSourceMeta(loadedDataSource)); 
 
       if (getState().dataSourceSettings.plugin) {
         return;
@@ -358,16 +341,16 @@ const initDataSourceSettings = function (pageId) {
       const dataSource = dependencies.getDataSource(getState().dataSources, pageId);
       const dataSourceMeta = dependencies.getDataSourceMeta(getState().dataSources, dataSource.type);
       const importedPlugin = await dependencies.importDataSourcePlugin(dataSourceMeta);
-      dispatch((0,reducers/* initDataSourceSettingsSucceeded */.iZ)(importedPlugin));
+      dispatch((0,reducers.iZ)(importedPlugin));
     } catch (err) {
-      dispatch((0,reducers/* initDataSourceSettingsFailed */.CT)(err));
+      dispatch((0,reducers.CT)(err));
     }
   };
 };
 const testDataSource = function (dataSourceName) {
   let dependencies = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
-    getDatasourceSrv: datasource_srv/* getDatasourceSrv */.ak,
-    getBackendSrv: backend_srv/* getBackendSrv */.i
+    getDatasourceSrv: datasource_srv.ak,
+    getBackendSrv: backend_srv.i
   };
   return async (dispatch, getState) => {
     const dsApi = await dependencies.getDatasourceSrv().get(dataSourceName);
@@ -376,11 +359,11 @@ const testDataSource = function (dataSourceName) {
       return;
     }
 
-    dispatch((0,reducers/* testDataSourceStarting */.j_)());
+    dispatch((0,reducers.j_)());
     dependencies.getBackendSrv().withNoBackendCache(async () => {
       try {
         const result = await dsApi.testDatasource();
-        dispatch((0,reducers/* testDataSourceSucceeded */.ng)(result));
+        dispatch((0,reducers.ng)(result));
       } catch (err) {
         const {
           statusText,
@@ -389,7 +372,7 @@ const testDataSource = function (dataSourceName) {
           data
         } = err;
         const message = errMessage || (data === null || data === void 0 ? void 0 : data.message) || 'HTTP error ' + statusText;
-        dispatch((0,reducers/* testDataSourceFailed */.Aq)({
+        dispatch((0,reducers.Aq)({
           message,
           details
         }));
@@ -399,41 +382,37 @@ const testDataSource = function (dataSourceName) {
 };
 function loadDataSources() {
   return async dispatch => {
-    const response = await (0,backend_srv/* getBackendSrv */.i)().get('/api/datasources');
-    dispatch((0,reducers/* dataSourcesLoaded */.be)(response));
+    const response = await (0,backend_srv.i)().get('/api/datasources');
+    dispatch((0,reducers.be)(response));
   };
 }
 function loadDataSource(uid) {
   return async dispatch => {
     const dataSource = await getDataSourceUsingUidOrId(uid);
-    dispatch((0,reducers/* dataSourceLoaded */.rl)(dataSource));
+    dispatch((0,reducers.rl)(dataSource));
     return dataSource;
   };
 }
 function loadDataSourceMeta(dataSource) {
   return async dispatch => {
-    const pluginInfo = await (0,pluginSettings/* getPluginSettings */.a)(dataSource.type);
-    const plugin = await (0,plugin_loader/* importDataSourcePlugin */.nL)(pluginInfo);
+    const pluginInfo = await (0,pluginSettings.a)(dataSource.type);
+    const plugin = await (0,plugin_loader.nL)(pluginInfo);
     const isBackend = plugin.DataSourceClass.prototype instanceof grafana_runtime_src.DataSourceWithBackend;
     const meta = Object.assign({}, pluginInfo, {
       isBackend: pluginInfo.backend || isBackend
     });
-    dispatch((0,reducers/* dataSourceMetaLoaded */.jS)(meta));
+    dispatch((0,reducers.jS)(meta));
     plugin.meta = meta;
-    dispatch((0,actions/* updateNavIndex */.RL)((0,navModel/* buildNavModel */.B1)(dataSource, plugin)));
+    dispatch((0,actions.RL)((0,navModel.B1)(dataSource, plugin)));
   };
 }
-/**
- * Get data source by uid or id, if old id detected handles redirect
- */
 
 async function getDataSourceUsingUidOrId(uid) {
-  // Try first with uid api
   try {
-    const byUid = await (0,lastValueFrom/* lastValueFrom */.n)((0,backend_srv/* getBackendSrv */.i)().fetch({
+    const byUid = await (0,lastValueFrom.n)((0,backend_srv.i)().fetch({
       method: 'GET',
       url: `/api/datasources/uid/${uid}`,
-      params: (0,accessControl/* accessControlQueryParam */.y)(),
+      params: (0,accessControl.y)(),
       showErrorAlert: false
     }));
 
@@ -442,32 +421,27 @@ async function getDataSourceUsingUidOrId(uid) {
     }
   } catch (err) {
     console.log('Failed to lookup data source by uid', err);
-  } // try lookup by old db id
+  } 
 
 
   const id = typeof uid === 'string' ? parseInt(uid, 10) : uid;
 
   if (!Number.isNaN(id)) {
-    const response = await (0,lastValueFrom/* lastValueFrom */.n)((0,backend_srv/* getBackendSrv */.i)().fetch({
+    const response = await (0,lastValueFrom.n)((0,backend_srv.i)().fetch({
       method: 'GET',
       url: `/api/datasources/${id}`,
-      params: (0,accessControl/* accessControlQueryParam */.y)(),
+      params: (0,accessControl.y)(),
       showErrorAlert: false
-    })); // If the uid is a number, then this is a refresh on one of the settings tabs
-    // and we can return the response data
+    })); 
 
     if (response.ok && typeof uid === 'number' && response.data.id === uid) {
       return response.data;
-    } // Not ideal to do a full page reload here but so tricky to handle this
-    // otherwise We can update the location using react router, but need to
-    // fully reload the route as the nav model page index is not matching with
-    // the url in that case. And react router has no way to unmount remount a
-    // route
+    } 
 
 
     if (response.ok && response.data.id.toString() === uid) {
       window.location.href = src.locationUtil.assureBaseUrl(`/datasources/edit/${response.data.uid}`);
-      return {}; // avoids flashing an error
+      return {}; 
     }
   }
 
@@ -488,21 +462,21 @@ function addDataSource(plugin) {
       newInstance.name = findNewName(dataSources, newInstance.name);
     }
 
-    const result = await (0,backend_srv/* getBackendSrv */.i)().post('/api/datasources', newInstance);
-    await (0,datasource_srv/* getDatasourceSrv */.ak)().reload();
-    await context_srv/* contextSrv.fetchUserPermissions */.Vt.fetchUserPermissions();
+    const result = await (0,backend_srv.i)().post('/api/datasources', newInstance);
+    await (0,datasource_srv.ak)().reload();
+    await context_srv.Vt.fetchUserPermissions();
     grafana_runtime_src.locationService.push(`/datasources/edit/${result.datasource.uid}`);
   };
 }
 function loadDataSourcePlugins() {
   return async dispatch => {
-    dispatch((0,reducers/* dataSourcePluginsLoad */.Ww)());
-    const plugins = await (0,backend_srv/* getBackendSrv */.i)().get('/api/plugins', {
+    dispatch((0,reducers.Ww)());
+    const plugins = await (0,backend_srv.i)().get('/api/plugins', {
       enabled: 1,
       type: 'datasource'
     });
     const categories = buildCategories(plugins);
-    dispatch((0,reducers/* dataSourcePluginsLoaded */.wZ)({
+    dispatch((0,reducers.wZ)({
       plugins,
       categories
     }));
@@ -510,17 +484,17 @@ function loadDataSourcePlugins() {
 }
 function updateDataSource(dataSource) {
   return async dispatch => {
-    await (0,backend_srv/* getBackendSrv */.i)().put(`/api/datasources/${dataSource.id}`, dataSource); // by UID not yet supported
+    await (0,backend_srv.i)().put(`/api/datasources/${dataSource.id}`, dataSource); 
 
-    await (0,datasource_srv/* getDatasourceSrv */.ak)().reload();
+    await (0,datasource_srv.ak)().reload();
     return dispatch(loadDataSource(dataSource.uid));
   };
 }
 function deleteDataSource() {
   return async (dispatch, getStore) => {
     const dataSource = getStore().dataSources.dataSource;
-    await (0,backend_srv/* getBackendSrv */.i)().delete(`/api/datasources/${dataSource.id}`);
-    await (0,datasource_srv/* getDatasourceSrv */.ak)().reload();
+    await (0,backend_srv.i)().delete(`/api/datasources/${dataSource.id}`);
+    await (0,datasource_srv.ak)().reload();
     grafana_runtime_src.locationService.push('/datasources');
   };
 }
@@ -530,17 +504,10 @@ function nameExits(dataSources, name) {
   }).length > 0;
 }
 function findNewName(dataSources, name) {
-  // Need to loop through current data sources to make sure
-  // the name doesn't exist
   while (nameExits(dataSources, name)) {
-    // If there's a duplicate name that doesn't end with '-x'
-    // we can add -1 to the name and be done.
     if (!nameHasSuffix(name)) {
       name = `${name}-1`;
     } else {
-      // if there's a duplicate name that ends with '-x'
-      // we can try to increment the last digit until the name is unique
-      // remove the 'x' part and replace it with the new number
       name = `${getNewName(name)}${incrementLastDigit(getLastDigit(name))}`;
     }
   }
@@ -564,23 +531,23 @@ function getNewName(name) {
   return name.slice(0, name.length - 1);
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/datasources/state/navModel.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/datasources/state/navModel.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "B1": () => (/* binding */ buildNavModel),
-/* harmony export */   "nI": () => (/* binding */ getDataSourceNav),
-/* harmony export */   "xG": () => (/* binding */ getDataSourceLoadingNav)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var app_core_components_Upgrade_ProBadge__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/core/components/Upgrade/ProBadge.tsx");
-/* harmony import */ var app_core_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/config.ts");
-/* harmony import */ var app_core_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/core.ts");
-/* harmony import */ var app_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/types/index.ts");
-/* harmony import */ var _admin_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/admin/utils.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "B1": () => ( buildNavModel),
+   "nI": () => ( getDataSourceNav),
+   "xG": () => ( getDataSourceLoadingNav)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var app_core_components_Upgrade_ProBadge__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/core/components/Upgrade/ProBadge.tsx");
+ var app_core_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/config.ts");
+ var app_core_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/core.ts");
+ var app_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/types/index.ts");
+ var _admin_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/admin/utils.ts");
 
 
 
@@ -591,7 +558,7 @@ function getNewName(name) {
 const loadingDSType = 'Loading';
 function buildNavModel(dataSource, plugin) {
   const pluginMeta = plugin.meta;
-  const highlightsEnabled = app_core_config__WEBPACK_IMPORTED_MODULE_3__/* ["default"].featureToggles.featureHighlights */ .ZP.featureToggles.featureHighlights;
+  const highlightsEnabled = app_core_config__WEBPACK_IMPORTED_MODULE_3__ .ZP.featureToggles.featureHighlights;
   const navModel = {
     img: pluginMeta.info.logos.large,
     id: 'datasource-' + dataSource.uid,
@@ -623,7 +590,7 @@ function buildNavModel(dataSource, plugin) {
     }
   }
 
-  if (pluginMeta.includes && hasDashboards(pluginMeta.includes) && app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .contextSrv.hasRole */ .Vt.hasRole('Admin')) {
+  if (pluginMeta.includes && hasDashboards(pluginMeta.includes) && app_core_core__WEBPACK_IMPORTED_MODULE_4__ .Vt.hasRole('Admin')) {
     navModel.children.push({
       active: false,
       icon: 'apps',
@@ -643,21 +610,21 @@ function buildNavModel(dataSource, plugin) {
     url: `datasources/edit/${dataSource.uid}/permissions`
   };
 
-  if ((0,_admin_utils__WEBPACK_IMPORTED_MODULE_6__/* .highlightTrial */ .d)() && !isLoadingNav) {
-    dsPermissions.tabSuffix = () => (0,app_core_components_Upgrade_ProBadge__WEBPACK_IMPORTED_MODULE_2__/* .ProBadge */ .Z)({
+  if ((0,_admin_utils__WEBPACK_IMPORTED_MODULE_6__ .d)() && !isLoadingNav) {
+    dsPermissions.tabSuffix = () => (0,app_core_components_Upgrade_ProBadge__WEBPACK_IMPORTED_MODULE_2__ .Z)({
       experimentId: permissionsExperimentId,
       eventVariant: 'trial'
     });
   }
 
   if ((0,_grafana_runtime__WEBPACK_IMPORTED_MODULE_1__.featureEnabled)('dspermissions')) {
-    if (app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .contextSrv.hasPermission */ .Vt.hasPermission(app_types__WEBPACK_IMPORTED_MODULE_5__/* .AccessControlAction.DataSourcesPermissionsRead */ .bW.DataSourcesPermissionsRead)) {
+    if (app_core_core__WEBPACK_IMPORTED_MODULE_4__ .Vt.hasPermission(app_types__WEBPACK_IMPORTED_MODULE_5__ .bW.DataSourcesPermissionsRead)) {
       navModel.children.push(dsPermissions);
     }
   } else if (highlightsEnabled && !isLoadingNav) {
     navModel.children.push(Object.assign({}, dsPermissions, {
       url: dsPermissions.url + '/upgrade',
-      tabSuffix: () => (0,app_core_components_Upgrade_ProBadge__WEBPACK_IMPORTED_MODULE_2__/* .ProBadge */ .Z)({
+      tabSuffix: () => (0,app_core_components_Upgrade_ProBadge__WEBPACK_IMPORTED_MODULE_2__ .Z)({
         experimentId: permissionsExperimentId
       })
     }));
@@ -672,8 +639,8 @@ function buildNavModel(dataSource, plugin) {
     url: `datasources/edit/${dataSource.uid}/insights`
   };
 
-  if ((0,_admin_utils__WEBPACK_IMPORTED_MODULE_6__/* .highlightTrial */ .d)() && !isLoadingNav) {
-    analytics.tabSuffix = () => (0,app_core_components_Upgrade_ProBadge__WEBPACK_IMPORTED_MODULE_2__/* .ProBadge */ .Z)({
+  if ((0,_admin_utils__WEBPACK_IMPORTED_MODULE_6__ .d)() && !isLoadingNav) {
+    analytics.tabSuffix = () => (0,app_core_components_Upgrade_ProBadge__WEBPACK_IMPORTED_MODULE_2__ .Z)({
       experimentId: analyticsExperimentId,
       eventVariant: 'trial'
     });
@@ -684,7 +651,7 @@ function buildNavModel(dataSource, plugin) {
   } else if (highlightsEnabled && !isLoadingNav) {
     navModel.children.push(Object.assign({}, analytics, {
       url: analytics.url + '/upgrade',
-      tabSuffix: () => (0,app_core_components_Upgrade_ProBadge__WEBPACK_IMPORTED_MODULE_2__/* .ProBadge */ .Z)({
+      tabSuffix: () => (0,app_core_components_Upgrade_ProBadge__WEBPACK_IMPORTED_MODULE_2__ .Z)({
         experimentId: analyticsExperimentId
       })
     }));
@@ -697,11 +664,11 @@ function buildNavModel(dataSource, plugin) {
     id: `datasource-cache-${dataSource.uid}`,
     text: 'Cache',
     url: `datasources/edit/${dataSource.uid}/cache`,
-    hideFromTabs: !pluginMeta.isBackend || !app_core_config__WEBPACK_IMPORTED_MODULE_3__/* ["default"].caching.enabled */ .ZP.caching.enabled
+    hideFromTabs: !pluginMeta.isBackend || !app_core_config__WEBPACK_IMPORTED_MODULE_3__ .ZP.caching.enabled
   };
 
-  if ((0,_admin_utils__WEBPACK_IMPORTED_MODULE_6__/* .highlightTrial */ .d)() && !isLoadingNav) {
-    caching.tabSuffix = () => (0,app_core_components_Upgrade_ProBadge__WEBPACK_IMPORTED_MODULE_2__/* .ProBadge */ .Z)({
+  if ((0,_admin_utils__WEBPACK_IMPORTED_MODULE_6__ .d)() && !isLoadingNav) {
+    caching.tabSuffix = () => (0,app_core_components_Upgrade_ProBadge__WEBPACK_IMPORTED_MODULE_2__ .Z)({
       experimentId: cachingExperimentId,
       eventVariant: 'trial'
     });
@@ -712,7 +679,7 @@ function buildNavModel(dataSource, plugin) {
   } else if (highlightsEnabled && !isLoadingNav) {
     navModel.children.push(Object.assign({}, caching, {
       url: caching.url + '/upgrade',
-      tabSuffix: () => (0,app_core_components_Upgrade_ProBadge__WEBPACK_IMPORTED_MODULE_2__/* .ProBadge */ .Z)({
+      tabSuffix: () => (0,app_core_components_Upgrade_ProBadge__WEBPACK_IMPORTED_MODULE_2__ .Z)({
         experimentId: cachingExperimentId
       })
     }));
@@ -723,7 +690,7 @@ function buildNavModel(dataSource, plugin) {
 function getDataSourceNav(main, pageName) {
   let node = {
     text: ''
-  }; // find active page
+  }; 
 
   for (const child of main.children) {
     if (child.id.indexOf(pageName) > 0) {
@@ -800,20 +767,20 @@ function hasDashboards(includes) {
   }) !== undefined;
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/datasources/state/selectors.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/datasources/state/selectors.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "G4": () => (/* binding */ getDataSourceMeta),
-/* harmony export */   "IO": () => (/* binding */ getDataSourcesSearchQuery),
-/* harmony export */   "f6": () => (/* binding */ getDataSource),
-/* harmony export */   "mt": () => (/* binding */ getDataSources),
-/* harmony export */   "pc": () => (/* binding */ getDataSourcesLayoutMode),
-/* harmony export */   "r7": () => (/* binding */ getDataSourcesCount),
-/* harmony export */   "xo": () => (/* binding */ getDataSourcePlugins)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "G4": () => ( getDataSourceMeta),
+   "IO": () => ( getDataSourcesSearchQuery),
+   "f6": () => ( getDataSource),
+   "mt": () => ( getDataSources),
+   "pc": () => ( getDataSourcesLayoutMode),
+   "r7": () => ( getDataSourcesCount),
+   "xo": () => ( getDataSourcePlugins)
+ });
 const getDataSources = state => {
   const regex = new RegExp(state.searchQuery, 'i');
   return state.dataSources.filter(dataSource => {
@@ -844,6 +811,6 @@ const getDataSourcesSearchQuery = state => state.searchQuery;
 const getDataSourcesLayoutMode = state => state.layoutMode;
 const getDataSourcesCount = state => state.dataSourcesCount;
 
-/***/ })
+ })
 
 }]);

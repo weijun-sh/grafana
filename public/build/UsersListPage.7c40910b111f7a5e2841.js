@@ -1,35 +1,25 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[8039],{
 
-/***/ "./public/app/features/users/UsersListPage.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/users/UsersListPage.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "UsersListPage": () => (/* binding */ UsersListPage),
-  "default": () => (/* binding */ users_UsersListPage)
+  "UsersListPage": () => ( UsersListPage),
+  "default": () => ( users_UsersListPage)
 });
 
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js + 20 modules
 var es = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/components/Page/Page.tsx + 1 modules
 var Page = __webpack_require__("./public/app/core/components/Page/Page.tsx");
-// EXTERNAL MODULE: ./public/app/core/selectors/navModel.ts
 var navModel = __webpack_require__("./public/app/core/selectors/navModel.ts");
-// EXTERNAL MODULE: ./public/app/features/invites/state/actions.ts
 var actions = __webpack_require__("./public/app/features/invites/state/actions.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/invites/InviteeRow.tsx
+;
 
 
 
@@ -37,7 +27,7 @@ var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931
 
 
 const mapDispatchToProps = {
-  revokeInvite: actions/* revokeInvite */.GY
+  revokeInvite: actions.GY
 };
 const connector = (0,es.connect)(null, mapDispatchToProps);
 
@@ -47,21 +37,21 @@ class InviteeRow extends react.PureComponent {
       invitee,
       revokeInvite
     } = this.props;
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+    return (0,jsx_runtime.jsxs)("tr", {
+      children: [(0,jsx_runtime.jsx)("td", {
         children: invitee.email
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+      }), (0,jsx_runtime.jsx)("td", {
         children: invitee.name
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)("td", {
+      }), (0,jsx_runtime.jsxs)("td", {
         className: "text-right",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.ClipboardButton, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.ClipboardButton, {
           variant: "secondary",
           size: "sm",
           getText: () => invitee.url,
           children: "Copy Invite"
         }), "\xA0"]
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      }), (0,jsx_runtime.jsx)("td", {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           variant: "destructive",
           size: "sm",
           icon: "times",
@@ -73,8 +63,8 @@ class InviteeRow extends react.PureComponent {
 
 }
 
-/* harmony default export */ const invites_InviteeRow = (connector(InviteeRow));
-;// CONCATENATED MODULE: ./public/app/features/invites/InviteesTable.tsx
+ const invites_InviteeRow = (connector(InviteeRow));
+;
 var _th, _th2, _th3;
 
 
@@ -86,23 +76,23 @@ class InviteesTable extends react.PureComponent {
     const {
       invitees
     } = this.props;
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("table", {
+    return (0,jsx_runtime.jsxs)("table", {
       className: "filter-table form-inline",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("thead", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
-          children: [_th || (_th = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+      children: [(0,jsx_runtime.jsx)("thead", {
+        children: (0,jsx_runtime.jsxs)("tr", {
+          children: [_th || (_th = (0,jsx_runtime.jsx)("th", {
             children: "Email"
-          })), _th2 || (_th2 = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+          })), _th2 || (_th2 = (0,jsx_runtime.jsx)("th", {
             children: "Name"
-          })), _th3 || (_th3 = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {})), /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+          })), _th3 || (_th3 = (0,jsx_runtime.jsx)("th", {})), (0,jsx_runtime.jsx)("th", {
             style: {
               width: '34px'
             }
           })]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("tbody", {
+      }), (0,jsx_runtime.jsx)("tbody", {
         children: invitees.map((invitee, index) => {
-          return /*#__PURE__*/(0,jsx_runtime.jsx)(invites_InviteeRow, {
+          return (0,jsx_runtime.jsx)(invites_InviteeRow, {
             invitee: invitee
           }, `${invitee.id}-${index}`);
         })
@@ -111,33 +101,28 @@ class InviteesTable extends react.PureComponent {
   }
 
 }
-// EXTERNAL MODULE: ./.yarn/cache/reselect-npm-4.1.5-bc046e41ae-54c13c1e79.zip/node_modules/reselect/es/index.js + 1 modules
 var reselect_es = __webpack_require__("./.yarn/cache/reselect-npm-4.1.5-bc046e41ae-54c13c1e79.zip/node_modules/reselect/es/index.js");
-// EXTERNAL MODULE: ./public/app/features/invites/state/reducers.ts
 var reducers = __webpack_require__("./public/app/features/invites/state/reducers.ts");
-;// CONCATENATED MODULE: ./public/app/features/invites/state/selectors.ts
+;
 
 
 const {
   selectAll,
   selectById,
   selectTotal
-} = reducers/* selectors */.wl;
+} = reducers.wl;
 
 const selectQuery = (_, query) => query;
 
-const selectInvitesMatchingQuery = (0,reselect_es/* createSelector */.P1)([selectAll, selectQuery], (invites, searchQuery) => {
+const selectInvitesMatchingQuery = (0,reselect_es.P1)([selectAll, selectQuery], (invites, searchQuery) => {
   const regex = new RegExp(searchQuery, 'i');
   const matches = invites.filter(invite => regex.test(invite.name) || regex.test(invite.email));
   return matches;
 });
-// EXTERNAL MODULE: ./public/app/core/core.ts
 var core = __webpack_require__("./public/app/core/core.ts");
-// EXTERNAL MODULE: ./public/app/types/index.ts + 4 modules
 var types = __webpack_require__("./public/app/types/index.ts");
-// EXTERNAL MODULE: ./public/app/features/users/state/reducers.ts
 var state_reducers = __webpack_require__("./public/app/features/users/state/reducers.ts");
-;// CONCATENATED MODULE: ./public/app/features/users/state/selectors.ts
+;
 const getUsers = state => {
   const regex = new RegExp(state.searchQuery, 'i');
   return state.users.filter(user => {
@@ -146,7 +131,7 @@ const getUsers = state => {
 };
 const getUsersSearchQuery = state => state.searchQuery;
 const getUsersSearchPage = state => state.searchPage;
-;// CONCATENATED MODULE: ./public/app/features/users/UsersActionBar.tsx
+;
 var _LinkButton;
 
 
@@ -178,29 +163,29 @@ class UsersActionBar extends react.PureComponent {
       label: `Pending Invites (${pendingInvitesCount})`,
       value: 'invites'
     }];
-    const canAddToOrg = core/* contextSrv.hasAccess */.Vt.hasAccess(types/* AccessControlAction.UsersCreate */.bW.UsersCreate, canInvite);
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    const canAddToOrg = core.Vt.hasAccess(types.bW.UsersCreate, canInvite);
+    return (0,jsx_runtime.jsxs)("div", {
       className: "page-action-bar",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      children: [(0,jsx_runtime.jsx)("div", {
         className: "gf-form gf-form--grow",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.FilterInput, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.FilterInput, {
           value: searchQuery,
           onChange: setUsersSearchQuery,
           placeholder: "Search user by login, email or name"
         })
-      }), pendingInvitesCount > 0 && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), pendingInvitesCount > 0 && (0,jsx_runtime.jsx)("div", {
         style: {
           marginLeft: '1rem'
         },
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.RadioButtonGroup, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.RadioButtonGroup, {
           value: showInvites ? 'invites' : 'users',
           options: options,
           onChange: onShowInvites
         })
-      }), canAddToOrg && (_LinkButton || (_LinkButton = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+      }), canAddToOrg && (_LinkButton || (_LinkButton = (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
         href: "org/users/invite",
         children: "Invite"
-      }))), externalUserMngLinkUrl && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+      }))), externalUserMngLinkUrl && (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
         href: externalUserMngLinkUrl,
         target: "_blank",
         rel: "noopener",
@@ -222,23 +207,20 @@ function mapStateToProps(state) {
 }
 
 const UsersActionBar_mapDispatchToProps = {
-  setUsersSearchQuery: state_reducers/* setUsersSearchQuery */.oX
+  setUsersSearchQuery: state_reducers.oX
 };
-/* harmony default export */ const users_UsersActionBar = ((0,es.connect)(mapStateToProps, UsersActionBar_mapDispatchToProps)(UsersActionBar));
-// EXTERNAL MODULE: ./public/app/features/users/UsersTable.tsx
+ const users_UsersActionBar = ((0,es.connect)(mapStateToProps, UsersActionBar_mapDispatchToProps)(UsersActionBar));
 var UsersTable = __webpack_require__("./public/app/features/users/UsersTable.tsx");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/utils/accessControl.ts
 var accessControl = __webpack_require__("./public/app/core/utils/accessControl.ts");
-;// CONCATENATED MODULE: ./public/app/features/users/state/actions.ts
+;
 
 
 
 function loadUsers() {
   return async dispatch => {
-    const users = await (0,grafana_runtime_src.getBackendSrv)().get('/api/org/users', (0,accessControl/* accessControlQueryParam */.y)());
-    dispatch((0,state_reducers/* usersLoaded */.eT)(users));
+    const users = await (0,grafana_runtime_src.getBackendSrv)().get('/api/org/users', (0,accessControl.y)());
+    dispatch((0,state_reducers.eT)(users));
   };
 }
 function updateUser(user) {
@@ -255,7 +237,7 @@ function removeUser(userId) {
     dispatch(loadUsers());
   };
 }
-;// CONCATENATED MODULE: ./public/app/features/users/UsersListPage.tsx
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -279,7 +261,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function UsersListPage_mapStateToProps(state) {
   const searchQuery = getUsersSearchQuery(state.users);
   return {
-    navModel: (0,navModel/* getNavModel */.h)(state.navIndex, 'users'),
+    navModel: (0,navModel.h)(state.navIndex, 'users'),
     users: getUsers(state.users),
     searchQuery: getUsersSearchQuery(state.users),
     searchPage: getUsersSearchPage(state.users),
@@ -291,9 +273,9 @@ function UsersListPage_mapStateToProps(state) {
 
 const UsersListPage_mapDispatchToProps = {
   loadUsers: loadUsers,
-  fetchInvitees: actions/* fetchInvitees */.nW,
-  setUsersSearchQuery: state_reducers/* setUsersSearchQuery */.oX,
-  setUsersSearchPage: state_reducers/* setUsersSearchPage */.TQ,
+  fetchInvitees: actions.nW,
+  setUsersSearchQuery: state_reducers.oX,
+  setUsersSearchPage: state_reducers.TQ,
   updateUser: updateUser,
   removeUser: removeUser
 };
@@ -353,19 +335,19 @@ class UsersListPage extends react.PureComponent {
     const totalPages = Math.ceil(users.length / pageLimit);
 
     if (this.state.showInvites) {
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(InviteesTable, {
+      return (0,jsx_runtime.jsx)(InviteesTable, {
         invitees: invitees
       });
     } else {
-      return /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.VerticalGroup, {
+      return (0,jsx_runtime.jsxs)(grafana_ui_src.VerticalGroup, {
         spacing: "md",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(UsersTable/* default */.Z, {
+        children: [(0,jsx_runtime.jsx)(UsersTable.Z, {
           users: paginatedUsers,
           onRoleChange: (role, user) => this.onRoleChange(role, user),
           onRemoveUser: user => this.props.removeUser(user.userId)
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.HorizontalGroup, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.HorizontalGroup, {
           justify: "flex-end",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Pagination, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Pagination, {
             onNavigate: setUsersSearchPage,
             currentPage: this.props.searchPage,
             numberOfPages: totalPages,
@@ -382,15 +364,15 @@ class UsersListPage extends react.PureComponent {
       hasFetched
     } = this.props;
     const externalUserMngInfoHtml = this.externalUserMngInfoHtml;
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(Page/* default */.Z, {
+    return (0,jsx_runtime.jsx)(Page.Z, {
       navModel: navModel,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(Page/* default.Contents */.Z.Contents, {
+      children: (0,jsx_runtime.jsx)(Page.Z.Contents, {
         isLoading: !hasFetched,
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(users_UsersActionBar, {
+        children: (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: [(0,jsx_runtime.jsx)(users_UsersActionBar, {
             onShowInvites: this.onShowInvites,
             showInvites: this.state.showInvites
-          }), externalUserMngInfoHtml && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          }), externalUserMngInfoHtml && (0,jsx_runtime.jsx)("div", {
             className: "grafana-info-box",
             dangerouslySetInnerHTML: {
               __html: externalUserMngInfoHtml
@@ -402,24 +384,24 @@ class UsersListPage extends react.PureComponent {
   }
 
 }
-/* harmony default export */ const users_UsersListPage = (UsersListPage_connector(UsersListPage));
+ const users_UsersListPage = (UsersListPage_connector(UsersListPage));
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/users/UsersTable.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/users/UsersTable.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var app_core_components_RolePicker_UserRolePicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/core/components/RolePicker/UserRolePicker.tsx");
-/* harmony import */ var app_core_components_RolePicker_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/components/RolePicker/api.ts");
-/* harmony import */ var app_core_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/core.ts");
-/* harmony import */ var app_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/types/index.ts");
-/* harmony import */ var _admin_OrgRolePicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/admin/OrgRolePicker.tsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var app_core_components_RolePicker_UserRolePicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/core/components/RolePicker/UserRolePicker.tsx");
+ var app_core_components_RolePicker_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/components/RolePicker/api.ts");
+ var app_core_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/core.ts");
+ var app_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/types/index.ts");
+ var _admin_OrgRolePicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/admin/OrgRolePicker.tsx");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _th, _th2, _th3, _th4, _th5, _th6;
 
 
@@ -446,13 +428,13 @@ const UsersTable = props => {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     async function fetchOptions() {
       try {
-        if (app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .contextSrv.hasPermission */ .Vt.hasPermission(app_types__WEBPACK_IMPORTED_MODULE_5__/* .AccessControlAction.ActionRolesList */ .bW.ActionRolesList)) {
-          let options = await (0,app_core_components_RolePicker_api__WEBPACK_IMPORTED_MODULE_3__/* .fetchRoleOptions */ .ul)(orgId);
+        if (app_core_core__WEBPACK_IMPORTED_MODULE_4__ .Vt.hasPermission(app_types__WEBPACK_IMPORTED_MODULE_5__ .bW.ActionRolesList)) {
+          let options = await (0,app_core_components_RolePicker_api__WEBPACK_IMPORTED_MODULE_3__ .ul)(orgId);
           setRoleOptions(options);
         }
 
-        if (!app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .contextSrv.accessControlBuiltinRefactorEnabled */ .Vt.accessControlBuiltinRefactorEnabled() && app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .contextSrv.hasPermission */ .Vt.hasPermission(app_types__WEBPACK_IMPORTED_MODULE_5__/* .AccessControlAction.ActionBuiltinRolesList */ .bW.ActionBuiltinRolesList)) {
-          const builtInRoles = await (0,app_core_components_RolePicker_api__WEBPACK_IMPORTED_MODULE_3__/* .fetchBuiltinRoles */ .fh)(orgId);
+        if (!app_core_core__WEBPACK_IMPORTED_MODULE_4__ .Vt.accessControlBuiltinRefactorEnabled() && app_core_core__WEBPACK_IMPORTED_MODULE_4__ .Vt.hasPermission(app_types__WEBPACK_IMPORTED_MODULE_5__ .bW.ActionBuiltinRolesList)) {
+          const builtInRoles = await (0,app_core_components_RolePicker_api__WEBPACK_IMPORTED_MODULE_3__ .fh)(orgId);
           setBuiltinRoles(builtInRoles);
         }
       } catch (e) {
@@ -460,83 +442,83 @@ const UsersTable = props => {
       }
     }
 
-    if (app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .contextSrv.licensedAccessControlEnabled */ .Vt.licensedAccessControlEnabled()) {
+    if (app_core_core__WEBPACK_IMPORTED_MODULE_4__ .Vt.licensedAccessControlEnabled()) {
       fetchOptions();
     }
   }, [orgId]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("table", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("table", {
       className: "filter-table form-inline",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("thead", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
-          children: [_th || (_th = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {})), _th2 || (_th2 = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("thead", {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
+          children: [_th || (_th = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {})), _th2 || (_th2 = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
             children: "Login"
-          })), _th3 || (_th3 = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
+          })), _th3 || (_th3 = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
             children: "Email"
-          })), _th4 || (_th4 = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
+          })), _th4 || (_th4 = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
             children: "Name"
-          })), _th5 || (_th5 = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
+          })), _th5 || (_th5 = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
             children: "Seen"
-          })), _th6 || (_th6 = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
+          })), _th6 || (_th6 = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
             children: "Role"
-          })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
+          })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
             style: {
               width: '34px'
             }
           })]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("tbody", {
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("tbody", {
         children: users.map((user, index) => {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
+          return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
               className: "width-2 text-center",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
                 className: "filter-table__avatar",
                 src: user.avatarUrl,
                 alt: "User avatar"
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
               className: "max-width-6",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                 className: "ellipsis",
                 title: user.login,
                 children: user.login
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
               className: "max-width-5",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                 className: "ellipsis",
                 title: user.email,
                 children: user.email
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
               className: "max-width-5",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                 className: "ellipsis",
                 title: user.name,
                 children: user.name
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
               className: "width-1",
               children: user.lastSeenAtAge
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
               className: "width-8",
-              children: app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .contextSrv.licensedAccessControlEnabled */ .Vt.licensedAccessControlEnabled() ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(app_core_components_RolePicker_UserRolePicker__WEBPACK_IMPORTED_MODULE_2__/* .UserRolePicker */ .R, {
+              children: app_core_core__WEBPACK_IMPORTED_MODULE_4__ .Vt.licensedAccessControlEnabled() ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(app_core_components_RolePicker_UserRolePicker__WEBPACK_IMPORTED_MODULE_2__ .R, {
                 userId: user.userId,
                 orgId: orgId,
                 builtInRole: user.role,
                 onBuiltinRoleChange: newRole => onRoleChange(newRole, user),
                 roleOptions: roleOptions,
                 builtInRoles: builtinRoles,
-                disabled: !app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .contextSrv.hasPermissionInMetadata */ .Vt.hasPermissionInMetadata(app_types__WEBPACK_IMPORTED_MODULE_5__/* .AccessControlAction.OrgUsersRoleUpdate */ .bW.OrgUsersRoleUpdate, user)
-              }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_admin_OrgRolePicker__WEBPACK_IMPORTED_MODULE_6__/* .OrgRolePicker */ .A, {
+                disabled: !app_core_core__WEBPACK_IMPORTED_MODULE_4__ .Vt.hasPermissionInMetadata(app_types__WEBPACK_IMPORTED_MODULE_5__ .bW.OrgUsersRoleUpdate, user)
+              }) : (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_admin_OrgRolePicker__WEBPACK_IMPORTED_MODULE_6__ .A, {
                 "aria-label": "Role",
                 value: user.role,
-                disabled: !app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .contextSrv.hasPermissionInMetadata */ .Vt.hasPermissionInMetadata(app_types__WEBPACK_IMPORTED_MODULE_5__/* .AccessControlAction.OrgUsersRoleUpdate */ .bW.OrgUsersRoleUpdate, user),
+                disabled: !app_core_core__WEBPACK_IMPORTED_MODULE_4__ .Vt.hasPermissionInMetadata(app_types__WEBPACK_IMPORTED_MODULE_5__ .bW.OrgUsersRoleUpdate, user),
                 onChange: newRole => onRoleChange(newRole, user)
               })
-            }), app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .contextSrv.hasPermissionInMetadata */ .Vt.hasPermissionInMetadata(app_types__WEBPACK_IMPORTED_MODULE_5__/* .AccessControlAction.OrgUsersRemove */ .bW.OrgUsersRemove, user) && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Button, {
+            }), app_core_core__WEBPACK_IMPORTED_MODULE_4__ .Vt.hasPermissionInMetadata(app_types__WEBPACK_IMPORTED_MODULE_5__ .bW.OrgUsersRemove, user) && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Button, {
                 size: "sm",
                 variant: "destructive",
                 onClick: () => {
@@ -549,7 +531,7 @@ const UsersTable = props => {
           }, `${user.userId}-${index}`);
         })
       })]
-    }), Boolean(userToRemove) && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.ConfirmModal, {
+    }), Boolean(userToRemove) && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.ConfirmModal, {
       body: `Are you sure you want to delete user ${userToRemove === null || userToRemove === void 0 ? void 0 : userToRemove.login}?`,
       confirmText: "Delete",
       title: "Delete",
@@ -569,8 +551,8 @@ const UsersTable = props => {
   });
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UsersTable);
+ const __WEBPACK_DEFAULT_EXPORT__ = (UsersTable);
 
-/***/ })
+ })
 
 }]);

@@ -1,51 +1,41 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[2651],{
 
-/***/ "./public/app/core/hooks/useNavModel.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/hooks/useNavModel.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "q": () => (/* binding */ useNavModel)
-/* harmony export */ });
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
-/* harmony import */ var _selectors_navModel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/core/selectors/navModel.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "q": () => ( useNavModel)
+ });
+ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
+ var _selectors_navModel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/core/selectors/navModel.ts");
 
 
 const useNavModel = id => {
   const navIndex = (0,react_redux__WEBPACK_IMPORTED_MODULE_0__.useSelector)(state => state.navIndex);
-  return (0,_selectors_navModel__WEBPACK_IMPORTED_MODULE_1__/* .getNavModel */ .h)(navIndex, id);
+  return (0,_selectors_navModel__WEBPACK_IMPORTED_MODULE_1__ .h)(navIndex, id);
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/live/pages/PipelineAdminPage.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/live/pages/PipelineAdminPage.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ PipelineAdminPage)
+  "default": () => ( PipelineAdminPage)
 });
 
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/components/Page/Page.tsx + 1 modules
 var Page = __webpack_require__("./public/app/core/components/Page/Page.tsx");
-// EXTERNAL MODULE: ./public/app/core/hooks/useNavModel.ts
 var useNavModel = __webpack_require__("./public/app/core/hooks/useNavModel.ts");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var grafana_data_src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/copy/appNotification.ts
 var appNotification = __webpack_require__("./public/app/core/copy/appNotification.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/live/pages/AddNewRule.tsx
+;
 
 
 
@@ -71,7 +61,7 @@ function AddNewRule(_ref) {
   const [pattern, setPattern] = (0,react.useState)();
   const [patternPrefix, setPatternPrefix] = (0,react.useState)('');
   const [datasource, setDatasource] = (0,react.useState)();
-  const notifyApp = (0,appNotification/* useAppNotification */.iG)();
+  const notifyApp = (0,appNotification.iG)();
 
   const onSubmit = () => {
     if (!pattern) {
@@ -106,43 +96,43 @@ function AddNewRule(_ref) {
   };
 
   if (patternType) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
-        children: [patternType === 'any' && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+    return (0,jsx_runtime.jsx)("div", {
+      children: (0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
+        children: [patternType === 'any' && (0,jsx_runtime.jsx)(grafana_ui_src.Field, {
           label: "Pattern",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
             value: pattern !== null && pattern !== void 0 ? pattern : '',
             onChange: e => setPattern(e.currentTarget.value),
             placeholder: "scope/namespace/path"
           })
-        }), patternType === 'ds' && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+        }), patternType === 'ds' && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: [(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
             label: "Data source",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.DataSourcePicker, {
+            children: (0,jsx_runtime.jsx)(src.DataSourcePicker, {
               current: datasource,
               onChange: ds => {
                 setDatasource(ds);
                 setPatternPrefix(`${grafana_data_src.LiveChannelScope.DataSource}/${ds.uid}/`);
               }
             })
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+          }), (0,jsx_runtime.jsx)(grafana_ui_src.Field, {
             label: "Path",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
               value: pattern !== null && pattern !== void 0 ? pattern : '',
               onChange: e => setPattern(e.currentTarget.value),
               placeholder: "path"
             })
           })]
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Field, {
           label: "",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
             onClick: onSubmit,
             variant: pattern !== null && pattern !== void 0 && pattern.length ? 'primary' : 'secondary',
             children: "Add"
           })
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Field, {
           label: "",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
             variant: "secondary",
             onClick: () => setPatternType(undefined),
             children: "Cancel"
@@ -152,8 +142,8 @@ function AddNewRule(_ref) {
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.ValuePicker, {
+  return (0,jsx_runtime.jsx)("div", {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.ValuePicker, {
       label: "Add channel rule",
       variant: "secondary",
       size: "md",
@@ -165,11 +155,9 @@ function AddNewRule(_ref) {
     })
   });
 }
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./public/app/features/plugins/datasource_srv.ts
 var datasource_srv = __webpack_require__("./public/app/features/plugins/datasource_srv.ts");
-;// CONCATENATED MODULE: ./public/app/features/live/pages/RuleSettingsEditor.tsx
+;
 
 
 
@@ -184,20 +172,19 @@ const RuleSettingsEditor = _ref => {
     ruleType,
     entitiesInfo
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       options: entitiesInfo[ruleType],
       placeholder: "Select an option",
       value: (_value$type = value === null || value === void 0 ? void 0 : value.type) !== null && _value$type !== void 0 ? _value$type : '',
       onChange: value => {
-        // set the body with example
         const type = value.value;
         onChange({
           type,
           [type]: entitiesInfo.getExample(ruleType, type)
         });
       }
-    }, ruleType), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
+    }, ruleType), (0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
       height: '50vh',
       value: value ? JSON.stringify(value[value.type], null, '\t') : '',
       showLineNumbers: true,
@@ -214,7 +201,7 @@ const RuleSettingsEditor = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/live/pages/RuleSettingsArray.tsx
+;
 
 
 
@@ -239,7 +226,7 @@ const RuleSettingsArray = _ref => {
       copy[index] = v;
       onChange(copy);
     }
-  }; // create array of value.length + 1
+  }; 
 
 
   let indexArr = [];
@@ -251,16 +238,15 @@ const RuleSettingsArray = _ref => {
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       placeholder: "Select an index",
       options: indexArr,
       value: index,
       onChange: index => {
-        // set index to find the correct setting
         setIndex(index.value);
       }
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(RuleSettingsEditor, {
+    }), (0,jsx_runtime.jsx)(RuleSettingsEditor, {
       onChange: onRuleChange,
       value: arr[index],
       ruleType: ruleType,
@@ -268,7 +254,7 @@ const RuleSettingsArray = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/live/pages/RuleTest.tsx
+;
 
 
 
@@ -315,8 +301,8 @@ const RuleTest = props => {
     });
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
+  return (0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
       height: 100,
       value: "",
       showLineNumbers: true,
@@ -324,13 +310,13 @@ const RuleTest = props => {
       language: "json",
       showMiniMap: false,
       onBlur: onBlur
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
       onClick: onClick,
       className: styles.margin,
       children: "Test"
-    }), (response === null || response === void 0 ? void 0 : response.length) && response.map(r => /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+    }), (response === null || response === void 0 ? void 0 : response.length) && response.map(r => (0,jsx_runtime.jsx)(grafana_ui_src.Field, {
       label: r.channel,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Table, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Table, {
         data: r.frame,
         width: 700,
         height: Math.min(10 * r.frame.length + 10, 150),
@@ -347,7 +333,7 @@ const getStyles = theme => {
     `
   };
 };
-;// CONCATENATED MODULE: ./public/app/features/live/pages/utils.ts
+;
 
 async function getPipeLineEntities() {
   return await (0,src.getBackendSrv)().get(`api/live/pipeline-entities`).then(data => {
@@ -376,7 +362,7 @@ function transformLabel(data, key) {
     value: typeObj.type
   }));
 }
-;// CONCATENATED MODULE: ./public/app/features/live/pages/RuleModal.tsx
+;
 
 
 
@@ -412,7 +398,7 @@ const RuleModal = props => {
     clickColumn
   } = props;
   const [rule, setRule] = (0,react.useState)(props.rule);
-  const [activeTab, setActiveTab] = (0,react.useState)(tabs.find(t => t.type === clickColumn)); // to show color of Save button
+  const [activeTab, setActiveTab] = (0,react.useState)(tabs.find(t => t.type === clickColumn)); 
 
   const [hasChange, setChange] = (0,react.useState)(false);
   const [ruleSetting, setRuleSetting] = (0,react.useState)(activeTab !== null && activeTab !== void 0 && activeTab.type ? rule === null || rule === void 0 ? void 0 : (_rule$settings = rule.settings) === null || _rule$settings === void 0 ? void 0 : _rule$settings[activeTab.type] : undefined);
@@ -431,7 +417,7 @@ const RuleModal = props => {
     }
 
     setRuleSetting(value);
-  }; // load pipeline entities info
+  }; 
 
 
   (0,react.useMemo)(() => {
@@ -447,14 +433,14 @@ const RuleModal = props => {
     }).catch(e => console.error(e));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.Modal, {
+  return (0,jsx_runtime.jsxs)(grafana_ui_src.Modal, {
     isOpen: isOpen,
     title: rule.pattern,
     onDismiss: onClose,
     closeOnEscape: true,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.TabsBar, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.TabsBar, {
       children: tabs.map((tab, index) => {
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Tab, {
+        return (0,jsx_runtime.jsx)(grafana_ui_src.Tab, {
           label: tab.label,
           active: tab === activeTab,
           icon: tab.icon,
@@ -464,28 +450,27 @@ const RuleModal = props => {
             if (tab.type) {
               var _rule$settings2;
 
-              // to notify children of the new rule
               setRuleSetting(rule === null || rule === void 0 ? void 0 : (_rule$settings2 = rule.settings) === null || _rule$settings2 === void 0 ? void 0 : _rule$settings2[tab.type]);
             }
           }
         }, index);
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.TabContent, {
-      children: [entitiesInfo && rule && activeTab && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: [(activeTab === null || activeTab === void 0 ? void 0 : activeTab.isTest) && /*#__PURE__*/(0,jsx_runtime.jsx)(RuleTest, {
+    }), (0,jsx_runtime.jsxs)(grafana_ui_src.TabContent, {
+      children: [entitiesInfo && rule && activeTab && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [(activeTab === null || activeTab === void 0 ? void 0 : activeTab.isTest) && (0,jsx_runtime.jsx)(RuleTest, {
           rule: rule
-        }), activeTab.isConverter && /*#__PURE__*/(0,jsx_runtime.jsx)(RuleSettingsEditor, {
+        }), activeTab.isConverter && (0,jsx_runtime.jsx)(RuleSettingsEditor, {
           onChange: onRuleSettingChange,
           value: ruleSetting,
           ruleType: 'converter',
           entitiesInfo: entitiesInfo
-        }), !activeTab.isConverter && activeTab.type && /*#__PURE__*/(0,jsx_runtime.jsx)(RuleSettingsArray, {
+        }), !activeTab.isConverter && activeTab.type && (0,jsx_runtime.jsx)(RuleSettingsArray, {
           onChange: onRuleSettingChange,
           value: ruleSetting,
           ruleType: activeTab.type,
           entitiesInfo: entitiesInfo
         })]
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
         onClick: onSave,
         className: styles.save,
         variant: hasChange ? 'primary' : 'secondary',
@@ -502,7 +487,7 @@ const RuleModal_getStyles = theme => {
     `
   };
 };
-;// CONCATENATED MODULE: ./public/app/features/live/pages/PipelineTable.tsx
+;
 var _th, _th2, _th3, _th4;
 
 
@@ -519,7 +504,7 @@ function renderOutputTags(key, output) {
     return null;
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Tag, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.Tag, {
     name: output.type
   }, key);
 }
@@ -549,7 +534,7 @@ const PipelineTable = props => {
     setClickColumn(column);
     setSelectedRule(rule);
     setOpen(true);
-  }; // Supports selecting a rule from external config (after add rule)
+  }; 
 
 
   (0,react.useEffect)(() => {
@@ -572,14 +557,14 @@ const PipelineTable = props => {
 
       if (idx > 3) {
         const uid = pattern.substring(3, idx);
-        const ds = (0,datasource_srv/* getDatasourceSrv */.ak)().getInstanceSettings(uid);
+        const ds = (0,datasource_srv.ak)().getInstanceSettings(uid);
 
         if (ds) {
-          return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Tag, {
+          return (0,jsx_runtime.jsxs)("div", {
+            children: [(0,jsx_runtime.jsx)(grafana_ui_src.Tag, {
               name: ds.name,
               colorIndex: 1
-            }), " \xA0", /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+            }), " \xA0", (0,jsx_runtime.jsx)("span", {
               children: pattern.substring(idx + 1)
             })]
           });
@@ -590,57 +575,57 @@ const PipelineTable = props => {
     return pattern;
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsx)("div", {
       className: "admin-list-table",
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)("table", {
+      children: (0,jsx_runtime.jsxs)("table", {
         className: "filter-table filter-table--hover form-inline",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("thead", {
-          children: /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
-            children: [_th || (_th = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+        children: [(0,jsx_runtime.jsx)("thead", {
+          children: (0,jsx_runtime.jsxs)("tr", {
+            children: [_th || (_th = (0,jsx_runtime.jsx)("th", {
               children: "Channel"
-            })), _th2 || (_th2 = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+            })), _th2 || (_th2 = (0,jsx_runtime.jsx)("th", {
               children: "Converter"
-            })), _th3 || (_th3 = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+            })), _th3 || (_th3 = (0,jsx_runtime.jsx)("th", {
               children: "Processor"
-            })), _th4 || (_th4 = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+            })), _th4 || (_th4 = (0,jsx_runtime.jsx)("th", {
               children: "Output"
-            })), /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+            })), (0,jsx_runtime.jsx)("th", {
               style: {
                 width: 10
               },
               children: "\xA0"
             })]
           })
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)("tbody", {
+        }), (0,jsx_runtime.jsx)("tbody", {
           children: rules.map(rule => {
             var _rule$settings, _rule$settings$conver, _rule$settings2, _rule$settings2$frame, _rule$settings3, _rule$settings3$frame;
 
-            return /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
+            return (0,jsx_runtime.jsxs)("tr", {
               onClick: e => onRowClick(rule, e),
               className: styles.row,
-              children: [/*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+              children: [(0,jsx_runtime.jsx)("td", {
                 "data-pattern": rule.pattern,
                 "data-column": "pattern",
                 children: renderPattern(rule.pattern)
-              }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+              }), (0,jsx_runtime.jsx)("td", {
                 "data-pattern": rule.pattern,
                 "data-column": "converter",
                 children: (_rule$settings = rule.settings) === null || _rule$settings === void 0 ? void 0 : (_rule$settings$conver = _rule$settings.converter) === null || _rule$settings$conver === void 0 ? void 0 : _rule$settings$conver.type
-              }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+              }), (0,jsx_runtime.jsx)("td", {
                 "data-pattern": rule.pattern,
                 "data-column": "processor",
-                children: (_rule$settings2 = rule.settings) === null || _rule$settings2 === void 0 ? void 0 : (_rule$settings2$frame = _rule$settings2.frameProcessors) === null || _rule$settings2$frame === void 0 ? void 0 : _rule$settings2$frame.map(processor => /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+                children: (_rule$settings2 = rule.settings) === null || _rule$settings2 === void 0 ? void 0 : (_rule$settings2$frame = _rule$settings2.frameProcessors) === null || _rule$settings2$frame === void 0 ? void 0 : _rule$settings2$frame.map(processor => (0,jsx_runtime.jsx)("span", {
                   children: processor.type
                 }, rule.pattern + processor.type))
-              }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+              }), (0,jsx_runtime.jsx)("td", {
                 "data-pattern": rule.pattern,
                 "data-column": "output",
-                children: (_rule$settings3 = rule.settings) === null || _rule$settings3 === void 0 ? void 0 : (_rule$settings3$frame = _rule$settings3.frameOutputs) === null || _rule$settings3$frame === void 0 ? void 0 : _rule$settings3$frame.map(output => /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+                children: (_rule$settings3 = rule.settings) === null || _rule$settings3 === void 0 ? void 0 : (_rule$settings3$frame = _rule$settings3.frameOutputs) === null || _rule$settings3$frame === void 0 ? void 0 : _rule$settings3$frame.map(output => (0,jsx_runtime.jsx)("span", {
                   children: renderOutputTags('out', output)
                 }, rule.pattern + output.type))
-              }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
-                children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
+              }), (0,jsx_runtime.jsx)("td", {
+                children: (0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
                   name: "trash-alt",
                   onClick: e => {
                     e.stopPropagation();
@@ -652,7 +637,7 @@ const PipelineTable = props => {
           })
         })]
       })
-    }), isOpen && selectedRule && /*#__PURE__*/(0,jsx_runtime.jsx)(RuleModal, {
+    }), isOpen && selectedRule && (0,jsx_runtime.jsx)(RuleModal, {
       rule: selectedRule,
       isOpen: isOpen,
       onClose: () => {
@@ -670,7 +655,7 @@ const PipelineTable_getStyles = theme => {
     `
   };
 };
-;// CONCATENATED MODULE: ./public/app/features/live/pages/PipelineAdminPage.tsx
+;
 
 
 
@@ -684,7 +669,7 @@ function PipelineAdminPage() {
   const [rules, setRules] = (0,react.useState)([]);
   const [defaultRules, setDefaultRules] = (0,react.useState)([]);
   const [newRule, setNewRule] = (0,react.useState)();
-  const navModel = (0,useNavModel/* useNavModel */.q)('live-pipeline');
+  const navModel = (0,useNavModel.q)('live-pipeline');
   const [error, setError] = (0,react.useState)();
 
   const loadRules = () => {
@@ -712,25 +697,25 @@ function PipelineAdminPage() {
     }
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Page/* default */.Z, {
+  return (0,jsx_runtime.jsx)(Page.Z, {
     navModel: navModel,
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)(Page/* default.Contents */.Z.Contents, {
-      children: [error && /*#__PURE__*/(0,jsx_runtime.jsx)("pre", {
+    children: (0,jsx_runtime.jsxs)(Page.Z.Contents, {
+      children: [error && (0,jsx_runtime.jsx)("pre", {
         children: error
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "page-action-bar",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsx)("div", {
           className: "gf-form gf-form--grow",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
             placeholder: "Search pattern...",
             onChange: onSearchQueryChange
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(PipelineTable, {
+      }), (0,jsx_runtime.jsx)(PipelineTable, {
         rules: rules,
         onRuleChanged: loadRules,
         selectRule: newRule
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(AddNewRule, {
+      }), (0,jsx_runtime.jsx)(AddNewRule, {
         onRuleAdded: r => {
           console.log('GOT', r, 'vs', rules[0]);
           setNewRule(r);
@@ -741,6 +726,6 @@ function PipelineAdminPage() {
   });
 }
 
-/***/ })
+ })
 
 }]);

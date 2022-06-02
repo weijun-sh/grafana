@@ -1,23 +1,17 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[636],{
 
-/***/ "./.yarn/cache/monaco-editor-npm-0.31.1-d8d5ee78bb-65be40c557.zip/node_modules/monaco-editor/esm/vs/language/typescript/tsMode.js":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./.yarn/cache/monaco-editor-npm-0.31.1-d8d5ee78bb-65be40c557.zip/node_modules/monaco-editor/esm/vs/language/typescript/tsMode.js":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getJavaScriptWorker": () => (/* binding */ getJavaScriptWorker2),
-/* harmony export */   "getTypeScriptWorker": () => (/* binding */ getTypeScriptWorker2),
-/* harmony export */   "setupJavaScript": () => (/* binding */ setupJavaScript),
-/* harmony export */   "setupTypeScript": () => (/* binding */ setupTypeScript)
-/* harmony export */ });
-/* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/monaco-editor-npm-0.31.1-d8d5ee78bb-65be40c557.zip/node_modules/monaco-editor/esm/vs/editor/editor.api.js");
-/*!-----------------------------------------------------------------------------
- * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.31.1(337587859b1c171314b40503171188b6cea6a32a)
- * Released under the MIT license
- * https://github.com/microsoft/monaco-editor/blob/main/LICENSE.txt
- *-----------------------------------------------------------------------------*/
+ __webpack_require__.d(__webpack_exports__, {
+   "getJavaScriptWorker": () => ( getJavaScriptWorker2),
+   "getTypeScriptWorker": () => ( getTypeScriptWorker2),
+   "setupJavaScript": () => ( setupJavaScript),
+   "setupTypeScript": () => ( setupTypeScript)
+ });
+ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/monaco-editor-npm-0.31.1-d8d5ee78bb-65be40c557.zip/node_modules/monaco-editor/esm/vs/editor/editor.api.js");
 
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -33,13 +27,11 @@ var __reExport = (target, module, desc) => {
   return target;
 };
 
-// src/fillers/monaco-editor-core.ts
 var monaco_editor_core_exports = {};
 __markAsModule(monaco_editor_core_exports);
 __reExport(monaco_editor_core_exports, _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__);
 
 
-// src/typescript/workerManager.ts
 var WorkerManager = class {
   constructor(modeId, defaults) {
     this._modeId = modeId;
@@ -111,10 +103,8 @@ var WorkerManager = class {
   }
 };
 
-// src/typescript/lib/typescriptServicesMetadata.ts
 var typescriptVersion = "4.4.4";
 
-// src/typescript/monaco.contribution.ts
 var ModuleKind;
 (function(ModuleKind2) {
   ModuleKind2[ModuleKind2["None"] = 0] = "None";
@@ -310,7 +300,7 @@ monaco_editor_core_exports.languages.typescript = {
 };
 function getMode() {
   if (false) {} else {
-    return Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, "./.yarn/cache/monaco-editor-npm-0.31.1-d8d5ee78bb-65be40c557.zip/node_modules/monaco-editor/esm/vs/language/typescript/tsMode.js"));
+    return Promise.resolve().then(__webpack_require__.bind(__webpack_require__, "./.yarn/cache/monaco-editor-npm-0.31.1-d8d5ee78bb-65be40c557.zip/node_modules/monaco-editor/esm/vs/language/typescript/tsMode.js"));
   }
 }
 monaco_editor_core_exports.languages.onLanguage("typescript", () => {
@@ -320,7 +310,6 @@ monaco_editor_core_exports.languages.onLanguage("javascript", () => {
   return getMode().then((mode) => mode.setupJavaScript(javascriptDefaults));
 });
 
-// src/typescript/lib/lib.index.ts
 var libFileSet = {};
 libFileSet["lib.d.ts"] = true;
 libFileSet["lib.dom.d.ts"] = true;
@@ -384,7 +373,6 @@ libFileSet["lib.webworker.d.ts"] = true;
 libFileSet["lib.webworker.importscripts.d.ts"] = true;
 libFileSet["lib.webworker.iterable.d.ts"] = true;
 
-// src/typescript/languageFeatures.ts
 var IndentStyle;
 (function(IndentStyle2) {
   IndentStyle2[IndentStyle2["None"] = 0] = "None";
@@ -1264,7 +1252,6 @@ var InlayHintsAdapter = class extends Adapter {
   }
 };
 
-// src/typescript/tsMode.ts
 var javaScriptWorker;
 var typeScriptWorker;
 function setupTypeScript(defaults) {
@@ -1313,6 +1300,6 @@ function setupMode(defaults, modeId) {
 
 
 
-/***/ })
+ })
 
 }]);

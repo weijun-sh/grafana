@@ -1,18 +1,14 @@
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[9626],{
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/af.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/af.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Afrikaans [af]
-//! author : Werner Mollentze : https://github.com/wernerm
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var af = moment.defineLocale('af', {
         months: 'Januarie_Februarie_Maart_April_Mei_Junie_Julie_Augustus_September_Oktober_November_Desember'.split(
@@ -72,11 +68,11 @@
             return (
                 number +
                 (number === 1 || number === 8 || number >= 20 ? 'ste' : 'de')
-            ); // Thanks to Joris Röling : https://github.com/jjupiter
+            ); 
         },
         week: {
-            dow: 1, // Maandag is die eerste dag van die week.
-            doy: 4, // Die week wat die 4de Januarie bevat is die eerste week van die jaar.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -85,25 +81,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ar-dz.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ar-dz.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Arabic (Algeria) [ar-dz]
-//! author : Amine Roukh: https://github.com/Amine27
-//! author : Abdel Said: https://github.com/abdelsaid
-//! author : Ahmed Elkhatib
-//! author : forabi https://github.com/forabi
-//! author : Noureddine LOUAHEDJ : https://github.com/noureddinem
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var pluralForm = function (n) {
             return n === 0
@@ -247,8 +235,8 @@
             return string.replace(/,/g, '،');
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 0, 
+            doy: 4, 
         },
     });
 
@@ -257,21 +245,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ar-kw.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ar-kw.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Arabic (Kuwait) [ar-kw]
-//! author : Nusret Parlak: https://github.com/nusretparlak
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var arKw = moment.defineLocale('ar-kw', {
         months: 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split(
@@ -318,8 +302,8 @@
             yy: '%d سنوات',
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 12, // The week that contains Jan 12th is the first week of the year.
+            dow: 0, 
+            doy: 12, 
         },
     });
 
@@ -328,21 +312,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ar-ly.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ar-ly.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Arabic (Libya) [ar-ly]
-//! author : Ali Hmer: https://github.com/kikoanis
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '1',
@@ -505,8 +485,8 @@
                 .replace(/,/g, '،');
         },
         week: {
-            dow: 6, // Saturday is the first day of the week.
-            doy: 12, // The week that contains Jan 12th is the first week of the year.
+            dow: 6, 
+            doy: 12, 
         },
     });
 
@@ -515,22 +495,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ar-ma.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ar-ma.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Arabic (Morocco) [ar-ma]
-//! author : ElFadili Yassine : https://github.com/ElFadiliY
-//! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var arMa = moment.defineLocale('ar-ma', {
         months: 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split(
@@ -577,8 +552,8 @@
             yy: '%d سنوات',
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -587,21 +562,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ar-sa.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ar-sa.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Arabic (Saudi Arabia) [ar-sa]
-//! author : Suhail Alkowaileet : https://github.com/xsoh
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '١',
@@ -698,8 +669,8 @@
                 .replace(/,/g, '،');
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -708,21 +679,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ar-tn.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ar-tn.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale  :  Arabic (Tunisia) [ar-tn]
-//! author : Nader Toukabri : https://github.com/naderio
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var arTn = moment.defineLocale('ar-tn', {
         months: 'جانفي_فيفري_مارس_أفريل_ماي_جوان_جويلية_أوت_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split(
@@ -769,8 +736,8 @@
             yy: '%d سنوات',
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -779,23 +746,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ar.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ar.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Arabic [ar]
-//! author : Abdel Said: https://github.com/abdelsaid
-//! author : Ahmed Elkhatib
-//! author : forabi https://github.com/forabi
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '١',
@@ -974,8 +935,8 @@
                 .replace(/,/g, '،');
         },
         week: {
-            dow: 6, // Saturday is the first day of the week.
-            doy: 12, // The week that contains Jan 12th is the first week of the year.
+            dow: 6, 
+            doy: 12, 
         },
     });
 
@@ -984,21 +945,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/az.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/az.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Azerbaijani [az]
-//! author : topchiyev : https://github.com/topchiyev
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var suffixes = {
         1: '-inci',
@@ -1083,7 +1040,6 @@
         dayOfMonthOrdinalParse: /\d{1,2}-(ıncı|inci|nci|üncü|ncı|uncu)/,
         ordinal: function (number) {
             if (number === 0) {
-                // special case for zero
                 return number + '-ıncı';
             }
             var a = number % 10,
@@ -1092,8 +1048,8 @@
             return number + (suffixes[a] || suffixes[b] || suffixes[c]);
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -1102,23 +1058,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/be.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/be.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Belarusian [be]
-//! author : Dmitry Demidov : https://github.com/demidov91
-//! author: Praleska: http://praleska.pro/
-//! Author : Menelion Elensúle : https://github.com/Oire
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function plural(word, num) {
         var forms = word.split('_');
@@ -1250,8 +1200,8 @@
             }
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -1260,21 +1210,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/bg.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/bg.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Bulgarian [bg]
-//! author : Krasen Borisov : https://github.com/kraz
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var bg = moment.defineLocale('bg', {
         months: 'януари_февруари_март_април_май_юни_юли_август_септември_октомври_ноември_декември'.split(
@@ -1353,8 +1299,8 @@
             }
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -1363,21 +1309,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/bm.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/bm.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Bambara [bm]
-//! author : Estelle Comment : https://github.com/estellecomment
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var bm = moment.defineLocale('bm', {
         months: 'Zanwuyekalo_Fewuruyekalo_Marisikalo_Awirilikalo_Mɛkalo_Zuwɛnkalo_Zuluyekalo_Utikalo_Sɛtanburukalo_ɔkutɔburukalo_Nowanburukalo_Desanburukalo'.split(
@@ -1420,8 +1362,8 @@
             yy: 'san %d',
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -1430,21 +1372,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/bn-bd.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/bn-bd.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Bengali (Bangladesh) [bn-bd]
-//! author : Asraf Hossain Patoary : https://github.com/ashwoolford
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '১',
@@ -1565,8 +1503,8 @@
             }
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -1575,21 +1513,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/bn.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/bn.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Bengali [bn]
-//! author : Kaushik Gandhi : https://github.com/kaushikgandhi
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '১',
@@ -1700,8 +1634,8 @@
             }
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -1710,21 +1644,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/bo.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/bo.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Tibetan [bo]
-//! author : Thupten N. Chakrishar : https://github.com/vajradog
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '༡',
@@ -1840,8 +1770,8 @@
             }
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -1850,21 +1780,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/br.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/br.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Breton [br]
-//! author : Jean-Baptiste Le Duigou : https://github.com/jbleduigou
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function relativeTimeWithMutation(number, withoutSuffix, key) {
         var format = {
@@ -2017,10 +1943,10 @@
             return number + output;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
-        meridiemParse: /a.m.|g.m./, // goude merenn | a-raok merenn
+        meridiemParse: /a.m.|g.m./, 
         isPM: function (token) {
             return token === 'g.m.';
         },
@@ -2034,22 +1960,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/bs.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/bs.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Bosnian [bs]
-//! author : Nedim Cholich : https://github.com/frontyard
-//! based on (hr) translation by Bojan Marković
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function translate(number, withoutSuffix, key) {
         var result = number + ' ';
@@ -2190,8 +2111,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -2200,21 +2121,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ca.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ca.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Catalan [ca]
-//! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var ca = moment.defineLocale('ca', {
         months: {
@@ -2306,8 +2223,8 @@
             return number + output;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -2316,21 +2233,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/cs.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/cs.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Czech [cs]
-//! author : petrbela : https://github.com/petrbela
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var months = {
             format: 'leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec'.split(
@@ -2356,8 +2269,6 @@
             /^lis/i,
             /^pro/i,
         ],
-        // NOTE: 'červen' is substring of 'červenec'; therefore 'červenec' must precede 'červen' in the regex to be fully matched.
-        // Otherwise parser matches '1. červenec' as '1. červen' + 'ec'.
         monthsRegex =
             /^(leden|únor|březen|duben|květen|červenec|července|červen|června|srpen|září|říjen|listopad|prosinec|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i;
 
@@ -2367,49 +2278,49 @@
     function translate(number, withoutSuffix, key, isFuture) {
         var result = number + ' ';
         switch (key) {
-            case 's': // a few seconds / in a few seconds / a few seconds ago
+            case 's': 
                 return withoutSuffix || isFuture ? 'pár sekund' : 'pár sekundami';
-            case 'ss': // 9 seconds / in 9 seconds / 9 seconds ago
+            case 'ss': 
                 if (withoutSuffix || isFuture) {
                     return result + (plural(number) ? 'sekundy' : 'sekund');
                 } else {
                     return result + 'sekundami';
                 }
-            case 'm': // a minute / in a minute / a minute ago
+            case 'm': 
                 return withoutSuffix ? 'minuta' : isFuture ? 'minutu' : 'minutou';
-            case 'mm': // 9 minutes / in 9 minutes / 9 minutes ago
+            case 'mm': 
                 if (withoutSuffix || isFuture) {
                     return result + (plural(number) ? 'minuty' : 'minut');
                 } else {
                     return result + 'minutami';
                 }
-            case 'h': // an hour / in an hour / an hour ago
+            case 'h': 
                 return withoutSuffix ? 'hodina' : isFuture ? 'hodinu' : 'hodinou';
-            case 'hh': // 9 hours / in 9 hours / 9 hours ago
+            case 'hh': 
                 if (withoutSuffix || isFuture) {
                     return result + (plural(number) ? 'hodiny' : 'hodin');
                 } else {
                     return result + 'hodinami';
                 }
-            case 'd': // a day / in a day / a day ago
+            case 'd': 
                 return withoutSuffix || isFuture ? 'den' : 'dnem';
-            case 'dd': // 9 days / in 9 days / 9 days ago
+            case 'dd': 
                 if (withoutSuffix || isFuture) {
                     return result + (plural(number) ? 'dny' : 'dní');
                 } else {
                     return result + 'dny';
                 }
-            case 'M': // a month / in a month / a month ago
+            case 'M': 
                 return withoutSuffix || isFuture ? 'měsíc' : 'měsícem';
-            case 'MM': // 9 months / in 9 months / 9 months ago
+            case 'MM': 
                 if (withoutSuffix || isFuture) {
                     return result + (plural(number) ? 'měsíce' : 'měsíců');
                 } else {
                     return result + 'měsíci';
                 }
-            case 'y': // a year / in a year / a year ago
+            case 'y': 
                 return withoutSuffix || isFuture ? 'rok' : 'rokem';
-            case 'yy': // 9 years / in 9 years / 9 years ago
+            case 'yy': 
                 if (withoutSuffix || isFuture) {
                     return result + (plural(number) ? 'roky' : 'let');
                 } else {
@@ -2423,8 +2334,6 @@
         monthsShort: monthsShort,
         monthsRegex: monthsRegex,
         monthsShortRegex: monthsRegex,
-        // NOTE: 'červen' is substring of 'červenec'; therefore 'červenec' must precede 'červen' in the regex to be fully matched.
-        // Otherwise parser matches '1. červenec' as '1. červen' + 'ec'.
         monthsStrictRegex:
             /^(leden|ledna|února|únor|březen|března|duben|dubna|květen|května|červenec|července|červen|června|srpen|srpna|září|říjen|října|listopadu|listopad|prosinec|prosince)/i,
         monthsShortStrictRegex:
@@ -2502,8 +2411,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -2512,21 +2421,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/cv.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/cv.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Chuvash [cv]
-//! author : Anatoly Mironov : https://github.com/mirontoli
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var cv = moment.defineLocale('cv', {
         months: 'кӑрлач_нарӑс_пуш_ака_май_ҫӗртме_утӑ_ҫурла_авӑн_юпа_чӳк_раштав'.split(
@@ -2581,8 +2486,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}-мӗш/,
         ordinal: '%d-мӗш',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -2591,22 +2496,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/cy.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/cy.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Welsh [cy]
-//! author : Robert Allen : https://github.com/robgallen
-//! author : https://github.com/ryangreaves
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var cy = moment.defineLocale('cy', {
         months: 'Ionawr_Chwefror_Mawrth_Ebrill_Mai_Mehefin_Gorffennaf_Awst_Medi_Hydref_Tachwedd_Rhagfyr'.split(
@@ -2622,7 +2522,6 @@
         weekdaysShort: 'Sul_Llun_Maw_Mer_Iau_Gwe_Sad'.split('_'),
         weekdaysMin: 'Su_Ll_Ma_Me_Ia_Gw_Sa'.split('_'),
         weekdaysParseExact: true,
-        // time formats are the same as en-gb
         longDateFormat: {
             LT: 'HH:mm',
             LTS: 'HH:mm:ss',
@@ -2656,7 +2555,6 @@
             yy: '%d flynedd',
         },
         dayOfMonthOrdinalParse: /\d{1,2}(fed|ain|af|il|ydd|ed|eg)/,
-        // traditional ordinal numbers above 31 are not commonly used in colloquial Welsh
         ordinal: function (number) {
             var b = number,
                 output = '',
@@ -2671,7 +2569,7 @@
                     'ed',
                     'fed',
                     'fed',
-                    'fed', // 1af to 10fed
+                    'fed', 
                     'eg',
                     'fed',
                     'eg',
@@ -2681,11 +2579,11 @@
                     'eg',
                     'fed',
                     'eg',
-                    'fed', // 11eg to 20fed
+                    'fed', 
                 ];
             if (b > 20) {
                 if (b === 40 || b === 50 || b === 60 || b === 80 || b === 100) {
-                    output = 'fed'; // not 30ain, 70ain or 90ain
+                    output = 'fed'; 
                 } else {
                     output = 'ain';
                 }
@@ -2695,8 +2593,8 @@
             return number + output;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -2705,21 +2603,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/da.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/da.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Danish [da]
-//! author : Ulrik Nielsen : https://github.com/mrbase
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var da = moment.defineLocale('da', {
         months: 'januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december'.split(
@@ -2764,8 +2658,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -2774,24 +2668,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/de-at.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/de-at.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : German (Austria) [de-at]
-//! author : lluchs : https://github.com/lluchs
-//! author: Menelion Elensúle: https://github.com/Oire
-//! author : Martin Groller : https://github.com/MadMG
-//! author : Mikolaj Dadela : https://github.com/mik01aj
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function processRelativeTime(number, withoutSuffix, key, isFuture) {
         var format = {
@@ -2859,8 +2746,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -2869,21 +2756,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/de-ch.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/de-ch.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : German (Switzerland) [de-ch]
-//! author : sschueller : https://github.com/sschueller
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function processRelativeTime(number, withoutSuffix, key, isFuture) {
         var format = {
@@ -2951,8 +2834,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -2961,23 +2844,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/de.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/de.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : German [de]
-//! author : lluchs : https://github.com/lluchs
-//! author: Menelion Elensúle: https://github.com/Oire
-//! author : Mikolaj Dadela : https://github.com/mik01aj
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function processRelativeTime(number, withoutSuffix, key, isFuture) {
         var format = {
@@ -3045,8 +2922,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -3055,21 +2932,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/dv.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/dv.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Maldivian [dv]
-//! author : Jawish Hameed : https://github.com/jawish
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var months = [
             'ޖެނުއަރީ',
@@ -3151,8 +3024,8 @@
             return string.replace(/,/g, '،');
         },
         week: {
-            dow: 7, // Sunday is the first day of the week.
-            doy: 12, // The week that contains Jan 12th is the first week of the year.
+            dow: 7, 
+            doy: 12, 
         },
     });
 
@@ -3161,21 +3034,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/el.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/el.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Greek [el]
-//! author : Aggelos Karalias : https://github.com/mehiel
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function isFunction(input) {
         return (
@@ -3200,7 +3069,6 @@
                 typeof format === 'string' &&
                 /D/.test(format.substring(0, format.indexOf('MMMM')))
             ) {
-                // if there is a day number before 'MMMM'
                 return this._monthsGenitiveEl[momentToFormat.month()];
             } else {
                 return this._monthsNominativeEl[momentToFormat.month()];
@@ -3273,8 +3141,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}η/,
         ordinal: '%dη',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4st is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -3283,21 +3151,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-au.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-au.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : English (Australia) [en-au]
-//! author : Jared Morse : https://github.com/jarcoal
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var enAu = moment.defineLocale('en-au', {
         months: 'January_February_March_April_May_June_July_August_September_October_November_December'.split(
@@ -3357,8 +3221,8 @@
             return number + output;
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 0, 
+            doy: 4, 
         },
     });
 
@@ -3367,21 +3231,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-ca.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-ca.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : English (Canada) [en-ca]
-//! author : Jonathan Abourbih : https://github.com/jonbca
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var enCa = moment.defineLocale('en-ca', {
         months: 'January_February_March_April_May_June_July_August_September_October_November_December'.split(
@@ -3447,21 +3307,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-gb.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-gb.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : English (United Kingdom) [en-gb]
-//! author : Chris Gedrim : https://github.com/chrisgedrim
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var enGb = moment.defineLocale('en-gb', {
         months: 'January_February_March_April_May_June_July_August_September_October_November_December'.split(
@@ -3521,8 +3377,8 @@
             return number + output;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -3531,21 +3387,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-ie.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-ie.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : English (Ireland) [en-ie]
-//! author : Chris Cartlidge : https://github.com/chriscartlidge
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var enIe = moment.defineLocale('en-ie', {
         months: 'January_February_March_April_May_June_July_August_September_October_November_December'.split(
@@ -3605,8 +3457,8 @@
             return number + output;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -3615,21 +3467,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-il.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-il.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : English (Israel) [en-il]
-//! author : Chris Gedrim : https://github.com/chrisgedrim
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var enIl = moment.defineLocale('en-il', {
         months: 'January_February_March_April_May_June_July_August_September_October_November_December'.split(
@@ -3695,21 +3543,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-in.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-in.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : English (India) [en-in]
-//! author : Jatin Agrawal : https://github.com/jatinag22
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var enIn = moment.defineLocale('en-in', {
         months: 'January_February_March_April_May_June_July_August_September_October_November_December'.split(
@@ -3769,8 +3613,8 @@
             return number + output;
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 1st is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -3779,21 +3623,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-nz.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-nz.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : English (New Zealand) [en-nz]
-//! author : Luke McGregor : https://github.com/lukemcgregor
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var enNz = moment.defineLocale('en-nz', {
         months: 'January_February_March_April_May_June_July_August_September_October_November_December'.split(
@@ -3853,8 +3693,8 @@
             return number + output;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -3863,21 +3703,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-sg.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/en-sg.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : English (Singapore) [en-sg]
-//! author : Matthew Castrillon-Madrigal : https://github.com/techdimension
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var enSg = moment.defineLocale('en-sg', {
         months: 'January_February_March_April_May_June_July_August_September_October_November_December'.split(
@@ -3937,8 +3773,8 @@
             return number + output;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -3947,24 +3783,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/eo.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/eo.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Esperanto [eo]
-//! author : Colin Dean : https://github.com/colindean
-//! author : Mia Nordentoft Imperatori : https://github.com/miestasmia
-//! comment : miestasmia corrected the translation by colindean
-//! comment : Vivakvo corrected the translation by colindean and miestasmia
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var eo = moment.defineLocale('eo', {
         months: 'januaro_februaro_marto_aprilo_majo_junio_julio_aŭgusto_septembro_oktobro_novembro_decembro'.split(
@@ -4011,7 +3840,7 @@
             mm: '%d minutoj',
             h: 'unu horo',
             hh: '%d horoj',
-            d: 'unu tago', //ne 'diurno', ĉar estas uzita por proksimumo
+            d: 'unu tago', 
             dd: '%d tagoj',
             M: 'unu monato',
             MM: '%d monatoj',
@@ -4021,8 +3850,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}a/,
         ordinal: '%da',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -4031,20 +3860,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/es-do.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/es-do.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Spanish (Dominican Republic) [es-do]
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var monthsShortDot =
             'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split(
@@ -4145,8 +3971,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}º/,
         ordinal: '%dº',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -4155,21 +3981,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/es-mx.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/es-mx.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Spanish (Mexico) [es-mx]
-//! author : JC Franco : https://github.com/jcfranco
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var monthsShortDot =
             'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split(
@@ -4270,8 +4092,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}º/,
         ordinal: '%dº',
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 0, 
+            doy: 4, 
         },
         invalidDate: 'Fecha inválida',
     });
@@ -4281,22 +4103,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/es-us.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/es-us.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Spanish (United States) [es-us]
-//! author : bustta : https://github.com/bustta
-//! author : chrisrodz : https://github.com/chrisrodz
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var monthsShortDot =
             'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split(
@@ -4397,8 +4214,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}º/,
         ordinal: '%dº',
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -4407,21 +4224,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/es.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/es.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Spanish [es]
-//! author : Julio Napurí : https://github.com/julionc
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var monthsShortDot =
             'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split(
@@ -4522,8 +4335,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}º/,
         ordinal: '%dº',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
         invalidDate: 'Fecha inválida',
     });
@@ -4533,22 +4346,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/et.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/et.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Estonian [et]
-//! author : Henry Kehlmann : https://github.com/madhenry
-//! improvements : Illimar Tambek : https://github.com/ragulka
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function processRelativeTime(number, withoutSuffix, key, isFuture) {
         var format = {
@@ -4617,8 +4425,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -4627,21 +4435,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/eu.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/eu.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Basque [eu]
-//! author : Eneko Illarramendi : https://github.com/eillarra
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var eu = moment.defineLocale('eu', {
         months: 'urtarrila_otsaila_martxoa_apirila_maiatza_ekaina_uztaila_abuztua_iraila_urria_azaroa_abendua'.split(
@@ -4698,8 +4502,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -4708,21 +4512,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fa.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fa.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Persian [fa]
-//! author : Ebrahim Byagowi : https://github.com/ebraminio
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '۱',
@@ -4827,8 +4627,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}م/,
         ordinal: '%dم',
         week: {
-            dow: 6, // Saturday is the first day of the week.
-            doy: 12, // The week that contains Jan 12th is the first week of the year.
+            dow: 6, 
+            doy: 12, 
         },
     });
 
@@ -4837,21 +4637,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fi.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fi.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Finnish [fi]
-//! author : Tarmo Aidantausta : https://github.com/bleadof
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var numbersPast =
             'nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän'.split(
@@ -4967,8 +4763,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -4977,22 +4773,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fil.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fil.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Filipino [fil]
-//! author : Dan Hagman : https://github.com/hagmandan
-//! author : Matthew Co : https://github.com/matthewdeeco
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var fil = moment.defineLocale('fil', {
         months: 'Enero_Pebrero_Marso_Abril_Mayo_Hunyo_Hulyo_Agosto_Setyembre_Oktubre_Nobyembre_Disyembre'.split(
@@ -5041,8 +4832,8 @@
             return number;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -5051,22 +4842,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fo.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fo.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Faroese [fo]
-//! author : Ragnar Johannesen : https://github.com/ragnar123
-//! author : Kristian Sakarisson : https://github.com/sakarisson
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var fo = moment.defineLocale('fo', {
         months: 'januar_februar_mars_apríl_mai_juni_juli_august_september_oktober_november_desember'.split(
@@ -5114,8 +4900,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -5124,21 +4910,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fr-ca.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fr-ca.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : French (Canada) [fr-ca]
-//! author : Jonathan Abourbih : https://github.com/jonbca
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var frCa = moment.defineLocale('fr-ca', {
         months: 'janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre'.split(
@@ -5188,7 +4970,6 @@
         dayOfMonthOrdinalParse: /\d{1,2}(er|e)/,
         ordinal: function (number, period) {
             switch (period) {
-                // Words with masculine grammatical gender: mois, trimestre, jour
                 default:
                 case 'M':
                 case 'Q':
@@ -5197,7 +4978,6 @@
                 case 'd':
                     return number + (number === 1 ? 'er' : 'e');
 
-                // Words with feminine grammatical gender: semaine
                 case 'w':
                 case 'W':
                     return number + (number === 1 ? 're' : 'e');
@@ -5210,21 +4990,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fr-ch.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fr-ch.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : French (Switzerland) [fr-ch]
-//! author : Gaspard Bucher : https://github.com/gaspard
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var frCh = moment.defineLocale('fr-ch', {
         months: 'janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre'.split(
@@ -5274,7 +5050,6 @@
         dayOfMonthOrdinalParse: /\d{1,2}(er|e)/,
         ordinal: function (number, period) {
             switch (period) {
-                // Words with masculine grammatical gender: mois, trimestre, jour
                 default:
                 case 'M':
                 case 'Q':
@@ -5283,15 +5058,14 @@
                 case 'd':
                     return number + (number === 1 ? 'er' : 'e');
 
-                // Words with feminine grammatical gender: semaine
                 case 'w':
                 case 'W':
                     return number + (number === 1 ? 're' : 'e');
             }
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -5300,21 +5074,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fr.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fr.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : French [fr]
-//! author : John Fischer : https://github.com/jfroffice
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var monthsStrictRegex =
             /^(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)/i,
@@ -5393,13 +5163,9 @@
         dayOfMonthOrdinalParse: /\d{1,2}(er|)/,
         ordinal: function (number, period) {
             switch (period) {
-                // TODO: Return 'e' when day of month > 1. Move this case inside
-                // block for masculine words below.
-                // See https://github.com/moment/moment/issues/3375
                 case 'D':
                     return number + (number === 1 ? 'er' : '');
 
-                // Words with masculine grammatical gender: mois, trimestre, jour
                 default:
                 case 'M':
                 case 'Q':
@@ -5407,15 +5173,14 @@
                 case 'd':
                     return number + (number === 1 ? 'er' : 'e');
 
-                // Words with feminine grammatical gender: semaine
                 case 'w':
                 case 'W':
                     return number + (number === 1 ? 're' : 'e');
             }
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -5424,21 +5189,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fy.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/fy.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Frisian [fy]
-//! author : Robin van der Vliet : https://github.com/robin0van0der0v
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var monthsShortWithDots =
             'jan._feb._mrt._apr._mai_jun._jul._aug._sep._okt._nov._des.'.split('_'),
@@ -5505,8 +5266,8 @@
             );
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -5515,21 +5276,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ga.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ga.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Irish or Irish Gaelic [ga]
-//! author : André Silva : https://github.com/askpt
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var months = [
             'Eanáir',
@@ -5616,8 +5373,8 @@
             return number + output;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -5626,21 +5383,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/gd.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/gd.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Scottish Gaelic [gd]
-//! author : Jon Ashdown : https://github.com/jonashdown
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var months = [
             'Am Faoilleach',
@@ -5727,8 +5480,8 @@
             return number + output;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -5737,21 +5490,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/gl.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/gl.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Galician [gl]
-//! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var gl = moment.defineLocale('gl', {
         months: 'xaneiro_febreiro_marzo_abril_maio_xuño_xullo_agosto_setembro_outubro_novembro_decembro'.split(
@@ -5818,8 +5567,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}º/,
         ordinal: '%dº',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -5828,21 +5577,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/gom-deva.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/gom-deva.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Konkani Devanagari script [gom-deva]
-//! author : The Discoverer : https://github.com/WikiDiscoverer
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function processRelativeTime(number, withoutSuffix, key, isFuture) {
         var format = {
@@ -5918,7 +5663,6 @@
         dayOfMonthOrdinalParse: /\d{1,2}(वेर)/,
         ordinal: function (number, period) {
             switch (period) {
-                // the ordinal 'वेर' only applies to day of the month
                 case 'D':
                     return number + 'वेर';
                 default:
@@ -5932,8 +5676,8 @@
             }
         },
         week: {
-            dow: 0, // Sunday is the first day of the week
-            doy: 3, // The week that contains Jan 4th is the first week of the year (7 + 0 - 4)
+            dow: 0, 
+            doy: 3, 
         },
         meridiemParse: /राती|सकाळीं|दनपारां|सांजे/,
         meridiemHour: function (hour, meridiem) {
@@ -5970,21 +5714,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/gom-latn.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/gom-latn.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Konkani Latin script [gom-latn]
-//! author : The Discoverer : https://github.com/WikiDiscoverer
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function processRelativeTime(number, withoutSuffix, key, isFuture) {
         var format = {
@@ -6058,7 +5798,6 @@
         dayOfMonthOrdinalParse: /\d{1,2}(er)/,
         ordinal: function (number, period) {
             switch (period) {
-                // the ordinal 'er' only applies to day of the month
                 case 'D':
                     return number + 'er';
                 default:
@@ -6072,8 +5811,8 @@
             }
         },
         week: {
-            dow: 0, // Sunday is the first day of the week
-            doy: 3, // The week that contains Jan 4th is the first week of the year (7 + 0 - 4)
+            dow: 0, 
+            doy: 3, 
         },
         meridiemParse: /rati|sokallim|donparam|sanje/,
         meridiemHour: function (hour, meridiem) {
@@ -6110,21 +5849,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/gu.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/gu.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Gujarati [gu]
-//! author : Kaushik Thanki : https://github.com/Kaushik1987
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '૧',
@@ -6207,8 +5942,6 @@
                 return symbolMap[match];
             });
         },
-        // Gujarati notation for meridiems are quite fuzzy in practice. While there exists
-        // a rigid notion of a 'Pahar' it is not used as rigidly in modern Gujarati.
         meridiemParse: /રાત|બપોર|સવાર|સાંજ/,
         meridiemHour: function (hour, meridiem) {
             if (hour === 12) {
@@ -6238,8 +5971,8 @@
             }
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -6248,23 +5981,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/he.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/he.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Hebrew [he]
-//! author : Tomer Cohen : https://github.com/tomer
-//! author : Moshe Simantov : https://github.com/DevelopmentIL
-//! author : Tal Ater : https://github.com/TalAter
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var he = moment.defineLocale('he', {
         months: 'ינואר_פברואר_מרץ_אפריל_מאי_יוני_יולי_אוגוסט_ספטמבר_אוקטובר_נובמבר_דצמבר'.split(
@@ -6358,21 +6085,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/hi.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/hi.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Hindi [hi]
-//! author : Mayank Singhal : https://github.com/mayanksinghal
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '१',
@@ -6501,8 +6224,6 @@
                 return symbolMap[match];
             });
         },
-        // Hindi notation for meridiems are quite fuzzy in practice. While there exists
-        // a rigid notion of a 'Pahar' it is not used as rigidly in modern Hindi.
         meridiemParse: /रात|सुबह|दोपहर|शाम/,
         meridiemHour: function (hour, meridiem) {
             if (hour === 12) {
@@ -6532,8 +6253,8 @@
             }
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -6542,21 +6263,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/hr.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/hr.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Croatian [hr]
-//! author : Bojan Marković : https://github.com/bmarkovic
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function translate(number, withoutSuffix, key) {
         var result = number + ' ';
@@ -6704,8 +6421,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -6714,22 +6431,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/hu.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/hu.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Hungarian [hu]
-//! author : Adam Brunner : https://github.com/adambrunner
-//! author : Peter Viszt  : https://github.com/passatgt
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var weekEndings =
         'vasárnap hétfőn kedden szerdán csütörtökön pénteken szombaton'.split(' ');
@@ -6838,8 +6550,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -6848,21 +6560,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/hy-am.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/hy-am.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Armenian [hy-am]
-//! author : Armendarabyan : https://github.com/armendarabyan
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var hyAm = moment.defineLocale('hy-am', {
         months: {
@@ -6948,8 +6656,8 @@
             }
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -6958,22 +6666,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/id.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/id.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Indonesian [id]
-//! author : Mohammad Satrio Utomo : https://github.com/tyok
-//! reference: http://id.wikisource.org/wiki/Pedoman_Umum_Ejaan_Bahasa_Indonesia_yang_Disempurnakan
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var id = moment.defineLocale('id', {
         months: 'Januari_Februari_Maret_April_Mei_Juni_Juli_Agustus_September_Oktober_November_Desember'.split(
@@ -7040,8 +6743,8 @@
             yy: '%d tahun',
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -7050,21 +6753,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/is.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/is.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Icelandic [is]
-//! author : Hinrik Örn Sigurðsson : https://github.com/hinrik
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function plural(n) {
         if (n % 100 === 11) {
@@ -7196,8 +6895,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -7206,21 +6905,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/it-ch.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/it-ch.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Italian (Switzerland) [it-ch]
-//! author : xfh : https://github.com/xfh
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var itCh = moment.defineLocale('it-ch', {
         months: 'gennaio_febbraio_marzo_aprile_maggio_giugno_luglio_agosto_settembre_ottobre_novembre_dicembre'.split(
@@ -7276,8 +6971,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}º/,
         ordinal: '%dº',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -7286,23 +6981,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/it.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/it.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Italian [it]
-//! author : Lorenzo : https://github.com/aliem
-//! author: Mattia Larentis: https://github.com/nostalgiaz
-//! author: Marco : https://github.com/Manfre98
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var it = moment.defineLocale('it', {
         months: 'gennaio_febbraio_marzo_aprile_maggio_giugno_luglio_agosto_settembre_ottobre_novembre_dicembre'.split(
@@ -7398,8 +7087,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}º/,
         ordinal: '%dº',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -7408,21 +7097,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ja.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ja.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Japanese [ja]
-//! author : LI Long : https://github.com/baryon
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var ja = moment.defineLocale('ja', {
         eras: [
@@ -7572,22 +7257,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/jv.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/jv.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Javanese [jv]
-//! author : Rony Lantip : https://github.com/lantip
-//! reference: http://jv.wikipedia.org/wiki/Basa_Jawa
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var jv = moment.defineLocale('jv', {
         months: 'Januari_Februari_Maret_April_Mei_Juni_Juli_Agustus_September_Oktober_Nopember_Desember'.split(
@@ -7654,8 +7334,8 @@
             yy: '%d taun',
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -7664,21 +7344,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ka.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ka.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Georgian [ka]
-//! author : Irakli Janiashvili : https://github.com/IrakliJani
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var ka = moment.defineLocale('ka', {
         months: 'იანვარი_თებერვალი_მარტი_აპრილი_მაისი_ივნისი_ივლისი_აგვისტო_სექტემბერი_ოქტომბერი_ნოემბერი_დეკემბერი'.split(
@@ -7772,21 +7448,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/kk.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/kk.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Kazakh [kk]
-//! authors : Nurlan Rakhimzhanov : https://github.com/nurlan
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var suffixes = {
         0: '-ші',
@@ -7860,8 +7532,8 @@
             return number + (suffixes[number] || suffixes[a] || suffixes[b]);
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -7870,21 +7542,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/km.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/km.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Cambodian [km]
-//! author : Kruy Vanna : https://github.com/kruyvanna
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '១',
@@ -7979,8 +7647,8 @@
             });
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -7989,21 +7657,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/kn.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/kn.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Kannada [kn]
-//! author : Rajeev Naik : https://github.com/rajeevnaikte
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '೧',
@@ -8119,8 +7783,8 @@
             return number + 'ನೇ';
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -8129,22 +7793,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ko.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ko.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Korean [ko]
-//! author : Kyungwook, Park : https://github.com/kyungw00k
-//! author : Jeeeyul Lee <jeeeyul@gmail.com>
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var ko = moment.defineLocale('ko', {
         months: '1월_2월_3월_4월_5월_6월_7월_8월_9월_10월_11월_12월'.split('_'),
@@ -8220,21 +7879,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ku.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ku.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Kurdish [ku]
-//! author : Shahram Mebashar : https://github.com/ShahramMebashar
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '١',
@@ -8344,8 +7999,8 @@
                 .replace(/,/g, '،');
         },
         week: {
-            dow: 6, // Saturday is the first day of the week.
-            doy: 12, // The week that contains Jan 12th is the first week of the year.
+            dow: 6, 
+            doy: 12, 
         },
     });
 
@@ -8354,21 +8009,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ky.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ky.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Kyrgyz [ky]
-//! author : Chyngyz Arystan uulu : https://github.com/chyngyz
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var suffixes = {
         0: '-чү',
@@ -8444,8 +8095,8 @@
             return number + (suffixes[number] || suffixes[a] || suffixes[b]);
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -8454,22 +8105,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/lb.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/lb.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Luxembourgish [lb]
-//! author : mweimerskirch : https://github.com/mweimerskirch
-//! author : David Raison : https://github.com/kwisatz
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function processRelativeTime(number, withoutSuffix, key, isFuture) {
         var format = {
@@ -8495,29 +8141,19 @@
         }
         return 'virun ' + string;
     }
-    /**
-     * Returns true if the word before the given number loses the '-n' ending.
-     * e.g. 'an 10 Deeg' but 'a 5 Deeg'
-     *
-     * @param number {integer}
-     * @returns {boolean}
-     */
     function eifelerRegelAppliesToNumber(number) {
         number = parseInt(number, 10);
         if (isNaN(number)) {
             return false;
         }
         if (number < 0) {
-            // Negative Number --> always true
             return true;
         } else if (number < 10) {
-            // Only 1 digit
             if (4 <= number && number <= 7) {
                 return true;
             }
             return false;
         } else if (number < 100) {
-            // 2 digits
             var lastDigit = number % 10,
                 firstDigit = number / 10;
             if (lastDigit === 0) {
@@ -8525,13 +8161,11 @@
             }
             return eifelerRegelAppliesToNumber(lastDigit);
         } else if (number < 10000) {
-            // 3 or 4 digits --> recursively check first digit
             while (number >= 10) {
                 number = number / 10;
             }
             return eifelerRegelAppliesToNumber(number);
         } else {
-            // Anything larger than 4 digits: recursively check first n-3 digits
             number = number / 1000;
             return eifelerRegelAppliesToNumber(number);
         }
@@ -8568,7 +8202,6 @@
             nextWeek: 'dddd [um] LT',
             lastDay: '[Gëschter um] LT',
             lastWeek: function () {
-                // Different date string for 'Dënschdeg' (Tuesday) and 'Donneschdeg' (Thursday) due to phonological rule
                 switch (this.day()) {
                     case 2:
                     case 4:
@@ -8597,8 +8230,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -8607,21 +8240,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/lo.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/lo.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Lao [lo]
-//! author : Ryan Hart : https://github.com/ryanhart2
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var lo = moment.defineLocale('lo', {
         months: 'ມັງກອນ_ກຸມພາ_ມີນາ_ເມສາ_ພຶດສະພາ_ມິຖຸນາ_ກໍລະກົດ_ສິງຫາ_ກັນຍາ_ຕຸລາ_ພະຈິກ_ທັນວາ'.split(
@@ -8689,21 +8318,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/lt.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/lt.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Lithuanian [lt]
-//! author : Mindaugas Mozūras : https://github.com/mmozuras
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var units = {
         ss: 'sekundė_sekundžių_sekundes',
@@ -8820,8 +8445,8 @@
             return number + '-oji';
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -8830,22 +8455,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/lv.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/lv.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Latvian [lv]
-//! author : Kristaps Karlsons : https://github.com/skakri
-//! author : Jānis Elmeris : https://github.com/JanisE
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var units = {
         ss: 'sekundes_sekundēm_sekunde_sekundes'.split('_'),
@@ -8860,16 +8480,10 @@
         y: 'gada_gadiem_gads_gadi'.split('_'),
         yy: 'gada_gadiem_gads_gadi'.split('_'),
     };
-    /**
-     * @param withoutSuffix boolean true = a length of time; false = before/after a period of time.
-     */
     function format(forms, number, withoutSuffix) {
         if (withoutSuffix) {
-            // E.g. "21 minūte", "3 minūtes".
             return number % 10 === 1 && number % 100 !== 11 ? forms[2] : forms[3];
         } else {
-            // E.g. "21 minūtes" as in "pēc 21 minūtes".
-            // E.g. "3 minūtēm" as in "pēc 3 minūtēm".
             return number % 10 === 1 && number % 100 !== 11 ? forms[0] : forms[1];
         }
     }
@@ -8930,8 +8544,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -8940,25 +8554,20 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/me.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/me.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Montenegrin [me]
-//! author : Miodrag Nikač <miodrag@restartit.me> : https://github.com/miodragnikac
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var translator = {
         words: {
-            //Different grammatical cases
             ss: ['sekund', 'sekunda', 'sekundi'],
             m: ['jedan minut', 'jednog minuta'],
             mm: ['minut', 'minuta', 'minuta'],
@@ -9063,8 +8672,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -9073,21 +8682,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/mi.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/mi.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Maori [mi]
-//! author : John Corrigan <robbiecloset@gmail.com> : https://github.com/johnideal
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var mi = moment.defineLocale('mi', {
         months: 'Kohi-tāte_Hui-tanguru_Poutū-te-rangi_Paenga-whāwhā_Haratua_Pipiri_Hōngoingoi_Here-turi-kōkā_Mahuru_Whiringa-ā-nuku_Whiringa-ā-rangi_Hakihea'.split(
@@ -9139,8 +8744,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}º/,
         ordinal: '%dº',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -9149,22 +8754,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/mk.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/mk.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Macedonian [mk]
-//! author : Borislav Mickov : https://github.com/B0k0
-//! author : Sashko Todorov : https://github.com/bkyceh
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var mk = moment.defineLocale('mk', {
         months: 'јануари_февруари_март_април_мај_јуни_јули_август_септември_октомври_ноември_декември'.split(
@@ -9241,8 +8841,8 @@
             }
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -9251,21 +8851,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ml.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ml.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Malayalam [ml]
-//! author : Floyd Pink : https://github.com/floydpink
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var ml = moment.defineLocale('ml', {
         months: 'ജനുവരി_ഫെബ്രുവരി_മാർച്ച്_ഏപ്രിൽ_മേയ്_ജൂൺ_ജൂലൈ_ഓഗസ്റ്റ്_സെപ്റ്റംബർ_ഒക്ടോബർ_നവംബർ_ഡിസംബർ'.split(
@@ -9349,21 +8945,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/mn.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/mn.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Mongolian [mn]
-//! author : Javkhlantugs Nyamdorj : https://github.com/javkhaanj7
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function translate(number, withoutSuffix, key, isFuture) {
         switch (key) {
@@ -9465,22 +9057,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/mr.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/mr.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Marathi [mr]
-//! author : Harshad Kale : https://github.com/kalehv
-//! author : Vivek Athalye : https://github.com/vnathalye
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '१',
@@ -9674,8 +9261,8 @@
             }
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -9684,22 +9271,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ms-my.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ms-my.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Malay [ms-my]
-//! note : DEPRECATED, the correct one is [ms]
-//! author : Weldan Jamili : https://github.com/weldan
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var msMy = moment.defineLocale('ms-my', {
         months: 'Januari_Februari_Mac_April_Mei_Jun_Julai_Ogos_September_Oktober_November_Disember'.split(
@@ -9766,8 +9348,8 @@
             yy: '%d tahun',
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -9776,21 +9358,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ms.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ms.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Malay [ms]
-//! author : Weldan Jamili : https://github.com/weldan
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var ms = moment.defineLocale('ms', {
         months: 'Januari_Februari_Mac_April_Mei_Jun_Julai_Ogos_September_Oktober_November_Disember'.split(
@@ -9857,8 +9435,8 @@
             yy: '%d tahun',
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -9867,21 +9445,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/mt.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/mt.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Maltese (Malta) [mt]
-//! author : Alessandro Maruccia : https://github.com/alesma
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var mt = moment.defineLocale('mt', {
         months: 'Jannar_Frar_Marzu_April_Mejju_Ġunju_Lulju_Awwissu_Settembru_Ottubru_Novembru_Diċembru'.split(
@@ -9929,8 +9503,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}º/,
         ordinal: '%dº',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -9939,23 +9513,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/my.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/my.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Burmese [my]
-//! author : Squar team, mysquar.com
-//! author : David Rossellat : https://github.com/gholadr
-//! author : Tin Aung Lin : https://github.com/thanyawzinmin
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '၁',
@@ -10036,8 +9604,8 @@
             });
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -10046,23 +9614,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/nb.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/nb.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Norwegian Bokmål [nb]
-//! authors : Espen Hovlandsdal : https://github.com/rexxars
-//!           Sigurd Gartmann : https://github.com/sigurdga
-//!           Stephen Ramthun : https://github.com/stephenramthun
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var nb = moment.defineLocale('nb', {
         months: 'januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember'.split(
@@ -10112,8 +9674,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -10122,21 +9684,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ne.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ne.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Nepalese [ne]
-//! author : suvash : https://github.com/suvash
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '१',
@@ -10249,8 +9807,8 @@
             yy: '%d बर्ष',
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -10259,22 +9817,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/nl-be.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/nl-be.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Dutch (Belgium) [nl-be]
-//! author : Joris Röling : https://github.com/jorisroling
-//! author : Jacob Middag : https://github.com/middagj
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var monthsShortWithDots =
             'jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.'.split('_'),
@@ -10367,8 +9920,8 @@
             );
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -10377,22 +9930,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/nl.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/nl.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Dutch [nl]
-//! author : Joris Röling : https://github.com/jorisroling
-//! author : Jacob Middag : https://github.com/middagj
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var monthsShortWithDots =
             'jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.'.split('_'),
@@ -10487,8 +10035,8 @@
             );
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -10497,22 +10045,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/nn.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/nn.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Nynorsk [nn]
-//! authors : https://github.com/mechuwind
-//!           Stephen Ramthun : https://github.com/stephenramthun
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var nn = moment.defineLocale('nn', {
         months: 'januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember'.split(
@@ -10562,8 +10105,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -10572,21 +10115,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/oc-lnc.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/oc-lnc.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Occitan, lengadocian dialecte [oc-lnc]
-//! author : Quentin PAGÈS : https://github.com/Quenty31
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var ocLnc = moment.defineLocale('oc-lnc', {
         months: {
@@ -10663,7 +10202,7 @@
             return number + output;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
+            dow: 1, 
             doy: 4,
         },
     });
@@ -10673,21 +10212,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/pa-in.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/pa-in.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Punjabi (India) [pa-in]
-//! author : Harpreet Singh : https://github.com/harpreetkhalsagtbit
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '੧',
@@ -10715,7 +10250,6 @@
         };
 
     var paIn = moment.defineLocale('pa-in', {
-        // There are months name as per Nanakshahi Calendar but they are not used as rigidly in modern Punjabi.
         months: 'ਜਨਵਰੀ_ਫ਼ਰਵਰੀ_ਮਾਰਚ_ਅਪ੍ਰੈਲ_ਮਈ_ਜੂਨ_ਜੁਲਾਈ_ਅਗਸਤ_ਸਤੰਬਰ_ਅਕਤੂਬਰ_ਨਵੰਬਰ_ਦਸੰਬਰ'.split(
             '_'
         ),
@@ -10770,8 +10304,6 @@
                 return symbolMap[match];
             });
         },
-        // Punjabi notation for meridiems are quite fuzzy in practice. While there exists
-        // a rigid notion of a 'Pahar' it is not used as rigidly in modern Punjabi.
         meridiemParse: /ਰਾਤ|ਸਵੇਰ|ਦੁਪਹਿਰ|ਸ਼ਾਮ/,
         meridiemHour: function (hour, meridiem) {
             if (hour === 12) {
@@ -10801,8 +10333,8 @@
             }
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -10811,21 +10343,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/pl.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/pl.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Polish [pl]
-//! author : Rafal Hirsz : https://github.com/evoL
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var monthsNominative =
             'styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień'.split(
@@ -10957,8 +10485,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -10967,21 +10495,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/pt-br.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/pt-br.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Portuguese (Brazil) [pt-br]
-//! author : Caio Ribeiro Pereira : https://github.com/caio-ribeiro-pereira
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var ptBr = moment.defineLocale('pt-br', {
         months: 'janeiro_fevereiro_março_abril_maio_junho_julho_agosto_setembro_outubro_novembro_dezembro'.split(
@@ -11010,8 +10534,8 @@
             lastDay: '[Ontem às] LT',
             lastWeek: function () {
                 return this.day() === 0 || this.day() === 6
-                    ? '[Último] dddd [às] LT' // Saturday + Sunday
-                    : '[Última] dddd [às] LT'; // Monday - Friday
+                    ? '[Último] dddd [às] LT' 
+                    : '[Última] dddd [às] LT'; 
             },
             sameElse: 'L',
         },
@@ -11041,21 +10565,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/pt.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/pt.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Portuguese [pt]
-//! author : Jefferson : https://github.com/jalex79
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var pt = moment.defineLocale('pt', {
         months: 'janeiro_fevereiro_março_abril_maio_junho_julho_agosto_setembro_outubro_novembro_dezembro'.split(
@@ -11084,8 +10604,8 @@
             lastDay: '[Ontem às] LT',
             lastWeek: function () {
                 return this.day() === 0 || this.day() === 6
-                    ? '[Último] dddd [às] LT' // Saturday + Sunday
-                    : '[Última] dddd [às] LT'; // Monday - Friday
+                    ? '[Último] dddd [às] LT' 
+                    : '[Última] dddd [às] LT'; 
             },
             sameElse: 'L',
         },
@@ -11110,8 +10630,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}º/,
         ordinal: '%dº',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -11120,23 +10640,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ro.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ro.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Romanian [ro]
-//! author : Vlad Gurdiga : https://github.com/gurdiga
-//! author : Valentin Agachi : https://github.com/avaly
-//! author : Emanuel Cepoi : https://github.com/cepem
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function relativeTimeWithPlural(number, withoutSuffix, key) {
         var format = {
@@ -11202,8 +10716,8 @@
             yy: relativeTimeWithPlural,
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -11212,23 +10726,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ru.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ru.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Russian [ru]
-//! author : Viktorminator : https://github.com/Viktorminator
-//! author : Menelion Elensúle : https://github.com/Oire
-//! author : Коренберг Марк : https://github.com/socketpair
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function plural(word, num) {
         var forms = word.split('_');
@@ -11269,9 +10777,6 @@
         /^дек/i,
     ];
 
-    // http://new.gramota.ru/spravka/rules/139-prop : § 103
-    // Сокращения месяцев: http://new.gramota.ru/spravka/buro/search-answer?s=242637
-    // CLDR data:          http://www.unicode.org/cldr/charts/28/summary/ru.html#1753
     var ru = moment.defineLocale('ru', {
         months: {
             format: 'января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря'.split(
@@ -11283,7 +10788,6 @@
                 ),
         },
         monthsShort: {
-            // по CLDR именно "июл." и "июн.", но какой смысл менять букву на точку?
             format: 'янв._февр._мар._апр._мая_июня_июля_авг._сент._окт._нояб._дек.'.split(
                 '_'
             ),
@@ -11308,19 +10812,15 @@
         longMonthsParse: monthsParse,
         shortMonthsParse: monthsParse,
 
-        // полные названия с падежами, по три буквы, для некоторых, по 4 буквы, сокращения с точкой и без точки
         monthsRegex:
             /^(январ[ья]|янв\.?|феврал[ья]|февр?\.?|марта?|мар\.?|апрел[ья]|апр\.?|ма[йя]|июн[ья]|июн\.?|июл[ья]|июл\.?|августа?|авг\.?|сентябр[ья]|сент?\.?|октябр[ья]|окт\.?|ноябр[ья]|нояб?\.?|декабр[ья]|дек\.?)/i,
 
-        // копия предыдущего
         monthsShortRegex:
             /^(январ[ья]|янв\.?|феврал[ья]|февр?\.?|марта?|мар\.?|апрел[ья]|апр\.?|ма[йя]|июн[ья]|июн\.?|июл[ья]|июл\.?|августа?|авг\.?|сентябр[ья]|сент?\.?|октябр[ья]|окт\.?|ноябр[ья]|нояб?\.?|декабр[ья]|дек\.?)/i,
 
-        // полные названия с падежами
         monthsStrictRegex:
             /^(январ[яь]|феврал[яь]|марта?|апрел[яь]|ма[яй]|июн[яь]|июл[яь]|августа?|сентябр[яь]|октябр[яь]|ноябр[яь]|декабр[яь])/i,
 
-        // Выражение, которое соответствует только сокращённым формам
         monthsShortStrictRegex:
             /^(янв\.|февр?\.|мар[т.]|апр\.|ма[яй]|июн[ья.]|июл[ья.]|авг\.|сент?\.|окт\.|нояб?\.|дек\.)/i,
         longDateFormat: {
@@ -11431,8 +10931,8 @@
             }
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -11441,21 +10941,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sd.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sd.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Sindhi [sd]
-//! author : Narain Sagar : https://github.com/narainsagar
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var months = [
             'جنوري',
@@ -11528,8 +11024,8 @@
             return string.replace(/,/g, '،');
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -11538,21 +11034,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/se.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/se.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Northern Sami [se]
-//! authors : Bård Rolstad Henriksen : https://github.com/karamell
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var se = moment.defineLocale('se', {
         months: 'ođđajagemánnu_guovvamánnu_njukčamánnu_cuoŋománnu_miessemánnu_geassemánnu_suoidnemánnu_borgemánnu_čakčamánnu_golggotmánnu_skábmamánnu_juovlamánnu'.split(
@@ -11601,8 +11093,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -11611,23 +11103,18 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/si.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/si.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Sinhalese [si]
-//! author : Sampath Sitinamaluwa : https://github.com/sampathsris
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
-    /*jshint -W100*/
     var si = moment.defineLocale('si', {
         months: 'ජනවාරි_පෙබරවාරි_මාර්තු_අප්‍රේල්_මැයි_ජූනි_ජූලි_අගෝස්තු_සැප්තැම්බර්_ඔක්තෝබර්_නොවැම්බර්_දෙසැම්බර්'.split(
             '_'
@@ -11696,22 +11183,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sk.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sk.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Slovak [sk]
-//! author : Martin Minka : https://github.com/k2s
-//! based on work of petrbela : https://github.com/petrbela
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var months =
             'január_február_marec_apríl_máj_jún_júl_august_september_október_november_december'.split(
@@ -11724,49 +11206,49 @@
     function translate(number, withoutSuffix, key, isFuture) {
         var result = number + ' ';
         switch (key) {
-            case 's': // a few seconds / in a few seconds / a few seconds ago
+            case 's': 
                 return withoutSuffix || isFuture ? 'pár sekúnd' : 'pár sekundami';
-            case 'ss': // 9 seconds / in 9 seconds / 9 seconds ago
+            case 'ss': 
                 if (withoutSuffix || isFuture) {
                     return result + (plural(number) ? 'sekundy' : 'sekúnd');
                 } else {
                     return result + 'sekundami';
                 }
-            case 'm': // a minute / in a minute / a minute ago
+            case 'm': 
                 return withoutSuffix ? 'minúta' : isFuture ? 'minútu' : 'minútou';
-            case 'mm': // 9 minutes / in 9 minutes / 9 minutes ago
+            case 'mm': 
                 if (withoutSuffix || isFuture) {
                     return result + (plural(number) ? 'minúty' : 'minút');
                 } else {
                     return result + 'minútami';
                 }
-            case 'h': // an hour / in an hour / an hour ago
+            case 'h': 
                 return withoutSuffix ? 'hodina' : isFuture ? 'hodinu' : 'hodinou';
-            case 'hh': // 9 hours / in 9 hours / 9 hours ago
+            case 'hh': 
                 if (withoutSuffix || isFuture) {
                     return result + (plural(number) ? 'hodiny' : 'hodín');
                 } else {
                     return result + 'hodinami';
                 }
-            case 'd': // a day / in a day / a day ago
+            case 'd': 
                 return withoutSuffix || isFuture ? 'deň' : 'dňom';
-            case 'dd': // 9 days / in 9 days / 9 days ago
+            case 'dd': 
                 if (withoutSuffix || isFuture) {
                     return result + (plural(number) ? 'dni' : 'dní');
                 } else {
                     return result + 'dňami';
                 }
-            case 'M': // a month / in a month / a month ago
+            case 'M': 
                 return withoutSuffix || isFuture ? 'mesiac' : 'mesiacom';
-            case 'MM': // 9 months / in 9 months / 9 months ago
+            case 'MM': 
                 if (withoutSuffix || isFuture) {
                     return result + (plural(number) ? 'mesiace' : 'mesiacov');
                 } else {
                     return result + 'mesiacmi';
                 }
-            case 'y': // a year / in a year / a year ago
+            case 'y': 
                 return withoutSuffix || isFuture ? 'rok' : 'rokom';
-            case 'yy': // 9 years / in 9 years / 9 years ago
+            case 'yy': 
                 if (withoutSuffix || isFuture) {
                     return result + (plural(number) ? 'roky' : 'rokov');
                 } else {
@@ -11847,8 +11329,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -11857,21 +11339,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sl.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sl.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Slovenian [sl]
-//! author : Robert Sedovšek : https://github.com/sedovsek
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function processRelativeTime(number, withoutSuffix, key, isFuture) {
         var result = number + ' ';
@@ -12034,8 +11512,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -12044,23 +11522,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sq.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sq.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Albanian [sq]
-//! author : Flakërim Ismani : https://github.com/flakerimi
-//! author : Menelion Elensúle : https://github.com/Oire
-//! author : Oerd Cukalla : https://github.com/oerd
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var sq = moment.defineLocale('sq', {
         months: 'Janar_Shkurt_Mars_Prill_Maj_Qershor_Korrik_Gusht_Shtator_Tetor_Nëntor_Dhjetor'.split(
@@ -12115,8 +11587,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -12125,26 +11597,20 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sr-cyrl.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sr-cyrl.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Serbian Cyrillic [sr-cyrl]
-//! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
-//! author : Stefan Crnjaković <stefan@hotmail.rs> : https://github.com/crnjakovic
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var translator = {
         words: {
-            //Different grammatical cases
             ss: ['секунда', 'секунде', 'секунди'],
             m: ['један минут', 'једног минута'],
             mm: ['минут', 'минута', 'минута'],
@@ -12171,13 +11637,11 @@
             var wordKey = translator.words[key];
 
             if (key.length === 1) {
-                // Nominativ
                 if (key === 'y' && withoutSuffix) return 'једна година';
                 return isFuture || withoutSuffix ? wordKey[0] : wordKey[1];
             }
 
             const word = translator.correctGrammaticalCase(number, wordKey);
-            // Nominativ
             if (key === 'yy' && withoutSuffix && word === 'годину') {
                 return number + ' година';
             }
@@ -12257,8 +11721,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 1st is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -12267,26 +11731,20 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sr.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sr.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Serbian [sr]
-//! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
-//! author : Stefan Crnjaković <stefan@hotmail.rs> : https://github.com/crnjakovic
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var translator = {
         words: {
-            //Different grammatical cases
             ss: ['sekunda', 'sekunde', 'sekundi'],
             m: ['jedan minut', 'jednog minuta'],
             mm: ['minut', 'minuta', 'minuta'],
@@ -12313,13 +11771,11 @@
             var wordKey = translator.words[key];
 
             if (key.length === 1) {
-                // Nominativ
                 if (key === 'y' && withoutSuffix) return 'jedna godina';
                 return isFuture || withoutSuffix ? wordKey[0] : wordKey[1];
             }
 
             const word = translator.correctGrammaticalCase(number, wordKey);
-            // Nominativ
             if (key === 'yy' && withoutSuffix && word === 'godinu') {
                 return number + ' godina';
             }
@@ -12401,8 +11857,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -12411,21 +11867,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ss.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ss.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : siSwati [ss]
-//! author : Nicolai Davies<mail@nicolai.io> : https://github.com/nicolaidavies
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var ss = moment.defineLocale('ss', {
         months: "Bhimbidvwane_Indlovana_Indlov'lenkhulu_Mabasa_Inkhwekhweti_Inhlaba_Kholwane_Ingci_Inyoni_Imphala_Lweti_Ingongoni".split(
@@ -12501,8 +11953,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}/,
         ordinal: '%d',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -12511,21 +11963,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sv.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sv.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Swedish [sv]
-//! author : Jens Alm : https://github.com/ulmus
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var sv = moment.defineLocale('sv', {
         months: 'januari_februari_mars_april_maj_juni_juli_augusti_september_oktober_november_december'.split(
@@ -12585,8 +12033,8 @@
             return number + output;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -12595,21 +12043,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sw.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/sw.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Swahili [sw]
-//! author : Fahad Kassim : https://github.com/fadsel
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var sw = moment.defineLocale('sw', {
         months: 'Januari_Februari_Machi_Aprili_Mei_Juni_Julai_Agosti_Septemba_Oktoba_Novemba_Desemba'.split(
@@ -12656,8 +12100,8 @@
             yy: 'miaka %d',
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -12666,21 +12110,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ta.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ta.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Tamil [ta]
-//! author : Arjunkumar Krishnamoorthy : https://github.com/tk120404
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var symbolMap = {
             1: '௧',
@@ -12769,21 +12209,20 @@
                 return symbolMap[match];
             });
         },
-        // refer http://ta.wikipedia.org/s/1er1
         meridiemParse: /யாமம்|வைகறை|காலை|நண்பகல்|எற்பாடு|மாலை/,
         meridiem: function (hour, minute, isLower) {
             if (hour < 2) {
                 return ' யாமம்';
             } else if (hour < 6) {
-                return ' வைகறை'; // வைகறை
+                return ' வைகறை'; 
             } else if (hour < 10) {
-                return ' காலை'; // காலை
+                return ' காலை'; 
             } else if (hour < 14) {
-                return ' நண்பகல்'; // நண்பகல்
+                return ' நண்பகல்'; 
             } else if (hour < 18) {
-                return ' எற்பாடு'; // எற்பாடு
+                return ' எற்பாடு'; 
             } else if (hour < 22) {
-                return ' மாலை'; // மாலை
+                return ' மாலை'; 
             } else {
                 return ' யாமம்';
             }
@@ -12803,8 +12242,8 @@
             }
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -12813,21 +12252,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/te.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/te.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Telugu [te]
-//! author : Krishna Chaitanya Thota : https://github.com/kcthota
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var te = moment.defineLocale('te', {
         months: 'జనవరి_ఫిబ్రవరి_మార్చి_ఏప్రిల్_మే_జూన్_జులై_ఆగస్టు_సెప్టెంబర్_అక్టోబర్_నవంబర్_డిసెంబర్'.split(
@@ -12907,8 +12342,8 @@
             }
         },
         week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
+            dow: 0, 
+            doy: 6, 
         },
     });
 
@@ -12917,23 +12352,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tet.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tet.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Tetun Dili (East Timor) [tet]
-//! author : Joshua Brooks : https://github.com/joshbrooks
-//! author : Onorio De J. Afonso : https://github.com/marobo
-//! author : Sonia Simoes : https://github.com/soniasimoes
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var tet = moment.defineLocale('tet', {
         months: 'Janeiru_Fevereiru_Marsu_Abril_Maiu_Juñu_Jullu_Agustu_Setembru_Outubru_Novembru_Dezembru'.split(
@@ -12991,8 +12420,8 @@
             return number + output;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -13001,21 +12430,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tg.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tg.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Tajik [tg]
-//! author : Orif N. Jr. : https://github.com/orif-jr
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var suffixes = {
         0: '-ум',
@@ -13124,8 +12549,8 @@
             return number + (suffixes[number] || suffixes[a] || suffixes[b]);
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 1th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -13134,21 +12559,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/th.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/th.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Thai [th]
-//! author : Kridsada Thanabulpong : https://github.com/sirn
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var th = moment.defineLocale('th', {
         months: 'มกราคม_กุมภาพันธ์_มีนาคม_เมษายน_พฤษภาคม_มิถุนายน_กรกฎาคม_สิงหาคม_กันยายน_ตุลาคม_พฤศจิกายน_ธันวาคม'.split(
@@ -13160,7 +12581,7 @@
             ),
         monthsParseExact: true,
         weekdays: 'อาทิตย์_จันทร์_อังคาร_พุธ_พฤหัสบดี_ศุกร์_เสาร์'.split('_'),
-        weekdaysShort: 'อาทิตย์_จันทร์_อังคาร_พุธ_พฤหัส_ศุกร์_เสาร์'.split('_'), // yes, three characters difference
+        weekdaysShort: 'อาทิตย์_จันทร์_อังคาร_พุธ_พฤหัส_ศุกร์_เสาร์'.split('_'), 
         weekdaysMin: 'อา._จ._อ._พ._พฤ._ศ._ส.'.split('_'),
         weekdaysParseExact: true,
         longDateFormat: {
@@ -13215,21 +12636,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tk.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tk.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Turkmen [tk]
-//! author : Atamyrat Abdyrahmanov : https://github.com/atamyratabdy
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var suffixes = {
         1: "'inji",
@@ -13302,7 +12719,6 @@
                     return number;
                 default:
                     if (number === 0) {
-                        // special case for zero
                         return number + "'unjy";
                     }
                     var a = number % 10,
@@ -13312,8 +12728,8 @@
             }
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -13322,21 +12738,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tl-ph.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tl-ph.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Tagalog (Philippines) [tl-ph]
-//! author : Dan Hagman : https://github.com/hagmandan
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var tlPh = moment.defineLocale('tl-ph', {
         months: 'Enero_Pebrero_Marso_Abril_Mayo_Hunyo_Hulyo_Agosto_Setyembre_Oktubre_Nobyembre_Disyembre'.split(
@@ -13385,8 +12797,8 @@
             return number;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -13395,21 +12807,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tlh.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tlh.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Klingon [tlh]
-//! author : Dominika Kruk : https://github.com/amaranthrose
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var numbersNouns = 'pagh_wa’_cha’_wej_loS_vagh_jav_Soch_chorgh_Hut'.split('_');
 
@@ -13525,8 +12933,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -13535,22 +12943,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tr.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tr.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Turkish [tr]
-//! authors : Erhan Gundogan : https://github.com/erhangundogan,
-//!           Burak Yiğit Kaya: https://github.com/BYK
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var suffixes = {
         1: "'inci",
@@ -13637,7 +13040,6 @@
                     return number;
                 default:
                     if (number === 0) {
-                        // special case for zero
                         return number + "'ıncı";
                     }
                     var a = number % 10,
@@ -13647,8 +13049,8 @@
             }
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -13657,25 +13059,18 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tzl.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tzl.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Talossan [tzl]
-//! author : Robin van der Vliet : https://github.com/robin0van0der0v
-//! author : Iustì Canun
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
-    // After the year there should be a slash and the amount of years since December 26, 1979 in Roman numerals.
-    // This is currently too difficult (maybe even impossible) to add.
     var tzl = moment.defineLocale('tzl', {
         months: 'Januar_Fevraglh_Març_Avrïu_Mai_Gün_Julia_Guscht_Setemvar_Listopäts_Noemvar_Zecemvar'.split(
             '_'
@@ -13730,8 +13125,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -13762,21 +13157,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tzm-latn.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tzm-latn.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Central Atlas Tamazight Latin [tzm-latn]
-//! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var tzmLatn = moment.defineLocale('tzm-latn', {
         months: 'innayr_brˤayrˤ_marˤsˤ_ibrir_mayyw_ywnyw_ywlywz_ɣwšt_šwtanbir_ktˤwbrˤ_nwwanbir_dwjnbir'.split(
@@ -13822,8 +13213,8 @@
             yy: '%d isgasn',
         },
         week: {
-            dow: 6, // Saturday is the first day of the week.
-            doy: 12, // The week that contains Jan 12th is the first week of the year.
+            dow: 6, 
+            doy: 12, 
         },
     });
 
@@ -13832,21 +13223,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tzm.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/tzm.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Central Atlas Tamazight [tzm]
-//! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var tzm = moment.defineLocale('tzm', {
         months: 'ⵉⵏⵏⴰⵢⵔ_ⴱⵕⴰⵢⵕ_ⵎⴰⵕⵚ_ⵉⴱⵔⵉⵔ_ⵎⴰⵢⵢⵓ_ⵢⵓⵏⵢⵓ_ⵢⵓⵍⵢⵓⵣ_ⵖⵓⵛⵜ_ⵛⵓⵜⴰⵏⴱⵉⵔ_ⴽⵟⵓⴱⵕ_ⵏⵓⵡⴰⵏⴱⵉⵔ_ⴷⵓⵊⵏⴱⵉⵔ'.split(
@@ -13892,8 +13279,8 @@
             yy: '%d ⵉⵙⴳⴰⵙⵏ',
         },
         week: {
-            dow: 6, // Saturday is the first day of the week.
-            doy: 12, // The week that contains Jan 12th is the first week of the year.
+            dow: 6, 
+            doy: 12, 
         },
     });
 
@@ -13902,21 +13289,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ug-cn.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ug-cn.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Uyghur (China) [ug-cn]
-//! author: boyaq : https://github.com/boyaq
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var ugCn = moment.defineLocale('ug-cn', {
         months: 'يانۋار_فېۋرال_مارت_ئاپرېل_ماي_ئىيۇن_ئىيۇل_ئاۋغۇست_سېنتەبىر_ئۆكتەبىر_نويابىر_دېكابىر'.split(
@@ -14018,9 +13401,8 @@
             return string.replace(/,/g, '،');
         },
         week: {
-            // GB/T 7408-1994《数据元和交换格式·信息交换·日期和时间表示法》与ISO 8601:1988等效
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 1st is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -14029,22 +13411,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/uk.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/uk.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Ukrainian [uk]
-//! author : zemlanin : https://github.com/zemlanin
-//! Author : Menelion Elensúle : https://github.com/Oire
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     function plural(word, num) {
         var forms = word.split('_');
@@ -14170,7 +13547,6 @@
             y: 'рік',
             yy: relativeTimeWithPlural,
         },
-        // M. E.: those two are virtually unused but a user might want to implement them for his/her website for some reason
         meridiemParse: /ночі|ранку|дня|вечора/,
         isPM: function (input) {
             return /^(дня|вечора)$/.test(input);
@@ -14202,8 +13578,8 @@
             }
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -14212,22 +13588,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ur.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/ur.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Urdu [ur]
-//! author : Sawood Alam : https://github.com/ibnesayeed
-//! author : Zack : https://github.com/ZackVision
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var months = [
             'جنوری',
@@ -14300,8 +13671,8 @@
             return string.replace(/,/g, '،');
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -14310,21 +13681,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/uz-latn.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/uz-latn.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Uzbek Latin [uz-latn]
-//! author : Rasulbek Mirzayev : github.com/Rasulbeeek
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var uzLatn = moment.defineLocale('uz-latn', {
         months: 'Yanvar_Fevral_Mart_Aprel_May_Iyun_Iyul_Avgust_Sentabr_Oktabr_Noyabr_Dekabr'.split(
@@ -14370,8 +13737,8 @@
             yy: '%d yil',
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 7th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -14380,21 +13747,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/uz.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/uz.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Uzbek [uz]
-//! author : Sardor Muminov : https://github.com/muminoff
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var uz = moment.defineLocale('uz', {
         months: 'январ_феврал_март_апрел_май_июн_июл_август_сентябр_октябр_ноябр_декабр'.split(
@@ -14437,8 +13800,8 @@
             yy: '%d йил',
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 7, 
         },
     });
 
@@ -14447,22 +13810,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/vi.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/vi.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Vietnamese [vi]
-//! author : Bang Nguyen : https://github.com/bangnk
-//! author : Chien Kira : https://github.com/chienkira
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var vi = moment.defineLocale('vi', {
         months: 'tháng 1_tháng 2_tháng 3_tháng 4_tháng 5_tháng 6_tháng 7_tháng 8_tháng 9_tháng 10_tháng 11_tháng 12'.split(
@@ -14533,8 +13891,8 @@
             return number;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -14543,21 +13901,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/x-pseudo.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/x-pseudo.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Pseudo [x-pseudo]
-//! author : Andrew Hood : https://github.com/andrewhood125
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var xPseudo = moment.defineLocale('x-pseudo', {
         months: 'J~áñúá~rý_F~ébrú~árý_~Márc~h_Áp~ríl_~Máý_~Júñé~_Júl~ý_Áú~gúst~_Sép~témb~ér_Ó~ctób~ér_Ñ~óvém~bér_~Décé~mbér'.split(
@@ -14622,8 +13976,8 @@
             return number + output;
         },
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -14632,21 +13986,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/yo.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/yo.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Yoruba Nigeria [yo]
-//! author : Atolagbe Abisoye : https://github.com/andela-batolagbe
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var yo = moment.defineLocale('yo', {
         months: 'Sẹ́rẹ́_Èrèlè_Ẹrẹ̀nà_Ìgbé_Èbibi_Òkùdu_Agẹmo_Ògún_Owewe_Ọ̀wàrà_Bélú_Ọ̀pẹ̀̀'.split(
@@ -14691,8 +14041,8 @@
         dayOfMonthOrdinalParse: /ọjọ́\s\d{1,2}/,
         ordinal: 'ọjọ́ %d',
         week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -14701,23 +14051,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/zh-cn.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/zh-cn.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Chinese (China) [zh-cn]
-//! author : suupic : https://github.com/suupic
-//! author : Zeno Zeng : https://github.com/zenozeng
-//! author : uu109 : https://github.com/uu109
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var zhCn = moment.defineLocale('zh-cn', {
         months: '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split(
@@ -14751,7 +14095,6 @@
             } else if (meridiem === '下午' || meridiem === '晚上') {
                 return hour + 12;
             } else {
-                // '中午'
                 return hour >= 11 ? hour : hour + 12;
             }
         },
@@ -14826,9 +14169,8 @@
             yy: '%d 年',
         },
         week: {
-            // GB/T 7408-1994《数据元和交换格式·信息交换·日期和时间表示法》与ISO 8601:1988等效
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
+            dow: 1, 
+            doy: 4, 
         },
     });
 
@@ -14837,24 +14179,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/zh-hk.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/zh-hk.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Chinese (Hong Kong) [zh-hk]
-//! author : Ben : https://github.com/ben-lin
-//! author : Chris Lam : https://github.com/hehachris
-//! author : Konstantin : https://github.com/skfd
-//! author : Anthony : https://github.com/anthonylau
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var zhHk = moment.defineLocale('zh-hk', {
         months: '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split(
@@ -14954,23 +14289,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/zh-mo.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/zh-mo.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Chinese (Macau) [zh-mo]
-//! author : Ben : https://github.com/ben-lin
-//! author : Chris Lam : https://github.com/hehachris
-//! author : Tan Yuanhong : https://github.com/le0tan
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var zhMo = moment.defineLocale('zh-mo', {
         months: '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split(
@@ -15070,22 +14399,17 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/zh-tw.js":
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale/zh-tw.js":
+ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-//! moment.js locale configuration
-//! locale : Chinese (Taiwan) [zh-tw]
-//! author : Ben : https://github.com/ben-lin
-//! author : Chris Lam : https://github.com/hehachris
 
 ;(function (global, factory) {
     true ? factory(__webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js")) :
    0
 }(this, (function (moment) { 'use strict';
 
-    //! moment.js locale configuration
 
     var zhTw = moment.defineLocale('zh-tw', {
         months: '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split(
@@ -15185,17 +14509,12 @@
 })));
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js":
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+ "./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/moment.js":
+ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-/* module decorator */ module = __webpack_require__.nmd(module);
-//! moment.js
-//! version : 2.29.2
-//! authors : Tim Wood, Iskren Chernev, Moment.js contributors
-//! license : MIT
-//! momentjs.com
+ module = __webpack_require__.nmd(module);
 
 ;(function (global, factory) {
      true ? module.exports = factory() :
@@ -15208,8 +14527,6 @@
         return hookCallback.apply(null, arguments);
     }
 
-    // This is done to register the method called with moment()
-    // without creating circular dependencies.
     function setHookCallback(callback) {
         hookCallback = callback;
     }
@@ -15222,8 +14539,6 @@
     }
 
     function isObject(input) {
-        // IE8 will treat undefined and null as object if it wasn't for
-        // input != null
         return (
             input != null &&
             Object.prototype.toString.call(input) === '[object Object]'
@@ -15299,7 +14614,6 @@
     }
 
     function defaultParsingFlags() {
-        // We need to deep clone this object.
         return {
             empty: false,
             unusedTokens: [],
@@ -15393,8 +14707,6 @@
         return m;
     }
 
-    // Plugins that add properties should also add the key here (null value),
-    // so we can properly clone ourselves.
     var momentProperties = (hooks.momentProperties = []),
         updateInProgress = false;
 
@@ -15448,15 +14760,12 @@
         return to;
     }
 
-    // Moment prototype object
     function Moment(config) {
         copyConfig(this, config);
         this._d = new Date(config._d != null ? config._d.getTime() : NaN);
         if (!this.isValid()) {
             this._d = new Date(NaN);
         }
-        // Prevent infinite loop in case updateOffset creates new moment
-        // objects.
         if (updateInProgress === false) {
             updateInProgress = true;
             hooks.updateOffset(this);
@@ -15502,7 +14811,7 @@
                                 arg += key + ': ' + arguments[0][key] + ', ';
                             }
                         }
-                        arg = arg.slice(0, -2); // Remove trailing comma and space
+                        arg = arg.slice(0, -2); 
                     } else {
                         arg = arguments[i];
                     }
@@ -15556,9 +14865,6 @@
             }
         }
         this._config = config;
-        // Lenient ordinal parsing accepts just a number in addition to
-        // number + (possibly) stuff coming from _dayOfMonthOrdinalParse.
-        // TODO: Remove "ordinalParse" fallback in next major release.
         this._dayOfMonthOrdinalParseLenient = new RegExp(
             (this._dayOfMonthOrdinalParse.source || this._ordinalParse.source) +
                 '|' +
@@ -15588,7 +14894,6 @@
                 !hasOwnProp(childConfig, prop) &&
                 isObject(parentConfig[prop])
             ) {
-                // make sure changes to properties don't modify parent config
                 res[prop] = extend({}, res[prop]);
             }
         }
@@ -15649,10 +14954,6 @@
         formatFunctions = {},
         formatTokenFunctions = {};
 
-    // token:    'M'
-    // padded:   ['MM', 2]
-    // ordinal:  'Mo'
-    // callback: function () { this.month() + 1 }
     function addFormatToken(token, padded, ordinal, callback) {
         var func = callback;
         if (typeof callback === 'string') {
@@ -15710,7 +15011,6 @@
         };
     }
 
-    // format date using native date object
     function formatMoment(m, format) {
         if (!m.isValid()) {
             return m.localeData().invalidDate();
@@ -15878,7 +15178,6 @@
 
     function absFloor(number) {
         if (number < 0) {
-            // -0 -> 0
             return Math.ceil(number) || 0;
         } else {
             return Math.floor(number);
@@ -15934,7 +15233,6 @@
         }
     }
 
-    // MOMENTS
 
     function stringGet(units) {
         units = normalizeUnits(units);
@@ -15962,24 +15260,22 @@
         return this;
     }
 
-    var match1 = /\d/, //       0 - 9
-        match2 = /\d\d/, //      00 - 99
-        match3 = /\d{3}/, //     000 - 999
-        match4 = /\d{4}/, //    0000 - 9999
-        match6 = /[+-]?\d{6}/, // -999999 - 999999
-        match1to2 = /\d\d?/, //       0 - 99
-        match3to4 = /\d\d\d\d?/, //     999 - 9999
-        match5to6 = /\d\d\d\d\d\d?/, //   99999 - 999999
-        match1to3 = /\d{1,3}/, //       0 - 999
-        match1to4 = /\d{1,4}/, //       0 - 9999
-        match1to6 = /[+-]?\d{1,6}/, // -999999 - 999999
-        matchUnsigned = /\d+/, //       0 - inf
-        matchSigned = /[+-]?\d+/, //    -inf - inf
-        matchOffset = /Z|[+-]\d\d:?\d\d/gi, // +00:00 -00:00 +0000 -0000 or Z
-        matchShortOffset = /Z|[+-]\d\d(?::?\d\d)?/gi, // +00 -00 +00:00 -00:00 +0000 -0000 or Z
-        matchTimestamp = /[+-]?\d+(\.\d{1,3})?/, // 123456789 123456789.123
-        // any word (or two) characters or numbers including two/three word month in arabic.
-        // includes scottish gaelic two word and hyphenated months
+    var match1 = /\d/, 
+        match2 = /\d\d/, 
+        match3 = /\d{3}/, 
+        match4 = /\d{4}/, 
+        match6 = /[+-]?\d{6}/, 
+        match1to2 = /\d\d?/, 
+        match3to4 = /\d\d\d\d?/, 
+        match5to6 = /\d\d\d\d\d\d?/, 
+        match1to3 = /\d{1,3}/, 
+        match1to4 = /\d{1,4}/, 
+        match1to6 = /[+-]?\d{1,6}/, 
+        matchUnsigned = /\d+/, 
+        matchSigned = /[+-]?\d+/, 
+        matchOffset = /Z|[+-]\d\d:?\d\d/gi, 
+        matchShortOffset = /Z|[+-]\d\d(?::?\d\d)?/gi, 
+        matchTimestamp = /[+-]?\d+(\.\d{1,3})?/, 
         matchWord =
             /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i,
         regexes;
@@ -16002,7 +15298,6 @@
         return regexes[token](config._strict, config._locale);
     }
 
-    // Code from http://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
     function unescapeFormat(s) {
         return regexEscape(
             s
@@ -16073,7 +15368,6 @@
         indexOf = Array.prototype.indexOf;
     } else {
         indexOf = function (o) {
-            // I know
             var i;
             for (i = 0; i < this.length; ++i) {
                 if (this[i] === o) {
@@ -16097,7 +15391,6 @@
             : 31 - ((modMonth % 7) % 2);
     }
 
-    // FORMATTING
 
     addFormatToken('M', ['MM', 2], 'Mo', function () {
         return this.month() + 1;
@@ -16111,15 +15404,12 @@
         return this.localeData().months(this, format);
     });
 
-    // ALIASES
 
     addUnitAlias('month', 'M');
 
-    // PRIORITY
 
     addUnitPriority('month', 8);
 
-    // PARSING
 
     addRegexToken('M', match1to2);
     addRegexToken('MM', match1to2, match2);
@@ -16136,7 +15426,6 @@
 
     addParseToken(['MMM', 'MMMM'], function (input, array, config, token) {
         var month = config._locale.monthsParse(input, token, config._strict);
-        // if we didn't find a month name, mark the date as invalid.
         if (month != null) {
             array[MONTH] = month;
         } else {
@@ -16144,7 +15433,6 @@
         }
     });
 
-    // LOCALES
 
     var defaultLocaleMonths =
             'January_February_March_April_May_June_July_August_September_October_November_December'.split(
@@ -16190,7 +15478,6 @@
             mom,
             llc = monthName.toLocaleLowerCase();
         if (!this._monthsParse) {
-            // this is not used
             this._monthsParse = [];
             this._longMonthsParse = [];
             this._shortMonthsParse = [];
@@ -16244,11 +15531,7 @@
             this._shortMonthsParse = [];
         }
 
-        // TODO: add sorting
-        // Sorting makes sure if one month (or abbr) is a prefix of another
-        // see sorting in computeMonthsParse
         for (i = 0; i < 12; i++) {
-            // make the regex if we don't have it already
             mom = createUTC([2000, i]);
             if (strict && !this._longMonthsParse[i]) {
                 this._longMonthsParse[i] = new RegExp(
@@ -16265,7 +15548,6 @@
                     '^' + this.months(mom, '') + '|^' + this.monthsShort(mom, '');
                 this._monthsParse[i] = new RegExp(regex.replace('.', ''), 'i');
             }
-            // test the regex
             if (
                 strict &&
                 format === 'MMMM' &&
@@ -16284,13 +15566,11 @@
         }
     }
 
-    // MOMENTS
 
     function setMonth(mom, value) {
         var dayOfMonth;
 
         if (!mom.isValid()) {
-            // No op
             return mom;
         }
 
@@ -16299,7 +15579,6 @@
                 value = toInt(value);
             } else {
                 value = mom.localeData().monthsParse(value);
-                // TODO: Another silent failure?
                 if (!isNumber(value)) {
                     return mom;
                 }
@@ -16376,15 +15655,12 @@
             i,
             mom;
         for (i = 0; i < 12; i++) {
-            // make the regex if we don't have it already
             mom = createUTC([2000, i]);
             shortPieces.push(this.monthsShort(mom, ''));
             longPieces.push(this.months(mom, ''));
             mixedPieces.push(this.months(mom, ''));
             mixedPieces.push(this.monthsShort(mom, ''));
         }
-        // Sorting makes sure if one month (or abbr) is a prefix of another it
-        // will match the longer piece.
         shortPieces.sort(cmpLenRev);
         longPieces.sort(cmpLenRev);
         mixedPieces.sort(cmpLenRev);
@@ -16408,7 +15684,6 @@
         );
     }
 
-    // FORMATTING
 
     addFormatToken('Y', 0, 0, function () {
         var y = this.year();
@@ -16423,15 +15698,12 @@
     addFormatToken(0, ['YYYYY', 5], 0, 'year');
     addFormatToken(0, ['YYYYYY', 6, true], 0, 'year');
 
-    // ALIASES
 
     addUnitAlias('year', 'y');
 
-    // PRIORITIES
 
     addUnitPriority('year', 1);
 
-    // PARSING
 
     addRegexToken('Y', matchSigned);
     addRegexToken('YY', match1to2, match2);
@@ -16451,19 +15723,16 @@
         array[YEAR] = parseInt(input, 10);
     });
 
-    // HELPERS
 
     function daysInYear(year) {
         return isLeapYear(year) ? 366 : 365;
     }
 
-    // HOOKS
 
     hooks.parseTwoDigitYear = function (input) {
         return toInt(input) + (toInt(input) > 68 ? 1900 : 2000);
     };
 
-    // MOMENTS
 
     var getSetYear = makeGetSet('FullYear', true);
 
@@ -16472,12 +15741,8 @@
     }
 
     function createDate(y, m, d, h, M, s, ms) {
-        // can't just apply() to create a date:
-        // https://stackoverflow.com/q/181348
         var date;
-        // the date constructor remaps years 0-99 to 1900-1999
         if (y < 100 && y >= 0) {
-            // preserve leap years using a full 400 year cycle, then reset
             date = new Date(y + 400, m, d, h, M, s, ms);
             if (isFinite(date.getFullYear())) {
                 date.setFullYear(y);
@@ -16491,10 +15756,8 @@
 
     function createUTCDate(y) {
         var date, args;
-        // the Date.UTC function remaps years 0-99 to 1900-1999
         if (y < 100 && y >= 0) {
             args = Array.prototype.slice.call(arguments);
-            // preserve leap years using a full 400 year cycle, then reset
             args[0] = y + 400;
             date = new Date(Date.UTC.apply(null, args));
             if (isFinite(date.getUTCFullYear())) {
@@ -16507,17 +15770,14 @@
         return date;
     }
 
-    // start-of-first-week - start-of-year
     function firstWeekOffset(year, dow, doy) {
-        var // first-week day -- which january is always in the first week (4 for iso, 1 for other)
+        var 
             fwd = 7 + dow - doy,
-            // first-week day local weekday -- which local weekday is fwd
             fwdlw = (7 + createUTCDate(year, 0, fwd).getUTCDay() - dow) % 7;
 
         return -fwdlw + fwd - 1;
     }
 
-    // https://en.wikipedia.org/wiki/ISO_week_date#Calculating_a_date_given_the_year.2C_week_number_and_weekday
     function dayOfYearFromWeeks(year, week, weekday, dow, doy) {
         var localWeekday = (7 + weekday - dow) % 7,
             weekOffset = firstWeekOffset(year, dow, doy),
@@ -16571,22 +15831,18 @@
         return (daysInYear(year) - weekOffset + weekOffsetNext) / 7;
     }
 
-    // FORMATTING
 
     addFormatToken('w', ['ww', 2], 'wo', 'week');
     addFormatToken('W', ['WW', 2], 'Wo', 'isoWeek');
 
-    // ALIASES
 
     addUnitAlias('week', 'w');
     addUnitAlias('isoWeek', 'W');
 
-    // PRIORITIES
 
     addUnitPriority('week', 5);
     addUnitPriority('isoWeek', 5);
 
-    // PARSING
 
     addRegexToken('w', match1to2);
     addRegexToken('ww', match1to2, match2);
@@ -16600,17 +15856,15 @@
         }
     );
 
-    // HELPERS
 
-    // LOCALES
 
     function localeWeek(mom) {
         return weekOfYear(mom, this._week.dow, this._week.doy).week;
     }
 
     var defaultLocaleWeek = {
-        dow: 0, // Sunday is the first day of the week.
-        doy: 6, // The week that contains Jan 6th is the first week of the year.
+        dow: 0, 
+        doy: 6, 
     };
 
     function localeFirstDayOfWeek() {
@@ -16621,7 +15875,6 @@
         return this._week.doy;
     }
 
-    // MOMENTS
 
     function getSetWeek(input) {
         var week = this.localeData().week(this);
@@ -16633,7 +15886,6 @@
         return input == null ? week : this.add((input - week) * 7, 'd');
     }
 
-    // FORMATTING
 
     addFormatToken('d', 0, 'do', 'day');
 
@@ -16652,18 +15904,15 @@
     addFormatToken('e', 0, 0, 'weekday');
     addFormatToken('E', 0, 0, 'isoWeekday');
 
-    // ALIASES
 
     addUnitAlias('day', 'd');
     addUnitAlias('weekday', 'e');
     addUnitAlias('isoWeekday', 'E');
 
-    // PRIORITY
     addUnitPriority('day', 11);
     addUnitPriority('weekday', 11);
     addUnitPriority('isoWeekday', 11);
 
-    // PARSING
 
     addRegexToken('d', match1to2);
     addRegexToken('e', match1to2);
@@ -16680,7 +15929,6 @@
 
     addWeekParseToken(['dd', 'ddd', 'dddd'], function (input, week, config, token) {
         var weekday = config._locale.weekdaysParse(input, token, config._strict);
-        // if we didn't get a weekday name, mark the date as invalid
         if (weekday != null) {
             week.d = weekday;
         } else {
@@ -16692,7 +15940,6 @@
         week[token] = toInt(input);
     });
 
-    // HELPERS
 
     function parseWeekday(input, locale) {
         if (typeof input !== 'string') {
@@ -16718,7 +15965,6 @@
         return isNaN(input) ? null : input;
     }
 
-    // LOCALES
     function shiftWeekdays(ws, n) {
         return ws.slice(n, 7).concat(ws.slice(0, n));
     }
@@ -16850,7 +16096,6 @@
         }
 
         for (i = 0; i < 7; i++) {
-            // make the regex if we don't have it already
 
             mom = createUTC([2000, 1]).day(i);
             if (strict && !this._fullWeekdaysParse[i]) {
@@ -16877,7 +16122,6 @@
                     this.weekdaysMin(mom, '');
                 this._weekdaysParse[i] = new RegExp(regex.replace('.', ''), 'i');
             }
-            // test the regex
             if (
                 strict &&
                 format === 'dddd' &&
@@ -16902,7 +16146,6 @@
         }
     }
 
-    // MOMENTS
 
     function getSetDayOfWeek(input) {
         if (!this.isValid()) {
@@ -16930,9 +16173,6 @@
             return input != null ? this : NaN;
         }
 
-        // behaves the same as moment#day except
-        // as a getter, returns 7 instead of 0 (1-7 range instead of 0-6)
-        // as a setter, sunday should belong to the previous week.
 
         if (input != null) {
             var weekday = parseIsoWeekday(input, this.localeData());
@@ -17017,7 +16257,6 @@
             shortp,
             longp;
         for (i = 0; i < 7; i++) {
-            // make the regex if we don't have it already
             mom = createUTC([2000, 1]).day(i);
             minp = regexEscape(this.weekdaysMin(mom, ''));
             shortp = regexEscape(this.weekdaysShort(mom, ''));
@@ -17029,8 +16268,6 @@
             mixedPieces.push(shortp);
             mixedPieces.push(longp);
         }
-        // Sorting makes sure if one weekday (or abbr) is a prefix of another it
-        // will match the longer piece.
         minPieces.sort(cmpLenRev);
         shortPieces.sort(cmpLenRev);
         longPieces.sort(cmpLenRev);
@@ -17054,7 +16291,6 @@
         );
     }
 
-    // FORMATTING
 
     function hFormat() {
         return this.hours() % 12 || 12;
@@ -17107,14 +16343,11 @@
     meridiem('a', true);
     meridiem('A', false);
 
-    // ALIASES
 
     addUnitAlias('hour', 'h');
 
-    // PRIORITY
     addUnitPriority('hour', 13);
 
-    // PARSING
 
     function matchMeridiem(isStrict, locale) {
         return locale._meridiemParse;
@@ -17174,19 +16407,12 @@
         array[SECOND] = toInt(input.substr(pos2));
     });
 
-    // LOCALES
 
     function localeIsPM(input) {
-        // IE8 Quirks Mode & IE7 Standards Mode do not allow accessing strings like arrays
-        // Using charAt should be more compatible.
         return (input + '').toLowerCase().charAt(0) === 'p';
     }
 
     var defaultLocaleMeridiemParse = /[ap]\.?m?\.?/i,
-        // Setting the hour should keep the time, because the user explicitly
-        // specified which hour they want. So trying to maintain the same hour (in
-        // a new timezone) makes sense. Adding/subtracting hours does not follow
-        // this rule.
         getSetHour = makeGetSet('Hours', true);
 
     function localeMeridiem(hours, minutes, isLower) {
@@ -17217,7 +16443,6 @@
         meridiemParse: defaultLocaleMeridiemParse,
     };
 
-    // internal storage for locale config files
     var locales = {},
         localeFamilies = {},
         globalLocale;
@@ -17237,9 +16462,6 @@
         return key ? key.toLowerCase().replace('_', '-') : key;
     }
 
-    // pick the locale from the array
-    // try ['en-au', 'en-gb'] as 'en-au', 'en-gb', 'en', as in move through the list trying each
-    // substring from most specific to least, but move to the next array item if it's a more specific variant than the current root
     function chooseLocale(names) {
         var i = 0,
             j,
@@ -17262,7 +16484,6 @@
                     next.length >= j &&
                     commonPrefix(split, next) >= j - 1
                 ) {
-                    //the next array item is better than a shallower substring of this one
                     break;
                 }
                 j--;
@@ -17273,14 +16494,12 @@
     }
 
     function isLocaleNameSane(name) {
-        // Prevent names that look like filesystem paths, i.e contain '/' or '\'
         return name.match('^[^/\\\\]*$') != null;
     }
 
     function loadLocale(name) {
         var oldLocale = null,
             aliasedRequire;
-        // TODO: Find a better way to register and load all the locales in Node
         if (
             locales[name] === undefined &&
             "object" !== 'undefined' &&
@@ -17294,17 +16513,12 @@
                 __webpack_require__("./.yarn/cache/moment-npm-2.29.2-7e4b405a08-ee850b5776.zip/node_modules/moment/locale sync recursive ^\\.\\/.*$")("./" + name);
                 getSetGlobalLocale(oldLocale);
             } catch (e) {
-                // mark as not found to avoid repeating expensive file require call causing high CPU
-                // when trying to find en-US, en_US, en-us for every format call
-                locales[name] = null; // null means not found
+                locales[name] = null; 
             }
         }
         return locales[name];
     }
 
-    // This function will load locale and then set the global locale.  If
-    // no arguments are passed in, it will simply return the current global
-    // locale key.
     function getSetGlobalLocale(key, values) {
         var data;
         if (key) {
@@ -17315,11 +16529,9 @@
             }
 
             if (data) {
-                // moment.duration._locale = moment._locale = data;
                 globalLocale = data;
             } else {
                 if (typeof console !== 'undefined' && console.warn) {
-                    //warn user if arguments are passed but the locale could not be set
                     console.warn(
                         'Locale ' + key + ' not found. Did you forget to load it?'
                     );
@@ -17371,14 +16583,10 @@
                 });
             }
 
-            // backwards compat for now: also set the locale
-            // make sure we set the locale AFTER all child locales have been
-            // created, so we won't end up with the child locale set.
             getSetGlobalLocale(name);
 
             return locales[name];
         } else {
-            // useful for testing
             delete locales[name];
             return null;
         }
@@ -17391,19 +16599,14 @@
                 parentConfig = baseConfig;
 
             if (locales[name] != null && locales[name].parentLocale != null) {
-                // Update existing child locale in-place to avoid memory-leaks
                 locales[name].set(mergeConfigs(locales[name]._config, config));
             } else {
-                // MERGE
                 tmpLocale = loadLocale(name);
                 if (tmpLocale != null) {
                     parentConfig = tmpLocale._config;
                 }
                 config = mergeConfigs(parentConfig, config);
                 if (tmpLocale == null) {
-                    // updateLocale is called for creating a new locale
-                    // Set abbr so it will have a name (getters return
-                    // undefined otherwise).
                     config.abbr = name;
                 }
                 locale = new Locale(config);
@@ -17411,10 +16614,8 @@
                 locales[name] = locale;
             }
 
-            // backwards compat for now: also set the locale
             getSetGlobalLocale(name);
         } else {
-            // pass null for config to unupdate, useful for tests
             if (locales[name] != null) {
                 if (locales[name].parentLocale != null) {
                     locales[name] = locales[name].parentLocale;
@@ -17429,7 +16630,6 @@
         return locales[name];
     }
 
-    // returns locale data
     function getLocale(key) {
         var locale;
 
@@ -17442,7 +16642,6 @@
         }
 
         if (!isArray(key)) {
-            //short-circuit everything else
             locale = loadLocale(key);
             if (locale) {
                 return locale;
@@ -17501,8 +16700,6 @@
         return m;
     }
 
-    // iso 8601 regex
-    // 0000-00-00 0000-W00 or 0000-W00-0 + T + 00 or 00:00 or 00:00:00 or 00:00:00.000 + +00:00 or +0000 or +00)
     var extendedIsoRegex =
             /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
         basicIsoRegex =
@@ -17523,7 +16720,6 @@
             ['YYYYMM', /\d{6}/, false],
             ['YYYY', /\d{4}/, false],
         ],
-        // iso time formats and regexes
         isoTimes = [
             ['HH:mm:ss.SSSS', /\d\d:\d\d:\d\d\.\d+/],
             ['HH:mm:ss,SSSS', /\d\d:\d\d:\d\d,\d+/],
@@ -17536,7 +16732,6 @@
             ['HH', /\d\d/],
         ],
         aspNetJsonRegex = /^\/?Date\((-?\d+)/i,
-        // RFC 2822 regex: For details see https://tools.ietf.org/html/rfc2822#section-3.3
         rfc2822 =
             /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/,
         obsOffsets = {
@@ -17552,7 +16747,6 @@
             PST: -8 * 60,
         };
 
-    // date from iso format
     function configFromISO(config) {
         var i,
             l,
@@ -17581,7 +16775,6 @@
             if (match[3]) {
                 for (i = 0, l = isoTimesLen; i < l; i++) {
                     if (isoTimes[i][1].exec(match[3])) {
-                        // match[2] should be 'T' or space
                         timeFormat = (match[2] || ' ') + isoTimes[i][0];
                         break;
                     }
@@ -17644,7 +16837,6 @@
     }
 
     function preprocessRFC2822(s) {
-        // Remove comments and folding whitespace and replace multiple-spaces with a single space
         return s
             .replace(/\([^)]*\)|[\n\t]/g, ' ')
             .replace(/(\s\s+)/g, ' ')
@@ -17654,7 +16846,6 @@
 
     function checkWeekday(weekdayStr, parsedInput, config) {
         if (weekdayStr) {
-            // TODO: Replace the vanilla JS Date object with an independent day-of-week check.
             var weekdayProvided = defaultLocaleWeekdaysShort.indexOf(weekdayStr),
                 weekdayActual = new Date(
                     parsedInput[0],
@@ -17674,7 +16865,6 @@
         if (obsOffset) {
             return obsOffsets[obsOffset];
         } else if (militaryOffset) {
-            // the only allowed military tz is Z
             return 0;
         } else {
             var hm = parseInt(numOffset, 10),
@@ -17684,7 +16874,6 @@
         }
     }
 
-    // date and time from ref 2822 format
     function configFromRFC2822(config) {
         var match = rfc2822.exec(preprocessRFC2822(config._i)),
             parsedArray;
@@ -17713,7 +16902,6 @@
         }
     }
 
-    // date from 1) ASP.NET, 2) ISO, 3) RFC 2822 formats, or 4) optional fallback if parsing isn't strict
     function configFromString(config) {
         var matched = aspNetJsonRegex.exec(config._i);
         if (matched !== null) {
@@ -17738,7 +16926,6 @@
         if (config._strict) {
             config._isValid = false;
         } else {
-            // Final attempt, use Input Fallback
             hooks.createFromInputFallback(config);
         }
     }
@@ -17752,7 +16939,6 @@
         }
     );
 
-    // Pick the first defined of two or three arguments.
     function defaults(a, b, c) {
         if (a != null) {
             return a;
@@ -17764,7 +16950,6 @@
     }
 
     function currentDateArray(config) {
-        // hooks is actually the exported moment object
         var nowValue = new Date(hooks.now());
         if (config._useUTC) {
             return [
@@ -17776,10 +16961,6 @@
         return [nowValue.getFullYear(), nowValue.getMonth(), nowValue.getDate()];
     }
 
-    // convert an array to a date.
-    // the array should mirror the parameters below
-    // note: all values past the year are optional and will default to the lowest possible value.
-    // [year, month, day , hour, minute, second, millisecond]
     function configFromArray(config) {
         var i,
             date,
@@ -17794,12 +16975,10 @@
 
         currentDate = currentDateArray(config);
 
-        //compute day of the year from weeks and weekdays
         if (config._w && config._a[DATE] == null && config._a[MONTH] == null) {
             dayOfYearFromWeekInfo(config);
         }
 
-        //if the day of the year is set, figure out what it is
         if (config._dayOfYear != null) {
             yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
 
@@ -17815,22 +16994,15 @@
             config._a[DATE] = date.getUTCDate();
         }
 
-        // Default to current date.
-        // * if no year, month, day of month are given, default to today
-        // * if day of month is given, default month and year
-        // * if month is given, default only year
-        // * if year is given, don't default anything
         for (i = 0; i < 3 && config._a[i] == null; ++i) {
             config._a[i] = input[i] = currentDate[i];
         }
 
-        // Zero out whatever was not defaulted, including time
         for (; i < 7; i++) {
             config._a[i] = input[i] =
                 config._a[i] == null ? (i === 2 ? 1 : 0) : config._a[i];
         }
 
-        // Check for 24:00:00.000
         if (
             config._a[HOUR] === 24 &&
             config._a[MINUTE] === 0 &&
@@ -17849,8 +17021,6 @@
             ? config._d.getUTCDay()
             : config._d.getDay();
 
-        // Apply timezone offset from input. The actual utcOffset can be changed
-        // with parseZone.
         if (config._tzm != null) {
             config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
         }
@@ -17859,7 +17029,6 @@
             config._a[HOUR] = 24;
         }
 
-        // check for mismatching day of week
         if (
             config._w &&
             typeof config._w.d !== 'undefined' &&
@@ -17877,10 +17046,6 @@
             dow = 1;
             doy = 4;
 
-            // TODO: We need to take the current isoWeekYear, but that depends on
-            // how we interpret now (local, utc, fixed offset). So create
-            // a now version of current config (take local/utc/offset flags, and
-            // create now).
             weekYear = defaults(
                 w.GG,
                 config._a[YEAR],
@@ -17899,23 +17064,19 @@
 
             weekYear = defaults(w.gg, config._a[YEAR], curWeek.year);
 
-            // Default to current week.
             week = defaults(w.w, curWeek.week);
 
             if (w.d != null) {
-                // weekday -- low day numbers are considered next week
                 weekday = w.d;
                 if (weekday < 0 || weekday > 6) {
                     weekdayOverflow = true;
                 }
             } else if (w.e != null) {
-                // local weekday -- counting starts from beginning of week
                 weekday = w.e + dow;
                 if (w.e < 0 || w.e > 6) {
                     weekdayOverflow = true;
                 }
             } else {
-                // default to beginning of week
                 weekday = dow;
             }
         }
@@ -17930,15 +17091,11 @@
         }
     }
 
-    // constant that refers to the ISO standard
     hooks.ISO_8601 = function () {};
 
-    // constant that refers to the RFC 2822 form
     hooks.RFC_2822 = function () {};
 
-    // date from string and format string
     function configFromStringAndFormat(config) {
-        // TODO: Move this to another part of the creation flow to prevent circular deps
         if (config._f === hooks.ISO_8601) {
             configFromISO(config);
             return;
@@ -17950,7 +17107,6 @@
         config._a = [];
         getParsingFlags(config).empty = true;
 
-        // This array is used to make a Date, either with `new Date` or `Date.UTC`
         var string = '' + config._i,
             i,
             parsedInput,
@@ -17979,7 +17135,6 @@
                 );
                 totalParsedInputLength += parsedInput.length;
             }
-            // don't parse if it's not a known token
             if (formatTokenFunctions[token]) {
                 if (parsedInput) {
                     getParsingFlags(config).empty = false;
@@ -17992,14 +17147,12 @@
             }
         }
 
-        // add remaining unparsed input length to the string
         getParsingFlags(config).charsLeftOver =
             stringLength - totalParsedInputLength;
         if (string.length > 0) {
             getParsingFlags(config).unusedInput.push(string);
         }
 
-        // clear _12h flag if hour is <= 12
         if (
             config._a[HOUR] <= 12 &&
             getParsingFlags(config).bigHour === true &&
@@ -18010,14 +17163,12 @@
 
         getParsingFlags(config).parsedDateParts = config._a.slice(0);
         getParsingFlags(config).meridiem = config._meridiem;
-        // handle meridiem
         config._a[HOUR] = meridiemFixWrap(
             config._locale,
             config._a[HOUR],
             config._meridiem
         );
 
-        // handle era
         era = getParsingFlags(config).era;
         if (era !== null) {
             config._a[YEAR] = config._locale.erasConvertYear(era, config._a[YEAR]);
@@ -18031,13 +17182,11 @@
         var isPm;
 
         if (meridiem == null) {
-            // nothing to do
             return hour;
         }
         if (locale.meridiemHour != null) {
             return locale.meridiemHour(hour, meridiem);
         } else if (locale.isPM != null) {
-            // Fallback
             isPm = locale.isPM(meridiem);
             if (isPm && hour < 12) {
                 hour += 12;
@@ -18047,12 +17196,10 @@
             }
             return hour;
         } else {
-            // this is not supposed to happen
             return hour;
         }
     }
 
-    // date from string and array of format strings
     function configFromStringAndArray(config) {
         var tempConfig,
             bestMoment,
@@ -18083,10 +17230,8 @@
                 validFormatFound = true;
             }
 
-            // if there is any input that was not parsed add a penalty for that format
             currentScore += getParsingFlags(tempConfig).charsLeftOver;
 
-            //or tokens
             currentScore += getParsingFlags(tempConfig).unusedTokens.length * 10;
 
             getParsingFlags(tempConfig).score = currentScore;
@@ -18134,7 +17279,6 @@
     function createFromConfig(config) {
         var res = new Moment(checkOverflow(prepareConfig(config)));
         if (res._nextDay) {
-            // Adding is smart enough around DST
             res.add(1, 'd');
             res._nextDay = undefined;
         }
@@ -18191,7 +17335,6 @@
         } else if (isObject(input)) {
             configFromObject(config);
         } else if (isNumber(input)) {
-            // from milliseconds
             config._d = new Date(input);
         } else {
             hooks.createFromInputFallback(config);
@@ -18217,8 +17360,6 @@
         ) {
             input = undefined;
         }
-        // object construction must be done this way.
-        // https://github.com/moment/moment/issues/1423
         c._isAMomentObject = true;
         c._useUTC = c._isUTC = isUTC;
         c._l = locale;
@@ -18256,11 +17397,6 @@
             }
         );
 
-    // Pick a moment m from moments so that m[fn](other) is true for all
-    // other. This relies on the function fn to be transitive.
-    //
-    // moments should either be an array of moment objects or an array, whose
-    // first element is an array of moment objects.
     function pickBy(fn, moments) {
         var res, i;
         if (moments.length === 1 && isArray(moments[0])) {
@@ -18278,7 +17414,6 @@
         return res;
     }
 
-    // TODO: Use [].sort instead?
     function min() {
         var args = [].slice.call(arguments, 0);
 
@@ -18327,7 +17462,7 @@
         for (i = 0; i < orderLen; ++i) {
             if (m[ordering[i]]) {
                 if (unitHasDecimal) {
-                    return false; // only allow non-integers for smallest unit
+                    return false; 
                 }
                 if (parseFloat(m[ordering[i]]) !== toInt(m[ordering[i]])) {
                     unitHasDecimal = true;
@@ -18360,18 +17495,12 @@
 
         this._isValid = isDurationValid(normalizedInput);
 
-        // representation for dateAddRemove
         this._milliseconds =
             +milliseconds +
-            seconds * 1e3 + // 1000
-            minutes * 6e4 + // 1000 * 60
-            hours * 1000 * 60 * 60; //using 1000 * 60 * 60 instead of 36e5 to avoid floating point rounding errors https://github.com/moment/moment/issues/2978
-        // Because of dateAddRemove treats 24 hours as different from a
-        // day when working around DST, we need to store them separately
+            seconds * 1e3 + 
+            minutes * 6e4 + 
+            hours * 1000 * 60 * 60; 
         this._days = +days + weeks * 7;
-        // It is impossible to translate months into days without knowing
-        // which months you are are talking about, so we have to store
-        // it separately.
         this._months = +months + quarters * 3 + years * 12;
 
         this._data = {};
@@ -18393,7 +17522,6 @@
         }
     }
 
-    // compare two arrays, return the number of differences
     function compareArrays(array1, array2, dontConvert) {
         var len = Math.min(array1.length, array2.length),
             lengthDiff = Math.abs(array1.length - array2.length),
@@ -18410,7 +17538,6 @@
         return diffs + lengthDiff;
     }
 
-    // FORMATTING
 
     function offset(token, separator) {
         addFormatToken(token, 0, 0, function () {
@@ -18432,7 +17559,6 @@
     offset('Z', ':');
     offset('ZZ', '');
 
-    // PARSING
 
     addRegexToken('Z', matchShortOffset);
     addRegexToken('ZZ', matchShortOffset);
@@ -18441,11 +17567,7 @@
         config._tzm = offsetFromString(matchShortOffset, input);
     });
 
-    // HELPERS
 
-    // timezone chunker
-    // '+10:00' > ['10',  '00']
-    // '-1530'  > ['-15', '30']
     var chunkOffset = /([\+\-]|\d\d)/gi;
 
     function offsetFromString(matcher, string) {
@@ -18465,7 +17587,6 @@
         return minutes === 0 ? 0 : parts[0] === '+' ? minutes : -minutes;
     }
 
-    // Return a moment from input, that is local/utc/zone equivalent to model.
     function cloneWithOffset(input, model) {
         var res, diff;
         if (model._isUTC) {
@@ -18474,7 +17595,6 @@
                 (isMoment(input) || isDate(input)
                     ? input.valueOf()
                     : createLocal(input).valueOf()) - res.valueOf();
-            // Use low-level api, because this fn is low-level api.
             res._d.setTime(res._d.valueOf() + diff);
             hooks.updateOffset(res, false);
             return res;
@@ -18484,29 +17604,13 @@
     }
 
     function getDateOffset(m) {
-        // On Firefox.24 Date#getTimezoneOffset returns a floating point.
-        // https://github.com/moment/moment/pull/1871
         return -Math.round(m._d.getTimezoneOffset());
     }
 
-    // HOOKS
 
-    // This function will be called whenever a moment is mutated.
-    // It is intended to keep the offset in sync with the timezone.
     hooks.updateOffset = function () {};
 
-    // MOMENTS
 
-    // keepLocalTime = true means only change the timezone, without
-    // affecting the local hour. So 5:31:26 +0300 --[utcOffset(2, true)]-->
-    // 5:31:26 +0200 It is possible that 5:31:26 doesn't exist with offset
-    // +0200, so we adjust the time as needed, to be valid.
-    //
-    // Keeping the time actually adds/subtracts (one hour)
-    // from the actual represented time. That is why we call updateOffset
-    // a second time. In case it wants us to change the offset again
-    // _changeInProgress == true case, then we have to adjust, because
-    // there is no such time in the given timezone.
     function getSetOffset(input, keepLocalTime, keepMinutes) {
         var offset = this._offset || 0,
             localAdjust;
@@ -18644,17 +17748,12 @@
         return this.isValid() ? this._isUTC && this._offset === 0 : false;
     }
 
-    // ASP.NET json date format regex
     var aspNetRegex = /^(-|\+)?(?:(\d*)[. ])?(\d+):(\d+)(?::(\d+)(\.\d*)?)?$/,
-        // from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html
-        // somewhat more in line with 4.4.3.2 2004 spec, but allows decimal anywhere
-        // and further modified to allow for strings containing both week and day
         isoRegex =
             /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
 
     function createDuration(input, key) {
         var duration = input,
-            // matching against regexp is expensive, do it on demand
             match = null,
             sign,
             ret,
@@ -18681,7 +17780,7 @@
                 h: toInt(match[HOUR]) * sign,
                 m: toInt(match[MINUTE]) * sign,
                 s: toInt(match[SECOND]) * sign,
-                ms: toInt(absRound(match[MILLISECOND] * 1000)) * sign, // the millisecond decimal point is included in the match
+                ms: toInt(absRound(match[MILLISECOND] * 1000)) * sign, 
             };
         } else if ((match = isoRegex.exec(input))) {
             sign = match[1] === '-' ? -1 : 1;
@@ -18695,7 +17794,6 @@
                 s: parseIso(match[8], sign),
             };
         } else if (duration == null) {
-            // checks for null or undefined
             duration = {};
         } else if (
             typeof duration === 'object' &&
@@ -18728,11 +17826,7 @@
     createDuration.invalid = createInvalid$1;
 
     function parseIso(inp, sign) {
-        // We'd normally use ~~inp for this, but unfortunately it also
-        // converts floats to ints.
-        // inp may be undefined, so careful calling replace on it.
         var res = inp && parseFloat(inp.replace(',', '.'));
-        // apply sign while we're at it
         return (isNaN(res) ? 0 : res) * sign;
     }
 
@@ -18768,11 +17862,9 @@
         return res;
     }
 
-    // TODO: remove 'name' arg after deprecation is removed
     function createAdder(direction, name) {
         return function (val, period) {
             var dur, tmp;
-            //invert the arguments, but complain about it
             if (period !== null && !isNaN(+period)) {
                 deprecateSimple(
                     name,
@@ -18800,7 +17892,6 @@
             months = absRound(duration._months);
 
         if (!mom.isValid()) {
-            // No op
             return;
         }
 
@@ -18827,7 +17918,6 @@
         return typeof input === 'string' || input instanceof String;
     }
 
-    // type MomentInput = Moment | Date | string | number | (number | string)[] | MomentInputObject | void; // null | undefined
     function isMomentInput(input) {
         return (
             isMoment(input) ||
@@ -18934,7 +18024,6 @@
     }
 
     function calendar$1(time, formats) {
-        // Support for single parameter, formats only overload to the calendar function
         if (arguments.length === 1) {
             if (!arguments[0]) {
                 time = undefined;
@@ -18947,8 +18036,6 @@
                 time = undefined;
             }
         }
-        // We want to compare the start of today, vs this.
-        // Getting start-of-today depends on whether we're local/utc/offset or not.
         var now = time || createLocal(),
             sod = cloneWithOffset(now, this).startOf('day'),
             format = hooks.calendarFormat(this, sod) || 'sameElse',
@@ -19065,19 +18152,19 @@
                 break;
             case 'second':
                 output = (this - that) / 1e3;
-                break; // 1000
+                break; 
             case 'minute':
                 output = (this - that) / 6e4;
-                break; // 1000 * 60
+                break; 
             case 'hour':
                 output = (this - that) / 36e5;
-                break; // 1000 * 60 * 60
+                break; 
             case 'day':
                 output = (this - that - zoneDelta) / 864e5;
-                break; // 1000 * 60 * 60 * 24, negate dst
+                break; 
             case 'week':
                 output = (this - that - zoneDelta) / 6048e5;
-                break; // 1000 * 60 * 60 * 24 * 7, negate dst
+                break; 
             default:
                 output = this - that;
         }
@@ -19087,28 +18174,21 @@
 
     function monthDiff(a, b) {
         if (a.date() < b.date()) {
-            // end-of-month calculations work correct when the start month has more
-            // days than the end month.
             return -monthDiff(b, a);
         }
-        // difference in months
         var wholeMonthDiff = (b.year() - a.year()) * 12 + (b.month() - a.month()),
-            // b is in (anchor - 1 month, anchor + 1 month)
             anchor = a.clone().add(wholeMonthDiff, 'months'),
             anchor2,
             adjust;
 
         if (b - anchor < 0) {
             anchor2 = a.clone().add(wholeMonthDiff - 1, 'months');
-            // linear across the month
             adjust = (b - anchor) / (anchor - anchor2);
         } else {
             anchor2 = a.clone().add(wholeMonthDiff + 1, 'months');
-            // linear across the month
             adjust = (b - anchor) / (anchor2 - anchor);
         }
 
-        //check for negative zero, return zero if negative zero
         return -(wholeMonthDiff + adjust) || 0;
     }
 
@@ -19134,7 +18214,6 @@
             );
         }
         if (isFunction(Date.prototype.toISOString)) {
-            // native implementation is ~50x faster, use it when we can
             if (utc) {
                 return this.toDate().toISOString();
             } else {
@@ -19149,12 +18228,6 @@
         );
     }
 
-    /**
-     * Return a human readable representation of a moment that can
-     * also be evaluated to get a new moment which is the same
-     *
-     * @link https://nodejs.org/dist/latest/docs/api/util.html#util_custom_inspect_function_on_objects
-     */
     function inspect() {
         if (!this.isValid()) {
             return 'moment.invalid(/* ' + this._i + ' */)';
@@ -19221,9 +18294,6 @@
         return this.to(createLocal(), withoutSuffix);
     }
 
-    // If passed a locale key, it will set the locale for this
-    // instance.  Otherwise, it will return the locale configuration
-    // variables for this instance.
     function locale(key) {
         var newLocaleData;
 
@@ -19258,15 +18328,12 @@
         MS_PER_HOUR = 60 * MS_PER_MINUTE,
         MS_PER_400_YEARS = (365 * 400 + 97) * 24 * MS_PER_HOUR;
 
-    // actual modulo - handles negative numbers (for dates before 1970):
     function mod$1(dividend, divisor) {
         return ((dividend % divisor) + divisor) % divisor;
     }
 
     function localStartOfDate(y, m, d) {
-        // the date constructor remaps years 0-99 to 1900-1999
         if (y < 100 && y >= 0) {
-            // preserve leap years using a full 400 year cycle, then reset
             return new Date(y + 400, m, d) - MS_PER_400_YEARS;
         } else {
             return new Date(y, m, d).valueOf();
@@ -19274,9 +18341,7 @@
     }
 
     function utcStartOfDate(y, m, d) {
-        // Date.UTC remaps years 0-99 to 1900-1999
         if (y < 100 && y >= 0) {
-            // preserve leap years using a full 400 year cycle, then reset
             return Date.UTC(y + 400, m, d) - MS_PER_400_YEARS;
         } else {
             return Date.UTC(y, m, d);
@@ -19454,7 +18519,6 @@
     }
 
     function toJSON() {
-        // new Date(NaN).toJSON() === null
         return this.isValid() ? this.toISOString() : null;
     }
 
@@ -19537,7 +18601,6 @@
         for (i = 0, l = eras.length; i < l; ++i) {
             switch (typeof eras[i].since) {
                 case 'string':
-                    // truncate time
                     date = hooks(eras[i].since).startOf('day');
                     eras[i].since = date.valueOf();
                     break;
@@ -19548,7 +18611,6 @@
                     eras[i].until = +Infinity;
                     break;
                 case 'string':
-                    // truncate time
                     date = hooks(eras[i].until).startOf('day').valueOf();
                     eras[i].until = date.valueOf();
                     break;
@@ -19614,7 +18676,6 @@
             val,
             eras = this.localeData().eras();
         for (i = 0, l = eras.length; i < l; ++i) {
-            // truncate time
             val = this.clone().startOf('day').valueOf();
 
             if (eras[i].since <= val && val <= eras[i].until) {
@@ -19634,7 +18695,6 @@
             val,
             eras = this.localeData().eras();
         for (i = 0, l = eras.length; i < l; ++i) {
-            // truncate time
             val = this.clone().startOf('day').valueOf();
 
             if (eras[i].since <= val && val <= eras[i].until) {
@@ -19654,7 +18714,6 @@
             val,
             eras = this.localeData().eras();
         for (i = 0, l = eras.length; i < l; ++i) {
-            // truncate time
             val = this.clone().startOf('day').valueOf();
 
             if (eras[i].since <= val && val <= eras[i].until) {
@@ -19677,7 +18736,6 @@
         for (i = 0, l = eras.length; i < l; ++i) {
             dir = eras[i].since <= eras[i].until ? +1 : -1;
 
-            // truncate time
             val = this.clone().startOf('day').valueOf();
 
             if (
@@ -19759,7 +18817,6 @@
         );
     }
 
-    // FORMATTING
 
     addFormatToken(0, ['gg', 2], 0, function () {
         return this.weekYear() % 100;
@@ -19778,17 +18835,14 @@
     addWeekYearFormatToken('GGGG', 'isoWeekYear');
     addWeekYearFormatToken('GGGGG', 'isoWeekYear');
 
-    // ALIASES
 
     addUnitAlias('weekYear', 'gg');
     addUnitAlias('isoWeekYear', 'GG');
 
-    // PRIORITY
 
     addUnitPriority('weekYear', 1);
     addUnitPriority('isoWeekYear', 1);
 
-    // PARSING
 
     addRegexToken('G', matchSigned);
     addRegexToken('g', matchSigned);
@@ -19810,7 +18864,6 @@
         week[token] = hooks.parseTwoDigitYear(input);
     });
 
-    // MOMENTS
 
     function getSetWeekYear(input) {
         return getSetWeekYearHelper.call(
@@ -19875,26 +18928,21 @@
         return this;
     }
 
-    // FORMATTING
 
     addFormatToken('Q', 0, 'Qo', 'quarter');
 
-    // ALIASES
 
     addUnitAlias('quarter', 'Q');
 
-    // PRIORITY
 
     addUnitPriority('quarter', 7);
 
-    // PARSING
 
     addRegexToken('Q', match1);
     addParseToken('Q', function (input, array) {
         array[MONTH] = (toInt(input) - 1) * 3;
     });
 
-    // MOMENTS
 
     function getSetQuarter(input) {
         return input == null
@@ -19902,23 +18950,18 @@
             : this.month((input - 1) * 3 + (this.month() % 3));
     }
 
-    // FORMATTING
 
     addFormatToken('D', ['DD', 2], 'Do', 'date');
 
-    // ALIASES
 
     addUnitAlias('date', 'D');
 
-    // PRIORITY
     addUnitPriority('date', 9);
 
-    // PARSING
 
     addRegexToken('D', match1to2);
     addRegexToken('DD', match1to2, match2);
     addRegexToken('Do', function (isStrict, locale) {
-        // TODO: Remove "ordinalParse" fallback in next major release.
         return isStrict
             ? locale._dayOfMonthOrdinalParse || locale._ordinalParse
             : locale._dayOfMonthOrdinalParseLenient;
@@ -19929,22 +18972,17 @@
         array[DATE] = toInt(input.match(match1to2)[0]);
     });
 
-    // MOMENTS
 
     var getSetDayOfMonth = makeGetSet('Date', true);
 
-    // FORMATTING
 
     addFormatToken('DDD', ['DDDD', 3], 'DDDo', 'dayOfYear');
 
-    // ALIASES
 
     addUnitAlias('dayOfYear', 'DDD');
 
-    // PRIORITY
     addUnitPriority('dayOfYear', 4);
 
-    // PARSING
 
     addRegexToken('DDD', match1to3);
     addRegexToken('DDDD', match3);
@@ -19952,9 +18990,7 @@
         config._dayOfYear = toInt(input);
     });
 
-    // HELPERS
 
-    // MOMENTS
 
     function getSetDayOfYear(input) {
         var dayOfYear =
@@ -19964,51 +19000,40 @@
         return input == null ? dayOfYear : this.add(input - dayOfYear, 'd');
     }
 
-    // FORMATTING
 
     addFormatToken('m', ['mm', 2], 0, 'minute');
 
-    // ALIASES
 
     addUnitAlias('minute', 'm');
 
-    // PRIORITY
 
     addUnitPriority('minute', 14);
 
-    // PARSING
 
     addRegexToken('m', match1to2);
     addRegexToken('mm', match1to2, match2);
     addParseToken(['m', 'mm'], MINUTE);
 
-    // MOMENTS
 
     var getSetMinute = makeGetSet('Minutes', false);
 
-    // FORMATTING
 
     addFormatToken('s', ['ss', 2], 0, 'second');
 
-    // ALIASES
 
     addUnitAlias('second', 's');
 
-    // PRIORITY
 
     addUnitPriority('second', 15);
 
-    // PARSING
 
     addRegexToken('s', match1to2);
     addRegexToken('ss', match1to2, match2);
     addParseToken(['s', 'ss'], SECOND);
 
-    // MOMENTS
 
     var getSetSecond = makeGetSet('Seconds', false);
 
-    // FORMATTING
 
     addFormatToken('S', 0, 0, function () {
         return ~~(this.millisecond() / 100);
@@ -20038,15 +19063,12 @@
         return this.millisecond() * 1000000;
     });
 
-    // ALIASES
 
     addUnitAlias('millisecond', 'ms');
 
-    // PRIORITY
 
     addUnitPriority('millisecond', 16);
 
-    // PARSING
 
     addRegexToken('S', match1to3, match1);
     addRegexToken('SS', match1to3, match2);
@@ -20067,12 +19089,10 @@
 
     getSetMillisecond = makeGetSet('Milliseconds', false);
 
-    // FORMATTING
 
     addFormatToken('z', 0, 0, 'zoneAbbr');
     addFormatToken('zz', 0, 0, 'zoneName');
 
-    // MOMENTS
 
     function getZoneAbbr() {
         return this._isUTC ? 'UTC' : '';
@@ -20263,14 +19283,6 @@
         return out;
     }
 
-    // ()
-    // (5)
-    // (fmt, 5)
-    // (fmt)
-    // (true)
-    // (true, 5)
-    // (true, fmt, 5)
-    // (true, fmt)
     function listWeekdaysImpl(localeSorted, format, index, field) {
         if (typeof localeSorted === 'boolean') {
             if (isNumber(format)) {
@@ -20363,7 +19375,6 @@
         },
     });
 
-    // Side effect imports
 
     hooks.lang = deprecate(
         'moment.lang is deprecated. Use moment.locale instead.',
@@ -20403,12 +19414,10 @@
         return duration._bubble();
     }
 
-    // supports only 2.0-style add(1, 's') or add(duration)
     function add$1(input, value) {
         return addSubtract$1(this, input, value, 1);
     }
 
-    // supports only 2.0-style subtract(1, 's') or subtract(duration)
     function subtract$1(input, value) {
         return addSubtract$1(this, input, value, -1);
     }
@@ -20432,8 +19441,6 @@
             years,
             monthsFromDays;
 
-        // if we have a mix of positive and negative values, bubble down first
-        // check: https://github.com/moment/moment/issues/2166
         if (
             !(
                 (milliseconds >= 0 && days >= 0 && months >= 0) ||
@@ -20445,8 +19452,6 @@
             months = 0;
         }
 
-        // The following code bubbles up values, see the tests for
-        // examples of what that means.
         data.milliseconds = milliseconds % 1000;
 
         seconds = absFloor(milliseconds / 1000);
@@ -20460,12 +19465,10 @@
 
         days += absFloor(hours / 24);
 
-        // convert days to months
         monthsFromDays = absFloor(daysToMonths(days));
         months += monthsFromDays;
         days -= absCeil(monthsToDays(monthsFromDays));
 
-        // 12 months -> 1 year
         years = absFloor(months / 12);
         months %= 12;
 
@@ -20477,13 +19480,10 @@
     }
 
     function daysToMonths(days) {
-        // 400 years have 146097 days (taking into account leap year rules)
-        // 400 years have 12 months === 4800
         return (days * 4800) / 146097;
     }
 
     function monthsToDays(months) {
-        // the reverse of daysToMonths
         return (months * 146097) / 4800;
     }
 
@@ -20509,7 +19509,6 @@
                     return months / 12;
             }
         } else {
-            // handle milliseconds separately because of floating point math errors (issue #1867)
             days = this._days + Math.round(monthsToDays(this._months));
             switch (units) {
                 case 'week':
@@ -20522,7 +19521,6 @@
                     return days * 1440 + milliseconds / 6e4;
                 case 'second':
                     return days * 86400 + milliseconds / 1000;
-                // Math.floor prevents floating point math errors here
                 case 'millisecond':
                     return Math.floor(days * 864e5) + milliseconds;
                 default:
@@ -20531,7 +19529,6 @@
         }
     }
 
-    // TODO: Use this.as('ms')?
     function valueOf$1() {
         if (!this.isValid()) {
             return NaN;
@@ -20589,16 +19586,15 @@
 
     var round = Math.round,
         thresholds = {
-            ss: 44, // a few seconds to seconds
-            s: 45, // seconds to minute
-            m: 45, // minutes to hour
-            h: 22, // hours to day
-            d: 26, // days to month/week
-            w: null, // weeks to month
-            M: 11, // months to year
+            ss: 44, 
+            s: 45, 
+            m: 45, 
+            h: 22, 
+            d: 26, 
+            w: null, 
+            M: 11, 
         };
 
-    // helper function for moment.fn.from, moment.fn.fromNow, and moment.duration.fn.humanize
     function substituteTimeAgo(string, number, withoutSuffix, isFuture, locale) {
         return locale.relativeTime(number || 1, !!withoutSuffix, string, isFuture);
     }
@@ -20639,7 +19635,6 @@
         return substituteTimeAgo.apply(null, a);
     }
 
-    // This function allows you to set the rounding function for relative time strings
     function getSetRelativeTimeRounding(roundingFunction) {
         if (roundingFunction === undefined) {
             return round;
@@ -20651,7 +19646,6 @@
         return false;
     }
 
-    // This function allows you to set a threshold for relative time strings
     function getSetRelativeTimeThreshold(threshold, limit) {
         if (thresholds[threshold] === undefined) {
             return false;
@@ -20707,13 +19701,6 @@
     }
 
     function toISOString$1() {
-        // for ISO strings we do not use the normal bubbling rules:
-        //  * milliseconds bubble up until they become hours
-        //  * days do not bubble at all
-        //  * months bubble up until they become years
-        // This is because there is no context-free conversion between hours and days
-        // (think of clock changes)
-        // and also not between days and months (28-31 days per month)
         if (!this.isValid()) {
             return this.localeData().invalidDate();
         }
@@ -20732,22 +19719,17 @@
             hmsSign;
 
         if (!total) {
-            // this is the same as C#'s (Noda) and python (isodate)...
-            // but not other JS (goog.date)
             return 'P0D';
         }
 
-        // 3600 seconds -> 60 minutes -> 1 hour
         minutes = absFloor(seconds / 60);
         hours = absFloor(minutes / 60);
         seconds %= 60;
         minutes %= 60;
 
-        // 12 months -> 1 year
         years = absFloor(months / 12);
         months %= 12;
 
-        // inspired by https://github.com/dordille/moment-isoduration/blob/master/moment.isoduration.js
         s = seconds ? seconds.toFixed(3).replace(/\.?0+$/, '') : '';
 
         totalSign = total < 0 ? '-' : '';
@@ -20809,12 +19791,10 @@
     );
     proto$2.lang = lang;
 
-    // FORMATTING
 
     addFormatToken('X', 0, 0, 'unix');
     addFormatToken('x', 0, 0, 'valueOf');
 
-    // PARSING
 
     addRegexToken('x', matchSigned);
     addRegexToken('X', matchTimestamp);
@@ -20825,7 +19805,6 @@
         config._d = new Date(toInt(input));
     });
 
-    //! moment.js
 
     hooks.version = '2.29.2';
 
@@ -20859,17 +19838,16 @@
     hooks.calendarFormat = getCalendarFormat;
     hooks.prototype = proto;
 
-    // currently HTML5 input type only supports 24-hour formats
     hooks.HTML5_FMT = {
-        DATETIME_LOCAL: 'YYYY-MM-DDTHH:mm', // <input type="datetime-local" />
-        DATETIME_LOCAL_SECONDS: 'YYYY-MM-DDTHH:mm:ss', // <input type="datetime-local" step="1" />
-        DATETIME_LOCAL_MS: 'YYYY-MM-DDTHH:mm:ss.SSS', // <input type="datetime-local" step="0.001" />
-        DATE: 'YYYY-MM-DD', // <input type="date" />
-        TIME: 'HH:mm', // <input type="time" />
-        TIME_SECONDS: 'HH:mm:ss', // <input type="time" step="1" />
-        TIME_MS: 'HH:mm:ss.SSS', // <input type="time" step="0.001" />
-        WEEK: 'GGGG-[W]WW', // <input type="week" />
-        MONTH: 'YYYY-MM', // <input type="month" />
+        DATETIME_LOCAL: 'YYYY-MM-DDTHH:mm', 
+        DATETIME_LOCAL_SECONDS: 'YYYY-MM-DDTHH:mm:ss', 
+        DATETIME_LOCAL_MS: 'YYYY-MM-DDTHH:mm:ss.SSS', 
+        DATE: 'YYYY-MM-DD', 
+        TIME: 'HH:mm', 
+        TIME_SECONDS: 'HH:mm:ss', 
+        TIME_MS: 'HH:mm:ss.SSS', 
+        WEEK: 'GGGG-[W]WW', 
+        MONTH: 'YYYY-MM', 
     };
 
     return hooks;
@@ -20877,6 +19855,6 @@
 })));
 
 
-/***/ })
+ })
 
 }]);

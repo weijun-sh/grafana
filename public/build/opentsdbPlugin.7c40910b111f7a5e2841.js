@@ -1,16 +1,15 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[3168],{
 
-/***/ "./public/app/angular/AngularLocationWrapper.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/AngularLocationWrapper.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "O": () => (/* binding */ AngularLocationWrapper)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "O": () => ( AngularLocationWrapper)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
 
- // Ref: https://github.com/angular/angular.js/blob/ae8e903edf88a83fedd116ae02c0628bf72b150c/src/ng/location.js#L5
 
 const DEFAULT_PORTS = {
   http: 80,
@@ -118,7 +117,6 @@ class AngularLocationWrapper {
       }
 
       for (const key of Object.keys(newQuery)) {
-        // removing params with null | undefined
         if (newQuery[key] === null || newQuery[key] === undefined) {
           delete newQuery[key];
         }
@@ -163,19 +161,19 @@ class AngularLocationWrapper {
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/angular/panel/metrics_panel_ctrl.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/panel/metrics_panel_ctrl.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "k": () => (/* binding */ MetricsPanelCtrl)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/panel/panel_ctrl.ts");
-/* harmony import */ var app_features_dashboard_utils_panel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/dashboard/utils/panel.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "k": () => ( MetricsPanelCtrl)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/panel/panel_ctrl.ts");
+ var app_features_dashboard_utils_panel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/dashboard/utils/panel.ts");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -183,7 +181,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__/* .PanelCtrl */ .q {
+class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ .q {
   constructor($scope, $injector) {
     super($scope, $injector);
 
@@ -220,7 +218,7 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
         if (data.state === _grafana_data__WEBPACK_IMPORTED_MODULE_1__.LoadingState.Error) {
           this.loading = false;
           this.processDataError(data.error);
-        } // Ignore data in loading state
+        } 
 
 
         if (data.state === _grafana_data__WEBPACK_IMPORTED_MODULE_1__.LoadingState.Loading) {
@@ -246,7 +244,6 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
         if (this.useDataFrames) {
           this.handleDataFrames(data.series);
         } else {
-          // Make the results look as if they came directly from a <6.2 datasource request
           const legacy = data.series.map(v => (0,_grafana_data__WEBPACK_IMPORTED_MODULE_1__.toLegacyResponseData)(v));
           this.handleQueryResult({
             data: legacy
@@ -283,15 +280,14 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
   }
 
   onMetricsPanelRefresh() {
-    // ignore fetching data if another panel is in fullscreen
     if (this.otherPanelInFullscreenMode()) {
       return;
-    } // if we have snapshot data use that
+    } 
 
 
     if (this.panel.snapshotData) {
       this.updateTimeRange();
-      let data = this.panel.snapshotData; // backward compatibility
+      let data = this.panel.snapshotData; 
 
       if (!(0,lodash__WEBPACK_IMPORTED_MODULE_0__.isArray)(data)) {
         data = data.data;
@@ -301,17 +297,16 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
         state: _grafana_data__WEBPACK_IMPORTED_MODULE_1__.LoadingState.Done,
         series: data,
         timeRange: this.range
-      }; // Defer panel rendering till the next digest cycle.
-      // For some reason snapshot panels don't init at this time, so this helps to avoid rendering issues.
+      }; 
 
       return this.$timeout(() => {
         this.events.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_1__.PanelEvents.dataSnapshotLoad, data);
       });
-    } // clear loading/error state
+    } 
 
 
     delete this.error;
-    this.loading = true; // load datasource service
+    this.loading = true; 
 
     return this.datasourceSrv.get(this.panel.datasource, this.panel.scopedVars).then(this.issueQueries.bind(this)).catch(err => {
       this.processDataError(err);
@@ -319,7 +314,6 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
   }
 
   processDataError(err) {
-    // if canceled  keep loading set to true
     if (err.cancelled) {
       console.log('Panel request cancelled', err);
       return;
@@ -342,13 +336,13 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
     if (!this.$scope.$root.$$phase) {
       this.$scope.$digest();
     }
-  } // Updates the response with information from the stream
+  } 
 
 
   updateTimeRange(datasource) {
     this.datasource = datasource || this.datasource;
     this.range = this.timeSrv.timeRange();
-    const newTimeData = (0,app_features_dashboard_utils_panel__WEBPACK_IMPORTED_MODULE_3__/* .applyPanelTimeOverrides */ .W1)(this.panel, this.range);
+    const newTimeData = (0,app_features_dashboard_utils_panel__WEBPACK_IMPORTED_MODULE_3__ .W1)(this.panel, this.range);
     this.timeInfo = newTimeData.timeInfo;
     this.range = newTimeData.timeRange;
   }
@@ -413,20 +407,20 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
 
 
 
-/***/ }),
+ }),
 
-/***/ "./public/app/angular/panel/panel_ctrl.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/panel/panel_ctrl.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "q": () => (/* binding */ PanelCtrl)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var app_angular_AngularLocationWrapper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/AngularLocationWrapper.ts");
-/* harmony import */ var app_core_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/config.ts");
-/* harmony import */ var app_core_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/core.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "q": () => ( PanelCtrl)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var app_angular_AngularLocationWrapper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/AngularLocationWrapper.ts");
+ var app_core_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/config.ts");
+ var app_core_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/core.ts");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -474,11 +468,11 @@ class PanelCtrl {
     this.$scope = $scope;
     this.$timeout = $injector.get('$timeout');
     this.editorTabs = [];
-    this.$location = new app_angular_AngularLocationWrapper__WEBPACK_IMPORTED_MODULE_2__/* .AngularLocationWrapper */ .O();
+    this.$location = new app_angular_AngularLocationWrapper__WEBPACK_IMPORTED_MODULE_2__ .O();
     this.events = new _grafana_data__WEBPACK_IMPORTED_MODULE_1__.EventBusSrv();
-    this.timing = {}; // not used but here to not break plugins
+    this.timing = {}; 
 
-    const plugin = app_core_config__WEBPACK_IMPORTED_MODULE_3__/* ["default"].panels */ .ZP.panels[this.panel.type];
+    const plugin = app_core_config__WEBPACK_IMPORTED_MODULE_3__ .ZP.panels[this.panel.type];
 
     if (plugin) {
       this.pluginId = plugin.id;
@@ -495,7 +489,7 @@ class PanelCtrl {
   }
 
   renderingCompleted() {
-    app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .profiler.renderingCompleted */ .rv.renderingCompleted();
+    app_core_core__WEBPACK_IMPORTED_MODULE_4__ .rv.renderingCompleted();
   }
 
   refresh() {
@@ -539,7 +533,7 @@ class PanelCtrl {
     const menu = [];
     this.events.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_1__.PanelEvents.initPanelActions, menu);
     return menu;
-  } // Override in sub-class to add items before extended menu
+  } 
 
 
   async getAdditionalMenuItems() {
@@ -552,21 +546,21 @@ class PanelCtrl {
 
   render(payload) {
     this.events.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_1__.PanelEvents.render, payload);
-  } // overriden from react
+  } 
 
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/angular/panel/query_ctrl.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/panel/query_ctrl.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "G": () => (/* binding */ QueryCtrl)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ __webpack_require__.d(__webpack_exports__, {
+   "G": () => ( QueryCtrl)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -606,30 +600,23 @@ class QueryCtrl {
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/opentsdb/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/opentsdb/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "plugin": () => (/* binding */ module_plugin)
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/influxdb/components/useUniqueId.ts
 var useUniqueId = __webpack_require__("./public/app/plugins/datasource/influxdb/components/useUniqueId.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/opentsdb/components/OpenTsdbDetails.tsx
+;
 var _h;
 
 
@@ -666,41 +653,41 @@ const OpenTsdbDetails = props => {
     onChange,
     value
   } = props;
-  const idSuffix = (0,useUniqueId/* useUniqueId */.L)();
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [_h || (_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h5", {
+  const idSuffix = (0,useUniqueId.L)();
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [_h || (_h = (0,jsx_runtime.jsx)("h5", {
       children: "OpenTSDB settings"
-    })), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    })), (0,jsx_runtime.jsxs)("div", {
       className: "gf-form",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
         width: 7,
         htmlFor: `select-version-${idSuffix}`,
         children: "Version"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(Select, {
+      }), (0,jsx_runtime.jsx)(Select, {
         inputId: `select-version-${idSuffix}`,
         options: tsdbVersions,
         value: (_tsdbVersions$find = tsdbVersions.find(version => version.value === value.jsonData.tsdbVersion)) !== null && _tsdbVersions$find !== void 0 ? _tsdbVersions$find : tsdbVersions[0],
         onChange: onSelectChangeHandler('tsdbVersion', value, onChange)
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    }), (0,jsx_runtime.jsxs)("div", {
       className: "gf-form",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
         width: 7,
         htmlFor: `select-resolution-${idSuffix}`,
         children: "Resolution"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(Select, {
+      }), (0,jsx_runtime.jsx)(Select, {
         inputId: `select-resolution-${idSuffix}`,
         options: tsdbResolutions,
         value: (_tsdbResolutions$find = tsdbResolutions.find(resolution => resolution.value === value.jsonData.tsdbResolution)) !== null && _tsdbResolutions$find !== void 0 ? _tsdbResolutions$find : tsdbResolutions[0],
         onChange: onSelectChangeHandler('tsdbResolution', value, onChange)
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    }), (0,jsx_runtime.jsxs)("div", {
       className: "gf-form",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
         width: 7,
         htmlFor: `lookup-input-${idSuffix}`,
         children: "Lookup limit"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(Input, {
+      }), (0,jsx_runtime.jsx)(Input, {
         id: `lookup-input-${idSuffix}`,
         type: "number",
         value: (_value$jsonData$looku = value.jsonData.lookupLimit) !== null && _value$jsonData$looku !== void 0 ? _value$jsonData$looku : 1000,
@@ -725,7 +712,7 @@ const onInputChangeHandler = (key, value, onChange) => event => {
     })
   }));
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/opentsdb/components/ConfigEditor.tsx
+;
 
 
 
@@ -737,35 +724,27 @@ const ConfigEditor = props => {
     options,
     onOptionsChange
   } = props;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.DataSourceHttpSettings, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.DataSourceHttpSettings, {
       defaultUrl: "http://localhost:4242",
       dataSourceConfig: options,
       onChange: onOptionsChange
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(OpenTsdbDetails, {
+    }), (0,jsx_runtime.jsx)(OpenTsdbDetails, {
       value: options,
       onChange: onOptionsChange
     })]
   });
 };
-// EXTERNAL MODULE: ./.yarn/cache/angular-npm-1.8.2-307000482b-35ea81a23b.zip/node_modules/angular/index.js
 var angular = __webpack_require__("./.yarn/cache/angular-npm-1.8.2-307000482b-35ea81a23b.zip/node_modules/angular/index.js");
-var angular_default = /*#__PURE__*/__webpack_require__.n(angular);
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
+var angular_default = __webpack_require__.n(angular);
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js
 var lastValueFrom = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js
 var catchError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./public/app/features/templating/template_srv.ts + 1 modules
 var template_srv = __webpack_require__("./public/app/features/templating/template_srv.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/opentsdb/datasource.ts
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -777,7 +756,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 class OpenTsDatasource extends src.DataSourceApi {
   constructor(instanceSettings) {
-    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv/* getTemplateSrv */.J)();
+    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv.J)();
     super(instanceSettings);
     this.templateSrv = templateSrv;
 
@@ -816,7 +795,7 @@ class OpenTsDatasource extends src.DataSourceApi {
     this.tagKeys = {};
     this.aggregatorsPromise = null;
     this.filterTypesPromise = null;
-  } // Called once per panel (graph)
+  } 
 
 
   query(options) {
@@ -830,7 +809,7 @@ class OpenTsDatasource extends src.DataSourceApi {
 
       qs.push(this.convertTargetToQuery(target, options, this.tsdbVersion));
     });
-    const queries = (0,lodash.compact)(qs); // No valid targets, return the empty result to save a round trip.
+    const queries = (0,lodash.compact)(qs); 
 
     if ((0,lodash.isEmpty)(queries)) {
       return (0,of.of)({
@@ -853,12 +832,11 @@ class OpenTsDatasource extends src.DataSourceApi {
     options.targets = (0,lodash.filter)(options.targets, query => {
       return query.hide !== true;
     });
-    return this.performTimeSeriesQuery(queries, start, end).pipe((0,catchError/* catchError */.K)(err => {
+    return this.performTimeSeriesQuery(queries, start, end).pipe((0,catchError.K)(err => {
       var _err$data, _err$data$error;
 
-      // Throw the error message here instead of the whole object to workaround the error parsing error.
       throw (err === null || err === void 0 ? void 0 : (_err$data = err.data) === null || _err$data === void 0 ? void 0 : (_err$data$error = _err$data.error) === null || _err$data$error === void 0 ? void 0 : _err$data$error.message) || 'Error performing time series query.';
-    }), (0,map/* map */.U)(response => {
+    }), (0,map.U)(response => {
       const metricToTargetMapping = this.mapMetricsToTargets(response.data, options, this.tsdbVersion);
 
       const result = (0,lodash.map)(response.data, (metricData, index) => {
@@ -889,7 +867,7 @@ class OpenTsDatasource extends src.DataSourceApi {
       metric: options.annotation.target
     });
     const queries = (0,lodash.compact)(qs);
-    return (0,lastValueFrom/* lastValueFrom */.n)(this.performTimeSeriesQuery(queries, start, end).pipe((0,map/* map */.U)(results => {
+    return (0,lastValueFrom.n)(this.performTimeSeriesQuery(queries, start, end).pipe((0,map.U)(results => {
       if (results.data[0]) {
         let annotationObject = results.data[0].annotations;
 
@@ -949,7 +927,7 @@ class OpenTsDatasource extends src.DataSourceApi {
 
     if (this.tsdbVersion === 3) {
       reqBody.showQuery = true;
-    } // Relative queries (e.g. last hour) don't include an end time
+    } 
 
 
     if (end) {
@@ -984,7 +962,7 @@ class OpenTsDatasource extends src.DataSourceApi {
       type,
       q: query,
       max: this.lookupLimit
-    }).pipe((0,map/* map */.U)(result => {
+    }).pipe((0,map.U)(result => {
       return result.data;
     }));
   }
@@ -1008,7 +986,7 @@ class OpenTsDatasource extends src.DataSourceApi {
     return this._get('/api/search/lookup', {
       m: m,
       limit: this.lookupLimit
-    }).pipe((0,map/* map */.U)(result => {
+    }).pipe((0,map.U)(result => {
       result = result.data.results;
       const tagvs = [];
       (0,lodash.each)(result, r => {
@@ -1028,7 +1006,7 @@ class OpenTsDatasource extends src.DataSourceApi {
     return this._get('/api/search/lookup', {
       m: metric,
       limit: 1000
-    }).pipe((0,map/* map */.U)(result => {
+    }).pipe((0,map.U)(result => {
       result = result.data.results;
       const tagks = [];
       (0,lodash.each)(result, r => {
@@ -1095,38 +1073,38 @@ class OpenTsDatasource extends src.DataSourceApi {
     const metricsQuery = interpolated.match(metricsRegex);
 
     if (metricsQuery) {
-      return (0,lastValueFrom/* lastValueFrom */.n)(this._performSuggestQuery(metricsQuery[1], 'metrics').pipe((0,map/* map */.U)(responseTransform)));
+      return (0,lastValueFrom.n)(this._performSuggestQuery(metricsQuery[1], 'metrics').pipe((0,map.U)(responseTransform)));
     }
 
     const tagNamesQuery = interpolated.match(tagNamesRegex);
 
     if (tagNamesQuery) {
-      return (0,lastValueFrom/* lastValueFrom */.n)(this._performMetricKeyLookup(tagNamesQuery[1]).pipe((0,map/* map */.U)(responseTransform)));
+      return (0,lastValueFrom.n)(this._performMetricKeyLookup(tagNamesQuery[1]).pipe((0,map.U)(responseTransform)));
     }
 
     const tagValuesQuery = interpolated.match(tagValuesRegex);
 
     if (tagValuesQuery) {
-      return (0,lastValueFrom/* lastValueFrom */.n)(this._performMetricKeyValueLookup(tagValuesQuery[1], tagValuesQuery[2]).pipe((0,map/* map */.U)(responseTransform)));
+      return (0,lastValueFrom.n)(this._performMetricKeyValueLookup(tagValuesQuery[1], tagValuesQuery[2]).pipe((0,map.U)(responseTransform)));
     }
 
     const tagNamesSuggestQuery = interpolated.match(tagNamesSuggestRegex);
 
     if (tagNamesSuggestQuery) {
-      return (0,lastValueFrom/* lastValueFrom */.n)(this._performSuggestQuery(tagNamesSuggestQuery[1], 'tagk').pipe((0,map/* map */.U)(responseTransform)));
+      return (0,lastValueFrom.n)(this._performSuggestQuery(tagNamesSuggestQuery[1], 'tagk').pipe((0,map.U)(responseTransform)));
     }
 
     const tagValuesSuggestQuery = interpolated.match(tagValuesSuggestRegex);
 
     if (tagValuesSuggestQuery) {
-      return (0,lastValueFrom/* lastValueFrom */.n)(this._performSuggestQuery(tagValuesSuggestQuery[1], 'tagv').pipe((0,map/* map */.U)(responseTransform)));
+      return (0,lastValueFrom.n)(this._performSuggestQuery(tagValuesSuggestQuery[1], 'tagv').pipe((0,map.U)(responseTransform)));
     }
 
     return Promise.resolve([]);
   }
 
   testDatasource() {
-    return (0,lastValueFrom/* lastValueFrom */.n)(this._performSuggestQuery('cpu', 'metrics').pipe((0,map/* map */.U)(() => {
+    return (0,lastValueFrom.n)(this._performSuggestQuery('cpu', 'metrics').pipe((0,map.U)(() => {
       return {
         status: 'success',
         message: 'Data source is working'
@@ -1139,7 +1117,7 @@ class OpenTsDatasource extends src.DataSourceApi {
       return this.aggregatorsPromise;
     }
 
-    this.aggregatorsPromise = (0,lastValueFrom/* lastValueFrom */.n)(this._get('/api/aggregators').pipe((0,map/* map */.U)(result => {
+    this.aggregatorsPromise = (0,lastValueFrom.n)(this._get('/api/aggregators').pipe((0,map.U)(result => {
       if (result.data && (0,lodash.isArray)(result.data)) {
         return result.data.sort();
       }
@@ -1154,7 +1132,7 @@ class OpenTsDatasource extends src.DataSourceApi {
       return this.filterTypesPromise;
     }
 
-    this.filterTypesPromise = (0,lastValueFrom/* lastValueFrom */.n)(this._get('/api/config/filters').pipe((0,map/* map */.U)(result => {
+    this.filterTypesPromise = (0,lastValueFrom.n)(this._get('/api/config/filters').pipe((0,map.U)(result => {
       if (result.data) {
         return Object.keys(result.data).sort();
       }
@@ -1166,8 +1144,7 @@ class OpenTsDatasource extends src.DataSourceApi {
 
   transformMetricData(md, groupByTags, target, options, tsdbResolution) {
     const metricLabel = this.createMetricLabel(md, target, groupByTags, options);
-    const dps = []; // TSDB returns datapoints has a hash of ts => value.
-    // Can't use pairs(invert()) because it stringifies keys/values
+    const dps = []; 
 
     (0,lodash.each)(md.dps, (v, k) => {
       if (tsdbResolution === 2) {
@@ -1324,16 +1301,14 @@ class OpenTsDatasource extends src.DataSourceApi {
   }
 
 }
-// EXTERNAL MODULE: ./public/app/plugins/sdk.ts
 var sdk = __webpack_require__("./public/app/plugins/sdk.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/opentsdb/query_ctrl.ts
+;
 function query_ctrl_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
 class OpenTsQueryCtrl extends sdk.QueryCtrl {
-  /** @ngInject */
   constructor($scope, $injector) {
     super($scope, $injector);
 
@@ -1392,7 +1367,7 @@ class OpenTsQueryCtrl extends sdk.QueryCtrl {
       if (filterTypes.length !== 0) {
         this.filterTypes = filterTypes;
       }
-    }); // needs to be defined here as it is called from typeahead
+    }); 
 
     this.suggestMetrics = (query, callback) => {
       this.datasource.metricFindQuery('metrics(' + query + ')').then(this.getTextValues).then(callback);
@@ -1548,7 +1523,7 @@ class OpenTsQueryCtrl extends sdk.QueryCtrl {
 OpenTsQueryCtrl.$inject = ["$scope", "$injector"];
 
 query_ctrl_defineProperty(OpenTsQueryCtrl, "templateUrl", 'partials/query.editor.html');
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/opentsdb/module.ts
+;
 function module_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1562,33 +1537,33 @@ module_defineProperty(AnnotationsQueryCtrl, "templateUrl", 'partials/annotations
 
 const module_plugin = new src.DataSourcePlugin(OpenTsDatasource).setQueryCtrl(OpenTsQueryCtrl).setConfigEditor(ConfigEditor).setAnnotationQueryCtrl(AnnotationsQueryCtrl);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/sdk.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/sdk.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MetricsPanelCtrl": () => (/* binding */ MetricsPanelCtrl),
-/* harmony export */   "PanelCtrl": () => (/* binding */ PanelCtrl),
-/* harmony export */   "QueryCtrl": () => (/* binding */ QueryCtrl),
-/* harmony export */   "loadPluginCss": () => (/* reexport safe */ _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__.loadPluginCss)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/panel/metrics_panel_ctrl.ts");
-/* harmony import */ var app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/angular/panel/panel_ctrl.ts");
-/* harmony import */ var app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/angular/panel/query_ctrl.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "MetricsPanelCtrl": () => ( MetricsPanelCtrl),
+   "PanelCtrl": () => ( PanelCtrl),
+   "QueryCtrl": () => ( QueryCtrl),
+   "loadPluginCss": () => ( _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__.loadPluginCss)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/panel/metrics_panel_ctrl.ts");
+ var app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/angular/panel/panel_ctrl.ts");
+ var app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/angular/panel/query_ctrl.ts");
 
 
 
 
 
-const PanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__/* .PanelCtrl */ .q);
-const MetricsPanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__/* .MetricsPanelCtrl */ .k);
-const QueryCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__/* .QueryCtrl */ .G);
+const PanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__ .q);
+const MetricsPanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ .k);
+const QueryCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__ .G);
 
 
-/***/ })
+ })
 
 }]);

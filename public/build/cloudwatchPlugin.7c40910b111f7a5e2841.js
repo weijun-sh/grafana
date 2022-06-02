@@ -1,32 +1,32 @@
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[8831],{
 
-/***/ "./public/app/plugins/datasource/cloudwatch/cloudwatch-sql/language.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/cloudwatch/cloudwatch-sql/language.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AND": () => (/* binding */ AND),
-/* harmony export */   "ASC": () => (/* binding */ ASC),
-/* harmony export */   "BY": () => (/* binding */ BY),
-/* harmony export */   "COMPARISON_OPERATORS": () => (/* binding */ COMPARISON_OPERATORS),
-/* harmony export */   "DESC": () => (/* binding */ DESC),
-/* harmony export */   "EQUALS": () => (/* binding */ EQUALS),
-/* harmony export */   "FROM": () => (/* binding */ FROM),
-/* harmony export */   "GROUP": () => (/* binding */ GROUP),
-/* harmony export */   "KEYWORDS": () => (/* binding */ KEYWORDS),
-/* harmony export */   "LIMIT": () => (/* binding */ LIMIT),
-/* harmony export */   "LOGICAL_OPERATORS": () => (/* binding */ LOGICAL_OPERATORS),
-/* harmony export */   "NOT_EQUALS": () => (/* binding */ NOT_EQUALS),
-/* harmony export */   "ORDER": () => (/* binding */ ORDER),
-/* harmony export */   "SCHEMA": () => (/* binding */ SCHEMA),
-/* harmony export */   "SELECT": () => (/* binding */ SELECT),
-/* harmony export */   "STATISTICS": () => (/* binding */ STATISTICS),
-/* harmony export */   "WHERE": () => (/* binding */ WHERE),
-/* harmony export */   "WITH": () => (/* binding */ WITH),
-/* harmony export */   "conf": () => (/* binding */ conf),
-/* harmony export */   "language": () => (/* binding */ language)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "AND": () => ( AND),
+   "ASC": () => ( ASC),
+   "BY": () => ( BY),
+   "COMPARISON_OPERATORS": () => ( COMPARISON_OPERATORS),
+   "DESC": () => ( DESC),
+   "EQUALS": () => ( EQUALS),
+   "FROM": () => ( FROM),
+   "GROUP": () => ( GROUP),
+   "KEYWORDS": () => ( KEYWORDS),
+   "LIMIT": () => ( LIMIT),
+   "LOGICAL_OPERATORS": () => ( LOGICAL_OPERATORS),
+   "NOT_EQUALS": () => ( NOT_EQUALS),
+   "ORDER": () => ( ORDER),
+   "SCHEMA": () => ( SCHEMA),
+   "SELECT": () => ( SELECT),
+   "STATISTICS": () => ( STATISTICS),
+   "WHERE": () => ( WHERE),
+   "WITH": () => ( WITH),
+   "conf": () => ( conf),
+   "language": () => ( language)
+ });
 const SELECT = 'SELECT';
 const FROM = 'FROM';
 const WHERE = 'WHERE';
@@ -79,7 +79,7 @@ const language = {
         '@builtinFunctions': 'predefined',
         '@default': 'identifier'
       }
-    }], [/[=!%&+\-*/|~^]/, 'operator'] // TODO: strip these options
+    }], [/[=!%&+\-*/|~^]/, 'operator'] 
     ],
     whitespace: [[/\s+/, 'white']],
     comments: [[/--+.*/, 'comment']],
@@ -157,27 +157,26 @@ const conf = {
   }]
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/cloudwatch/metric-math/language.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/cloudwatch/metric-math/language.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "METRIC_MATH_FNS": () => (/* binding */ METRIC_MATH_FNS),
-/* harmony export */   "METRIC_MATH_KEYWORDS": () => (/* binding */ METRIC_MATH_KEYWORDS),
-/* harmony export */   "METRIC_MATH_OPERATORS": () => (/* binding */ METRIC_MATH_OPERATORS),
-/* harmony export */   "METRIC_MATH_PERIODS": () => (/* binding */ METRIC_MATH_PERIODS),
-/* harmony export */   "METRIC_MATH_STATISTIC_KEYWORD_STRINGS": () => (/* binding */ METRIC_MATH_STATISTIC_KEYWORD_STRINGS),
-/* harmony export */   "conf": () => (/* binding */ conf),
-/* harmony export */   "language": () => (/* binding */ language)
-/* harmony export */ });
-// Metric Math: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html
+ __webpack_require__.d(__webpack_exports__, {
+   "METRIC_MATH_FNS": () => ( METRIC_MATH_FNS),
+   "METRIC_MATH_KEYWORDS": () => ( METRIC_MATH_KEYWORDS),
+   "METRIC_MATH_OPERATORS": () => ( METRIC_MATH_OPERATORS),
+   "METRIC_MATH_PERIODS": () => ( METRIC_MATH_PERIODS),
+   "METRIC_MATH_STATISTIC_KEYWORD_STRINGS": () => ( METRIC_MATH_STATISTIC_KEYWORD_STRINGS),
+   "conf": () => ( conf),
+   "language": () => ( language)
+ });
 const METRIC_MATH_FNS = ['ABS', 'ANOMALY_DETECTION_BAND', 'AVG', 'CEIL', 'DATAPOINT_COUNT', 'DIFF', 'DIFF_TIME', 'FILL', 'FIRST', 'LAST', 'FLOOR', 'IF', 'INSIGHT_RULE_METRIC', 'LOG', 'LOG10', 'MAX', 'METRIC_COUNT', 'METRICS', 'MIN', 'MINUTE', 'HOUR', 'DAY', 'DATE', 'MONTH', 'YEAR', 'EPOCH', 'PERIOD', 'RATE', 'REMOVE_EMPTY', 'RUNNING_SUM', 'SEARCH', 'SERVICE_QUOTA', 'SLICE', 'SORT', 'STDDEV', 'SUM', 'TIME_SERIES'];
-const METRIC_MATH_STATISTIC_KEYWORD_STRINGS = ['Average', 'Maximum', 'Minimum', 'Sum', 'SampleCount']; // second arguments to SEARCH function
+const METRIC_MATH_STATISTIC_KEYWORD_STRINGS = ['Average', 'Maximum', 'Minimum', 'Sum', 'SampleCount']; 
 
-const METRIC_MATH_KEYWORDS = ['REPEAT', 'LINEAR', 'ASC', 'DSC']; // standalone magic arguments to functions
+const METRIC_MATH_KEYWORDS = ['REPEAT', 'LINEAR', 'ASC', 'DSC']; 
 
 const METRIC_MATH_OPERATORS = ['+', '-', '*', '/', '^', '==', '!=', '<=', '>=', '<', '>', 'AND', '&&', 'OR', '||'];
 const METRIC_MATH_PERIODS = [10, 60, 300, 900, 3000, 21600, 86400];
@@ -217,17 +216,16 @@ const language = {
       include: '@operators'
     }, {
       include: '@builtInFunctions'
-    }, [/[;,.]/, 'delimiter'], [/[(){}\[\]]/, '@brackets'] // [], (), {} are all brackets
+    }, [/[;,.]/, 'delimiter'], [/[(){}\[\]]/, '@brackets'] 
     ],
     keywords: [[METRIC_MATH_KEYWORDS.map(escapeRegExp).join('|'), 'keyword']],
     operators: [[METRIC_MATH_OPERATORS.map(escapeRegExp).join('|'), 'operator']],
     builtInFunctions: [[METRIC_MATH_FNS.map(escapeRegExp).join('|'), 'predefined']],
-    variables: [[/\$[a-zA-Z0-9-_]+/, 'variable'] // $ followed by any letter/number we assume could be grafana template variable
+    variables: [[/\$[a-zA-Z0-9-_]+/, 'variable'] 
     ],
     whitespace: [[/\s+/, 'white']],
     assignment: [[/=/, 'tag']],
     numbers: [[/0[xX][0-9a-fA-F]*/, 'number'], [/[$][+-]*\d*(\.\d*)?/, 'number'], [/((\d+(\.\d*)?)|(\.\d+))([eE][\-+]?\d+)?/, 'number']],
-    // states that start other states (aka nested states):
     strings: [[/'/, {
       token: 'string',
       next: '@string'
@@ -238,54 +236,54 @@ const language = {
     string: [[/{/, {
       token: 'delimiter.curly',
       next: '@nestedCurly'
-    }], // escape out of string and into nestedCurly
+    }], 
     [/\(/, {
       token: 'delimiter.parenthesis',
       next: '@nestedParens'
-    }], // escape out of string and into nestedCurly
+    }], 
     [/"/, {
       token: 'type',
       next: '@string_double'
-    }], // jump into double string
+    }], 
     [/'/, {
       token: 'string',
       next: '@pop'
-    }], // stop being a string
+    }], 
     {
       include: '@nonNestableStates'
-    }, [/[^']/, 'string'] // anything that is not a quote, is marked as string
+    }, [/[^']/, 'string'] 
     ],
-    string_double: [[/[^"]/, 'type'], // mark anything not a quote as a "type" (different type of string for visual difference)
+    string_double: [[/[^"]/, 'type'], 
     [/"/, {
       token: 'type',
       next: '@pop'
-    }] // mark also as a type and stop being in the double string state
+    }] 
     ],
     nestedCurly: [[/}/, {
       token: 'delimiter.curly',
       next: '@pop'
-    }], // escape out of string and into braces
+    }], 
     [/'/, {
       token: 'string',
       next: '@string'
-    }], // go to string if see start of string
+    }], 
     [/"/, {
       token: 'type',
       next: '@string_double'
-    }] // go to string_double if see start of double string
+    }] 
     ],
     nestedParens: [[/\)/, {
       token: 'delimiter.parenthesis',
       next: '@pop'
-    }], // escape out of string and into braces
+    }], 
     [/'/, {
       token: 'string',
       next: '@string'
-    }], // go to string if see start of string
+    }], 
     [/"/, {
       token: 'type',
       next: '@string_double'
-    }] // go to string_double if see start of double string
+    }] 
     ]
   }
 };
@@ -326,48 +324,34 @@ const conf = {
 };
 
 function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/cloudwatch/module.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/cloudwatch/module.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "plugin": () => (/* binding */ module_plugin)
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useDebounce.js + 1 modules
 var useDebounce = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useDebounce.js");
-// EXTERNAL MODULE: ./.yarn/cache/@grafana-aws-sdk-npm-0.0.35-2945fc38a2-c286e5ccaa.zip/node_modules/@grafana/aws-sdk/index.js
 var aws_sdk = __webpack_require__("./.yarn/cache/@grafana-aws-sdk-npm-0.0.35-2945fc38a2-c286e5ccaa.zip/node_modules/@grafana/aws-sdk/index.js");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/actions/index.ts
 var actions = __webpack_require__("./public/app/core/actions/index.ts");
-// EXTERNAL MODULE: ./public/app/core/copy/appNotification.ts
 var appNotification = __webpack_require__("./public/app/core/copy/appNotification.ts");
-// EXTERNAL MODULE: ./public/app/features/plugins/datasource_srv.ts
 var datasource_srv = __webpack_require__("./public/app/features/plugins/datasource_srv.ts");
-// EXTERNAL MODULE: ./public/app/store/store.ts
 var store = __webpack_require__("./public/app/store/store.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/XrayLinkConfig.tsx
+;
 var _h, _Alert;
 
 
@@ -392,28 +376,28 @@ function XrayLinkConfig(_ref) {
     datasourceUid,
     onChange
   } = _ref;
-  const hasXrayDatasource = Boolean((0,datasource_srv/* getDatasourceSrv */.ak)().getList({
+  const hasXrayDatasource = Boolean((0,datasource_srv.ak)().getList({
     pluginId: xRayDsId
   }).length);
   const styles = (0,grafana_ui_src.useStyles2)(getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [_h || (_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [_h || (_h = (0,jsx_runtime.jsx)("h3", {
       className: "page-heading",
       children: "X-ray trace link"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    })), (0,jsx_runtime.jsx)("div", {
       className: styles.infoText,
       children: "Grafana will automatically create a link to a trace in X-ray data source if logs contain @xrayTraceId field"
-    }), !hasXrayDatasource && (_Alert || (_Alert = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+    }), !hasXrayDatasource && (_Alert || (_Alert = (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
       title: 'There is no X-ray datasource to link to. First add an X-ray data source and then link it to Cloud Watch. ',
       severity: "info"
-    }))), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }))), (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         htmlFor: "data-source-picker",
         label: "Data source",
         labelWidth: 28,
         tooltip: "X-ray data source containing traces",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
+        children: (0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
           pluginId: xRayDsId,
           onChange: ds => onChange(ds.uid),
           current: datasourceUid,
@@ -423,7 +407,7 @@ function XrayLinkConfig(_ref) {
     })]
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/ConfigEditor.tsx
+;
 var ConfigEditor_h;
 
 
@@ -446,31 +430,31 @@ const ConfigEditor = props => {
   const datasource = useDatasource(options.name);
   useAuthenticationWarning(options.jsonData);
   const logsTimeoutError = useTimoutValidation(props.options.jsonData.logsTimeout);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(aws_sdk.ConnectionConfig, Object.assign({}, props, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(aws_sdk.ConnectionConfig, Object.assign({}, props, {
       loadRegions: datasource && (() => datasource.getRegions().then(r => r.filter(r => r.value !== 'default').map(v => v.value))),
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Namespaces of Custom Metrics",
         labelWidth: 28,
         tooltip: "Namespaces of Custom Metrics.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           width: 60,
           placeholder: "Namespace1,Namespace2",
           value: options.jsonData.customMetricsNamespaces || '',
           onChange: (0,src.onUpdateDatasourceJsonDataOption)(props, 'customMetricsNamespaces')
         })
       })
-    })), ConfigEditor_h || (ConfigEditor_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+    })), ConfigEditor_h || (ConfigEditor_h = (0,jsx_runtime.jsx)("h3", {
       className: "page-heading",
       children: "CloudWatch Logs"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    })), (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Timeout",
         labelWidth: 28,
         tooltip: "Custom timout for CloudWatch Logs insights queries which have max concurrency limits. Default is 15 minutes. Must be a valid duration string, such as \"15m\" \"30s\" \"2000ms\" etc.",
         invalid: Boolean(logsTimeoutError),
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           width: 60,
           placeholder: "15m",
           value: options.jsonData.logsTimeout || '',
@@ -478,7 +462,7 @@ const ConfigEditor = props => {
           title: 'The timeout must be a valid duration string, such as "15m" "30s" "2000ms" etc.'
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(XrayLinkConfig, {
+    }), (0,jsx_runtime.jsx)(XrayLinkConfig, {
       onChange: uid => (0,src.updateDatasourcePluginJsonDataOption)(props, 'tracingDatasourceUid', uid),
       datasourceUid: options.jsonData.tracingDatasourceUid
     })]
@@ -487,7 +471,7 @@ const ConfigEditor = props => {
 
 function useAuthenticationWarning(jsonData) {
   const addWarning = message => {
-    store/* store.dispatch */.h.dispatch((0,actions/* notifyApp */.$l)((0,appNotification/* createWarningNotification */.ZR)('CloudWatch Authentication', message)));
+    store.h.dispatch((0,actions.$l)((0,appNotification.ZR)('CloudWatch Authentication', message)));
   };
 
   (0,react.useEffect)(() => {
@@ -504,9 +488,7 @@ function useAuthenticationWarning(jsonData) {
 function useDatasource(datasourceName) {
   const [datasource, setDatasource] = (0,react.useState)();
   (0,react.useEffect)(() => {
-    (0,datasource_srv/* getDatasourceSrv */.ak)().loadDatasource(datasourceName).then(datasource => {
-      // It's really difficult to type .loadDatasource() because it's inherently untyped as it involves two JSON.parse()'s
-      // So a "as" type assertion here is a necessary evil.
+    (0,datasource_srv.ak)().loadDatasource(datasourceName).then(datasource => {
       setDatasource(datasource);
     });
   }, [datasourceName]);
@@ -515,7 +497,7 @@ function useDatasource(datasourceName) {
 
 function useTimoutValidation(value) {
   const [err, setErr] = (0,react.useState)(undefined);
-  (0,useDebounce/* default */.Z)(() => {
+  (0,useDebounce.Z)(() => {
     if (value) {
       try {
         src.rangeUtil.describeInterval(value);
@@ -529,7 +511,7 @@ function useTimoutValidation(value) {
   }, 350, [value]);
   return err;
 }
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/TemplateTag/TemplateTag.js
+;
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _templateObject = _taggedTemplateLiteral(['', ''], ['', '']);
@@ -538,17 +520,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-/**
- * @class TemplateTag
- * @classdesc Consumes a pipeline of composable transformer plugins and produces a template tag.
- */
 var TemplateTag = function () {
-  /**
-   * constructs a template tag
-   * @constructs TemplateTag
-   * @param  {...Object} [...transformers] - an array or arguments list of transformers
-   * @return {Function}                    - a template tag
-   */
   function TemplateTag() {
     var _this = this;
 
@@ -564,58 +536,34 @@ var TemplateTag = function () {
       }
 
       if (typeof strings === 'function') {
-        // if the first argument passed is a function, assume it is a template tag and return
-        // an intermediary tag that processes the template using the aforementioned tag, passing the
-        // result to our tag
         return _this.interimTag.bind(_this, strings);
       }
 
       if (typeof strings === 'string') {
-        // if the first argument passed is a string, just transform it
         return _this.transformEndResult(strings);
       }
 
-      // else, return a transformed end result of processing the template with our tag
       strings = strings.map(_this.transformString.bind(_this));
       return _this.transformEndResult(strings.reduce(_this.processSubstitutions.bind(_this, expressions)));
     };
 
-    // if first argument is an array, extrude it as a list of transformers
     if (transformers.length > 0 && Array.isArray(transformers[0])) {
       transformers = transformers[0];
     }
 
-    // if any transformers are functions, this means they are not initiated - automatically initiate them
     this.transformers = transformers.map(function (transformer) {
       return typeof transformer === 'function' ? transformer() : transformer;
     });
 
-    // return an ES2015 template tag
     return this.tag;
   }
 
-  /**
-   * Applies all transformers to a template literal tagged with this method.
-   * If a function is passed as the first argument, assumes the function is a template tag
-   * and applies it to the template, returning a template tag.
-   * @param  {(Function|String|Array<String>)} strings        - Either a template tag or an array containing template strings separated by identifier
-   * @param  {...*}                            ...expressions - Optional list of substitution values.
-   * @return {(String|Function)}                              - Either an intermediary tag function or the results of processing the template.
-   */
 
 
   _createClass(TemplateTag, [{
     key: 'interimTag',
 
 
-    /**
-     * An intermediary template tag that receives a template tag and passes the result of calling the template with the received
-     * template tag to our own template tag.
-     * @param  {Function}        nextTag          - the received template tag
-     * @param  {Array<String>}   template         - the template to process
-     * @param  {...*}            ...substitutions - `substitutions` is an array of all substitutions in the template
-     * @return {*}                                - the final processed value
-     */
     value: function interimTag(previousTag, template) {
       for (var _len3 = arguments.length, substitutions = Array(_len3 > 2 ? _len3 - 2 : 0), _key3 = 2; _key3 < _len3; _key3++) {
         substitutions[_key3 - 2] = arguments[_key3];
@@ -624,14 +572,6 @@ var TemplateTag = function () {
       return this.tag(_templateObject, previousTag.apply(undefined, [template].concat(substitutions)));
     }
 
-    /**
-     * Performs bulk processing on the tagged template, transforming each substitution and then
-     * concatenating the resulting values into a string.
-     * @param  {Array<*>} substitutions - an array of all remaining substitutions present in this template
-     * @param  {String}   resultSoFar   - this iteration's result string so far
-     * @param  {String}   remainingPart - the template chunk after the current substitution
-     * @return {String}                 - the result of joining this iteration's processed substitution with the result
-     */
 
   }, {
     key: 'processSubstitutions',
@@ -640,12 +580,6 @@ var TemplateTag = function () {
       return ''.concat(resultSoFar, substitution, remainingPart);
     }
 
-    /**
-     * Iterate through each transformer, applying the transformer's `onString` method to the template
-     * strings before all substitutions are processed.
-     * @param {String}  str - The input string
-     * @return {String}     - The final results of processing each transformer
-     */
 
   }, {
     key: 'transformString',
@@ -656,13 +590,6 @@ var TemplateTag = function () {
       return this.transformers.reduce(cb, str);
     }
 
-    /**
-     * When a substitution is encountered, iterates through each transformer and applies the transformer's
-     * `onSubstitution` method to the substitution.
-     * @param  {*}      substitution - The current substitution
-     * @param  {String} resultSoFar  - The result up to and excluding this substitution.
-     * @return {*}                   - The final result of applying all substitution transformations.
-     */
 
   }, {
     key: 'transformSubstitution',
@@ -673,12 +600,6 @@ var TemplateTag = function () {
       return this.transformers.reduce(cb, substitution);
     }
 
-    /**
-     * Iterates through each transformer, applying the transformer's `onEndResult` method to the
-     * template literal after all substitutions have finished processing.
-     * @param  {String} endResult - The processed template, just before it is returned from the tag
-     * @return {String}           - The final results of processing each transformer
-     */
 
   }, {
     key: 'transformEndResult',
@@ -693,46 +614,32 @@ var TemplateTag = function () {
   return TemplateTag;
 }();
 
-/* harmony default export */ const TemplateTag_TemplateTag = (TemplateTag);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9UZW1wbGF0ZVRhZy9UZW1wbGF0ZVRhZy5qcyJdLCJuYW1lcyI6WyJUZW1wbGF0ZVRhZyIsInRyYW5zZm9ybWVycyIsInRhZyIsInN0cmluZ3MiLCJleHByZXNzaW9ucyIsImludGVyaW1UYWciLCJiaW5kIiwidHJhbnNmb3JtRW5kUmVzdWx0IiwibWFwIiwidHJhbnNmb3JtU3RyaW5nIiwicmVkdWNlIiwicHJvY2Vzc1N1YnN0aXR1dGlvbnMiLCJsZW5ndGgiLCJBcnJheSIsImlzQXJyYXkiLCJ0cmFuc2Zvcm1lciIsInByZXZpb3VzVGFnIiwidGVtcGxhdGUiLCJzdWJzdGl0dXRpb25zIiwicmVzdWx0U29GYXIiLCJyZW1haW5pbmdQYXJ0Iiwic3Vic3RpdHV0aW9uIiwidHJhbnNmb3JtU3Vic3RpdHV0aW9uIiwic2hpZnQiLCJjb25jYXQiLCJzdHIiLCJjYiIsInJlcyIsInRyYW5zZm9ybSIsIm9uU3RyaW5nIiwib25TdWJzdGl0dXRpb24iLCJlbmRSZXN1bHQiLCJvbkVuZFJlc3VsdCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7QUFBQTs7OztJQUlxQkEsVztBQUNuQjs7Ozs7O0FBTUEseUJBQTZCO0FBQUE7O0FBQUEsc0NBQWRDLFlBQWM7QUFBZEEsa0JBQWM7QUFBQTs7QUFBQTs7QUFBQSxTQXVCN0JDLEdBdkI2QixHQXVCdkIsVUFBQ0MsT0FBRCxFQUE2QjtBQUFBLHlDQUFoQkMsV0FBZ0I7QUFBaEJBLG1CQUFnQjtBQUFBOztBQUNqQyxVQUFJLE9BQU9ELE9BQVAsS0FBbUIsVUFBdkIsRUFBbUM7QUFDakM7QUFDQTtBQUNBO0FBQ0EsZUFBTyxNQUFLRSxVQUFMLENBQWdCQyxJQUFoQixDQUFxQixLQUFyQixFQUEyQkgsT0FBM0IsQ0FBUDtBQUNEOztBQUVELFVBQUksT0FBT0EsT0FBUCxLQUFtQixRQUF2QixFQUFpQztBQUMvQjtBQUNBLGVBQU8sTUFBS0ksa0JBQUwsQ0FBd0JKLE9BQXhCLENBQVA7QUFDRDs7QUFFRDtBQUNBQSxnQkFBVUEsUUFBUUssR0FBUixDQUFZLE1BQUtDLGVBQUwsQ0FBcUJILElBQXJCLENBQTBCLEtBQTFCLENBQVosQ0FBVjtBQUNBLGFBQU8sTUFBS0Msa0JBQUwsQ0FDTEosUUFBUU8sTUFBUixDQUFlLE1BQUtDLG9CQUFMLENBQTBCTCxJQUExQixDQUErQixLQUEvQixFQUFxQ0YsV0FBckMsQ0FBZixDQURLLENBQVA7QUFHRCxLQXpDNEI7O0FBQzNCO0FBQ0EsUUFBSUgsYUFBYVcsTUFBYixHQUFzQixDQUF0QixJQUEyQkMsTUFBTUMsT0FBTixDQUFjYixhQUFhLENBQWIsQ0FBZCxDQUEvQixFQUErRDtBQUM3REEscUJBQWVBLGFBQWEsQ0FBYixDQUFmO0FBQ0Q7O0FBRUQ7QUFDQSxTQUFLQSxZQUFMLEdBQW9CQSxhQUFhTyxHQUFiLENBQWlCLHVCQUFlO0FBQ2xELGFBQU8sT0FBT08sV0FBUCxLQUF1QixVQUF2QixHQUFvQ0EsYUFBcEMsR0FBb0RBLFdBQTNEO0FBQ0QsS0FGbUIsQ0FBcEI7O0FBSUE7QUFDQSxXQUFPLEtBQUtiLEdBQVo7QUFDRDs7QUFFRDs7Ozs7Ozs7Ozs7Ozs7QUE0QkE7Ozs7Ozs7OytCQVFXYyxXLEVBQWFDLFEsRUFBNEI7QUFBQSx5Q0FBZkMsYUFBZTtBQUFmQSxxQkFBZTtBQUFBOztBQUNsRCxhQUFPLEtBQUtoQixHQUFaLGtCQUFrQmMsOEJBQVlDLFFBQVosU0FBeUJDLGFBQXpCLEVBQWxCO0FBQ0Q7O0FBRUQ7Ozs7Ozs7Ozs7O3lDQVFxQkEsYSxFQUFlQyxXLEVBQWFDLGEsRUFBZTtBQUM5RCxVQUFNQyxlQUFlLEtBQUtDLHFCQUFMLENBQ25CSixjQUFjSyxLQUFkLEVBRG1CLEVBRW5CSixXQUZtQixDQUFyQjtBQUlBLGFBQU8sR0FBR0ssTUFBSCxDQUFVTCxXQUFWLEVBQXVCRSxZQUF2QixFQUFxQ0QsYUFBckMsQ0FBUDtBQUNEOztBQUVEOzs7Ozs7Ozs7b0NBTWdCSyxHLEVBQUs7QUFDbkIsVUFBTUMsS0FBSyxTQUFMQSxFQUFLLENBQUNDLEdBQUQsRUFBTUMsU0FBTjtBQUFBLGVBQ1RBLFVBQVVDLFFBQVYsR0FBcUJELFVBQVVDLFFBQVYsQ0FBbUJGLEdBQW5CLENBQXJCLEdBQStDQSxHQUR0QztBQUFBLE9BQVg7QUFFQSxhQUFPLEtBQUsxQixZQUFMLENBQWtCUyxNQUFsQixDQUF5QmdCLEVBQXpCLEVBQTZCRCxHQUE3QixDQUFQO0FBQ0Q7O0FBRUQ7Ozs7Ozs7Ozs7MENBT3NCSixZLEVBQWNGLFcsRUFBYTtBQUMvQyxVQUFNTyxLQUFLLFNBQUxBLEVBQUssQ0FBQ0MsR0FBRCxFQUFNQyxTQUFOO0FBQUEsZUFDVEEsVUFBVUUsY0FBVixHQUNJRixVQUFVRSxjQUFWLENBQXlCSCxHQUF6QixFQUE4QlIsV0FBOUIsQ0FESixHQUVJUSxHQUhLO0FBQUEsT0FBWDtBQUlBLGFBQU8sS0FBSzFCLFlBQUwsQ0FBa0JTLE1BQWxCLENBQXlCZ0IsRUFBekIsRUFBNkJMLFlBQTdCLENBQVA7QUFDRDs7QUFFRDs7Ozs7Ozs7O3VDQU1tQlUsUyxFQUFXO0FBQzVCLFVBQU1MLEtBQUssU0FBTEEsRUFBSyxDQUFDQyxHQUFELEVBQU1DLFNBQU47QUFBQSxlQUNUQSxVQUFVSSxXQUFWLEdBQXdCSixVQUFVSSxXQUFWLENBQXNCTCxHQUF0QixDQUF4QixHQUFxREEsR0FENUM7QUFBQSxPQUFYO0FBRUEsYUFBTyxLQUFLMUIsWUFBTCxDQUFrQlMsTUFBbEIsQ0FBeUJnQixFQUF6QixFQUE2QkssU0FBN0IsQ0FBUDtBQUNEOzs7Ozs7ZUFuSGtCL0IsVyIsImZpbGUiOiJUZW1wbGF0ZVRhZy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGNsYXNzIFRlbXBsYXRlVGFnXG4gKiBAY2xhc3NkZXNjIENvbnN1bWVzIGEgcGlwZWxpbmUgb2YgY29tcG9zYWJsZSB0cmFuc2Zvcm1lciBwbHVnaW5zIGFuZCBwcm9kdWNlcyBhIHRlbXBsYXRlIHRhZy5cbiAqL1xuZXhwb3J0IGRlZmF1bHQgY2xhc3MgVGVtcGxhdGVUYWcge1xuICAvKipcbiAgICogY29uc3RydWN0cyBhIHRlbXBsYXRlIHRhZ1xuICAgKiBAY29uc3RydWN0cyBUZW1wbGF0ZVRhZ1xuICAgKiBAcGFyYW0gIHsuLi5PYmplY3R9IFsuLi50cmFuc2Zvcm1lcnNdIC0gYW4gYXJyYXkgb3IgYXJndW1lbnRzIGxpc3Qgb2YgdHJhbnNmb3JtZXJzXG4gICAqIEByZXR1cm4ge0Z1bmN0aW9ufSAgICAgICAgICAgICAgICAgICAgLSBhIHRlbXBsYXRlIHRhZ1xuICAgKi9cbiAgY29uc3RydWN0b3IoLi4udHJhbnNmb3JtZXJzKSB7XG4gICAgLy8gaWYgZmlyc3QgYXJndW1lbnQgaXMgYW4gYXJyYXksIGV4dHJ1ZGUgaXQgYXMgYSBsaXN0IG9mIHRyYW5zZm9ybWVyc1xuICAgIGlmICh0cmFuc2Zvcm1lcnMubGVuZ3RoID4gMCAmJiBBcnJheS5pc0FycmF5KHRyYW5zZm9ybWVyc1swXSkpIHtcbiAgICAgIHRyYW5zZm9ybWVycyA9IHRyYW5zZm9ybWVyc1swXTtcbiAgICB9XG5cbiAgICAvLyBpZiBhbnkgdHJhbnNmb3JtZXJzIGFyZSBmdW5jdGlvbnMsIHRoaXMgbWVhbnMgdGhleSBhcmUgbm90IGluaXRpYXRlZCAtIGF1dG9tYXRpY2FsbHkgaW5pdGlhdGUgdGhlbVxuICAgIHRoaXMudHJhbnNmb3JtZXJzID0gdHJhbnNmb3JtZXJzLm1hcCh0cmFuc2Zvcm1lciA9PiB7XG4gICAgICByZXR1cm4gdHlwZW9mIHRyYW5zZm9ybWVyID09PSAnZnVuY3Rpb24nID8gdHJhbnNmb3JtZXIoKSA6IHRyYW5zZm9ybWVyO1xuICAgIH0pO1xuXG4gICAgLy8gcmV0dXJuIGFuIEVTMjAxNSB0ZW1wbGF0ZSB0YWdcbiAgICByZXR1cm4gdGhpcy50YWc7XG4gIH1cblxuICAvKipcbiAgICogQXBwbGllcyBhbGwgdHJhbnNmb3JtZXJzIHRvIGEgdGVtcGxhdGUgbGl0ZXJhbCB0YWdnZWQgd2l0aCB0aGlzIG1ldGhvZC5cbiAgICogSWYgYSBmdW5jdGlvbiBpcyBwYXNzZWQgYXMgdGhlIGZpcnN0IGFyZ3VtZW50LCBhc3N1bWVzIHRoZSBmdW5jdGlvbiBpcyBhIHRlbXBsYXRlIHRhZ1xuICAgKiBhbmQgYXBwbGllcyBpdCB0byB0aGUgdGVtcGxhdGUsIHJldHVybmluZyBhIHRlbXBsYXRlIHRhZy5cbiAgICogQHBhcmFtICB7KEZ1bmN0aW9ufFN0cmluZ3xBcnJheTxTdHJpbmc+KX0gc3RyaW5ncyAgICAgICAgLSBFaXRoZXIgYSB0ZW1wbGF0ZSB0YWcgb3IgYW4gYXJyYXkgY29udGFpbmluZyB0ZW1wbGF0ZSBzdHJpbmdzIHNlcGFyYXRlZCBieSBpZGVudGlmaWVyXG4gICAqIEBwYXJhbSAgey4uLip9ICAgICAgICAgICAgICAgICAgICAgICAgICAgIC4uLmV4cHJlc3Npb25zIC0gT3B0aW9uYWwgbGlzdCBvZiBzdWJzdGl0dXRpb24gdmFsdWVzLlxuICAgKiBAcmV0dXJuIHsoU3RyaW5nfEZ1bmN0aW9uKX0gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAtIEVpdGhlciBhbiBpbnRlcm1lZGlhcnkgdGFnIGZ1bmN0aW9uIG9yIHRoZSByZXN1bHRzIG9mIHByb2Nlc3NpbmcgdGhlIHRlbXBsYXRlLlxuICAgKi9cbiAgdGFnID0gKHN0cmluZ3MsIC4uLmV4cHJlc3Npb25zKSA9PiB7XG4gICAgaWYgKHR5cGVvZiBzdHJpbmdzID09PSAnZnVuY3Rpb24nKSB7XG4gICAgICAvLyBpZiB0aGUgZmlyc3QgYXJndW1lbnQgcGFzc2VkIGlzIGEgZnVuY3Rpb24sIGFzc3VtZSBpdCBpcyBhIHRlbXBsYXRlIHRhZyBhbmQgcmV0dXJuXG4gICAgICAvLyBhbiBpbnRlcm1lZGlhcnkgdGFnIHRoYXQgcHJvY2Vzc2VzIHRoZSB0ZW1wbGF0ZSB1c2luZyB0aGUgYWZvcmVtZW50aW9uZWQgdGFnLCBwYXNzaW5nIHRoZVxuICAgICAgLy8gcmVzdWx0IHRvIG91ciB0YWdcbiAgICAgIHJldHVybiB0aGlzLmludGVyaW1UYWcuYmluZCh0aGlzLCBzdHJpbmdzKTtcbiAgICB9XG5cbiAgICBpZiAodHlwZW9mIHN0cmluZ3MgPT09ICdzdHJpbmcnKSB7XG4gICAgICAvLyBpZiB0aGUgZmlyc3QgYXJndW1lbnQgcGFzc2VkIGlzIGEgc3RyaW5nLCBqdXN0IHRyYW5zZm9ybSBpdFxuICAgICAgcmV0dXJuIHRoaXMudHJhbnNmb3JtRW5kUmVzdWx0KHN0cmluZ3MpO1xuICAgIH1cblxuICAgIC8vIGVsc2UsIHJldHVybiBhIHRyYW5zZm9ybWVkIGVuZCByZXN1bHQgb2YgcHJvY2Vzc2luZyB0aGUgdGVtcGxhdGUgd2l0aCBvdXIgdGFnXG4gICAgc3RyaW5ncyA9IHN0cmluZ3MubWFwKHRoaXMudHJhbnNmb3JtU3RyaW5nLmJpbmQodGhpcykpO1xuICAgIHJldHVybiB0aGlzLnRyYW5zZm9ybUVuZFJlc3VsdChcbiAgICAgIHN0cmluZ3MucmVkdWNlKHRoaXMucHJvY2Vzc1N1YnN0aXR1dGlvbnMuYmluZCh0aGlzLCBleHByZXNzaW9ucykpLFxuICAgICk7XG4gIH07XG5cbiAgLyoqXG4gICAqIEFuIGludGVybWVkaWFyeSB0ZW1wbGF0ZSB0YWcgdGhhdCByZWNlaXZlcyBhIHRlbXBsYXRlIHRhZyBhbmQgcGFzc2VzIHRoZSByZXN1bHQgb2YgY2FsbGluZyB0aGUgdGVtcGxhdGUgd2l0aCB0aGUgcmVjZWl2ZWRcbiAgICogdGVtcGxhdGUgdGFnIHRvIG91ciBvd24gdGVtcGxhdGUgdGFnLlxuICAgKiBAcGFyYW0gIHtGdW5jdGlvbn0gICAgICAgIG5leHRUYWcgICAgICAgICAgLSB0aGUgcmVjZWl2ZWQgdGVtcGxhdGUgdGFnXG4gICAqIEBwYXJhbSAge0FycmF5PFN0cmluZz59ICAgdGVtcGxhdGUgICAgICAgICAtIHRoZSB0ZW1wbGF0ZSB0byBwcm9jZXNzXG4gICAqIEBwYXJhbSAgey4uLip9ICAgICAgICAgICAgLi4uc3Vic3RpdHV0aW9ucyAtIGBzdWJzdGl0dXRpb25zYCBpcyBhbiBhcnJheSBvZiBhbGwgc3Vic3RpdHV0aW9ucyBpbiB0aGUgdGVtcGxhdGVcbiAgICogQHJldHVybiB7Kn0gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC0gdGhlIGZpbmFsIHByb2Nlc3NlZCB2YWx1ZVxuICAgKi9cbiAgaW50ZXJpbVRhZyhwcmV2aW91c1RhZywgdGVtcGxhdGUsIC4uLnN1YnN0aXR1dGlvbnMpIHtcbiAgICByZXR1cm4gdGhpcy50YWdgJHtwcmV2aW91c1RhZyh0ZW1wbGF0ZSwgLi4uc3Vic3RpdHV0aW9ucyl9YDtcbiAgfVxuXG4gIC8qKlxuICAgKiBQZXJmb3JtcyBidWxrIHByb2Nlc3Npbmcgb24gdGhlIHRhZ2dlZCB0ZW1wbGF0ZSwgdHJhbnNmb3JtaW5nIGVhY2ggc3Vic3RpdHV0aW9uIGFuZCB0aGVuXG4gICAqIGNvbmNhdGVuYXRpbmcgdGhlIHJlc3VsdGluZyB2YWx1ZXMgaW50byBhIHN0cmluZy5cbiAgICogQHBhcmFtICB7QXJyYXk8Kj59IHN1YnN0aXR1dGlvbnMgLSBhbiBhcnJheSBvZiBhbGwgcmVtYWluaW5nIHN1YnN0aXR1dGlvbnMgcHJlc2VudCBpbiB0aGlzIHRlbXBsYXRlXG4gICAqIEBwYXJhbSAge1N0cmluZ30gICByZXN1bHRTb0ZhciAgIC0gdGhpcyBpdGVyYXRpb24ncyByZXN1bHQgc3RyaW5nIHNvIGZhclxuICAgKiBAcGFyYW0gIHtTdHJpbmd9ICAgcmVtYWluaW5nUGFydCAtIHRoZSB0ZW1wbGF0ZSBjaHVuayBhZnRlciB0aGUgY3VycmVudCBzdWJzdGl0dXRpb25cbiAgICogQHJldHVybiB7U3RyaW5nfSAgICAgICAgICAgICAgICAgLSB0aGUgcmVzdWx0IG9mIGpvaW5pbmcgdGhpcyBpdGVyYXRpb24ncyBwcm9jZXNzZWQgc3Vic3RpdHV0aW9uIHdpdGggdGhlIHJlc3VsdFxuICAgKi9cbiAgcHJvY2Vzc1N1YnN0aXR1dGlvbnMoc3Vic3RpdHV0aW9ucywgcmVzdWx0U29GYXIsIHJlbWFpbmluZ1BhcnQpIHtcbiAgICBjb25zdCBzdWJzdGl0dXRpb24gPSB0aGlzLnRyYW5zZm9ybVN1YnN0aXR1dGlvbihcbiAgICAgIHN1YnN0aXR1dGlvbnMuc2hpZnQoKSxcbiAgICAgIHJlc3VsdFNvRmFyLFxuICAgICk7XG4gICAgcmV0dXJuICcnLmNvbmNhdChyZXN1bHRTb0Zhciwgc3Vic3RpdHV0aW9uLCByZW1haW5pbmdQYXJ0KTtcbiAgfVxuXG4gIC8qKlxuICAgKiBJdGVyYXRlIHRocm91Z2ggZWFjaCB0cmFuc2Zvcm1lciwgYXBwbHlpbmcgdGhlIHRyYW5zZm9ybWVyJ3MgYG9uU3RyaW5nYCBtZXRob2QgdG8gdGhlIHRlbXBsYXRlXG4gICAqIHN0cmluZ3MgYmVmb3JlIGFsbCBzdWJzdGl0dXRpb25zIGFyZSBwcm9jZXNzZWQuXG4gICAqIEBwYXJhbSB7U3RyaW5nfSAgc3RyIC0gVGhlIGlucHV0IHN0cmluZ1xuICAgKiBAcmV0dXJuIHtTdHJpbmd9ICAgICAtIFRoZSBmaW5hbCByZXN1bHRzIG9mIHByb2Nlc3NpbmcgZWFjaCB0cmFuc2Zvcm1lclxuICAgKi9cbiAgdHJhbnNmb3JtU3RyaW5nKHN0cikge1xuICAgIGNvbnN0IGNiID0gKHJlcywgdHJhbnNmb3JtKSA9PlxuICAgICAgdHJhbnNmb3JtLm9uU3RyaW5nID8gdHJhbnNmb3JtLm9uU3RyaW5nKHJlcykgOiByZXM7XG4gICAgcmV0dXJuIHRoaXMudHJhbnNmb3JtZXJzLnJlZHVjZShjYiwgc3RyKTtcbiAgfVxuXG4gIC8qKlxuICAgKiBXaGVuIGEgc3Vic3RpdHV0aW9uIGlzIGVuY291bnRlcmVkLCBpdGVyYXRlcyB0aHJvdWdoIGVhY2ggdHJhbnNmb3JtZXIgYW5kIGFwcGxpZXMgdGhlIHRyYW5zZm9ybWVyJ3NcbiAgICogYG9uU3Vic3RpdHV0aW9uYCBtZXRob2QgdG8gdGhlIHN1YnN0aXR1dGlvbi5cbiAgICogQHBhcmFtICB7Kn0gICAgICBzdWJzdGl0dXRpb24gLSBUaGUgY3VycmVudCBzdWJzdGl0dXRpb25cbiAgICogQHBhcmFtICB7U3RyaW5nfSByZXN1bHRTb0ZhciAgLSBUaGUgcmVzdWx0IHVwIHRvIGFuZCBleGNsdWRpbmcgdGhpcyBzdWJzdGl0dXRpb24uXG4gICAqIEByZXR1cm4geyp9ICAgICAgICAgICAgICAgICAgIC0gVGhlIGZpbmFsIHJlc3VsdCBvZiBhcHBseWluZyBhbGwgc3Vic3RpdHV0aW9uIHRyYW5zZm9ybWF0aW9ucy5cbiAgICovXG4gIHRyYW5zZm9ybVN1YnN0aXR1dGlvbihzdWJzdGl0dXRpb24sIHJlc3VsdFNvRmFyKSB7XG4gICAgY29uc3QgY2IgPSAocmVzLCB0cmFuc2Zvcm0pID0+XG4gICAgICB0cmFuc2Zvcm0ub25TdWJzdGl0dXRpb25cbiAgICAgICAgPyB0cmFuc2Zvcm0ub25TdWJzdGl0dXRpb24ocmVzLCByZXN1bHRTb0ZhcilcbiAgICAgICAgOiByZXM7XG4gICAgcmV0dXJuIHRoaXMudHJhbnNmb3JtZXJzLnJlZHVjZShjYiwgc3Vic3RpdHV0aW9uKTtcbiAgfVxuXG4gIC8qKlxuICAgKiBJdGVyYXRlcyB0aHJvdWdoIGVhY2ggdHJhbnNmb3JtZXIsIGFwcGx5aW5nIHRoZSB0cmFuc2Zvcm1lcidzIGBvbkVuZFJlc3VsdGAgbWV0aG9kIHRvIHRoZVxuICAgKiB0ZW1wbGF0ZSBsaXRlcmFsIGFmdGVyIGFsbCBzdWJzdGl0dXRpb25zIGhhdmUgZmluaXNoZWQgcHJvY2Vzc2luZy5cbiAgICogQHBhcmFtICB7U3RyaW5nfSBlbmRSZXN1bHQgLSBUaGUgcHJvY2Vzc2VkIHRlbXBsYXRlLCBqdXN0IGJlZm9yZSBpdCBpcyByZXR1cm5lZCBmcm9tIHRoZSB0YWdcbiAgICogQHJldHVybiB7U3RyaW5nfSAgICAgICAgICAgLSBUaGUgZmluYWwgcmVzdWx0cyBvZiBwcm9jZXNzaW5nIGVhY2ggdHJhbnNmb3JtZXJcbiAgICovXG4gIHRyYW5zZm9ybUVuZFJlc3VsdChlbmRSZXN1bHQpIHtcbiAgICBjb25zdCBjYiA9IChyZXMsIHRyYW5zZm9ybSkgPT5cbiAgICAgIHRyYW5zZm9ybS5vbkVuZFJlc3VsdCA/IHRyYW5zZm9ybS5vbkVuZFJlc3VsdChyZXMpIDogcmVzO1xuICAgIHJldHVybiB0aGlzLnRyYW5zZm9ybWVycy5yZWR1Y2UoY2IsIGVuZFJlc3VsdCk7XG4gIH1cbn1cbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/TemplateTag/index.js
+ const TemplateTag_TemplateTag = (TemplateTag);
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9UZW1wbGF0ZVRhZy9pbmRleC5qcyJdLCJuYW1lcyI6WyJkZWZhdWx0Il0sIm1hcHBpbmdzIjoicUJBQW9CLGU7cUJBQWJBLE8iLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBmcm9tICcuL1RlbXBsYXRlVGFnJztcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/inlineArrayTransformer/inlineArrayTransformer.js
+;
 var defaults = {
   separator: '',
   conjunction: '',
   serial: false
 };
 
-/**
- * Converts an array substitution to a string containing a list
- * @param  {String} [opts.separator = ''] - the character that separates each item
- * @param  {String} [opts.conjunction = '']  - replace the last separator with this
- * @param  {Boolean} [opts.serial = false] - include the separator before the conjunction? (Oxford comma use-case)
- *
- * @return {Object}                     - a TemplateTag transformer
- */
 var inlineArrayTransformer = function inlineArrayTransformer() {
   var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaults;
   return {
     onSubstitution: function onSubstitution(substitution, resultSoFar) {
-      // only operate on arrays
       if (Array.isArray(substitution)) {
         var arrayLength = substitution.length;
         var separator = opts.separator;
         var conjunction = opts.conjunction;
         var serial = opts.serial;
-        // join each item in the array into a string where each item is separated by separator
-        // be sure to maintain indentation
         var indent = resultSoFar.match(/(\n?[^\S\n]+)$/);
         if (indent) {
           substitution = substitution.join(separator + indent[1]);
         } else {
           substitution = substitution.join(separator + ' ');
         }
-        // if conjunction is set, replace the last separator with conjunction, but only if there is more than one substitution
         if (conjunction && arrayLength > 1) {
           var separatorIndex = substitution.lastIndexOf(separator);
           substitution = substitution.slice(0, separatorIndex) + (serial ? separator : '') + ' ' + conjunction + substitution.slice(separatorIndex + 1);
@@ -743,26 +650,18 @@ var inlineArrayTransformer = function inlineArrayTransformer() {
   };
 };
 
-/* harmony default export */ const inlineArrayTransformer_inlineArrayTransformer = (inlineArrayTransformer);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9pbmxpbmVBcnJheVRyYW5zZm9ybWVyL2lubGluZUFycmF5VHJhbnNmb3JtZXIuanMiXSwibmFtZXMiOlsiZGVmYXVsdHMiLCJzZXBhcmF0b3IiLCJjb25qdW5jdGlvbiIsInNlcmlhbCIsImlubGluZUFycmF5VHJhbnNmb3JtZXIiLCJvcHRzIiwib25TdWJzdGl0dXRpb24iLCJzdWJzdGl0dXRpb24iLCJyZXN1bHRTb0ZhciIsIkFycmF5IiwiaXNBcnJheSIsImFycmF5TGVuZ3RoIiwibGVuZ3RoIiwiaW5kZW50IiwibWF0Y2giLCJqb2luIiwic2VwYXJhdG9ySW5kZXgiLCJsYXN0SW5kZXhPZiIsInNsaWNlIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFNQSxXQUFXO0FBQ2ZDLGFBQVcsRUFESTtBQUVmQyxlQUFhLEVBRkU7QUFHZkMsVUFBUTtBQUhPLENBQWpCOztBQU1BOzs7Ozs7OztBQVFBLElBQU1DLHlCQUF5QixTQUF6QkEsc0JBQXlCO0FBQUEsTUFBQ0MsSUFBRCx1RUFBUUwsUUFBUjtBQUFBLFNBQXNCO0FBQ25ETSxrQkFEbUQsMEJBQ3BDQyxZQURvQyxFQUN0QkMsV0FEc0IsRUFDVDtBQUN4QztBQUNBLFVBQUlDLE1BQU1DLE9BQU4sQ0FBY0gsWUFBZCxDQUFKLEVBQWlDO0FBQy9CLFlBQU1JLGNBQWNKLGFBQWFLLE1BQWpDO0FBQ0EsWUFBTVgsWUFBWUksS0FBS0osU0FBdkI7QUFDQSxZQUFNQyxjQUFjRyxLQUFLSCxXQUF6QjtBQUNBLFlBQU1DLFNBQVNFLEtBQUtGLE1BQXBCO0FBQ0E7QUFDQTtBQUNBLFlBQU1VLFNBQVNMLFlBQVlNLEtBQVosQ0FBa0IsZ0JBQWxCLENBQWY7QUFDQSxZQUFJRCxNQUFKLEVBQVk7QUFDVk4seUJBQWVBLGFBQWFRLElBQWIsQ0FBa0JkLFlBQVlZLE9BQU8sQ0FBUCxDQUE5QixDQUFmO0FBQ0QsU0FGRCxNQUVPO0FBQ0xOLHlCQUFlQSxhQUFhUSxJQUFiLENBQWtCZCxZQUFZLEdBQTlCLENBQWY7QUFDRDtBQUNEO0FBQ0EsWUFBSUMsZUFBZVMsY0FBYyxDQUFqQyxFQUFvQztBQUNsQyxjQUFNSyxpQkFBaUJULGFBQWFVLFdBQWIsQ0FBeUJoQixTQUF6QixDQUF2QjtBQUNBTSx5QkFDRUEsYUFBYVcsS0FBYixDQUFtQixDQUFuQixFQUFzQkYsY0FBdEIsS0FDQ2IsU0FBU0YsU0FBVCxHQUFxQixFQUR0QixJQUVBLEdBRkEsR0FHQUMsV0FIQSxHQUlBSyxhQUFhVyxLQUFiLENBQW1CRixpQkFBaUIsQ0FBcEMsQ0FMRjtBQU1EO0FBQ0Y7QUFDRCxhQUFPVCxZQUFQO0FBQ0Q7QUE1QmtELEdBQXRCO0FBQUEsQ0FBL0I7O0FBK0JBLGVBQWVILHNCQUFmIiwiZmlsZSI6ImlubGluZUFycmF5VHJhbnNmb3JtZXIuanMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBkZWZhdWx0cyA9IHtcbiAgc2VwYXJhdG9yOiAnJyxcbiAgY29uanVuY3Rpb246ICcnLFxuICBzZXJpYWw6IGZhbHNlLFxufTtcblxuLyoqXG4gKiBDb252ZXJ0cyBhbiBhcnJheSBzdWJzdGl0dXRpb24gdG8gYSBzdHJpbmcgY29udGFpbmluZyBhIGxpc3RcbiAqIEBwYXJhbSAge1N0cmluZ30gW29wdHMuc2VwYXJhdG9yID0gJyddIC0gdGhlIGNoYXJhY3RlciB0aGF0IHNlcGFyYXRlcyBlYWNoIGl0ZW1cbiAqIEBwYXJhbSAge1N0cmluZ30gW29wdHMuY29uanVuY3Rpb24gPSAnJ10gIC0gcmVwbGFjZSB0aGUgbGFzdCBzZXBhcmF0b3Igd2l0aCB0aGlzXG4gKiBAcGFyYW0gIHtCb29sZWFufSBbb3B0cy5zZXJpYWwgPSBmYWxzZV0gLSBpbmNsdWRlIHRoZSBzZXBhcmF0b3IgYmVmb3JlIHRoZSBjb25qdW5jdGlvbj8gKE94Zm9yZCBjb21tYSB1c2UtY2FzZSlcbiAqXG4gKiBAcmV0dXJuIHtPYmplY3R9ICAgICAgICAgICAgICAgICAgICAgLSBhIFRlbXBsYXRlVGFnIHRyYW5zZm9ybWVyXG4gKi9cbmNvbnN0IGlubGluZUFycmF5VHJhbnNmb3JtZXIgPSAob3B0cyA9IGRlZmF1bHRzKSA9PiAoe1xuICBvblN1YnN0aXR1dGlvbihzdWJzdGl0dXRpb24sIHJlc3VsdFNvRmFyKSB7XG4gICAgLy8gb25seSBvcGVyYXRlIG9uIGFycmF5c1xuICAgIGlmIChBcnJheS5pc0FycmF5KHN1YnN0aXR1dGlvbikpIHtcbiAgICAgIGNvbnN0IGFycmF5TGVuZ3RoID0gc3Vic3RpdHV0aW9uLmxlbmd0aDtcbiAgICAgIGNvbnN0IHNlcGFyYXRvciA9IG9wdHMuc2VwYXJhdG9yO1xuICAgICAgY29uc3QgY29uanVuY3Rpb24gPSBvcHRzLmNvbmp1bmN0aW9uO1xuICAgICAgY29uc3Qgc2VyaWFsID0gb3B0cy5zZXJpYWw7XG4gICAgICAvLyBqb2luIGVhY2ggaXRlbSBpbiB0aGUgYXJyYXkgaW50byBhIHN0cmluZyB3aGVyZSBlYWNoIGl0ZW0gaXMgc2VwYXJhdGVkIGJ5IHNlcGFyYXRvclxuICAgICAgLy8gYmUgc3VyZSB0byBtYWludGFpbiBpbmRlbnRhdGlvblxuICAgICAgY29uc3QgaW5kZW50ID0gcmVzdWx0U29GYXIubWF0Y2goLyhcXG4/W15cXFNcXG5dKykkLyk7XG4gICAgICBpZiAoaW5kZW50KSB7XG4gICAgICAgIHN1YnN0aXR1dGlvbiA9IHN1YnN0aXR1dGlvbi5qb2luKHNlcGFyYXRvciArIGluZGVudFsxXSk7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICBzdWJzdGl0dXRpb24gPSBzdWJzdGl0dXRpb24uam9pbihzZXBhcmF0b3IgKyAnICcpO1xuICAgICAgfVxuICAgICAgLy8gaWYgY29uanVuY3Rpb24gaXMgc2V0LCByZXBsYWNlIHRoZSBsYXN0IHNlcGFyYXRvciB3aXRoIGNvbmp1bmN0aW9uLCBidXQgb25seSBpZiB0aGVyZSBpcyBtb3JlIHRoYW4gb25lIHN1YnN0aXR1dGlvblxuICAgICAgaWYgKGNvbmp1bmN0aW9uICYmIGFycmF5TGVuZ3RoID4gMSkge1xuICAgICAgICBjb25zdCBzZXBhcmF0b3JJbmRleCA9IHN1YnN0aXR1dGlvbi5sYXN0SW5kZXhPZihzZXBhcmF0b3IpO1xuICAgICAgICBzdWJzdGl0dXRpb24gPVxuICAgICAgICAgIHN1YnN0aXR1dGlvbi5zbGljZSgwLCBzZXBhcmF0b3JJbmRleCkgK1xuICAgICAgICAgIChzZXJpYWwgPyBzZXBhcmF0b3IgOiAnJykgK1xuICAgICAgICAgICcgJyArXG4gICAgICAgICAgY29uanVuY3Rpb24gK1xuICAgICAgICAgIHN1YnN0aXR1dGlvbi5zbGljZShzZXBhcmF0b3JJbmRleCArIDEpO1xuICAgICAgfVxuICAgIH1cbiAgICByZXR1cm4gc3Vic3RpdHV0aW9uO1xuICB9LFxufSk7XG5cbmV4cG9ydCBkZWZhdWx0IGlubGluZUFycmF5VHJhbnNmb3JtZXI7XG4iXX0=
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/inlineArrayTransformer/index.js
+ const inlineArrayTransformer_inlineArrayTransformer = (inlineArrayTransformer);
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9pbmxpbmVBcnJheVRyYW5zZm9ybWVyL2luZGV4LmpzIl0sIm5hbWVzIjpbImRlZmF1bHQiXSwibWFwcGluZ3MiOiJxQkFBb0IsMEI7cUJBQWJBLE8iLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBmcm9tICcuL2lubGluZUFycmF5VHJhbnNmb3JtZXInO1xuIl19
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/stripIndentTransformer/stripIndentTransformer.js
+;
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-/**
- * strips indentation from a template literal
- * @param  {String} type = 'initial' - whether to remove all indentation or just leading indentation. can be 'all' or 'initial'
- * @return {Object}                  - a TemplateTag transformer
- */
 var stripIndentTransformer = function stripIndentTransformer() {
   var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'initial';
   return {
     onEndResult: function onEndResult(endResult) {
       if (type === 'initial') {
-        // remove the shortest leading indentation from each line
         var match = endResult.match(/^[^\S\n]*(?=\S)/gm);
         var indent = match && Math.min.apply(Math, _toConsumableArray(match.map(function (el) {
           return el.length;
@@ -774,7 +673,6 @@ var stripIndentTransformer = function stripIndentTransformer() {
         return endResult;
       }
       if (type === 'all') {
-        // remove all indentation from each line
         return endResult.replace(/^[^\S\n]+/gm, '');
       }
       throw new Error('Unknown type: ' + type);
@@ -782,14 +680,8 @@ var stripIndentTransformer = function stripIndentTransformer() {
   };
 };
 
-/* harmony default export */ const stripIndentTransformer_stripIndentTransformer = (stripIndentTransformer);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zdHJpcEluZGVudFRyYW5zZm9ybWVyL3N0cmlwSW5kZW50VHJhbnNmb3JtZXIuanMiXSwibmFtZXMiOlsic3RyaXBJbmRlbnRUcmFuc2Zvcm1lciIsInR5cGUiLCJvbkVuZFJlc3VsdCIsImVuZFJlc3VsdCIsIm1hdGNoIiwiaW5kZW50IiwiTWF0aCIsIm1pbiIsIm1hcCIsImVsIiwibGVuZ3RoIiwicmVnZXhwIiwiUmVnRXhwIiwicmVwbGFjZSIsIkVycm9yIl0sIm1hcHBpbmdzIjoiOztBQUFBOzs7OztBQUtBLElBQU1BLHlCQUF5QixTQUF6QkEsc0JBQXlCO0FBQUEsTUFBQ0MsSUFBRCx1RUFBUSxTQUFSO0FBQUEsU0FBdUI7QUFDcERDLGVBRG9ELHVCQUN4Q0MsU0FEd0MsRUFDN0I7QUFDckIsVUFBSUYsU0FBUyxTQUFiLEVBQXdCO0FBQ3RCO0FBQ0EsWUFBTUcsUUFBUUQsVUFBVUMsS0FBVixDQUFnQixtQkFBaEIsQ0FBZDtBQUNBLFlBQU1DLFNBQVNELFNBQVNFLEtBQUtDLEdBQUwsZ0NBQVlILE1BQU1JLEdBQU4sQ0FBVTtBQUFBLGlCQUFNQyxHQUFHQyxNQUFUO0FBQUEsU0FBVixDQUFaLEVBQXhCO0FBQ0EsWUFBSUwsTUFBSixFQUFZO0FBQ1YsY0FBTU0sU0FBUyxJQUFJQyxNQUFKLFNBQWlCUCxNQUFqQixRQUE0QixJQUE1QixDQUFmO0FBQ0EsaUJBQU9GLFVBQVVVLE9BQVYsQ0FBa0JGLE1BQWxCLEVBQTBCLEVBQTFCLENBQVA7QUFDRDtBQUNELGVBQU9SLFNBQVA7QUFDRDtBQUNELFVBQUlGLFNBQVMsS0FBYixFQUFvQjtBQUNsQjtBQUNBLGVBQU9FLFVBQVVVLE9BQVYsQ0FBa0IsYUFBbEIsRUFBaUMsRUFBakMsQ0FBUDtBQUNEO0FBQ0QsWUFBTSxJQUFJQyxLQUFKLG9CQUEyQmIsSUFBM0IsQ0FBTjtBQUNEO0FBakJtRCxHQUF2QjtBQUFBLENBQS9COztBQW9CQSxlQUFlRCxzQkFBZiIsImZpbGUiOiJzdHJpcEluZGVudFRyYW5zZm9ybWVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBzdHJpcHMgaW5kZW50YXRpb24gZnJvbSBhIHRlbXBsYXRlIGxpdGVyYWxcbiAqIEBwYXJhbSAge1N0cmluZ30gdHlwZSA9ICdpbml0aWFsJyAtIHdoZXRoZXIgdG8gcmVtb3ZlIGFsbCBpbmRlbnRhdGlvbiBvciBqdXN0IGxlYWRpbmcgaW5kZW50YXRpb24uIGNhbiBiZSAnYWxsJyBvciAnaW5pdGlhbCdcbiAqIEByZXR1cm4ge09iamVjdH0gICAgICAgICAgICAgICAgICAtIGEgVGVtcGxhdGVUYWcgdHJhbnNmb3JtZXJcbiAqL1xuY29uc3Qgc3RyaXBJbmRlbnRUcmFuc2Zvcm1lciA9ICh0eXBlID0gJ2luaXRpYWwnKSA9PiAoe1xuICBvbkVuZFJlc3VsdChlbmRSZXN1bHQpIHtcbiAgICBpZiAodHlwZSA9PT0gJ2luaXRpYWwnKSB7XG4gICAgICAvLyByZW1vdmUgdGhlIHNob3J0ZXN0IGxlYWRpbmcgaW5kZW50YXRpb24gZnJvbSBlYWNoIGxpbmVcbiAgICAgIGNvbnN0IG1hdGNoID0gZW5kUmVzdWx0Lm1hdGNoKC9eW15cXFNcXG5dKig/PVxcUykvZ20pO1xuICAgICAgY29uc3QgaW5kZW50ID0gbWF0Y2ggJiYgTWF0aC5taW4oLi4ubWF0Y2gubWFwKGVsID0+IGVsLmxlbmd0aCkpO1xuICAgICAgaWYgKGluZGVudCkge1xuICAgICAgICBjb25zdCByZWdleHAgPSBuZXcgUmVnRXhwKGBeLnske2luZGVudH19YCwgJ2dtJyk7XG4gICAgICAgIHJldHVybiBlbmRSZXN1bHQucmVwbGFjZShyZWdleHAsICcnKTtcbiAgICAgIH1cbiAgICAgIHJldHVybiBlbmRSZXN1bHQ7XG4gICAgfVxuICAgIGlmICh0eXBlID09PSAnYWxsJykge1xuICAgICAgLy8gcmVtb3ZlIGFsbCBpbmRlbnRhdGlvbiBmcm9tIGVhY2ggbGluZVxuICAgICAgcmV0dXJuIGVuZFJlc3VsdC5yZXBsYWNlKC9eW15cXFNcXG5dKy9nbSwgJycpO1xuICAgIH1cbiAgICB0aHJvdyBuZXcgRXJyb3IoYFVua25vd24gdHlwZTogJHt0eXBlfWApO1xuICB9LFxufSk7XG5cbmV4cG9ydCBkZWZhdWx0IHN0cmlwSW5kZW50VHJhbnNmb3JtZXI7XG4iXX0=
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/trimResultTransformer/trimResultTransformer.js
-/**
- * TemplateTag transformer that trims whitespace on the end result of a tagged template
- * @param  {String} side = '' - The side of the string to trim. Can be 'start' or 'end' (alternatively 'left' or 'right')
- * @return {Object}           - a TemplateTag transformer
- */
+ const stripIndentTransformer_stripIndentTransformer = (stripIndentTransformer);
+;
 var trimResultTransformer = function trimResultTransformer() {
   var side = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
   return {
@@ -813,9 +705,8 @@ var trimResultTransformer = function trimResultTransformer() {
   };
 };
 
-/* harmony default export */ const trimResultTransformer_trimResultTransformer = (trimResultTransformer);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy90cmltUmVzdWx0VHJhbnNmb3JtZXIvdHJpbVJlc3VsdFRyYW5zZm9ybWVyLmpzIl0sIm5hbWVzIjpbInRyaW1SZXN1bHRUcmFuc2Zvcm1lciIsInNpZGUiLCJvbkVuZFJlc3VsdCIsImVuZFJlc3VsdCIsInRyaW0iLCJ0b0xvd2VyQ2FzZSIsInJlcGxhY2UiLCJFcnJvciJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7O0FBS0EsSUFBTUEsd0JBQXdCLFNBQXhCQSxxQkFBd0I7QUFBQSxNQUFDQyxJQUFELHVFQUFRLEVBQVI7QUFBQSxTQUFnQjtBQUM1Q0MsZUFENEMsdUJBQ2hDQyxTQURnQyxFQUNyQjtBQUNyQixVQUFJRixTQUFTLEVBQWIsRUFBaUI7QUFDZixlQUFPRSxVQUFVQyxJQUFWLEVBQVA7QUFDRDs7QUFFREgsYUFBT0EsS0FBS0ksV0FBTCxFQUFQOztBQUVBLFVBQUlKLFNBQVMsT0FBVCxJQUFvQkEsU0FBUyxNQUFqQyxFQUF5QztBQUN2QyxlQUFPRSxVQUFVRyxPQUFWLENBQWtCLE1BQWxCLEVBQTBCLEVBQTFCLENBQVA7QUFDRDs7QUFFRCxVQUFJTCxTQUFTLEtBQVQsSUFBa0JBLFNBQVMsT0FBL0IsRUFBd0M7QUFDdEMsZUFBT0UsVUFBVUcsT0FBVixDQUFrQixNQUFsQixFQUEwQixFQUExQixDQUFQO0FBQ0Q7O0FBRUQsWUFBTSxJQUFJQyxLQUFKLDBCQUFpQ04sSUFBakMsQ0FBTjtBQUNEO0FBakIyQyxHQUFoQjtBQUFBLENBQTlCOztBQW9CQSxlQUFlRCxxQkFBZiIsImZpbGUiOiJ0cmltUmVzdWx0VHJhbnNmb3JtZXIuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIFRlbXBsYXRlVGFnIHRyYW5zZm9ybWVyIHRoYXQgdHJpbXMgd2hpdGVzcGFjZSBvbiB0aGUgZW5kIHJlc3VsdCBvZiBhIHRhZ2dlZCB0ZW1wbGF0ZVxuICogQHBhcmFtICB7U3RyaW5nfSBzaWRlID0gJycgLSBUaGUgc2lkZSBvZiB0aGUgc3RyaW5nIHRvIHRyaW0uIENhbiBiZSAnc3RhcnQnIG9yICdlbmQnIChhbHRlcm5hdGl2ZWx5ICdsZWZ0JyBvciAncmlnaHQnKVxuICogQHJldHVybiB7T2JqZWN0fSAgICAgICAgICAgLSBhIFRlbXBsYXRlVGFnIHRyYW5zZm9ybWVyXG4gKi9cbmNvbnN0IHRyaW1SZXN1bHRUcmFuc2Zvcm1lciA9IChzaWRlID0gJycpID0+ICh7XG4gIG9uRW5kUmVzdWx0KGVuZFJlc3VsdCkge1xuICAgIGlmIChzaWRlID09PSAnJykge1xuICAgICAgcmV0dXJuIGVuZFJlc3VsdC50cmltKCk7XG4gICAgfVxuXG4gICAgc2lkZSA9IHNpZGUudG9Mb3dlckNhc2UoKTtcblxuICAgIGlmIChzaWRlID09PSAnc3RhcnQnIHx8IHNpZGUgPT09ICdsZWZ0Jykge1xuICAgICAgcmV0dXJuIGVuZFJlc3VsdC5yZXBsYWNlKC9eXFxzKi8sICcnKTtcbiAgICB9XG5cbiAgICBpZiAoc2lkZSA9PT0gJ2VuZCcgfHwgc2lkZSA9PT0gJ3JpZ2h0Jykge1xuICAgICAgcmV0dXJuIGVuZFJlc3VsdC5yZXBsYWNlKC9cXHMqJC8sICcnKTtcbiAgICB9XG5cbiAgICB0aHJvdyBuZXcgRXJyb3IoYFNpZGUgbm90IHN1cHBvcnRlZDogJHtzaWRlfWApO1xuICB9LFxufSk7XG5cbmV4cG9ydCBkZWZhdWx0IHRyaW1SZXN1bHRUcmFuc2Zvcm1lcjtcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/commaLists/commaLists.js
+ const trimResultTransformer_trimResultTransformer = (trimResultTransformer);
+;
 
 
 
@@ -823,13 +714,11 @@ var trimResultTransformer = function trimResultTransformer() {
 
 var commaLists = new TemplateTag_TemplateTag(inlineArrayTransformer_inlineArrayTransformer({ separator: ',' }), stripIndentTransformer_stripIndentTransformer, trimResultTransformer_trimResultTransformer);
 
-/* harmony default export */ const commaLists_commaLists = ((/* unused pure expression or super */ null && (commaLists)));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21tYUxpc3RzL2NvbW1hTGlzdHMuanMiXSwibmFtZXMiOlsiVGVtcGxhdGVUYWciLCJzdHJpcEluZGVudFRyYW5zZm9ybWVyIiwiaW5saW5lQXJyYXlUcmFuc2Zvcm1lciIsInRyaW1SZXN1bHRUcmFuc2Zvcm1lciIsImNvbW1hTGlzdHMiLCJzZXBhcmF0b3IiXSwibWFwcGluZ3MiOiJBQUFBLE9BQU9BLFdBQVAsTUFBd0IsZ0JBQXhCO0FBQ0EsT0FBT0Msc0JBQVAsTUFBbUMsMkJBQW5DO0FBQ0EsT0FBT0Msc0JBQVAsTUFBbUMsMkJBQW5DO0FBQ0EsT0FBT0MscUJBQVAsTUFBa0MsMEJBQWxDOztBQUVBLElBQU1DLGFBQWEsSUFBSUosV0FBSixDQUNqQkUsdUJBQXVCLEVBQUVHLFdBQVcsR0FBYixFQUF2QixDQURpQixFQUVqQkosc0JBRmlCLEVBR2pCRSxxQkFIaUIsQ0FBbkI7O0FBTUEsZUFBZUMsVUFBZiIsImZpbGUiOiJjb21tYUxpc3RzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFRlbXBsYXRlVGFnIGZyb20gJy4uL1RlbXBsYXRlVGFnJztcbmltcG9ydCBzdHJpcEluZGVudFRyYW5zZm9ybWVyIGZyb20gJy4uL3N0cmlwSW5kZW50VHJhbnNmb3JtZXInO1xuaW1wb3J0IGlubGluZUFycmF5VHJhbnNmb3JtZXIgZnJvbSAnLi4vaW5saW5lQXJyYXlUcmFuc2Zvcm1lcic7XG5pbXBvcnQgdHJpbVJlc3VsdFRyYW5zZm9ybWVyIGZyb20gJy4uL3RyaW1SZXN1bHRUcmFuc2Zvcm1lcic7XG5cbmNvbnN0IGNvbW1hTGlzdHMgPSBuZXcgVGVtcGxhdGVUYWcoXG4gIGlubGluZUFycmF5VHJhbnNmb3JtZXIoeyBzZXBhcmF0b3I6ICcsJyB9KSxcbiAgc3RyaXBJbmRlbnRUcmFuc2Zvcm1lcixcbiAgdHJpbVJlc3VsdFRyYW5zZm9ybWVyLFxuKTtcblxuZXhwb3J0IGRlZmF1bHQgY29tbWFMaXN0cztcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/commaLists/index.js
+ const commaLists_commaLists = (( null && (commaLists)));
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21tYUxpc3RzL2luZGV4LmpzIl0sIm5hbWVzIjpbImRlZmF1bHQiXSwibWFwcGluZ3MiOiJxQkFBb0IsYztxQkFBYkEsTyIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IGZyb20gJy4vY29tbWFMaXN0cyc7XG4iXX0=
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/commaListsAnd/commaListsAnd.js
+;
 
 
 
@@ -837,13 +726,11 @@ var commaLists = new TemplateTag_TemplateTag(inlineArrayTransformer_inlineArrayT
 
 var commaListsAnd = new TemplateTag_TemplateTag(inlineArrayTransformer_inlineArrayTransformer({ separator: ',', conjunction: 'and' }), stripIndentTransformer_stripIndentTransformer, trimResultTransformer_trimResultTransformer);
 
-/* harmony default export */ const commaListsAnd_commaListsAnd = ((/* unused pure expression or super */ null && (commaListsAnd)));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21tYUxpc3RzQW5kL2NvbW1hTGlzdHNBbmQuanMiXSwibmFtZXMiOlsiVGVtcGxhdGVUYWciLCJzdHJpcEluZGVudFRyYW5zZm9ybWVyIiwiaW5saW5lQXJyYXlUcmFuc2Zvcm1lciIsInRyaW1SZXN1bHRUcmFuc2Zvcm1lciIsImNvbW1hTGlzdHNBbmQiLCJzZXBhcmF0b3IiLCJjb25qdW5jdGlvbiJdLCJtYXBwaW5ncyI6IkFBQUEsT0FBT0EsV0FBUCxNQUF3QixnQkFBeEI7QUFDQSxPQUFPQyxzQkFBUCxNQUFtQywyQkFBbkM7QUFDQSxPQUFPQyxzQkFBUCxNQUFtQywyQkFBbkM7QUFDQSxPQUFPQyxxQkFBUCxNQUFrQywwQkFBbEM7O0FBRUEsSUFBTUMsZ0JBQWdCLElBQUlKLFdBQUosQ0FDcEJFLHVCQUF1QixFQUFFRyxXQUFXLEdBQWIsRUFBa0JDLGFBQWEsS0FBL0IsRUFBdkIsQ0FEb0IsRUFFcEJMLHNCQUZvQixFQUdwQkUscUJBSG9CLENBQXRCOztBQU1BLGVBQWVDLGFBQWYiLCJmaWxlIjoiY29tbWFMaXN0c0FuZC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBUZW1wbGF0ZVRhZyBmcm9tICcuLi9UZW1wbGF0ZVRhZyc7XG5pbXBvcnQgc3RyaXBJbmRlbnRUcmFuc2Zvcm1lciBmcm9tICcuLi9zdHJpcEluZGVudFRyYW5zZm9ybWVyJztcbmltcG9ydCBpbmxpbmVBcnJheVRyYW5zZm9ybWVyIGZyb20gJy4uL2lubGluZUFycmF5VHJhbnNmb3JtZXInO1xuaW1wb3J0IHRyaW1SZXN1bHRUcmFuc2Zvcm1lciBmcm9tICcuLi90cmltUmVzdWx0VHJhbnNmb3JtZXInO1xuXG5jb25zdCBjb21tYUxpc3RzQW5kID0gbmV3IFRlbXBsYXRlVGFnKFxuICBpbmxpbmVBcnJheVRyYW5zZm9ybWVyKHsgc2VwYXJhdG9yOiAnLCcsIGNvbmp1bmN0aW9uOiAnYW5kJyB9KSxcbiAgc3RyaXBJbmRlbnRUcmFuc2Zvcm1lcixcbiAgdHJpbVJlc3VsdFRyYW5zZm9ybWVyLFxuKTtcblxuZXhwb3J0IGRlZmF1bHQgY29tbWFMaXN0c0FuZDtcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/commaListsAnd/index.js
+ const commaListsAnd_commaListsAnd = (( null && (commaListsAnd)));
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21tYUxpc3RzQW5kL2luZGV4LmpzIl0sIm5hbWVzIjpbImRlZmF1bHQiXSwibWFwcGluZ3MiOiJxQkFBb0IsaUI7cUJBQWJBLE8iLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBmcm9tICcuL2NvbW1hTGlzdHNBbmQnO1xuIl19
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/commaListsOr/commaListsOr.js
+;
 
 
 
@@ -851,13 +738,11 @@ var commaListsAnd = new TemplateTag_TemplateTag(inlineArrayTransformer_inlineArr
 
 var commaListsOr = new TemplateTag_TemplateTag(inlineArrayTransformer_inlineArrayTransformer({ separator: ',', conjunction: 'or' }), stripIndentTransformer_stripIndentTransformer, trimResultTransformer_trimResultTransformer);
 
-/* harmony default export */ const commaListsOr_commaListsOr = ((/* unused pure expression or super */ null && (commaListsOr)));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21tYUxpc3RzT3IvY29tbWFMaXN0c09yLmpzIl0sIm5hbWVzIjpbIlRlbXBsYXRlVGFnIiwic3RyaXBJbmRlbnRUcmFuc2Zvcm1lciIsImlubGluZUFycmF5VHJhbnNmb3JtZXIiLCJ0cmltUmVzdWx0VHJhbnNmb3JtZXIiLCJjb21tYUxpc3RzT3IiLCJzZXBhcmF0b3IiLCJjb25qdW5jdGlvbiJdLCJtYXBwaW5ncyI6IkFBQUEsT0FBT0EsV0FBUCxNQUF3QixnQkFBeEI7QUFDQSxPQUFPQyxzQkFBUCxNQUFtQywyQkFBbkM7QUFDQSxPQUFPQyxzQkFBUCxNQUFtQywyQkFBbkM7QUFDQSxPQUFPQyxxQkFBUCxNQUFrQywwQkFBbEM7O0FBRUEsSUFBTUMsZUFBZSxJQUFJSixXQUFKLENBQ25CRSx1QkFBdUIsRUFBRUcsV0FBVyxHQUFiLEVBQWtCQyxhQUFhLElBQS9CLEVBQXZCLENBRG1CLEVBRW5CTCxzQkFGbUIsRUFHbkJFLHFCQUhtQixDQUFyQjs7QUFNQSxlQUFlQyxZQUFmIiwiZmlsZSI6ImNvbW1hTGlzdHNPci5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBUZW1wbGF0ZVRhZyBmcm9tICcuLi9UZW1wbGF0ZVRhZyc7XG5pbXBvcnQgc3RyaXBJbmRlbnRUcmFuc2Zvcm1lciBmcm9tICcuLi9zdHJpcEluZGVudFRyYW5zZm9ybWVyJztcbmltcG9ydCBpbmxpbmVBcnJheVRyYW5zZm9ybWVyIGZyb20gJy4uL2lubGluZUFycmF5VHJhbnNmb3JtZXInO1xuaW1wb3J0IHRyaW1SZXN1bHRUcmFuc2Zvcm1lciBmcm9tICcuLi90cmltUmVzdWx0VHJhbnNmb3JtZXInO1xuXG5jb25zdCBjb21tYUxpc3RzT3IgPSBuZXcgVGVtcGxhdGVUYWcoXG4gIGlubGluZUFycmF5VHJhbnNmb3JtZXIoeyBzZXBhcmF0b3I6ICcsJywgY29uanVuY3Rpb246ICdvcicgfSksXG4gIHN0cmlwSW5kZW50VHJhbnNmb3JtZXIsXG4gIHRyaW1SZXN1bHRUcmFuc2Zvcm1lcixcbik7XG5cbmV4cG9ydCBkZWZhdWx0IGNvbW1hTGlzdHNPcjtcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/commaListsOr/index.js
+ const commaListsOr_commaListsOr = (( null && (commaListsOr)));
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21tYUxpc3RzT3IvaW5kZXguanMiXSwibmFtZXMiOlsiZGVmYXVsdCJdLCJtYXBwaW5ncyI6InFCQUFvQixnQjtxQkFBYkEsTyIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IGZyb20gJy4vY29tbWFMaXN0c09yJztcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/splitStringTransformer/splitStringTransformer.js
+;
 var splitStringTransformer = function splitStringTransformer(splitBy) {
   return {
     onSubstitution: function onSubstitution(substitution, resultSoFar) {
@@ -873,9 +758,8 @@ var splitStringTransformer = function splitStringTransformer(splitBy) {
   };
 };
 
-/* harmony default export */ const splitStringTransformer_splitStringTransformer = (splitStringTransformer);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zcGxpdFN0cmluZ1RyYW5zZm9ybWVyL3NwbGl0U3RyaW5nVHJhbnNmb3JtZXIuanMiXSwibmFtZXMiOlsic3BsaXRTdHJpbmdUcmFuc2Zvcm1lciIsIm9uU3Vic3RpdHV0aW9uIiwic3Vic3RpdHV0aW9uIiwicmVzdWx0U29GYXIiLCJzcGxpdEJ5IiwiaW5jbHVkZXMiLCJzcGxpdCIsIkVycm9yIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFNQSx5QkFBeUIsU0FBekJBLHNCQUF5QjtBQUFBLFNBQVk7QUFDekNDLGtCQUR5QywwQkFDMUJDLFlBRDBCLEVBQ1pDLFdBRFksRUFDQztBQUN4QyxVQUFJQyxXQUFXLElBQVgsSUFBbUIsT0FBT0EsT0FBUCxLQUFtQixRQUExQyxFQUFvRDtBQUNsRCxZQUFJLE9BQU9GLFlBQVAsS0FBd0IsUUFBeEIsSUFBb0NBLGFBQWFHLFFBQWIsQ0FBc0JELE9BQXRCLENBQXhDLEVBQXdFO0FBQ3RFRix5QkFBZUEsYUFBYUksS0FBYixDQUFtQkYsT0FBbkIsQ0FBZjtBQUNEO0FBQ0YsT0FKRCxNQUlPO0FBQ0wsY0FBTSxJQUFJRyxLQUFKLENBQVUscURBQVYsQ0FBTjtBQUNEO0FBQ0QsYUFBT0wsWUFBUDtBQUNEO0FBVndDLEdBQVo7QUFBQSxDQUEvQjs7QUFhQSxlQUFlRixzQkFBZiIsImZpbGUiOiJzcGxpdFN0cmluZ1RyYW5zZm9ybWVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiY29uc3Qgc3BsaXRTdHJpbmdUcmFuc2Zvcm1lciA9IHNwbGl0QnkgPT4gKHtcbiAgb25TdWJzdGl0dXRpb24oc3Vic3RpdHV0aW9uLCByZXN1bHRTb0Zhcikge1xuICAgIGlmIChzcGxpdEJ5ICE9IG51bGwgJiYgdHlwZW9mIHNwbGl0QnkgPT09ICdzdHJpbmcnKSB7XG4gICAgICBpZiAodHlwZW9mIHN1YnN0aXR1dGlvbiA9PT0gJ3N0cmluZycgJiYgc3Vic3RpdHV0aW9uLmluY2x1ZGVzKHNwbGl0QnkpKSB7XG4gICAgICAgIHN1YnN0aXR1dGlvbiA9IHN1YnN0aXR1dGlvbi5zcGxpdChzcGxpdEJ5KTtcbiAgICAgIH1cbiAgICB9IGVsc2Uge1xuICAgICAgdGhyb3cgbmV3IEVycm9yKCdZb3UgbmVlZCB0byBzcGVjaWZ5IGEgc3RyaW5nIGNoYXJhY3RlciB0byBzcGxpdCBieS4nKTtcbiAgICB9XG4gICAgcmV0dXJuIHN1YnN0aXR1dGlvbjtcbiAgfSxcbn0pO1xuXG5leHBvcnQgZGVmYXVsdCBzcGxpdFN0cmluZ1RyYW5zZm9ybWVyO1xuIl19
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/removeNonPrintingValuesTransformer/removeNonPrintingValuesTransformer.js
+ const splitStringTransformer_splitStringTransformer = (splitStringTransformer);
+;
 var isValidValue = function isValidValue(x) {
   return x != null && !Number.isNaN(x) && typeof x !== 'boolean';
 };
@@ -894,9 +778,8 @@ var removeNonPrintingValuesTransformer = function removeNonPrintingValuesTransfo
   };
 };
 
-/* harmony default export */ const removeNonPrintingValuesTransformer_removeNonPrintingValuesTransformer = (removeNonPrintingValuesTransformer);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9yZW1vdmVOb25QcmludGluZ1ZhbHVlc1RyYW5zZm9ybWVyL3JlbW92ZU5vblByaW50aW5nVmFsdWVzVHJhbnNmb3JtZXIuanMiXSwibmFtZXMiOlsiaXNWYWxpZFZhbHVlIiwieCIsIk51bWJlciIsImlzTmFOIiwicmVtb3ZlTm9uUHJpbnRpbmdWYWx1ZXNUcmFuc2Zvcm1lciIsIm9uU3Vic3RpdHV0aW9uIiwic3Vic3RpdHV0aW9uIiwiQXJyYXkiLCJpc0FycmF5IiwiZmlsdGVyIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFNQSxlQUFlLFNBQWZBLFlBQWU7QUFBQSxTQUNuQkMsS0FBSyxJQUFMLElBQWEsQ0FBQ0MsT0FBT0MsS0FBUCxDQUFhRixDQUFiLENBQWQsSUFBaUMsT0FBT0EsQ0FBUCxLQUFhLFNBRDNCO0FBQUEsQ0FBckI7O0FBR0EsSUFBTUcscUNBQXFDLFNBQXJDQSxrQ0FBcUM7QUFBQSxTQUFPO0FBQ2hEQyxrQkFEZ0QsMEJBQ2pDQyxZQURpQyxFQUNuQjtBQUMzQixVQUFJQyxNQUFNQyxPQUFOLENBQWNGLFlBQWQsQ0FBSixFQUFpQztBQUMvQixlQUFPQSxhQUFhRyxNQUFiLENBQW9CVCxZQUFwQixDQUFQO0FBQ0Q7QUFDRCxVQUFJQSxhQUFhTSxZQUFiLENBQUosRUFBZ0M7QUFDOUIsZUFBT0EsWUFBUDtBQUNEO0FBQ0QsYUFBTyxFQUFQO0FBQ0Q7QUFUK0MsR0FBUDtBQUFBLENBQTNDOztBQVlBLGVBQWVGLGtDQUFmIiwiZmlsZSI6InJlbW92ZU5vblByaW50aW5nVmFsdWVzVHJhbnNmb3JtZXIuanMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBpc1ZhbGlkVmFsdWUgPSB4ID0+XG4gIHggIT0gbnVsbCAmJiAhTnVtYmVyLmlzTmFOKHgpICYmIHR5cGVvZiB4ICE9PSAnYm9vbGVhbic7XG5cbmNvbnN0IHJlbW92ZU5vblByaW50aW5nVmFsdWVzVHJhbnNmb3JtZXIgPSAoKSA9PiAoe1xuICBvblN1YnN0aXR1dGlvbihzdWJzdGl0dXRpb24pIHtcbiAgICBpZiAoQXJyYXkuaXNBcnJheShzdWJzdGl0dXRpb24pKSB7XG4gICAgICByZXR1cm4gc3Vic3RpdHV0aW9uLmZpbHRlcihpc1ZhbGlkVmFsdWUpO1xuICAgIH1cbiAgICBpZiAoaXNWYWxpZFZhbHVlKHN1YnN0aXR1dGlvbikpIHtcbiAgICAgIHJldHVybiBzdWJzdGl0dXRpb247XG4gICAgfVxuICAgIHJldHVybiAnJztcbiAgfSxcbn0pO1xuXG5leHBvcnQgZGVmYXVsdCByZW1vdmVOb25QcmludGluZ1ZhbHVlc1RyYW5zZm9ybWVyO1xuIl19
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/html/html.js
+ const removeNonPrintingValuesTransformer_removeNonPrintingValuesTransformer = (removeNonPrintingValuesTransformer);
+;
 
 
 
@@ -906,21 +789,17 @@ var removeNonPrintingValuesTransformer = function removeNonPrintingValuesTransfo
 
 var html = new TemplateTag_TemplateTag(splitStringTransformer_splitStringTransformer('\n'), removeNonPrintingValuesTransformer_removeNonPrintingValuesTransformer, inlineArrayTransformer_inlineArrayTransformer, stripIndentTransformer_stripIndentTransformer, trimResultTransformer_trimResultTransformer);
 
-/* harmony default export */ const html_html = ((/* unused pure expression or super */ null && (html)));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9odG1sL2h0bWwuanMiXSwibmFtZXMiOlsiVGVtcGxhdGVUYWciLCJzdHJpcEluZGVudFRyYW5zZm9ybWVyIiwiaW5saW5lQXJyYXlUcmFuc2Zvcm1lciIsInRyaW1SZXN1bHRUcmFuc2Zvcm1lciIsInNwbGl0U3RyaW5nVHJhbnNmb3JtZXIiLCJyZW1vdmVOb25QcmludGluZ1ZhbHVlc1RyYW5zZm9ybWVyIiwiaHRtbCJdLCJtYXBwaW5ncyI6IkFBQUEsT0FBT0EsV0FBUCxNQUF3QixnQkFBeEI7QUFDQSxPQUFPQyxzQkFBUCxNQUFtQywyQkFBbkM7QUFDQSxPQUFPQyxzQkFBUCxNQUFtQywyQkFBbkM7QUFDQSxPQUFPQyxxQkFBUCxNQUFrQywwQkFBbEM7QUFDQSxPQUFPQyxzQkFBUCxNQUFtQywyQkFBbkM7QUFDQSxPQUFPQyxrQ0FBUCxNQUErQyx1Q0FBL0M7O0FBRUEsSUFBTUMsT0FBTyxJQUFJTixXQUFKLENBQ1hJLHVCQUF1QixJQUF2QixDQURXLEVBRVhDLGtDQUZXLEVBR1hILHNCQUhXLEVBSVhELHNCQUpXLEVBS1hFLHFCQUxXLENBQWI7O0FBUUEsZUFBZUcsSUFBZiIsImZpbGUiOiJodG1sLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFRlbXBsYXRlVGFnIGZyb20gJy4uL1RlbXBsYXRlVGFnJztcbmltcG9ydCBzdHJpcEluZGVudFRyYW5zZm9ybWVyIGZyb20gJy4uL3N0cmlwSW5kZW50VHJhbnNmb3JtZXInO1xuaW1wb3J0IGlubGluZUFycmF5VHJhbnNmb3JtZXIgZnJvbSAnLi4vaW5saW5lQXJyYXlUcmFuc2Zvcm1lcic7XG5pbXBvcnQgdHJpbVJlc3VsdFRyYW5zZm9ybWVyIGZyb20gJy4uL3RyaW1SZXN1bHRUcmFuc2Zvcm1lcic7XG5pbXBvcnQgc3BsaXRTdHJpbmdUcmFuc2Zvcm1lciBmcm9tICcuLi9zcGxpdFN0cmluZ1RyYW5zZm9ybWVyJztcbmltcG9ydCByZW1vdmVOb25QcmludGluZ1ZhbHVlc1RyYW5zZm9ybWVyIGZyb20gJy4uL3JlbW92ZU5vblByaW50aW5nVmFsdWVzVHJhbnNmb3JtZXInO1xuXG5jb25zdCBodG1sID0gbmV3IFRlbXBsYXRlVGFnKFxuICBzcGxpdFN0cmluZ1RyYW5zZm9ybWVyKCdcXG4nKSxcbiAgcmVtb3ZlTm9uUHJpbnRpbmdWYWx1ZXNUcmFuc2Zvcm1lcixcbiAgaW5saW5lQXJyYXlUcmFuc2Zvcm1lcixcbiAgc3RyaXBJbmRlbnRUcmFuc2Zvcm1lcixcbiAgdHJpbVJlc3VsdFRyYW5zZm9ybWVyLFxuKTtcblxuZXhwb3J0IGRlZmF1bHQgaHRtbDtcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/html/index.js
+ const html_html = (( null && (html)));
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9odG1sL2luZGV4LmpzIl0sIm5hbWVzIjpbImRlZmF1bHQiXSwibWFwcGluZ3MiOiJxQkFBb0IsUTtxQkFBYkEsTyIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IGZyb20gJy4vaHRtbCc7XG4iXX0=
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/codeBlock/index.js
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb2RlQmxvY2svaW5kZXguanMiXSwibmFtZXMiOlsiZGVmYXVsdCJdLCJtYXBwaW5ncyI6InFCQUFvQixTO3FCQUFiQSxPIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgZnJvbSAnLi4vaHRtbCc7XG4iXX0=
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/source/index.js
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zb3VyY2UvaW5kZXguanMiXSwibmFtZXMiOlsiZGVmYXVsdCJdLCJtYXBwaW5ncyI6InFCQUFvQixTO3FCQUFiQSxPIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgZnJvbSAnLi4vaHRtbCc7XG4iXX0=
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/replaceSubstitutionTransformer/replaceSubstitutionTransformer.js
+;
 var replaceSubstitutionTransformer = function replaceSubstitutionTransformer(replaceWhat, replaceWith) {
   return {
     onSubstitution: function onSubstitution(substitution, resultSoFar) {
@@ -928,7 +807,6 @@ var replaceSubstitutionTransformer = function replaceSubstitutionTransformer(rep
         throw new Error('replaceSubstitutionTransformer requires at least 2 arguments.');
       }
 
-      // Do not touch if null or undefined
       if (substitution == null) {
         return substitution;
       } else {
@@ -938,9 +816,8 @@ var replaceSubstitutionTransformer = function replaceSubstitutionTransformer(rep
   };
 };
 
-/* harmony default export */ const replaceSubstitutionTransformer_replaceSubstitutionTransformer = (replaceSubstitutionTransformer);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9yZXBsYWNlU3Vic3RpdHV0aW9uVHJhbnNmb3JtZXIvcmVwbGFjZVN1YnN0aXR1dGlvblRyYW5zZm9ybWVyLmpzIl0sIm5hbWVzIjpbInJlcGxhY2VTdWJzdGl0dXRpb25UcmFuc2Zvcm1lciIsInJlcGxhY2VXaGF0IiwicmVwbGFjZVdpdGgiLCJvblN1YnN0aXR1dGlvbiIsInN1YnN0aXR1dGlvbiIsInJlc3VsdFNvRmFyIiwiRXJyb3IiLCJ0b1N0cmluZyIsInJlcGxhY2UiXSwibWFwcGluZ3MiOiJBQUFBLElBQU1BLGlDQUFpQyxTQUFqQ0EsOEJBQWlDLENBQUNDLFdBQUQsRUFBY0MsV0FBZDtBQUFBLFNBQStCO0FBQ3BFQyxrQkFEb0UsMEJBQ3JEQyxZQURxRCxFQUN2Q0MsV0FEdUMsRUFDMUI7QUFDeEMsVUFBSUosZUFBZSxJQUFmLElBQXVCQyxlQUFlLElBQTFDLEVBQWdEO0FBQzlDLGNBQU0sSUFBSUksS0FBSixDQUNKLCtEQURJLENBQU47QUFHRDs7QUFFRDtBQUNBLFVBQUlGLGdCQUFnQixJQUFwQixFQUEwQjtBQUN4QixlQUFPQSxZQUFQO0FBQ0QsT0FGRCxNQUVPO0FBQ0wsZUFBT0EsYUFBYUcsUUFBYixHQUF3QkMsT0FBeEIsQ0FBZ0NQLFdBQWhDLEVBQTZDQyxXQUE3QyxDQUFQO0FBQ0Q7QUFDRjtBQWRtRSxHQUEvQjtBQUFBLENBQXZDOztBQWlCQSxlQUFlRiw4QkFBZiIsImZpbGUiOiJyZXBsYWNlU3Vic3RpdHV0aW9uVHJhbnNmb3JtZXIuanMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCByZXBsYWNlU3Vic3RpdHV0aW9uVHJhbnNmb3JtZXIgPSAocmVwbGFjZVdoYXQsIHJlcGxhY2VXaXRoKSA9PiAoe1xuICBvblN1YnN0aXR1dGlvbihzdWJzdGl0dXRpb24sIHJlc3VsdFNvRmFyKSB7XG4gICAgaWYgKHJlcGxhY2VXaGF0ID09IG51bGwgfHwgcmVwbGFjZVdpdGggPT0gbnVsbCkge1xuICAgICAgdGhyb3cgbmV3IEVycm9yKFxuICAgICAgICAncmVwbGFjZVN1YnN0aXR1dGlvblRyYW5zZm9ybWVyIHJlcXVpcmVzIGF0IGxlYXN0IDIgYXJndW1lbnRzLicsXG4gICAgICApO1xuICAgIH1cblxuICAgIC8vIERvIG5vdCB0b3VjaCBpZiBudWxsIG9yIHVuZGVmaW5lZFxuICAgIGlmIChzdWJzdGl0dXRpb24gPT0gbnVsbCkge1xuICAgICAgcmV0dXJuIHN1YnN0aXR1dGlvbjtcbiAgICB9IGVsc2Uge1xuICAgICAgcmV0dXJuIHN1YnN0aXR1dGlvbi50b1N0cmluZygpLnJlcGxhY2UocmVwbGFjZVdoYXQsIHJlcGxhY2VXaXRoKTtcbiAgICB9XG4gIH0sXG59KTtcblxuZXhwb3J0IGRlZmF1bHQgcmVwbGFjZVN1YnN0aXR1dGlvblRyYW5zZm9ybWVyO1xuIl19
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/safeHtml/safeHtml.js
+ const replaceSubstitutionTransformer_replaceSubstitutionTransformer = (replaceSubstitutionTransformer);
+;
 
 
 
@@ -950,19 +827,11 @@ var replaceSubstitutionTransformer = function replaceSubstitutionTransformer(rep
 
 var safeHtml = new TemplateTag_TemplateTag(splitStringTransformer_splitStringTransformer('\n'), inlineArrayTransformer_inlineArrayTransformer, stripIndentTransformer_stripIndentTransformer, trimResultTransformer_trimResultTransformer, replaceSubstitutionTransformer_replaceSubstitutionTransformer(/&/g, '&amp;'), replaceSubstitutionTransformer_replaceSubstitutionTransformer(/</g, '&lt;'), replaceSubstitutionTransformer_replaceSubstitutionTransformer(/>/g, '&gt;'), replaceSubstitutionTransformer_replaceSubstitutionTransformer(/"/g, '&quot;'), replaceSubstitutionTransformer_replaceSubstitutionTransformer(/'/g, '&#x27;'), replaceSubstitutionTransformer_replaceSubstitutionTransformer(/`/g, '&#x60;'));
 
-/* harmony default export */ const safeHtml_safeHtml = ((/* unused pure expression or super */ null && (safeHtml)));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zYWZlSHRtbC9zYWZlSHRtbC5qcyJdLCJuYW1lcyI6WyJUZW1wbGF0ZVRhZyIsInN0cmlwSW5kZW50VHJhbnNmb3JtZXIiLCJpbmxpbmVBcnJheVRyYW5zZm9ybWVyIiwidHJpbVJlc3VsdFRyYW5zZm9ybWVyIiwic3BsaXRTdHJpbmdUcmFuc2Zvcm1lciIsInJlcGxhY2VTdWJzdGl0dXRpb25UcmFuc2Zvcm1lciIsInNhZmVIdG1sIl0sIm1hcHBpbmdzIjoiQUFBQSxPQUFPQSxXQUFQLE1BQXdCLGdCQUF4QjtBQUNBLE9BQU9DLHNCQUFQLE1BQW1DLDJCQUFuQztBQUNBLE9BQU9DLHNCQUFQLE1BQW1DLDJCQUFuQztBQUNBLE9BQU9DLHFCQUFQLE1BQWtDLDBCQUFsQztBQUNBLE9BQU9DLHNCQUFQLE1BQW1DLDJCQUFuQztBQUNBLE9BQU9DLDhCQUFQLE1BQTJDLG1DQUEzQzs7QUFFQSxJQUFNQyxXQUFXLElBQUlOLFdBQUosQ0FDZkksdUJBQXVCLElBQXZCLENBRGUsRUFFZkYsc0JBRmUsRUFHZkQsc0JBSGUsRUFJZkUscUJBSmUsRUFLZkUsK0JBQStCLElBQS9CLEVBQXFDLE9BQXJDLENBTGUsRUFNZkEsK0JBQStCLElBQS9CLEVBQXFDLE1BQXJDLENBTmUsRUFPZkEsK0JBQStCLElBQS9CLEVBQXFDLE1BQXJDLENBUGUsRUFRZkEsK0JBQStCLElBQS9CLEVBQXFDLFFBQXJDLENBUmUsRUFTZkEsK0JBQStCLElBQS9CLEVBQXFDLFFBQXJDLENBVGUsRUFVZkEsK0JBQStCLElBQS9CLEVBQXFDLFFBQXJDLENBVmUsQ0FBakI7O0FBYUEsZUFBZUMsUUFBZiIsImZpbGUiOiJzYWZlSHRtbC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBUZW1wbGF0ZVRhZyBmcm9tICcuLi9UZW1wbGF0ZVRhZyc7XG5pbXBvcnQgc3RyaXBJbmRlbnRUcmFuc2Zvcm1lciBmcm9tICcuLi9zdHJpcEluZGVudFRyYW5zZm9ybWVyJztcbmltcG9ydCBpbmxpbmVBcnJheVRyYW5zZm9ybWVyIGZyb20gJy4uL2lubGluZUFycmF5VHJhbnNmb3JtZXInO1xuaW1wb3J0IHRyaW1SZXN1bHRUcmFuc2Zvcm1lciBmcm9tICcuLi90cmltUmVzdWx0VHJhbnNmb3JtZXInO1xuaW1wb3J0IHNwbGl0U3RyaW5nVHJhbnNmb3JtZXIgZnJvbSAnLi4vc3BsaXRTdHJpbmdUcmFuc2Zvcm1lcic7XG5pbXBvcnQgcmVwbGFjZVN1YnN0aXR1dGlvblRyYW5zZm9ybWVyIGZyb20gJy4uL3JlcGxhY2VTdWJzdGl0dXRpb25UcmFuc2Zvcm1lcic7XG5cbmNvbnN0IHNhZmVIdG1sID0gbmV3IFRlbXBsYXRlVGFnKFxuICBzcGxpdFN0cmluZ1RyYW5zZm9ybWVyKCdcXG4nKSxcbiAgaW5saW5lQXJyYXlUcmFuc2Zvcm1lcixcbiAgc3RyaXBJbmRlbnRUcmFuc2Zvcm1lcixcbiAgdHJpbVJlc3VsdFRyYW5zZm9ybWVyLFxuICByZXBsYWNlU3Vic3RpdHV0aW9uVHJhbnNmb3JtZXIoLyYvZywgJyZhbXA7JyksXG4gIHJlcGxhY2VTdWJzdGl0dXRpb25UcmFuc2Zvcm1lcigvPC9nLCAnJmx0OycpLFxuICByZXBsYWNlU3Vic3RpdHV0aW9uVHJhbnNmb3JtZXIoLz4vZywgJyZndDsnKSxcbiAgcmVwbGFjZVN1YnN0aXR1dGlvblRyYW5zZm9ybWVyKC9cIi9nLCAnJnF1b3Q7JyksXG4gIHJlcGxhY2VTdWJzdGl0dXRpb25UcmFuc2Zvcm1lcigvJy9nLCAnJiN4Mjc7JyksXG4gIHJlcGxhY2VTdWJzdGl0dXRpb25UcmFuc2Zvcm1lcigvYC9nLCAnJiN4NjA7JyksXG4pO1xuXG5leHBvcnQgZGVmYXVsdCBzYWZlSHRtbDtcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/safeHtml/index.js
+ const safeHtml_safeHtml = (( null && (safeHtml)));
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zYWZlSHRtbC9pbmRleC5qcyJdLCJuYW1lcyI6WyJkZWZhdWx0Il0sIm1hcHBpbmdzIjoicUJBQW9CLFk7cUJBQWJBLE8iLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBmcm9tICcuL3NhZmVIdG1sJztcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/replaceResultTransformer/replaceResultTransformer.js
-/**
- * Replaces tabs, newlines and spaces with the chosen value when they occur in sequences
- * @param  {(String|RegExp)} replaceWhat - the value or pattern that should be replaced
- * @param  {*}               replaceWith - the replacement value
- * @return {Object}                      - a TemplateTag transformer
- */
+;
 var replaceResultTransformer = function replaceResultTransformer(replaceWhat, replaceWith) {
   return {
     onEndResult: function onEndResult(endResult) {
@@ -974,35 +843,30 @@ var replaceResultTransformer = function replaceResultTransformer(replaceWhat, re
   };
 };
 
-/* harmony default export */ const replaceResultTransformer_replaceResultTransformer = (replaceResultTransformer);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9yZXBsYWNlUmVzdWx0VHJhbnNmb3JtZXIvcmVwbGFjZVJlc3VsdFRyYW5zZm9ybWVyLmpzIl0sIm5hbWVzIjpbInJlcGxhY2VSZXN1bHRUcmFuc2Zvcm1lciIsInJlcGxhY2VXaGF0IiwicmVwbGFjZVdpdGgiLCJvbkVuZFJlc3VsdCIsImVuZFJlc3VsdCIsIkVycm9yIiwicmVwbGFjZSJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7OztBQU1BLElBQU1BLDJCQUEyQixTQUEzQkEsd0JBQTJCLENBQUNDLFdBQUQsRUFBY0MsV0FBZDtBQUFBLFNBQStCO0FBQzlEQyxlQUQ4RCx1QkFDbERDLFNBRGtELEVBQ3ZDO0FBQ3JCLFVBQUlILGVBQWUsSUFBZixJQUF1QkMsZUFBZSxJQUExQyxFQUFnRDtBQUM5QyxjQUFNLElBQUlHLEtBQUosQ0FDSix5REFESSxDQUFOO0FBR0Q7QUFDRCxhQUFPRCxVQUFVRSxPQUFWLENBQWtCTCxXQUFsQixFQUErQkMsV0FBL0IsQ0FBUDtBQUNEO0FBUjZELEdBQS9CO0FBQUEsQ0FBakM7O0FBV0EsZUFBZUYsd0JBQWYiLCJmaWxlIjoicmVwbGFjZVJlc3VsdFRyYW5zZm9ybWVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBSZXBsYWNlcyB0YWJzLCBuZXdsaW5lcyBhbmQgc3BhY2VzIHdpdGggdGhlIGNob3NlbiB2YWx1ZSB3aGVuIHRoZXkgb2NjdXIgaW4gc2VxdWVuY2VzXG4gKiBAcGFyYW0gIHsoU3RyaW5nfFJlZ0V4cCl9IHJlcGxhY2VXaGF0IC0gdGhlIHZhbHVlIG9yIHBhdHRlcm4gdGhhdCBzaG91bGQgYmUgcmVwbGFjZWRcbiAqIEBwYXJhbSAgeyp9ICAgICAgICAgICAgICAgcmVwbGFjZVdpdGggLSB0aGUgcmVwbGFjZW1lbnQgdmFsdWVcbiAqIEByZXR1cm4ge09iamVjdH0gICAgICAgICAgICAgICAgICAgICAgLSBhIFRlbXBsYXRlVGFnIHRyYW5zZm9ybWVyXG4gKi9cbmNvbnN0IHJlcGxhY2VSZXN1bHRUcmFuc2Zvcm1lciA9IChyZXBsYWNlV2hhdCwgcmVwbGFjZVdpdGgpID0+ICh7XG4gIG9uRW5kUmVzdWx0KGVuZFJlc3VsdCkge1xuICAgIGlmIChyZXBsYWNlV2hhdCA9PSBudWxsIHx8IHJlcGxhY2VXaXRoID09IG51bGwpIHtcbiAgICAgIHRocm93IG5ldyBFcnJvcihcbiAgICAgICAgJ3JlcGxhY2VSZXN1bHRUcmFuc2Zvcm1lciByZXF1aXJlcyBhdCBsZWFzdCAyIGFyZ3VtZW50cy4nLFxuICAgICAgKTtcbiAgICB9XG4gICAgcmV0dXJuIGVuZFJlc3VsdC5yZXBsYWNlKHJlcGxhY2VXaGF0LCByZXBsYWNlV2l0aCk7XG4gIH0sXG59KTtcblxuZXhwb3J0IGRlZmF1bHQgcmVwbGFjZVJlc3VsdFRyYW5zZm9ybWVyO1xuIl19
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/oneLine/oneLine.js
+ const replaceResultTransformer_replaceResultTransformer = (replaceResultTransformer);
+;
 
 
 
 
 var oneLine = new TemplateTag_TemplateTag(replaceResultTransformer_replaceResultTransformer(/(?:\n(?:\s*))+/g, ' '), trimResultTransformer_trimResultTransformer);
 
-/* harmony default export */ const oneLine_oneLine = ((/* unused pure expression or super */ null && (oneLine)));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9vbmVMaW5lL29uZUxpbmUuanMiXSwibmFtZXMiOlsiVGVtcGxhdGVUYWciLCJ0cmltUmVzdWx0VHJhbnNmb3JtZXIiLCJyZXBsYWNlUmVzdWx0VHJhbnNmb3JtZXIiLCJvbmVMaW5lIl0sIm1hcHBpbmdzIjoiQUFBQSxPQUFPQSxXQUFQLE1BQXdCLGdCQUF4QjtBQUNBLE9BQU9DLHFCQUFQLE1BQWtDLDBCQUFsQztBQUNBLE9BQU9DLHdCQUFQLE1BQXFDLDZCQUFyQzs7QUFFQSxJQUFNQyxVQUFVLElBQUlILFdBQUosQ0FDZEUseUJBQXlCLGlCQUF6QixFQUE0QyxHQUE1QyxDQURjLEVBRWRELHFCQUZjLENBQWhCOztBQUtBLGVBQWVFLE9BQWYiLCJmaWxlIjoib25lTGluZS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBUZW1wbGF0ZVRhZyBmcm9tICcuLi9UZW1wbGF0ZVRhZyc7XG5pbXBvcnQgdHJpbVJlc3VsdFRyYW5zZm9ybWVyIGZyb20gJy4uL3RyaW1SZXN1bHRUcmFuc2Zvcm1lcic7XG5pbXBvcnQgcmVwbGFjZVJlc3VsdFRyYW5zZm9ybWVyIGZyb20gJy4uL3JlcGxhY2VSZXN1bHRUcmFuc2Zvcm1lcic7XG5cbmNvbnN0IG9uZUxpbmUgPSBuZXcgVGVtcGxhdGVUYWcoXG4gIHJlcGxhY2VSZXN1bHRUcmFuc2Zvcm1lcigvKD86XFxuKD86XFxzKikpKy9nLCAnICcpLFxuICB0cmltUmVzdWx0VHJhbnNmb3JtZXIsXG4pO1xuXG5leHBvcnQgZGVmYXVsdCBvbmVMaW5lO1xuIl19
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/oneLine/index.js
+ const oneLine_oneLine = (( null && (oneLine)));
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9vbmVMaW5lL2luZGV4LmpzIl0sIm5hbWVzIjpbImRlZmF1bHQiXSwibWFwcGluZ3MiOiJxQkFBb0IsVztxQkFBYkEsTyIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IGZyb20gJy4vb25lTGluZSc7XG4iXX0=
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/oneLineTrim/oneLineTrim.js
+;
 
 
 
 
 var oneLineTrim = new TemplateTag_TemplateTag(replaceResultTransformer_replaceResultTransformer(/(?:\n\s*)/g, ''), trimResultTransformer_trimResultTransformer);
 
-/* harmony default export */ const oneLineTrim_oneLineTrim = ((/* unused pure expression or super */ null && (oneLineTrim)));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9vbmVMaW5lVHJpbS9vbmVMaW5lVHJpbS5qcyJdLCJuYW1lcyI6WyJUZW1wbGF0ZVRhZyIsInRyaW1SZXN1bHRUcmFuc2Zvcm1lciIsInJlcGxhY2VSZXN1bHRUcmFuc2Zvcm1lciIsIm9uZUxpbmVUcmltIl0sIm1hcHBpbmdzIjoiQUFBQSxPQUFPQSxXQUFQLE1BQXdCLGdCQUF4QjtBQUNBLE9BQU9DLHFCQUFQLE1BQWtDLDBCQUFsQztBQUNBLE9BQU9DLHdCQUFQLE1BQXFDLDZCQUFyQzs7QUFFQSxJQUFNQyxjQUFjLElBQUlILFdBQUosQ0FDbEJFLHlCQUF5QixZQUF6QixFQUF1QyxFQUF2QyxDQURrQixFQUVsQkQscUJBRmtCLENBQXBCOztBQUtBLGVBQWVFLFdBQWYiLCJmaWxlIjoib25lTGluZVRyaW0uanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgVGVtcGxhdGVUYWcgZnJvbSAnLi4vVGVtcGxhdGVUYWcnO1xuaW1wb3J0IHRyaW1SZXN1bHRUcmFuc2Zvcm1lciBmcm9tICcuLi90cmltUmVzdWx0VHJhbnNmb3JtZXInO1xuaW1wb3J0IHJlcGxhY2VSZXN1bHRUcmFuc2Zvcm1lciBmcm9tICcuLi9yZXBsYWNlUmVzdWx0VHJhbnNmb3JtZXInO1xuXG5jb25zdCBvbmVMaW5lVHJpbSA9IG5ldyBUZW1wbGF0ZVRhZyhcbiAgcmVwbGFjZVJlc3VsdFRyYW5zZm9ybWVyKC8oPzpcXG5cXHMqKS9nLCAnJyksXG4gIHRyaW1SZXN1bHRUcmFuc2Zvcm1lcixcbik7XG5cbmV4cG9ydCBkZWZhdWx0IG9uZUxpbmVUcmltO1xuIl19
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/oneLineTrim/index.js
+ const oneLineTrim_oneLineTrim = (( null && (oneLineTrim)));
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9vbmVMaW5lVHJpbS9pbmRleC5qcyJdLCJuYW1lcyI6WyJkZWZhdWx0Il0sIm1hcHBpbmdzIjoicUJBQW9CLGU7cUJBQWJBLE8iLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBmcm9tICcuL29uZUxpbmVUcmltJztcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/oneLineCommaLists/oneLineCommaLists.js
+;
 
 
 
@@ -1010,13 +874,11 @@ var oneLineTrim = new TemplateTag_TemplateTag(replaceResultTransformer_replaceRe
 
 var oneLineCommaLists = new TemplateTag_TemplateTag(inlineArrayTransformer_inlineArrayTransformer({ separator: ',' }), replaceResultTransformer_replaceResultTransformer(/(?:\s+)/g, ' '), trimResultTransformer_trimResultTransformer);
 
-/* harmony default export */ const oneLineCommaLists_oneLineCommaLists = ((/* unused pure expression or super */ null && (oneLineCommaLists)));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9vbmVMaW5lQ29tbWFMaXN0cy9vbmVMaW5lQ29tbWFMaXN0cy5qcyJdLCJuYW1lcyI6WyJUZW1wbGF0ZVRhZyIsImlubGluZUFycmF5VHJhbnNmb3JtZXIiLCJ0cmltUmVzdWx0VHJhbnNmb3JtZXIiLCJyZXBsYWNlUmVzdWx0VHJhbnNmb3JtZXIiLCJvbmVMaW5lQ29tbWFMaXN0cyIsInNlcGFyYXRvciJdLCJtYXBwaW5ncyI6IkFBQUEsT0FBT0EsV0FBUCxNQUF3QixnQkFBeEI7QUFDQSxPQUFPQyxzQkFBUCxNQUFtQywyQkFBbkM7QUFDQSxPQUFPQyxxQkFBUCxNQUFrQywwQkFBbEM7QUFDQSxPQUFPQyx3QkFBUCxNQUFxQyw2QkFBckM7O0FBRUEsSUFBTUMsb0JBQW9CLElBQUlKLFdBQUosQ0FDeEJDLHVCQUF1QixFQUFFSSxXQUFXLEdBQWIsRUFBdkIsQ0FEd0IsRUFFeEJGLHlCQUF5QixVQUF6QixFQUFxQyxHQUFyQyxDQUZ3QixFQUd4QkQscUJBSHdCLENBQTFCOztBQU1BLGVBQWVFLGlCQUFmIiwiZmlsZSI6Im9uZUxpbmVDb21tYUxpc3RzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFRlbXBsYXRlVGFnIGZyb20gJy4uL1RlbXBsYXRlVGFnJztcbmltcG9ydCBpbmxpbmVBcnJheVRyYW5zZm9ybWVyIGZyb20gJy4uL2lubGluZUFycmF5VHJhbnNmb3JtZXInO1xuaW1wb3J0IHRyaW1SZXN1bHRUcmFuc2Zvcm1lciBmcm9tICcuLi90cmltUmVzdWx0VHJhbnNmb3JtZXInO1xuaW1wb3J0IHJlcGxhY2VSZXN1bHRUcmFuc2Zvcm1lciBmcm9tICcuLi9yZXBsYWNlUmVzdWx0VHJhbnNmb3JtZXInO1xuXG5jb25zdCBvbmVMaW5lQ29tbWFMaXN0cyA9IG5ldyBUZW1wbGF0ZVRhZyhcbiAgaW5saW5lQXJyYXlUcmFuc2Zvcm1lcih7IHNlcGFyYXRvcjogJywnIH0pLFxuICByZXBsYWNlUmVzdWx0VHJhbnNmb3JtZXIoLyg/OlxccyspL2csICcgJyksXG4gIHRyaW1SZXN1bHRUcmFuc2Zvcm1lcixcbik7XG5cbmV4cG9ydCBkZWZhdWx0IG9uZUxpbmVDb21tYUxpc3RzO1xuIl19
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/oneLineCommaLists/index.js
+ const oneLineCommaLists_oneLineCommaLists = (( null && (oneLineCommaLists)));
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9vbmVMaW5lQ29tbWFMaXN0cy9pbmRleC5qcyJdLCJuYW1lcyI6WyJkZWZhdWx0Il0sIm1hcHBpbmdzIjoicUJBQW9CLHFCO3FCQUFiQSxPIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgZnJvbSAnLi9vbmVMaW5lQ29tbWFMaXN0cyc7XG4iXX0=
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/oneLineCommaListsOr/oneLineCommaListsOr.js
+;
 
 
 
@@ -1024,13 +886,11 @@ var oneLineCommaLists = new TemplateTag_TemplateTag(inlineArrayTransformer_inlin
 
 var oneLineCommaListsOr = new TemplateTag_TemplateTag(inlineArrayTransformer_inlineArrayTransformer({ separator: ',', conjunction: 'or' }), replaceResultTransformer_replaceResultTransformer(/(?:\s+)/g, ' '), trimResultTransformer_trimResultTransformer);
 
-/* harmony default export */ const oneLineCommaListsOr_oneLineCommaListsOr = ((/* unused pure expression or super */ null && (oneLineCommaListsOr)));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9vbmVMaW5lQ29tbWFMaXN0c09yL29uZUxpbmVDb21tYUxpc3RzT3IuanMiXSwibmFtZXMiOlsiVGVtcGxhdGVUYWciLCJpbmxpbmVBcnJheVRyYW5zZm9ybWVyIiwidHJpbVJlc3VsdFRyYW5zZm9ybWVyIiwicmVwbGFjZVJlc3VsdFRyYW5zZm9ybWVyIiwib25lTGluZUNvbW1hTGlzdHNPciIsInNlcGFyYXRvciIsImNvbmp1bmN0aW9uIl0sIm1hcHBpbmdzIjoiQUFBQSxPQUFPQSxXQUFQLE1BQXdCLGdCQUF4QjtBQUNBLE9BQU9DLHNCQUFQLE1BQW1DLDJCQUFuQztBQUNBLE9BQU9DLHFCQUFQLE1BQWtDLDBCQUFsQztBQUNBLE9BQU9DLHdCQUFQLE1BQXFDLDZCQUFyQzs7QUFFQSxJQUFNQyxzQkFBc0IsSUFBSUosV0FBSixDQUMxQkMsdUJBQXVCLEVBQUVJLFdBQVcsR0FBYixFQUFrQkMsYUFBYSxJQUEvQixFQUF2QixDQUQwQixFQUUxQkgseUJBQXlCLFVBQXpCLEVBQXFDLEdBQXJDLENBRjBCLEVBRzFCRCxxQkFIMEIsQ0FBNUI7O0FBTUEsZUFBZUUsbUJBQWYiLCJmaWxlIjoib25lTGluZUNvbW1hTGlzdHNPci5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBUZW1wbGF0ZVRhZyBmcm9tICcuLi9UZW1wbGF0ZVRhZyc7XG5pbXBvcnQgaW5saW5lQXJyYXlUcmFuc2Zvcm1lciBmcm9tICcuLi9pbmxpbmVBcnJheVRyYW5zZm9ybWVyJztcbmltcG9ydCB0cmltUmVzdWx0VHJhbnNmb3JtZXIgZnJvbSAnLi4vdHJpbVJlc3VsdFRyYW5zZm9ybWVyJztcbmltcG9ydCByZXBsYWNlUmVzdWx0VHJhbnNmb3JtZXIgZnJvbSAnLi4vcmVwbGFjZVJlc3VsdFRyYW5zZm9ybWVyJztcblxuY29uc3Qgb25lTGluZUNvbW1hTGlzdHNPciA9IG5ldyBUZW1wbGF0ZVRhZyhcbiAgaW5saW5lQXJyYXlUcmFuc2Zvcm1lcih7IHNlcGFyYXRvcjogJywnLCBjb25qdW5jdGlvbjogJ29yJyB9KSxcbiAgcmVwbGFjZVJlc3VsdFRyYW5zZm9ybWVyKC8oPzpcXHMrKS9nLCAnICcpLFxuICB0cmltUmVzdWx0VHJhbnNmb3JtZXIsXG4pO1xuXG5leHBvcnQgZGVmYXVsdCBvbmVMaW5lQ29tbWFMaXN0c09yO1xuIl19
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/oneLineCommaListsOr/index.js
+ const oneLineCommaListsOr_oneLineCommaListsOr = (( null && (oneLineCommaListsOr)));
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9vbmVMaW5lQ29tbWFMaXN0c09yL2luZGV4LmpzIl0sIm5hbWVzIjpbImRlZmF1bHQiXSwibWFwcGluZ3MiOiJxQkFBb0IsdUI7cUJBQWJBLE8iLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBmcm9tICcuL29uZUxpbmVDb21tYUxpc3RzT3InO1xuIl19
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/oneLineCommaListsAnd/oneLineCommaListsAnd.js
+;
 
 
 
@@ -1038,13 +898,11 @@ var oneLineCommaListsOr = new TemplateTag_TemplateTag(inlineArrayTransformer_inl
 
 var oneLineCommaListsAnd = new TemplateTag_TemplateTag(inlineArrayTransformer_inlineArrayTransformer({ separator: ',', conjunction: 'and' }), replaceResultTransformer_replaceResultTransformer(/(?:\s+)/g, ' '), trimResultTransformer_trimResultTransformer);
 
-/* harmony default export */ const oneLineCommaListsAnd_oneLineCommaListsAnd = ((/* unused pure expression or super */ null && (oneLineCommaListsAnd)));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9vbmVMaW5lQ29tbWFMaXN0c0FuZC9vbmVMaW5lQ29tbWFMaXN0c0FuZC5qcyJdLCJuYW1lcyI6WyJUZW1wbGF0ZVRhZyIsImlubGluZUFycmF5VHJhbnNmb3JtZXIiLCJ0cmltUmVzdWx0VHJhbnNmb3JtZXIiLCJyZXBsYWNlUmVzdWx0VHJhbnNmb3JtZXIiLCJvbmVMaW5lQ29tbWFMaXN0c0FuZCIsInNlcGFyYXRvciIsImNvbmp1bmN0aW9uIl0sIm1hcHBpbmdzIjoiQUFBQSxPQUFPQSxXQUFQLE1BQXdCLGdCQUF4QjtBQUNBLE9BQU9DLHNCQUFQLE1BQW1DLDJCQUFuQztBQUNBLE9BQU9DLHFCQUFQLE1BQWtDLDBCQUFsQztBQUNBLE9BQU9DLHdCQUFQLE1BQXFDLDZCQUFyQzs7QUFFQSxJQUFNQyx1QkFBdUIsSUFBSUosV0FBSixDQUMzQkMsdUJBQXVCLEVBQUVJLFdBQVcsR0FBYixFQUFrQkMsYUFBYSxLQUEvQixFQUF2QixDQUQyQixFQUUzQkgseUJBQXlCLFVBQXpCLEVBQXFDLEdBQXJDLENBRjJCLEVBRzNCRCxxQkFIMkIsQ0FBN0I7O0FBTUEsZUFBZUUsb0JBQWYiLCJmaWxlIjoib25lTGluZUNvbW1hTGlzdHNBbmQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgVGVtcGxhdGVUYWcgZnJvbSAnLi4vVGVtcGxhdGVUYWcnO1xuaW1wb3J0IGlubGluZUFycmF5VHJhbnNmb3JtZXIgZnJvbSAnLi4vaW5saW5lQXJyYXlUcmFuc2Zvcm1lcic7XG5pbXBvcnQgdHJpbVJlc3VsdFRyYW5zZm9ybWVyIGZyb20gJy4uL3RyaW1SZXN1bHRUcmFuc2Zvcm1lcic7XG5pbXBvcnQgcmVwbGFjZVJlc3VsdFRyYW5zZm9ybWVyIGZyb20gJy4uL3JlcGxhY2VSZXN1bHRUcmFuc2Zvcm1lcic7XG5cbmNvbnN0IG9uZUxpbmVDb21tYUxpc3RzQW5kID0gbmV3IFRlbXBsYXRlVGFnKFxuICBpbmxpbmVBcnJheVRyYW5zZm9ybWVyKHsgc2VwYXJhdG9yOiAnLCcsIGNvbmp1bmN0aW9uOiAnYW5kJyB9KSxcbiAgcmVwbGFjZVJlc3VsdFRyYW5zZm9ybWVyKC8oPzpcXHMrKS9nLCAnICcpLFxuICB0cmltUmVzdWx0VHJhbnNmb3JtZXIsXG4pO1xuXG5leHBvcnQgZGVmYXVsdCBvbmVMaW5lQ29tbWFMaXN0c0FuZDtcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/oneLineCommaListsAnd/index.js
+ const oneLineCommaListsAnd_oneLineCommaListsAnd = (( null && (oneLineCommaListsAnd)));
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9vbmVMaW5lQ29tbWFMaXN0c0FuZC9pbmRleC5qcyJdLCJuYW1lcyI6WyJkZWZhdWx0Il0sIm1hcHBpbmdzIjoicUJBQW9CLHdCO3FCQUFiQSxPIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgZnJvbSAnLi9vbmVMaW5lQ29tbWFMaXN0c0FuZCc7XG4iXX0=
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/inlineLists/inlineLists.js
+;
 
 
 
@@ -1052,13 +910,11 @@ var oneLineCommaListsAnd = new TemplateTag_TemplateTag(inlineArrayTransformer_in
 
 var inlineLists = new TemplateTag_TemplateTag(inlineArrayTransformer_inlineArrayTransformer, stripIndentTransformer_stripIndentTransformer, trimResultTransformer_trimResultTransformer);
 
-/* harmony default export */ const inlineLists_inlineLists = ((/* unused pure expression or super */ null && (inlineLists)));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9pbmxpbmVMaXN0cy9pbmxpbmVMaXN0cy5qcyJdLCJuYW1lcyI6WyJUZW1wbGF0ZVRhZyIsInN0cmlwSW5kZW50VHJhbnNmb3JtZXIiLCJpbmxpbmVBcnJheVRyYW5zZm9ybWVyIiwidHJpbVJlc3VsdFRyYW5zZm9ybWVyIiwiaW5saW5lTGlzdHMiXSwibWFwcGluZ3MiOiJBQUFBLE9BQU9BLFdBQVAsTUFBd0IsZ0JBQXhCO0FBQ0EsT0FBT0Msc0JBQVAsTUFBbUMsMkJBQW5DO0FBQ0EsT0FBT0Msc0JBQVAsTUFBbUMsMkJBQW5DO0FBQ0EsT0FBT0MscUJBQVAsTUFBa0MsMEJBQWxDOztBQUVBLElBQU1DLGNBQWMsSUFBSUosV0FBSixDQUNsQkUsc0JBRGtCLEVBRWxCRCxzQkFGa0IsRUFHbEJFLHFCQUhrQixDQUFwQjs7QUFNQSxlQUFlQyxXQUFmIiwiZmlsZSI6ImlubGluZUxpc3RzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFRlbXBsYXRlVGFnIGZyb20gJy4uL1RlbXBsYXRlVGFnJztcbmltcG9ydCBzdHJpcEluZGVudFRyYW5zZm9ybWVyIGZyb20gJy4uL3N0cmlwSW5kZW50VHJhbnNmb3JtZXInO1xuaW1wb3J0IGlubGluZUFycmF5VHJhbnNmb3JtZXIgZnJvbSAnLi4vaW5saW5lQXJyYXlUcmFuc2Zvcm1lcic7XG5pbXBvcnQgdHJpbVJlc3VsdFRyYW5zZm9ybWVyIGZyb20gJy4uL3RyaW1SZXN1bHRUcmFuc2Zvcm1lcic7XG5cbmNvbnN0IGlubGluZUxpc3RzID0gbmV3IFRlbXBsYXRlVGFnKFxuICBpbmxpbmVBcnJheVRyYW5zZm9ybWVyLFxuICBzdHJpcEluZGVudFRyYW5zZm9ybWVyLFxuICB0cmltUmVzdWx0VHJhbnNmb3JtZXIsXG4pO1xuXG5leHBvcnQgZGVmYXVsdCBpbmxpbmVMaXN0cztcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/inlineLists/index.js
+ const inlineLists_inlineLists = (( null && (inlineLists)));
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9pbmxpbmVMaXN0cy9pbmRleC5qcyJdLCJuYW1lcyI6WyJkZWZhdWx0Il0sIm1hcHBpbmdzIjoicUJBQW9CLGU7cUJBQWJBLE8iLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBmcm9tICcuL2lubGluZUxpc3RzJztcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/oneLineInlineLists/oneLineInlineLists.js
+;
 
 
 
@@ -1066,63 +922,33 @@ var inlineLists = new TemplateTag_TemplateTag(inlineArrayTransformer_inlineArray
 
 var oneLineInlineLists = new TemplateTag_TemplateTag(inlineArrayTransformer_inlineArrayTransformer, replaceResultTransformer_replaceResultTransformer(/(?:\s+)/g, ' '), trimResultTransformer_trimResultTransformer);
 
-/* harmony default export */ const oneLineInlineLists_oneLineInlineLists = ((/* unused pure expression or super */ null && (oneLineInlineLists)));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9vbmVMaW5lSW5saW5lTGlzdHMvb25lTGluZUlubGluZUxpc3RzLmpzIl0sIm5hbWVzIjpbIlRlbXBsYXRlVGFnIiwiaW5saW5lQXJyYXlUcmFuc2Zvcm1lciIsInRyaW1SZXN1bHRUcmFuc2Zvcm1lciIsInJlcGxhY2VSZXN1bHRUcmFuc2Zvcm1lciIsIm9uZUxpbmVJbmxpbmVMaXN0cyJdLCJtYXBwaW5ncyI6IkFBQUEsT0FBT0EsV0FBUCxNQUF3QixnQkFBeEI7QUFDQSxPQUFPQyxzQkFBUCxNQUFtQywyQkFBbkM7QUFDQSxPQUFPQyxxQkFBUCxNQUFrQywwQkFBbEM7QUFDQSxPQUFPQyx3QkFBUCxNQUFxQyw2QkFBckM7O0FBRUEsSUFBTUMscUJBQXFCLElBQUlKLFdBQUosQ0FDekJDLHNCQUR5QixFQUV6QkUseUJBQXlCLFVBQXpCLEVBQXFDLEdBQXJDLENBRnlCLEVBR3pCRCxxQkFIeUIsQ0FBM0I7O0FBTUEsZUFBZUUsa0JBQWYiLCJmaWxlIjoib25lTGluZUlubGluZUxpc3RzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFRlbXBsYXRlVGFnIGZyb20gJy4uL1RlbXBsYXRlVGFnJztcbmltcG9ydCBpbmxpbmVBcnJheVRyYW5zZm9ybWVyIGZyb20gJy4uL2lubGluZUFycmF5VHJhbnNmb3JtZXInO1xuaW1wb3J0IHRyaW1SZXN1bHRUcmFuc2Zvcm1lciBmcm9tICcuLi90cmltUmVzdWx0VHJhbnNmb3JtZXInO1xuaW1wb3J0IHJlcGxhY2VSZXN1bHRUcmFuc2Zvcm1lciBmcm9tICcuLi9yZXBsYWNlUmVzdWx0VHJhbnNmb3JtZXInO1xuXG5jb25zdCBvbmVMaW5lSW5saW5lTGlzdHMgPSBuZXcgVGVtcGxhdGVUYWcoXG4gIGlubGluZUFycmF5VHJhbnNmb3JtZXIsXG4gIHJlcGxhY2VSZXN1bHRUcmFuc2Zvcm1lcigvKD86XFxzKykvZywgJyAnKSxcbiAgdHJpbVJlc3VsdFRyYW5zZm9ybWVyLFxuKTtcblxuZXhwb3J0IGRlZmF1bHQgb25lTGluZUlubGluZUxpc3RzO1xuIl19
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/oneLineInlineLists/index.js
+ const oneLineInlineLists_oneLineInlineLists = (( null && (oneLineInlineLists)));
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9vbmVMaW5lSW5saW5lTGlzdHMvaW5kZXguanMiXSwibmFtZXMiOlsiZGVmYXVsdCJdLCJtYXBwaW5ncyI6InFCQUFvQixzQjtxQkFBYkEsTyIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IGZyb20gJy4vb25lTGluZUlubGluZUxpc3RzJztcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/stripIndent/stripIndent.js
+;
 
 
 
 
 var stripIndent = new TemplateTag_TemplateTag(stripIndentTransformer_stripIndentTransformer, trimResultTransformer_trimResultTransformer);
 
-/* harmony default export */ const stripIndent_stripIndent = (stripIndent);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zdHJpcEluZGVudC9zdHJpcEluZGVudC5qcyJdLCJuYW1lcyI6WyJUZW1wbGF0ZVRhZyIsInN0cmlwSW5kZW50VHJhbnNmb3JtZXIiLCJ0cmltUmVzdWx0VHJhbnNmb3JtZXIiLCJzdHJpcEluZGVudCJdLCJtYXBwaW5ncyI6IkFBQUEsT0FBT0EsV0FBUCxNQUF3QixnQkFBeEI7QUFDQSxPQUFPQyxzQkFBUCxNQUFtQywyQkFBbkM7QUFDQSxPQUFPQyxxQkFBUCxNQUFrQywwQkFBbEM7O0FBRUEsSUFBTUMsY0FBYyxJQUFJSCxXQUFKLENBQ2xCQyxzQkFEa0IsRUFFbEJDLHFCQUZrQixDQUFwQjs7QUFLQSxlQUFlQyxXQUFmIiwiZmlsZSI6InN0cmlwSW5kZW50LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFRlbXBsYXRlVGFnIGZyb20gJy4uL1RlbXBsYXRlVGFnJztcbmltcG9ydCBzdHJpcEluZGVudFRyYW5zZm9ybWVyIGZyb20gJy4uL3N0cmlwSW5kZW50VHJhbnNmb3JtZXInO1xuaW1wb3J0IHRyaW1SZXN1bHRUcmFuc2Zvcm1lciBmcm9tICcuLi90cmltUmVzdWx0VHJhbnNmb3JtZXInO1xuXG5jb25zdCBzdHJpcEluZGVudCA9IG5ldyBUZW1wbGF0ZVRhZyhcbiAgc3RyaXBJbmRlbnRUcmFuc2Zvcm1lcixcbiAgdHJpbVJlc3VsdFRyYW5zZm9ybWVyLFxuKTtcblxuZXhwb3J0IGRlZmF1bHQgc3RyaXBJbmRlbnQ7XG4iXX0=
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/stripIndent/index.js
+ const stripIndent_stripIndent = (stripIndent);
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zdHJpcEluZGVudC9pbmRleC5qcyJdLCJuYW1lcyI6WyJkZWZhdWx0Il0sIm1hcHBpbmdzIjoicUJBQW9CLGU7cUJBQWJBLE8iLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBmcm9tICcuL3N0cmlwSW5kZW50JztcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/stripIndents/stripIndents.js
+;
 
 
 
 
 var stripIndents = new TemplateTag_TemplateTag(stripIndentTransformer_stripIndentTransformer('all'), trimResultTransformer_trimResultTransformer);
 
-/* harmony default export */ const stripIndents_stripIndents = (stripIndents);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zdHJpcEluZGVudHMvc3RyaXBJbmRlbnRzLmpzIl0sIm5hbWVzIjpbIlRlbXBsYXRlVGFnIiwic3RyaXBJbmRlbnRUcmFuc2Zvcm1lciIsInRyaW1SZXN1bHRUcmFuc2Zvcm1lciIsInN0cmlwSW5kZW50cyJdLCJtYXBwaW5ncyI6IkFBQUEsT0FBT0EsV0FBUCxNQUF3QixnQkFBeEI7QUFDQSxPQUFPQyxzQkFBUCxNQUFtQywyQkFBbkM7QUFDQSxPQUFPQyxxQkFBUCxNQUFrQywwQkFBbEM7O0FBRUEsSUFBTUMsZUFBZSxJQUFJSCxXQUFKLENBQ25CQyx1QkFBdUIsS0FBdkIsQ0FEbUIsRUFFbkJDLHFCQUZtQixDQUFyQjs7QUFLQSxlQUFlQyxZQUFmIiwiZmlsZSI6InN0cmlwSW5kZW50cy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBUZW1wbGF0ZVRhZyBmcm9tICcuLi9UZW1wbGF0ZVRhZyc7XG5pbXBvcnQgc3RyaXBJbmRlbnRUcmFuc2Zvcm1lciBmcm9tICcuLi9zdHJpcEluZGVudFRyYW5zZm9ybWVyJztcbmltcG9ydCB0cmltUmVzdWx0VHJhbnNmb3JtZXIgZnJvbSAnLi4vdHJpbVJlc3VsdFRyYW5zZm9ybWVyJztcblxuY29uc3Qgc3RyaXBJbmRlbnRzID0gbmV3IFRlbXBsYXRlVGFnKFxuICBzdHJpcEluZGVudFRyYW5zZm9ybWVyKCdhbGwnKSxcbiAgdHJpbVJlc3VsdFRyYW5zZm9ybWVyLFxuKTtcblxuZXhwb3J0IGRlZmF1bHQgc3RyaXBJbmRlbnRzO1xuIl19
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/stripIndents/index.js
+ const stripIndents_stripIndents = (stripIndents);
+;
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zdHJpcEluZGVudHMvaW5kZXguanMiXSwibmFtZXMiOlsiZGVmYXVsdCJdLCJtYXBwaW5ncyI6InFCQUFvQixnQjtxQkFBYkEsTyIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IGZyb20gJy4vc3RyaXBJbmRlbnRzJztcbiJdfQ==
-;// CONCATENATED MODULE: ./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/es/index.js
-// core
-
-
-
-// transformers
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// tags
+;
 
 
 
@@ -1156,13 +982,31 @@ var stripIndents = new TemplateTag_TemplateTag(stripIndentTransformer_stripInden
 
 
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9pbmRleC5qcyJdLCJuYW1lcyI6WyJUZW1wbGF0ZVRhZyIsInRyaW1SZXN1bHRUcmFuc2Zvcm1lciIsInN0cmlwSW5kZW50VHJhbnNmb3JtZXIiLCJyZXBsYWNlUmVzdWx0VHJhbnNmb3JtZXIiLCJyZXBsYWNlU3Vic3RpdHV0aW9uVHJhbnNmb3JtZXIiLCJyZXBsYWNlU3RyaW5nVHJhbnNmb3JtZXIiLCJpbmxpbmVBcnJheVRyYW5zZm9ybWVyIiwic3BsaXRTdHJpbmdUcmFuc2Zvcm1lciIsInJlbW92ZU5vblByaW50aW5nVmFsdWVzVHJhbnNmb3JtZXIiLCJjb21tYUxpc3RzIiwiY29tbWFMaXN0c0FuZCIsImNvbW1hTGlzdHNPciIsImh0bWwiLCJjb2RlQmxvY2siLCJzb3VyY2UiLCJzYWZlSHRtbCIsIm9uZUxpbmUiLCJvbmVMaW5lVHJpbSIsIm9uZUxpbmVDb21tYUxpc3RzIiwib25lTGluZUNvbW1hTGlzdHNPciIsIm9uZUxpbmVDb21tYUxpc3RzQW5kIiwiaW5saW5lTGlzdHMiLCJvbmVMaW5lSW5saW5lTGlzdHMiLCJzdHJpcEluZGVudCIsInN0cmlwSW5kZW50cyJdLCJtYXBwaW5ncyI6IkFBQUE7eUJBQ3dCLGU7eUJBQWpCQSxXOztBQUVQOzttQ0FDa0MseUI7bUNBQTNCQyxxQjtvQ0FDNEIsMEI7b0NBQTVCQyxzQjtzQ0FDOEIsNEI7c0NBQTlCQyx3Qjs0Q0FDb0Msa0M7NENBQXBDQyw4QjtzQ0FDOEIsNEI7c0NBQTlCQyx3QjtvQ0FDNEIsMEI7b0NBQTVCQyxzQjtvQ0FDNEIsMEI7b0NBQTVCQyxzQjtnREFDd0Msc0M7Z0RBQXhDQyxrQzs7QUFFUDs7d0JBQ3VCLGM7d0JBQWhCQyxVOzJCQUNtQixpQjsyQkFBbkJDLGE7MEJBQ2tCLGdCOzBCQUFsQkMsWTtrQkFDVSxRO2tCQUFWQyxJO3VCQUNlLGE7dUJBQWZDLFM7b0JBQ1ksVTtvQkFBWkMsTTtzQkFDYyxZO3NCQUFkQyxRO3FCQUNhLFc7cUJBQWJDLE87eUJBQ2lCLGU7eUJBQWpCQyxXOytCQUN1QixxQjsrQkFBdkJDLGlCO2lDQUN5Qix1QjtpQ0FBekJDLG1CO2tDQUMwQix3QjtrQ0FBMUJDLG9CO3lCQUNpQixlO3lCQUFqQkMsVztnQ0FDd0Isc0I7Z0NBQXhCQyxrQjt5QkFDaUIsZTt5QkFBakJDLFc7MEJBQ2tCLGdCOzBCQUFsQkMsWSIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIGNvcmVcbmV4cG9ydCBUZW1wbGF0ZVRhZyBmcm9tICcuL1RlbXBsYXRlVGFnJztcblxuLy8gdHJhbnNmb3JtZXJzXG5leHBvcnQgdHJpbVJlc3VsdFRyYW5zZm9ybWVyIGZyb20gJy4vdHJpbVJlc3VsdFRyYW5zZm9ybWVyJztcbmV4cG9ydCBzdHJpcEluZGVudFRyYW5zZm9ybWVyIGZyb20gJy4vc3RyaXBJbmRlbnRUcmFuc2Zvcm1lcic7XG5leHBvcnQgcmVwbGFjZVJlc3VsdFRyYW5zZm9ybWVyIGZyb20gJy4vcmVwbGFjZVJlc3VsdFRyYW5zZm9ybWVyJztcbmV4cG9ydCByZXBsYWNlU3Vic3RpdHV0aW9uVHJhbnNmb3JtZXIgZnJvbSAnLi9yZXBsYWNlU3Vic3RpdHV0aW9uVHJhbnNmb3JtZXInO1xuZXhwb3J0IHJlcGxhY2VTdHJpbmdUcmFuc2Zvcm1lciBmcm9tICcuL3JlcGxhY2VTdHJpbmdUcmFuc2Zvcm1lcic7XG5leHBvcnQgaW5saW5lQXJyYXlUcmFuc2Zvcm1lciBmcm9tICcuL2lubGluZUFycmF5VHJhbnNmb3JtZXInO1xuZXhwb3J0IHNwbGl0U3RyaW5nVHJhbnNmb3JtZXIgZnJvbSAnLi9zcGxpdFN0cmluZ1RyYW5zZm9ybWVyJztcbmV4cG9ydCByZW1vdmVOb25QcmludGluZ1ZhbHVlc1RyYW5zZm9ybWVyIGZyb20gJy4vcmVtb3ZlTm9uUHJpbnRpbmdWYWx1ZXNUcmFuc2Zvcm1lcic7XG5cbi8vIHRhZ3NcbmV4cG9ydCBjb21tYUxpc3RzIGZyb20gJy4vY29tbWFMaXN0cyc7XG5leHBvcnQgY29tbWFMaXN0c0FuZCBmcm9tICcuL2NvbW1hTGlzdHNBbmQnO1xuZXhwb3J0IGNvbW1hTGlzdHNPciBmcm9tICcuL2NvbW1hTGlzdHNPcic7XG5leHBvcnQgaHRtbCBmcm9tICcuL2h0bWwnO1xuZXhwb3J0IGNvZGVCbG9jayBmcm9tICcuL2NvZGVCbG9jayc7XG5leHBvcnQgc291cmNlIGZyb20gJy4vc291cmNlJztcbmV4cG9ydCBzYWZlSHRtbCBmcm9tICcuL3NhZmVIdG1sJztcbmV4cG9ydCBvbmVMaW5lIGZyb20gJy4vb25lTGluZSc7XG5leHBvcnQgb25lTGluZVRyaW0gZnJvbSAnLi9vbmVMaW5lVHJpbSc7XG5leHBvcnQgb25lTGluZUNvbW1hTGlzdHMgZnJvbSAnLi9vbmVMaW5lQ29tbWFMaXN0cyc7XG5leHBvcnQgb25lTGluZUNvbW1hTGlzdHNPciBmcm9tICcuL29uZUxpbmVDb21tYUxpc3RzT3InO1xuZXhwb3J0IG9uZUxpbmVDb21tYUxpc3RzQW5kIGZyb20gJy4vb25lTGluZUNvbW1hTGlzdHNBbmQnO1xuZXhwb3J0IGlubGluZUxpc3RzIGZyb20gJy4vaW5saW5lTGlzdHMnO1xuZXhwb3J0IG9uZUxpbmVJbmxpbmVMaXN0cyBmcm9tICcuL29uZUxpbmVJbmxpbmVMaXN0cyc7XG5leHBvcnQgc3RyaXBJbmRlbnQgZnJvbSAnLi9zdHJpcEluZGVudCc7XG5leHBvcnQgc3RyaXBJbmRlbnRzIGZyb20gJy4vc3RyaXBJbmRlbnRzJztcbiJdfQ==
-// EXTERNAL MODULE: ./.yarn/cache/prismjs-npm-1.27.0-ca4e1667c6-85c7f4a3e9.zip/node_modules/prismjs/prism.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var prism = __webpack_require__("./.yarn/cache/prismjs-npm-1.27.0-ca4e1667c6-85c7f4a3e9.zip/node_modules/prismjs/prism.js");
-var prism_default = /*#__PURE__*/__webpack_require__.n(prism);
-// EXTERNAL MODULE: ./packages/grafana-ui/src/slate-plugins/slate-prism/index.ts + 1 modules
+var prism_default = __webpack_require__.n(prism);
 var slate_prism = __webpack_require__("./packages/grafana-ui/src/slate-plugins/slate-prism/index.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/syntax.ts
+;
 const QUERY_COMMANDS = [{
   label: 'fields',
   documentation: 'Retrieves the specified fields from log events'
@@ -1185,8 +1029,8 @@ const QUERY_COMMANDS = [{
   label: 'parse',
   documentation: 'Extracts data from a log field, creating one or more ephemeral fields that you can process further in the query'
 }];
-const COMPARISON_OPERATORS = (/* unused pure expression or super */ null && (['=', '!=', '<', '<=', '>', '>=']));
-const ARITHMETIC_OPERATORS = (/* unused pure expression or super */ null && (['+', '-', '*', '/', '^', '%']));
+const COMPARISON_OPERATORS = ( null && (['=', '!=', '<', '<=', '>', '>=']));
+const ARITHMETIC_OPERATORS = ( null && (['+', '-', '*', '/', '^', '%']));
 const NUMERIC_OPERATORS = [{
   label: 'abs',
   detail: 'abs(a)',
@@ -1421,9 +1265,6 @@ const tokenizer = {
     pattern: new RegExp(`(\\s+)(${KEYWORDS.join('|')})(?=\\s+)`, 'i'),
     lookbehind: true
   },
-  // 'log-group-name': {
-  //   pattern: /[\.\-_/#A-Za-z0-9]+/,
-  // },
   'field-name': {
     pattern: /(@?[_a-zA-Z]+[_.0-9a-zA-Z]*)|(`((\\`)|([^`]))*?`)/,
     greedy: true
@@ -1439,8 +1280,8 @@ const tokenizer = {
   punctuation: /[{}()`,.]/,
   whitespace: /\s+/
 };
-/* harmony default export */ const syntax = (tokenizer);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/LogsCheatSheet.tsx
+ const syntax = (tokenizer);
+;
 var LogsCheatSheet_h, _h2;
 
 
@@ -1590,14 +1431,14 @@ const CLIQ_EXAMPLES = [{
 
 function renderHighlightedMarkup(code, keyPrefix) {
   const grammar = syntax;
-  const tokens = (0,slate_prism/* flattenTokens */.a)(prism_default().tokenize(code, grammar));
+  const tokens = (0,slate_prism.a)(prism_default().tokenize(code, grammar));
   const spans = tokens.filter(token => typeof token !== 'string').map((token, i) => {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+    return (0,jsx_runtime.jsx)("span", {
       className: `prism-token token ${token.types.join(' ')} ${token.aliases.join(' ')}`,
       children: token.content
     }, `${keyPrefix}-token-${i}`);
   });
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: "slate-query-field",
     children: spans
   });
@@ -1612,7 +1453,7 @@ class LogsCheatSheet extends react.PureComponent {
   }
 
   renderExpression(expr, keyPrefix) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       className: "cheat-sheet-item__example",
       onClick: () => {
         var _this$props$query$ref, _this$props$query$ref2;
@@ -1626,23 +1467,23 @@ class LogsCheatSheet extends react.PureComponent {
           logGroupNames: 'logGroupNames' in this.props.query ? this.props.query.logGroupNames : []
         });
       },
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("pre", {
+      children: (0,jsx_runtime.jsx)("pre", {
         children: renderHighlightedMarkup(expr, keyPrefix)
       })
     }, expr);
   }
 
   renderLogsCheatSheet() {
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-      children: [LogsCheatSheet_h || (LogsCheatSheet_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h2", {
+    return (0,jsx_runtime.jsxs)("div", {
+      children: [LogsCheatSheet_h || (LogsCheatSheet_h = (0,jsx_runtime.jsx)("h2", {
         children: "CloudWatch Logs Cheat Sheet"
-      })), CLIQ_EXAMPLES.map((cat, i) => /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      })), CLIQ_EXAMPLES.map((cat, i) => (0,jsx_runtime.jsxs)("div", {
+        children: [(0,jsx_runtime.jsx)("div", {
           className: `cheat-sheet-item__title ${(0,emotion_css_esm.cx)(exampleCategory)}`,
           children: cat.category
-        }), cat.examples.map((item, j) => /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        }), cat.examples.map((item, j) => (0,jsx_runtime.jsxs)("div", {
           className: "cheat-sheet-item",
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h4", {
+          children: [(0,jsx_runtime.jsx)("h4", {
             children: item.title
           }), this.renderExpression(item.expr, `item-${j}`)]
         }, `item-${j}`))]
@@ -1651,16 +1492,16 @@ class LogsCheatSheet extends react.PureComponent {
   }
 
   render() {
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-      children: [_h2 || (_h2 = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+    return (0,jsx_runtime.jsxs)("div", {
+      children: [_h2 || (_h2 = (0,jsx_runtime.jsx)("h3", {
         children: "CloudWatch Logs cheat sheet"
-      })), CLIQ_EXAMPLES.map((cat, i) => /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      })), CLIQ_EXAMPLES.map((cat, i) => (0,jsx_runtime.jsxs)("div", {
+        children: [(0,jsx_runtime.jsx)("div", {
           className: `cheat-sheet-item__title ${(0,emotion_css_esm.cx)(exampleCategory)}`,
           children: cat.category
-        }), cat.examples.map((item, j) => /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        }), cat.examples.map((item, j) => (0,jsx_runtime.jsxs)("div", {
           className: "cheat-sheet-item",
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h4", {
+          children: [(0,jsx_runtime.jsx)("h4", {
             children: item.title
           }), this.renderExpression(item.expr, `item-${j}`)]
         }, `item-${j}`))]
@@ -1669,9 +1510,8 @@ class LogsCheatSheet extends react.PureComponent {
   }
 
 }
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/MetaInspector.tsx
+;
 var _thead;
 
 
@@ -1684,20 +1524,20 @@ function MetaInspector(_ref) {
     data = []
   } = _ref;
   const rows = (0,react.useMemo)(() => (0,lodash.groupBy)(data, 'refId'), [data]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)("table", {
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+    children: (0,jsx_runtime.jsxs)("table", {
       className: "filter-table form-inline",
-      children: [_thead || (_thead = /*#__PURE__*/(0,jsx_runtime.jsx)("thead", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+      children: [_thead || (_thead = (0,jsx_runtime.jsx)("thead", {
+        children: (0,jsx_runtime.jsxs)("tr", {
+          children: [(0,jsx_runtime.jsx)("th", {
             children: "RefId"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+          }), (0,jsx_runtime.jsx)("th", {
             children: "Metric Data Query ID"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+          }), (0,jsx_runtime.jsx)("th", {
             children: "Metric Data Query Expression"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+          }), (0,jsx_runtime.jsx)("th", {
             children: "Period"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("th", {})]
+          }), (0,jsx_runtime.jsx)("th", {})]
         })
       })), Object.entries(rows).map((_ref2, idx) => {
         var _frame$meta, _frame$meta2;
@@ -1715,15 +1555,15 @@ function MetaInspector(_ref) {
           return null;
         }
 
-        return /*#__PURE__*/(0,jsx_runtime.jsx)("tbody", {
-          children: /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+        return (0,jsx_runtime.jsx)("tbody", {
+          children: (0,jsx_runtime.jsxs)("tr", {
+            children: [(0,jsx_runtime.jsx)("td", {
               children: refId
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+            }), (0,jsx_runtime.jsx)("td", {
               children: custom.id
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+            }), (0,jsx_runtime.jsx)("td", {
               children: (_frame$meta2 = frame.meta) === null || _frame$meta2 === void 0 ? void 0 : _frame$meta2.executedQueryString
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+            }), (0,jsx_runtime.jsx)("td", {
               children: custom.period
             })]
           })
@@ -1732,9 +1572,9 @@ function MetaInspector(_ref) {
     })
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/guards.ts
+;
 const isCloudWatchLogsQuery = cloudwatchQuery => cloudwatchQuery.queryMode === 'Logs';
-const isCloudWatchMetricsQuery = cloudwatchQuery => cloudwatchQuery.queryMode === 'Metrics' || !cloudwatchQuery.hasOwnProperty('queryMode'); // in early versions of this plugin, queryMode wasn't defined in a CloudWatchMetricsQuery
+const isCloudWatchMetricsQuery = cloudwatchQuery => cloudwatchQuery.queryMode === 'Metrics' || !cloudwatchQuery.hasOwnProperty('queryMode'); 
 
 const isCloudWatchAnnotationQuery = cloudwatchQuery => cloudwatchQuery.queryMode === 'Annotations';
 const isCloudWatchAnnotation = query => {
@@ -1742,11 +1582,9 @@ const isCloudWatchAnnotation = query => {
 
   return ((_target = query.target) === null || _target === void 0 ? void 0 : _target.queryMode) === 'Annotations';
 };
-// EXTERNAL MODULE: ./.yarn/__virtual__/@grafana-experimental-virtual-22e4fdfd25/0/cache/@grafana-experimental-npm-0.0.2-canary.30-71a280d204-b5b453b937.zip/node_modules/@grafana/experimental/index.js
 var experimental = __webpack_require__("./.yarn/__virtual__/@grafana-experimental-virtual-22e4fdfd25/0/cache/@grafana-experimental-npm-0.0.2-canary.30-71a280d204-b5b453b937.zip/node_modules/@grafana/experimental/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useAsyncFn.js
 var useAsyncFn = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useAsyncFn.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/utils/utils.ts
+;
 const toOption = value => ({
   label: value,
   value
@@ -1755,7 +1593,7 @@ const appendTemplateVariables = (datasource, values) => [...values, {
   label: 'Template Variables',
   options: datasource.getVariables().map(toOption)
 }];
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/Dimensions/FilterItem.tsx
+;
 
 
 
@@ -1813,13 +1651,13 @@ const FilterItem = _ref2 => {
     });
   };
 
-  const [state, loadOptions] = (0,useAsyncFn/* default */.Z)(loadDimensionValues, [filter.key, dimensions]);
+  const [state, loadOptions] = (0,useAsyncFn.Z)(loadDimensionValues, [filter.key, dimensions]);
   const theme = (0,grafana_ui_src.useTheme2)();
   const styles = getOperatorStyles(theme);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     "data-testid": "cloudwatch-dimensions-filter-item",
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.InputGroup, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    children: (0,jsx_runtime.jsxs)(experimental.InputGroup, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         "aria-label": "Dimensions filter key",
         inputId: "cloudwatch-dimensions-filter-item-key",
         width: "auto",
@@ -1834,10 +1672,10 @@ const FilterItem = _ref2 => {
             });
           }
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+      }), (0,jsx_runtime.jsx)("span", {
         className: (0,emotion_css_esm.cx)(styles.root),
         children: "="
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         "aria-label": "Dimensions filter value",
         inputId: "cloudwatch-dimensions-filter-item-value",
         onOpenMenu: loadOptions,
@@ -1853,7 +1691,7 @@ const FilterItem = _ref2 => {
             }));
           }
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.AccessoryButton, {
+      }), (0,jsx_runtime.jsx)(experimental.AccessoryButton, {
         "aria-label": "remove",
         icon: "times",
         variant: "secondary",
@@ -1869,7 +1707,7 @@ const getOperatorStyles = (0,grafana_ui_src.stylesFactory)(theme => ({
     alignSelf: 'center'
   })
 }));
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/Dimensions/Dimensions.tsx
+;
 
 
 
@@ -1920,8 +1758,7 @@ const Dimensions = _ref3 => {
   const [items, setItems] = (0,react.useState)(dimensionFilters);
 
   const onDimensionsChange = newItems => {
-    setItems(newItems); // The onChange event should only be triggered in the case there is a complete dimension object.
-    // So when a new key is added that does not yet have a value, it should not trigger an onChange event.
+    setItems(newItems); 
 
     const newDimensions = filterConditionsToDimensions(newItems);
 
@@ -1930,7 +1767,7 @@ const Dimensions = _ref3 => {
     }
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorList, {
+  return (0,jsx_runtime.jsx)(experimental.EditorList, {
     items: items,
     onChange: onDimensionsChange,
     renderItem: makeRenderFilter(datasource, metricStat, dimensionKeys, disableExpressions)
@@ -1939,7 +1776,7 @@ const Dimensions = _ref3 => {
 
 function makeRenderFilter(datasource, metricStat, dimensionKeys, disableExpressions) {
   function renderFilter(item, onChange, onDelete) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(FilterItem, {
+    return (0,jsx_runtime.jsx)(FilterItem, {
       filter: item,
       onChange: item => onChange(item),
       datasource: datasource,
@@ -1952,7 +1789,7 @@ function makeRenderFilter(datasource, metricStat, dimensionKeys, disableExpressi
 
   return renderFilter;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/Forms.tsx
+;
 var _div;
 
 
@@ -1966,8 +1803,8 @@ const QueryField = _ref => {
     tooltip,
     children
   } = _ref;
-  return /*#__PURE__*/_jsxs(_Fragment, {
-    children: [/*#__PURE__*/_jsx(InlineFormLabel, {
+  return _jsxs(_Fragment, {
+    children: [_jsx(InlineFormLabel, {
       width: 8,
       className: "query-keyword",
       tooltip: tooltip,
@@ -1977,23 +1814,23 @@ const QueryField = _ref => {
 };
 const QueryInlineField = _ref2 => {
   let props = Object.assign({}, _ref2);
-  return /*#__PURE__*/_jsxs("div", {
+  return _jsxs("div", {
     className: 'gf-form-inline',
-    children: [/*#__PURE__*/_jsx(QueryField, Object.assign({}, props)), _div || (_div = /*#__PURE__*/_jsx("div", {
+    children: [_jsx(QueryField, Object.assign({}, props)), _div || (_div = _jsx("div", {
       className: "gf-form gf-form--grow",
-      children: /*#__PURE__*/_jsx("div", {
+      children: _jsx("div", {
         className: "gf-form-label gf-form-label--grow"
       })
     }))]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/aws_url.ts
+;
 const JSURL = __webpack_require__("./.yarn/cache/jsurl-npm-0.1.5-9e17f93783-50b614908d.zip/node_modules/jsurl/index.js");
 
 function encodeUrl(obj, region) {
   return `https://${region}.console.aws.amazon.com/cloudwatch/home?region=${region}#logs-insights:queryDetail=${JSURL.stringify(obj)}`;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/CloudWatchLink.tsx
+;
 var _Icon;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -2060,33 +1897,27 @@ class CloudWatchLink extends react.Component {
     const {
       href
     } = this.state;
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("a", {
+    return (0,jsx_runtime.jsxs)("a", {
       href: href,
       target: "_blank",
       rel: "noopener noreferrer",
-      children: [_Icon || (_Icon = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      children: [_Icon || (_Icon = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: "share-alt"
       })), " CloudWatch Logs Insights"]
     });
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/utils/query/getStatsGroups.ts
+;
 const byRE = /\s+by\s+/im;
-/**
- * groups look like this: (@a.foo)( as )(bar),
- * group 1 is the field, group 2 is " as " and group 3 is the alias
- * this regex will not advance past any non-identifier or whitespace characters, e.g. |
- */
 
 const groupsRE = /([\w$@().]+)(?:(\s+as\s+)([\w$]+))?\s*,?\s*/iy;
 function getStatsGroups(query) {
-  let groups = []; // find " by "
+  let groups = []; 
 
   let b;
 
   if (b = query.match(byRE)) {
-    // continue incremental scanning from there for groups & aliases
     groupsRE.lastIndex = b.index + b[0].length;
     let g;
 
@@ -2098,7 +1929,7 @@ function getStatsGroups(query) {
 
   return groups;
 }
-;// CONCATENATED MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useCustomCompareEffect.js
+;
 
 var isPrimitive = function (val) { return val !== Object(val); };
 var useCustomCompareEffect = function (effect, deps, depsEqual) {
@@ -2109,16 +1940,15 @@ var useCustomCompareEffect = function (effect, deps, depsEqual) {
     }
     (0,react.useEffect)(effect, ref.current);
 };
-/* harmony default export */ const esm_useCustomCompareEffect = (useCustomCompareEffect);
+ const esm_useCustomCompareEffect = (useCustomCompareEffect);
 
-// EXTERNAL MODULE: ./.yarn/cache/fast-deep-equal-npm-3.1.3-790edcfcf5-e21a9d8d84.zip/node_modules/fast-deep-equal/react.js
 var fast_deep_equal_react = __webpack_require__("./.yarn/cache/fast-deep-equal-npm-3.1.3-790edcfcf5-e21a9d8d84.zip/node_modules/fast-deep-equal/react.js");
-var fast_deep_equal_react_default = /*#__PURE__*/__webpack_require__.n(fast_deep_equal_react);
-;// CONCATENATED MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/misc/isDeepEqual.js
+var fast_deep_equal_react_default = __webpack_require__.n(fast_deep_equal_react);
+;
 
-/* harmony default export */ const isDeepEqual = ((fast_deep_equal_react_default()));
+ const isDeepEqual = ((fast_deep_equal_react_default()));
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useDeepCompareEffect.js
+;
 
 
 var useDeepCompareEffect_isPrimitive = function (val) { return val !== Object(val); };
@@ -2126,9 +1956,9 @@ var useDeepCompareEffect = function (effect, deps) {
     if (false) {}
     esm_useCustomCompareEffect(effect, deps, isDeepEqual);
 };
-/* harmony default export */ const esm_useDeepCompareEffect = (useDeepCompareEffect);
+ const esm_useDeepCompareEffect = (useDeepCompareEffect);
 
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/hooks.ts
+;
 
 
 
@@ -2168,7 +1998,7 @@ const useMetrics = (datasource, region, namespace) => {
   return metrics;
 };
 const useDimensionKeys = (datasource, region, namespace, metricName, dimensionFilter) => {
-  const [dimensionKeys, setDimensionKeys] = (0,react.useState)([]); // doing deep comparison to avoid making new api calls to list metrics unless dimension filter object props changes
+  const [dimensionKeys, setDimensionKeys] = (0,react.useState)([]); 
 
   esm_useDeepCompareEffect(() => {
     datasource.getDimensionKeys(namespace, region, dimensionFilter, metricName).then(result => {
@@ -2177,9 +2007,8 @@ const useDimensionKeys = (datasource, region, namespace, metricName, dimensionFi
   }, [datasource, region, namespace, metricName, dimensionFilter]);
   return dimensionKeys;
 };
-// EXTERNAL MODULE: ./public/app/plugins/datasource/cloudwatch/types.ts
 var types = __webpack_require__("./public/app/plugins/datasource/cloudwatch/types.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/MetricsQueryEditor/MetricsQueryHeader.tsx
+;
 var _FlexItem;
 
 
@@ -2191,17 +2020,17 @@ var _FlexItem;
 
 const metricEditorModes = [{
   label: 'Metric Search',
-  value: types/* MetricQueryType.Search */.$5.Search
+  value: types.$5.Search
 }, {
   label: 'Metric Query',
-  value: types/* MetricQueryType.Query */.$5.Query
+  value: types.$5.Query
 }];
 const editorModes = [{
   label: 'Builder',
-  value: types/* MetricEditorMode.Builder */.MQ.Builder
+  value: types.MQ.Builder
 }, {
   label: 'Code',
-  value: types/* MetricEditorMode.Code */.MQ.Code
+  value: types.MQ.Code
 }];
 
 const MetricsQueryHeader = _ref => {
@@ -2217,7 +2046,7 @@ const MetricsQueryHeader = _ref => {
   } = query;
   const [showConfirm, setShowConfirm] = (0,react.useState)(false);
   const onEditorModeChange = (0,react.useCallback)(newMetricEditorMode => {
-    if (sqlCodeEditorIsDirty && metricQueryType === types/* MetricQueryType.Query */.$5.Query && metricEditorMode === types/* MetricEditorMode.Code */.MQ.Code) {
+    if (sqlCodeEditorIsDirty && metricQueryType === types.$5.Query && metricEditorMode === types.MQ.Code) {
       setShowConfirm(true);
       return;
     }
@@ -2226,8 +2055,8 @@ const MetricsQueryHeader = _ref => {
       metricEditorMode: newMetricEditorMode
     }));
   }, [setShowConfirm, onChange, sqlCodeEditorIsDirty, query, metricEditorMode, metricQueryType]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(experimental.InlineSelect, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(experimental.InlineSelect, {
       "aria-label": "Metric editor mode",
       value: metricEditorModes.find(m => m.value === metricQueryType),
       options: metricEditorModes,
@@ -2239,19 +2068,19 @@ const MetricsQueryHeader = _ref => {
           metricQueryType: value
         }));
       }
-    }), _FlexItem || (_FlexItem = /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.FlexItem, {
+    }), _FlexItem || (_FlexItem = (0,jsx_runtime.jsx)(experimental.FlexItem, {
       grow: 1
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.RadioButtonGroup, {
+    })), (0,jsx_runtime.jsx)(grafana_ui_src.RadioButtonGroup, {
       options: editorModes,
       size: "sm",
       value: metricEditorMode,
       onChange: onEditorModeChange
-    }), query.metricQueryType === types/* MetricQueryType.Query */.$5.Query && query.metricEditorMode === types/* MetricEditorMode.Code */.MQ.Code && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+    }), query.metricQueryType === types.$5.Query && query.metricEditorMode === types.MQ.Code && (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
       variant: "secondary",
       size: "sm",
       onClick: () => onRunQuery(),
       children: "Run query"
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.ConfirmModal, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.ConfirmModal, {
       isOpen: showConfirm,
       title: "Are you sure?",
       body: "You will lose manual changes done to the query if you go back to the visual builder.",
@@ -2261,7 +2090,7 @@ const MetricsQueryHeader = _ref => {
       onConfirm: () => {
         setShowConfirm(false);
         onChange(Object.assign({}, query, {
-          metricEditorMode: types/* MetricEditorMode.Builder */.MQ.Builder
+          metricEditorMode: types.MQ.Builder
         }));
       },
       onDismiss: () => setShowConfirm(false)
@@ -2269,8 +2098,8 @@ const MetricsQueryHeader = _ref => {
   });
 };
 
-/* harmony default export */ const MetricsQueryEditor_MetricsQueryHeader = (MetricsQueryHeader);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/QueryHeader.tsx
+ const MetricsQueryEditor_MetricsQueryHeader = (MetricsQueryHeader);
+;
 
 
 
@@ -2329,8 +2158,8 @@ const QueryHeader = _ref => {
     }));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorHeader, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(experimental.InlineSelect, {
+  return (0,jsx_runtime.jsxs)(experimental.EditorHeader, {
+    children: [(0,jsx_runtime.jsx)(experimental.InlineSelect, {
       label: "Region",
       value: region,
       placeholder: "Select region",
@@ -2345,12 +2174,12 @@ const QueryHeader = _ref => {
       },
       options: regions,
       isLoading: regionIsLoading
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.InlineSelect, {
+    }), (0,jsx_runtime.jsx)(experimental.InlineSelect, {
       "aria-label": "Query mode",
       value: queryMode,
       options: apiModes,
       onChange: onQueryModeChange
-    }), queryMode === src.ExploreMode.Metrics && /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_MetricsQueryHeader, {
+    }), queryMode === src.ExploreMode.Metrics && (0,jsx_runtime.jsx)(MetricsQueryEditor_MetricsQueryHeader, {
       query: query,
       datasource: datasource,
       onChange: onChange,
@@ -2360,8 +2189,8 @@ const QueryHeader = _ref => {
   });
 };
 
-/* harmony default export */ const components_QueryHeader = (QueryHeader);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/LogsQueryField.tsx
+ const components_QueryHeader = (QueryHeader);
+;
 function LogsQueryField_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -2426,7 +2255,7 @@ class CloudWatchLogsQueryField extends react.PureComponent {
           errMessage = err;
         }
 
-        (0,store/* dispatch */.WI)((0,actions/* notifyApp */.$l)((0,appNotification/* createErrorNotification */.t_)(errMessage)));
+        (0,store.WI)((0,actions.$l)((0,appNotification.t_)(errMessage)));
         return [];
       }
     });
@@ -2434,9 +2263,7 @@ class CloudWatchLogsQueryField extends react.PureComponent {
     LogsQueryField_defineProperty(this, "onLogGroupSearch", (searchTerm, region, actionMeta) => {
       if (actionMeta.action !== 'input-change') {
         return Promise.resolve();
-      } // No need to fetch matching log groups if the search term isn't valid
-      // This is also useful for preventing searches when a user is typing out a log group with template vars
-      // See https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_LogGroup.html for the source of the pattern below
+      } 
 
 
       const logGroupNamePattern = /^[\.\-_/#A-Za-z0-9]+$/;
@@ -2490,7 +2317,6 @@ class CloudWatchLogsQueryField extends react.PureComponent {
     });
 
     LogsQueryField_defineProperty(this, "onChangeQuery", value => {
-      // Send text change to parent
       const {
         query,
         onChange
@@ -2657,21 +2483,21 @@ class CloudWatchLogsQueryField extends react.PureComponent {
     const showError = data && data.error && data.error.refId === query.refId;
     const cleanText = datasource.languageProvider ? datasource.languageProvider.cleanText : undefined;
     const MAX_LOG_GROUPS = 20;
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(components_QueryHeader, {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(components_QueryHeader, {
         query: query,
         onRunQuery: onRunQuery,
         datasource: datasource,
         onChange: onChange,
         sqlCodeEditorIsDirty: false,
         onRegionChange: this.onRegionChange
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: `gf-form gf-form--grow flex-grow-1 ${rowGap}`,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LegacyForms.FormField, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.LegacyForms.FormField, {
           label: "Log Groups",
           labelWidth: 6,
           className: "flex-grow-1",
-          inputEl: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.MultiSelect, {
+          inputEl: (0,jsx_runtime.jsx)(grafana_ui_src.MultiSelect, {
             "aria-label": "Log Groups",
             allowCustomValue: allowCustomValue,
             options: (0,lodash.unionBy)(availableLogGroups, selectedLogGroups, 'value'),
@@ -2698,11 +2524,11 @@ class CloudWatchLogsQueryField extends react.PureComponent {
             }
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), (0,jsx_runtime.jsxs)("div", {
         className: "gf-form-inline gf-form-inline--nowrap flex-grow-1",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: [(0,jsx_runtime.jsx)("div", {
           className: "gf-form gf-form--grow flex-shrink-1",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.QueryField, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.QueryField, {
             additionalPlugins: this.plugins,
             query: (_expression = query.expression) !== null && _expression !== void 0 ? _expression : '',
             onChange: this.onChangeQuery,
@@ -2715,19 +2541,19 @@ class CloudWatchLogsQueryField extends react.PureComponent {
             disabled: loadingLogGroups || selectedLogGroups.length === 0
           })
         }), ExtraFieldElement]
-      }), hint && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), hint && (0,jsx_runtime.jsx)("div", {
         className: "query-row-break",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "text-warning",
-          children: [hint.message, /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+          children: [hint.message, (0,jsx_runtime.jsx)("a", {
             className: "text-link muted",
             onClick: hint.fix.action,
             children: hint.fix.label
           })]
         })
-      }), showError ? /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), showError ? (0,jsx_runtime.jsx)("div", {
         className: "query-row-break",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsx)("div", {
           className: "prom-query-field-info text-error",
           children: data === null || data === void 0 ? void 0 : (_data$error = data.error) === null || _data$error === void 0 ? void 0 : _data$error.message
         })
@@ -2736,10 +2562,8 @@ class CloudWatchLogsQueryField extends react.PureComponent {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/LogsQueryEditor.tsx
-// Libraries
+;
 
- // Types
 
 
 
@@ -2749,7 +2573,7 @@ const labelClass = emotion_css_esm.css`
   margin-left: 3px;
   flex-grow: 0;
 `;
-const CloudWatchLogsQueryEditor = /*#__PURE__*/(0,react.memo)(function CloudWatchLogsQueryEditor(props) {
+const CloudWatchLogsQueryEditor = (0,react.memo)(function CloudWatchLogsQueryEditor(props) {
   var _data$request, _data$request$range;
 
   const {
@@ -2778,7 +2602,7 @@ const CloudWatchLogsQueryEditor = /*#__PURE__*/(0,react.memo)(function CloudWatc
     };
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(CloudWatchLogsQueryField, {
+  return (0,jsx_runtime.jsx)(CloudWatchLogsQueryField, {
     exploreId: exploreId,
     datasource: datasource,
     query: query,
@@ -2788,11 +2612,11 @@ const CloudWatchLogsQueryEditor = /*#__PURE__*/(0,react.memo)(function CloudWatc
     data: data,
     absoluteRange: absolute,
     allowCustomValue: allowCustomValue,
-    ExtraFieldElement: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+    ExtraFieldElement: (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
       className: `gf-form-label--btn ${labelClass}`,
       width: "auto",
       tooltip: "Link to Graph in AWS",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(CloudWatchLink, {
+      children: (0,jsx_runtime.jsx)(CloudWatchLink, {
         query: query,
         panelData: data,
         datasource: datasource
@@ -2800,8 +2624,8 @@ const CloudWatchLogsQueryEditor = /*#__PURE__*/(0,react.memo)(function CloudWatc
     })
   });
 });
-/* harmony default export */ const LogsQueryEditor = (CloudWatchLogsQueryEditor);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/MetricStatEditor/MetricStatEditor.tsx
+ const LogsQueryEditor = (CloudWatchLogsQueryEditor);
+;
 
 
 
@@ -2862,13 +2686,13 @@ function MetricStatEditor(_ref) {
     });
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorRows, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorFieldGroup, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+  return (0,jsx_runtime.jsxs)(experimental.EditorRows, {
+    children: [(0,jsx_runtime.jsx)(experimental.EditorRow, {
+      children: (0,jsx_runtime.jsxs)(experimental.EditorFieldGroup, {
+        children: [(0,jsx_runtime.jsx)(experimental.EditorField, {
           label: "Namespace",
           width: 26,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
             "aria-label": "Namespace",
             value: metricStat.namespace,
             allowCustomValue: true,
@@ -2885,10 +2709,10 @@ function MetricStatEditor(_ref) {
               }
             }
           })
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+        }), (0,jsx_runtime.jsx)(experimental.EditorField, {
           label: "Metric name",
           width: 16,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
             "aria-label": "Metric name",
             value: metricStat.metricName || null,
             allowCustomValue: true,
@@ -2905,10 +2729,10 @@ function MetricStatEditor(_ref) {
               }
             }
           })
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+        }), (0,jsx_runtime.jsx)(experimental.EditorField, {
           label: "Statistic",
           width: 16,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
             inputId: `${refId}-metric-stat-editor-select-statistic`,
             allowCustomValue: true,
             value: toOption((_metricStat$statistic = metricStat.statistic) !== null && _metricStat$statistic !== void 0 ? _metricStat$statistic : datasource.standardStatistics[0]),
@@ -2929,10 +2753,10 @@ function MetricStatEditor(_ref) {
           })
         })]
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+    }), (0,jsx_runtime.jsx)(experimental.EditorRow, {
+      children: (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Dimensions",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(Dimensions, {
+        children: (0,jsx_runtime.jsx)(Dimensions, {
           metricStat: metricStat,
           onChange: dimensions => onMetricStatChange(Object.assign({}, metricStat, {
             dimensions
@@ -2942,12 +2766,12 @@ function MetricStatEditor(_ref) {
           datasource: datasource
         })
       })
-    }), !disableExpressions && /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+    }), !disableExpressions && (0,jsx_runtime.jsx)(experimental.EditorRow, {
+      children: (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Match exact",
         optional: true,
         tooltip: "Only show metrics that exactly match all defined dimension names.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorSwitch, {
+        children: (0,jsx_runtime.jsx)(experimental.EditorSwitch, {
           id: `${refId}-cloudwatch-match-exact`,
           value: !!metricStat.matchExact,
           onChange: e => {
@@ -2960,11 +2784,10 @@ function MetricStatEditor(_ref) {
     })]
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/MetricStatEditor/index.ts
+;
 
-// EXTERNAL MODULE: ./public/app/features/templating/template_srv.ts + 1 modules
 var template_srv = __webpack_require__("./public/app/features/templating/template_srv.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/expressions.ts
+;
 let QueryEditorPropertyType;
 
 (function (QueryEditorPropertyType) {
@@ -2982,12 +2805,12 @@ let QueryEditorExpressionType;
   QueryEditorExpressionType["Function"] = "function";
   QueryEditorExpressionType["FunctionParameter"] = "functionParameter";
 })(QueryEditorExpressionType || (QueryEditorExpressionType = {}));
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/cloudwatch-sql/SQLGenerator.ts
+;
 
 
 class SQLGenerator {
   constructor() {
-    let templateSrv = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (0,template_srv/* getTemplateSrv */.J)();
+    let templateSrv = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (0,template_srv.J)();
     this.templateSrv = templateSrv;
     this.templateSrv = templateSrv;
   }
@@ -3129,7 +2952,7 @@ class SQLGenerator {
   }
 
   formatValue(label) {
-    const specialCharacters = /[/\s\.-]/; // slash, space, dot or dash
+    const specialCharacters = /[/\s\.-]/; 
 
     const interpolated = this.templateSrv.replace(label, {}, 'raw');
 
@@ -3141,9 +2964,8 @@ class SQLGenerator {
   }
 
 }
-// EXTERNAL MODULE: ./public/app/plugins/datasource/cloudwatch/cloudwatch-sql/language.ts
 var language = __webpack_require__("./public/app/plugins/datasource/cloudwatch/cloudwatch-sql/language.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/SQLBuilderEditor/utils.ts
+;
 
 
 function getMetricNameFromExpression(selectExpression) {
@@ -3152,16 +2974,14 @@ function getMetricNameFromExpression(selectExpression) {
   return selectExpression === null || selectExpression === void 0 ? void 0 : (_selectExpression$par = selectExpression.parameters) === null || _selectExpression$par === void 0 ? void 0 : _selectExpression$par[0].name;
 }
 function getNamespaceFromExpression(fromExpression) {
-  // It's just a simple `FROM "AWS/EC2"` expression
   if ((fromExpression === null || fromExpression === void 0 ? void 0 : fromExpression.type) === QueryEditorExpressionType.Property) {
-    return fromExpression.property.name; // PR TODO: do we need to test the type here? It can only be string?
-  } // It's a more complicated `FROM SCHEMA("AWS/EC2", ...)` expression
+    return fromExpression.property.name; 
+  } 
 
 
   if ((fromExpression === null || fromExpression === void 0 ? void 0 : fromExpression.type) === QueryEditorExpressionType.Function) {
     var _fromExpression$param;
 
-    // TODO: do we need to test the name of the function?
     return (_fromExpression$param = fromExpression.parameters) === null || _fromExpression$param === void 0 ? void 0 : _fromExpression$param[0].name;
   }
 
@@ -3170,13 +2990,12 @@ function getNamespaceFromExpression(fromExpression) {
 function getSchemaLabelKeys(fromExpression) {
   var _fromExpression$param2;
 
-  // Schema label keys are second to n arguments in the from expression function
   if ((fromExpression === null || fromExpression === void 0 ? void 0 : fromExpression.type) === QueryEditorExpressionType.Function && fromExpression !== null && fromExpression !== void 0 && (_fromExpression$param2 = fromExpression.parameters) !== null && _fromExpression$param2 !== void 0 && _fromExpression$param2.length) {
     var _fromExpression$param3;
 
     if ((fromExpression === null || fromExpression === void 0 ? void 0 : (_fromExpression$param3 = fromExpression.parameters) === null || _fromExpression$param3 === void 0 ? void 0 : _fromExpression$param3.length) <= 1) {
       return [];
-    } // ignore the first arg (the namespace)
+    } 
 
 
     const paramExpressions = fromExpression === null || fromExpression === void 0 ? void 0 : fromExpression.parameters.slice(1);
@@ -3188,7 +3007,6 @@ function getSchemaLabelKeys(fromExpression) {
 function isUsingWithSchema(fromExpression) {
   return (fromExpression === null || fromExpression === void 0 ? void 0 : fromExpression.type) === QueryEditorExpressionType.Function && fromExpression.name === language.SCHEMA;
 }
-/** Given a partial operator expression, return a non-partial if it's valid, or undefined */
 
 function sanitizeOperator(expression) {
   var _expression$property, _expression$operator, _expression$operator2;
@@ -3213,9 +3031,6 @@ function sanitizeOperator(expression) {
 
   return undefined;
 }
-/**
- * Given an array of Expressions, flattens them to the leaf Operator expressions.
- * Note, this loses context of any nested ANDs or ORs, so will not be useful once we support nested conditions */
 
 function flattenOperatorExpressions(expressions) {
   return expressions.flatMap(expression => {
@@ -3225,15 +3040,12 @@ function flattenOperatorExpressions(expressions) {
 
     if (expression.type === QueryEditorExpressionType.And || expression.type === QueryEditorExpressionType.Or) {
       return flattenOperatorExpressions(expression.expressions);
-    } // Expressions that we don't expect to find in the WHERE filter will be ignored
+    } 
 
 
     return [];
   });
 }
-/** Returns a flattened list of WHERE filters, losing all context of nested filters or AND vs OR. Not suitable
- * if the UI supports nested conditions
- */
 
 
 function getFlattenedFilters(sql) {
@@ -3242,22 +3054,17 @@ function getFlattenedFilters(sql) {
   const where = sql.where;
   return flattenOperatorExpressions((_where$expressions = where === null || where === void 0 ? void 0 : where.expressions) !== null && _where$expressions !== void 0 ? _where$expressions : []);
 }
-/**
- * Given an array of Expressions, flattens them to the leaf Operator expressions.
- * Note, this loses context of any nested ANDs or ORs, so will not be useful once we support nested conditions */
 
 function flattenGroupByExpressions(expressions) {
   return expressions.flatMap(expression => {
     if (expression.type === QueryEditorExpressionType.GroupBy) {
       return expression;
-    } // Expressions that we don't expect to find in the GROUP BY will be ignored
+    } 
 
 
     return [];
   });
 }
-/** Returns a flattened list of GROUP BY expressions, losing all context of nested filters or AND vs OR.
- */
 
 
 function getFlattenedGroupBys(sql) {
@@ -3266,7 +3073,6 @@ function getFlattenedGroupBys(sql) {
   const groupBy = sql.groupBy;
   return flattenGroupByExpressions((_groupBy$expressions = groupBy === null || groupBy === void 0 ? void 0 : groupBy.expressions) !== null && _groupBy$expressions !== void 0 ? _groupBy$expressions : []);
 }
-/** Converts a string array to a Dimensions object with null values  **/
 
 function stringArrayToDimensions(arr) {
   return arr.reduce((acc, curr) => {
@@ -3289,7 +3095,7 @@ function setSql(query, sql) {
 function setNamespace(query, namespace) {
   var _query$sql2;
 
-  const sql = (_query$sql2 = query.sql) !== null && _query$sql2 !== void 0 ? _query$sql2 : {}; //updating `namespace` props for CloudWatchMetricsQuery
+  const sql = (_query$sql2 = query.sql) !== null && _query$sql2 !== void 0 ? _query$sql2 : {}; 
 
   query.namespace = namespace ? namespace : '';
 
@@ -3297,7 +3103,7 @@ function setNamespace(query, namespace) {
     return setSql(query, {
       from: undefined
     });
-  } // It's just a simple `FROM "AWS/EC2"` expression
+  } 
 
 
   if (!sql.from || sql.from.type === QueryEditorExpressionType.Property) {
@@ -3310,7 +3116,7 @@ function setNamespace(query, namespace) {
         }
       }
     });
-  } // It's a more complicated `FROM SCHEMA("AWS/EC2", ...)` expression
+  } 
 
 
   if (sql.from.type === QueryEditorExpressionType.Function) {
@@ -3328,7 +3134,7 @@ function setNamespace(query, namespace) {
         parameters: [namespaceParam, ...labelKeys]
       }
     });
-  } // TODO: do the with schema bit
+  } 
 
 
   return query;
@@ -3337,7 +3143,7 @@ function setSchemaLabels(query, schemaLabels) {
   var _query$sql3, _sql$from, _sql$from$parameters2;
 
   const sql = (_query$sql3 = query.sql) !== null && _query$sql3 !== void 0 ? _query$sql3 : {};
-  schemaLabels = Array.isArray(schemaLabels) ? schemaLabels.map(l => l.value) : [schemaLabels.value]; // schema labels are the second parameter in the schema function. `... FROM SCHEMA("AWS/EC2", label1, label2 ...)`
+  schemaLabels = Array.isArray(schemaLabels) ? schemaLabels.map(l => l.value) : [schemaLabels.value]; 
 
   if (((_sql$from = sql.from) === null || _sql$from === void 0 ? void 0 : _sql$from.type) === QueryEditorExpressionType.Function && (_sql$from$parameters2 = sql.from.parameters) !== null && _sql$from$parameters2 !== void 0 && _sql$from$parameters2.length) {
     var _schemaLabels, _sql$from$parameters3;
@@ -3428,9 +3234,6 @@ function setWithSchema(query, withSchema) {
     }
   });
 }
-/** Sets the left hand side (InstanceId) in an OperatorExpression
- * Accepts a partial expression to use in an editor
- */
 
 function setOperatorExpressionProperty(expression, property) {
   var _expression$operator3;
@@ -3444,9 +3247,6 @@ function setOperatorExpressionProperty(expression, property) {
     operator: (_expression$operator3 = expression.operator) !== null && _expression$operator3 !== void 0 ? _expression$operator3 : {}
   };
 }
-/** Sets the operator ("==") in an OperatorExpression
- * Accepts a partial expression to use in an editor
- */
 
 function setOperatorExpressionName(expression, name) {
   var _expression$property2;
@@ -3461,9 +3261,6 @@ function setOperatorExpressionName(expression, name) {
     })
   };
 }
-/** Sets the right hand side ("i-abc123445") in an OperatorExpression
- * Accepts a partial expression to use in an editor
- */
 
 function setOperatorExpressionValue(expression, value) {
   var _expression$property3;
@@ -3478,8 +3275,6 @@ function setOperatorExpressionValue(expression, value) {
     })
   };
 }
-/** Creates a GroupByExpression for a specified field
- */
 
 function setGroupByField(field) {
   return {
@@ -3490,7 +3285,7 @@ function setGroupByField(field) {
     }
   };
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/SQLBuilderEditor/SQLBuilderSelectRow.tsx
+;
 
 
 
@@ -3549,12 +3344,12 @@ const SQLBuilderSelectRow = _ref => {
     });
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorFieldGroup, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)(experimental.EditorFieldGroup, {
+      children: [(0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Namespace",
         width: 16,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           "aria-label": "Namespace",
           value: namespace ? (0,src.toOption)(namespace) : null,
           inputId: `${query.refId}-cloudwatch-sql-namespace`,
@@ -3567,17 +3362,17 @@ const SQLBuilderSelectRow = _ref => {
             return value && onNamespaceChange(setNamespace(query, value));
           }
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }), (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "With schema",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorSwitch, {
+        children: (0,jsx_runtime.jsx)(experimental.EditorSwitch, {
           id: `${query.refId}-cloudwatch-sql-withSchema`,
           value: withSchemaEnabled,
           onChange: ev => ev.target instanceof HTMLInputElement && onQueryChange(setWithSchema(query, ev.target.checked))
         })
-      }), withSchemaEnabled && /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }), withSchemaEnabled && (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Schema labels",
         disabled: !namespace,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           id: `${query.refId}-cloudwatch-sql-schema-label-keys`,
           width: "auto",
           isMulti: true,
@@ -3587,11 +3382,11 @@ const SQLBuilderSelectRow = _ref => {
           onChange: item => item && onQueryChange(setSchemaLabels(query, item))
         })
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorFieldGroup, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+    }), (0,jsx_runtime.jsxs)(experimental.EditorFieldGroup, {
+      children: [(0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Metric name",
         width: 16,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           "aria-label": "Metric name",
           value: metricName ? (0,src.toOption)(metricName) : null,
           options: metricOptions,
@@ -3603,10 +3398,10 @@ const SQLBuilderSelectRow = _ref => {
             return value && onQueryChange(setMetricName(query, value));
           }
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }), (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Aggregation",
         width: 16,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           "aria-label": "Aggregation",
           value: aggregation ? (0,src.toOption)(aggregation) : null,
           options: appendTemplateVariables(datasource, AGGREGATIONS),
@@ -3622,8 +3417,8 @@ const SQLBuilderSelectRow = _ref => {
   });
 };
 
-/* harmony default export */ const SQLBuilderEditor_SQLBuilderSelectRow = (SQLBuilderSelectRow);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/SQLBuilderEditor/SQLFilter.tsx
+ const SQLBuilderEditor_SQLBuilderSelectRow = (SQLBuilderSelectRow);
+;
 
 
 
@@ -3652,7 +3447,6 @@ const SQLFilter = _ref => {
   const [filters, setFilters] = (0,react.useState)(filtersFromQuery);
 
   const onChange = newItems => {
-    // As new (empty object) items come in, with need to make sure they have the correct type
     const cleaned = newItems.map(v => {
       var _v$property, _v$operator;
 
@@ -3666,7 +3460,7 @@ const SQLFilter = _ref => {
         }
       };
     });
-    setFilters(cleaned); // Only save valid and complete filters into the query state
+    setFilters(cleaned); 
 
     const validExpressions = [];
 
@@ -3687,18 +3481,17 @@ const SQLFilter = _ref => {
     }));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorList, {
+  return (0,jsx_runtime.jsx)(experimental.EditorList, {
     items: filters,
     onChange: onChange,
     renderItem: SQLFilter_makeRenderFilter(datasource, query)
   });
-}; // Making component functions in the render body is not recommended, but it works for now.
-// If some problems arise (perhaps with state going missing), consider this to be a potential cause
+}; 
 
 
 function SQLFilter_makeRenderFilter(datasource, query) {
   function renderFilter(item, onChange, onDelete) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(SQLFilter_FilterItem, {
+    return (0,jsx_runtime.jsx)(SQLFilter_FilterItem, {
       datasource: datasource,
       query: query,
       filter: item,
@@ -3710,7 +3503,7 @@ function SQLFilter_makeRenderFilter(datasource, query) {
   return renderFilter;
 }
 
-/* harmony default export */ const SQLBuilderEditor_SQLFilter = (SQLFilter);
+ const SQLBuilderEditor_SQLFilter = (SQLFilter);
 
 const SQLFilter_FilterItem = props => {
   var _query$sql2, _filter$property2, _filter$property3, _filter$property4, _filter$operator, _filter$operator2, _filter$operator3, _filter$operator4;
@@ -3739,9 +3532,9 @@ const SQLFilter_FilterItem = props => {
     });
   };
 
-  const [state, loadOptions] = (0,useAsyncFn/* default */.Z)(loadDimensionValues, [query.region, namespace, metricName, (_filter$property2 = filter.property) === null || _filter$property2 === void 0 ? void 0 : _filter$property2.name]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.InputGroup, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+  const [state, loadOptions] = (0,useAsyncFn.Z)(loadDimensionValues, [query.region, namespace, metricName, (_filter$property2 = filter.property) === null || _filter$property2 === void 0 ? void 0 : _filter$property2.name]);
+  return (0,jsx_runtime.jsxs)(experimental.InputGroup, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       width: "auto",
       value: (_filter$property3 = filter.property) !== null && _filter$property3 !== void 0 && _filter$property3.name ? (0,src.toOption)((_filter$property4 = filter.property) === null || _filter$property4 === void 0 ? void 0 : _filter$property4.name) : null,
       options: dimensionKeys,
@@ -3752,7 +3545,7 @@ const SQLFilter_FilterItem = props => {
         } = _ref2;
         return value && onChange(setOperatorExpressionProperty(filter, value));
       }
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       width: "auto",
       value: ((_filter$operator = filter.operator) === null || _filter$operator === void 0 ? void 0 : _filter$operator.name) && (0,src.toOption)(filter.operator.name),
       options: OPERATORS,
@@ -3762,7 +3555,7 @@ const SQLFilter_FilterItem = props => {
         } = _ref3;
         return value && onChange(setOperatorExpressionName(filter, value));
       }
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       width: "auto",
       isLoading: state.loading,
       value: (_filter$operator2 = filter.operator) !== null && _filter$operator2 !== void 0 && _filter$operator2.value && typeof ((_filter$operator3 = filter.operator) === null || _filter$operator3 === void 0 ? void 0 : _filter$operator3.value) === 'string' ? (0,src.toOption)((_filter$operator4 = filter.operator) === null || _filter$operator4 === void 0 ? void 0 : _filter$operator4.value) : null,
@@ -3775,7 +3568,7 @@ const SQLFilter_FilterItem = props => {
         } = _ref4;
         return value && onChange(setOperatorExpressionValue(filter, value));
       }
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.AccessoryButton, {
+    }), (0,jsx_runtime.jsx)(experimental.AccessoryButton, {
       "aria-label": "remove",
       icon: "times",
       variant: "secondary",
@@ -3783,7 +3576,7 @@ const SQLFilter_FilterItem = props => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/SQLBuilderEditor/SQLGroupBy.tsx
+;
 
 
 
@@ -3812,11 +3605,10 @@ const SQLGroupBy = _ref => {
   const namespace = getNamespaceFromExpression(sql.from);
   const metricName = getMetricNameFromExpression(sql.select);
   const baseOptions = useDimensionKeys(datasource, query.region, namespace, metricName);
-  const options = (0,react.useMemo)( // Exclude options we've already selected
+  const options = (0,react.useMemo)( 
   () => baseOptions.filter(option => !groupBysFromQuery.some(v => v.property.name === option.value)), [baseOptions, groupBysFromQuery]);
 
   const onChange = newItems => {
-    // As new (empty object) items come in, with need to make sure they have the correct type
     const cleaned = newItems.map(v => {
       var _v$property;
 
@@ -3828,7 +3620,7 @@ const SQLGroupBy = _ref => {
         }
       };
     });
-    setItems(cleaned); // Only save complete expressions into the query state;
+    setItems(cleaned); 
 
     const completeExpressions = cleaned.filter(v => {
       var _v$property2;
@@ -3844,7 +3636,7 @@ const SQLGroupBy = _ref => {
     }));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorList, {
+  return (0,jsx_runtime.jsx)(experimental.EditorList, {
     items: items,
     onChange: onChange,
     renderItem: makeRenderItem(options)
@@ -3853,7 +3645,7 @@ const SQLGroupBy = _ref => {
 
 function makeRenderItem(options) {
   function renderItem(item, onChange, onDelete) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(GroupByItem, {
+    return (0,jsx_runtime.jsx)(GroupByItem, {
       options: options,
       item: item,
       onChange: onChange,
@@ -3874,8 +3666,8 @@ const GroupByItem = props => {
     onDelete
   } = props;
   const fieldName = (_item$property = item.property) === null || _item$property === void 0 ? void 0 : _item$property.name;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.InputGroup, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+  return (0,jsx_runtime.jsxs)(experimental.InputGroup, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       "aria-label": `Group by ${fieldName !== null && fieldName !== void 0 ? fieldName : 'filter key'}`,
       width: "auto",
       value: fieldName ? (0,src.toOption)(fieldName) : null,
@@ -3887,7 +3679,7 @@ const GroupByItem = props => {
         } = _ref2;
         return value && onChange(setGroupByField(value));
       }
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.AccessoryButton, {
+    }), (0,jsx_runtime.jsx)(experimental.AccessoryButton, {
       "aria-label": "remove",
       icon: "times",
       variant: "secondary",
@@ -3896,8 +3688,8 @@ const GroupByItem = props => {
   });
 };
 
-/* harmony default export */ const SQLBuilderEditor_SQLGroupBy = (SQLGroupBy);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/SQLBuilderEditor/SQLOrderByGroup.tsx
+ const SQLBuilderEditor_SQLGroupBy = (SQLGroupBy);
+;
 
 
 
@@ -3926,13 +3718,13 @@ const SQLOrderByGroup = _ref => {
   const sql = (_query$sql = query.sql) !== null && _query$sql !== void 0 ? _query$sql : {};
   const orderBy = (_sql$orderBy = sql.orderBy) === null || _sql$orderBy === void 0 ? void 0 : _sql$orderBy.name;
   const orderByDirection = sql.orderByDirection;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorFieldGroup, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+  return (0,jsx_runtime.jsxs)(experimental.EditorFieldGroup, {
+    children: [(0,jsx_runtime.jsx)(experimental.EditorField, {
       label: "Order by",
       optional: true,
       width: 16,
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.InputGroup, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsxs)(experimental.InputGroup, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           "aria-label": "Order by",
           onChange: _ref2 => {
             let {
@@ -3942,7 +3734,7 @@ const SQLOrderByGroup = _ref => {
           },
           options: appendTemplateVariables(datasource, language.STATISTICS.map(src.toOption)),
           value: orderBy ? (0,src.toOption)(orderBy) : null
-        }), orderBy && /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.AccessoryButton, {
+        }), orderBy && (0,jsx_runtime.jsx)(experimental.AccessoryButton, {
           "aria-label": "remove",
           icon: "times",
           variant: "secondary",
@@ -3951,11 +3743,11 @@ const SQLOrderByGroup = _ref => {
           }))
         })]
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+    }), (0,jsx_runtime.jsx)(experimental.EditorField, {
       label: "Direction",
       disabled: !orderBy,
       width: 16,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         "aria-label": "Direction",
         inputId: "cloudwatch-sql-order-by-direction",
         value: orderByDirection ? (0,src.toOption)(orderByDirection) : orderByDirections[0],
@@ -3968,8 +3760,8 @@ const SQLOrderByGroup = _ref => {
   });
 };
 
-/* harmony default export */ const SQLBuilderEditor_SQLOrderByGroup = (SQLOrderByGroup);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/SQLBuilderEditor/SQLBuilderEditor.tsx
+ const SQLBuilderEditor_SQLOrderByGroup = (SQLOrderByGroup);
+;
 
 
 
@@ -4013,40 +3805,40 @@ function SQLBuilderEditor(_ref) {
       setSQLPreview(sqlString);
     }
   }, [query, sqlPreview, setSQLPreview]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorRows, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(SQLBuilderEditor_SQLBuilderSelectRow, {
+  return (0,jsx_runtime.jsxs)(experimental.EditorRows, {
+    children: [(0,jsx_runtime.jsx)(experimental.EditorRow, {
+      children: (0,jsx_runtime.jsx)(SQLBuilderEditor_SQLBuilderSelectRow, {
         query: query,
         onQueryChange: onQueryChange,
         datasource: datasource
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+    }), (0,jsx_runtime.jsx)(experimental.EditorRow, {
+      children: (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Filter",
         optional: true,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(SQLBuilderEditor_SQLFilter, {
+        children: (0,jsx_runtime.jsx)(SQLBuilderEditor_SQLFilter, {
           query: query,
           onQueryChange: onQueryChange,
           datasource: datasource
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorRow, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+    }), (0,jsx_runtime.jsxs)(experimental.EditorRow, {
+      children: [(0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Group by",
         optional: true,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(SQLBuilderEditor_SQLGroupBy, {
+        children: (0,jsx_runtime.jsx)(SQLBuilderEditor_SQLGroupBy, {
           query: query,
           onQueryChange: onQueryChange,
           datasource: datasource
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(SQLBuilderEditor_SQLOrderByGroup, {
+      }), (0,jsx_runtime.jsx)(SQLBuilderEditor_SQLOrderByGroup, {
         query: query,
         onQueryChange: onQueryChange,
         datasource: datasource
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }), (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Limit",
         optional: true,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: `${query.refId}-cloudwatch-sql-builder-editor-limit`,
           value: sql.limit,
           onChange: e => {
@@ -4059,30 +3851,30 @@ function SQLBuilderEditor(_ref) {
           min: 1
         })
       })]
-    }), sqlPreview && /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorRow, {
-      children: [ false && /*#__PURE__*/0, /*#__PURE__*/(0,jsx_runtime.jsx)("pre", {
+    }), sqlPreview && (0,jsx_runtime.jsxs)(experimental.EditorRow, {
+      children: [ false && 0, (0,jsx_runtime.jsx)("pre", {
         children: sqlPreview !== null && sqlPreview !== void 0 ? sqlPreview : ''
       })]
     })]
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/SQLBuilderEditor/index.tsx
+;
 
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/metric-math/definition.ts
+;
 const cloudWatchMetricMathLanguageDefinition = {
   id: 'cloudwatch-MetricMath',
   extensions: [],
   aliases: [],
   mimetypes: [],
-  loader: () => Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, "./public/app/plugins/datasource/cloudwatch/metric-math/language.ts"))
+  loader: () => Promise.resolve().then(__webpack_require__.bind(__webpack_require__, "./public/app/plugins/datasource/cloudwatch/metric-math/language.ts"))
 };
-/* harmony default export */ const definition = (cloudWatchMetricMathLanguageDefinition);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/monarch/commands.ts
+ const definition = (cloudWatchMetricMathLanguageDefinition);
+;
 const TRIGGER_SUGGEST = {
   id: 'editor.action.triggerSuggest',
   title: ''
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/monarch/register.ts
+;
 const registerLanguage = (monaco, language, completionItemProvider) => {
   const {
     id,
@@ -4103,7 +3895,7 @@ const registerLanguage = (monaco, language, completionItemProvider) => {
     monaco.languages.registerCompletionItemProvider(id, completionItemProvider.getCompletionProvider(monaco, language));
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/MathExpressionQueryField.tsx
+;
 
 
 
@@ -4124,9 +3916,7 @@ function MathExpressionQueryField(_ref) {
       const text = editor.getValue();
       onChange(text);
       onRunQuery();
-    }); // auto resizes the editor to be the height of the content it holds
-    // this code comes from the Prometheus query editor.
-    // We may wish to consider abstracting it into the grafana/ui repo in the future
+    }); 
 
     const updateElementHeight = () => {
       const containerDiv = containerRef.current;
@@ -4146,13 +3936,11 @@ function MathExpressionQueryField(_ref) {
     editor.onDidContentSizeChange(updateElementHeight);
     updateElementHeight();
   }, [onChange, onRunQuery]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     ref: containerRef,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
       monacoOptions: {
-        // without this setting, the auto-resize functionality causes an infinite loop, don't remove it!
         scrollBeyondLastLine: false,
-        // These additional options are style focused and are a subset of those in the query editor in Prometheus
         fontSize: 14,
         lineNumbers: 'off',
         renderLineHighlight: 'none',
@@ -4176,16 +3964,16 @@ function MathExpressionQueryField(_ref) {
     })
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/cloudwatch-sql/definition.ts
+;
 const cloudWatchSqlLanguageDefinition = {
   id: 'cloudwatch-sql',
   extensions: ['.cloudwatchSql'],
   aliases: ['CloudWatch', 'cloudwatch', 'CloudWatchSQL'],
   mimetypes: [],
-  loader: () => Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, "./public/app/plugins/datasource/cloudwatch/cloudwatch-sql/language.ts"))
+  loader: () => Promise.resolve().then(__webpack_require__.bind(__webpack_require__, "./public/app/plugins/datasource/cloudwatch/cloudwatch-sql/language.ts"))
 };
-/* harmony default export */ const cloudwatch_sql_definition = (cloudWatchSqlLanguageDefinition);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/SQLCodeEditor.tsx
+ const cloudwatch_sql_definition = (cloudWatchSqlLanguageDefinition);
+;
 
 
 
@@ -4211,7 +3999,7 @@ const SQLCodeEditor = _ref => {
       onRunQuery();
     });
   }, [onChange, onRunQuery]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
     height: '150px',
     language: cloudwatch_sql_definition.id,
     value: sql,
@@ -4226,7 +4014,7 @@ const SQLCodeEditor = _ref => {
     onEditorDidMount: onEditorMount
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/index.ts
+;
 
 
 
@@ -4235,7 +4023,7 @@ const SQLCodeEditor = _ref => {
 
 
 
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/MetricsQueryEditor/Alias.tsx
+;
 
 
 
@@ -4254,7 +4042,7 @@ const Alias = _ref => {
     propagateOnChange(e.target.value);
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
     id: id,
     type: "text",
     value: alias,
@@ -4262,14 +4050,11 @@ const Alias = _ref => {
     "aria-label": "Optional alias"
   });
 };
-// EXTERNAL MODULE: ./.yarn/cache/fast-deep-equal-npm-3.1.3-790edcfcf5-e21a9d8d84.zip/node_modules/fast-deep-equal/index.js
 var fast_deep_equal = __webpack_require__("./.yarn/cache/fast-deep-equal-npm-3.1.3-790edcfcf5-e21a9d8d84.zip/node_modules/fast-deep-equal/index.js");
-var fast_deep_equal_default = /*#__PURE__*/__webpack_require__.n(fast_deep_equal);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/migrations/metricQueryMigrations.ts
+var fast_deep_equal_default = __webpack_require__.n(fast_deep_equal);
+;
 
-// Call this function to migrate queries from within the plugin.
 function migrateMetricQuery(query) {
-  //add metric query migrations here
   const migratedQuery = migrateAliasPatterns(query);
   return migratedQuery;
 }
@@ -4297,7 +4082,7 @@ function migrateAliasPatterns(query) {
 
   return query;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/MetricsQueryEditor/usePreparedMetricsQuery.ts
+;
 
 
 
@@ -4312,22 +4097,18 @@ const DEFAULT_QUERY = {
   id: '',
   statistic: 'Average',
   period: '',
-  metricQueryType: types/* MetricQueryType.Search */.$5.Search,
-  metricEditorMode: types/* MetricEditorMode.Builder */.MQ.Builder,
+  metricQueryType: types.$5.Search,
+  metricEditorMode: types.MQ.Builder,
   sqlExpression: '',
   matchExact: true
 };
 
 const prepareQuery = query => {
   const withDefaults = Object.assign({}, DEFAULT_QUERY, query);
-  const migratedQuery = migrateMetricQuery(withDefaults); // If we didn't make any changes to the object, then return the original object to keep the
-  // identity the same, and not trigger any other useEffects or anything.
+  const migratedQuery = migrateMetricQuery(withDefaults); 
 
   return fast_deep_equal_default()(migratedQuery, query) ? query : migratedQuery;
 };
-/**
- * Returns queries with some defaults + migrations, and calls onChange function to notify if it changes
- */
 
 
 const usePreparedMetricsQuery = (query, onChangeQuery) => {
@@ -4340,8 +4121,8 @@ const usePreparedMetricsQuery = (query, onChangeQuery) => {
   return preparedQuery;
 };
 
-/* harmony default export */ const MetricsQueryEditor_usePreparedMetricsQuery = (usePreparedMetricsQuery);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/MetricsQueryEditor/MetricsQueryEditor.tsx
+ const MetricsQueryEditor_usePreparedMetricsQuery = (usePreparedMetricsQuery);
+;
 var _Space, _Space2;
 
 
@@ -4377,8 +4158,8 @@ const MetricsQueryEditor = props => {
     onRunQuery();
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(components_QueryHeader, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(components_QueryHeader, {
       query: query,
       onRunQuery: onRunQuery,
       datasource: datasource,
@@ -4390,14 +4171,14 @@ const MetricsQueryEditor = props => {
         onChange(newQuery);
       },
       sqlCodeEditorIsDirty: sqlCodeEditorIsDirty
-    }), _Space || (_Space = /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.Space, {
+    }), _Space || (_Space = (0,jsx_runtime.jsx)(experimental.Space, {
       v: 0.5
-    })), query.metricQueryType === types/* MetricQueryType.Search */.$5.Search && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [query.metricEditorMode === types/* MetricEditorMode.Builder */.MQ.Builder && /*#__PURE__*/(0,jsx_runtime.jsx)(MetricStatEditor, Object.assign({}, props, {
+    })), query.metricQueryType === types.$5.Search && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [query.metricEditorMode === types.MQ.Builder && (0,jsx_runtime.jsx)(MetricStatEditor, Object.assign({}, props, {
         refId: query.refId,
         metricStat: query,
         onChange: metricStat => props.onChange(Object.assign({}, query, metricStat))
-      })), query.metricEditorMode === types/* MetricEditorMode.Code */.MQ.Code && /*#__PURE__*/(0,jsx_runtime.jsx)(MathExpressionQueryField, {
+      })), query.metricEditorMode === types.MQ.Code && (0,jsx_runtime.jsx)(MathExpressionQueryField, {
         onRunQuery: onRunQuery,
         expression: (_query$expression = query.expression) !== null && _query$expression !== void 0 ? _query$expression : '',
         onChange: expression => props.onChange(Object.assign({}, query, {
@@ -4405,8 +4186,8 @@ const MetricsQueryEditor = props => {
         })),
         datasource: datasource
       })]
-    }), query.metricQueryType === types/* MetricQueryType.Query */.$5.Query && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [query.metricEditorMode === types/* MetricEditorMode.Code */.MQ.Code && /*#__PURE__*/(0,jsx_runtime.jsx)(SQLCodeEditor, {
+    }), query.metricQueryType === types.$5.Query && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [query.metricEditorMode === types.MQ.Code && (0,jsx_runtime.jsx)(SQLCodeEditor, {
         region: query.region,
         sql: (_query$sqlExpression = query.sqlExpression) !== null && _query$sqlExpression !== void 0 ? _query$sqlExpression : '',
         onChange: sqlExpression => {
@@ -4420,24 +4201,24 @@ const MetricsQueryEditor = props => {
         },
         onRunQuery: onRunQuery,
         datasource: datasource
-      }), query.metricEditorMode === types/* MetricEditorMode.Builder */.MQ.Builder && /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(SQLBuilderEditor, {
+      }), query.metricEditorMode === types.MQ.Builder && (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+        children: (0,jsx_runtime.jsx)(SQLBuilderEditor, {
           query: query,
           onChange: props.onChange,
           onRunQuery: onRunQuery,
           datasource: datasource
         })
       })]
-    }), _Space2 || (_Space2 = /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.Space, {
+    }), _Space2 || (_Space2 = (0,jsx_runtime.jsx)(experimental.Space, {
       v: 0.5
-    })), /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorRow, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+    })), (0,jsx_runtime.jsxs)(experimental.EditorRow, {
+      children: [(0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "ID",
         width: 26,
         optional: true,
         tooltip: "ID can be used to reference other queries in math expressions. The ID can include numbers, letters, and underscore, and must start with a lowercase letter.",
         invalid: !!query.id && !/^$|^[a-z][a-zA-Z0-9_]*$/.test(query.id),
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: `${query.refId}-cloudwatch-metric-query-editor-id`,
           onBlur: onRunQuery,
           onChange: event => onChange(Object.assign({}, preparedQuery, {
@@ -4446,11 +4227,11 @@ const MetricsQueryEditor = props => {
           type: "text",
           value: query.id
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }), (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Period",
         width: 26,
         tooltip: "Minimum interval between points in seconds.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: `${query.refId}-cloudwatch-metric-query-editor-period`,
           value: query.period || '',
           placeholder: "auto",
@@ -4459,12 +4240,12 @@ const MetricsQueryEditor = props => {
             period: event.target.value
           }))
         })
-      }), grafana_runtime_src.config.featureToggles.cloudWatchDynamicLabels ? /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }), grafana_runtime_src.config.featureToggles.cloudWatchDynamicLabels ? (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Label",
         width: 26,
         optional: true,
         tooltip: "Change time series legend name using Dynamic labels. See documentation for details.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: `${query.refId}-cloudwatch-metric-query-editor-label`,
           placeholder: "auto",
           onBlur: onRunQuery,
@@ -4473,12 +4254,12 @@ const MetricsQueryEditor = props => {
             label: event.target.value
           }))
         })
-      }) : /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }) : (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Alias",
         width: 26,
         optional: true,
         tooltip: "Change time series legend name using this field. See documentation for replacement variable formats.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(Alias, {
+        children: (0,jsx_runtime.jsx)(Alias, {
           id: `${query.refId}-cloudwatch-metric-query-editor-alias`,
           value: (_preparedQuery$alias = preparedQuery.alias) !== null && _preparedQuery$alias !== void 0 ? _preparedQuery$alias : '',
           onChange: value => onChange(Object.assign({}, preparedQuery, {
@@ -4489,7 +4270,7 @@ const MetricsQueryEditor = props => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/PanelQueryEditor.tsx
+;
 
 
 
@@ -4501,57 +4282,37 @@ class PanelQueryEditor extends react.PureComponent {
     const {
       query
     } = this.props;
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-      children: isCloudWatchMetricsQuery(query) ? /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor, Object.assign({}, this.props, {
+    return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+      children: isCloudWatchMetricsQuery(query) ? (0,jsx_runtime.jsx)(MetricsQueryEditor, Object.assign({}, this.props, {
         query: query
-      })) : /*#__PURE__*/(0,jsx_runtime.jsx)(LogsQueryEditor, Object.assign({}, this.props, {
+      })) : (0,jsx_runtime.jsx)(LogsQueryEditor, Object.assign({}, this.props, {
         allowCustomValue: true
       }))
     });
   }
 
 }
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/from.js
 var from = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/from.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js
 var lastValueFrom = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/merge.js
 var merge = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/merge.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/zip.js
 var zip = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/zip.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/throwError.js
 var throwError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/throwError.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Observable.js
 var Observable = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Observable.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js
 var mergeMap = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/concatMap.js
 var concatMap = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/concatMap.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/repeat.js
 var repeat = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/repeat.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/share.js
 var share = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/share.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/scan.js
 var scan = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/scan.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/tap.js
 var tap = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/tap.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/takeWhile.js
 var takeWhile = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/takeWhile.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/finalize.js
 var finalize = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/finalize.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js
 var catchError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js");
-// EXTERNAL MODULE: ./public/app/features/dashboard/services/TimeSrv.ts + 1 modules
 var TimeSrv = __webpack_require__("./public/app/features/dashboard/services/TimeSrv.ts");
-// EXTERNAL MODULE: ./public/app/types/index.ts + 4 modules
 var app_types = __webpack_require__("./public/app/types/index.ts");
-// EXTERNAL MODULE: ./public/app/core/config.ts
 var config = __webpack_require__("./public/app/core/config.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/AnnotationQueryEditor.tsx
+;
 var AnnotationQueryEditor_Space, AnnotationQueryEditor_Space2;
 
 
@@ -4572,7 +4333,7 @@ const AnnotationQueryEditor = props => {
   const [regions, regionIsLoading] = useRegions(datasource);
 
   if (!isCloudWatchAnnotationQuery(query)) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+    return (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
       severity: "error",
       title: "Invalid annotation query",
       topSpacing: 2,
@@ -4580,9 +4341,9 @@ const AnnotationQueryEditor = props => {
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorHeader, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.InlineSelect, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(experimental.EditorHeader, {
+      children: (0,jsx_runtime.jsx)(experimental.InlineSelect, {
         label: "Region",
         value: regions.find(v => v.value === query.region),
         placeholder: "Select region",
@@ -4598,32 +4359,32 @@ const AnnotationQueryEditor = props => {
         options: regions,
         isLoading: regionIsLoading
       })
-    }), AnnotationQueryEditor_Space || (AnnotationQueryEditor_Space = /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.Space, {
+    }), AnnotationQueryEditor_Space || (AnnotationQueryEditor_Space = (0,jsx_runtime.jsx)(experimental.Space, {
       v: 0.5
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricStatEditor, Object.assign({}, props, {
+    })), (0,jsx_runtime.jsx)(MetricStatEditor, Object.assign({}, props, {
       refId: query.refId,
       metricStat: query,
       disableExpressions: true,
       onChange: metricStat => onChange(Object.assign({}, query, metricStat)),
       onRunQuery: () => {}
-    })), AnnotationQueryEditor_Space2 || (AnnotationQueryEditor_Space2 = /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.Space, {
+    })), AnnotationQueryEditor_Space2 || (AnnotationQueryEditor_Space2 = (0,jsx_runtime.jsx)(experimental.Space, {
       v: 0.5
-    })), /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorRow, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+    })), (0,jsx_runtime.jsxs)(experimental.EditorRow, {
+      children: [(0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Period",
         width: 26,
         tooltip: "Minimum interval between points in seconds.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           value: query.period || '',
           placeholder: "auto",
           onChange: event => onChange(Object.assign({}, query, {
             period: event.target.value
           }))
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }), (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Enable Prefix Matching",
         optional: true,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorSwitch, {
+        children: (0,jsx_runtime.jsx)(experimental.EditorSwitch, {
           value: query.prefixMatching,
           onChange: e => {
             onChange(Object.assign({}, query, {
@@ -4631,21 +4392,21 @@ const AnnotationQueryEditor = props => {
             }));
           }
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }), (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Action",
         optional: true,
         disabled: !query.prefixMatching,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           value: query.actionPrefix || '',
           onChange: event => onChange(Object.assign({}, query, {
             actionPrefix: event.target.value
           }))
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }), (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Alarm Name",
         optional: true,
         disabled: !query.prefixMatching,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           value: query.alarmNamePrefix || '',
           onChange: event => onChange(Object.assign({}, query, {
             alarmNamePrefix: event.target.value
@@ -4655,18 +4416,16 @@ const AnnotationQueryEditor = props => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/annotationSupport.ts
+;
 
 
 const CloudWatchAnnotationSupport = {
-  // converts legacy angular style queries to new format. Also sets the same default values as in the deprecated angular directive
   prepareAnnotation: query => {
     if (isCloudWatchAnnotation(query)) {
       return query;
     }
 
     return {
-      // setting AnnotationQuery props explicitly since spreading would incorrectly use props that should be on the target only
       datasource: query.datasource,
       enable: query.enable,
       iconColor: query.iconColor,
@@ -4681,7 +4440,6 @@ const CloudWatchAnnotationSupport = {
       })
     };
   },
-  // return undefined if query is not complete so that annotation query execution is quietly skipped
   prepareQuery: anno => {
     if (!anno.target) {
       return undefined;
@@ -4707,7 +4465,7 @@ const CloudWatchAnnotationSupport = {
   },
   QueryEditor: AnnotationQueryEditor
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/monarch/LinkedToken.ts
+;
 class LinkedToken {
   constructor(type, value, range, previous, next, tokenTypes) {
     this.type = type;
@@ -4904,7 +4662,7 @@ class LinkedToken {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/monarch/linkedTokenBuilder.ts
+;
 
 function linkedTokenBuilder(monaco, language, model, position, tokenTypes) {
   var _model$getValue;
@@ -4914,7 +4672,7 @@ function linkedTokenBuilder(monaco, language, model, position, tokenTypes) {
   const tokensPerLine = monaco.editor.tokenize((_model$getValue = model.getValue()) !== null && _model$getValue !== void 0 ? _model$getValue : '', language.id);
 
   for (let lineIndex = 0; lineIndex < tokensPerLine.length; lineIndex++) {
-    const tokens = tokensPerLine[lineIndex]; // In case position is first column in new line, add empty whitespace token so that links are not broken
+    const tokens = tokensPerLine[lineIndex]; 
 
     if (!tokens.length && previous) {
       const token = {
@@ -4952,7 +4710,7 @@ function linkedTokenBuilder(monaco, language, model, position, tokenTypes) {
 
   return current;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/monarch/types.ts
+;
 let StatementPosition;
 
 (function (StatementPosition) {
@@ -5016,20 +4774,13 @@ let CompletionItemPriority;
   CompletionItemPriority["MediumLow"] = "k";
   CompletionItemPriority["Low"] = "q";
 })(CompletionItemPriority || (CompletionItemPriority = {}));
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/monarch/CompletionItemProvider.ts
+;
 function CompletionItemProvider_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
 
-/*
-CompletionItemProvider is an extendable class which needs to implement :
-- tokenTypes
-- getStatementPosition
-- getSuggestionKinds
-- getSuggestions
-*/
 class CompletionItemProvider {
   constructor(datasource) {
     let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,grafana_runtime_src.getTemplateSrv)();
@@ -5045,7 +4796,7 @@ class CompletionItemProvider {
     this.datasource = datasource;
     this.templateSrv = templateSrv;
     this.templateVariables = this.datasource.getVariables();
-    this.templateSrv = templateSrv; // implement with more specific tokens when extending this class
+    this.templateSrv = templateSrv; 
 
     this.tokenTypes = {
       Parenthesis: 'delimiter.parenthesis',
@@ -5060,29 +4811,27 @@ class CompletionItemProvider {
       String: 'string',
       Variable: 'variable'
     };
-  } // implemented by subclasses, given a token, returns a lexical position in a query
+  } 
 
 
   getStatementPosition(currentToken) {
     return StatementPosition.Unknown;
-  } // implemented by subclasses, given a lexical statement position, returns potential kinds of suggestions
+  } 
 
 
   getSuggestionKinds(position) {
     return [];
-  } // implemented by subclasses, given potential suggestions kinds, returns suggestion objects for monaco aka "CompletionItem"
+  } 
 
 
   getSuggestions(monaco, currentToken, suggestionKinds, statementPosition, position) {
     return Promise.reject([]);
-  } // called by registerLanguage and passed to monaco with registerCompletionItemProvider
-  // returns an object that implements https://microsoft.github.io/monaco-editor/api/interfaces/monaco.languages.CompletionItemProvider.html
+  } 
 
 
   getCompletionProvider(monaco, languageDefinition) {
     return {
       triggerCharacters: [' ', '$', ',', '(', "'"],
-      // one of these characters indicates that it is time to look for a suggestion
       provideCompletionItems: async (model, position) => {
         const currentToken = linkedTokenBuilder(monaco, languageDefinition, model, position, this.tokenTypes);
         const statementPosition = this.getStatementPosition(currentToken);
@@ -5096,7 +4845,7 @@ class CompletionItemProvider {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/cloudwatch-sql/completion/types.ts
+;
 const SQLTokenTypes = {
   Parenthesis: 'delimiter.parenthesis.sql',
   Whitespace: 'white.sql',
@@ -5110,7 +4859,7 @@ const SQLTokenTypes = {
   String: 'string.sql',
   Variable: 'variable.sql'
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/cloudwatch-sql/completion/statementPosition.ts
+;
 
 
 
@@ -5191,7 +4940,7 @@ function getStatementPosition(currentToken) {
 
   return StatementPosition.Unknown;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/cloudwatch-sql/completion/suggestionKind.ts
+;
 
 function getSuggestionKinds(statementPosition) {
   switch (statementPosition) {
@@ -5249,7 +4998,7 @@ function getSuggestionKinds(statementPosition) {
 
   return [];
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/cloudwatch-sql/completion/tokenUtils.ts
+;
 
 
 const getSelectToken = currentToken => {
@@ -5266,7 +5015,6 @@ const getSelectStatisticToken = currentToken => {
 const getMetricNameToken = currentToken => {
   var _getSelectStatisticTo, _getSelectStatisticTo2;
 
-  // statistic function is followed by `(` and then an argument
   const assumedMetricNameToken = (_getSelectStatisticTo = getSelectStatisticToken(currentToken)) === null || _getSelectStatisticTo === void 0 ? void 0 : (_getSelectStatisticTo2 = _getSelectStatisticTo.next) === null || _getSelectStatisticTo2 === void 0 ? void 0 : _getSelectStatisticTo2.next;
   return assumedMetricNameToken !== null && assumedMetricNameToken !== void 0 && assumedMetricNameToken.isVariable() || assumedMetricNameToken !== null && assumedMetricNameToken !== void 0 && assumedMetricNameToken.isIdentifier() ? assumedMetricNameToken : null;
 };
@@ -5281,12 +5029,10 @@ const getNamespaceToken = currentToken => {
   const nextNonWhiteSpace = fromToken === null || fromToken === void 0 ? void 0 : fromToken.getNextNonWhiteSpaceToken();
 
   if (nextNonWhiteSpace !== null && nextNonWhiteSpace !== void 0 && nextNonWhiteSpace.isDoubleQuotedString() || nextNonWhiteSpace !== null && nextNonWhiteSpace !== void 0 && nextNonWhiteSpace.isVariable() && (nextNonWhiteSpace === null || nextNonWhiteSpace === void 0 ? void 0 : nextNonWhiteSpace.value.toUpperCase()) !== language.SCHEMA) {
-    // schema is not used
     return nextNonWhiteSpace;
   } else if (nextNonWhiteSpace !== null && nextNonWhiteSpace !== void 0 && nextNonWhiteSpace.isKeyword() && (_nextNonWhiteSpace$ne = nextNonWhiteSpace.next) !== null && _nextNonWhiteSpace$ne !== void 0 && _nextNonWhiteSpace$ne.is(SQLTokenTypes.Parenthesis, '(')) {
     var _nextNonWhiteSpace$ne2;
 
-    // schema is specified
     const assumedNamespaceToken = (_nextNonWhiteSpace$ne2 = nextNonWhiteSpace.next) === null || _nextNonWhiteSpace$ne2 === void 0 ? void 0 : _nextNonWhiteSpace$ne2.next;
 
     if (assumedNamespaceToken !== null && assumedNamespaceToken !== void 0 && assumedNamespaceToken.isDoubleQuotedString() || assumedNamespaceToken !== null && assumedNamespaceToken !== void 0 && assumedNamespaceToken.isVariable()) {
@@ -5296,7 +5042,7 @@ const getNamespaceToken = currentToken => {
 
   return null;
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/cloudwatch-sql/completion/CompletionItemProvider.ts
+;
 function completion_CompletionItemProvider_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -5382,11 +5128,9 @@ class SQLCompletionItemProvider extends CompletionItemProvider {
             const namespaceToken = getNamespaceToken(currentToken);
 
             if (namespaceToken !== null && namespaceToken !== void 0 && namespaceToken.value) {
-              // if a namespace is specified, only suggest metrics for the namespace
               const metrics = await this.datasource.getMetrics(this.templateSrv.replace(namespaceToken === null || namespaceToken === void 0 ? void 0 : namespaceToken.value.replace(/\"/g, '')), this.templateSrv.replace(this.region));
               metrics.map(m => addSuggestion(m.value));
             } else {
-              // If no namespace is specified in the query, just list all metrics
               const metrics = await this.datasource.getAllMetrics(this.templateSrv.replace(this.region));
               (0,lodash.uniq)(metrics.map(m => m.metricName)).map(m => addSuggestion(m, {
                 insertText: m
@@ -5417,12 +5161,10 @@ class SQLCompletionItemProvider extends CompletionItemProvider {
           let namespaces = [];
 
           if (metricNameToken !== null && metricNameToken !== void 0 && metricNameToken.value) {
-            // if a metric is specified, only suggest namespaces that actually have that metric
             const metrics = await this.datasource.getAllMetrics(this.region);
             const metricName = this.templateSrv.replace(metricNameToken.value);
             namespaces = metrics.filter(m => m.metricName === metricName).map(m => m.namespace);
           } else {
-            // if no metric is specified, just suggest all namespaces
             const ns = await this.datasource.getNamespaces();
             namespaces = ns.map(n => n.value);
           }
@@ -5534,7 +5276,7 @@ class SQLCompletionItemProvider extends CompletionItemProvider {
           }));
           break;
       }
-    } // always suggest template variables
+    } 
 
 
     this.templateVariables.map(v => {
@@ -5550,7 +5292,7 @@ class SQLCompletionItemProvider extends CompletionItemProvider {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/ThrottlingErrorMessage.tsx
+;
 var _a;
 
 
@@ -5560,14 +5302,14 @@ const ThrottlingErrorMessage = _ref => {
   let {
     region
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("p", {
-    children: ["Please visit the\xA0", /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+  return (0,jsx_runtime.jsxs)("p", {
+    children: ["Please visit the\xA0", (0,jsx_runtime.jsx)("a", {
       target: "_blank",
       rel: "noreferrer",
       className: "text-link",
       href: `https://${region}.console.aws.amazon.com/servicequotas/home?region=${region}#!/services/monitoring/quotas/L-5E141212`,
       children: "AWS Service Quotas console"
-    }), "\xA0to request a quota increase or see our\xA0", _a || (_a = /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+    }), "\xA0to request a quota increase or see our\xA0", _a || (_a = (0,jsx_runtime.jsx)("a", {
       target: "_blank",
       rel: "noreferrer",
       className: "text-link",
@@ -5576,7 +5318,7 @@ const ThrottlingErrorMessage = _ref => {
     })), "\xA0to learn more."]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/language_provider.ts
+;
 function language_provider_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -5596,7 +5338,7 @@ class CloudWatchLanguageProvider extends src.LanguageProvider {
     language_provider_defineProperty(this, "cleanText", s => s.replace(/[()]/g, '').trim());
 
     language_provider_defineProperty(this, "request", (url, params) => {
-      return (0,lastValueFrom/* lastValueFrom */.n)(this.datasource.awsRequest(url, params));
+      return (0,lastValueFrom.n)(this.datasource.awsRequest(url, params));
     });
 
     language_provider_defineProperty(this, "start", () => {
@@ -5669,7 +5411,7 @@ class CloudWatchLanguageProvider extends src.LanguageProvider {
       const currentTokenIsAfterCommandAndEmpty = isTokenType(commandToken.next, 'whitespace') && !((_commandToken$next = commandToken.next) !== null && _commandToken$next !== void 0 && _commandToken$next.next);
       const currentTokenIsAfterCommand = currentTokenIsAfterCommandAndEmpty || nextNonWhitespaceToken(commandToken) === curToken;
       const currentTokenIsComma = isTokenType(curToken, 'punctuation', ',');
-      const currentTokenIsCommaOrAfterComma = currentTokenIsComma || isTokenType(prevToken, 'punctuation', ','); // We only show suggestions if we are after a command or after a comma which is a field separator
+      const currentTokenIsCommaOrAfterComma = currentTokenIsComma || isTokenType(prevToken, 'punctuation', ','); 
 
       if (!(currentTokenIsAfterCommand || currentTokenIsCommaOrAfterComma)) {
         return {
@@ -5785,7 +5527,7 @@ class CloudWatchLanguageProvider extends src.LanguageProvider {
 
     this.datasource = datasource;
     Object.assign(this, initialValues);
-  } // Strip syntax chars
+  } 
 
 
   getSyntax() {
@@ -5799,20 +5541,12 @@ class CloudWatchLanguageProvider extends src.LanguageProvider {
     const tokens = (_Prism$tokenize = prism_default().tokenize(query, grammar)) !== null && _Prism$tokenize !== void 0 ? _Prism$tokenize : [];
     return !!tokens.find(token => typeof token !== 'string' && token.content.toString().toLowerCase() === 'stats' && token.type === 'query-command');
   }
-  /**
-   * Return suggestions based on input that can be then plugged into a typeahead dropdown.
-   * Keep this DOM-free for testing
-   * @param input
-   * @param context Is optional in types but is required in case we are doing getLabelCompletionItems
-   * @param context.absoluteRange Required in case we are doing getLabelCompletionItems
-   * @param context.history Optional used only in getEmptyCompletionItems
-   */
 
 
   async provideCompletionItems(input, context) {
     const {
       value
-    } = input; // Get tokens
+    } = input; 
 
     const tokens = value === null || value === void 0 ? void 0 : value.data.get('tokens');
 
@@ -5866,7 +5600,6 @@ class CloudWatchLanguageProvider extends src.LanguageProvider {
 
       return await this.getFieldCompletionItems((_context$logGroupName7 = context === null || context === void 0 ? void 0 : context.logGroupNames) !== null && _context$logGroupName7 !== void 0 ? _context$logGroupName7 : [], (context === null || context === void 0 ? void 0 : context.region) || 'default');
     } else if (isTokenType(prevNonWhitespaceToken(curToken), 'field-name')) {
-      // suggest sort options
       return {
         suggestions: [{
           searchFunctionType: grafana_ui_src.SearchFunctionType.Prefix,
@@ -5930,10 +5663,6 @@ function previousCommandToken(startToken) {
 }
 
 const funcsWithFieldArgs = ['avg', 'count', 'count_distinct', 'earliest', 'latest', 'sortsFirst', 'sortsLast', 'max', 'min', 'pct', 'stddev', 'ispresent', 'fromMillis', 'toMillis', 'isempty', 'isblank', 'isValidIp', 'isValidIpV4', 'isValidIpV6', 'isIpInSubnet', 'isIpv4InSubnet', 'isIpv6InSubnet'].map(funcName => funcName.toLowerCase());
-/**
- * Returns true if cursor is currently inside a function parenthesis for example `count(|)` or `count(@mess|)` should
- * return true.
- */
 
 function isInsideFunctionParenthesis(curToken) {
   const prevToken = prevNonWhitespaceToken(curToken);
@@ -6006,9 +5735,9 @@ function getPreviousTokenExcluding(token, exclude) {
 
   return curToken;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/memoizedDebounce.ts
+;
 
-/* harmony default export */ const memoizedDebounce = (function (func) {
+ const memoizedDebounce = (function (func) {
   let wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 7000;
   const mem = (0,lodash.memoize)(function () {
     return (0,lodash.debounce)(func, wait, {
@@ -6025,9 +5754,8 @@ function getPreviousTokenExcluding(token, exclude) {
     return mem(...arguments)(...arguments);
   };
 });
-// EXTERNAL MODULE: ./public/app/plugins/datasource/cloudwatch/metric-math/language.ts
 var metric_math_language = __webpack_require__("./public/app/plugins/datasource/cloudwatch/metric-math/language.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/metric-math/completion/types.ts
+;
 const MetricMathTokenTypes = {
   Parenthesis: 'delimiter.parenthesis.cloudwatch-MetricMath',
   Whitespace: 'white.cloudwatch-MetricMath',
@@ -6041,7 +5769,7 @@ const MetricMathTokenTypes = {
   String: 'string.cloudwatch-MetricMath',
   Variable: 'variable.cloudwatch-MetricMath'
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/metric-math/completion/statementPosition.ts
+;
 
 
 function statementPosition_getStatementPosition(currentToken) {
@@ -6058,7 +5786,6 @@ function statementPosition_getStatementPosition(currentToken) {
     const allTokensAfterStartOfSearch = currentToken.getPreviousUntil(MetricMathTokenTypes.Function, [], 'SEARCH') || [];
 
     if (isWithinSearch) {
-      // if there's only one ' then we're still within the first arg
       if (allTokensAfterStartOfSearch.filter(_ref => {
         let {
           value
@@ -6066,7 +5793,7 @@ function statementPosition_getStatementPosition(currentToken) {
         return value === "'";
       }).length === 1) {
         return StatementPosition.WithinString;
-      } // if there was a , before the last , and it happened after the start of SEARCH
+      } 
 
 
       const lastComma = previousNonWhiteSpace.getPreviousOfType(MetricMathTokenTypes.Delimiter, ',');
@@ -6077,7 +5804,7 @@ function statementPosition_getStatementPosition(currentToken) {
         if (lastCommaIsAfterSearch) {
           return StatementPosition.SearchFuncThirdArg;
         }
-      } // otherwise assume it's the second arg
+      } 
 
 
       return StatementPosition.SearchFuncSecondArg;
@@ -6098,7 +5825,7 @@ function statementPosition_getStatementPosition(currentToken) {
 
   return StatementPosition.Unknown;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/metric-math/completion/suggestionKind.ts
+;
 
 function suggestionKind_getSuggestionKinds(statementPosition) {
   switch (statementPosition) {
@@ -6120,7 +5847,7 @@ function suggestionKind_getSuggestionKinds(statementPosition) {
 
   return [];
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/metric-math/completion/CompletionItemProvider.ts
+;
 
 
 
@@ -6197,12 +5924,12 @@ class MetricMathCompletionItemProvider extends CompletionItemProvider {
         case SuggestionKind.Period:
           metric_math_language.METRIC_MATH_PERIODS.map((s, idx) => addSuggestion(s.toString(), {
             kind: monaco.languages.CompletionItemKind.Value,
-            sortText: String.fromCharCode(97 + idx) // converts index 0, 1 to "a", "b", etc needed to show the time periods in numerical order
+            sortText: String.fromCharCode(97 + idx) 
 
           }));
           break;
       }
-    } // always suggest template variables
+    } 
 
 
     this.templateVariables.map(v => {
@@ -6218,7 +5945,7 @@ class MetricMathCompletionItemProvider extends CompletionItemProvider {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/utils/datalinks.ts
+;
 
 
 async function addDataLinksToLogsResponse(response, request, range, replaceFn, getRegion, tracingDatasourceUid) {
@@ -6241,8 +5968,6 @@ async function addDataLinksToLogsResponse(response, request, range, replaceFn, g
           field.config.links = [xrayLink];
         }
       } else {
-        // Right now we add generic link to open the query in xray console to every field so it shows in the logs row
-        // details. Unfortunately this also creates link for all values inside table which look weird.
         field.config.links = [createAwsConsoleLink(curTarget, range, interpolatedRegion, replace)];
       }
     }
@@ -6295,23 +6020,10 @@ function createAwsConsoleLink(target, range, region, replace) {
     targetBlank: true
   };
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/utils/logsRetry.ts
+;
 
 
 
-/**
- * A retry strategy specifically for cloud watch logs query. Cloud watch logs queries need first starting the query
- * and the polling for the results. The start query can fail because of the concurrent queries rate limit,
- * and so we have to retry the start query call if there is already lot of queries running.
- *
- * As we send multiple queries in a single request some can fail and some can succeed and we have to also handle those
- * cases by only retrying the failed queries. We retry the failed queries until we hit the time limit or all queries
- * succeed and only then we pass the data forward. This means we wait longer but makes the code a bit simpler as we
- * can treat starting the query and polling as steps in a pipeline.
- * @param queryFun
- * @param targets
- * @param options
- */
 function runWithRetry(queryFun, targets, timeoutFunc) {
   const startTime = new Date();
   let retries = 0;
@@ -6323,12 +6035,10 @@ function runWithRetry(queryFun, targets, timeoutFunc) {
     return Math.pow(2, retry) * 1000 + Math.random() * 100;
   };
 
-  return new Observable/* Observable */.y(observer => {
-    // Run function is where the logic takes place. We have it in a function so we can call it recursively.
+  return new Observable.y(observer => {
     function run(currentQueryParams) {
       subscription = queryFun(currentQueryParams).subscribe({
         next(frames) {
-          // In case we successfully finished, merge the current response with whatever we already collected.
           const collectedPreviously = (0,grafana_runtime_src.toDataQueryResponse)({
             data: {
               results: collected
@@ -6341,31 +6051,25 @@ function runWithRetry(queryFun, targets, timeoutFunc) {
         },
 
         error(error) {
-          // In case of error we first try to figure out what kind of error it is
-          // This means it was a generic 500 error probably so we just pass it on
           if (typeof error === 'string') {
             observer.error(error);
             return;
-          } // In case of multiple queries this some can error while some may be ok
+          } 
 
 
           const errorData = splitErrorData(error);
 
           if (!errorData) {
-            // Not sure what happened but the error structure wasn't what we expected
             observer.error(error);
             return;
           }
 
           if (!errorData.errors.length) {
-            // So there is no limit error but some other errors so nothing to retry so we just pass it as it would be
-            // otherwise.
             observer.error(error);
             return;
           }
 
           if (timeoutFunc(retries, startTime.valueOf())) {
-            // We timed out but we could have started some queries
             if (Object.keys(collected).length || Object.keys(errorData.good).length) {
               var _errorData$good, _collected, _dataResponse$error;
 
@@ -6376,8 +6080,7 @@ function runWithRetry(queryFun, targets, timeoutFunc) {
               });
               dataResponse.error = Object.assign({}, (_dataResponse$error = dataResponse.error) !== null && _dataResponse$error !== void 0 ? _dataResponse$error : {}, {
                 message: `Some queries timed out: ${errorData.errorMessage}`
-              }); // So we consider this a partial success and pass the data forward but also with error to be shown to
-              // the user.
+              }); 
 
               observer.next({
                 error: dataResponse.error,
@@ -6387,7 +6090,6 @@ function runWithRetry(queryFun, targets, timeoutFunc) {
             } else {
               var _error$data$results, _error$data;
 
-              // So we timed out and there was no data to pass forward so we just pass the error
               const dataResponse = (0,grafana_runtime_src.toDataQueryResponse)({
                 data: {
                   results: (_error$data$results = (_error$data = error.data) === null || _error$data === void 0 ? void 0 : _error$data.results) !== null && _error$data$results !== void 0 ? _error$data$results : {}
@@ -6403,7 +6105,7 @@ function runWithRetry(queryFun, targets, timeoutFunc) {
           timerID = setTimeout(() => {
             retries++;
             run(errorData.errors);
-          }, // We want to know how long to wait for the next retry. First time this will be 0.
+          }, 
           retryWaitFunction(retries + 1));
         }
 
@@ -6412,8 +6114,6 @@ function runWithRetry(queryFun, targets, timeoutFunc) {
 
     run(targets);
     return () => {
-      // We clear only the latest timer and subscription but the observable should complete after one response so
-      // there should not be more things running at the same time.
       clearTimeout(timerID);
       subscription.unsubscribe();
     };
@@ -6446,14 +6146,9 @@ function splitErrorData(error) {
     errorMessage: ''
   });
 }
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/scheduler/async.js
 var scheduler_async = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/scheduler/async.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/utils/rxjs/increasingInterval.ts
+;
 
-/**
- * Creates an Observable that emits sequential numbers after increasing intervals of time
- * starting with `startPeriod`, ending with `endPeriod` and incrementing by `step`.
- */
 
 const increasingInterval = function (_ref) {
   let {
@@ -6461,8 +6156,8 @@ const increasingInterval = function (_ref) {
     endPeriod = 5000,
     step = 1000
   } = _ref;
-  let scheduler = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : scheduler_async/* asyncScheduler */.z;
-  return new Observable/* Observable */.y(subscriber => {
+  let scheduler = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : scheduler_async.z;
+  return new Observable.y(subscriber => {
     const state = {
       subscriber,
       counter: 0,
@@ -6497,7 +6192,7 @@ function dispatch(state) {
     endPeriod
   }, newPeriod);
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/migrations/variableQueryMigrations.ts
+;
 
 
 
@@ -6508,7 +6203,7 @@ function isVariableQuery(rawQuery) {
 function migrateVariableQuery(rawQuery) {
   if (isVariableQuery(rawQuery)) {
     return rawQuery;
-  } // rawQuery is OldVariableQuery
+  } 
 
 
   if (typeof rawQuery !== 'string') {
@@ -6537,7 +6232,7 @@ function migrateVariableQuery(rawQuery) {
 
   const newQuery = {
     refId: 'CloudWatchVariableQueryEditor-VariableQuery',
-    queryType: types/* VariableQueryType.Regions */.wf.Regions,
+    queryType: types.wf.Regions,
     namespace: '',
     region: '',
     metricName: '',
@@ -6559,14 +6254,14 @@ function migrateVariableQuery(rawQuery) {
   }
 
   if (rawQuery.match(/^namespaces\(\)/)) {
-    newQuery.queryType = types/* VariableQueryType.Namespaces */.wf.Namespaces;
+    newQuery.queryType = types.wf.Namespaces;
     return newQuery;
   }
 
   const metricNameQuery = rawQuery.match(/^metrics\(([^\)]+?)(,\s?([^,]+?))?\)/);
 
   if (metricNameQuery) {
-    newQuery.queryType = types/* VariableQueryType.Metrics */.wf.Metrics;
+    newQuery.queryType = types.wf.Metrics;
     newQuery.namespace = metricNameQuery[1];
     newQuery.region = metricNameQuery[3] || '';
     return newQuery;
@@ -6575,7 +6270,7 @@ function migrateVariableQuery(rawQuery) {
   const dimensionKeysQuery = rawQuery.match(/^dimension_keys\(([^\)]+?)(,\s?([^,]+?))?\)/);
 
   if (dimensionKeysQuery) {
-    newQuery.queryType = types/* VariableQueryType.DimensionKeys */.wf.DimensionKeys;
+    newQuery.queryType = types.wf.DimensionKeys;
     newQuery.namespace = dimensionKeysQuery[1];
     newQuery.region = dimensionKeysQuery[3] || '';
     return newQuery;
@@ -6584,7 +6279,7 @@ function migrateVariableQuery(rawQuery) {
   const dimensionValuesQuery = rawQuery.match(/^dimension_values\(([^,]+?),\s?([^,]+?),\s?([^,]+?),\s?([^,]+?)(,\s?(.+))?\)/);
 
   if (dimensionValuesQuery) {
-    newQuery.queryType = types/* VariableQueryType.DimensionValues */.wf.DimensionValues;
+    newQuery.queryType = types.wf.DimensionValues;
     newQuery.region = dimensionValuesQuery[1];
     newQuery.namespace = dimensionValuesQuery[2];
     newQuery.metricName = dimensionValuesQuery[3];
@@ -6605,7 +6300,7 @@ function migrateVariableQuery(rawQuery) {
   const ebsVolumeIdsQuery = rawQuery.match(/^ebs_volume_ids\(([^,]+?),\s?([^,]+?)\)/);
 
   if (ebsVolumeIdsQuery) {
-    newQuery.queryType = types/* VariableQueryType.EBSVolumeIDs */.wf.EBSVolumeIDs;
+    newQuery.queryType = types.wf.EBSVolumeIDs;
     newQuery.region = ebsVolumeIdsQuery[1];
     newQuery.instanceID = ebsVolumeIdsQuery[2];
     return newQuery;
@@ -6614,7 +6309,7 @@ function migrateVariableQuery(rawQuery) {
   const ec2InstanceAttributeQuery = rawQuery.match(/^ec2_instance_attribute\(([^,]+?),\s?([^,]+?),\s?(.+?)\)/);
 
   if (ec2InstanceAttributeQuery) {
-    newQuery.queryType = types/* VariableQueryType.EC2InstanceAttributes */.wf.EC2InstanceAttributes;
+    newQuery.queryType = types.wf.EC2InstanceAttributes;
     newQuery.region = ec2InstanceAttributeQuery[1];
     newQuery.attributeName = ec2InstanceAttributeQuery[2];
 
@@ -6632,7 +6327,7 @@ function migrateVariableQuery(rawQuery) {
   const resourceARNsQuery = rawQuery.match(/^resource_arns\(([^,]+?),\s?([^,]+?),\s?(.+?)\)/);
 
   if (resourceARNsQuery) {
-    newQuery.queryType = types/* VariableQueryType.ResourceArns */.wf.ResourceArns;
+    newQuery.queryType = types.wf.ResourceArns;
     newQuery.region = resourceARNsQuery[1];
     newQuery.resourceType = resourceARNsQuery[2];
 
@@ -6650,13 +6345,13 @@ function migrateVariableQuery(rawQuery) {
   const statsQuery = rawQuery.match(/^statistics\(\)/);
 
   if (statsQuery) {
-    newQuery.queryType = types/* VariableQueryType.Statistics */.wf.Statistics;
+    newQuery.queryType = types.wf.Statistics;
     return newQuery;
   }
 
   throw new Error('unable to parse old variable query');
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/VariableQueryEditor/MultiFilterItem.tsx
+;
 
 
 
@@ -6676,10 +6371,10 @@ const MultiFilterItem = _ref => {
   const [localValue, setLocalValue] = (0,react.useState)(((_filter$value = filter.value) === null || _filter$value === void 0 ? void 0 : _filter$value.join(', ')) || '');
   const theme = (0,grafana_ui_src.useTheme2)();
   const styles = MultiFilterItem_getOperatorStyles(theme);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     "data-testid": "cloudwatch-multifilter-item",
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.InputGroup, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+    children: (0,jsx_runtime.jsxs)(experimental.InputGroup, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         "data-testid": "cloudwatch-multifilter-item-key",
         "aria-label": "Filter key",
         value: localKey,
@@ -6692,10 +6387,10 @@ const MultiFilterItem = _ref => {
             }));
           }
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+      }), (0,jsx_runtime.jsx)("span", {
         className: (0,emotion_css_esm.cx)(styles.root),
         children: "="
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         "data-testid": "cloudwatch-multifilter-item-value",
         "aria-label": "Filter value",
         value: localValue,
@@ -6712,7 +6407,7 @@ const MultiFilterItem = _ref => {
 
           setLocalValue(newValues.join(', '));
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.AccessoryButton, {
+      }), (0,jsx_runtime.jsx)(experimental.AccessoryButton, {
         "aria-label": "remove",
         icon: "times",
         variant: "secondary",
@@ -6728,7 +6423,7 @@ const MultiFilterItem_getOperatorStyles = (0,grafana_ui_src.stylesFactory)(theme
     alignSelf: 'center'
   })
 }));
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/VariableQueryEditor/MultiFilter.tsx
+;
 
 
 
@@ -6766,8 +6461,7 @@ const MultiFilter = _ref2 => {
   (0,react.useEffect)(() => setItems(filters ? multiFiltersToFilterConditions(filters) : []), [filters]);
 
   const onFiltersChange = newItems => {
-    setItems(newItems); // The onChange event should only be triggered in the case there is a complete dimension object.
-    // So when a new key is added that does not yet have a value, it should not trigger an onChange event.
+    setItems(newItems); 
 
     const newMultifilters = filterConditionsToMultiFilters(newItems);
 
@@ -6776,7 +6470,7 @@ const MultiFilter = _ref2 => {
     }
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorList, {
+  return (0,jsx_runtime.jsx)(experimental.EditorList, {
     items: items,
     onChange: onFiltersChange,
     renderItem: MultiFilter_makeRenderFilter(keyPlaceholder)
@@ -6785,7 +6479,7 @@ const MultiFilter = _ref2 => {
 
 function MultiFilter_makeRenderFilter(keyPlaceholder) {
   function renderFilter(item, onChange, onDelete) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(MultiFilterItem, {
+    return (0,jsx_runtime.jsx)(MultiFilterItem, {
       filter: item,
       onChange: item => onChange(item),
       onDelete: onDelete,
@@ -6795,7 +6489,7 @@ function MultiFilter_makeRenderFilter(keyPlaceholder) {
 
   return renderFilter;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/VariableQueryEditor/VariableQueryField.tsx
+;
 
 
 
@@ -6810,11 +6504,11 @@ const VariableQueryField = _ref => {
     isLoading = false,
     inputId = label
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
     label: label,
     labelWidth: LABEL_WIDTH,
     htmlFor: inputId,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       "aria-label": label,
       width: 25,
       allowCustomValue: allowCustomValue,
@@ -6831,7 +6525,7 @@ const VariableQueryField = _ref => {
     })
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/VariableQueryEditor/VariableTextField.tsx
+;
 
 
 
@@ -6846,13 +6540,13 @@ const VariableTextField = _ref => {
     tooltip
   } = _ref;
   const [localValue, setLocalValue] = (0,react.useState)(value);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
     interactive: interactive,
     label: label,
     labelWidth: VariableTextField_LABEL_WIDTH,
     tooltip: tooltip,
     grow: true,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
       "aria-label": label,
       placeholder: placeholder,
       value: localValue,
@@ -6861,7 +6555,7 @@ const VariableTextField = _ref => {
     })
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/components/VariableQueryEditor/VariableQueryEditor.tsx
+;
 var VariableQueryEditor_a, _a2;
 
 
@@ -6877,31 +6571,31 @@ var VariableQueryEditor_a, _a2;
 
 
 const queryTypes = [{
-  value: types/* VariableQueryType.Regions */.wf.Regions,
+  value: types.wf.Regions,
   label: 'Regions'
 }, {
-  value: types/* VariableQueryType.Namespaces */.wf.Namespaces,
+  value: types.wf.Namespaces,
   label: 'Namespaces'
 }, {
-  value: types/* VariableQueryType.Metrics */.wf.Metrics,
+  value: types.wf.Metrics,
   label: 'Metrics'
 }, {
-  value: types/* VariableQueryType.DimensionKeys */.wf.DimensionKeys,
+  value: types.wf.DimensionKeys,
   label: 'Dimension Keys'
 }, {
-  value: types/* VariableQueryType.DimensionValues */.wf.DimensionValues,
+  value: types.wf.DimensionValues,
   label: 'Dimension Values'
 }, {
-  value: types/* VariableQueryType.EBSVolumeIDs */.wf.EBSVolumeIDs,
+  value: types.wf.EBSVolumeIDs,
   label: 'EBS Volume IDs'
 }, {
-  value: types/* VariableQueryType.EC2InstanceAttributes */.wf.EC2InstanceAttributes,
+  value: types.wf.EC2InstanceAttributes,
   label: 'EC2 Instance Attributes'
 }, {
-  value: types/* VariableQueryType.ResourceArns */.wf.ResourceArns,
+  value: types.wf.ResourceArns,
   label: 'Resource ARNs'
 }, {
-  value: types/* VariableQueryType.Statistics */.wf.Statistics,
+  value: types.wf.Statistics,
   label: 'Statistics'
 }];
 const VariableQueryEditor = _ref => {
@@ -6942,7 +6636,7 @@ const VariableQueryEditor = _ref => {
     onChange(Object.assign({}, newQuery, {
       refId: 'CloudWatchVariableQueryEditor-VariableQuery'
     }));
-  }; // Reset dimensionValue parameters if namespace or region change
+  }; 
 
 
   const sanitizeQuery = async query => {
@@ -6978,10 +6672,10 @@ const VariableQueryEditor = _ref => {
     });
   };
 
-  const hasRegionField = [types/* VariableQueryType.Metrics */.wf.Metrics, types/* VariableQueryType.DimensionKeys */.wf.DimensionKeys, types/* VariableQueryType.DimensionValues */.wf.DimensionValues, types/* VariableQueryType.EBSVolumeIDs */.wf.EBSVolumeIDs, types/* VariableQueryType.EC2InstanceAttributes */.wf.EC2InstanceAttributes, types/* VariableQueryType.ResourceArns */.wf.ResourceArns].includes(parsedQuery.queryType);
-  const hasNamespaceField = [types/* VariableQueryType.Metrics */.wf.Metrics, types/* VariableQueryType.DimensionKeys */.wf.DimensionKeys, types/* VariableQueryType.DimensionValues */.wf.DimensionValues].includes(parsedQuery.queryType);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(VariableQueryField, {
+  const hasRegionField = [types.wf.Metrics, types.wf.DimensionKeys, types.wf.DimensionValues, types.wf.EBSVolumeIDs, types.wf.EC2InstanceAttributes, types.wf.ResourceArns].includes(parsedQuery.queryType);
+  const hasNamespaceField = [types.wf.Metrics, types.wf.DimensionKeys, types.wf.DimensionValues].includes(parsedQuery.queryType);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(VariableQueryField, {
       value: parsedQuery.queryType,
       options: queryTypes,
       onChange: value => onQueryChange(Object.assign({}, parsedQuery, {
@@ -6989,21 +6683,21 @@ const VariableQueryEditor = _ref => {
       })),
       label: "Query Type",
       inputId: `variable-query-type-${query.refId}`
-    }), hasRegionField && /*#__PURE__*/(0,jsx_runtime.jsx)(VariableQueryField, {
+    }), hasRegionField && (0,jsx_runtime.jsx)(VariableQueryField, {
       value: region,
       options: regions,
       onChange: value => onRegionChange(value),
       label: "Region",
       isLoading: regionIsLoading,
       inputId: `variable-query-region-${query.refId}`
-    }), hasNamespaceField && /*#__PURE__*/(0,jsx_runtime.jsx)(VariableQueryField, {
+    }), hasNamespaceField && (0,jsx_runtime.jsx)(VariableQueryField, {
       value: namespace,
       options: namespaces,
       onChange: value => onNamespaceChange(value),
       label: "Namespace",
       inputId: `variable-query-namespace-${query.refId}`
-    }), parsedQuery.queryType === types/* VariableQueryType.DimensionValues */.wf.DimensionValues && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(VariableQueryField, {
+    }), parsedQuery.queryType === types.wf.DimensionValues && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(VariableQueryField, {
         value: metricName || null,
         options: metrics,
         onChange: value => onQueryChange(Object.assign({}, parsedQuery, {
@@ -7011,7 +6705,7 @@ const VariableQueryEditor = _ref => {
         })),
         label: "Metric",
         inputId: `variable-query-metric-${query.refId}`
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(VariableQueryField, {
+      }), (0,jsx_runtime.jsx)(VariableQueryField, {
         value: dimensionKey || null,
         options: dimensionKeys,
         onChange: value => onQueryChange(Object.assign({}, parsedQuery, {
@@ -7019,11 +6713,11 @@ const VariableQueryEditor = _ref => {
         })),
         label: "Dimension Key",
         inputId: `variable-query-dimension-key-${query.refId}`
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Dimensions",
         labelWidth: 20,
         tooltip: "Dimensions to filter the returned values on",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(Dimensions, {
+        children: (0,jsx_runtime.jsx)(Dimensions, {
           metricStat: Object.assign({}, parsedQuery, {
             dimensions: parsedQuery.dimensionFilters
           }),
@@ -7037,15 +6731,15 @@ const VariableQueryEditor = _ref => {
           datasource: datasource
         })
       })]
-    }), parsedQuery.queryType === types/* VariableQueryType.EBSVolumeIDs */.wf.EBSVolumeIDs && /*#__PURE__*/(0,jsx_runtime.jsx)(VariableTextField, {
+    }), parsedQuery.queryType === types.wf.EBSVolumeIDs && (0,jsx_runtime.jsx)(VariableTextField, {
       value: query.instanceID,
       placeholder: "i-XXXXXXXXXXXXXXXXX",
       onBlur: value => onQueryChange(Object.assign({}, parsedQuery, {
         instanceID: value
       })),
       label: "Instance ID"
-    }), parsedQuery.queryType === types/* VariableQueryType.EC2InstanceAttributes */.wf.EC2InstanceAttributes && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(VariableTextField, {
+    }), parsedQuery.queryType === types.wf.EC2InstanceAttributes && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(VariableTextField, {
         value: parsedQuery.attributeName,
         placeholder: "attribute name",
         onBlur: value => onQueryChange(Object.assign({}, parsedQuery, {
@@ -7053,26 +6747,26 @@ const VariableQueryEditor = _ref => {
         })),
         label: "Attribute Name",
         interactive: true,
-        tooltip: /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: ['Attribute or tag to query on. Tags should be formatted "Tags.<name>". ', VariableQueryEditor_a || (VariableQueryEditor_a = /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+        tooltip: (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: ['Attribute or tag to query on. Tags should be formatted "Tags.<name>". ', VariableQueryEditor_a || (VariableQueryEditor_a = (0,jsx_runtime.jsx)("a", {
             href: "https://grafana.com/docs/grafana/latest/datasources/aws-cloudwatch/template-queries-cloudwatch/#selecting-attributes",
             target: "_blank",
             rel: "noreferrer",
             children: "See the documentation for more details"
           }))]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Filters",
         labelWidth: 20,
-        tooltip: /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: [_a2 || (_a2 = /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+        tooltip: (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: [_a2 || (_a2 = (0,jsx_runtime.jsx)("a", {
             href: "https://grafana.com/docs/grafana/latest/datasources/aws-cloudwatch/template-queries-cloudwatch/#selecting-attributes",
             target: "_blank",
             rel: "noreferrer",
             children: "Pre-defined ec2:DescribeInstances filters/tags"
           })), ' and the values to filter on. Tags should be formatted tag:<name>.']
         }),
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(MultiFilter, {
+        children: (0,jsx_runtime.jsx)(MultiFilter, {
           filters: parsedQuery.ec2Filters,
           onChange: filters => {
             onChange(Object.assign({}, parsedQuery, {
@@ -7082,19 +6776,19 @@ const VariableQueryEditor = _ref => {
           keyPlaceholder: "filter/tag"
         })
       })]
-    }), parsedQuery.queryType === types/* VariableQueryType.ResourceArns */.wf.ResourceArns && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(VariableTextField, {
+    }), parsedQuery.queryType === types.wf.ResourceArns && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(VariableTextField, {
         value: parsedQuery.resourceType,
         placeholder: "resource type",
         onBlur: value => onQueryChange(Object.assign({}, parsedQuery, {
           resourceType: value
         })),
         label: "Resource Type"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Tags",
         labelWidth: 20,
         tooltip: "Tags to filter the returned values on.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(MultiFilter, {
+        children: (0,jsx_runtime.jsx)(MultiFilter, {
           filters: parsedQuery.tags,
           onChange: filters => {
             onChange(Object.assign({}, parsedQuery, {
@@ -7107,7 +6801,7 @@ const VariableQueryEditor = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/variables.ts
+;
 function variables_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -7130,7 +6824,7 @@ class CloudWatchVariableSupport extends src.CustomVariableSupport {
 
   query(request) {
     const queryObj = migrateVariableQuery(request.targets[0]);
-    return (0,from/* from */.D)(this.execute(queryObj)).pipe((0,map/* map */.U)(data => ({
+    return (0,from.D)(this.execute(queryObj)).pipe((0,map.U)(data => ({
       data
     })));
   }
@@ -7138,31 +6832,31 @@ class CloudWatchVariableSupport extends src.CustomVariableSupport {
   async execute(query) {
     try {
       switch (query.queryType) {
-        case types/* VariableQueryType.Regions */.wf.Regions:
+        case types.wf.Regions:
           return this.handleRegionsQuery();
 
-        case types/* VariableQueryType.Namespaces */.wf.Namespaces:
+        case types.wf.Namespaces:
           return this.handleNamespacesQuery();
 
-        case types/* VariableQueryType.Metrics */.wf.Metrics:
+        case types.wf.Metrics:
           return this.handleMetricsQuery(query);
 
-        case types/* VariableQueryType.DimensionKeys */.wf.DimensionKeys:
+        case types.wf.DimensionKeys:
           return this.handleDimensionKeysQuery(query);
 
-        case types/* VariableQueryType.DimensionValues */.wf.DimensionValues:
+        case types.wf.DimensionValues:
           return this.handleDimensionValuesQuery(query);
 
-        case types/* VariableQueryType.EBSVolumeIDs */.wf.EBSVolumeIDs:
+        case types.wf.EBSVolumeIDs:
           return this.handleEbsVolumeIdsQuery(query);
 
-        case types/* VariableQueryType.EC2InstanceAttributes */.wf.EC2InstanceAttributes:
+        case types.wf.EC2InstanceAttributes:
           return this.handleEc2InstanceAttributeQuery(query);
 
-        case types/* VariableQueryType.ResourceArns */.wf.ResourceArns:
+        case types.wf.ResourceArns:
           return this.handleResourceARNsQuery(query);
 
-        case types/* VariableQueryType.Statistics */.wf.Statistics:
+        case types.wf.Statistics:
           return this.handleStatisticsQuery();
       }
     } catch (error) {
@@ -7301,7 +6995,7 @@ class CloudWatchVariableSupport extends src.CustomVariableSupport {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/datasource.ts
+;
 function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -7330,23 +7024,23 @@ function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.d
 
 
 
-const DS_QUERY_ENDPOINT = '/api/ds/query'; // Constants also defined in tsdb/cloudwatch/cloudwatch.go
+const DS_QUERY_ENDPOINT = '/api/ds/query'; 
 
 const LOG_IDENTIFIER_INTERNAL = '__log__grafana_internal__';
 const LOGSTREAM_IDENTIFIER_INTERNAL = '__logstream__grafana_internal__';
 
-const displayAlert = (datasourceName, region) => store/* store.dispatch */.h.dispatch((0,actions/* notifyApp */.$l)((0,appNotification/* createErrorNotification */.t_)(`CloudWatch request limit reached in ${region} for data source ${datasourceName}`, '', undefined, /*#__PURE__*/react.createElement(ThrottlingErrorMessage, {
+const displayAlert = (datasourceName, region) => store.h.dispatch((0,actions.$l)((0,appNotification.t_)(`CloudWatch request limit reached in ${region} for data source ${datasourceName}`, '', undefined, react.createElement(ThrottlingErrorMessage, {
   region
 }, null))));
 
-const displayCustomError = (title, message) => store/* store.dispatch */.h.dispatch((0,actions/* notifyApp */.$l)((0,appNotification/* createErrorNotification */.t_)(title, message)));
+const displayCustomError = (title, message) => store.h.dispatch((0,actions.$l)((0,appNotification.t_)(title, message)));
 
 class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
   constructor(instanceSettings) {
     var _this;
 
-    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv/* getTemplateSrv */.J)();
-    let timeSrv = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (0,TimeSrv/* getTimeSrv */.$t)();
+    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv.J)();
+    let timeSrv = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (0,TimeSrv.$t)();
     super(instanceSettings);
     _this = this;
     this.templateSrv = templateSrv;
@@ -7372,9 +7066,9 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
 
     datasource_defineProperty(this, "standardStatistics", ['Average', 'Maximum', 'Minimum', 'Sum', 'SampleCount']);
 
-    datasource_defineProperty(this, "debouncedAlert", memoizedDebounce(displayAlert, app_types/* AppNotificationTimeout.Error */.bd.Error));
+    datasource_defineProperty(this, "debouncedAlert", memoizedDebounce(displayAlert, app_types.bd.Error));
 
-    datasource_defineProperty(this, "debouncedCustomAlert", memoizedDebounce(displayCustomError, app_types/* AppNotificationTimeout.Error */.bd.Error));
+    datasource_defineProperty(this, "debouncedCustomAlert", memoizedDebounce(displayCustomError, app_types.bd.Error));
 
     datasource_defineProperty(this, "logQueries", {});
 
@@ -7392,7 +7086,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
             message: 'Log group is required'
           }
         });
-      } // No valid targets, return the empty result to save a round trip.
+      } 
 
 
       if ((0,lodash.isEmpty)(validLogQueries)) {
@@ -7420,12 +7114,12 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
           scopedVars: options.scopedVars,
           skipCache: true
         });
-      }, queryParams, timeoutFunc).pipe((0,mergeMap/* mergeMap */.z)(_ref => {
+      }, queryParams, timeoutFunc).pipe((0,mergeMap.z)(_ref => {
         let {
           frames,
           error
         } = _ref;
-        return (// This queries for the results
+        return (
           this.logsQuery(frames.map(dataFrame => {
             var _dataFrame$meta$custo, _dataFrame$meta, _dataFrame$meta$custo2;
 
@@ -7435,7 +7129,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
               refId: dataFrame.refId,
               statsGroups: logQueries.find(target => target.refId === dataFrame.refId).statsGroups
             };
-          }), timeoutFunc).pipe((0,map/* map */.U)(response => {
+          }), timeoutFunc).pipe((0,map.U)(response => {
             if (!response.error && error) {
               response.error = error;
             }
@@ -7443,8 +7137,8 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
             return response;
           }))
         );
-      }), (0,mergeMap/* mergeMap */.z)(dataQueryResponse => {
-        return (0,from/* from */.D)((async () => {
+      }), (0,mergeMap.z)(dataQueryResponse => {
+        return (0,from.D)((async () => {
           await addDataLinksToLogsResponse(dataQueryResponse, options, this.timeSrv.timeRange(), this.replace.bind(this), this.getActualRegion.bind(this), this.tracingDataSourceUid);
           return dataQueryResponse;
         })());
@@ -7464,7 +7158,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
           type: 'timeSeriesQuery',
           datasource: this.getRef()
         });
-      }); // No valid targets, return the empty result to save a round trip.
+      }); 
 
       if ((0,lodash.isEmpty)(validMetricsQueries)) {
         return (0,of.of)({
@@ -7517,7 +7211,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
         requestParams.startTime = row.timeEpochMs;
       }
 
-      const dataFrames = await (0,lastValueFrom/* lastValueFrom */.n)(_this.makeLogActionRequest('GetLogEvents', [requestParams]));
+      const dataFrames = await (0,lastValueFrom.n)(_this.makeLogActionRequest('GetLogEvents', [requestParams]));
       return {
         data: dataFrames
       };
@@ -7577,7 +7271,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
 
     if (annotationQueries.length > 0) {
       dataQueryResponses.push(this.handleAnnotationQuery(annotationQueries, options));
-    } // No valid targets, return the empty result to save a round trip.
+    } 
 
 
     if ((0,lodash.isEmpty)(dataQueryResponses)) {
@@ -7587,14 +7281,8 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
       });
     }
 
-    return (0,merge/* merge */.T)(...dataQueryResponses);
+    return (0,merge.T)(...dataQueryResponses);
   }
-  /**
-   * Handle log query. The log query works by starting the query on the CloudWatch and then periodically polling for
-   * results.
-   * @param logQueries
-   * @param options
-   */
 
 
   filterQuery(query) {
@@ -7603,7 +7291,6 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
 
       return !!((_query$logGroupNames = query.logGroupNames) !== null && _query$logGroupNames !== void 0 && _query$logGroupNames.length);
     } else if (isCloudWatchAnnotationQuery(query)) {
-      // annotation query validity already checked in annotationSupport
       return true;
     }
 
@@ -7622,12 +7309,11 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
       return false;
     }
 
-    if (metricQueryType === types/* MetricQueryType.Search */.$5.Search && metricEditorMode === types/* MetricEditorMode.Builder */.MQ.Builder) {
+    if (metricQueryType === types.$5.Search && metricEditorMode === types.MQ.Builder) {
       return !!namespace && !!metricName && !!statistic;
-    } else if (metricQueryType === types/* MetricQueryType.Search */.$5.Search && metricEditorMode === types/* MetricEditorMode.Code */.MQ.Code) {
+    } else if (metricQueryType === types.$5.Search && metricEditorMode === types.MQ.Code) {
       return !!expression;
-    } else if (metricQueryType === types/* MetricQueryType.Query */.$5.Query) {
-      // still TBD how to validate the visual query builder for SQL
+    } else if (metricQueryType === types.$5.Query) {
       return !!sqlExpression;
     }
 
@@ -7642,7 +7328,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
     query.metricName = this.replace(query.metricName, options.scopedVars, true, 'metric name');
     query.dimensions = this.convertDimensionFormat((_query$dimensions = query.dimensions) !== null && _query$dimensions !== void 0 ? _query$dimensions : {}, options.scopedVars);
     query.statistic = this.templateSrv.replace(query.statistic, options.scopedVars);
-    query.period = String(this.getPeriod(query, options)); // use string format for period in graph query, and alerting
+    query.period = String(this.getPeriod(query, options)); 
 
     query.id = this.templateSrv.replace(query.id, options.scopedVars);
     query.expression = this.templateSrv.replace(query.expression, options.scopedVars);
@@ -7670,7 +7356,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
           datasource: this.getRef()
         });
       })
-    }).pipe((0,map/* map */.U)(r => {
+    }).pipe((0,map.U)(r => {
       const frames = (0,grafana_runtime_src.toDataQueryResponse)({
         data: r
       }).data;
@@ -7679,10 +7365,6 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
       };
     }));
   }
-  /**
-   * Checks progress and polls data of a started logs query with some retry logic.
-   * @param queryParams
-   */
 
 
   logsQuery(queryParams, timeoutFunc) {
@@ -7700,10 +7382,10 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
       startPeriod: 100,
       endPeriod: 1000,
       step: 300
-    }).pipe((0,concatMap/* concatMap */.b)(_ => this.makeLogActionRequest('GetQueryResults', queryParams, {
+    }).pipe((0,concatMap.b)(_ => this.makeLogActionRequest('GetQueryResults', queryParams, {
       skipCache: true
-    })), (0,repeat/* repeat */.r)(), (0,share/* share */.B)());
-    const consecutiveFailedAttempts = dataFrames.pipe((0,scan/* scan */.R)((_ref3, frames) => {
+    })), (0,repeat.r)(), (0,share.B)());
+    const consecutiveFailedAttempts = dataFrames.pipe((0,scan.R)((_ref3, frames) => {
       let {
         failures,
         prevRecordsMatched
@@ -7729,28 +7411,28 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
     }, {
       failures: 0,
       prevRecordsMatched: {}
-    }), (0,map/* map */.U)(_ref4 => {
+    }), (0,map.U)(_ref4 => {
       let {
         failures
       } = _ref4;
       return failures;
-    }), (0,share/* share */.B)());
-    const queryResponse = (0,zip/* zip */.$)(dataFrames, consecutiveFailedAttempts).pipe((0,tap/* tap */.b)(_ref5 => {
+    }), (0,share.B)());
+    const queryResponse = (0,zip.$)(dataFrames, consecutiveFailedAttempts).pipe((0,tap.b)(_ref5 => {
       let [dataFrames] = _ref5;
 
       for (const frame of dataFrames) {
         var _frame$meta2, _frame$meta2$custom;
 
-        if ([types/* CloudWatchLogsQueryStatus.Complete */.KB.Complete, types/* CloudWatchLogsQueryStatus.Cancelled */.KB.Cancelled, types/* CloudWatchLogsQueryStatus.Failed */.KB.Failed].includes((_frame$meta2 = frame.meta) === null || _frame$meta2 === void 0 ? void 0 : (_frame$meta2$custom = _frame$meta2.custom) === null || _frame$meta2$custom === void 0 ? void 0 : _frame$meta2$custom['Status']) && this.logQueries.hasOwnProperty(frame.refId)) {
+        if ([types.KB.Complete, types.KB.Cancelled, types.KB.Failed].includes((_frame$meta2 = frame.meta) === null || _frame$meta2 === void 0 ? void 0 : (_frame$meta2$custom = _frame$meta2.custom) === null || _frame$meta2$custom === void 0 ? void 0 : _frame$meta2$custom['Status']) && this.logQueries.hasOwnProperty(frame.refId)) {
           delete this.logQueries[frame.refId];
         }
       }
-    }), (0,map/* map */.U)(_ref6 => {
+    }), (0,map.U)(_ref6 => {
       let [dataFrames, failedAttempts] = _ref6;
 
       if (timeoutFunc()) {
         for (const frame of dataFrames) {
-          (0,lodash.set)(frame, 'meta.custom.Status', types/* CloudWatchLogsQueryStatus.Cancelled */.KB.Cancelled);
+          (0,lodash.set)(frame, 'meta.custom.Status', types.KB.Cancelled);
         }
       }
 
@@ -7760,14 +7442,14 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
         state: dataFrames.every(dataFrame => {
           var _dataFrame$meta2, _dataFrame$meta2$cust;
 
-          return [types/* CloudWatchLogsQueryStatus.Complete */.KB.Complete, types/* CloudWatchLogsQueryStatus.Cancelled */.KB.Cancelled, types/* CloudWatchLogsQueryStatus.Failed */.KB.Failed].includes((_dataFrame$meta2 = dataFrame.meta) === null || _dataFrame$meta2 === void 0 ? void 0 : (_dataFrame$meta2$cust = _dataFrame$meta2.custom) === null || _dataFrame$meta2$cust === void 0 ? void 0 : _dataFrame$meta2$cust['Status']);
+          return [types.KB.Complete, types.KB.Cancelled, types.KB.Failed].includes((_dataFrame$meta2 = dataFrame.meta) === null || _dataFrame$meta2 === void 0 ? void 0 : (_dataFrame$meta2$cust = _dataFrame$meta2.custom) === null || _dataFrame$meta2$cust === void 0 ? void 0 : _dataFrame$meta2$cust['Status']);
         }) ? src.LoadingState.Done : src.LoadingState.Loading,
         error: timeoutFunc() ? {
           message: `error: query timed out after ${failedAttempts} attempts`,
           type: src.DataQueryErrorType.Timeout
         } : undefined
       };
-    }), (0,takeWhile/* takeWhile */.o)(_ref7 => {
+    }), (0,takeWhile.o)(_ref7 => {
       let {
         state
       } = _ref7;
@@ -7784,7 +7466,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
       })), {
         makeReplacements: false,
         skipCache: true
-      }).pipe((0,finalize/* finalize */.x)(() => {
+      }).pipe((0,finalize.x)(() => {
         this.logQueries = {};
       }));
     }
@@ -7793,7 +7475,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
   async describeLogGroups(params) {
     var _dataFrames$0$fields$, _dataFrames$, _dataFrames$$fields$;
 
-    const dataFrames = await (0,lastValueFrom/* lastValueFrom */.n)(this.makeLogActionRequest('DescribeLogGroups', [params]));
+    const dataFrames = await (0,lastValueFrom.n)(this.makeLogActionRequest('DescribeLogGroups', [params]));
     const logGroupNames = (_dataFrames$0$fields$ = (_dataFrames$ = dataFrames[0]) === null || _dataFrames$ === void 0 ? void 0 : (_dataFrames$$fields$ = _dataFrames$.fields[0]) === null || _dataFrames$$fields$ === void 0 ? void 0 : _dataFrames$$fields$.values.toArray()) !== null && _dataFrames$0$fields$ !== void 0 ? _dataFrames$0$fields$ : [];
     return logGroupNames;
   }
@@ -7801,7 +7483,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
   async getLogGroupFields(params) {
     var _fieldNames$map;
 
-    const dataFrames = await (0,lastValueFrom/* lastValueFrom */.n)(this.makeLogActionRequest('GetLogGroupFields', [params]));
+    const dataFrames = await (0,lastValueFrom.n)(this.makeLogActionRequest('GetLogGroupFields', [params]));
     const fieldNames = dataFrames[0].fields[0].values.toArray();
     const fieldPercentages = dataFrames[0].fields[1].values.toArray();
     const getLogGroupFieldsResponse = {
@@ -7840,7 +7522,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
       from,
       to
     } = _ref8;
-    return this.awsRequest(DS_QUERY_ENDPOINT, request).pipe((0,map/* map */.U)(res => {
+    return this.awsRequest(DS_QUERY_ENDPOINT, request).pipe((0,map.U)(res => {
       const dataframes = (0,grafana_runtime_src.toDataQueryResponse)({
         data: res
       }).data;
@@ -7857,7 +7539,6 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
           if (field.type === src.FieldType.time) {
             var _frame$meta3, _frame$meta3$custom;
 
-            // field.config.interval is populated in order for Grafana to fill in null values at frame intervals
             field.config.interval = ((_frame$meta3 = frame.meta) === null || _frame$meta3 === void 0 ? void 0 : (_frame$meta3$custom = _frame$meta3.custom) === null || _frame$meta3$custom === void 0 ? void 0 : _frame$meta3$custom.period) * 1000;
           }
         });
@@ -7868,13 +7549,13 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
           message: lastError.error
         } : null
       };
-    }), (0,catchError/* catchError */.K)(err => {
-      const isFrameError = err.data.results; // Error is not frame specific
+    }), (0,catchError.K)(err => {
+      const isFrameError = err.data.results; 
 
       if (!isFrameError && err.data && err.data.message === 'Metric request error' && err.data.error) {
         err.message = err.data.error;
-        return (0,throwError/* throwError */._)(() => err);
-      } // The error is either for a specific frame or for all the frames
+        return (0,throwError._)(() => err);
+      } 
 
 
       const results = Object.values(err.data.results);
@@ -7902,7 +7583,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
         });
       }
 
-      return (0,throwError/* throwError */._)(() => err);
+      return (0,throwError._)(() => err);
     }));
   }
 
@@ -7922,9 +7603,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
       queries: queryParams.map(param => Object.assign({
         refId: param.refId || 'A',
         intervalMs: 1,
-        // dummy
         maxDataPoints: 1,
-        // dummy
         datasource: this.getRef(),
         type: 'logAction',
         subtype: subtype
@@ -7944,9 +7623,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
               anyQuery[fieldName] = this.replace(anyQuery[fieldName], options.scopedVars, true, fieldName);
             }
           }
-        } // TODO: seems to be some sort of bug that we don't really send region with all queries. This means
-        //  if you select different than default region in editor you will get results for autocomplete from wrong
-        //  region.
+        } 
 
 
         if (anyQuery.region) {
@@ -7966,12 +7643,12 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
       };
     }
 
-    return this.awsRequest(DS_QUERY_ENDPOINT, requestParams, headers).pipe((0,map/* map */.U)(response => resultsToDataFrames({
+    return this.awsRequest(DS_QUERY_ENDPOINT, requestParams, headers).pipe((0,map.U)(response => resultsToDataFrames({
       data: response
-    })), (0,catchError/* catchError */.K)(err => {
+    })), (0,catchError.K)(err => {
       var _err$data, _err$data2;
 
-      if (config/* default.featureToggles.datasourceQueryMultiStatus */.ZP.featureToggles.datasourceQueryMultiStatus && err.status === 207) {
+      if (config.ZP.featureToggles.datasourceQueryMultiStatus && err.status === 207) {
         throw err;
       }
 
@@ -7982,7 +7659,6 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
       if ((_err$data = err.data) !== null && _err$data !== void 0 && _err$data.error) {
         throw err.data.error;
       } else if ((_err$data2 = err.data) !== null && _err$data2 !== void 0 && _err$data2.message) {
-        // In PROD we do not supply .error
         throw err.data.message;
       }
 
@@ -8091,7 +7767,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
       data,
       headers
     };
-    return (0,grafana_runtime_src.getBackendSrv)().fetch(options).pipe((0,map/* map */.U)(result => result.data));
+    return (0,grafana_runtime_src.getBackendSrv)().fetch(options).pipe((0,map.U)(result => result.data));
   }
 
   getDefaultRegion() {
@@ -8140,7 +7816,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
         [key]: newValues
       });
     }, {});
-  } // get the value for a given template variable
+  } 
 
 
   getVariableValue(value, scopedVars) {
@@ -8154,7 +7830,6 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
 
     if (variableName && valueVar) {
       if (valueVar.multi) {
-        // rebuild the variable name to handle old migrated queries
         const values = this.templateSrv.replace('$' + variableName, scopedVars, 'pipe').split('|');
         return values;
       }
@@ -8252,7 +7927,7 @@ class CloudWatchDatasource extends grafana_runtime_src.DataSourceWithBackend {
 }
 
 function withTeardown(observable, onUnsubscribe) {
-  return new Observable/* Observable */.y(subscriber => {
+  return new Observable.y(subscriber => {
     const innerSub = observable.subscribe({
       next: val => subscriber.next(val),
       error: err => subscriber.next(err),
@@ -8269,7 +7944,7 @@ function parseLogGroupName(logIdentifier) {
   const colonIndex = logIdentifier.lastIndexOf(':');
   return logIdentifier.slice(colonIndex + 1);
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloudwatch/module.tsx
+;
 
 
 
@@ -8278,15 +7953,14 @@ function parseLogGroupName(logIdentifier) {
 
 const module_plugin = new src.DataSourcePlugin(CloudWatchDatasource).setQueryEditorHelp(LogsCheatSheet).setConfigEditor(ConfigEditor).setQueryEditor(PanelQueryEditor).setMetadataInspector(MetaInspector);
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/fast-deep-equal-npm-3.1.3-790edcfcf5-e21a9d8d84.zip/node_modules/fast-deep-equal/react.js":
-/***/ ((module) => {
+ "./.yarn/cache/fast-deep-equal-npm-3.1.3-790edcfcf5-e21a9d8d84.zip/node_modules/fast-deep-equal/react.js":
+ ((module) => {
 
 "use strict";
 
 
-// do not edit .js files directly - edit src/index.jst
 
 
 
@@ -8322,9 +7996,6 @@ module.exports = function equal(a, b) {
       var key = keys[i];
 
       if (key === '_owner' && a.$$typeof) {
-        // React-specific: avoid traversing React elements' _owner.
-        //  _owner contains circular references
-        // and is not needed when comparing the actual elements (and not their owners)
         continue;
       }
 
@@ -8334,48 +8005,22 @@ module.exports = function equal(a, b) {
     return true;
   }
 
-  // true if both NaN, false otherwise
   return a!==a && b!==b;
 };
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/jsurl-npm-0.1.5-9e17f93783-50b614908d.zip/node_modules/jsurl/index.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/jsurl-npm-0.1.5-9e17f93783-50b614908d.zip/node_modules/jsurl/index.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__("./.yarn/cache/jsurl-npm-0.1.5-9e17f93783-50b614908d.zip/node_modules/jsurl/lib/jsurl.js");
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/jsurl-npm-0.1.5-9e17f93783-50b614908d.zip/node_modules/jsurl/lib/jsurl.js":
-/***/ ((__unused_webpack_module, exports) => {
+ "./.yarn/cache/jsurl-npm-0.1.5-9e17f93783-50b614908d.zip/node_modules/jsurl/lib/jsurl.js":
+ ((__unused_webpack_module, exports) => {
 
-/**
- * Copyright (c) 2011 Bruno Jouhier <bruno.jouhier@sage.com>
- *
- * Permission is hereby granted, free of charge, to any person
- * obtaining a copy of this software and associated documentation
- * files (the "Software"), to deal in the Software without
- * restriction, including without limitation the rights to use,
- * copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following
- * conditions:
- *
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
- * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- */
-//
 (function(exports) {
 	"use strict";
 	exports.stringify = function stringify(v) {
@@ -8383,7 +8028,6 @@ module.exports = __webpack_require__("./.yarn/cache/jsurl-npm-0.1.5-9e17f93783-5
 			return !/[^\w-.]/.test(s) ? s : s.replace(/[^\w-.]/g, function(ch) {
 				if (ch === '$') return '!';
 				ch = ch.charCodeAt(0);
-				// thanks to Douglas Crockford for the negative slice trick
 				return ch < 0x100 ? '*' + ('00' + ch.toString(16)).slice(-2) : '**' + ('0000' + ch.toString(16)).slice(-4);
 			});
 		}
@@ -8413,7 +8057,6 @@ module.exports = __webpack_require__("./.yarn/cache/jsurl-npm-0.1.5-9e17f93783-5
 						if (v.hasOwnProperty(key)) {
 							var val = stringify(v[key]);
 
-							// skip undefined and functions
 							if (val) {
 								tmpAry.push(encode(key) + val);
 							}
@@ -8423,7 +8066,6 @@ module.exports = __webpack_require__("./.yarn/cache/jsurl-npm-0.1.5-9e17f93783-5
 					return '~(' + tmpAry.join('~') + ')';
 				}
 			default:
-				// function, undefined
 				return;
 		}
 	};
@@ -8522,6 +8164,6 @@ module.exports = __webpack_require__("./.yarn/cache/jsurl-npm-0.1.5-9e17f93783-5
 })( true ? exports : (0));
 
 
-/***/ })
+ })
 
 }]);

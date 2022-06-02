@@ -1,29 +1,22 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[2364],{
 
-/***/ "./public/app/plugins/datasource/grafana-azure-monitor-datasource/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/grafana-azure-monitor-datasource/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "plugin": () => (/* binding */ module_plugin)
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-var lodash_default = /*#__PURE__*/__webpack_require__.n(lodash);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/time_grain_converter.ts
+var lodash_default = __webpack_require__.n(lodash);
+;
 
 
 class TimeGrainConverter {
@@ -64,7 +57,6 @@ class TimeGrainConverter {
     const intervalMs = src.rangeUtil.intervalToMs(interval);
 
     for (let i = 0; i < timeGrains.length; i++) {
-      // abs (num - val) < abs (num - curr):
       if (intervalMs > src.rangeUtil.intervalToMs(timeGrains[i])) {
         if (i + 1 < timeGrains.length) {
           closest = timeGrains[i + 1];
@@ -152,7 +144,7 @@ class TimeGrainConverter {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_monitor/response_parser.ts
+;
 
 
 class ResponseParser {
@@ -316,7 +308,7 @@ class ResponseParser {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/utils/common.ts
+;
 
 
 
@@ -346,8 +338,7 @@ function convertTimeGrainsToMs(timeGrains) {
     }
   });
   return allowedTimeGrainsMs;
-} // Route definitions shared with the backend.
-// Check: /pkg/tsdb/azuremonitor/azuremonitor-resource-handler.go <registerRoutes>
+} 
 
 const routeNames = {
   azureMonitor: 'azuremonitor',
@@ -377,12 +368,8 @@ function interpolateVariable(value, variable) {
   });
   return quotedValues.join(',');
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/types/query.ts
+;
 let AzureQueryType;
-/**
- * Represents the query as it moves through the frontend query editor and datasource files.
- * It can represent new queries that are still being edited, so all properties are optional
- */
 
 (function (AzureQueryType) {
   AzureQueryType["AzureMonitor"] = "Azure Monitor";
@@ -390,10 +377,7 @@ let AzureQueryType;
   AzureQueryType["AzureResourceGraph"] = "Azure Resource Graph";
   AzureQueryType["GrafanaTemplateVariableFn"] = "Grafana Template Variable Function";
 })(AzureQueryType || (AzureQueryType = {}));
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/types/types.ts
-/**
- * Azure clouds known to Azure Monitor.
- */
+;
 let AzureCloud;
 
 (function (AzureCloud) {
@@ -403,22 +387,19 @@ let AzureCloud;
   AzureCloud["Germany"] = "AzureGermanCloud";
   AzureCloud["None"] = "";
 })(AzureCloud || (AzureCloud = {}));
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/types/index.ts
+;
 
 
 
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/credentials.ts
+;
 
 
 const concealed = Symbol('Concealed client secret');
 function getAuthType(options) {
   if (!options.jsonData.azureAuthType) {
-    // If authentication type isn't explicitly specified and datasource has client credentials,
-    // then this is existing datasource which is configured for app registration (client secret)
     if (options.jsonData.tenantId && options.jsonData.clientId) {
       return 'clientsecret';
-    } // For newly created datasource with no configuration, managed identity is the default authentication type
-    // if they are enabled in Grafana config
+    } 
 
 
     return grafana_runtime_src.config.azure.managedIdentityEnabled ? 'msi' : 'clientsecret';
@@ -471,7 +452,6 @@ function getAzureCloud(options) {
 
   switch (authType) {
     case 'msi':
-      // In case of managed identity, the cloud is always same as where Grafana is hosted
       return getDefaultAzureCloud();
 
     case 'clientsecret':
@@ -481,7 +461,6 @@ function getAzureCloud(options) {
 
 function getSecret(options) {
   if (options.secureJsonFields.clientSecret) {
-    // The secret is concealed on server
     return concealed;
   } else {
     var _options$secureJsonDa;
@@ -511,8 +490,6 @@ function getCredentials(options) {
           defaultSubscriptionId: options.jsonData.subscriptionId
         };
       } else {
-        // If authentication type is managed identity but managed identities were disabled in Grafana config,
-        // then we should fallback to an empty app registration (client secret) configuration
         return {
           authType: 'clientsecret',
           azureCloud: getDefaultAzureCloud()
@@ -564,9 +541,8 @@ function updateCredentials(options, credentials) {
       return options;
   }
 }
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/AzureCredentialsForm.tsx
+;
 var _InlineFormLabel, _InlineFormLabel2, _InlineFormLabel3, _InlineFormLabel4, _div, _InlineFormLabel5, _InlineFormLabel6;
 
 
@@ -610,8 +586,7 @@ const AzureCredentialsForm = props => {
     });
     return () => {
       canceled = true;
-    }; // This effect is intended to be called only once initially and on Load Subscriptions click
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }; 
   }, [loadSubscriptionsClicked]);
 
   const updateSubscriptions = function (received) {
@@ -620,13 +595,11 @@ const AzureCredentialsForm = props => {
 
     if (getSubscriptions) {
       if (autoSelect && !credentials.defaultSubscriptionId && received.length > 0) {
-        // Selecting the default subscription if subscriptions received but no default subscription selected
         onSubscriptionChange(received[0]);
       } else if (credentials.defaultSubscriptionId) {
         const found = received.find(opt => opt.value === credentials.defaultSubscriptionId);
 
         if (!found) {
-          // Unselecting the default subscription if it isn't found among the received subscriptions
           onSubscriptionChange(undefined);
         }
       }
@@ -708,17 +681,17 @@ const AzureCredentialsForm = props => {
     }
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: "gf-form-group",
-    children: [props.managedIdentityEnabled && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    children: [props.managedIdentityEnabled && (0,jsx_runtime.jsx)("div", {
       className: "gf-form-inline",
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      children: (0,jsx_runtime.jsxs)("div", {
         className: "gf-form",
-        children: [_InlineFormLabel || (_InlineFormLabel = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+        children: [_InlineFormLabel || (_InlineFormLabel = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
           className: "width-12",
           tooltip: "Choose the type of authentication to Azure services",
           children: "Authentication"
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        })), (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           className: "width-15",
           value: authTypeOptions.find(opt => opt.value === credentials.authType),
           options: authTypeOptions,
@@ -726,16 +699,16 @@ const AzureCredentialsForm = props => {
           disabled: disabled
         })]
       })
-    }), credentials.authType === 'clientsecret' && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [azureCloudOptions && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), credentials.authType === 'clientsecret' && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [azureCloudOptions && (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_InlineFormLabel2 || (_InlineFormLabel2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [_InlineFormLabel2 || (_InlineFormLabel2 = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             className: "width-12",
             tooltip: "Choose an Azure Cloud",
             children: "Azure Cloud"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+          })), (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
             "aria-label": "Azure Cloud",
             className: "width-15",
             value: azureCloudOptions.find(opt => opt.value === credentials.azureCloud),
@@ -744,16 +717,16 @@ const AzureCredentialsForm = props => {
             disabled: disabled
           })]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_InlineFormLabel3 || (_InlineFormLabel3 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [_InlineFormLabel3 || (_InlineFormLabel3 = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             className: "width-12",
             children: "Directory (tenant) ID"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          })), (0,jsx_runtime.jsx)("div", {
             className: "width-15",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input, {
+            children: (0,jsx_runtime.jsx)(Input, {
               className: "width-30",
               placeholder: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
               value: credentials.tenantId || '',
@@ -762,16 +735,16 @@ const AzureCredentialsForm = props => {
             })
           })]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_InlineFormLabel4 || (_InlineFormLabel4 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [_InlineFormLabel4 || (_InlineFormLabel4 = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             className: "width-12",
             children: "Application (client) ID"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          })), (0,jsx_runtime.jsx)("div", {
             className: "width-15",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input, {
+            children: (0,jsx_runtime.jsx)(Input, {
               className: "width-30",
               placeholder: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
               value: credentials.clientId || '',
@@ -780,24 +753,24 @@ const AzureCredentialsForm = props => {
             })
           })]
         })
-      }), !disabled && (typeof credentials.clientSecret === 'symbol' ? /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), !disabled && (typeof credentials.clientSecret === 'symbol' ? (0,jsx_runtime.jsxs)("div", {
         className: "gf-form-inline",
-        children: [_div || (_div = /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: [_div || (_div = (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             className: "width-12",
             children: "Client Secret"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(Input, {
+          }), (0,jsx_runtime.jsx)(Input, {
             "data-testid": "client-secret",
             className: "width-25",
             placeholder: "configured",
             disabled: true
           })]
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        })), (0,jsx_runtime.jsx)("div", {
           className: "gf-form",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          children: (0,jsx_runtime.jsx)("div", {
             className: "max-width-30 gf-form-inline",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
               variant: "secondary",
               type: "button",
               onClick: onClientSecretReset,
@@ -806,16 +779,16 @@ const AzureCredentialsForm = props => {
             })
           })
         })]
-      }) : /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }) : (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_InlineFormLabel5 || (_InlineFormLabel5 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [_InlineFormLabel5 || (_InlineFormLabel5 = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             className: "width-12",
             children: "Client Secret"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          })), (0,jsx_runtime.jsx)("div", {
             className: "width-15",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input, {
+            children: (0,jsx_runtime.jsx)(Input, {
               className: "width-30",
               placeholder: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
               value: credentials.clientSecret || '',
@@ -825,17 +798,17 @@ const AzureCredentialsForm = props => {
           })]
         })
       }))]
-    }), getSubscriptions && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), getSubscriptions && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_InlineFormLabel6 || (_InlineFormLabel6 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [_InlineFormLabel6 || (_InlineFormLabel6 = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             className: "width-12",
             children: "Default Subscription"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          })), (0,jsx_runtime.jsx)("div", {
             className: "width-30",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
               "aria-label": "Default Subscription",
               value: credentials.defaultSubscriptionId ? subscriptions.find(opt => opt.value === credentials.defaultSubscriptionId) : undefined,
               options: subscriptions,
@@ -844,13 +817,13 @@ const AzureCredentialsForm = props => {
             })
           })]
         })
-      }), !disabled && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), !disabled && (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsx)("div", {
           className: "gf-form",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          children: (0,jsx_runtime.jsx)("div", {
             className: "max-width-30 gf-form-inline",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
               variant: "secondary",
               size: "sm",
               type: "button",
@@ -864,8 +837,8 @@ const AzureCredentialsForm = props => {
     }), props.children]
   });
 };
-/* harmony default export */ const components_AzureCredentialsForm = ((/* unused pure expression or super */ null && (AzureCredentialsForm)));
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MonitorConfig.tsx
+ const components_AzureCredentialsForm = (( null && (AzureCredentialsForm)));
+;
 var _h;
 
 
@@ -899,11 +872,11 @@ const MonitorConfig = props => {
     updateOptions(options => updateCredentials(options, credentials));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [_h || (_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [_h || (_h = (0,jsx_runtime.jsx)("h3", {
       className: "page-heading",
       children: "Authentication"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(AzureCredentialsForm, {
+    })), (0,jsx_runtime.jsx)(AzureCredentialsForm, {
       managedIdentityEnabled: grafana_runtime_src.config.azure.managedIdentityEnabled,
       credentials: credentials,
       azureCloudOptions: azureClouds,
@@ -913,8 +886,8 @@ const MonitorConfig = props => {
     })]
   });
 };
-/* harmony default export */ const components_MonitorConfig = ((/* unused pure expression or super */ null && (MonitorConfig)));
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ConfigEditor.tsx
+ const components_MonitorConfig = (( null && (MonitorConfig)));
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -994,17 +967,17 @@ class ConfigEditor extends react.PureComponent {
     const {
       error
     } = this.state;
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(MonitorConfig, {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(MonitorConfig, {
         options: options,
         updateOptions: this.updateOptions,
         getSubscriptions: this.getSubscriptions
-      }), error && /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.Alert, {
+      }), error && (0,jsx_runtime.jsxs)(grafana_ui_src.Alert, {
         severity: "error",
         title: error.title,
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+        children: [(0,jsx_runtime.jsx)("p", {
           children: error.description
-        }), error.details && /*#__PURE__*/(0,jsx_runtime.jsx)("details", {
+        }), error.details && (0,jsx_runtime.jsx)("details", {
           style: {
             whiteSpace: 'pre-wrap'
           },
@@ -1015,14 +988,13 @@ class ConfigEditor extends react.PureComponent {
   }
 
 }
-/* harmony default export */ const components_ConfigEditor = ((/* unused pure expression or super */ null && (ConfigEditor)));
-// EXTERNAL MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/utils/messageFromError.ts
+ const components_ConfigEditor = (( null && (ConfigEditor)));
 var messageFromError = __webpack_require__("./public/app/plugins/datasource/grafana-azure-monitor-datasource/utils/messageFromError.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/utils/useLastError.ts
+;
 
 
 function useLastError() {
-  const [errors, setErrors] = (0,react.useState)([]); // Handles errors from any child components that request data to display their options
+  const [errors, setErrors] = (0,react.useState)([]); 
 
   const addError = (0,react.useCallback)((errorSource, error) => {
     setErrors(errors => {
@@ -1030,13 +1002,11 @@ function useLastError() {
       const index = errors.findIndex(_ref => {
         let [vSource] = _ref;
         return vSource === errorSource;
-      }); // If there's already an error, remove it. If we're setting a new error
-      // below, we'll move it to the front
+      }); 
 
       if (index > -1) {
         errorsCopy.splice(index, 1);
-      } // And then add the new error to the top of the array. If error is defined, it was already
-      // removed above.
+      } 
 
 
       if (error) {
@@ -1048,13 +1018,12 @@ function useLastError() {
   }, []);
   const errorMessage = (0,react.useMemo)(() => {
     const recentError = errors[0];
-    return recentError && (0,messageFromError/* default */.Z)(recentError[1]);
+    return recentError && (0,messageFromError.Z)(recentError[1]);
   }, [errors]);
   return [errorMessage, addError];
 }
-// EXTERNAL MODULE: ./.yarn/__virtual__/@grafana-experimental-virtual-22e4fdfd25/0/cache/@grafana-experimental-npm-0.0.2-canary.30-71a280d204-b5b453b937.zip/node_modules/@grafana/experimental/index.js
 var experimental = __webpack_require__("./.yarn/__virtual__/@grafana-experimental-virtual-22e4fdfd25/0/cache/@grafana-experimental-npm-0.0.2-canary.30-71a280d204-b5b453b937.zip/node_modules/@grafana/experimental/index.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/Field.tsx
+;
 
 
 
@@ -1063,16 +1032,16 @@ var experimental = __webpack_require__("./.yarn/__virtual__/@grafana-experimenta
 const DEFAULT_LABEL_WIDTH = 18;
 const Field = props => {
   if (grafana_runtime_src.config.featureToggles.azureMonitorExperimentalUI) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, Object.assign({
+    return (0,jsx_runtime.jsx)(experimental.EditorField, Object.assign({
       width: DEFAULT_LABEL_WIDTH
     }, props));
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+  return (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
     labelWidth: DEFAULT_LABEL_WIDTH
   }, props));
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/SubscriptionField.tsx
+;
 
 
 
@@ -1125,9 +1094,9 @@ const SubscriptionField = _ref => {
     onQueryChange(query);
   }, [query, onQueryChange]);
   const options = (0,react.useMemo)(() => [...subscriptions, variableOptionGroup], [subscriptions, variableOptionGroup]);
-  return multiSelect ? /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+  return multiSelect ? (0,jsx_runtime.jsx)(Field, {
     label: "Subscriptions",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.MultiSelect, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.MultiSelect, {
       isClearable: true,
       value: findOptions([...subscriptions, ...variableOptionGroup.options], query.subscriptions),
       inputId: "azure-monitor-subscriptions-field",
@@ -1135,9 +1104,9 @@ const SubscriptionField = _ref => {
       options: options,
       width: 38
     })
-  }) : /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+  }) : (0,jsx_runtime.jsx)(Field, {
     label: "Subscription",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       value: query.subscription,
       inputId: "azure-monitor-subscriptions-field",
       onChange: handleChange,
@@ -1148,8 +1117,8 @@ const SubscriptionField = _ref => {
   });
 };
 
-/* harmony default export */ const components_SubscriptionField = (SubscriptionField);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ArgQueryEditor/QueryField.tsx
+ const components_SubscriptionField = (SubscriptionField);
+;
 
 
 
@@ -1168,7 +1137,7 @@ const QueryField = _ref => {
       })
     }));
   }, [onQueryChange, query]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
     value: (_query$azureResourceG = (_query$azureResourceG2 = query.azureResourceGraph) === null || _query$azureResourceG2 === void 0 ? void 0 : _query$azureResourceG2.query) !== null && _query$azureResourceG !== void 0 ? _query$azureResourceG : '',
     language: "kusto",
     height: 200,
@@ -1179,8 +1148,8 @@ const QueryField = _ref => {
   });
 };
 
-/* harmony default export */ const ArgQueryEditor_QueryField = (QueryField);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ArgQueryEditor/ArgQueryEditor.tsx
+ const ArgQueryEditor_QueryField = (QueryField);
+;
 
 
 
@@ -1226,10 +1195,10 @@ const ArgQueryEditor = _ref => {
       }
     }).catch(err => setError(ERROR_SOURCE, err));
   }, [datasource, onChange, query, setError]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     "data-testid": "azure-monitor-logs-query-editor",
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(components_SubscriptionField, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(components_SubscriptionField, {
         multiSelect: true,
         subscriptions: subscriptions,
         query: query,
@@ -1239,7 +1208,7 @@ const ArgQueryEditor = _ref => {
         onQueryChange: onChange,
         setError: setError
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(ArgQueryEditor_QueryField, {
+    }), (0,jsx_runtime.jsx)(ArgQueryEditor_QueryField, {
       query: query,
       datasource: datasource,
       subscriptionId: subscriptionId,
@@ -1250,14 +1219,12 @@ const ArgQueryEditor = _ref => {
   });
 };
 
-/* harmony default export */ const ArgQueryEditor_ArgQueryEditor = (ArgQueryEditor);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ArgQueryEditor/index.tsx
+ const ArgQueryEditor_ArgQueryEditor = (ArgQueryEditor);
+;
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useEffectOnce.js
 var useEffectOnce = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useEffectOnce.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/Space.tsx
+;
 
 
 
@@ -1265,7 +1232,7 @@ var useEffectOnce = __webpack_require__("./.yarn/__virtual__/react-use-virtual-0
 const Space = props => {
   const theme = (0,grafana_ui_src.useTheme2)();
   const styles = getStyles(theme, props);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+  return (0,jsx_runtime.jsx)("span", {
     className: (0,emotion_css_esm.cx)(styles.wrapper)
   });
 };
@@ -1288,7 +1255,7 @@ const getStyles = (0,grafana_ui_src.stylesFactory)((theme, props) => {
     }])
   };
 });
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ResourcePicker/types.ts
+;
 let ResourceRowType;
 
 (function (ResourceRowType) {
@@ -1298,7 +1265,7 @@ let ResourceRowType;
   ResourceRowType["VariableGroup"] = "TemplateVariableGroup";
   ResourceRowType["Variable"] = "TemplateVariable";
 })(ResourceRowType || (ResourceRowType = {}));
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ResourcePicker/EntryIcon.tsx
+;
 var _Icon, _Icon2, _Icon3, _Icon4;
 
 
@@ -1315,27 +1282,27 @@ const EntryIcon = _ref => {
 
   switch (type) {
     case ResourceRowType.Subscription:
-      return _Icon || (_Icon = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      return _Icon || (_Icon = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: "layer-group"
       }));
 
     case ResourceRowType.ResourceGroup:
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      return (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: isOpen ? 'folder-open' : 'folder'
       });
 
     case ResourceRowType.Resource:
-      return _Icon2 || (_Icon2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      return _Icon2 || (_Icon2 = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: "cube"
       }));
 
     case ResourceRowType.VariableGroup:
-      return _Icon3 || (_Icon3 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      return _Icon3 || (_Icon3 = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: "x"
       }));
 
     case ResourceRowType.Variable:
-      return _Icon4 || (_Icon4 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      return _Icon4 || (_Icon4 = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: "x"
       }));
 
@@ -1343,7 +1310,7 @@ const EntryIcon = _ref => {
       return null;
   }
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ResourcePicker/styles.ts
+;
 
 
 const styles_getStyles = theme => ({
@@ -1420,8 +1387,8 @@ const styles_getStyles = theme => ({
   })
 });
 
-/* harmony default export */ const ResourcePicker_styles = (styles_getStyles);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ResourcePicker/NestedEntry.tsx
+ const ResourcePicker_styles = (styles_getStyles);
+;
 var _Space, _Space2, _Space3, _Space4;
 
 
@@ -1455,8 +1422,7 @@ const NestedEntry = _ref => {
     const isSelected = ev.target.checked;
     onSelectedChange(entry, isSelected);
   }, [entry, onSelectedChange]);
-  const checkboxId = `${scrollIntoView ? 'table' : 'summary'}_checkbox_${entry.uri}`; // Scroll to the selected element if it's not in the view
-  // Only do it once, when the component is mounted
+  const checkboxId = `${scrollIntoView ? 'table' : 'summary'}_checkbox_${entry.uri}`; 
 
   (0,react.useEffect)(() => {
     if (isSelected && scrollIntoView) {
@@ -1467,57 +1433,52 @@ const NestedEntry = _ref => {
         block: 'center'
       });
     }
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []); 
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: styles.nestedEntry,
     style: {
       marginLeft: level * (3 * theme.spacing.gridSize)
     },
-    children: [hasChildren ? /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
+    children: [hasChildren ? (0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
       className: styles.collapseButton,
       name: isOpen ? 'angle-down' : 'angle-right',
       "aria-label": isOpen ? `Collapse ${entry.name}` : `Expand ${entry.name}`,
       onClick: handleToggleCollapse,
       id: entry.id
-    }) : _Space || (_Space = /*#__PURE__*/(0,jsx_runtime.jsx)(Space, {
+    }) : _Space || (_Space = (0,jsx_runtime.jsx)(Space, {
       layout: "inline",
       h: 2
-    })), _Space2 || (_Space2 = /*#__PURE__*/(0,jsx_runtime.jsx)(Space, {
+    })), _Space2 || (_Space2 = (0,jsx_runtime.jsx)(Space, {
       layout: "inline",
       h: 2
-    })), isSelectable && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Checkbox, {
+    })), isSelectable && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.Checkbox, {
         id: checkboxId,
         onChange: handleSelectedChanged,
         disabled: isDisabled,
         value: isSelected,
         className: styles.nestedRowCheckbox
-      }), _Space3 || (_Space3 = /*#__PURE__*/(0,jsx_runtime.jsx)(Space, {
+      }), _Space3 || (_Space3 = (0,jsx_runtime.jsx)(Space, {
         layout: "inline",
         h: 2
       }))]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(EntryIcon, {
+    }), (0,jsx_runtime.jsx)(EntryIcon, {
       entry: entry,
       isOpen: isOpen
-    }), _Space4 || (_Space4 = /*#__PURE__*/(0,jsx_runtime.jsx)(Space, {
+    }), _Space4 || (_Space4 = (0,jsx_runtime.jsx)(Space, {
       layout: "inline",
       h: 1
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)("label", {
+    })), (0,jsx_runtime.jsx)("label", {
       htmlFor: checkboxId,
       className: (0,emotion_css_esm.cx)(styles.entryContentItem, styles.truncated),
       children: entry.name
     })]
   });
 };
-// EXTERNAL MODULE: ./.yarn/cache/immer-npm-9.0.12-e8cd7358fa-bcbec6d76d.zip/node_modules/immer/dist/immer.esm.js
 var immer_esm = __webpack_require__("./.yarn/cache/immer-npm-9.0.12-e8cd7358fa-bcbec6d76d.zip/node_modules/immer/dist/immer.esm.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ResourcePicker/utils.ts
+;
 
-// This regex matches URIs representing:
-//  - subscriptions: /subscriptions/44693801-6ee6-49de-9b2d-9106972f9572
-//  - resource groups: /subscriptions/44693801-6ee6-49de-9b2d-9106972f9572/resourceGroups/cloud-datasources
-//  - resources: /subscriptions/44693801-6ee6-49de-9b2d-9106972f9572/resourceGroups/cloud-datasources/providers/Microsoft.Compute/virtualMachines/GithubTestDataVM
 const RESOURCE_URI_REGEX = /\/subscriptions\/(?<subscriptionID>[^/]+)(?:\/resourceGroups\/(?<resourceGroup>[^/]+)(?:\/providers.+\/(?<resource>[^/]+))?)?/;
 function parseResourceURI(resourceURI) {
   var _matches$groups;
@@ -1561,11 +1522,8 @@ function findRow(rows, uri) {
   return undefined;
 }
 function addResources(rows, targetParentId, newResources) {
-  return (0,immer_esm/* default */.ZP)(rows, draftState => {
-    const draftRow = findRow(draftState, targetParentId); // we can't find the selected resource in our list of resources,
-    // probably means user has either mistyped in the input field
-    // or is using template variables.
-    // either way no need to throw, just show that none of the resources are checked
+  return (0,immer_esm.ZP)(rows, draftState => {
+    const draftRow = findRow(draftState, targetParentId); 
 
     if (!draftRow) {
       return;
@@ -1574,7 +1532,7 @@ function addResources(rows, targetParentId, newResources) {
     draftRow.children = newResources;
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ResourcePicker/NestedRow.tsx
+;
 
 
 
@@ -1611,13 +1569,12 @@ const NestedRow = _ref => {
 
     setRowStatus('loading');
     requestNestedRows(row).then(() => setRowStatus('open')).catch(() => setRowStatus('closed'));
-  }; // opens the resource group on load of component if there was a previously saved selection
+  }; 
 
 
   (0,react.useEffect)(() => {
     var _row$children;
 
-    // Assuming we don't have multi-select yet
     const selectedRow = selectedRows[0];
     const containsChild = selectedRow && !!findRow((_row$children = row.children) !== null && _row$children !== void 0 ? _row$children : [], selectedRow.uri);
 
@@ -1625,12 +1582,12 @@ const NestedRow = _ref => {
       setRowStatus('open');
     }
   }, [selectedRows, row]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)("tr", {
       className: (0,emotion_css_esm.cx)(styles.row, isDisabled && styles.disabledRow),
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+      children: [(0,jsx_runtime.jsx)("td", {
         className: styles.cell,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(NestedEntry, {
+        children: (0,jsx_runtime.jsx)(NestedEntry, {
           level: level,
           isSelected: isSelected,
           isDisabled: isDisabled,
@@ -1641,14 +1598,14 @@ const NestedRow = _ref => {
           isSelectable: selectableEntryTypes.some(type => type === row.type),
           scrollIntoView: scrollIntoView
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+      }), (0,jsx_runtime.jsx)("td", {
         className: styles.cell,
         children: row.typeLabel
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+      }), (0,jsx_runtime.jsx)("td", {
         className: styles.cell,
         children: (_row$location = row.location) !== null && _row$location !== void 0 ? _row$location : '-'
       })]
-    }, row.id), isOpen && row.children && Object.keys(row.children).length > 0 && row.children.map(childRow => /*#__PURE__*/(0,jsx_runtime.jsx)(NestedRow, {
+    }, row.id), isOpen && row.children && Object.keys(row.children).length > 0 && row.children.map(childRow => (0,jsx_runtime.jsx)(NestedRow, {
       row: childRow,
       selectedRows: selectedRows,
       level: level + 1,
@@ -1656,13 +1613,13 @@ const NestedRow = _ref => {
       onRowSelectedChange: onRowSelectedChange,
       selectableEntryTypes: selectableEntryTypes,
       scrollIntoView: scrollIntoView
-    }, childRow.uri)), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.FadeTransition, {
+    }, childRow.uri)), (0,jsx_runtime.jsx)(grafana_ui_src.FadeTransition, {
       visible: rowStatus === 'loading',
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("tr", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+      children: (0,jsx_runtime.jsx)("tr", {
+        children: (0,jsx_runtime.jsx)("td", {
           className: (0,emotion_css_esm.cx)(styles.cell, styles.loadingCell),
           colSpan: 3,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LoadingPlaceholder, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.LoadingPlaceholder, {
             text: "Loading...",
             className: styles.spinner
           })
@@ -1672,8 +1629,8 @@ const NestedRow = _ref => {
   });
 };
 
-/* harmony default export */ const ResourcePicker_NestedRow = (NestedRow);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ResourcePicker/Search.tsx
+ const ResourcePicker_NestedRow = (NestedRow);
+;
 var Search_Icon;
 
 
@@ -1689,13 +1646,12 @@ const Search = _ref => {
   const debouncedSearch = (0,react.useMemo)(() => (0,lodash.debounce)(searchFn, 600), [searchFn]);
   (0,react.useEffect)(() => {
     return () => {
-      // Stop the invocation of the debounced function after unmounting
       debouncedSearch.cancel();
     };
   }, [debouncedSearch]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
     "aria-label": "resource search",
-    prefix: Search_Icon || (Search_Icon = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+    prefix: Search_Icon || (Search_Icon = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
       name: "search"
     })),
     value: searchFilter,
@@ -1708,8 +1664,8 @@ const Search = _ref => {
   });
 };
 
-/* harmony default export */ const ResourcePicker_Search = (Search);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ResourcePicker/ResourcePicker.tsx
+ const ResourcePicker_Search = (Search);
+;
 var ResourcePicker_Space, _LoadingPlaceholder, ResourcePicker_h, ResourcePicker_Space2, _h2, ResourcePicker_Space3, ResourcePicker_Space4, _Space5, _Space6;
 
 
@@ -1741,7 +1697,7 @@ const ResourcePicker = _ref => {
   const [internalSelectedURI, setInternalSelectedURI] = (0,react.useState)(resourceURI);
   const [errorMessage, setErrorMessage] = (0,react.useState)(undefined);
   const [isAdvancedOpen, setIsAdvancedOpen] = (0,react.useState)(resourceURI === null || resourceURI === void 0 ? void 0 : resourceURI.includes('$'));
-  const [shouldShowLimitFlag, setShouldShowLimitFlag] = (0,react.useState)(false); // Sync the resourceURI prop to internal state
+  const [shouldShowLimitFlag, setShouldShowLimitFlag] = (0,react.useState)(false); 
 
   (0,react.useEffect)(() => {
     setInternalSelectedURI(resourceURI);
@@ -1753,15 +1709,15 @@ const ResourcePicker = _ref => {
         const resources = await resourcePickerData.fetchInitialRows(internalSelectedURI || '');
         setRows(resources);
       } catch (error) {
-        setErrorMessage((0,messageFromError/* default */.Z)(error));
+        setErrorMessage((0,messageFromError.Z)(error));
       }
 
       setIsLoading(false);
     }
   }, [internalSelectedURI, isLoading, resourcePickerData]);
-  (0,useEffectOnce/* default */.Z)(() => {
+  (0,useEffectOnce.Z)(() => {
     loadInitialData();
-  }); // set selected row data whenever row or selection changes
+  }); 
 
   (0,react.useEffect)(() => {
     if (!internalSelectedURI) {
@@ -1775,13 +1731,12 @@ const ResourcePicker = _ref => {
         children: undefined
       })]);
     }
-  }, [internalSelectedURI, rows]); // Request resources for an expanded resource group
+  }, [internalSelectedURI, rows]); 
 
   const requestNestedRows = (0,react.useCallback)(async parentRow => {
     var _parentRow$children;
 
-    // clear error message (also when loading cached resources)
-    setErrorMessage(undefined); // If we already have children, we don't need to re-fetch them.
+    setErrorMessage(undefined); 
 
     if ((_parentRow$children = parentRow.children) !== null && _parentRow$children !== void 0 && _parentRow$children.length) {
       return;
@@ -1791,7 +1746,7 @@ const ResourcePicker = _ref => {
       const nestedRows = await resourcePickerData.fetchAndAppendNestedRow(rows, parentRow);
       setRows(nestedRows);
     } catch (error) {
-      setErrorMessage((0,messageFromError/* default */.Z)(error));
+      setErrorMessage((0,messageFromError.Z)(error));
       throw error;
     }
   }, [resourcePickerData, rows]);
@@ -1802,7 +1757,6 @@ const ResourcePicker = _ref => {
     onApply(internalSelectedURI);
   }, [internalSelectedURI, onApply]);
   const handleSearch = (0,react.useCallback)(async searchWord => {
-    // clear errors and warnings
     setErrorMessage(undefined);
     setShouldShowLimitFlag(false);
 
@@ -1821,57 +1775,57 @@ const ResourcePicker = _ref => {
         setShouldShowLimitFlag(true);
       }
     } catch (err) {
-      setErrorMessage((0,messageFromError/* default */.Z)(err));
+      setErrorMessage((0,messageFromError.Z)(err));
     }
 
     setIsLoading(false);
   }, [loadInitialData, selectableEntryTypes.length, resourcePickerData]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(ResourcePicker_Search, {
+  return (0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsx)(ResourcePicker_Search, {
       searchFn: handleSearch
-    }), shouldShowLimitFlag ? /*#__PURE__*/(0,jsx_runtime.jsxs)("p", {
+    }), shouldShowLimitFlag ? (0,jsx_runtime.jsxs)("p", {
       className: styles.resultLimit,
       children: ["Showing first ", resourcePickerData.resultLimit, " results"]
-    }) : ResourcePicker_Space || (ResourcePicker_Space = /*#__PURE__*/(0,jsx_runtime.jsx)(Space, {
+    }) : ResourcePicker_Space || (ResourcePicker_Space = (0,jsx_runtime.jsx)(Space, {
       v: 2
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)("table", {
+    })), (0,jsx_runtime.jsx)("table", {
       className: styles.table,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("thead", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
+      children: (0,jsx_runtime.jsx)("thead", {
+        children: (0,jsx_runtime.jsxs)("tr", {
           className: (0,emotion_css_esm.cx)(styles.row, styles.header),
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+          children: [(0,jsx_runtime.jsx)("td", {
             className: styles.cell,
             children: "Scope"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+          }), (0,jsx_runtime.jsx)("td", {
             className: styles.cell,
             children: "Type"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+          }), (0,jsx_runtime.jsx)("td", {
             className: styles.cell,
             children: "Location"
           })]
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), (0,jsx_runtime.jsx)("div", {
       className: styles.tableScroller,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("table", {
+      children: (0,jsx_runtime.jsx)("table", {
         className: styles.table,
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("tbody", {
-          children: [isLoading && /*#__PURE__*/(0,jsx_runtime.jsx)("tr", {
+        children: (0,jsx_runtime.jsxs)("tbody", {
+          children: [isLoading && (0,jsx_runtime.jsx)("tr", {
             className: (0,emotion_css_esm.cx)(styles.row),
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+            children: (0,jsx_runtime.jsx)("td", {
               className: styles.cell,
-              children: _LoadingPlaceholder || (_LoadingPlaceholder = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LoadingPlaceholder, {
+              children: _LoadingPlaceholder || (_LoadingPlaceholder = (0,jsx_runtime.jsx)(grafana_ui_src.LoadingPlaceholder, {
                 text: 'Loading...'
               }))
             })
-          }), !isLoading && rows.length === 0 && /*#__PURE__*/(0,jsx_runtime.jsx)("tr", {
+          }), !isLoading && rows.length === 0 && (0,jsx_runtime.jsx)("tr", {
             className: (0,emotion_css_esm.cx)(styles.row),
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+            children: (0,jsx_runtime.jsx)("td", {
               className: styles.cell,
               "aria-live": "polite",
               children: "No resources found"
             })
-          }), !isLoading && rows.map(row => /*#__PURE__*/(0,jsx_runtime.jsx)(ResourcePicker_NestedRow, {
+          }), !isLoading && rows.map(row => (0,jsx_runtime.jsx)(ResourcePicker_NestedRow, {
             row: row,
             selectedRows: selectedRows,
             level: 0,
@@ -1882,17 +1836,17 @@ const ResourcePicker = _ref => {
           }, row.uri))]
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    }), (0,jsx_runtime.jsxs)("div", {
       className: styles.selectionFooter,
-      children: [selectedRows.length > 0 && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: [ResourcePicker_h || (ResourcePicker_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h5", {
+      children: [selectedRows.length > 0 && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [ResourcePicker_h || (ResourcePicker_h = (0,jsx_runtime.jsx)("h5", {
           children: "Selection"
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        })), (0,jsx_runtime.jsx)("div", {
           className: styles.tableScroller,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("table", {
+          children: (0,jsx_runtime.jsx)("table", {
             className: styles.table,
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)("tbody", {
-              children: selectedRows.map(row => /*#__PURE__*/(0,jsx_runtime.jsx)(ResourcePicker_NestedRow, {
+            children: (0,jsx_runtime.jsx)("tbody", {
+              children: selectedRows.map(row => (0,jsx_runtime.jsx)(ResourcePicker_NestedRow, {
                 row: row,
                 selectedRows: selectedRows,
                 level: 0,
@@ -1902,20 +1856,20 @@ const ResourcePicker = _ref => {
               }, row.uri))
             })
           })
-        }), ResourcePicker_Space2 || (ResourcePicker_Space2 = /*#__PURE__*/(0,jsx_runtime.jsx)(Space, {
+        }), ResourcePicker_Space2 || (ResourcePicker_Space2 = (0,jsx_runtime.jsx)(Space, {
           v: 2
         }))]
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.Collapse, {
+      }), (0,jsx_runtime.jsxs)(grafana_ui_src.Collapse, {
         collapsible: true,
         label: "Advanced",
         isOpen: isAdvancedOpen,
         onToggle: () => setIsAdvancedOpen(!isAdvancedOpen),
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Label, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.Label, {
           htmlFor: `input-${internalSelectedURI}`,
-          children: _h2 || (_h2 = /*#__PURE__*/(0,jsx_runtime.jsxs)("h6", {
-            children: ["Resource URI", ' ', /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Tooltip, {
-              content: /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-                children: ["Manually edit the", ' ', /*#__PURE__*/(0,jsx_runtime.jsxs)("a", {
+          children: _h2 || (_h2 = (0,jsx_runtime.jsxs)("h6", {
+            children: ["Resource URI", ' ', (0,jsx_runtime.jsx)(grafana_ui_src.Tooltip, {
+              content: (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+                children: ["Manually edit the", ' ', (0,jsx_runtime.jsxs)("a", {
                   href: "https://docs.microsoft.com/en-us/azure/azure-monitor/logs/log-standard-columns#_resourceid",
                   rel: "noopener noreferrer",
                   target: "_blank",
@@ -1924,37 +1878,37 @@ const ResourcePicker = _ref => {
               }),
               placement: "right",
               interactive: true,
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+              children: (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
                 name: "info-circle"
               })
             })]
           }))
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: `input-${internalSelectedURI}`,
           value: internalSelectedURI,
           onChange: event => setInternalSelectedURI(event.currentTarget.value),
           placeholder: "ex: /subscriptions/$subId"
-        }), ResourcePicker_Space3 || (ResourcePicker_Space3 = /*#__PURE__*/(0,jsx_runtime.jsx)(Space, {
+        }), ResourcePicker_Space3 || (ResourcePicker_Space3 = (0,jsx_runtime.jsx)(Space, {
           v: 2
         }))]
-      }), ResourcePicker_Space4 || (ResourcePicker_Space4 = /*#__PURE__*/(0,jsx_runtime.jsx)(Space, {
+      }), ResourcePicker_Space4 || (ResourcePicker_Space4 = (0,jsx_runtime.jsx)(Space, {
         v: 2
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      })), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
         disabled: !!errorMessage,
         onClick: handleApply,
         children: "Apply"
-      }), _Space5 || (_Space5 = /*#__PURE__*/(0,jsx_runtime.jsx)(Space, {
+      }), _Space5 || (_Space5 = (0,jsx_runtime.jsx)(Space, {
         layout: "inline",
         h: 1
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      })), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
         onClick: onCancel,
         variant: "secondary",
         children: "Cancel"
       })]
-    }), errorMessage && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [_Space6 || (_Space6 = /*#__PURE__*/(0,jsx_runtime.jsx)(Space, {
+    }), errorMessage && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [_Space6 || (_Space6 = (0,jsx_runtime.jsx)(Space, {
         v: 2
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+      })), (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
         severity: "error",
         title: "An error occurred while requesting resources from Azure Monitor",
         children: errorMessage
@@ -1963,10 +1917,10 @@ const ResourcePicker = _ref => {
   });
 };
 
-/* harmony default export */ const ResourcePicker_ResourcePicker = (ResourcePicker);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ResourcePicker/index.tsx
+ const ResourcePicker_ResourcePicker = (ResourcePicker);
+;
 
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ResourceField/ResourceField.tsx
+;
 var ResourceField_Icon, ResourceField_Icon2, _Separator, ResourceField_Icon3, _Separator2, ResourceField_Icon4, ResourceField_Space, ResourceField_Space2;
 
 
@@ -2015,29 +1969,28 @@ const ResourceField = _ref => {
     onQueryChange(setResource(query, resourceURI));
     closePicker();
   }, [closePicker, onQueryChange, query, setResource]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Modal, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.Modal, {
       className: styles.modal,
       title: "Select a resource",
       isOpen: pickerIsOpen,
-      onDismiss: closePicker // The growing number of rows added to the modal causes a focus
-      // error in the modal, making it impossible to click on new elements
+      onDismiss: closePicker 
       ,
       trapFocus: false,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(ResourcePicker_ResourcePicker, {
+      children: (0,jsx_runtime.jsx)(ResourcePicker_ResourcePicker, {
         resourcePickerData: datasource.resourcePickerData,
         resourceURI: resourceUri,
         onApply: handleApply,
         onCancel: closePicker,
         selectableEntryTypes: selectableEntryTypes
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+    }), (0,jsx_runtime.jsx)(Field, {
       label: "Resource",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
         variant: "secondary",
         onClick: handleOpenPicker,
         type: "button",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(ResourceLabel, {
+        children: (0,jsx_runtime.jsx)(ResourceLabel, {
           resource: resourceUri,
           datasource: datasource
         })
@@ -2061,26 +2014,26 @@ const ResourceLabel = _ref2 => {
   }, [datasource.resourcePickerData, resource]);
 
   if (!resource) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+    return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
       children: "Select a resource"
     });
   }
 
   if (resourceComponents) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(FormattedResource, {
+    return (0,jsx_runtime.jsx)(FormattedResource, {
       resource: resourceComponents
     });
   }
 
   if (resource.startsWith('$')) {
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("span", {
-      children: [ResourceField_Icon || (ResourceField_Icon = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+    return (0,jsx_runtime.jsxs)("span", {
+      children: [ResourceField_Icon || (ResourceField_Icon = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: "x"
       })), " ", resource]
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
     children: resource
   });
 };
@@ -2089,41 +2042,41 @@ const FormattedResource = _ref3 => {
   let {
     resource
   } = _ref3;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("span", {
-    children: [ResourceField_Icon2 || (ResourceField_Icon2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+  return (0,jsx_runtime.jsxs)("span", {
+    children: [ResourceField_Icon2 || (ResourceField_Icon2 = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
       name: "layer-group"
-    })), " ", resource.subscriptionName, resource.resourceGroupName && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [_Separator || (_Separator = /*#__PURE__*/(0,jsx_runtime.jsx)(Separator, {})), ResourceField_Icon3 || (ResourceField_Icon3 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+    })), " ", resource.subscriptionName, resource.resourceGroupName && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [_Separator || (_Separator = (0,jsx_runtime.jsx)(Separator, {})), ResourceField_Icon3 || (ResourceField_Icon3 = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: "folder"
       })), " ", resource.resourceGroupName]
-    }), resource.resourceName && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [_Separator2 || (_Separator2 = /*#__PURE__*/(0,jsx_runtime.jsx)(Separator, {})), ResourceField_Icon4 || (ResourceField_Icon4 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+    }), resource.resourceName && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [_Separator2 || (_Separator2 = (0,jsx_runtime.jsx)(Separator, {})), ResourceField_Icon4 || (ResourceField_Icon4 = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: "cube"
       })), " ", resource.resourceName]
     })]
   });
 };
 
-const Separator = () => /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-  children: [ResourceField_Space || (ResourceField_Space = /*#__PURE__*/(0,jsx_runtime.jsx)(Space, {
+const Separator = () => (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+  children: [ResourceField_Space || (ResourceField_Space = (0,jsx_runtime.jsx)(Space, {
     layout: "inline",
     h: 2
-  })), '/', ResourceField_Space2 || (ResourceField_Space2 = /*#__PURE__*/(0,jsx_runtime.jsx)(Space, {
+  })), '/', ResourceField_Space2 || (ResourceField_Space2 = (0,jsx_runtime.jsx)(Space, {
     layout: "inline",
     h: 2
   }))]
 });
 
-/* harmony default export */ const ResourceField_ResourceField = (ResourceField);
+ const ResourceField_ResourceField = (ResourceField);
 
 const ResourceField_getStyles = theme => ({
   modal: (0,emotion_css_esm.css)({
     width: theme.breakpoints.values.lg
   })
 });
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/ResourceField/index.tsx
+;
 
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/LogsQueryEditor/setQueryValue.ts
+;
 function setKustoQuery(query, kustoQuery) {
   return Object.assign({}, query, {
     azureLogAnalytics: Object.assign({}, query.azureLogAnalytics, {
@@ -2145,7 +2098,7 @@ function setResource(query, resourceURI) {
     })
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/LogsQueryEditor/FormatAsField.tsx
+;
 
 
 
@@ -2180,9 +2133,9 @@ const FormatAsField = _ref => {
     const newQuery = setFormatAs(query, value);
     onQueryChange(newQuery);
   }, [onQueryChange, query]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+  return (0,jsx_runtime.jsx)(Field, {
     label: "Format as",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       inputId: "azure-monitor-logs-workspaces-field",
       value: (_query$azureLogAnalyt = query.azureLogAnalytics) === null || _query$azureLogAnalyt === void 0 ? void 0 : _query$azureLogAnalyt.resultFormat,
       onChange: handleChange,
@@ -2192,8 +2145,8 @@ const FormatAsField = _ref => {
   });
 };
 
-/* harmony default export */ const LogsQueryEditor_FormatAsField = (FormatAsField);
-;// CONCATENATED MODULE: ./public/app/core/utils/deferred.ts
+ const LogsQueryEditor_FormatAsField = (FormatAsField);
+;
 function deferred_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 class Deferred {
@@ -2214,7 +2167,7 @@ class Deferred {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/LogsQueryEditor/QueryField.tsx
+;
 
 
 
@@ -2246,7 +2199,7 @@ const QueryField_QueryField = _ref => {
       return;
     }
 
-    const promises = [datasource.azureLogAnalyticsDatasource.getKustoSchema(query.azureLogAnalytics.resource), getPromise()]; // the kusto schema call might fail, but its okay for that to happen silently
+    const promises = [datasource.azureLogAnalyticsDatasource.getKustoSchema(query.azureLogAnalytics.resource), getPromise()]; 
 
     Promise.all(promises).then(_ref2 => {
       let [schema, {
@@ -2273,7 +2226,7 @@ const QueryField_QueryField = _ref => {
   const onChange = (0,react.useCallback)(newQuery => {
     onQueryChange(setKustoQuery(query, newQuery));
   }, [onQueryChange, query]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
     value: (_query$azureLogAnalyt3 = (_query$azureLogAnalyt4 = query.azureLogAnalytics) === null || _query$azureLogAnalyt4 === void 0 ? void 0 : _query$azureLogAnalyt4.query) !== null && _query$azureLogAnalyt3 !== void 0 ? _query$azureLogAnalyt3 : '',
     language: "kusto",
     height: 200,
@@ -2285,8 +2238,8 @@ const QueryField_QueryField = _ref => {
   });
 };
 
-/* harmony default export */ const LogsQueryEditor_QueryField = (QueryField_QueryField);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/LogsQueryEditor/useMigrations.ts
+ const LogsQueryEditor_QueryField = (QueryField_QueryField);
+;
 
 
 
@@ -2300,7 +2253,6 @@ async function migrateWorkspaceQueryToResourceQuery(datasource, query, onChange)
     if (isWorkspaceGUID) {
       resource = await datasource.resourcePickerData.getResourceURIFromWorkspace(query.azureLogAnalytics.workspace);
     } else {
-      // The value of workspace is probably a template variable so we just migrate it over as-is
       resource = query.azureLogAnalytics.workspace;
     }
 
@@ -2325,7 +2277,7 @@ function useMigrations(datasource, query, onChange) {
   }, [datasource, query, onChange]);
   return migrationError;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/LogsQueryEditor/LogsQueryEditor.tsx
+;
 
 
 
@@ -2350,10 +2302,10 @@ const LogsQueryEditor = _ref => {
     hideFormatAs
   } = _ref;
   const migrationError = useMigrations(datasource, query, onChange);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     "data-testid": "azure-monitor-logs-query-editor",
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(ResourceField_ResourceField, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(ResourceField_ResourceField, {
         query: query,
         datasource: datasource,
         subscriptionId: subscriptionId,
@@ -2364,31 +2316,31 @@ const LogsQueryEditor = _ref => {
         setResource: setResource,
         resourceUri: (_query$azureLogAnalyt = query.azureLogAnalytics) === null || _query$azureLogAnalyt === void 0 ? void 0 : _query$azureLogAnalyt.resource
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(LogsQueryEditor_QueryField, {
+    }), (0,jsx_runtime.jsx)(LogsQueryEditor_QueryField, {
       query: query,
       datasource: datasource,
       subscriptionId: subscriptionId,
       variableOptionGroup: variableOptionGroup,
       onQueryChange: onChange,
       setError: setError
-    }), !hideFormatAs && /*#__PURE__*/(0,jsx_runtime.jsx)(LogsQueryEditor_FormatAsField, {
+    }), !hideFormatAs && (0,jsx_runtime.jsx)(LogsQueryEditor_FormatAsField, {
       query: query,
       datasource: datasource,
       subscriptionId: subscriptionId,
       variableOptionGroup: variableOptionGroup,
       onQueryChange: onChange,
       setError: setError
-    }), migrationError && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+    }), migrationError && (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
       title: migrationError.title,
       children: migrationError.message
     })]
   });
 };
 
-/* harmony default export */ const LogsQueryEditor_LogsQueryEditor = (LogsQueryEditor);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/LogsQueryEditor/index.tsx
+ const LogsQueryEditor_LogsQueryEditor = (LogsQueryEditor);
+;
 
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MetricsQueryEditor/setQueryValue.ts
+;
 function setQueryValue_setResource(query, resourceURI) {
   return Object.assign({}, query, {
     azureMonitor: Object.assign({}, query.azureMonitor, {
@@ -2441,7 +2393,7 @@ function setResourceGroup(query, resourceGroup) {
       dimensionFilters: []
     })
   });
-} // In the query as "metricDefinition" for some reason
+} 
 
 function setResourceType(query, resourceType) {
   var _query$azureMonitor2;
@@ -2616,7 +2568,7 @@ function setLegendAlias(query, alias) {
     })
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MetricsQueryEditor/AggregationField.tsx
+;
 
 
 
@@ -2642,9 +2594,9 @@ const AggregationField = _ref => {
     onQueryChange(newQuery);
   }, [onQueryChange, query]);
   const options = (0,react.useMemo)(() => [...aggregationOptions, variableOptionGroup], [aggregationOptions, variableOptionGroup]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+  return (0,jsx_runtime.jsx)(Field, {
     label: "Aggregation",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       inputId: "azure-monitor-metrics-aggregation-field",
       value: (_query$azureMonitor = query.azureMonitor) === null || _query$azureMonitor === void 0 ? void 0 : _query$azureMonitor.aggregation,
       onChange: handleChange,
@@ -2655,8 +2607,8 @@ const AggregationField = _ref => {
   });
 };
 
-/* harmony default export */ const MetricsQueryEditor_AggregationField = (AggregationField);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MetricsQueryEditor/DimensionFields.tsx
+ const MetricsQueryEditor_AggregationField = (AggregationField);
+;
 
 
 
@@ -2672,14 +2624,12 @@ const useDimensionLabels = (data, query) => {
     let labelsObj = {};
 
     if (data !== null && data !== void 0 && (_data$series = data.series) !== null && _data$series !== void 0 && _data$series.length) {
-      // Identify which series' in the dataframe are relevant to the current query
       const series = data.series.flat().filter(series => series.refId === query.refId);
-      const fields = series.flatMap(series => series.fields); // Retrieve labels for series fields
+      const fields = series.flatMap(series => series.fields); 
 
       const labels = fields.map(fields => fields.labels).flat().filter(item => item);
 
       for (const label of labels) {
-        // Labels only exist for series that have a dimension selected
         if (label) {
           for (const [dimension, value] of Object.entries(label)) {
             if (labelsObj[dimension]) {
@@ -2740,8 +2690,6 @@ const DimensionFields = _ref => {
     value: 'sw'
   }];
   const validDimensionOptions = (0,react.useMemo)(() => {
-    // We filter out any dimensions that have already been used in a filter as the API doesn't support having multiple filters with the same dimension name.
-    // The Azure portal also doesn't support this feature so it makes sense for consistency.
     let t = dimensionOptions;
 
     if (dimensionFilters.length) {
@@ -2823,13 +2771,13 @@ const DimensionFields = _ref => {
     onFieldChange(index, 'filters', v.map(item => item.value || ''));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+  return (0,jsx_runtime.jsx)(Field, {
     label: "Dimension",
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.VerticalGroup, {
+    children: (0,jsx_runtime.jsxs)(grafana_ui_src.VerticalGroup, {
       spacing: "xs",
-      children: [dimensionFilters.map((filter, index) => /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
+      children: [dimensionFilters.map((filter, index) => (0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
         spacing: "xs",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           placeholder: "Field",
           value: filter.dimension,
           options: getValidDimensionOptions(filter.dimension),
@@ -2839,7 +2787,7 @@ const DimensionFields = _ref => {
             return onFieldChange(index, 'dimension', (_v$value2 = v.value) !== null && _v$value2 !== void 0 ? _v$value2 : '');
           },
           width: 38
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           menuShouldPortal: true,
           placeholder: "Operation",
           value: filter.operator,
@@ -2850,7 +2798,7 @@ const DimensionFields = _ref => {
             return onFieldChange(index, 'operator', (_v$value3 = v.value) !== null && _v$value3 !== void 0 ? _v$value3 : '');
           },
           allowCustomValue: true
-        }), filter.operator === 'eq' || filter.operator === 'ne' ? /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.MultiSelect, {
+        }), filter.operator === 'eq' || filter.operator === 'ne' ? (0,jsx_runtime.jsx)(grafana_ui_src.MultiSelect, {
           menuShouldPortal: true,
           placeholder: "Select value(s)",
           value: filter.filters,
@@ -2859,8 +2807,6 @@ const DimensionFields = _ref => {
           "aria-label": 'dimension-labels-select',
           allowCustomValue: true
         }) :
-        /*#__PURE__*/
-        // The API does not currently allow for multiple "starts with" clauses to be used.
         (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           menuShouldPortal: true,
           placeholder: "Select value",
@@ -2869,14 +2815,14 @@ const DimensionFields = _ref => {
           options: getValidFilterOptions(filter.filters ? filter.filters[0] : '', filter.dimension),
           onChange: v => onFilterInputChange(index, v),
           isClearable: true
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           variant: "secondary",
           size: "md",
           icon: "trash-alt",
           "aria-label": "Remove",
           onClick: () => removeFilter(index)
         })]
-      }, index)), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      }, index)), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
         variant: "secondary",
         size: "md",
         onClick: addFilter,
@@ -2886,8 +2832,8 @@ const DimensionFields = _ref => {
   });
 };
 
-/* harmony default export */ const MetricsQueryEditor_DimensionFields = (DimensionFields);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MetricsQueryEditor/LegendFormatField.tsx
+ const MetricsQueryEditor_DimensionFields = (DimensionFields);
+;
 
 
 
@@ -2901,8 +2847,7 @@ const LegendFormatField = _ref => {
     onQueryChange,
     query
   } = _ref;
-  const [value, setValue] = (0,react.useState)((_query$azureMonitor$a = (_query$azureMonitor = query.azureMonitor) === null || _query$azureMonitor === void 0 ? void 0 : _query$azureMonitor.alias) !== null && _query$azureMonitor$a !== void 0 ? _query$azureMonitor$a : ''); // As calling onQueryChange initiates a the datasource refresh, we only want to call it once
-  // the field loses focus
+  const [value, setValue] = (0,react.useState)((_query$azureMonitor$a = (_query$azureMonitor = query.azureMonitor) === null || _query$azureMonitor === void 0 ? void 0 : _query$azureMonitor.alias) !== null && _query$azureMonitor$a !== void 0 ? _query$azureMonitor$a : ''); 
 
   const handleChange = (0,react.useCallback)(ev => {
     if (ev.target instanceof HTMLInputElement) {
@@ -2913,9 +2858,9 @@ const LegendFormatField = _ref => {
     const newQuery = setLegendAlias(query, value);
     onQueryChange(newQuery);
   }, [onQueryChange, query, value]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+  return (0,jsx_runtime.jsx)(Field, {
     label: "Legend format",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
       id: "azure-monitor-metrics-legend-field",
       placeholder: "Alias patterns",
       value: value,
@@ -2926,8 +2871,8 @@ const LegendFormatField = _ref => {
   });
 };
 
-/* harmony default export */ const MetricsQueryEditor_LegendFormatField = (LegendFormatField);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MetricsQueryEditor/MetricNameField.tsx
+ const MetricsQueryEditor_LegendFormatField = (LegendFormatField);
+;
 
 
 
@@ -2952,9 +2897,9 @@ const MetricNameField = _ref => {
     onQueryChange(newQuery);
   }, [onQueryChange, query]);
   const options = (0,react.useMemo)(() => [...metricNames, variableOptionGroup], [metricNames, variableOptionGroup]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+  return (0,jsx_runtime.jsx)(Field, {
     label: "Metric",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       inputId: "azure-monitor-metrics-metric-field",
       value: (_query$azureMonitor$m = (_query$azureMonitor = query.azureMonitor) === null || _query$azureMonitor === void 0 ? void 0 : _query$azureMonitor.metricName) !== null && _query$azureMonitor$m !== void 0 ? _query$azureMonitor$m : null,
       onChange: handleChange,
@@ -2965,8 +2910,8 @@ const MetricNameField = _ref => {
   });
 };
 
-/* harmony default export */ const MetricsQueryEditor_MetricNameField = (MetricNameField);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MetricsQueryEditor/MetricNamespaceField.tsx
+ const MetricsQueryEditor_MetricNameField = (MetricNameField);
+;
 
 
 
@@ -3001,9 +2946,9 @@ const MetricNamespaceField = _ref => {
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+  return (0,jsx_runtime.jsx)(Field, {
     label: "Metric namespace",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       inputId: "azure-monitor-metrics-metric-namespace-field",
       value: (_query$azureMonitor2 = query.azureMonitor) === null || _query$azureMonitor2 === void 0 ? void 0 : _query$azureMonitor2.metricNamespace,
       onChange: handleChange,
@@ -3014,8 +2959,8 @@ const MetricNamespaceField = _ref => {
   });
 };
 
-/* harmony default export */ const MetricsQueryEditor_MetricNamespaceField = (MetricNamespaceField);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MetricsQueryEditor/ResourceGroupsField.tsx
+ const MetricsQueryEditor_MetricNamespaceField = (MetricNamespaceField);
+;
 
 
 
@@ -3037,9 +2982,9 @@ const ResourceGroupsField = _ref => {
     onQueryChange(newQuery);
   }, [onQueryChange, query]);
   const options = (0,react.useMemo)(() => [...resourceGroups, variableOptionGroup], [resourceGroups, variableOptionGroup]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+  return (0,jsx_runtime.jsx)(Field, {
     label: "Resource group",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       inputId: "azure-monitor-metrics-resource-group-field",
       value: (_query$azureMonitor = query.azureMonitor) === null || _query$azureMonitor === void 0 ? void 0 : _query$azureMonitor.resourceGroup,
       onChange: handleChange,
@@ -3050,8 +2995,8 @@ const ResourceGroupsField = _ref => {
   });
 };
 
-/* harmony default export */ const MetricsQueryEditor_ResourceGroupsField = (ResourceGroupsField);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MetricsQueryEditor/ResourceNameField.tsx
+ const MetricsQueryEditor_ResourceGroupsField = (ResourceGroupsField);
+;
 
 
 
@@ -3073,9 +3018,9 @@ const ResourceNameField = _ref => {
   }, [onQueryChange, query]);
   const options = (0,react.useMemo)(() => [...resourceNames, variableOptionGroup], [resourceNames, variableOptionGroup]);
   const value = (_query$azureMonitor$r = (_query$azureMonitor = query.azureMonitor) === null || _query$azureMonitor === void 0 ? void 0 : _query$azureMonitor.resourceName) !== null && _query$azureMonitor$r !== void 0 ? _query$azureMonitor$r : null;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+  return (0,jsx_runtime.jsx)(Field, {
     label: "Resource name",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       inputId: "azure-monitor-metrics-resource-name-field",
       value: value,
       onChange: handleChange,
@@ -3086,8 +3031,8 @@ const ResourceNameField = _ref => {
   });
 };
 
-/* harmony default export */ const MetricsQueryEditor_ResourceNameField = (ResourceNameField);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MetricsQueryEditor/ResourceTypeField.tsx
+ const MetricsQueryEditor_ResourceNameField = (ResourceNameField);
+;
 
 
 
@@ -3112,9 +3057,9 @@ const NamespaceField = _ref => {
     onQueryChange(newQuery);
   }, [onQueryChange, query]);
   const options = (0,react.useMemo)(() => [...resourceTypes, variableOptionGroup], [resourceTypes, variableOptionGroup]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+  return (0,jsx_runtime.jsx)(Field, {
     label: "Resource type",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       inputId: "azure-monitor-metrics-resource-type-field",
       value: (_query$azureMonitor = query.azureMonitor) === null || _query$azureMonitor === void 0 ? void 0 : _query$azureMonitor.metricDefinition,
       onChange: handleChange,
@@ -3125,8 +3070,8 @@ const NamespaceField = _ref => {
   });
 };
 
-/* harmony default export */ const ResourceTypeField = (NamespaceField);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MetricsQueryEditor/TimeGrainField.tsx
+ const ResourceTypeField = (NamespaceField);
+;
 
 
 
@@ -3158,9 +3103,9 @@ const TimeGrainField = _ref => {
     }) : v);
     return [...baseTimeGrains, variableOptionGroup];
   }, [timeGrainOptions, variableOptionGroup]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+  return (0,jsx_runtime.jsx)(Field, {
     label: "Time grain",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       inputId: "azure-monitor-metrics-time-grain-field",
       value: (_query$azureMonitor = query.azureMonitor) === null || _query$azureMonitor === void 0 ? void 0 : _query$azureMonitor.timeGrain,
       onChange: handleChange,
@@ -3170,8 +3115,8 @@ const TimeGrainField = _ref => {
   });
 };
 
-/* harmony default export */ const MetricsQueryEditor_TimeGrainField = (TimeGrainField);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MetricsQueryEditor/TopField.tsx
+ const MetricsQueryEditor_TimeGrainField = (TimeGrainField);
+;
 
 
 
@@ -3185,8 +3130,7 @@ const TopField = _ref => {
     onQueryChange,
     query
   } = _ref;
-  const [value, setValue] = (0,react.useState)((_query$azureMonitor$t = (_query$azureMonitor = query.azureMonitor) === null || _query$azureMonitor === void 0 ? void 0 : _query$azureMonitor.top) !== null && _query$azureMonitor$t !== void 0 ? _query$azureMonitor$t : ''); // As calling onQueryChange initiates a the datasource refresh, we only want to call it once
-  // the field loses focus
+  const [value, setValue] = (0,react.useState)((_query$azureMonitor$t = (_query$azureMonitor = query.azureMonitor) === null || _query$azureMonitor === void 0 ? void 0 : _query$azureMonitor.top) !== null && _query$azureMonitor$t !== void 0 ? _query$azureMonitor$t : ''); 
 
   const handleChange = (0,react.useCallback)(ev => {
     if (ev.target instanceof HTMLInputElement) {
@@ -3197,9 +3141,9 @@ const TopField = _ref => {
     const newQuery = setTop(query, value);
     onQueryChange(newQuery);
   }, [onQueryChange, query, value]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+  return (0,jsx_runtime.jsx)(Field, {
     label: "Top",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
       id: "azure-monitor-metrics-top-field",
       value: value,
       onChange: handleChange,
@@ -3209,12 +3153,10 @@ const TopField = _ref => {
   });
 };
 
-/* harmony default export */ const MetricsQueryEditor_TopField = (TopField);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/utils/useAsyncState.ts
+ const MetricsQueryEditor_TopField = (TopField);
+;
 
 function useAsyncState(asyncFn, setError, dependencies) {
-  // Use the lazy initial state functionality of useState to assign a random ID to the API call
-  // to track where errors come from. See useLastError.
   const [errorSource] = (0,react.useState)(() => Math.random());
   const [value, setValue] = (0,react.useState)();
   const finalValue = (0,react.useMemo)(() => value !== null && value !== void 0 ? value : [], [value]);
@@ -3224,11 +3166,11 @@ function useAsyncState(asyncFn, setError, dependencies) {
       setError(errorSource, undefined);
     }).catch(err => {
       setError(errorSource, err);
-    }); // eslint-disable-next-line react-hooks/exhaustive-deps
+    }); 
   }, dependencies);
   return finalValue;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MetricsQueryEditor/dataHooks.ts
+;
 
 
 
@@ -3236,7 +3178,7 @@ function useAsyncState(asyncFn, setError, dependencies) {
 const updateSubscriptions = (query, subscriptionOptions, onChange, defaultSubscription) => {
   const {
     subscription
-  } = query; // Return early if subscriptions havent loaded, or if the query already has a subscription
+  } = query; 
 
   if (!subscriptionOptions.length || subscription && (hasOption(subscriptionOptions, subscription) || subscription.includes('$'))) {
     return;
@@ -3246,15 +3188,13 @@ const updateSubscriptions = (query, subscriptionOptions, onChange, defaultSubscr
 
   if (!subscription && defaultSub && hasOption(subscriptionOptions, defaultSub)) {
     onChange(setSubscriptionID(query, defaultSub));
-  } // Check if the current subscription is in the list of subscriptions
+  } 
 
 
   if (subscription && !hasOption(subscriptionOptions, subscription)) {
     if (hasOption(subscriptionOptions, defaultSub)) {
-      // Use the default sub if is on theh list
       onChange(setSubscriptionID(query, defaultSub));
     } else {
-      // Neither the current subscription nor the defaultSub is on the list, remove it
       onChange(setSubscriptionID(query, ''));
     }
   }
@@ -3357,7 +3297,7 @@ const useMetricNamespaces = (query, datasource, onChange, setError) => {
       metricDefinition,
       resourceName
     });
-    const options = formatOptions(results, metricNamespace); // Do some cleanup of the query state if need be
+    const options = formatOptions(results, metricNamespace); 
 
     if (!metricNamespace && options.length) {
       onChange(setMetricNamespace(query, options[0].value));
@@ -3418,7 +3358,7 @@ const useMetricMetadata = (query, datasource, onChange) => {
     metricName,
     aggregation,
     timeGrain
-  } = (_query$azureMonitor6 = query.azureMonitor) !== null && _query$azureMonitor6 !== void 0 ? _query$azureMonitor6 : {}; // Fetch new metric metadata when the fields change
+  } = (_query$azureMonitor6 = query.azureMonitor) !== null && _query$azureMonitor6 !== void 0 ? _query$azureMonitor6 : {}; 
 
   (0,react.useEffect)(() => {
     if (!(subscription && resourceGroup && metricDefinition && resourceName && metricNamespace && metricName)) {
@@ -3435,7 +3375,6 @@ const useMetricMetadata = (query, datasource, onChange) => {
     }).then(metadata => {
       var _metadata$supportedAg;
 
-      // TODO: Move the aggregationTypes and timeGrain defaults into `getMetricMetadata`
       const aggregations = (metadata.supportedAggTypes || [metadata.primaryAggType]).map(v => ({
         label: v,
         value: v
@@ -3449,7 +3388,7 @@ const useMetricMetadata = (query, datasource, onChange) => {
         primaryAggType: metadata.primaryAggType
       });
     });
-  }, [datasource, subscription, resourceGroup, metricDefinition, resourceName, metricNamespace, metricName]); // Update the query state in response to the meta data changing
+  }, [datasource, subscription, resourceGroup, metricDefinition, resourceName, metricNamespace, metricName]); 
 
   (0,react.useEffect)(() => {
     const newAggregation = aggregation || metricMetadata.primaryAggType;
@@ -3468,7 +3407,7 @@ const useMetricMetadata = (query, datasource, onChange) => {
 };
 
 function formatOptions(rawResults, selectedValue) {
-  const options = rawResults.map(toOption); // account for custom values that might have been set in json file like ones crafted with a template variable (ex: "cloud-datasource-resource-$Environment")
+  const options = rawResults.map(toOption); 
 
   if (selectedValue && !options.find(option => option.value === selectedValue)) {
     options.push({
@@ -3479,7 +3418,7 @@ function formatOptions(rawResults, selectedValue) {
 
   return options;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MetricsQueryEditor/MetricsQueryEditor.tsx
+;
 
 
 
@@ -3516,10 +3455,10 @@ const MetricsQueryEditor = _ref => {
   const resourceNames = useResourceNames(query, datasource, onChange, setError);
   const metricNames = useMetricNames(query, datasource, onChange, setError);
   const metricNamespaces = useMetricNamespaces(query, datasource, onChange, setError);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     "data-testid": "azure-monitor-metrics-query-editor",
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(components_SubscriptionField, {
+    children: [(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+      children: [(0,jsx_runtime.jsx)(components_SubscriptionField, {
         subscriptions: subscriptions,
         query: query,
         datasource: datasource,
@@ -3527,7 +3466,7 @@ const MetricsQueryEditor = _ref => {
         variableOptionGroup: variableOptionGroup,
         onQueryChange: onChange,
         setError: setError
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_ResourceGroupsField, {
+      }), (0,jsx_runtime.jsx)(MetricsQueryEditor_ResourceGroupsField, {
         resourceGroups: resourceGroups,
         query: query,
         datasource: datasource,
@@ -3536,8 +3475,8 @@ const MetricsQueryEditor = _ref => {
         onQueryChange: onChange,
         setError: setError
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(ResourceTypeField, {
+    }), (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+      children: [(0,jsx_runtime.jsx)(ResourceTypeField, {
         resourceTypes: resourceTypes,
         query: query,
         datasource: datasource,
@@ -3545,7 +3484,7 @@ const MetricsQueryEditor = _ref => {
         variableOptionGroup: variableOptionGroup,
         onQueryChange: onChange,
         setError: setError
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_ResourceNameField, {
+      }), (0,jsx_runtime.jsx)(MetricsQueryEditor_ResourceNameField, {
         resourceNames: resourceNames,
         query: query,
         datasource: datasource,
@@ -3554,8 +3493,8 @@ const MetricsQueryEditor = _ref => {
         onQueryChange: onChange,
         setError: setError
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_MetricNamespaceField, {
+    }), (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+      children: [(0,jsx_runtime.jsx)(MetricsQueryEditor_MetricNamespaceField, {
         metricNamespaces: metricNamespaces,
         query: query,
         datasource: datasource,
@@ -3563,7 +3502,7 @@ const MetricsQueryEditor = _ref => {
         variableOptionGroup: variableOptionGroup,
         onQueryChange: onChange,
         setError: setError
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_MetricNameField, {
+      }), (0,jsx_runtime.jsx)(MetricsQueryEditor_MetricNameField, {
         metricNames: metricNames,
         query: query,
         datasource: datasource,
@@ -3572,8 +3511,8 @@ const MetricsQueryEditor = _ref => {
         onQueryChange: onChange,
         setError: setError
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_AggregationField, {
+    }), (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+      children: [(0,jsx_runtime.jsx)(MetricsQueryEditor_AggregationField, {
         query: query,
         datasource: datasource,
         subscriptionId: subscriptionId,
@@ -3582,7 +3521,7 @@ const MetricsQueryEditor = _ref => {
         setError: setError,
         aggregationOptions: (_metricsMetadata$aggO = metricsMetadata === null || metricsMetadata === void 0 ? void 0 : metricsMetadata.aggOptions) !== null && _metricsMetadata$aggO !== void 0 ? _metricsMetadata$aggO : [],
         isLoading: metricsMetadata.isLoading
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_TimeGrainField, {
+      }), (0,jsx_runtime.jsx)(MetricsQueryEditor_TimeGrainField, {
         query: query,
         datasource: datasource,
         subscriptionId: subscriptionId,
@@ -3591,7 +3530,7 @@ const MetricsQueryEditor = _ref => {
         setError: setError,
         timeGrainOptions: (_metricsMetadata$time = metricsMetadata === null || metricsMetadata === void 0 ? void 0 : metricsMetadata.timeGrains) !== null && _metricsMetadata$time !== void 0 ? _metricsMetadata$time : []
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_DimensionFields, {
+    }), (0,jsx_runtime.jsx)(MetricsQueryEditor_DimensionFields, {
       data: data,
       query: query,
       datasource: datasource,
@@ -3600,14 +3539,14 @@ const MetricsQueryEditor = _ref => {
       onQueryChange: onChange,
       setError: setError,
       dimensionOptions: (_metricsMetadata$dime = metricsMetadata === null || metricsMetadata === void 0 ? void 0 : metricsMetadata.dimensions) !== null && _metricsMetadata$dime !== void 0 ? _metricsMetadata$dime : []
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_TopField, {
+    }), (0,jsx_runtime.jsx)(MetricsQueryEditor_TopField, {
       query: query,
       datasource: datasource,
       subscriptionId: subscriptionId,
       variableOptionGroup: variableOptionGroup,
       onQueryChange: onChange,
       setError: setError
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_LegendFormatField, {
+    }), (0,jsx_runtime.jsx)(MetricsQueryEditor_LegendFormatField, {
       query: query,
       datasource: datasource,
       subscriptionId: subscriptionId,
@@ -3618,10 +3557,10 @@ const MetricsQueryEditor = _ref => {
   });
 };
 
-/* harmony default export */ const MetricsQueryEditor_MetricsQueryEditor = (MetricsQueryEditor);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/MetricsQueryEditor/index.tsx
+ const MetricsQueryEditor_MetricsQueryEditor = (MetricsQueryEditor);
+;
 
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/NewMetricsQueryEditor/dataHooks.ts
+;
 
 
 
@@ -3641,7 +3580,7 @@ const dataHooks_useMetricNamespaces = (query, datasource, onChange, setError) =>
     const results = await datasource.azureMonitorDatasource.getMetricNamespaces({
       resourceUri
     });
-    const options = dataHooks_formatOptions(results, metricNamespace); // Do some cleanup of the query state if need be
+    const options = dataHooks_formatOptions(results, metricNamespace); 
 
     if (!metricNamespace && options.length) {
       onChange(setMetricNamespace(query, options[0].value));
@@ -3690,7 +3629,7 @@ const dataHooks_useMetricMetadata = (query, datasource, onChange) => {
     metricName,
     aggregation,
     timeGrain
-  } = (_query$azureMonitor3 = query.azureMonitor) !== null && _query$azureMonitor3 !== void 0 ? _query$azureMonitor3 : {}; // Fetch new metric metadata when the fields change
+  } = (_query$azureMonitor3 = query.azureMonitor) !== null && _query$azureMonitor3 !== void 0 ? _query$azureMonitor3 : {}; 
 
   (0,react.useEffect)(() => {
     if (!(resourceUri && metricNamespace && metricName)) {
@@ -3705,7 +3644,6 @@ const dataHooks_useMetricMetadata = (query, datasource, onChange) => {
     }).then(metadata => {
       var _metadata$supportedAg;
 
-      // TODO: Move the aggregationTypes and timeGrain defaults into `getMetricMetadata`
       const aggregations = (metadata.supportedAggTypes || [metadata.primaryAggType]).map(v => ({
         label: v,
         value: v
@@ -3719,7 +3657,7 @@ const dataHooks_useMetricMetadata = (query, datasource, onChange) => {
         primaryAggType: metadata.primaryAggType
       });
     });
-  }, [datasource, resourceUri, metricNamespace, metricName]); // Update the query state in response to the meta data changing
+  }, [datasource, resourceUri, metricNamespace, metricName]); 
 
   (0,react.useEffect)(() => {
     const newAggregation = aggregation || metricMetadata.primaryAggType;
@@ -3738,7 +3676,7 @@ const dataHooks_useMetricMetadata = (query, datasource, onChange) => {
 };
 
 function dataHooks_formatOptions(rawResults, selectedValue) {
-  const options = rawResults.map(toOption); // account for custom values that might have been set in json file like ones crafted with a template variable (ex: "cloud-datasource-resource-$Environment")
+  const options = rawResults.map(toOption); 
 
   if (selectedValue && !options.find(option => option.value === selectedValue)) {
     options.push({
@@ -3749,7 +3687,7 @@ function dataHooks_formatOptions(rawResults, selectedValue) {
 
   return options;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/NewMetricsQueryEditor/MetricsQueryEditor.tsx
+;
 
 
 
@@ -3786,12 +3724,12 @@ const NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor = _ref => {
   if (grafana_runtime_src.config.featureToggles.azureMonitorExperimentalUI) {
     var _query$azureMonitor, _metricsMetadata$aggO, _metricsMetadata$time, _metricsMetadata$dime;
 
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+    return (0,jsx_runtime.jsx)("span", {
       "data-testid": "azure-monitor-metrics-query-editor-with-experimental-ui",
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorRows, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorRow, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorFieldGroup, {
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(ResourceField_ResourceField, {
+      children: (0,jsx_runtime.jsxs)(experimental.EditorRows, {
+        children: [(0,jsx_runtime.jsx)(experimental.EditorRow, {
+          children: (0,jsx_runtime.jsx)(experimental.EditorFieldGroup, {
+            children: (0,jsx_runtime.jsx)(ResourceField_ResourceField, {
               query: query,
               datasource: datasource,
               variableOptionGroup: variableOptionGroup,
@@ -3802,16 +3740,16 @@ const NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor = _ref => {
               resourceUri: (_query$azureMonitor = query.azureMonitor) === null || _query$azureMonitor === void 0 ? void 0 : _query$azureMonitor.resourceUri
             })
           })
-        }), _EditorRow || (_EditorRow = /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorRow, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorFieldGroup, {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_MetricNamespaceField, {
+        }), _EditorRow || (_EditorRow = (0,jsx_runtime.jsx)(experimental.EditorRow, {
+          children: (0,jsx_runtime.jsxs)(experimental.EditorFieldGroup, {
+            children: [(0,jsx_runtime.jsx)(MetricsQueryEditor_MetricNamespaceField, {
               metricNamespaces: metricNamespaces,
               query: query,
               datasource: datasource,
               variableOptionGroup: variableOptionGroup,
               onQueryChange: onChange,
               setError: setError
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_MetricNameField, {
+            }), (0,jsx_runtime.jsx)(MetricsQueryEditor_MetricNameField, {
               metricNames: metricNames,
               query: query,
               datasource: datasource,
@@ -3820,9 +3758,9 @@ const NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor = _ref => {
               setError: setError
             })]
           })
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorRow, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorFieldGroup, {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_AggregationField, {
+        })), (0,jsx_runtime.jsx)(experimental.EditorRow, {
+          children: (0,jsx_runtime.jsxs)(experimental.EditorFieldGroup, {
+            children: [(0,jsx_runtime.jsx)(MetricsQueryEditor_AggregationField, {
               query: query,
               datasource: datasource,
               variableOptionGroup: variableOptionGroup,
@@ -3830,7 +3768,7 @@ const NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor = _ref => {
               setError: setError,
               aggregationOptions: (_metricsMetadata$aggO = metricsMetadata === null || metricsMetadata === void 0 ? void 0 : metricsMetadata.aggOptions) !== null && _metricsMetadata$aggO !== void 0 ? _metricsMetadata$aggO : [],
               isLoading: metricsMetadata.isLoading
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_TimeGrainField, {
+            }), (0,jsx_runtime.jsx)(MetricsQueryEditor_TimeGrainField, {
               query: query,
               datasource: datasource,
               variableOptionGroup: variableOptionGroup,
@@ -3839,9 +3777,9 @@ const NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor = _ref => {
               timeGrainOptions: (_metricsMetadata$time = metricsMetadata === null || metricsMetadata === void 0 ? void 0 : metricsMetadata.timeGrains) !== null && _metricsMetadata$time !== void 0 ? _metricsMetadata$time : []
             })]
           })
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorRow, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorFieldGroup, {
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_DimensionFields, {
+        }), (0,jsx_runtime.jsx)(experimental.EditorRow, {
+          children: (0,jsx_runtime.jsx)(experimental.EditorFieldGroup, {
+            children: (0,jsx_runtime.jsx)(MetricsQueryEditor_DimensionFields, {
               data: data,
               query: query,
               datasource: datasource,
@@ -3851,9 +3789,9 @@ const NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor = _ref => {
               dimensionOptions: (_metricsMetadata$dime = metricsMetadata === null || metricsMetadata === void 0 ? void 0 : metricsMetadata.dimensions) !== null && _metricsMetadata$dime !== void 0 ? _metricsMetadata$dime : []
             })
           })
-        }), _EditorRow2 || (_EditorRow2 = /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorRow, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorFieldGroup, {
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_TopField, {
+        }), _EditorRow2 || (_EditorRow2 = (0,jsx_runtime.jsx)(experimental.EditorRow, {
+          children: (0,jsx_runtime.jsx)(experimental.EditorFieldGroup, {
+            children: (0,jsx_runtime.jsx)(MetricsQueryEditor_TopField, {
               query: query,
               datasource: datasource,
               variableOptionGroup: variableOptionGroup,
@@ -3861,9 +3799,9 @@ const NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor = _ref => {
               setError: setError
             })
           })
-        })), _EditorRow3 || (_EditorRow3 = /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorRow, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorFieldGroup, {
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_LegendFormatField, {
+        })), _EditorRow3 || (_EditorRow3 = (0,jsx_runtime.jsx)(experimental.EditorRow, {
+          children: (0,jsx_runtime.jsx)(experimental.EditorFieldGroup, {
+            children: (0,jsx_runtime.jsx)(MetricsQueryEditor_LegendFormatField, {
               query: query,
               datasource: datasource,
               variableOptionGroup: variableOptionGroup,
@@ -3877,10 +3815,10 @@ const NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor = _ref => {
   } else {
     var _query$azureMonitor2, _metricsMetadata$aggO2, _metricsMetadata$time2, _metricsMetadata$dime2;
 
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    return (0,jsx_runtime.jsxs)("div", {
       "data-testid": "azure-monitor-metrics-query-editor-with-resource-picker",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(ResourceField_ResourceField, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+        children: (0,jsx_runtime.jsx)(ResourceField_ResourceField, {
           query: query,
           datasource: datasource,
           variableOptionGroup: variableOptionGroup,
@@ -3890,15 +3828,15 @@ const NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor = _ref => {
           setResource: setQueryValue_setResource,
           resourceUri: (_query$azureMonitor2 = query.azureMonitor) === null || _query$azureMonitor2 === void 0 ? void 0 : _query$azureMonitor2.resourceUri
         })
-      }), _InlineFieldRow || (_InlineFieldRow = /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_MetricNamespaceField, {
+      }), _InlineFieldRow || (_InlineFieldRow = (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+        children: [(0,jsx_runtime.jsx)(MetricsQueryEditor_MetricNamespaceField, {
           metricNamespaces: metricNamespaces,
           query: query,
           datasource: datasource,
           variableOptionGroup: variableOptionGroup,
           onQueryChange: onChange,
           setError: setError
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_MetricNameField, {
+        }), (0,jsx_runtime.jsx)(MetricsQueryEditor_MetricNameField, {
           metricNames: metricNames,
           query: query,
           datasource: datasource,
@@ -3906,8 +3844,8 @@ const NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor = _ref => {
           onQueryChange: onChange,
           setError: setError
         })]
-      })), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_AggregationField, {
+      })), (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+        children: [(0,jsx_runtime.jsx)(MetricsQueryEditor_AggregationField, {
           query: query,
           datasource: datasource,
           variableOptionGroup: variableOptionGroup,
@@ -3915,7 +3853,7 @@ const NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor = _ref => {
           setError: setError,
           aggregationOptions: (_metricsMetadata$aggO2 = metricsMetadata === null || metricsMetadata === void 0 ? void 0 : metricsMetadata.aggOptions) !== null && _metricsMetadata$aggO2 !== void 0 ? _metricsMetadata$aggO2 : [],
           isLoading: metricsMetadata.isLoading
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_TimeGrainField, {
+        }), (0,jsx_runtime.jsx)(MetricsQueryEditor_TimeGrainField, {
           query: query,
           datasource: datasource,
           variableOptionGroup: variableOptionGroup,
@@ -3923,7 +3861,7 @@ const NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor = _ref => {
           setError: setError,
           timeGrainOptions: (_metricsMetadata$time2 = metricsMetadata === null || metricsMetadata === void 0 ? void 0 : metricsMetadata.timeGrains) !== null && _metricsMetadata$time2 !== void 0 ? _metricsMetadata$time2 : []
         })]
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_DimensionFields, {
+      }), (0,jsx_runtime.jsx)(MetricsQueryEditor_DimensionFields, {
         data: data,
         query: query,
         datasource: datasource,
@@ -3931,13 +3869,13 @@ const NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor = _ref => {
         onQueryChange: onChange,
         setError: setError,
         dimensionOptions: (_metricsMetadata$dime2 = metricsMetadata === null || metricsMetadata === void 0 ? void 0 : metricsMetadata.dimensions) !== null && _metricsMetadata$dime2 !== void 0 ? _metricsMetadata$dime2 : []
-      }), _TopField || (_TopField = /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_TopField, {
+      }), _TopField || (_TopField = (0,jsx_runtime.jsx)(MetricsQueryEditor_TopField, {
         query: query,
         datasource: datasource,
         variableOptionGroup: variableOptionGroup,
         onQueryChange: onChange,
         setError: setError
-      })), _LegendFormatField || (_LegendFormatField = /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_LegendFormatField, {
+      })), _LegendFormatField || (_LegendFormatField = (0,jsx_runtime.jsx)(MetricsQueryEditor_LegendFormatField, {
         query: query,
         datasource: datasource,
         variableOptionGroup: variableOptionGroup,
@@ -3948,8 +3886,8 @@ const NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor = _ref => {
   }
 };
 
-/* harmony default export */ const NewMetricsQueryEditor_MetricsQueryEditor = (NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/QueryHeader.tsx
+ const NewMetricsQueryEditor_MetricsQueryEditor = (NewMetricsQueryEditor_MetricsQueryEditor_MetricsQueryEditor);
+;
 
 
 
@@ -3974,10 +3912,10 @@ const QueryHeader = _ref => {
       queryType: change.value
     }));
   }, [onQueryChange, query]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+  return (0,jsx_runtime.jsx)("span", {
     "data-testid": "azure-monitor-experimental-header",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorHeader, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.InlineSelect, {
+    children: (0,jsx_runtime.jsx)(experimental.EditorHeader, {
+      children: (0,jsx_runtime.jsx)(experimental.InlineSelect, {
         label: "Service",
         value: query.queryType,
         placeholder: "Service...",
@@ -3988,7 +3926,7 @@ const QueryHeader = _ref => {
     })
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/QueryEditor/QueryTypeField.tsx
+;
 
 
 
@@ -4015,9 +3953,9 @@ const QueryTypeField = _ref => {
       queryType: change.value
     }));
   }, [onQueryChange, query]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Field, {
+  return (0,jsx_runtime.jsx)(Field, {
     label: "Service",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       inputId: "azure-monitor-query-type-field",
       value: query.queryType,
       options: queryTypes,
@@ -4027,11 +3965,10 @@ const QueryTypeField = _ref => {
   });
 };
 
-/* harmony default export */ const QueryEditor_QueryTypeField = (QueryTypeField);
-// EXTERNAL MODULE: ./.yarn/cache/fast-deep-equal-npm-3.1.3-790edcfcf5-e21a9d8d84.zip/node_modules/fast-deep-equal/index.js
+ const QueryEditor_QueryTypeField = (QueryTypeField);
 var fast_deep_equal = __webpack_require__("./.yarn/cache/fast-deep-equal-npm-3.1.3-790edcfcf5-e21a9d8d84.zip/node_modules/fast-deep-equal/index.js");
-var fast_deep_equal_default = /*#__PURE__*/__webpack_require__.n(fast_deep_equal);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_monitor/url_builder.ts
+var fast_deep_equal_default = __webpack_require__.n(fast_deep_equal);
+;
 class UrlBuilder {
   static buildResourceUri(subscriptionId, resourceGroup, metricDefinition, resourceName) {
     const metricDefinitionArray = metricDefinition.split('/');
@@ -4087,7 +4024,7 @@ class UrlBuilder {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/utils/migrateQuery.ts
+;
 
 
 
@@ -4095,10 +4032,7 @@ class UrlBuilder {
 
 const OLD_DEFAULT_DROPDOWN_VALUE = 'select';
 function migrateQuery(query) {
-  let workingQuery = query; // The old angular controller also had a `migrateApplicationInsightsKeys` migraiton that
-  // migrated old properties to other properties that still do not appear to be used anymore, so
-  // we decided to not include that migration anymore
-  // See https://github.com/grafana/grafana/blob/a6a09add/public/app/plugins/datasource/grafana-azure-monitor-datasource/query_ctrl.ts#L269-L288
+  let workingQuery = query; 
 
   workingQuery = migrateTimeGrains(workingQuery);
   workingQuery = migrateLogAnalyticsToFromTimes(workingQuery);
@@ -4170,9 +4104,7 @@ function migrateDimensionToDimensionFilter(query) {
   }
 
   return workingQuery;
-} // Azure Monitor metric queries prior to Grafana version 9 did not include a `resourceUri`.
-// The resourceUri was previously constructed with the subscription id, resource group,
-// metric definition (a.k.a. resource type), and the resource name.
+} 
 
 
 function migrateResourceUri(query) {
@@ -4256,8 +4188,7 @@ function migrateDimensionFilterToArray(query) {
   }
 
   return query;
-} // datasource.ts also contains some migrations, which have been moved to here. Unsure whether
-// they should also do all the other migrations...
+} 
 
 
 function datasourceMigrations(query) {
@@ -4277,7 +4208,7 @@ function datasourceMigrations(query) {
 
   return workingQuery;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/QueryEditor/usePreparedQuery.ts
+;
 
 
 
@@ -4288,16 +4219,11 @@ const DEFAULT_QUERY = {
 };
 
 const prepareQuery = query => {
-  // Note: _.defaults does not apply default values deeply.
   const withDefaults = (0,lodash.defaults)({}, query, DEFAULT_QUERY);
-  const migratedQuery = migrateQuery(withDefaults); // If we didn't make any changes to the object, then return the original object to keep the
-  // identity the same, and not trigger any other useEffects or anything.
+  const migratedQuery = migrateQuery(withDefaults); 
 
   return fast_deep_equal_default()(migratedQuery, query) ? query : migratedQuery;
 };
-/**
- * Returns queries with some defaults + migrations, and calls onChange function to notify if it changes
- */
 
 
 const usePreparedQuery = (query, onChangeQuery) => {
@@ -4310,8 +4236,8 @@ const usePreparedQuery = (query, onChangeQuery) => {
   return preparedQuery;
 };
 
-/* harmony default export */ const QueryEditor_usePreparedQuery = (usePreparedQuery);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/QueryEditor/QueryEditor.tsx
+ const QueryEditor_usePreparedQuery = (usePreparedQuery);
+;
 var QueryEditor_Space, _a;
 
 
@@ -4355,15 +4281,15 @@ const QueryEditor = _ref => {
       value: v
     }))
   };
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     "data-testid": "azure-monitor-query-editor",
-    children: [grafana_runtime_src.config.featureToggles.azureMonitorExperimentalUI && /*#__PURE__*/(0,jsx_runtime.jsx)(QueryHeader, {
+    children: [grafana_runtime_src.config.featureToggles.azureMonitorExperimentalUI && (0,jsx_runtime.jsx)(QueryHeader, {
       query: query,
       onQueryChange: onQueryChange
-    }), !grafana_runtime_src.config.featureToggles.azureMonitorExperimentalUI && /*#__PURE__*/(0,jsx_runtime.jsx)(QueryEditor_QueryTypeField, {
+    }), !grafana_runtime_src.config.featureToggles.azureMonitorExperimentalUI && (0,jsx_runtime.jsx)(QueryEditor_QueryTypeField, {
       query: query,
       onQueryChange: onQueryChange
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(EditorForQueryType, {
+    }), (0,jsx_runtime.jsx)(EditorForQueryType, {
       data: data,
       subscriptionId: subscriptionId,
       query: query,
@@ -4371,10 +4297,10 @@ const QueryEditor = _ref => {
       onChange: onQueryChange,
       variableOptionGroup: variableOptionGroup,
       setError: setError
-    }), errorMessage && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [QueryEditor_Space || (QueryEditor_Space = /*#__PURE__*/(0,jsx_runtime.jsx)(Space, {
+    }), errorMessage && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [QueryEditor_Space || (QueryEditor_Space = (0,jsx_runtime.jsx)(Space, {
         v: 2
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+      })), (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
         severity: "error",
         title: "An error occurred while requesting metadata from Azure Monitor",
         children: errorMessage
@@ -4397,7 +4323,7 @@ const EditorForQueryType = _ref2 => {
   switch (query.queryType) {
     case AzureQueryType.AzureMonitor:
       if (grafana_runtime_src.config.featureToggles.azureMonitorResourcePickerForMetrics) {
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(NewMetricsQueryEditor_MetricsQueryEditor, {
+        return (0,jsx_runtime.jsx)(NewMetricsQueryEditor_MetricsQueryEditor, {
           data: data,
           query: query,
           datasource: datasource,
@@ -4407,7 +4333,7 @@ const EditorForQueryType = _ref2 => {
         });
       }
 
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(MetricsQueryEditor_MetricsQueryEditor, {
+      return (0,jsx_runtime.jsx)(MetricsQueryEditor_MetricsQueryEditor, {
         data: data,
         subscriptionId: subscriptionId,
         query: query,
@@ -4418,7 +4344,7 @@ const EditorForQueryType = _ref2 => {
       });
 
     case AzureQueryType.LogAnalytics:
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(LogsQueryEditor_LogsQueryEditor, {
+      return (0,jsx_runtime.jsx)(LogsQueryEditor_LogsQueryEditor, {
         subscriptionId: subscriptionId,
         query: query,
         datasource: datasource,
@@ -4428,7 +4354,7 @@ const EditorForQueryType = _ref2 => {
       });
 
     case AzureQueryType.AzureResourceGraph:
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(ArgQueryEditor_ArgQueryEditor, {
+      return (0,jsx_runtime.jsx)(ArgQueryEditor_ArgQueryEditor, {
         subscriptionId: subscriptionId,
         query: query,
         datasource: datasource,
@@ -4439,15 +4365,15 @@ const EditorForQueryType = _ref2 => {
 
     default:
       const type = query.queryType;
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+      return (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
         title: "Unknown query type",
-        children: (type === 'Application Insights' || type === 'Insights Analytics') && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: [type, " was deprecated in Grafana 9. See the", ' ', _a || (_a = /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+        children: (type === 'Application Insights' || type === 'Insights Analytics') && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: [type, " was deprecated in Grafana 9. See the", ' ', _a || (_a = (0,jsx_runtime.jsx)("a", {
             href: "https://grafana.com/docs/grafana/latest/datasources/azuremonitor/deprecated-application-insights/",
             target: "_blank",
             rel: "noreferrer",
             children: "deprecation notice"
-          })), ' ', "to get more information about how to migrate your queries. This is the current query definition:", /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
+          })), ' ', "to get more information about how to migrate your queries. This is the current query definition:", (0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
             height: "200px",
             readOnly: true,
             language: "json",
@@ -4460,22 +4386,16 @@ const EditorForQueryType = _ref2 => {
   return null;
 };
 
-/* harmony default export */ const QueryEditor_QueryEditor = (QueryEditor);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/QueryEditor/index.tsx
+ const QueryEditor_QueryEditor = (QueryEditor);
+;
 
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/forkJoin.js
 var forkJoin = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/forkJoin.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./public/app/features/templating/template_srv.ts + 1 modules
 var template_srv = __webpack_require__("./public/app/features/templating/template_srv.ts");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/from.js
 var from = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/from.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js
 var mergeMap = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/log_analytics/querystring_builder.ts
+;
 
 class LogAnalyticsQuerystringBuilder {
   constructor(rawQueryString, options, defaultTimeField) {
@@ -4573,7 +4493,7 @@ class LogAnalyticsQuerystringBuilder {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_log_analytics/response_parser.ts
+;
 
 
 class response_parser_ResponseParser {
@@ -4749,11 +4669,7 @@ class response_parser_ResponseParser {
     return list;
   }
 
-} // matches (name):(type) = (defaultValue)
-// e.g. fromRangeStart:datetime = datetime(null)
-//  - name: fromRangeStart
-//  - type: datetime
-//  - defaultValue: datetime(null)
+} 
 
 const METADATA_FUNCTION_PARAMS = /([\w\W]+):([\w]+)(?:\s?=\s?([\w\W]+))?/;
 
@@ -4793,7 +4709,7 @@ function transformMetadataToKustoSchema(sourceSchema, nameOrIdOrSomething, templ
     functions: transformMetadataFunction(sourceSchema),
     majorVersion: 0,
     minorVersion: 0
-  }; // Adding macros as known functions
+  }; 
 
   database.functions.push({
     name: '$__timeFilter',
@@ -4835,7 +4751,7 @@ function transformMetadataToKustoSchema(sourceSchema, nameOrIdOrSomething, templ
       defaultValue: '$myVar',
       cslDefaultValue: '$myVar'
     }]
-  }); // Adding macros as global parameters
+  }); 
 
   const globalParameters = templateVariables.map(v => {
     return {
@@ -4853,7 +4769,7 @@ function transformMetadataToKustoSchema(sourceSchema, nameOrIdOrSomething, templ
     globalParameters
   };
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_log_analytics/azure_log_analytics_datasource.ts
+;
 function azure_log_analytics_datasource_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -4893,7 +4809,6 @@ class AzureLogAnalyticsDatasource extends grafana_runtime_src.DataSourceWithBack
   }
 
   isConfigured() {
-    // If validation didn't return any error then the data source is properly configured
     return !this.validateDatasource();
   }
 
@@ -4966,19 +4881,15 @@ class AzureLogAnalyticsDatasource extends grafana_runtime_src.DataSourceWithBack
         resultFormat: item.resultFormat,
         query,
         resource,
-        // Workspace was removed in Grafana 8, but remains for backwards compat
         workspace
       }
     };
   }
-  /**
-   * Augment the results with links back to the azure console
-   */
 
 
   query(request) {
-    return super.query(request).pipe((0,mergeMap/* mergeMap */.z)(res => {
-      return (0,from/* from */.D)(this.processResponse(res));
+    return super.query(request).pipe((0,mergeMap.z)(res => {
+      return (0,from.D)(this.processResponse(res));
     }));
   }
 
@@ -5048,10 +4959,6 @@ class AzureLogAnalyticsDatasource extends grafana_runtime_src.DataSourceWithBack
       resourceGroup: results[1]
     };
   }
-  /*
-    In 7.5.x it used to be possible to set a default workspace id in the config on the auth page.
-    This has been deprecated, however is still used by a few legacy template queries.
-  */
 
 
   getDeprecatedDefaultWorkSpace() {
@@ -5224,11 +5131,8 @@ class AzureLogAnalyticsDatasource extends grafana_runtime_src.DataSourceWithBack
   }
 
 }
-// EXTERNAL MODULE: ./public/app/features/dashboard/services/TimeSrv.ts + 1 modules
 var TimeSrv = __webpack_require__("./public/app/features/dashboard/services/TimeSrv.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/azureMetadata/locations.ts
-// Unfortunately this list is manually maintained as there's no (nice) automated way to get
-// data from Azure.
+;
 const locationMetadata = [{
   location: 'eastus',
   displayName: 'East US',
@@ -5502,14 +5406,12 @@ const locationMetadata = [{
   displayName: 'China North 3',
   supportsLogs: true
 }];
-const logsSupportedLocationsKusto = locationMetadata.filter(v => v.supportsLogs).map(v => `"${v.location}"`).join(','); // Object, keyed by location ID
+const logsSupportedLocationsKusto = locationMetadata.filter(v => v.supportsLogs).map(v => `"${v.location}"`).join(','); 
 
 const locationDisplayNames = locationMetadata.reduce((acc, location) => Object.assign({}, acc, {
   [location.location]: location.displayName
 }), {});
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/azureMetadata/resourceTypes.ts
-// Unfortunately this list is manually maintained as there's no (nice) automated way to get
-// data from Azure.
+;
 const resourceTypeMetadata = [{
   resourceType: 'microsoft.analysisservices/servers',
   displayName: 'Analysis Services',
@@ -5955,15 +5857,15 @@ const resourceTypeMetadata = [{
   displayName: 'Resource Group',
   supportsLogs: true
 }];
-const logsSupportedResourceTypesKusto = resourceTypeMetadata.filter(v => v.supportsLogs).map(v => `"${v.resourceType}"`).join(','); // Object, keyed by resourceType ID
+const logsSupportedResourceTypesKusto = resourceTypeMetadata.filter(v => v.supportsLogs).map(v => `"${v.resourceType}"`).join(','); 
 
 const resourceTypeDisplayNames = resourceTypeMetadata.reduce((acc, resourceType) => Object.assign({}, acc, {
   [resourceType.resourceType]: resourceType.displayName
 }), {});
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/azureMetadata/index.ts
+;
 
 
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_monitor/supported_namespaces.ts
+;
 function supported_namespaces_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 class SupportedNamespaces {
@@ -5985,7 +5887,7 @@ class SupportedNamespaces {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_monitor/azure_monitor_datasource.ts
+;
 function azure_monitor_datasource_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -6027,7 +5929,7 @@ class AzureMonitorDatasource extends grafana_runtime_src.DataSourceWithBackend {
     azure_monitor_datasource_defineProperty(this, "timeSrv", void 0);
 
     this.instanceSettings = instanceSettings;
-    this.timeSrv = (0,TimeSrv/* getTimeSrv */.$t)();
+    this.timeSrv = (0,TimeSrv.$t)();
     this.defaultSubscriptionId = instanceSettings.jsonData.subscriptionId;
     const cloud = getAzureCloud(instanceSettings);
     this.resourcePath = routeNames.azureMonitor;
@@ -6036,7 +5938,6 @@ class AzureMonitorDatasource extends grafana_runtime_src.DataSourceWithBackend {
   }
 
   isConfigured() {
-    // If validation didn't return any error then the data source is properly configured
     return !this.validateDatasource();
   }
 
@@ -6054,9 +5955,8 @@ class AzureMonitorDatasource extends grafana_runtime_src.DataSourceWithBackend {
     const item = target.azureMonitor;
 
     if (!item) {
-      // return target;
       throw new Error('Query is not a valid Azure Monitor Metrics query');
-    } // fix for timeGrainUnit which is a deprecated/removed field name
+    } 
 
 
     if (item.timeGrain && item.timeGrainUnit && item.timeGrain !== 'auto') {
@@ -6191,7 +6091,6 @@ class AzureMonitorDatasource extends grafana_runtime_src.DataSourceWithBackend {
       }
 
       if (result.nextLink) {
-        // If there is a nextLink, we should request more pages
         const nextURL = new URL(result.nextLink);
         const nextToken = nextURL.searchParams.get('$skiptoken');
 
@@ -6305,8 +6204,7 @@ class AzureMonitorDatasource extends grafana_runtime_src.DataSourceWithBackend {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_resource_graph/azure_resource_graph_datasource.ts
-// eslint-disable-next-line lodash/import-scope
+;
 
 
 
@@ -6345,7 +6243,7 @@ class AzureResourceGraphDatasource extends grafana_runtime_src.DataSourceWithBac
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/resourcePicker/resourcePickerData.ts
+;
 function resourcePickerData_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -6454,7 +6352,6 @@ class ResourcePickerData extends grafana_runtime_src.DataSourceWithBackend {
     return addResources(rows, parentRow.uri, nestedRows);
   }
 
-  // private
   async getSubscriptions() {
     const query = `
     resources
@@ -6471,7 +6368,6 @@ class ResourcePickerData extends grafana_runtime_src.DataSourceWithBackend {
     let $skipToken = undefined;
 
     while (!allFetched) {
-      // The response may include several pages
       let options = {};
 
       if ($skipToken) {
@@ -6519,7 +6415,6 @@ class ResourcePickerData extends grafana_runtime_src.DataSourceWithBackend {
     let $skipToken = undefined;
 
     while (!allFetched) {
-      // The response may include several pages
       let options = {};
 
       if ($skipToken) {
@@ -6577,7 +6472,7 @@ class ResourcePickerData extends grafana_runtime_src.DataSourceWithBackend {
         location: locationDisplayNames[item.location] || item.location
       };
     });
-  } // used to make the select resource button that launches the resource picker show a nicer file path to users
+  } 
 
 
   async getResourceURIDisplayProperties(resourceURI) {
@@ -6591,8 +6486,7 @@ class ResourcePickerData extends grafana_runtime_src.DataSourceWithBackend {
 
     if (!subscriptionID) {
       throw new Error('Invalid resource URI passed');
-    } // resourceGroupURI and resourceURI could be invalid values, but that's okay because the join
-    // will just silently fail as expected
+    } 
 
 
     const subscriptionURI = `/subscriptions/${subscriptionID}`;
@@ -6630,9 +6524,7 @@ class ResourcePickerData extends grafana_runtime_src.DataSourceWithBackend {
       subscriptionName,
       resourceGroupName,
       resourceName
-    } = response[0]; // if the name is undefined it could be because the id is undefined or because we are using a template variable.
-    // Either way we can use it as a fallback. We don't really want to interpolate these variables because we want
-    // to show the user when they are using template variables `$sub/$rg/$resource`
+    } = response[0]; 
 
     return {
       subscriptionName: subscriptionName || subscriptionID,
@@ -6678,11 +6570,7 @@ class ResourcePickerData extends grafana_runtime_src.DataSourceWithBackend {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/utils/migrateAnnotation.ts
- // The old Angular annotations editor put some properties (rawQuery, workspace, subscription)
-// on the root annotation object, rather than down in the 'targets' query value
-// This migration moves them to a Log Analytics query compatible with the React query editor
-// The old Angular annotations editor did not support any other query types.
+;
 
 function migrateAnnotation(annotation) {
   var _annotation$target, _annotation$target$az, _annotation$target2, _annotation$target$re, _annotation$target3;
@@ -6710,20 +6598,11 @@ function migrateAnnotation(annotation) {
     target: newQuery
   });
 }
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js
 var lastValueFrom = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/grafanaTemplateVariableFns.ts
+;
 
 
 
-/* 
-  Grafana Template Variable Functions
-  ex: Subscriptions()
-
-  These are helper functions we have created and exposed to users to make the writing of template variables easier. 
-  Due to legacy reasons, we still need to parse strings to determine if a query is a Grafana Template Variable Function 
-  or if it's a KQL-type query
-*/
 const grafanaTemplateVariableFnMatches = query => {
   return {
     subscriptions: query.match(/^Subscriptions\(\)/i),
@@ -6754,7 +6633,6 @@ const createGrafanaTemplateVariableQuery = (rawQuery, datasource) => {
   const defaultSubscriptionId = datasource.azureMonitorDatasource.defaultSubscriptionId;
 
   const createGrafanaTemplateVariableDetails = () => {
-    // deprecated app insights template variables (will most likely remove in grafana 9)
     if (matchesForQuery.appInsightsMetricNameQuery) {
       const queryDetails = {
         rawQuery,
@@ -6908,7 +6786,7 @@ const createGrafanaTemplateVariableQuery = (rawQuery, datasource) => {
         subscription: defaultSubscriptionId
       };
       return queryDetails;
-    } // fallback
+    } 
 
 
     const queryDetails = {
@@ -6929,8 +6807,7 @@ const createGrafanaTemplateVariableQuery = (rawQuery, datasource) => {
 
 const createLogAnalyticsTemplateVariableQuery = async (rawQuery, datasource) => {
   const defaultSubscriptionId = datasource.azureMonitorDatasource.defaultSubscriptionId;
-  let resource = ''; // if there's an existing query, we try to get the resourcesuri from a deprecated default workspace
-  // a note this is very similar logic to what is used in useMigrations but moved out of the react-hook land
+  let resource = ''; 
 
   if (rawQuery) {
     const defaultWorkspaceId = datasource.azureLogAnalyticsDatasource.getDeprecatedDefaultWorkSpace();
@@ -6961,14 +6838,13 @@ const createLogAnalyticsTemplateVariableQuery = async (rawQuery, datasource) => 
 };
 
 const migrateStringQueriesToObjectQueries = async (rawQuery, options) => {
-  // no need to migrate already migrated queries
   if (typeof rawQuery !== 'string') {
     return rawQuery;
   }
 
   return isGrafanaTemplateVariableFnQuery(rawQuery) ? createGrafanaTemplateVariableQuery(rawQuery, options.datasource) : createLogAnalyticsTemplateVariableQuery(rawQuery, options.datasource);
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/components/VariableEditor/VariableEditor.tsx
+;
 var VariableEditor_Space;
 
 
@@ -7024,9 +6900,9 @@ const GrafanaTemplateVariableFnInput = _ref => {
     setInputVal(event.target.value);
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
     label: "Grafana template variable function",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
       placeholder: 'type a grafana template variable function, ex: Subscriptions()',
       value: inputVal,
       onChange: onChange,
@@ -7060,7 +6936,7 @@ const VariableEditor = props => {
   const onLogsQueryChange = queryChange => {
     var _queryChange$azureLog;
 
-    setQuery(queryChange); // only hit backend if there's something to query (prevents error when selecting the resource before pinging a query)
+    setQuery(queryChange); 
 
     if ((_queryChange$azureLog = queryChange.azureLogAnalytics) !== null && _queryChange$azureLog !== void 0 && _queryChange$azureLog.query) {
       props.onChange(queryChange);
@@ -7070,22 +6946,20 @@ const VariableEditor = props => {
   const [errorMessage, setError] = useLastError();
   const variableOptionGroup = {
     label: 'Template Variables',
-    // TODO: figure out a way to filter out the current variable from the variables list
-    // options: props.datasource.getVariables().map((v) => ({ label: v, value: v })),
     options: []
   };
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Select query type",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         "aria-label": "select query type",
         onChange: onQueryTypeChange,
         options: AZURE_QUERY_VARIABLE_TYPE_OPTIONS,
         width: 25,
         value: query.queryType
       })
-    }), query.queryType === AzureQueryType.LogAnalytics && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(LogsQueryEditor_LogsQueryEditor, {
+    }), query.queryType === AzureQueryType.LogAnalytics && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(LogsQueryEditor_LogsQueryEditor, {
         subscriptionId: query.subscription,
         query: query,
         datasource: props.datasource,
@@ -7093,16 +6967,16 @@ const VariableEditor = props => {
         variableOptionGroup: variableOptionGroup,
         setError: setError,
         hideFormatAs: true
-      }), errorMessage && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: [VariableEditor_Space || (VariableEditor_Space = /*#__PURE__*/(0,jsx_runtime.jsx)(Space, {
+      }), errorMessage && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [VariableEditor_Space || (VariableEditor_Space = (0,jsx_runtime.jsx)(Space, {
           v: 2
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+        })), (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
           severity: "error",
           title: "An error occurred while requesting metadata from Azure Monitor",
           children: errorMessage
         })]
       })]
-    }), query.queryType === AzureQueryType.GrafanaTemplateVariableFn && /*#__PURE__*/(0,jsx_runtime.jsx)(GrafanaTemplateVariableFnInput, {
+    }), query.queryType === AzureQueryType.GrafanaTemplateVariableFn && (0,jsx_runtime.jsx)(GrafanaTemplateVariableFnInput, {
       query: query,
       updateQuery: props.onChange,
       datasource: props.datasource
@@ -7110,8 +6984,8 @@ const VariableEditor = props => {
   });
 };
 
-/* harmony default export */ const VariableEditor_VariableEditor = (VariableEditor);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/variables.ts
+ const VariableEditor_VariableEditor = (VariableEditor);
+;
 function variables_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -7149,17 +7023,17 @@ class VariableSupport extends src.CustomVariableSupport {
           return {
             data: [],
             error: {
-              message: (0,messageFromError/* default */.Z)(err)
+              message: (0,messageFromError.Z)(err)
             }
           };
         }
       }
 
       request.targets[0] = queryObj;
-      return (0,lastValueFrom/* lastValueFrom */.n)(this.datasource.query(request));
+      return (0,lastValueFrom.n)(this.datasource.query(request));
     };
 
-    return (0,from/* from */.D)(promisedResults());
+    return (0,from.D)(promisedResults());
   }
 
   callGrafanaTemplateVariableFn(query) {
@@ -7199,7 +7073,7 @@ class VariableSupport extends src.CustomVariableSupport {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/datasource.ts
+;
 function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -7217,7 +7091,7 @@ function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.d
 
 class Datasource extends src.DataSourceApi {
   constructor(instanceSettings) {
-    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv/* getTemplateSrv */.J)();
+    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv.J)();
     super(instanceSettings);
     this.templateSrv = templateSrv;
 
@@ -7263,12 +7137,11 @@ class Datasource extends src.DataSourceApi {
     const byType = new Map();
 
     for (const baseTarget of options.targets) {
-      // Migrate old query structures
-      const target = datasourceMigrations(baseTarget); // Skip hidden or invalid queries or ones without properties
+      const target = datasourceMigrations(baseTarget); 
 
       if (!target.queryType || target.hide || !hasQueryForType(target)) {
         continue;
-      } // Initialize the list of queries
+      } 
 
 
       if (!byType.has(target.queryType)) {
@@ -7291,14 +7164,14 @@ class Datasource extends src.DataSourceApi {
       }
 
       return ds.query(req);
-    }); // Single query can skip merge
+    }); 
 
     if (observables.length === 1) {
       return observables[0];
     }
 
     if (observables.length > 1) {
-      return (0,forkJoin/* forkJoin */.D)(observables).pipe((0,map/* map */.U)(results => {
+      return (0,forkJoin.D)(observables).pipe((0,map.U)(results => {
         const data = [];
 
         for (const result of results) {
@@ -7365,7 +7238,6 @@ class Datasource extends src.DataSourceApi {
       };
     });
   }
-  /* Azure Monitor REST API methods */
 
 
   getResourceGroups(subscriptionId) {
@@ -7379,7 +7251,6 @@ class Datasource extends src.DataSourceApi {
   getResourceNames(subscriptionId, resourceGroup, metricDefinition) {
     return this.azureMonitorDatasource.getResourceNames(this.replaceTemplateVariable(subscriptionId), this.replaceTemplateVariable(resourceGroup), this.replaceTemplateVariable(metricDefinition));
   }
-  /*Azure Log Analytics */
 
 
   getAzureLogAnalyticsWorkspaces(subscriptionId) {
@@ -7436,26 +7307,24 @@ function hasQueryForType(query) {
       return false;
   }
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana-azure-monitor-datasource/module.ts
+;
 
 
 
 
 const module_plugin = new src.DataSourcePlugin(Datasource).setConfigEditor(ConfigEditor).setQueryEditor(QueryEditor_QueryEditor);
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/immer-npm-9.0.12-e8cd7358fa-bcbec6d76d.zip/node_modules/immer/dist/immer.esm.js":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./.yarn/cache/immer-npm-9.0.12-e8cd7358fa-bcbec6d76d.zip/node_modules/immer/dist/immer.esm.js":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* unused harmony exports Immer, applyPatches, castDraft, castImmutable, createDraft, current, enableAllPlugins, enableES5, enableMapSet, enablePatches, finishDraft, freeze, immerable, isDraft, isDraftable, nothing, original, produce, produceWithPatches, setAutoFreeze, setUseProxies */
-function n(n){for(var r=arguments.length,t=Array(r>1?r-1:0),e=1;e<r;e++)t[e-1]=arguments[e];if(false){ var i, o; }throw Error("[Immer] minified error nr: "+n+(t.length?" "+t.map((function(n){return"'"+n+"'"})).join(","):"")+". Find the full error at: https://bit.ly/3cXEKWf")}function r(n){return!!n&&!!n[Q]}function t(n){return!!n&&(function(n){if(!n||"object"!=typeof n)return!1;var r=Object.getPrototypeOf(n);if(null===r)return!0;var t=Object.hasOwnProperty.call(r,"constructor")&&r.constructor;return t===Object||"function"==typeof t&&Function.toString.call(t)===Z}(n)||Array.isArray(n)||!!n[L]||!!n.constructor[L]||s(n)||v(n))}function e(t){return r(t)||n(23,t),t[Q].t}function i(n,r,t){void 0===t&&(t=!1),0===o(n)?(t?Object.keys:nn)(n).forEach((function(e){t&&"symbol"==typeof e||r(e,n[e],n)})):n.forEach((function(t,e){return r(e,t,n)}))}function o(n){var r=n[Q];return r?r.i>3?r.i-4:r.i:Array.isArray(n)?1:s(n)?2:v(n)?3:0}function u(n,r){return 2===o(n)?n.has(r):Object.prototype.hasOwnProperty.call(n,r)}function a(n,r){return 2===o(n)?n.get(r):n[r]}function f(n,r,t){var e=o(n);2===e?n.set(r,t):3===e?(n.delete(r),n.add(t)):n[r]=t}function c(n,r){return n===r?0!==n||1/n==1/r:n!=n&&r!=r}function s(n){return X&&n instanceof Map}function v(n){return q&&n instanceof Set}function p(n){return n.o||n.t}function l(n){if(Array.isArray(n))return Array.prototype.slice.call(n);var r=rn(n);delete r[Q];for(var t=nn(r),e=0;e<t.length;e++){var i=t[e],o=r[i];!1===o.writable&&(o.writable=!0,o.configurable=!0),(o.get||o.set)&&(r[i]={configurable:!0,writable:!0,enumerable:o.enumerable,value:n[i]})}return Object.create(Object.getPrototypeOf(n),r)}function d(n,e){return void 0===e&&(e=!1),y(n)||r(n)||!t(n)?n:(o(n)>1&&(n.set=n.add=n.clear=n.delete=h),Object.freeze(n),e&&i(n,(function(n,r){return d(r,!0)}),!0),n)}function h(){n(2)}function y(n){return null==n||"object"!=typeof n||Object.isFrozen(n)}function b(r){var t=tn[r];return t||n(18,r),t}function m(n,r){tn[n]||(tn[n]=r)}function _(){return true||0,U}function j(n,r){r&&(b("Patches"),n.u=[],n.s=[],n.v=r)}function O(n){g(n),n.p.forEach(S),n.p=null}function g(n){n===U&&(U=n.l)}function w(n){return U={p:[],l:U,h:n,m:!0,_:0}}function S(n){var r=n[Q];0===r.i||1===r.i?r.j():r.O=!0}function P(r,e){e._=e.p.length;var i=e.p[0],o=void 0!==r&&r!==i;return e.h.g||b("ES5").S(e,r,o),o?(i[Q].P&&(O(e),n(4)),t(r)&&(r=M(e,r),e.l||x(e,r)),e.u&&b("Patches").M(i[Q].t,r,e.u,e.s)):r=M(e,i,[]),O(e),e.u&&e.v(e.u,e.s),r!==H?r:void 0}function M(n,r,t){if(y(r))return r;var e=r[Q];if(!e)return i(r,(function(i,o){return A(n,e,r,i,o,t)}),!0),r;if(e.A!==n)return r;if(!e.P)return x(n,e.t,!0),e.t;if(!e.I){e.I=!0,e.A._--;var o=4===e.i||5===e.i?e.o=l(e.k):e.o;i(3===e.i?new Set(o):o,(function(r,i){return A(n,e,o,r,i,t)})),x(n,o,!1),t&&n.u&&b("Patches").R(e,t,n.u,n.s)}return e.o}function A(e,i,o,a,c,s){if( false&&0,r(c)){var v=M(e,c,s&&i&&3!==i.i&&!u(i.D,a)?s.concat(a):void 0);if(f(o,a,v),!r(v))return;e.m=!1}if(t(c)&&!y(c)){if(!e.h.F&&e._<1)return;M(e,c),i&&i.A.l||x(e,c)}}function x(n,r,t){void 0===t&&(t=!1),n.h.F&&n.m&&d(r,t)}function z(n,r){var t=n[Q];return(t?p(t):n)[r]}function I(n,r){if(r in n)for(var t=Object.getPrototypeOf(n);t;){var e=Object.getOwnPropertyDescriptor(t,r);if(e)return e;t=Object.getPrototypeOf(t)}}function k(n){n.P||(n.P=!0,n.l&&k(n.l))}function E(n){n.o||(n.o=l(n.t))}function R(n,r,t){var e=s(r)?b("MapSet").N(r,t):v(r)?b("MapSet").T(r,t):n.g?function(n,r){var t=Array.isArray(n),e={i:t?1:0,A:r?r.A:_(),P:!1,I:!1,D:{},l:r,t:n,k:null,o:null,j:null,C:!1},i=e,o=en;t&&(i=[e],o=on);var u=Proxy.revocable(i,o),a=u.revoke,f=u.proxy;return e.k=f,e.j=a,f}(r,t):b("ES5").J(r,t);return(t?t.A:_()).p.push(e),e}function D(e){return r(e)||n(22,e),function n(r){if(!t(r))return r;var e,u=r[Q],c=o(r);if(u){if(!u.P&&(u.i<4||!b("ES5").K(u)))return u.t;u.I=!0,e=F(r,c),u.I=!1}else e=F(r,c);return i(e,(function(r,t){u&&a(u.t,r)===t||f(e,r,n(t))})),3===c?new Set(e):e}(e)}function F(n,r){switch(r){case 2:return new Map(n);case 3:return Array.from(n)}return l(n)}function N(){function t(n,r){var t=s[n];return t?t.enumerable=r:s[n]=t={configurable:!0,enumerable:r,get:function(){var r=this[Q];return false&&0,en.get(r,n)},set:function(r){var t=this[Q]; false&&0,en.set(t,n,r)}},t}function e(n){for(var r=n.length-1;r>=0;r--){var t=n[r][Q];if(!t.P)switch(t.i){case 5:a(t)&&k(t);break;case 4:o(t)&&k(t)}}}function o(n){for(var r=n.t,t=n.k,e=nn(t),i=e.length-1;i>=0;i--){var o=e[i];if(o!==Q){var a=r[o];if(void 0===a&&!u(r,o))return!0;var f=t[o],s=f&&f[Q];if(s?s.t!==a:!c(f,a))return!0}}var v=!!r[Q];return e.length!==nn(r).length+(v?0:1)}function a(n){var r=n.k;if(r.length!==n.t.length)return!0;var t=Object.getOwnPropertyDescriptor(r,r.length-1);if(t&&!t.get)return!0;for(var e=0;e<r.length;e++)if(!r.hasOwnProperty(e))return!0;return!1}function f(r){r.O&&n(3,JSON.stringify(p(r)))}var s={};m("ES5",{J:function(n,r){var e=Array.isArray(n),i=function(n,r){if(n){for(var e=Array(r.length),i=0;i<r.length;i++)Object.defineProperty(e,""+i,t(i,!0));return e}var o=rn(r);delete o[Q];for(var u=nn(o),a=0;a<u.length;a++){var f=u[a];o[f]=t(f,n||!!o[f].enumerable)}return Object.create(Object.getPrototypeOf(r),o)}(e,n),o={i:e?5:4,A:r?r.A:_(),P:!1,I:!1,D:{},l:r,t:n,k:i,o:null,O:!1,C:!1};return Object.defineProperty(i,Q,{value:o,writable:!0}),i},S:function(n,t,o){o?r(t)&&t[Q].A===n&&e(n.p):(n.u&&function n(r){if(r&&"object"==typeof r){var t=r[Q];if(t){var e=t.t,o=t.k,f=t.D,c=t.i;if(4===c)i(o,(function(r){r!==Q&&(void 0!==e[r]||u(e,r)?f[r]||n(o[r]):(f[r]=!0,k(t)))})),i(e,(function(n){void 0!==o[n]||u(o,n)||(f[n]=!1,k(t))}));else if(5===c){if(a(t)&&(k(t),f.length=!0),o.length<e.length)for(var s=o.length;s<e.length;s++)f[s]=!1;else for(var v=e.length;v<o.length;v++)f[v]=!0;for(var p=Math.min(o.length,e.length),l=0;l<p;l++)o.hasOwnProperty(l)||(f[l]=!0),void 0===f[l]&&n(o[l])}}}}(n.p[0]),e(n.p))},K:function(n){return 4===n.i?o(n):a(n)}})}function T(){function e(n){if(!t(n))return n;if(Array.isArray(n))return n.map(e);if(s(n))return new Map(Array.from(n.entries()).map((function(n){return[n[0],e(n[1])]})));if(v(n))return new Set(Array.from(n).map(e));var r=Object.create(Object.getPrototypeOf(n));for(var i in n)r[i]=e(n[i]);return u(n,L)&&(r[L]=n[L]),r}function f(n){return r(n)?e(n):n}var c="add";m("Patches",{$:function(r,t){return t.forEach((function(t){for(var i=t.path,u=t.op,f=r,s=0;s<i.length-1;s++){var v=o(f),p=""+i[s];0!==v&&1!==v||"__proto__"!==p&&"constructor"!==p||n(24),"function"==typeof f&&"prototype"===p&&n(24),"object"!=typeof(f=a(f,p))&&n(15,i.join("/"))}var l=o(f),d=e(t.value),h=i[i.length-1];switch(u){case"replace":switch(l){case 2:return f.set(h,d);case 3:n(16);default:return f[h]=d}case c:switch(l){case 1:return"-"===h?f.push(d):f.splice(h,0,d);case 2:return f.set(h,d);case 3:return f.add(d);default:return f[h]=d}case"remove":switch(l){case 1:return f.splice(h,1);case 2:return f.delete(h);case 3:return f.delete(t.value);default:return delete f[h]}default:n(17,u)}})),r},R:function(n,r,t,e){switch(n.i){case 0:case 4:case 2:return function(n,r,t,e){var o=n.t,s=n.o;i(n.D,(function(n,i){var v=a(o,n),p=a(s,n),l=i?u(o,n)?"replace":c:"remove";if(v!==p||"replace"!==l){var d=r.concat(n);t.push("remove"===l?{op:l,path:d}:{op:l,path:d,value:p}),e.push(l===c?{op:"remove",path:d}:"remove"===l?{op:c,path:d,value:f(v)}:{op:"replace",path:d,value:f(v)})}}))}(n,r,t,e);case 5:case 1:return function(n,r,t,e){var i=n.t,o=n.D,u=n.o;if(u.length<i.length){var a=[u,i];i=a[0],u=a[1];var s=[e,t];t=s[0],e=s[1]}for(var v=0;v<i.length;v++)if(o[v]&&u[v]!==i[v]){var p=r.concat([v]);t.push({op:"replace",path:p,value:f(u[v])}),e.push({op:"replace",path:p,value:f(i[v])})}for(var l=i.length;l<u.length;l++){var d=r.concat([l]);t.push({op:c,path:d,value:f(u[l])})}i.length<u.length&&e.push({op:"replace",path:r.concat(["length"]),value:i.length})}(n,r,t,e);case 3:return function(n,r,t,e){var i=n.t,o=n.o,u=0;i.forEach((function(n){if(!o.has(n)){var i=r.concat([u]);t.push({op:"remove",path:i,value:n}),e.unshift({op:c,path:i,value:n})}u++})),u=0,o.forEach((function(n){if(!i.has(n)){var o=r.concat([u]);t.push({op:c,path:o,value:n}),e.unshift({op:"remove",path:o,value:n})}u++}))}(n,r,t,e)}},M:function(n,r,t,e){t.push({op:"replace",path:[],value:r===H?void 0:r}),e.push({op:"replace",path:[],value:n})}})}function C(){function r(n,r){function t(){this.constructor=n}a(n,r),n.prototype=(t.prototype=r.prototype,new t)}function e(n){n.o||(n.D=new Map,n.o=new Map(n.t))}function o(n){n.o||(n.o=new Set,n.t.forEach((function(r){if(t(r)){var e=R(n.A.h,r,n);n.p.set(r,e),n.o.add(e)}else n.o.add(r)})))}function u(r){r.O&&n(3,JSON.stringify(p(r)))}var a=function(n,r){return(a=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(n,r){n.__proto__=r}||function(n,r){for(var t in r)r.hasOwnProperty(t)&&(n[t]=r[t])})(n,r)},f=function(){function n(n,r){return this[Q]={i:2,l:r,A:r?r.A:_(),P:!1,I:!1,o:void 0,D:void 0,t:n,k:this,C:!1,O:!1},this}r(n,Map);var o=n.prototype;return Object.defineProperty(o,"size",{get:function(){return p(this[Q]).size}}),o.has=function(n){return p(this[Q]).has(n)},o.set=function(n,r){var t=this[Q];return u(t),p(t).has(n)&&p(t).get(n)===r||(e(t),k(t),t.D.set(n,!0),t.o.set(n,r),t.D.set(n,!0)),this},o.delete=function(n){if(!this.has(n))return!1;var r=this[Q];return u(r),e(r),k(r),r.t.has(n)?r.D.set(n,!1):r.D.delete(n),r.o.delete(n),!0},o.clear=function(){var n=this[Q];u(n),p(n).size&&(e(n),k(n),n.D=new Map,i(n.t,(function(r){n.D.set(r,!1)})),n.o.clear())},o.forEach=function(n,r){var t=this;p(this[Q]).forEach((function(e,i){n.call(r,t.get(i),i,t)}))},o.get=function(n){var r=this[Q];u(r);var i=p(r).get(n);if(r.I||!t(i))return i;if(i!==r.t.get(n))return i;var o=R(r.A.h,i,r);return e(r),r.o.set(n,o),o},o.keys=function(){return p(this[Q]).keys()},o.values=function(){var n,r=this,t=this.keys();return(n={})[V]=function(){return r.values()},n.next=function(){var n=t.next();return n.done?n:{done:!1,value:r.get(n.value)}},n},o.entries=function(){var n,r=this,t=this.keys();return(n={})[V]=function(){return r.entries()},n.next=function(){var n=t.next();if(n.done)return n;var e=r.get(n.value);return{done:!1,value:[n.value,e]}},n},o[V]=function(){return this.entries()},n}(),c=function(){function n(n,r){return this[Q]={i:3,l:r,A:r?r.A:_(),P:!1,I:!1,o:void 0,t:n,k:this,p:new Map,O:!1,C:!1},this}r(n,Set);var t=n.prototype;return Object.defineProperty(t,"size",{get:function(){return p(this[Q]).size}}),t.has=function(n){var r=this[Q];return u(r),r.o?!!r.o.has(n)||!(!r.p.has(n)||!r.o.has(r.p.get(n))):r.t.has(n)},t.add=function(n){var r=this[Q];return u(r),this.has(n)||(o(r),k(r),r.o.add(n)),this},t.delete=function(n){if(!this.has(n))return!1;var r=this[Q];return u(r),o(r),k(r),r.o.delete(n)||!!r.p.has(n)&&r.o.delete(r.p.get(n))},t.clear=function(){var n=this[Q];u(n),p(n).size&&(o(n),k(n),n.o.clear())},t.values=function(){var n=this[Q];return u(n),o(n),n.o.values()},t.entries=function(){var n=this[Q];return u(n),o(n),n.o.entries()},t.keys=function(){return this.values()},t[V]=function(){return this.values()},t.forEach=function(n,r){for(var t=this.values(),e=t.next();!e.done;)n.call(r,e.value,e.value,this),e=t.next()},n}();m("MapSet",{N:function(n,r){return new f(n,r)},T:function(n,r){return new c(n,r)}})}function J(){N(),C(),T()}function K(n){return n}function $(n){return n}var G,U,W="undefined"!=typeof Symbol&&"symbol"==typeof Symbol("x"),X="undefined"!=typeof Map,q="undefined"!=typeof Set,B="undefined"!=typeof Proxy&&void 0!==Proxy.revocable&&"undefined"!=typeof Reflect,H=W?Symbol.for("immer-nothing"):((G={})["immer-nothing"]=!0,G),L=W?Symbol.for("immer-draftable"):"__$immer_draftable",Q=W?Symbol.for("immer-state"):"__$immer_state",V="undefined"!=typeof Symbol&&Symbol.iterator||"@@iterator",Y={0:"Illegal state",1:"Immer drafts cannot have computed properties",2:"This object has been frozen and should not be mutated",3:function(n){return"Cannot use a proxy that has been revoked. Did you pass an object from inside an immer function to an async process? "+n},4:"An immer producer returned a new value *and* modified its draft. Either return a new value *or* modify the draft.",5:"Immer forbids circular references",6:"The first or second argument to `produce` must be a function",7:"The third argument to `produce` must be a function or undefined",8:"First argument to `createDraft` must be a plain object, an array, or an immerable object",9:"First argument to `finishDraft` must be a draft returned by `createDraft`",10:"The given draft is already finalized",11:"Object.defineProperty() cannot be used on an Immer draft",12:"Object.setPrototypeOf() cannot be used on an Immer draft",13:"Immer only supports deleting array indices",14:"Immer only supports setting array indices and the 'length' property",15:function(n){return"Cannot apply patch, path doesn't resolve: "+n},16:'Sets cannot have "replace" patches.',17:function(n){return"Unsupported patch operation: "+n},18:function(n){return"The plugin for '"+n+"' has not been loaded into Immer. To enable the plugin, import and call `enable"+n+"()` when initializing your application."},20:"Cannot use proxies if Proxy, Proxy.revocable or Reflect are not available",21:function(n){return"produce can only be called on things that are draftable: plain objects, arrays, Map, Set or classes that are marked with '[immerable]: true'. Got '"+n+"'"},22:function(n){return"'current' expects a draft, got: "+n},23:function(n){return"'original' expects a draft, got: "+n},24:"Patching reserved attributes like __proto__, prototype and constructor is not allowed"},Z=""+Object.prototype.constructor,nn="undefined"!=typeof Reflect&&Reflect.ownKeys?Reflect.ownKeys:void 0!==Object.getOwnPropertySymbols?function(n){return Object.getOwnPropertyNames(n).concat(Object.getOwnPropertySymbols(n))}:Object.getOwnPropertyNames,rn=Object.getOwnPropertyDescriptors||function(n){var r={};return nn(n).forEach((function(t){r[t]=Object.getOwnPropertyDescriptor(n,t)})),r},tn={},en={get:function(n,r){if(r===Q)return n;var e=p(n);if(!u(e,r))return function(n,r,t){var e,i=I(r,t);return i?"value"in i?i.value:null===(e=i.get)||void 0===e?void 0:e.call(n.k):void 0}(n,e,r);var i=e[r];return n.I||!t(i)?i:i===z(n.t,r)?(E(n),n.o[r]=R(n.A.h,i,n)):i},has:function(n,r){return r in p(n)},ownKeys:function(n){return Reflect.ownKeys(p(n))},set:function(n,r,t){var e=I(p(n),r);if(null==e?void 0:e.set)return e.set.call(n.k,t),!0;if(!n.P){var i=z(p(n),r),o=null==i?void 0:i[Q];if(o&&o.t===t)return n.o[r]=t,n.D[r]=!1,!0;if(c(t,i)&&(void 0!==t||u(n.t,r)))return!0;E(n),k(n)}return n.o[r]===t&&"number"!=typeof t&&(void 0!==t||r in n.o)||(n.o[r]=t,n.D[r]=!0,!0)},deleteProperty:function(n,r){return void 0!==z(n.t,r)||r in n.t?(n.D[r]=!1,E(n),k(n)):delete n.D[r],n.o&&delete n.o[r],!0},getOwnPropertyDescriptor:function(n,r){var t=p(n),e=Reflect.getOwnPropertyDescriptor(t,r);return e?{writable:!0,configurable:1!==n.i||"length"!==r,enumerable:e.enumerable,value:t[r]}:e},defineProperty:function(){n(11)},getPrototypeOf:function(n){return Object.getPrototypeOf(n.t)},setPrototypeOf:function(){n(12)}},on={};i(en,(function(n,r){on[n]=function(){return arguments[0]=arguments[0][0],r.apply(this,arguments)}})),on.deleteProperty=function(r,t){return false&&0,on.set.call(this,r,t,void 0)},on.set=function(r,t,e){return false&&0,en.set.call(this,r[0],t,e,r[0])};var un=function(){function e(r){var e=this;this.g=B,this.F=!0,this.produce=function(r,i,o){if("function"==typeof r&&"function"!=typeof i){var u=i;i=r;var a=e;return function(n){var r=this;void 0===n&&(n=u);for(var t=arguments.length,e=Array(t>1?t-1:0),o=1;o<t;o++)e[o-1]=arguments[o];return a.produce(n,(function(n){var t;return(t=i).call.apply(t,[r,n].concat(e))}))}}var f;if("function"!=typeof i&&n(6),void 0!==o&&"function"!=typeof o&&n(7),t(r)){var c=w(e),s=R(e,r,void 0),v=!0;try{f=i(s),v=!1}finally{v?O(c):g(c)}return"undefined"!=typeof Promise&&f instanceof Promise?f.then((function(n){return j(c,o),P(n,c)}),(function(n){throw O(c),n})):(j(c,o),P(f,c))}if(!r||"object"!=typeof r){if(void 0===(f=i(r))&&(f=r),f===H&&(f=void 0),e.F&&d(f,!0),o){var p=[],l=[];b("Patches").M(r,f,p,l),o(p,l)}return f}n(21,r)},this.produceWithPatches=function(n,r){if("function"==typeof n)return function(r){for(var t=arguments.length,i=Array(t>1?t-1:0),o=1;o<t;o++)i[o-1]=arguments[o];return e.produceWithPatches(r,(function(r){return n.apply(void 0,[r].concat(i))}))};var t,i,o=e.produce(n,r,(function(n,r){t=n,i=r}));return"undefined"!=typeof Promise&&o instanceof Promise?o.then((function(n){return[n,t,i]})):[o,t,i]},"boolean"==typeof(null==r?void 0:r.useProxies)&&this.setUseProxies(r.useProxies),"boolean"==typeof(null==r?void 0:r.autoFreeze)&&this.setAutoFreeze(r.autoFreeze)}var i=e.prototype;return i.createDraft=function(e){t(e)||n(8),r(e)&&(e=D(e));var i=w(this),o=R(this,e,void 0);return o[Q].C=!0,g(i),o},i.finishDraft=function(r,t){var e=r&&r[Q]; false&&(0);var i=e.A;return j(i,t),P(void 0,i)},i.setAutoFreeze=function(n){this.F=n},i.setUseProxies=function(r){r&&!B&&n(20),this.g=r},i.applyPatches=function(n,t){var e;for(e=t.length-1;e>=0;e--){var i=t[e];if(0===i.path.length&&"replace"===i.op){n=i.value;break}}e>-1&&(t=t.slice(e+1));var o=b("Patches").$;return r(n)?o(n,t):this.produce(n,(function(n){return o(n,t)}))},e}(),an=new un,fn=an.produce,cn=an.produceWithPatches.bind(an),sn=an.setAutoFreeze.bind(an),vn=an.setUseProxies.bind(an),pn=an.applyPatches.bind(an),ln=an.createDraft.bind(an),dn=an.finishDraft.bind(an);/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fn);
-//# sourceMappingURL=immer.esm.js.map
+ __webpack_require__.d(__webpack_exports__, {
+   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__)
+ });
+function n(n){for(var r=arguments.length,t=Array(r>1?r-1:0),e=1;e<r;e++)t[e-1]=arguments[e];if(false){ var i, o; }throw Error("[Immer] minified error nr: "+n+(t.length?" "+t.map((function(n){return"'"+n+"'"})).join(","):"")+". Find the full error at: https://bit.ly/3cXEKWf")}function r(n){return!!n&&!!n[Q]}function t(n){return!!n&&(function(n){if(!n||"object"!=typeof n)return!1;var r=Object.getPrototypeOf(n);if(null===r)return!0;var t=Object.hasOwnProperty.call(r,"constructor")&&r.constructor;return t===Object||"function"==typeof t&&Function.toString.call(t)===Z}(n)||Array.isArray(n)||!!n[L]||!!n.constructor[L]||s(n)||v(n))}function e(t){return r(t)||n(23,t),t[Q].t}function i(n,r,t){void 0===t&&(t=!1),0===o(n)?(t?Object.keys:nn)(n).forEach((function(e){t&&"symbol"==typeof e||r(e,n[e],n)})):n.forEach((function(t,e){return r(e,t,n)}))}function o(n){var r=n[Q];return r?r.i>3?r.i-4:r.i:Array.isArray(n)?1:s(n)?2:v(n)?3:0}function u(n,r){return 2===o(n)?n.has(r):Object.prototype.hasOwnProperty.call(n,r)}function a(n,r){return 2===o(n)?n.get(r):n[r]}function f(n,r,t){var e=o(n);2===e?n.set(r,t):3===e?(n.delete(r),n.add(t)):n[r]=t}function c(n,r){return n===r?0!==n||1/n==1/r:n!=n&&r!=r}function s(n){return X&&n instanceof Map}function v(n){return q&&n instanceof Set}function p(n){return n.o||n.t}function l(n){if(Array.isArray(n))return Array.prototype.slice.call(n);var r=rn(n);delete r[Q];for(var t=nn(r),e=0;e<t.length;e++){var i=t[e],o=r[i];!1===o.writable&&(o.writable=!0,o.configurable=!0),(o.get||o.set)&&(r[i]={configurable:!0,writable:!0,enumerable:o.enumerable,value:n[i]})}return Object.create(Object.getPrototypeOf(n),r)}function d(n,e){return void 0===e&&(e=!1),y(n)||r(n)||!t(n)?n:(o(n)>1&&(n.set=n.add=n.clear=n.delete=h),Object.freeze(n),e&&i(n,(function(n,r){return d(r,!0)}),!0),n)}function h(){n(2)}function y(n){return null==n||"object"!=typeof n||Object.isFrozen(n)}function b(r){var t=tn[r];return t||n(18,r),t}function m(n,r){tn[n]||(tn[n]=r)}function _(){return true||0,U}function j(n,r){r&&(b("Patches"),n.u=[],n.s=[],n.v=r)}function O(n){g(n),n.p.forEach(S),n.p=null}function g(n){n===U&&(U=n.l)}function w(n){return U={p:[],l:U,h:n,m:!0,_:0}}function S(n){var r=n[Q];0===r.i||1===r.i?r.j():r.O=!0}function P(r,e){e._=e.p.length;var i=e.p[0],o=void 0!==r&&r!==i;return e.h.g||b("ES5").S(e,r,o),o?(i[Q].P&&(O(e),n(4)),t(r)&&(r=M(e,r),e.l||x(e,r)),e.u&&b("Patches").M(i[Q].t,r,e.u,e.s)):r=M(e,i,[]),O(e),e.u&&e.v(e.u,e.s),r!==H?r:void 0}function M(n,r,t){if(y(r))return r;var e=r[Q];if(!e)return i(r,(function(i,o){return A(n,e,r,i,o,t)}),!0),r;if(e.A!==n)return r;if(!e.P)return x(n,e.t,!0),e.t;if(!e.I){e.I=!0,e.A._--;var o=4===e.i||5===e.i?e.o=l(e.k):e.o;i(3===e.i?new Set(o):o,(function(r,i){return A(n,e,o,r,i,t)})),x(n,o,!1),t&&n.u&&b("Patches").R(e,t,n.u,n.s)}return e.o}function A(e,i,o,a,c,s){if( false&&0,r(c)){var v=M(e,c,s&&i&&3!==i.i&&!u(i.D,a)?s.concat(a):void 0);if(f(o,a,v),!r(v))return;e.m=!1}if(t(c)&&!y(c)){if(!e.h.F&&e._<1)return;M(e,c),i&&i.A.l||x(e,c)}}function x(n,r,t){void 0===t&&(t=!1),n.h.F&&n.m&&d(r,t)}function z(n,r){var t=n[Q];return(t?p(t):n)[r]}function I(n,r){if(r in n)for(var t=Object.getPrototypeOf(n);t;){var e=Object.getOwnPropertyDescriptor(t,r);if(e)return e;t=Object.getPrototypeOf(t)}}function k(n){n.P||(n.P=!0,n.l&&k(n.l))}function E(n){n.o||(n.o=l(n.t))}function R(n,r,t){var e=s(r)?b("MapSet").N(r,t):v(r)?b("MapSet").T(r,t):n.g?function(n,r){var t=Array.isArray(n),e={i:t?1:0,A:r?r.A:_(),P:!1,I:!1,D:{},l:r,t:n,k:null,o:null,j:null,C:!1},i=e,o=en;t&&(i=[e],o=on);var u=Proxy.revocable(i,o),a=u.revoke,f=u.proxy;return e.k=f,e.j=a,f}(r,t):b("ES5").J(r,t);return(t?t.A:_()).p.push(e),e}function D(e){return r(e)||n(22,e),function n(r){if(!t(r))return r;var e,u=r[Q],c=o(r);if(u){if(!u.P&&(u.i<4||!b("ES5").K(u)))return u.t;u.I=!0,e=F(r,c),u.I=!1}else e=F(r,c);return i(e,(function(r,t){u&&a(u.t,r)===t||f(e,r,n(t))})),3===c?new Set(e):e}(e)}function F(n,r){switch(r){case 2:return new Map(n);case 3:return Array.from(n)}return l(n)}function N(){function t(n,r){var t=s[n];return t?t.enumerable=r:s[n]=t={configurable:!0,enumerable:r,get:function(){var r=this[Q];return false&&0,en.get(r,n)},set:function(r){var t=this[Q]; false&&0,en.set(t,n,r)}},t}function e(n){for(var r=n.length-1;r>=0;r--){var t=n[r][Q];if(!t.P)switch(t.i){case 5:a(t)&&k(t);break;case 4:o(t)&&k(t)}}}function o(n){for(var r=n.t,t=n.k,e=nn(t),i=e.length-1;i>=0;i--){var o=e[i];if(o!==Q){var a=r[o];if(void 0===a&&!u(r,o))return!0;var f=t[o],s=f&&f[Q];if(s?s.t!==a:!c(f,a))return!0}}var v=!!r[Q];return e.length!==nn(r).length+(v?0:1)}function a(n){var r=n.k;if(r.length!==n.t.length)return!0;var t=Object.getOwnPropertyDescriptor(r,r.length-1);if(t&&!t.get)return!0;for(var e=0;e<r.length;e++)if(!r.hasOwnProperty(e))return!0;return!1}function f(r){r.O&&n(3,JSON.stringify(p(r)))}var s={};m("ES5",{J:function(n,r){var e=Array.isArray(n),i=function(n,r){if(n){for(var e=Array(r.length),i=0;i<r.length;i++)Object.defineProperty(e,""+i,t(i,!0));return e}var o=rn(r);delete o[Q];for(var u=nn(o),a=0;a<u.length;a++){var f=u[a];o[f]=t(f,n||!!o[f].enumerable)}return Object.create(Object.getPrototypeOf(r),o)}(e,n),o={i:e?5:4,A:r?r.A:_(),P:!1,I:!1,D:{},l:r,t:n,k:i,o:null,O:!1,C:!1};return Object.defineProperty(i,Q,{value:o,writable:!0}),i},S:function(n,t,o){o?r(t)&&t[Q].A===n&&e(n.p):(n.u&&function n(r){if(r&&"object"==typeof r){var t=r[Q];if(t){var e=t.t,o=t.k,f=t.D,c=t.i;if(4===c)i(o,(function(r){r!==Q&&(void 0!==e[r]||u(e,r)?f[r]||n(o[r]):(f[r]=!0,k(t)))})),i(e,(function(n){void 0!==o[n]||u(o,n)||(f[n]=!1,k(t))}));else if(5===c){if(a(t)&&(k(t),f.length=!0),o.length<e.length)for(var s=o.length;s<e.length;s++)f[s]=!1;else for(var v=e.length;v<o.length;v++)f[v]=!0;for(var p=Math.min(o.length,e.length),l=0;l<p;l++)o.hasOwnProperty(l)||(f[l]=!0),void 0===f[l]&&n(o[l])}}}}(n.p[0]),e(n.p))},K:function(n){return 4===n.i?o(n):a(n)}})}function T(){function e(n){if(!t(n))return n;if(Array.isArray(n))return n.map(e);if(s(n))return new Map(Array.from(n.entries()).map((function(n){return[n[0],e(n[1])]})));if(v(n))return new Set(Array.from(n).map(e));var r=Object.create(Object.getPrototypeOf(n));for(var i in n)r[i]=e(n[i]);return u(n,L)&&(r[L]=n[L]),r}function f(n){return r(n)?e(n):n}var c="add";m("Patches",{$:function(r,t){return t.forEach((function(t){for(var i=t.path,u=t.op,f=r,s=0;s<i.length-1;s++){var v=o(f),p=""+i[s];0!==v&&1!==v||"__proto__"!==p&&"constructor"!==p||n(24),"function"==typeof f&&"prototype"===p&&n(24),"object"!=typeof(f=a(f,p))&&n(15,i.join("/"))}var l=o(f),d=e(t.value),h=i[i.length-1];switch(u){case"replace":switch(l){case 2:return f.set(h,d);case 3:n(16);default:return f[h]=d}case c:switch(l){case 1:return"-"===h?f.push(d):f.splice(h,0,d);case 2:return f.set(h,d);case 3:return f.add(d);default:return f[h]=d}case"remove":switch(l){case 1:return f.splice(h,1);case 2:return f.delete(h);case 3:return f.delete(t.value);default:return delete f[h]}default:n(17,u)}})),r},R:function(n,r,t,e){switch(n.i){case 0:case 4:case 2:return function(n,r,t,e){var o=n.t,s=n.o;i(n.D,(function(n,i){var v=a(o,n),p=a(s,n),l=i?u(o,n)?"replace":c:"remove";if(v!==p||"replace"!==l){var d=r.concat(n);t.push("remove"===l?{op:l,path:d}:{op:l,path:d,value:p}),e.push(l===c?{op:"remove",path:d}:"remove"===l?{op:c,path:d,value:f(v)}:{op:"replace",path:d,value:f(v)})}}))}(n,r,t,e);case 5:case 1:return function(n,r,t,e){var i=n.t,o=n.D,u=n.o;if(u.length<i.length){var a=[u,i];i=a[0],u=a[1];var s=[e,t];t=s[0],e=s[1]}for(var v=0;v<i.length;v++)if(o[v]&&u[v]!==i[v]){var p=r.concat([v]);t.push({op:"replace",path:p,value:f(u[v])}),e.push({op:"replace",path:p,value:f(i[v])})}for(var l=i.length;l<u.length;l++){var d=r.concat([l]);t.push({op:c,path:d,value:f(u[l])})}i.length<u.length&&e.push({op:"replace",path:r.concat(["length"]),value:i.length})}(n,r,t,e);case 3:return function(n,r,t,e){var i=n.t,o=n.o,u=0;i.forEach((function(n){if(!o.has(n)){var i=r.concat([u]);t.push({op:"remove",path:i,value:n}),e.unshift({op:c,path:i,value:n})}u++})),u=0,o.forEach((function(n){if(!i.has(n)){var o=r.concat([u]);t.push({op:c,path:o,value:n}),e.unshift({op:"remove",path:o,value:n})}u++}))}(n,r,t,e)}},M:function(n,r,t,e){t.push({op:"replace",path:[],value:r===H?void 0:r}),e.push({op:"replace",path:[],value:n})}})}function C(){function r(n,r){function t(){this.constructor=n}a(n,r),n.prototype=(t.prototype=r.prototype,new t)}function e(n){n.o||(n.D=new Map,n.o=new Map(n.t))}function o(n){n.o||(n.o=new Set,n.t.forEach((function(r){if(t(r)){var e=R(n.A.h,r,n);n.p.set(r,e),n.o.add(e)}else n.o.add(r)})))}function u(r){r.O&&n(3,JSON.stringify(p(r)))}var a=function(n,r){return(a=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(n,r){n.__proto__=r}||function(n,r){for(var t in r)r.hasOwnProperty(t)&&(n[t]=r[t])})(n,r)},f=function(){function n(n,r){return this[Q]={i:2,l:r,A:r?r.A:_(),P:!1,I:!1,o:void 0,D:void 0,t:n,k:this,C:!1,O:!1},this}r(n,Map);var o=n.prototype;return Object.defineProperty(o,"size",{get:function(){return p(this[Q]).size}}),o.has=function(n){return p(this[Q]).has(n)},o.set=function(n,r){var t=this[Q];return u(t),p(t).has(n)&&p(t).get(n)===r||(e(t),k(t),t.D.set(n,!0),t.o.set(n,r),t.D.set(n,!0)),this},o.delete=function(n){if(!this.has(n))return!1;var r=this[Q];return u(r),e(r),k(r),r.t.has(n)?r.D.set(n,!1):r.D.delete(n),r.o.delete(n),!0},o.clear=function(){var n=this[Q];u(n),p(n).size&&(e(n),k(n),n.D=new Map,i(n.t,(function(r){n.D.set(r,!1)})),n.o.clear())},o.forEach=function(n,r){var t=this;p(this[Q]).forEach((function(e,i){n.call(r,t.get(i),i,t)}))},o.get=function(n){var r=this[Q];u(r);var i=p(r).get(n);if(r.I||!t(i))return i;if(i!==r.t.get(n))return i;var o=R(r.A.h,i,r);return e(r),r.o.set(n,o),o},o.keys=function(){return p(this[Q]).keys()},o.values=function(){var n,r=this,t=this.keys();return(n={})[V]=function(){return r.values()},n.next=function(){var n=t.next();return n.done?n:{done:!1,value:r.get(n.value)}},n},o.entries=function(){var n,r=this,t=this.keys();return(n={})[V]=function(){return r.entries()},n.next=function(){var n=t.next();if(n.done)return n;var e=r.get(n.value);return{done:!1,value:[n.value,e]}},n},o[V]=function(){return this.entries()},n}(),c=function(){function n(n,r){return this[Q]={i:3,l:r,A:r?r.A:_(),P:!1,I:!1,o:void 0,t:n,k:this,p:new Map,O:!1,C:!1},this}r(n,Set);var t=n.prototype;return Object.defineProperty(t,"size",{get:function(){return p(this[Q]).size}}),t.has=function(n){var r=this[Q];return u(r),r.o?!!r.o.has(n)||!(!r.p.has(n)||!r.o.has(r.p.get(n))):r.t.has(n)},t.add=function(n){var r=this[Q];return u(r),this.has(n)||(o(r),k(r),r.o.add(n)),this},t.delete=function(n){if(!this.has(n))return!1;var r=this[Q];return u(r),o(r),k(r),r.o.delete(n)||!!r.p.has(n)&&r.o.delete(r.p.get(n))},t.clear=function(){var n=this[Q];u(n),p(n).size&&(o(n),k(n),n.o.clear())},t.values=function(){var n=this[Q];return u(n),o(n),n.o.values()},t.entries=function(){var n=this[Q];return u(n),o(n),n.o.entries()},t.keys=function(){return this.values()},t[V]=function(){return this.values()},t.forEach=function(n,r){for(var t=this.values(),e=t.next();!e.done;)n.call(r,e.value,e.value,this),e=t.next()},n}();m("MapSet",{N:function(n,r){return new f(n,r)},T:function(n,r){return new c(n,r)}})}function J(){N(),C(),T()}function K(n){return n}function $(n){return n}var G,U,W="undefined"!=typeof Symbol&&"symbol"==typeof Symbol("x"),X="undefined"!=typeof Map,q="undefined"!=typeof Set,B="undefined"!=typeof Proxy&&void 0!==Proxy.revocable&&"undefined"!=typeof Reflect,H=W?Symbol.for("immer-nothing"):((G={})["immer-nothing"]=!0,G),L=W?Symbol.for("immer-draftable"):"__$immer_draftable",Q=W?Symbol.for("immer-state"):"__$immer_state",V="undefined"!=typeof Symbol&&Symbol.iterator||"@@iterator",Y={0:"Illegal state",1:"Immer drafts cannot have computed properties",2:"This object has been frozen and should not be mutated",3:function(n){return"Cannot use a proxy that has been revoked. Did you pass an object from inside an immer function to an async process? "+n},4:"An immer producer returned a new value *and* modified its draft. Either return a new value *or* modify the draft.",5:"Immer forbids circular references",6:"The first or second argument to `produce` must be a function",7:"The third argument to `produce` must be a function or undefined",8:"First argument to `createDraft` must be a plain object, an array, or an immerable object",9:"First argument to `finishDraft` must be a draft returned by `createDraft`",10:"The given draft is already finalized",11:"Object.defineProperty() cannot be used on an Immer draft",12:"Object.setPrototypeOf() cannot be used on an Immer draft",13:"Immer only supports deleting array indices",14:"Immer only supports setting array indices and the 'length' property",15:function(n){return"Cannot apply patch, path doesn't resolve: "+n},16:'Sets cannot have "replace" patches.',17:function(n){return"Unsupported patch operation: "+n},18:function(n){return"The plugin for '"+n+"' has not been loaded into Immer. To enable the plugin, import and call `enable"+n+"()` when initializing your application."},20:"Cannot use proxies if Proxy, Proxy.revocable or Reflect are not available",21:function(n){return"produce can only be called on things that are draftable: plain objects, arrays, Map, Set or classes that are marked with '[immerable]: true'. Got '"+n+"'"},22:function(n){return"'current' expects a draft, got: "+n},23:function(n){return"'original' expects a draft, got: "+n},24:"Patching reserved attributes like __proto__, prototype and constructor is not allowed"},Z=""+Object.prototype.constructor,nn="undefined"!=typeof Reflect&&Reflect.ownKeys?Reflect.ownKeys:void 0!==Object.getOwnPropertySymbols?function(n){return Object.getOwnPropertyNames(n).concat(Object.getOwnPropertySymbols(n))}:Object.getOwnPropertyNames,rn=Object.getOwnPropertyDescriptors||function(n){var r={};return nn(n).forEach((function(t){r[t]=Object.getOwnPropertyDescriptor(n,t)})),r},tn={},en={get:function(n,r){if(r===Q)return n;var e=p(n);if(!u(e,r))return function(n,r,t){var e,i=I(r,t);return i?"value"in i?i.value:null===(e=i.get)||void 0===e?void 0:e.call(n.k):void 0}(n,e,r);var i=e[r];return n.I||!t(i)?i:i===z(n.t,r)?(E(n),n.o[r]=R(n.A.h,i,n)):i},has:function(n,r){return r in p(n)},ownKeys:function(n){return Reflect.ownKeys(p(n))},set:function(n,r,t){var e=I(p(n),r);if(null==e?void 0:e.set)return e.set.call(n.k,t),!0;if(!n.P){var i=z(p(n),r),o=null==i?void 0:i[Q];if(o&&o.t===t)return n.o[r]=t,n.D[r]=!1,!0;if(c(t,i)&&(void 0!==t||u(n.t,r)))return!0;E(n),k(n)}return n.o[r]===t&&"number"!=typeof t&&(void 0!==t||r in n.o)||(n.o[r]=t,n.D[r]=!0,!0)},deleteProperty:function(n,r){return void 0!==z(n.t,r)||r in n.t?(n.D[r]=!1,E(n),k(n)):delete n.D[r],n.o&&delete n.o[r],!0},getOwnPropertyDescriptor:function(n,r){var t=p(n),e=Reflect.getOwnPropertyDescriptor(t,r);return e?{writable:!0,configurable:1!==n.i||"length"!==r,enumerable:e.enumerable,value:t[r]}:e},defineProperty:function(){n(11)},getPrototypeOf:function(n){return Object.getPrototypeOf(n.t)},setPrototypeOf:function(){n(12)}},on={};i(en,(function(n,r){on[n]=function(){return arguments[0]=arguments[0][0],r.apply(this,arguments)}})),on.deleteProperty=function(r,t){return false&&0,on.set.call(this,r,t,void 0)},on.set=function(r,t,e){return false&&0,en.set.call(this,r[0],t,e,r[0])};var un=function(){function e(r){var e=this;this.g=B,this.F=!0,this.produce=function(r,i,o){if("function"==typeof r&&"function"!=typeof i){var u=i;i=r;var a=e;return function(n){var r=this;void 0===n&&(n=u);for(var t=arguments.length,e=Array(t>1?t-1:0),o=1;o<t;o++)e[o-1]=arguments[o];return a.produce(n,(function(n){var t;return(t=i).call.apply(t,[r,n].concat(e))}))}}var f;if("function"!=typeof i&&n(6),void 0!==o&&"function"!=typeof o&&n(7),t(r)){var c=w(e),s=R(e,r,void 0),v=!0;try{f=i(s),v=!1}finally{v?O(c):g(c)}return"undefined"!=typeof Promise&&f instanceof Promise?f.then((function(n){return j(c,o),P(n,c)}),(function(n){throw O(c),n})):(j(c,o),P(f,c))}if(!r||"object"!=typeof r){if(void 0===(f=i(r))&&(f=r),f===H&&(f=void 0),e.F&&d(f,!0),o){var p=[],l=[];b("Patches").M(r,f,p,l),o(p,l)}return f}n(21,r)},this.produceWithPatches=function(n,r){if("function"==typeof n)return function(r){for(var t=arguments.length,i=Array(t>1?t-1:0),o=1;o<t;o++)i[o-1]=arguments[o];return e.produceWithPatches(r,(function(r){return n.apply(void 0,[r].concat(i))}))};var t,i,o=e.produce(n,r,(function(n,r){t=n,i=r}));return"undefined"!=typeof Promise&&o instanceof Promise?o.then((function(n){return[n,t,i]})):[o,t,i]},"boolean"==typeof(null==r?void 0:r.useProxies)&&this.setUseProxies(r.useProxies),"boolean"==typeof(null==r?void 0:r.autoFreeze)&&this.setAutoFreeze(r.autoFreeze)}var i=e.prototype;return i.createDraft=function(e){t(e)||n(8),r(e)&&(e=D(e));var i=w(this),o=R(this,e,void 0);return o[Q].C=!0,g(i),o},i.finishDraft=function(r,t){var e=r&&r[Q]; false&&(0);var i=e.A;return j(i,t),P(void 0,i)},i.setAutoFreeze=function(n){this.F=n},i.setUseProxies=function(r){r&&!B&&n(20),this.g=r},i.applyPatches=function(n,t){var e;for(e=t.length-1;e>=0;e--){var i=t[e];if(0===i.path.length&&"replace"===i.op){n=i.value;break}}e>-1&&(t=t.slice(e+1));var o=b("Patches").$;return r(n)?o(n,t):this.produce(n,(function(n){return o(n,t)}))},e}(),an=new un,fn=an.produce,cn=an.produceWithPatches.bind(an),sn=an.setAutoFreeze.bind(an),vn=an.setUseProxies.bind(an),pn=an.applyPatches.bind(an),ln=an.createDraft.bind(an),dn=an.finishDraft.bind(an); const __WEBPACK_DEFAULT_EXPORT__ = (fn);
 
 
-/***/ })
+ })
 
 }]);

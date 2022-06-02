@@ -1,30 +1,22 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[4710],{
 
-/***/ "./public/app/features/query/components/QueryGroup.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/query/components/QueryGroup.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "D": () => (/* binding */ QueryGroup)
+  "D": () => ( QueryGroup)
 });
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-e2e-selectors/src/index.ts + 3 modules
 var grafana_e2e_selectors_src = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/core/components/PluginHelp/PluginHelp.tsx
+;
 var _h, _h2;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -95,20 +87,20 @@ class PluginHelp extends react.PureComponent {
     } = this.state;
 
     if (isLoading) {
-      return _h || (_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h2", {
+      return _h || (_h = (0,jsx_runtime.jsx)("h2", {
         children: "Loading help..."
       }));
     }
 
     if (isError) {
-      return _h2 || (_h2 = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+      return _h2 || (_h2 = (0,jsx_runtime.jsx)("h3", {
         children: "'Error occurred when loading help'"
       }));
     }
 
     if (type === 'panel_help' && help === '') {}
 
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       className: "markdown-html",
       dangerouslySetInnerHTML: {
         __html: help
@@ -117,19 +109,13 @@ class PluginHelp extends react.PureComponent {
   }
 
 }
-// EXTERNAL MODULE: ./public/app/core/config.ts
 var config = __webpack_require__("./public/app/core/config.ts");
-// EXTERNAL MODULE: ./public/app/core/services/backend_srv.ts + 4 modules
 var backend_srv = __webpack_require__("./public/app/core/services/backend_srv.ts");
-// EXTERNAL MODULE: ./public/app/core/utils/query.ts
 var utils_query = __webpack_require__("./public/app/core/utils/query.ts");
-// EXTERNAL MODULE: ./public/app/features/expressions/ExpressionDatasource.ts + 6 modules
 var ExpressionDatasource = __webpack_require__("./public/app/features/expressions/ExpressionDatasource.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/dashboard/index.ts + 4 modules
 var dashboard = __webpack_require__("./public/app/plugins/datasource/dashboard/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/utils/DataSourceWithBackend.ts
 var DataSourceWithBackend = __webpack_require__("./packages/grafana-runtime/src/utils/DataSourceWithBackend.ts");
-;// CONCATENATED MODULE: ./public/app/features/query/state/updateQueries.ts
+;
 
 
 async function updateQueries(nextDS, queries, currentDS) {
@@ -137,20 +123,19 @@ async function updateQueries(nextDS, queries, currentDS) {
   const datasource = {
     type: nextDS.type,
     uid: nextDS.uid
-  }; // we are changing data source type
+  }; 
 
   if ((currentDS === null || currentDS === void 0 ? void 0 : currentDS.meta.id) !== nextDS.meta.id) {
-    // If changing to mixed do nothing
     if (nextDS.meta.mixed) {
       return queries;
-    } // when both data sources support abstract queries
+    } 
     else if ((0,src.hasQueryExportSupport)(currentDS) && (0,src.hasQueryImportSupport)(nextDS)) {
       const abstractQueries = await currentDS.exportToAbstractQueries(queries);
       nextQueries = await nextDS.importFromAbstractQueries(abstractQueries);
-    } // when datasource supports query import
+    } 
     else if (currentDS && nextDS.importQueries) {
       nextQueries = await nextDS.importQueries(queries, currentDS);
-    } // Otherwise clear queries
+    } 
     else {
       return [{
         refId: 'A',
@@ -164,24 +149,21 @@ async function updateQueries(nextDS, queries, currentDS) {
       refId: 'A',
       datasource
     }];
-  } // Set data source on all queries except expression queries
+  } 
 
 
   return nextQueries.map(query => {
-    if (!(0,DataSourceWithBackend/* isExpressionReference */.Pr)(query.datasource) && !nextDS.meta.mixed) {
+    if (!(0,DataSourceWithBackend.Pr)(query.datasource) && !nextDS.meta.mixed) {
       query.datasource = datasource;
     }
 
     return query;
   });
 }
-// EXTERNAL MODULE: ./public/app/features/query/components/QueryActionComponent.ts
 var QueryActionComponent = __webpack_require__("./public/app/features/query/components/QueryActionComponent.ts");
-// EXTERNAL MODULE: ./public/app/features/query/components/QueryEditorRows.tsx
 var QueryEditorRows = __webpack_require__("./public/app/features/query/components/QueryEditorRows.tsx");
-// EXTERNAL MODULE: ./public/app/core/components/QueryOperationRow/QueryOperationRow.tsx
 var QueryOperationRow = __webpack_require__("./public/app/core/components/QueryOperationRow/QueryOperationRow.tsx");
-;// CONCATENATED MODULE: ./public/app/features/query/components/QueryGroupOptions.tsx
+;
 var _InlineFormLabel, _div, _div2, _InlineFormLabel2, _InlineFormLabel3, _div3, _div4, _InlineFormLabel4, _span;
 
 function QueryGroupOptions_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -362,15 +344,15 @@ class QueryGroupOptionsEditor extends react.PureComponent {
       return null;
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       className: "gf-form-inline",
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      children: (0,jsx_runtime.jsxs)("div", {
         className: "gf-form",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
           width: 9,
           tooltip: tooltip,
           children: "Cache timeout"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           type: "text",
           className: "width-6",
           placeholder: "60",
@@ -392,28 +374,28 @@ class QueryGroupOptionsEditor extends react.PureComponent {
     const realMd = (_data$request = data.request) === null || _data$request === void 0 ? void 0 : _data$request.maxDataPoints;
     const value = (_options$maxDataPoint = options.maxDataPoints) !== null && _options$maxDataPoint !== void 0 ? _options$maxDataPoint : '';
     const isAuto = value === '';
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       className: "gf-form-inline",
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      children: (0,jsx_runtime.jsxs)("div", {
         className: "gf-form",
-        children: [_InlineFormLabel || (_InlineFormLabel = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+        children: [_InlineFormLabel || (_InlineFormLabel = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
           width: 9,
-          tooltip: /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+          tooltip: (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
             children: "The maximum data points per series. Used directly by some data sources and used in calculation of auto interval. With streaming data this value is used for the rolling buffer."
           }),
           children: "Max data points"
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        })), (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           type: "number",
           className: "width-6",
           placeholder: `${realMd}`,
           spellCheck: false,
           onBlur: this.onMaxDataPointsBlur,
           defaultValue: value
-        }), isAuto && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: [_div || (_div = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        }), isAuto && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: [_div || (_div = (0,jsx_runtime.jsx)("div", {
             className: "gf-form-label query-segment-operator",
             children: "="
-          })), _div2 || (_div2 = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          })), _div2 || (_div2 = (0,jsx_runtime.jsx)("div", {
             className: "gf-form-label",
             children: "Width of panel"
           }))]
@@ -432,20 +414,20 @@ class QueryGroupOptionsEditor extends react.PureComponent {
     } = this.props;
     const realInterval = (_data$request2 = data.request) === null || _data$request2 === void 0 ? void 0 : _data$request2.interval;
     const minIntervalOnDs = (_dataSource$interval = dataSource.interval) !== null && _dataSource$interval !== void 0 ? _dataSource$interval : 'No limit';
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_InlineFormLabel2 || (_InlineFormLabel2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [_InlineFormLabel2 || (_InlineFormLabel2 = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             width: 9,
-            tooltip: /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-              children: ["A lower limit for the interval. Recommended to be set to write frequency, for example ", /*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+            tooltip: (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+              children: ["A lower limit for the interval. Recommended to be set to write frequency, for example ", (0,jsx_runtime.jsx)("code", {
                 children: "1m"
               }), ' ', "if your data is written every minute. Default value can be set in data source settings for most data sources."]
             }),
             children: "Min interval"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+          })), (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
             type: "text",
             className: "width-6",
             placeholder: `${minIntervalOnDs}`,
@@ -454,27 +436,27 @@ class QueryGroupOptionsEditor extends react.PureComponent {
             defaultValue: (_options$minInterval = options.minInterval) !== null && _options$minInterval !== void 0 ? _options$minInterval : ''
           })]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_InlineFormLabel3 || (_InlineFormLabel3 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [_InlineFormLabel3 || (_InlineFormLabel3 = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             width: 9,
-            tooltip: /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-              children: ["The evaluated interval that is sent to data source and is used in ", /*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+            tooltip: (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+              children: ["The evaluated interval that is sent to data source and is used in ", (0,jsx_runtime.jsx)("code", {
                 children: "$__interval"
-              }), " and", ' ', /*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+              }), " and", ' ', (0,jsx_runtime.jsx)("code", {
                 children: "$__interval_ms"
               })]
             }),
             children: "Interval"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          })), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             width: 6,
             children: realInterval
-          }), _div3 || (_div3 = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          }), _div3 || (_div3 = (0,jsx_runtime.jsx)("div", {
             className: "gf-form-label query-segment-operator",
             children: "="
-          })), _div4 || (_div4 = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          })), _div4 || (_div4 = (0,jsx_runtime.jsx)("div", {
             className: "gf-form-label",
             children: "Time range / max data points"
           }))]
@@ -510,11 +492,11 @@ class QueryGroupOptionsEditor extends react.PureComponent {
       intervalDesc = `${data.request.interval}`;
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsxs)("div", {
         className: styles.collapsedText,
         children: ["MD = ", mdDesc]
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), (0,jsx_runtime.jsxs)("div", {
         className: styles.collapsedText,
         children: ["Interval = ", intervalDesc]
       })]
@@ -533,7 +515,7 @@ class QueryGroupOptionsEditor extends react.PureComponent {
       isOpen
     } = this.state;
     const styles = getStyles();
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(QueryOperationRow/* QueryOperationRow */.t, {
+    return (0,jsx_runtime.jsxs)(QueryOperationRow.t, {
       id: "Query options",
       index: 0,
       title: "Query options",
@@ -541,12 +523,12 @@ class QueryGroupOptionsEditor extends react.PureComponent {
       isOpen: isOpen,
       onOpen: this.onOpenOptions,
       onClose: this.onCloseOptions,
-      children: [this.renderMaxDataPointsOption(), this.renderIntervalOption(), this.renderCacheTimeoutOption(), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      children: [this.renderMaxDataPointsOption(), this.renderIntervalOption(), this.renderCacheTimeoutOption(), (0,jsx_runtime.jsxs)("div", {
         className: "gf-form",
-        children: [_InlineFormLabel4 || (_InlineFormLabel4 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+        children: [_InlineFormLabel4 || (_InlineFormLabel4 = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
           width: 9,
           children: "Relative time"
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        })), (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           type: "text",
           className: "width-6",
           placeholder: "1h",
@@ -555,12 +537,12 @@ class QueryGroupOptionsEditor extends react.PureComponent {
           invalid: !relativeTimeIsValid,
           value: relativeTime
         })]
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), (0,jsx_runtime.jsxs)("div", {
         className: "gf-form",
-        children: [_span || (_span = /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+        children: [_span || (_span = (0,jsx_runtime.jsx)("span", {
           className: "gf-form-label width-9",
           children: "Time shift"
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        })), (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           type: "text",
           className: "width-6",
           placeholder: "1h",
@@ -569,12 +551,12 @@ class QueryGroupOptionsEditor extends react.PureComponent {
           invalid: !timeShiftIsValid,
           value: timeShift
         })]
-      }), (timeShift || relativeTime) && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (timeShift || relativeTime) && (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Hide time info",
           labelWidth: 18,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Switch, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Switch, {
             value: hideTimeOverride,
             onChange: this.onToggleTimeOverride
           })
@@ -600,7 +582,7 @@ const emptyToNull = value => {
 const getStyles = (0,grafana_ui_src.stylesFactory)(() => {
   const {
     theme
-  } = config/* config */.vc;
+  } = config.vc;
   return {
     collapsedText: emotion_css_esm.css`
       margin-left: ${theme.spacing.md};
@@ -609,7 +591,7 @@ const getStyles = (0,grafana_ui_src.stylesFactory)(() => {
     `
   };
 });
-;// CONCATENATED MODULE: ./public/app/features/query/components/QueryGroup.tsx
+;
 var QueryGroup_InlineFormLabel, QueryGroup_span;
 
 function QueryGroup_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -637,7 +619,7 @@ class QueryGroup extends react.PureComponent {
   constructor() {
     super(...arguments);
 
-    QueryGroup_defineProperty(this, "backendSrv", backend_srv/* backendSrv */.ae);
+    QueryGroup_defineProperty(this, "backendSrv", backend_srv.ae);
 
     QueryGroup_defineProperty(this, "dataSourceSrv", (0,grafana_runtime_src.getDataSourceSrv)());
 
@@ -685,12 +667,12 @@ class QueryGroup extends react.PureComponent {
       const {
         queries
       } = this.state;
-      this.onQueriesChange((0,utils_query/* addQuery */.DI)(queries, this.newQuery()));
+      this.onQueriesChange((0,utils_query.DI)(queries, this.newQuery()));
       this.onScrollBottom();
     });
 
     QueryGroup_defineProperty(this, "onAddExpressionClick", () => {
-      this.onQueriesChange((0,utils_query/* addQuery */.DI)(this.state.queries, ExpressionDatasource/* dataSource.newQuery */.mV.newQuery()));
+      this.onQueriesChange((0,utils_query.DI)(this.state.queries, ExpressionDatasource.mV.newQuery()));
       this.onScrollBottom();
     });
 
@@ -722,7 +704,7 @@ class QueryGroup extends react.PureComponent {
     });
 
     QueryGroup_defineProperty(this, "renderMixedPicker", () => {
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
+      return (0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
         mixed: false,
         onChange: this.onAddMixedQuery,
         current: null,
@@ -753,7 +735,7 @@ class QueryGroup extends react.PureComponent {
         dsSettings,
         queries
       } = this.state;
-      this.onQueriesChange((0,utils_query/* addQuery */.DI)(queries, query, {
+      this.onQueriesChange((0,utils_query.DI)(queries, query, {
         type: dsSettings === null || dsSettings === void 0 ? void 0 : dsSettings.type,
         uid: dsSettings === null || dsSettings === void 0 ? void 0 : dsSettings.uid
       }));
@@ -847,16 +829,16 @@ class QueryGroup extends react.PureComponent {
       dataSource,
       data
     } = this.state;
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    return (0,jsx_runtime.jsx)("div", {
+      children: (0,jsx_runtime.jsxs)("div", {
         className: styles.dataSourceRow,
-        children: [QueryGroup_InlineFormLabel || (QueryGroup_InlineFormLabel = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+        children: [QueryGroup_InlineFormLabel || (QueryGroup_InlineFormLabel = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
           htmlFor: "data-source-picker",
           width: 'auto',
           children: "Data source"
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        })), (0,jsx_runtime.jsx)("div", {
           className: styles.dataSourceRowItem,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
+          children: (0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
             onChange: this.onChangeDataSource,
             current: options.dataSource,
             metrics: true,
@@ -864,29 +846,29 @@ class QueryGroup extends react.PureComponent {
             dashboard: true,
             variables: true
           })
-        }), dataSource && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        }), dataSource && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: [(0,jsx_runtime.jsx)("div", {
             className: styles.dataSourceRowItem,
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
               variant: "secondary",
               icon: "question-circle",
               title: "Open data source help",
               onClick: this.onOpenHelp
             })
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          }), (0,jsx_runtime.jsx)("div", {
             className: styles.dataSourceRowItemOptions,
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(QueryGroupOptionsEditor, {
+            children: (0,jsx_runtime.jsx)(QueryGroupOptionsEditor, {
               options: options,
               dataSource: dataSource,
               data: data,
               onChange: this.onUpdateAndRun
             })
-          }), onOpenQueryInspector && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          }), onOpenQueryInspector && (0,jsx_runtime.jsx)("div", {
             className: styles.dataSourceRowItem,
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
               variant: "secondary",
               onClick: onOpenQueryInspector,
-              "aria-label": grafana_e2e_selectors_src/* selectors.components.QueryTab.queryInspectorButton */.wl.components.QueryTab.queryInspectorButton,
+              "aria-label": grafana_e2e_selectors_src.wl.components.QueryTab.queryInspectorButton,
               children: "Query inspector"
             })
           })]
@@ -904,8 +886,8 @@ class QueryGroup extends react.PureComponent {
       queries
     } = this.state;
 
-    if ((0,dashboard/* isSharedDashboardQuery */.yl)(dsSettings.name)) {
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(dashboard/* DashboardQueryEditor */.hD, {
+    if ((0,dashboard.yl)(dsSettings.name)) {
+      return (0,jsx_runtime.jsx)(dashboard.hD, {
         queries: queries,
         panelData: data,
         onChange: this.onQueriesChange,
@@ -913,9 +895,9 @@ class QueryGroup extends react.PureComponent {
       });
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-      "aria-label": grafana_e2e_selectors_src/* selectors.components.QueryTab.content */.wl.components.QueryTab.content,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(QueryEditorRows/* QueryEditorRows */.l, {
+    return (0,jsx_runtime.jsx)("div", {
+      "aria-label": grafana_e2e_selectors_src.wl.components.QueryTab.content,
+      children: (0,jsx_runtime.jsx)(QueryEditorRows.l, {
         queries: queries,
         dsSettings: dsSettings,
         onQueriesChange: this.onQueriesChange,
@@ -931,7 +913,7 @@ class QueryGroup extends react.PureComponent {
   }
 
   renderExtraActions() {
-    return QueryActionComponent/* GroupActionComponents.getAllExtraRenderAction */.S.getAllExtraRenderAction().map((action, index) => action({
+    return QueryActionComponent.S.getAllExtraRenderAction().map((action, index) => action({
       onAddQuery: this.onAddQuery,
       onChangeDataSource: this.onChangeDataSource,
       key: index
@@ -942,22 +924,22 @@ class QueryGroup extends react.PureComponent {
     const {
       isAddingMixed
     } = this.state;
-    const showAddButton = !(isAddingMixed || (0,dashboard/* isSharedDashboardQuery */.yl)(dsSettings.name));
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
+    const showAddButton = !(isAddingMixed || (0,dashboard.yl)(dsSettings.name));
+    return (0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
       spacing: "md",
       align: "flex-start",
-      children: [showAddButton && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      children: [showAddButton && (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
         icon: "plus",
         onClick: this.onAddQueryClick,
         variant: "secondary",
-        "aria-label": grafana_e2e_selectors_src/* selectors.components.QueryTab.addQuery */.wl.components.QueryTab.addQuery,
+        "aria-label": grafana_e2e_selectors_src.wl.components.QueryTab.addQuery,
         children: "Query"
-      }), config/* default.expressionsEnabled */.ZP.expressionsEnabled && this.isExpressionsSupported(dsSettings) && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      }), config.ZP.expressionsEnabled && this.isExpressionsSupported(dsSettings) && (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
         icon: "plus",
         onClick: this.onAddExpressionClick,
         variant: "secondary",
         className: styles.expressionButton,
-        children: QueryGroup_span || (QueryGroup_span = /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+        children: QueryGroup_span || (QueryGroup_span = (0,jsx_runtime.jsx)("span", {
           children: "Expression\xA0"
         }))
       }), this.renderExtraActions()]
@@ -970,20 +952,20 @@ class QueryGroup extends react.PureComponent {
       dsSettings
     } = this.state;
     const styles = QueryGroup_getStyles();
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CustomScrollbar, {
+    return (0,jsx_runtime.jsx)(grafana_ui_src.CustomScrollbar, {
       autoHeightMin: "100%",
       scrollRefCallback: this.setScrollRef,
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      children: (0,jsx_runtime.jsxs)("div", {
         className: styles.innerWrapper,
-        children: [this.renderTopSection(styles), dsSettings && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: [this.renderTopSection(styles), dsSettings && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: [(0,jsx_runtime.jsx)("div", {
             className: styles.queriesWrapper,
             children: this.renderQueries(dsSettings)
-          }), this.renderAddQueryRow(dsSettings, styles), isHelpOpen && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Modal, {
+          }), this.renderAddQueryRow(dsSettings, styles), isHelpOpen && (0,jsx_runtime.jsx)(grafana_ui_src.Modal, {
             title: "Data source help",
             isOpen: true,
             onDismiss: this.onCloseHelp,
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(PluginHelp, {
+            children: (0,jsx_runtime.jsx)(PluginHelp, {
               plugin: dsSettings.meta,
               type: "query_help"
             })
@@ -997,7 +979,7 @@ class QueryGroup extends react.PureComponent {
 const QueryGroup_getStyles = (0,grafana_ui_src.stylesFactory)(() => {
   const {
     theme
-  } = config/* default */.ZP;
+  } = config.ZP;
   return {
     innerWrapper: emotion_css_esm.css`
       display: flex;
@@ -1025,6 +1007,6 @@ const QueryGroup_getStyles = (0,grafana_ui_src.stylesFactory)(() => {
   };
 });
 
-/***/ })
+ })
 
 }]);

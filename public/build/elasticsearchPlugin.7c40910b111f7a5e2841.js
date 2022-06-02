@@ -1,26 +1,20 @@
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[9897],{
 
-/***/ "./public/app/plugins/datasource/elasticsearch/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/elasticsearch/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "plugin": () => (/* binding */ module_plugin)
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/hooks/useStatelessReducer.ts
+;
 
 const combineReducers = reducers => (state, action) => {
   const newState = {};
@@ -37,7 +31,7 @@ const useStatelessReducer = (onChange, state, reducer) => {
   }, [onChange, state, reducer]);
   return dispatch;
 };
-const DispatchContext = /*#__PURE__*/(0,react.createContext)(undefined);
+const DispatchContext = (0,react.createContext)(undefined);
 const useDispatch = () => {
   const dispatch = (0,react.useContext)(DispatchContext);
 
@@ -47,22 +41,18 @@ const useDispatch = () => {
 
   return dispatch;
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/SettingsEditor/BucketScriptSettingsEditor/utils.ts
+;
 const defaultPipelineVariable = name => ({
   name,
   pipelineAgg: ''
 });
-/**
- * Given an array of pipeline variables generates a new unique pipeline variable name in the form of `var{n}`.
- * The value for `n` is calculated based on the variables names in pipelineVars matching `var{n}`.
- */
 
 const generatePipelineVariableName = pipelineVars => `var${Math.max(0, ...pipelineVars.map(v => {
   var _v$name$match;
 
   return parseInt(((_v$name$match = v.name.match('^var(\\d+)$')) === null || _v$name$match === void 0 ? void 0 : _v$name$match[1]) || '0', 10);
 })) + 1}`;
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/aggregations.ts
+;
 
 const isEWMAMovingAverage = metric => {
   var _metric$settings;
@@ -84,15 +74,7 @@ const isMovingAverageWithModelSettings = metric => {
 
   return ['holt', 'ewma', 'holt_winters'].includes(((_metric$settings4 = metric.settings) === null || _metric$settings4 === void 0 ? void 0 : _metric$settings4.model) || '');
 };
-// Guards
-// Given the structure of the aggregations (ie. `settings` field being always optional) we cannot
-// determine types based solely on objects' properties, therefore we use `metricAggregationConfig` as the
-// source of truth.
 
-/**
- * Checks if `metric` requires a field (either referring to a document or another aggregation)
- * @param metric
- */
 const isMetricAggregationWithField = metric => metricAggregationConfig[metric.type].requiresField;
 const isPipelineAggregation = metric => metricAggregationConfig[metric.type].isPipelineAgg;
 const isPipelineAggregationWithMultipleBucketPaths = metric => metricAggregationConfig[metric.type].supportsMultipleBucketPaths;
@@ -102,7 +84,7 @@ const isMetricAggregationWithMeta = metric => metricAggregationConfig[metric.typ
 const isMetricAggregationWithInlineScript = metric => metricAggregationConfig[metric.type].supportsInlineScript;
 const METRIC_AGGREGATION_TYPES = ['count', 'avg', 'sum', 'min', 'max', 'extended_stats', 'percentiles', 'cardinality', 'raw_document', 'raw_data', 'logs', 'moving_avg', 'moving_fn', 'derivative', 'serial_diff', 'cumulative_sum', 'bucket_script', 'rate', 'top_metrics'];
 const isMetricAggregationType = s => METRIC_AGGREGATION_TYPES.includes(s);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/utils.ts
+;
 
 
 const metricAggregationConfig = {
@@ -221,7 +203,6 @@ const metricAggregationConfig = {
     }
   },
   moving_fn: {
-    // TODO: Check this
     label: 'Moving Function',
     requiresField: true,
     isPipelineAgg: true,
@@ -396,17 +377,9 @@ const pipelineOptions = {
   }],
   bucket_script: []
 };
-/**
- * Given a metric `MetricA` and an array of metrics, returns all children of `MetricA`.
- * `MetricB` is considered a child of `MetricA` if `MetricA` is referenced by `MetricB` in it's `field` attribute
- * (`MetricA.id === MetricB.field`) or in it's pipeline aggregation variables (for bucket_scripts).
- * @param metric
- * @param metrics
- */
 
 const getChildren = (metric, metrics) => {
   const children = metrics.filter(m => {
-    // TODO: Check this.
     if (isPipelineAggregationWithMultipleBucketPaths(m)) {
       var _m$pipelineVariables;
 
@@ -417,7 +390,7 @@ const getChildren = (metric, metrics) => {
   });
   return [...children, ...children.flatMap(child => getChildren(child, metrics))];
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/query_def.ts
+;
 
 const extendedStats = [{
   label: 'Avg',
@@ -486,8 +459,7 @@ function hasMetricOfType(target, type) {
   var _target$metrics;
 
   return !!(target !== null && target !== void 0 && (_target$metrics = target.metrics) !== null && _target$metrics !== void 0 && _target$metrics.some(m => m.type === type));
-} // Even if we have type guards when building a query, we currently have no way of getting this information from the response.
-// We should try to find a better (type safe) way of doing the following 2.
+} 
 
 function isPipelineAgg(metricType) {
   return metricType in pipelineOptions;
@@ -495,44 +467,36 @@ function isPipelineAgg(metricType) {
 function isPipelineAggWithMultipleBucketPaths(metricType) {
   return !!metricAggregationConfig[metricType].supportsMultipleBucketPaths;
 }
-// EXTERNAL MODULE: ./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/index.js
 var semver = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/index.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/utils.ts
+;
 
 
 
 const describeMetric = metric => {
   if (!isMetricAggregationWithField(metric)) {
     return metricAggregationConfig[metric.type].label;
-  } // TODO: field might be undefined
+  } 
 
 
   return `${metricAggregationConfig[metric.type].label} ${metric.field}`;
 };
-/**
- * Utility function to clean up aggregations settings objects.
- * It removes nullish values and empty strings, array and objects
- * recursing over nested objects (not arrays).
- * @param obj
- */
 
 const removeEmpty = obj => Object.entries(obj).reduce((acc, _ref) => {
   let [key, value] = _ref;
 
-  // Removing nullish values (null & undefined)
   if (value == null) {
     return Object.assign({}, acc);
-  } // Removing empty arrays (This won't recurse the array)
+  } 
 
 
   if (Array.isArray(value) && value.length === 0) {
     return Object.assign({}, acc);
-  } // Removing empty strings
+  } 
 
 
   if ((value === null || value === void 0 ? void 0 : value.length) === 0) {
     return Object.assign({}, acc);
-  } // Recursing over nested objects
+  } 
 
 
   if (!Array.isArray(value) && typeof value === 'object') {
@@ -551,52 +515,17 @@ const removeEmpty = obj => Object.entries(obj).reduce((acc, _ref) => {
     [key]: value
   });
 }, {});
-/**
- *  This function converts an order by string to the correct metric id For example,
- *  if the user uses the standard deviation extended stat for the order by,
- *  the value would be "1[std_deviation]" and this would return "1"
- */
 
 const convertOrderByToMetricId = orderBy => {
   const metricIdMatches = orderBy.match(/^(\d+)/);
   return metricIdMatches ? metricIdMatches[1] : void 0;
 };
-/** Gets the actual script value for metrics that support inline scripts.
- *
- *  This is needed because the `script` is a bit polymorphic.
- *  when creating a query with Grafana < 7.4 it was stored as:
- * ```json
- * {
- *    "settings": {
- *      "script": {
- *        "inline": "value"
- *      }
- *    }
- * }
- * ```
- *
- * while from 7.4 it's stored as
- * ```json
- * {
- *    "settings": {
- *      "script": "value"
- *    }
- * }
- * ```
- *
- * This allows us to access both formats and support both queries created before 7.4 and after.
- */
 
 const getScriptValue = metric => {
   var _metric$settings, _metric$settings2, _metric$settings2$scr, _metric$settings3;
 
   return (typeof ((_metric$settings = metric.settings) === null || _metric$settings === void 0 ? void 0 : _metric$settings.script) === 'object' ? (_metric$settings2 = metric.settings) === null || _metric$settings2 === void 0 ? void 0 : (_metric$settings2$scr = _metric$settings2.script) === null || _metric$settings2$scr === void 0 ? void 0 : _metric$settings2$scr.inline : (_metric$settings3 = metric.settings) === null || _metric$settings3 === void 0 ? void 0 : _metric$settings3.script) || '';
 };
-/**
- * Coerces the a version string/number to a valid semver string.
- * It takes care of also converting from the legacy format (numeric) to the new one.
- * @param version
- */
 
 const coerceESVersion = version => {
   if (typeof version === 'string') {
@@ -628,28 +557,23 @@ const isSupportedVersion = version => {
 
   return false;
 };
-// EXTERNAL MODULE: ./.yarn/__virtual__/@reduxjs-toolkit-virtual-341575ab98/0/cache/@reduxjs-toolkit-npm-1.8.0-436263eab0-e229571b80.zip/node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js + 2 modules
 var redux_toolkit_esm = __webpack_require__("./.yarn/__virtual__/@reduxjs-toolkit-virtual-341575ab98/0/cache/@reduxjs-toolkit-npm-1.8.0-436263eab0-e229571b80.zip/node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/state/actions.ts
+;
 
-const addMetric = (0,redux_toolkit_esm/* createAction */.PH)('@metrics/add');
-const removeMetric = (0,redux_toolkit_esm/* createAction */.PH)('@metrics/remove');
-const toggleMetricVisibility = (0,redux_toolkit_esm/* createAction */.PH)('@metrics/toggle_visibility');
-const changeMetricField = (0,redux_toolkit_esm/* createAction */.PH)('@metrics/change_field');
-const changeMetricType = (0,redux_toolkit_esm/* createAction */.PH)('@metrics/change_type');
-const changeMetricAttribute = (0,redux_toolkit_esm/* createAction */.PH)('@metrics/change_attr');
-const changeMetricSetting = (0,redux_toolkit_esm/* createAction */.PH)('@metrics/change_setting');
-const changeMetricMeta = (0,redux_toolkit_esm/* createAction */.PH)('@metrics/change_meta');
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/state.ts
+const addMetric = (0,redux_toolkit_esm.PH)('@metrics/add');
+const removeMetric = (0,redux_toolkit_esm.PH)('@metrics/remove');
+const toggleMetricVisibility = (0,redux_toolkit_esm.PH)('@metrics/toggle_visibility');
+const changeMetricField = (0,redux_toolkit_esm.PH)('@metrics/change_field');
+const changeMetricType = (0,redux_toolkit_esm.PH)('@metrics/change_type');
+const changeMetricAttribute = (0,redux_toolkit_esm.PH)('@metrics/change_attr');
+const changeMetricSetting = (0,redux_toolkit_esm.PH)('@metrics/change_setting');
+const changeMetricMeta = (0,redux_toolkit_esm.PH)('@metrics/change_meta');
+;
 
 
-/**
- * When the `initQuery` Action is dispatched, the query gets populated with default values where values are not present.
- * This means it won't override any existing value in place, but just ensure the query is in a "runnable" state.
- */
-const initQuery = (0,redux_toolkit_esm/* createAction */.PH)('init');
-const changeQuery = (0,redux_toolkit_esm/* createAction */.PH)('change_query');
-const changeAliasPattern = (0,redux_toolkit_esm/* createAction */.PH)('change_alias_pattern');
+const initQuery = (0,redux_toolkit_esm.PH)('init');
+const changeQuery = (0,redux_toolkit_esm.PH)('change_query');
+const changeAliasPattern = (0,redux_toolkit_esm.PH)('change_alias_pattern');
 const queryReducer = (prevQuery, action) => {
   if (changeQuery.match(action)) {
     return action.payload;
@@ -672,12 +596,12 @@ const aliasPatternReducer = (prevAliasPattern, action) => {
 
   return prevAliasPattern;
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/BucketAggregationsEditor/SettingsEditor/FiltersSettingsEditor/utils.ts
+;
 const defaultFilter = () => ({
   label: '',
   query: '*'
 });
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/BucketAggregationsEditor/utils.ts
+;
 
 
 const bucketAggregationConfig = {
@@ -763,14 +687,14 @@ const sizeOptions = [{
   label: '20',
   value: '20'
 }];
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/BucketAggregationsEditor/state/actions.ts
+;
 
-const addBucketAggregation = (0,redux_toolkit_esm/* createAction */.PH)('@bucketAggs/add');
-const removeBucketAggregation = (0,redux_toolkit_esm/* createAction */.PH)('@bucketAggs/remove');
-const changeBucketAggregationType = (0,redux_toolkit_esm/* createAction */.PH)('@bucketAggs/change_type');
-const changeBucketAggregationField = (0,redux_toolkit_esm/* createAction */.PH)('@bucketAggs/change_field');
-const changeBucketAggregationSetting = (0,redux_toolkit_esm/* createAction */.PH)('@bucketAggs/change_setting');
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/BucketAggregationsEditor/state/reducer.ts
+const addBucketAggregation = (0,redux_toolkit_esm.PH)('@bucketAggs/add');
+const removeBucketAggregation = (0,redux_toolkit_esm.PH)('@bucketAggs/remove');
+const changeBucketAggregationType = (0,redux_toolkit_esm.PH)('@bucketAggs/change_type');
+const changeBucketAggregationField = (0,redux_toolkit_esm.PH)('@bucketAggs/change_field');
+const changeBucketAggregationSetting = (0,redux_toolkit_esm.PH)('@bucketAggs/change_setting');
+;
 
 
 
@@ -784,7 +708,7 @@ const createReducer = defaultTimeField => (state, action) => {
       id: action.payload,
       type: 'terms',
       settings: bucketAggregationConfig.terms.defaultSettings
-    }; // If the last bucket aggregation is a `date_histogram` we add the new one before it.
+    }; 
 
     const lastAgg = state[state.length - 1];
 
@@ -804,12 +728,6 @@ const createReducer = defaultTimeField => (state, action) => {
       if (bucketAgg.id !== action.payload.id) {
         return bucketAgg;
       }
-      /*
-      TODO: The previous version of the query editor was keeping some of the old bucket aggregation's configurations
-      in the new selected one (such as field or some settings).
-      It the future would be nice to have the same behavior but it's hard without a proper definition,
-      as Elasticsearch will error sometimes if some settings are not compatible.
-      */
 
 
       return {
@@ -833,14 +751,9 @@ const createReducer = defaultTimeField => (state, action) => {
   }
 
   if (changeMetricType.match(action)) {
-    // If we are switching to a metric which requires the absence of bucket aggregations
-    // we remove all of them.
     if (metricAggregationConfig[action.payload.type].isSingleMetric) {
       return [];
     } else if (state.length === 0) {
-      // Else, if there are no bucket aggregations we restore a default one.
-      // This happens when switching from a metric that requires the absence of bucket aggregations to
-      // one that requires it.
       return [Object.assign({}, defaultBucketAgg('2'), {
         field: defaultTimeField
       })];
@@ -876,7 +789,7 @@ const createReducer = defaultTimeField => (state, action) => {
 
   return state;
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/state/reducer.ts
+;
 
 
 
@@ -901,18 +814,11 @@ const reducer_reducer = (state, action) => {
   }
 
   if (changeMetricType.match(action)) {
-    return state.filter(metric => // When the new metric type is `isSingleMetric` we remove all other metrics from the query
-    // leaving only the current one.
+    return state.filter(metric => 
     !!metricAggregationConfig[action.payload.type].isSingleMetric ? metric.id === action.payload.id : true).map(metric => {
       if (metric.id !== action.payload.id) {
         return metric;
       }
-      /*
-      TODO: The previous version of the query editor was keeping some of the old metric's configurations
-      in the new selected one (such as field or some settings).
-      It the future would be nice to have the same behavior but it's hard without a proper definition,
-      as Elasticsearch will error sometimes if some settings are not compatible.
-      */
 
 
       return Object.assign({
@@ -958,7 +864,7 @@ const reducer_reducer = (state, action) => {
     return state.map(metric => {
       if (metric.id !== action.payload.metric.id) {
         return metric;
-      } // TODO: Here, instead of this if statement, we should assert that metric is MetricAggregationWithSettings
+      } 
 
 
       if (isMetricAggregationWithSettings(metric)) {
@@ -968,7 +874,7 @@ const reducer_reducer = (state, action) => {
         return Object.assign({}, metric, {
           settings: Object.assign({}, newSettings)
         });
-      } // This should never happen.
+      } 
 
 
       return metric;
@@ -979,7 +885,7 @@ const reducer_reducer = (state, action) => {
     return state.map(metric => {
       if (metric.id !== action.payload.metric.id) {
         return metric;
-      } // TODO: Here, instead of this if statement, we should assert that metric is MetricAggregationWithMeta
+      } 
 
 
       if (isMetricAggregationWithMeta(metric)) {
@@ -988,7 +894,7 @@ const reducer_reducer = (state, action) => {
             [action.payload.meta]: action.payload.newValue
           })
         });
-      } // This should never happen.
+      } 
 
 
       return metric;
@@ -1017,18 +923,17 @@ const reducer_reducer = (state, action) => {
 
   return state;
 };
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/ElasticsearchQueryContext.tsx
+;
 
 
 
 
 
 
-const DatasourceContext = /*#__PURE__*/(0,react.createContext)(undefined);
-const QueryContext = /*#__PURE__*/(0,react.createContext)(undefined);
-const RangeContext = /*#__PURE__*/(0,react.createContext)(undefined);
+const DatasourceContext = (0,react.createContext)(undefined);
+const QueryContext = (0,react.createContext)(undefined);
+const RangeContext = (0,react.createContext)(undefined);
 const ElasticsearchProvider = _ref => {
   let {
     children,
@@ -1048,24 +953,23 @@ const ElasticsearchProvider = _ref => {
     metrics: reducer_reducer,
     bucketAggs: createReducer(datasource.timeField)
   });
-  const dispatch = useStatelessReducer( // timeField is part of the query model, but its value is always set to be the one from datasource settings.
+  const dispatch = useStatelessReducer( 
   newState => onStateChange(Object.assign({}, query, newState, {
     timeField: datasource.timeField
-  })), query, reducer); // This initializes the query by dispatching an init action to each reducer.
-  // useStatelessReducer will then call `onChange` with the newly generated query
+  })), query, reducer); 
 
   if (!query.metrics || !query.bucketAggs || query.query === undefined) {
     dispatch(initQuery());
     return null;
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(DatasourceContext.Provider, {
+  return (0,jsx_runtime.jsx)(DatasourceContext.Provider, {
     value: datasource,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(QueryContext.Provider, {
+    children: (0,jsx_runtime.jsx)(QueryContext.Provider, {
       value: query,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(RangeContext.Provider, {
+      children: (0,jsx_runtime.jsx)(RangeContext.Provider, {
         value: range,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(DispatchContext.Provider, {
+        children: (0,jsx_runtime.jsx)(DispatchContext.Provider, {
           value: dispatch,
           children: children
         })
@@ -1087,7 +991,7 @@ const getHook = c => () => {
 const useQuery = getHook(QueryContext);
 const useDatasource = getHook(DatasourceContext);
 const useRange = getHook(RangeContext);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/hooks/useNextId.ts
+;
 
 
 
@@ -1102,7 +1006,7 @@ const useNextId = () => {
   } = useQuery();
   return (0,react.useMemo)(() => (Math.max(...[...((metrics === null || metrics === void 0 ? void 0 : metrics.map(toId)) || ['0']), ...((bucketAggs === null || bucketAggs === void 0 ? void 0 : bucketAggs.map(toId)) || ['0'])].map(toInt)) + 1).toString(), [metrics, bucketAggs]);
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/IconButton.tsx
+;
 const _excluded = ["iconName", "onClick", "className", "label"];
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -1130,22 +1034,21 @@ const IconButton = _ref => {
   } = _ref,
       buttonProps = _objectWithoutPropertiesLoose(_ref, _excluded);
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("button", Object.assign({
+  return (0,jsx_runtime.jsxs)("button", Object.assign({
     className: (0,emotion_css_esm.cx)('gf-form-label gf-form-label--btn query-part', className),
     onClick: onClick
   }, buttonProps, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+    children: [(0,jsx_runtime.jsx)("span", {
       className: SROnly,
       children: label
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
       name: iconName,
       "aria-hidden": "true"
     })]
   }));
 };
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/QueryEditorRow.tsx
+;
 
 
 
@@ -1161,16 +1064,16 @@ const QueryEditorRow = _ref => {
     hidden = false
   } = _ref;
   const styles = (0,grafana_ui_src.useStyles2)(getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSegmentGroup, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineLabel, {
+  return (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineSegmentGroup, {
+      children: (0,jsx_runtime.jsxs)(grafana_ui_src.InlineLabel, {
         width: 17,
         as: "div",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+        children: [(0,jsx_runtime.jsx)("span", {
           children: label
-        }), /*#__PURE__*/(0,jsx_runtime.jsxs)("span", {
+        }), (0,jsx_runtime.jsxs)("span", {
           className: styles.iconWrapper,
-          children: [onHideClick && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
+          children: [onHideClick && (0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
             name: hidden ? 'eye-slash' : 'eye',
             onClick: onHideClick,
             surface: "header",
@@ -1178,7 +1081,7 @@ const QueryEditorRow = _ref => {
             "aria-pressed": hidden,
             "aria-label": "hide metric",
             className: styles.icon
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
+          }), (0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
             name: "trash-alt",
             surface: "header",
             size: "sm",
@@ -1204,14 +1107,13 @@ const getStyles = theme => {
     `
   };
 };
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js
 var lastValueFrom = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/BucketAggregationsEditor/aggregations.ts
+;
 
 const isBucketAggregationWithField = bucketAgg => bucketAggregationConfig[bucketAgg.type].requiresField;
 const BUCKET_AGGREGATION_TYPES = ['date_histogram', 'histogram', 'terms', 'filters', 'geohash_grid'];
 const isBucketAggregationType = s => BUCKET_AGGREGATION_TYPES.includes(s);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/hooks/useFields.ts
+;
 
 
 
@@ -1224,10 +1126,6 @@ const getFilter = type => {
         return [];
 
       case 'top_metrics':
-        // top_metrics was introduced in 7.7 where `metrics` only supported number:
-        // https://www.elastic.co/guide/en/elasticsearch/reference/7.7/search-aggregations-metrics-top-metrics.html#_metrics
-        // TODO: starting from 7.11 it supports ips and keywords as well:
-        // https://www.elastic.co/guide/en/elasticsearch/reference/7.11/search-aggregations-metrics-top-metrics.html#_metrics
         return ['number'];
 
       default:
@@ -1263,13 +1161,6 @@ const toSelectableValue = _ref => {
     value: text
   };
 };
-/**
- * Returns a function to query the configured datasource for autocomplete values for the specified aggregation type or data types.
- * Each aggregation can be run on different types, for example avg only operates on numeric fields, geohash_grid only on geo_point fields.
- * If an aggregation type is provided, the promise will resolve with all fields suitable to be used as a field for the given aggregation.
- * If an array of types is providem the promise will resolve with all the fields matching the provided types.
- * @param aggregationType the type of aggregation to get fields for
- */
 
 
 const useFields = type => {
@@ -1278,9 +1169,8 @@ const useFields = type => {
   const filter = Array.isArray(type) ? type : getFilter(type);
   let rawFields;
   return async q => {
-    // _mapping doesn't support filtering, we avoid sending a request everytime q changes
     if (!rawFields) {
-      rawFields = await (0,lastValueFrom/* lastValueFrom */.n)(datasource.getFields(filter, range));
+      rawFields = await (0,lastValueFrom.n)(datasource.getFields(filter, range));
     }
 
     return rawFields.filter(_ref2 => {
@@ -1291,12 +1181,12 @@ const useFields = type => {
     }).map(toSelectableValue);
   };
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/styles.ts
+;
 
 const segmentStyles = emotion_css_esm.css`
   min-width: 150px;
 `;
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/SettingsEditorContainer.tsx
+;
 
 
 
@@ -1335,26 +1225,26 @@ const SettingsEditorContainer = _ref => {
   const [open, setOpen] = (0,react.useState)(false);
   const theme = (0,grafana_ui_src.useTheme2)();
   const styles = SettingsEditorContainer_getStyles(theme, hidden);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSegmentGroup, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.InlineSegmentGroup, {
+    children: (0,jsx_runtime.jsxs)("div", {
       className: (0,emotion_css_esm.cx)(styles.wrapper),
-      children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("button", {
+      children: [(0,jsx_runtime.jsxs)("button", {
         className: (0,emotion_css_esm.cx)('gf-form-label query-part', styles.button, segmentStyles),
         onClick: () => setOpen(!open),
         "aria-expanded": open,
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
           name: open ? 'angle-down' : 'angle-right',
           "aria-hidden": "true",
           className: styles.icon
         }), label]
-      }), open && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), open && (0,jsx_runtime.jsx)("div", {
         className: styles.settingsWrapper,
         children: children
       })]
     })
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/hooks/useCreatableSelectPersistedBehaviour.ts
+;
 
 
 const hasValue = searchValue => _ref => {
@@ -1375,10 +1265,6 @@ const getInitialState = (initialOptions, initialValue) => {
   }];
 };
 
-/**
- * Creates the Props needed by Select to handle custom values and handles custom value creation
- * and the initial value when it is not present in the option array.
- */
 const useCreatableSelectPersistedBehaviour = _ref2 => {
   let {
     options: initialOptions,
@@ -1405,7 +1291,7 @@ const useCreatableSelectPersistedBehaviour = _ref2 => {
     value
   };
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/BucketAggregationsEditor/SettingsEditor/DateHistogramSettingsEditor.tsx
+;
 
 
 
@@ -1452,9 +1338,7 @@ const DateHistogramSettingsEditor_hasValue = searchValue => _ref => {
 };
 
 const isValidNewOption = (inputValue, _, options) => {
-  // TODO: would be extremely nice here to allow only template variables and values that are
-  // valid date histogram's Interval options
-  const valueExists = options.some(DateHistogramSettingsEditor_hasValue(inputValue)); // we also don't want users to create "empty" values
+  const valueExists = options.some(DateHistogramSettingsEditor_hasValue(inputValue)); 
 
   return !valueExists && inputValue.trim().length > 0;
 };
@@ -1487,11 +1371,11 @@ const DateHistogramSettingsEditor = _ref2 => {
     }));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
       label: "Interval"
     }, inlineFieldProps, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, Object.assign({
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, Object.assign({
         inputId: (0,lodash.uniqueId)('es-date_histogram-interval'),
         isValidNewOption: isValidNewOption,
         filterOption: optionStartsWithValue
@@ -1500,10 +1384,10 @@ const DateHistogramSettingsEditor = _ref2 => {
         value: ((_bucketAgg$settings = bucketAgg.settings) === null || _bucketAgg$settings === void 0 ? void 0 : _bucketAgg$settings.interval) || ((_bucketAggregationCon = bucketAggregationConfig.date_histogram.defaultSettings) === null || _bucketAggregationCon === void 0 ? void 0 : _bucketAggregationCon.interval),
         onChange: handleIntervalChange
       })))
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+    })), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
       label: "Min Doc Count"
     }, inlineFieldProps, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         id: `${baseId}-min_doc_count`,
         onBlur: e => dispatch(changeBucketAggregationSetting({
           bucketAgg,
@@ -1512,11 +1396,11 @@ const DateHistogramSettingsEditor = _ref2 => {
         })),
         defaultValue: ((_bucketAgg$settings2 = bucketAgg.settings) === null || _bucketAgg$settings2 === void 0 ? void 0 : _bucketAgg$settings2.min_doc_count) || ((_bucketAggregationCon2 = bucketAggregationConfig.date_histogram.defaultSettings) === null || _bucketAggregationCon2 === void 0 ? void 0 : _bucketAggregationCon2.min_doc_count)
       })
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+    })), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
       label: "Trim Edges"
     }, inlineFieldProps, {
       tooltip: "Trim the edges on the timeseries datapoints",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         id: `${baseId}-trime_edges`,
         onBlur: e => dispatch(changeBucketAggregationSetting({
           bucketAgg,
@@ -1525,11 +1409,11 @@ const DateHistogramSettingsEditor = _ref2 => {
         })),
         defaultValue: ((_bucketAgg$settings3 = bucketAgg.settings) === null || _bucketAgg$settings3 === void 0 ? void 0 : _bucketAgg$settings3.trimEdges) || ((_bucketAggregationCon3 = bucketAggregationConfig.date_histogram.defaultSettings) === null || _bucketAggregationCon3 === void 0 ? void 0 : _bucketAggregationCon3.trimEdges)
       })
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+    })), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
       label: "Offset"
     }, inlineFieldProps, {
       tooltip: "Change the start value of each bucket by the specified positive (+) or negative offset (-) duration, such as 1h for an hour, or 1d for a day",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         id: `${baseId}-offset`,
         onBlur: e => dispatch(changeBucketAggregationSetting({
           bucketAgg,
@@ -1538,10 +1422,10 @@ const DateHistogramSettingsEditor = _ref2 => {
         })),
         defaultValue: ((_bucketAgg$settings4 = bucketAgg.settings) === null || _bucketAgg$settings4 === void 0 ? void 0 : _bucketAgg$settings4.offset) || ((_bucketAggregationCon4 = bucketAggregationConfig.date_histogram.defaultSettings) === null || _bucketAggregationCon4 === void 0 ? void 0 : _bucketAggregationCon4.offset)
       })
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+    })), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
       label: "Timezone"
     }, inlineFieldProps, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.TimeZonePicker, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.TimeZonePicker, {
         value: ((_bucketAgg$settings5 = bucketAgg.settings) === null || _bucketAgg$settings5 === void 0 ? void 0 : _bucketAgg$settings5.timeZone) || ((_bucketAggregationCon5 = bucketAggregationConfig.date_histogram.defaultSettings) === null || _bucketAggregationCon5 === void 0 ? void 0 : _bucketAggregationCon5.timeZone),
         includeInternal: [src.InternalTimeZones.utc],
         onChange: timeZone => {
@@ -1555,17 +1439,13 @@ const DateHistogramSettingsEditor = _ref2 => {
     }))]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/AddRemove.tsx
+;
 
 
 
 
 
 
-/**
- * A component used to show add & remove buttons for mutable lists of values. Wether to show or not the add or the remove buttons
- * depends on the `index` and `elements` props. This enforces a consistent experience whenever this pattern is used.
- */
 const AddRemove = _ref => {
   let {
     index,
@@ -1573,27 +1453,27 @@ const AddRemove = _ref => {
     onRemove,
     elements
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: emotion_css_esm.css`
         display: flex;
       `,
-    children: [index === 0 && /*#__PURE__*/(0,jsx_runtime.jsx)(IconButton, {
+    children: [index === 0 && (0,jsx_runtime.jsx)(IconButton, {
       iconName: "plus",
       onClick: onAdd,
       label: "add"
-    }), elements.length >= 2 && /*#__PURE__*/(0,jsx_runtime.jsx)(IconButton, {
+    }), elements.length >= 2 && (0,jsx_runtime.jsx)(IconButton, {
       iconName: "minus",
       onClick: onRemove,
       label: "remove"
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/BucketAggregationsEditor/SettingsEditor/FiltersSettingsEditor/state/actions.ts
+;
 
-const addFilter = (0,redux_toolkit_esm/* createAction */.PH)('@bucketAggregations/filter/add');
-const removeFilter = (0,redux_toolkit_esm/* createAction */.PH)('@bucketAggregations/filter/remove');
-const changeFilter = (0,redux_toolkit_esm/* createAction */.PH)('@bucketAggregations/filter/change');
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/BucketAggregationsEditor/SettingsEditor/FiltersSettingsEditor/state/reducer.ts
+const addFilter = (0,redux_toolkit_esm.PH)('@bucketAggregations/filter/add');
+const removeFilter = (0,redux_toolkit_esm.PH)('@bucketAggregations/filter/remove');
+const changeFilter = (0,redux_toolkit_esm.PH)('@bucketAggregations/filter/change');
+;
 
 
 const reducer = function () {
@@ -1620,7 +1500,7 @@ const reducer = function () {
 
   return state;
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/BucketAggregationsEditor/SettingsEditor/FiltersSettingsEditor/index.tsx
+;
 
 
 
@@ -1647,8 +1527,7 @@ const FiltersSettingsEditor = _ref => {
     bucketAgg,
     settingName: 'filters',
     newValue
-  })), (_bucketAgg$settings = bucketAgg.settings) === null || _bucketAgg$settings === void 0 ? void 0 : _bucketAgg$settings.filters, reducer); // The model might not have filters (or an empty array of filters) in it because of the way it was built in previous versions of the datasource.
-  // If this is the case we add a default one.
+  })), (_bucketAgg$settings = bucketAgg.settings) === null || _bucketAgg$settings === void 0 ? void 0 : _bucketAgg$settings.filters, reducer); 
 
   (0,react.useEffect)(() => {
     var _bucketAgg$settings2, _bucketAgg$settings2$;
@@ -1657,8 +1536,8 @@ const FiltersSettingsEditor = _ref => {
       dispatch(addFilter());
     }
   }, [dispatch, (_bucketAgg$settings3 = bucketAgg.settings) === null || _bucketAgg$settings3 === void 0 ? void 0 : (_bucketAgg$settings3$ = _bucketAgg$settings3.filters) === null || _bucketAgg$settings3$ === void 0 ? void 0 : _bucketAgg$settings3$.length]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+    children: (0,jsx_runtime.jsx)("div", {
       className: emotion_css_esm.css`
           display: flex;
           flex-direction: column;
@@ -1666,18 +1545,18 @@ const FiltersSettingsEditor = _ref => {
       children: (_bucketAgg$settings4 = bucketAgg.settings) === null || _bucketAgg$settings4 === void 0 ? void 0 : _bucketAgg$settings4.filters.map((filter, index) => {
         var _bucketAgg$settings5;
 
-        return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        return (0,jsx_runtime.jsxs)("div", {
           className: emotion_css_esm.css`
               display: flex;
             `,
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+          children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
             label: "Query",
             labelWidth: 8,
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+            children: (0,jsx_runtime.jsx)("div", {
               className: emotion_css_esm.css`
                   width: 150px;
                 `,
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.QueryField, {
+              children: (0,jsx_runtime.jsx)(grafana_ui_src.QueryField, {
                 placeholder: "Lucene Query",
                 portalOrigin: "elasticsearch",
                 onBlur: () => {},
@@ -1690,10 +1569,10 @@ const FiltersSettingsEditor = _ref => {
                 query: filter.query
               })
             })
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+          }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
             label: "Label",
             labelWidth: 8,
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
               width: 16,
               id: `${baseId}-label-${index}`,
               placeholder: "Label",
@@ -1705,7 +1584,7 @@ const FiltersSettingsEditor = _ref => {
               })),
               defaultValue: filter.label
             })
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(AddRemove, {
+          }), (0,jsx_runtime.jsx)(AddRemove, {
             index: index,
             elements: ((_bucketAgg$settings5 = bucketAgg.settings) === null || _bucketAgg$settings5 === void 0 ? void 0 : _bucketAgg$settings5.filters) || [],
             onAdd: () => dispatch(addFilter()),
@@ -1716,7 +1595,7 @@ const FiltersSettingsEditor = _ref => {
     })
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/BucketAggregationsEditor/SettingsEditor/TermsSettingsEditor.tsx
+;
 
 
 
@@ -1745,11 +1624,11 @@ const TermsSettingsEditor = _ref => {
     current: baseId
   } = (0,react.useRef)((0,lodash.uniqueId)('es-terms-'));
   const dispatch = useDispatch();
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
       label: "Order"
     }, inlineFieldProps, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         inputId: `${baseId}-order`,
         onChange: e => dispatch(changeBucketAggregationSetting({
           bucketAgg,
@@ -1759,11 +1638,11 @@ const TermsSettingsEditor = _ref => {
         options: orderOptions,
         value: ((_bucketAgg$settings = bucketAgg.settings) === null || _bucketAgg$settings === void 0 ? void 0 : _bucketAgg$settings.order) || ((_bucketAggregationCon = bucketAggregationConfig.terms.defaultSettings) === null || _bucketAggregationCon === void 0 ? void 0 : _bucketAggregationCon.order)
       })
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+    })), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
       label: "Size"
     }, inlineFieldProps, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, Object.assign({
-        inputId: `${baseId}-size` // TODO: isValidNewOption should only allow numbers & template variables
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, Object.assign({
+        inputId: `${baseId}-size` 
 
       }, useCreatableSelectPersistedBehaviour({
         options: sizeOptions,
@@ -1781,10 +1660,10 @@ const TermsSettingsEditor = _ref => {
         }
 
       })))
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+    })), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
       label: "Min Doc Count"
     }, inlineFieldProps, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         id: `${baseId}-min_doc_count`,
         onBlur: e => dispatch(changeBucketAggregationSetting({
           bucketAgg,
@@ -1793,10 +1672,10 @@ const TermsSettingsEditor = _ref => {
         })),
         defaultValue: ((_bucketAgg$settings3 = bucketAgg.settings) === null || _bucketAgg$settings3 === void 0 ? void 0 : _bucketAgg$settings3.min_doc_count) || ((_bucketAggregationCon3 = bucketAggregationConfig.terms.defaultSettings) === null || _bucketAggregationCon3 === void 0 ? void 0 : _bucketAggregationCon3.min_doc_count)
       })
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+    })), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
       label: "Order By"
     }, inlineFieldProps, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         inputId: `${baseId}-order_by`,
         onChange: e => dispatch(changeBucketAggregationSetting({
           bucketAgg,
@@ -1806,10 +1685,10 @@ const TermsSettingsEditor = _ref => {
         options: orderBy,
         value: ((_bucketAgg$settings4 = bucketAgg.settings) === null || _bucketAgg$settings4 === void 0 ? void 0 : _bucketAgg$settings4.orderBy) || ((_bucketAggregationCon4 = bucketAggregationConfig.terms.defaultSettings) === null || _bucketAggregationCon4 === void 0 ? void 0 : _bucketAggregationCon4.orderBy)
       })
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+    })), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
       label: "Missing"
     }, inlineFieldProps, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         id: `${baseId}-missing`,
         onBlur: e => dispatch(changeBucketAggregationSetting({
           bucketAgg,
@@ -1821,9 +1700,6 @@ const TermsSettingsEditor = _ref => {
     }))]
   });
 };
-/**
- * This returns the valid options for each of the enabled extended stat
- */
 
 function createOrderByOptionsForExtendedStats(metric) {
   if (!metric.meta) {
@@ -1836,8 +1712,7 @@ function createOrderByOptionsForExtendedStats(metric) {
 
     return (_metric$meta = metric.meta) === null || _metric$meta === void 0 ? void 0 : _metric$meta[key];
   }).map(key => {
-    let method = key; // The bucket path for std_deviation_bounds.lower and std_deviation_bounds.upper
-    // is accessed via std_lower and std_upper, respectively.
+    let method = key; 
 
     if (key === 'std_deviation_bounds_lower') {
       method = 'std_lower';
@@ -1853,9 +1728,6 @@ function createOrderByOptionsForExtendedStats(metric) {
     };
   });
 }
-/**
- * This returns the valid options for each of the percents listed in the percentile settings
- */
 
 
 function createOrderByOptionsForPercentiles(metric) {
@@ -1866,8 +1738,6 @@ function createOrderByOptionsForPercentiles(metric) {
   }
 
   return metric.settings.percents.map(percent => {
-    // The bucket path for percentile numbers is appended with a `.0` if the number is whole
-    // otherwise you have to use the actual value.
     const percentString = /^\d+\.\d+/.test(`${percent}`) ? percent : `${percent}.0`;
     return {
       label: `${describeMetric(metric)} (${percent})`,
@@ -1877,14 +1747,11 @@ function createOrderByOptionsForPercentiles(metric) {
 }
 
 function isValidOrderTarget(metric) {
-  return (// top metrics can't be used for ordering
-    metric.type !== 'top_metrics' && // pipeline aggregations can't be used for ordering: https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html#search-aggregations-bucket-terms-aggregation-order
+  return (
+    metric.type !== 'top_metrics' && 
     !isPipelineAggregation(metric)
   );
 }
-/**
- * This creates all the valid order by options based on the metrics
- */
 
 
 const createOrderByOptions = function () {
@@ -1903,15 +1770,12 @@ const createOrderByOptions = function () {
   });
   return [...orderByOptions, ...metricOptions];
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/BucketAggregationsEditor/SettingsEditor/useDescription.ts
+;
 
 
 
 
-const useDescription_hasValue = value => object => object.value === value; // FIXME: We should apply the same defaults we have in bucketAggregationsConfig here instead of "custom" values
-// as they might get out of sync.
-// The reason we need them is that even though after the refactoring each setting is created with its default value,
-// queries created with the old version might not have them.
+const useDescription_hasValue = value => object => object.value === value; 
 
 
 const useDescription = bucketAgg => {
@@ -2012,7 +1876,7 @@ const useDescription = bucketAgg => {
       return 'Settings';
   }
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/BucketAggregationsEditor/SettingsEditor/index.tsx
+;
 
 
 
@@ -2041,18 +1905,18 @@ const SettingsEditor = _ref => {
   } = (0,react.useRef)((0,lodash.uniqueId)('es-setting-'));
   const dispatch = useDispatch();
   const settingsDescription = useDescription(bucketAgg);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(SettingsEditorContainer, {
+  return (0,jsx_runtime.jsxs)(SettingsEditorContainer, {
     label: settingsDescription,
-    children: [bucketAgg.type === 'terms' && /*#__PURE__*/(0,jsx_runtime.jsx)(TermsSettingsEditor, {
+    children: [bucketAgg.type === 'terms' && (0,jsx_runtime.jsx)(TermsSettingsEditor, {
       bucketAgg: bucketAgg
-    }), bucketAgg.type === 'date_histogram' && /*#__PURE__*/(0,jsx_runtime.jsx)(DateHistogramSettingsEditor, {
+    }), bucketAgg.type === 'date_histogram' && (0,jsx_runtime.jsx)(DateHistogramSettingsEditor, {
       bucketAgg: bucketAgg
-    }), bucketAgg.type === 'filters' && /*#__PURE__*/(0,jsx_runtime.jsx)(FiltersSettingsEditor, {
+    }), bucketAgg.type === 'filters' && (0,jsx_runtime.jsx)(FiltersSettingsEditor, {
       bucketAgg: bucketAgg
-    }), bucketAgg.type === 'geohash_grid' && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+    }), bucketAgg.type === 'geohash_grid' && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
       label: "Precision"
     }, inlineFieldProps, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         id: `${baseId}-geohash_grid-precision`,
         onBlur: e => dispatch(changeBucketAggregationSetting({
           bucketAgg,
@@ -2061,11 +1925,11 @@ const SettingsEditor = _ref => {
         })),
         defaultValue: ((_bucketAgg$settings = bucketAgg.settings) === null || _bucketAgg$settings === void 0 ? void 0 : _bucketAgg$settings.precision) || ((_bucketAggregationCon = bucketAggregationConfig[bucketAgg.type].defaultSettings) === null || _bucketAggregationCon === void 0 ? void 0 : _bucketAggregationCon.precision)
       })
-    })), bucketAgg.type === 'histogram' && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+    })), bucketAgg.type === 'histogram' && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
         label: "Interval"
       }, inlineFieldProps, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: `${baseId}-histogram-interval`,
           onBlur: e => dispatch(changeBucketAggregationSetting({
             bucketAgg,
@@ -2074,10 +1938,10 @@ const SettingsEditor = _ref => {
           })),
           defaultValue: ((_bucketAgg$settings2 = bucketAgg.settings) === null || _bucketAgg$settings2 === void 0 ? void 0 : _bucketAgg$settings2.interval) || ((_bucketAggregationCon2 = bucketAggregationConfig[bucketAgg.type].defaultSettings) === null || _bucketAggregationCon2 === void 0 ? void 0 : _bucketAggregationCon2.interval)
         })
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+      })), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
         label: "Min Doc Count"
       }, inlineFieldProps, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: `${baseId}-histogram-min_doc_count`,
           onBlur: e => dispatch(changeBucketAggregationSetting({
             bucketAgg,
@@ -2090,7 +1954,7 @@ const SettingsEditor = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/BucketAggregationsEditor/BucketAggregationEditor.tsx
+;
 
 
 
@@ -2124,9 +1988,9 @@ const BucketAggregationEditor = _ref2 => {
   } = _ref2;
   const dispatch = useDispatch();
   const getFields = useFields(value.type);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineSegmentGroup, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Segment, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)(grafana_ui_src.InlineSegmentGroup, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.Segment, {
         className: segmentStyles,
         options: bucketAggOptions,
         onChange: e => dispatch(changeBucketAggregationType({
@@ -2134,7 +1998,7 @@ const BucketAggregationEditor = _ref2 => {
           newType: e.value
         })),
         value: toOption(value)
-      }), isBucketAggregationWithField(value) && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.SegmentAsync, {
+      }), isBucketAggregationWithField(value) && (0,jsx_runtime.jsx)(grafana_ui_src.SegmentAsync, {
         className: segmentStyles,
         loadOptions: getFields,
         onChange: e => dispatch(changeBucketAggregationField({
@@ -2144,12 +2008,12 @@ const BucketAggregationEditor = _ref2 => {
         placeholder: "Select Field",
         value: value.field
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(SettingsEditor, {
+    }), (0,jsx_runtime.jsx)(SettingsEditor, {
       bucketAgg: value
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/BucketAggregationsEditor/index.tsx
+;
 
 
 
@@ -2169,13 +2033,13 @@ const BucketAggregationsEditor = _ref => {
     bucketAggs
   } = useQuery();
   const totalBucketAggs = (bucketAggs === null || bucketAggs === void 0 ? void 0 : bucketAggs.length) || 0;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-    children: bucketAggs.map((bucketAgg, index) => /*#__PURE__*/(0,jsx_runtime.jsxs)(QueryEditorRow, {
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+    children: bucketAggs.map((bucketAgg, index) => (0,jsx_runtime.jsxs)(QueryEditorRow, {
       label: index === 0 ? 'Group By' : 'Then By',
       onRemoveClick: totalBucketAggs > 1 && (() => dispatch(removeBucketAggregation(bucketAgg.id))),
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(BucketAggregationEditor, {
+      children: [(0,jsx_runtime.jsx)(BucketAggregationEditor, {
         value: bucketAgg
-      }), index === 0 && /*#__PURE__*/(0,jsx_runtime.jsx)(IconButton, {
+      }), index === 0 && (0,jsx_runtime.jsx)(IconButton, {
         iconName: "plus",
         onClick: () => dispatch(addBucketAggregation(nextId)),
         label: "add"
@@ -2183,7 +2047,7 @@ const BucketAggregationsEditor = _ref => {
     }, `${bucketAgg.type}-${bucketAgg.id}`))
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/MetricPicker.tsx
+;
 
 
 
@@ -2208,7 +2072,7 @@ const MetricPicker = _ref => {
     value
   } = _ref;
   const selectedOption = options.find(option => option.id === value);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Segment, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.Segment, {
     className: (0,emotion_css_esm.cx)(className, noWrap),
     options: toOptions(options),
     onChange: onChange,
@@ -2216,7 +2080,7 @@ const MetricPicker = _ref => {
     value: !!selectedOption ? MetricPicker_toOption(selectedOption) : undefined
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/SettingsEditor/SettingField.tsx
+;
 
 
 
@@ -2241,11 +2105,11 @@ function SettingField(_ref) {
     defaultValue = getScriptValue(metric);
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
     label: label,
     labelWidth: 16,
     tooltip: tooltip,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
       id: id,
       placeholder: placeholder,
       onBlur: e => dispatch(changeMetricSetting({
@@ -2257,13 +2121,13 @@ function SettingField(_ref) {
     })
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/SettingsEditor/BucketScriptSettingsEditor/state/actions.ts
+;
 
-const addPipelineVariable = (0,redux_toolkit_esm/* createAction */.PH)('@pipelineVariables/add');
-const removePipelineVariable = (0,redux_toolkit_esm/* createAction */.PH)('@pipelineVariables/remove');
-const renamePipelineVariable = (0,redux_toolkit_esm/* createAction */.PH)('@pipelineVariables/rename');
-const changePipelineVariableMetric = (0,redux_toolkit_esm/* createAction */.PH)('@pipelineVariables/change_metric');
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/SettingsEditor/BucketScriptSettingsEditor/state/reducer.ts
+const addPipelineVariable = (0,redux_toolkit_esm.PH)('@pipelineVariables/add');
+const removePipelineVariable = (0,redux_toolkit_esm.PH)('@pipelineVariables/remove');
+const renamePipelineVariable = (0,redux_toolkit_esm.PH)('@pipelineVariables/rename');
+const changePipelineVariableMetric = (0,redux_toolkit_esm.PH)('@pipelineVariables/change_metric');
+;
 
 
 const state_reducer_reducer = function () {
@@ -2304,7 +2168,7 @@ const state_reducer_reducer = function () {
 
   return state;
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/SettingsEditor/BucketScriptSettingsEditor/index.tsx
+;
 var _InlineLabel;
 
 
@@ -2333,8 +2197,7 @@ const BucketScriptSettingsEditor = _ref => {
     metric: value,
     attribute: 'pipelineVariables',
     newValue
-  })), value.pipelineVariables, state_reducer_reducer); // The model might not have pipeline variables (or an empty array of pipeline vars) in it because of the way it was built in previous versions of the datasource.
-  // If this is the case we add a default one.
+  })), value.pipelineVariables, state_reducer_reducer); 
 
   (0,react.useEffect)(() => {
     var _value$pipelineVariab;
@@ -2343,15 +2206,15 @@ const BucketScriptSettingsEditor = _ref => {
       dispatch(addPipelineVariable());
     }
   }, [dispatch, (_value$pipelineVariab2 = value.pipelineVariables) === null || _value$pipelineVariab2 === void 0 ? void 0 : _value$pipelineVariab2.length]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)("div", {
       className: emotion_css_esm.css`
           display: flex;
         `,
-      children: [_InlineLabel || (_InlineLabel = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
+      children: [_InlineLabel || (_InlineLabel = (0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
         width: 16,
         children: "Variables"
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      })), (0,jsx_runtime.jsx)("div", {
         className: emotion_css_esm.css`
             display: grid;
             grid-template-columns: 1fr auto;
@@ -2359,22 +2222,14 @@ const BucketScriptSettingsEditor = _ref => {
             margin-bottom: 4px;
           `,
         children: value.pipelineVariables.map((pipelineVar, index) =>
-        /*#__PURE__*/
-        // index as a key doesn't work here since removing an element
-        // in the middle of the list, will cause the next element to obtain the same key as the removed one.
-        // this will cause react to "drop" the last element of the list instead of the just removed one,
-        // and the default value for the input won't match the model as the DOM won't get updated.
-        // using pipelineVar.name is not an option since it might be duplicated by the user.
-        // generating a unique key on every render, while is probably not the best solution in terms of performance
-        // ensures the UI is in a correct state. We might want to optimize this if we see perf issue in the future.
         (0,jsx_runtime.jsxs)(react.Fragment, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+          children: [(0,jsx_runtime.jsxs)("div", {
             className: emotion_css_esm.css`
                   display: grid;
                   column-gap: 4px;
                   grid-template-columns: auto auto;
                 `,
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+            children: [(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
               "aria-label": "Variable name",
               defaultValue: pipelineVar.name,
               placeholder: "Variable Name",
@@ -2382,7 +2237,7 @@ const BucketScriptSettingsEditor = _ref => {
                 newName: e.target.value,
                 index
               }))
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricPicker, {
+            }), (0,jsx_runtime.jsx)(MetricPicker, {
               onChange: e => dispatch(changePipelineVariableMetric({
                 newMetric: e.value.id,
                 index
@@ -2390,7 +2245,7 @@ const BucketScriptSettingsEditor = _ref => {
               options: previousMetrics,
               value: pipelineVar.pipelineAgg
             })]
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(AddRemove, {
+          }), (0,jsx_runtime.jsx)(AddRemove, {
             index: index,
             elements: value.pipelineVariables || [],
             onAdd: () => dispatch(addPipelineVariable()),
@@ -2398,7 +2253,7 @@ const BucketScriptSettingsEditor = _ref => {
           })]
         }, (0,lodash.uniqueId)('es-bs-')))
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(SettingField, {
+    }), (0,jsx_runtime.jsx)(SettingField, {
       label: "Script",
       metric: value,
       settingName: "script",
@@ -2407,7 +2262,7 @@ const BucketScriptSettingsEditor = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/SettingsEditor/MovingAverageSettingsEditor.tsx
+;
 
 
 
@@ -2419,9 +2274,6 @@ const BucketScriptSettingsEditor = _ref => {
 
 
 
-// The way we handle changes for those settings is not ideal compared to the other components in the editor
-// FIXME: using `changeMetricSetting` will cause an error when switching from models that have different options
-// as they might be incompatible. We should clear all other options on model change.
 const MovingAverageSettingsEditor = _ref => {
   var _metric$settings, _metric$settings3, _metric$settings3$set, _metric$settings5, _metric$settings5$set, _metric$settings7, _metric$settings7$set, _metric$settings9, _metric$settings9$set, _metric$settings11, _metric$settings11$se, _metric$settings12;
 
@@ -2432,11 +2284,11 @@ const MovingAverageSettingsEditor = _ref => {
   const {
     current: baseId
   } = (0,react.useRef)((0,lodash.uniqueId)('es-moving-avg-'));
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Model",
       labelWidth: 16,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         inputId: `${baseId}-model`,
         onChange: value => dispatch(changeMetricSetting({
           metric,
@@ -2446,19 +2298,19 @@ const MovingAverageSettingsEditor = _ref => {
         options: movingAvgModelOptions,
         value: (_metric$settings = metric.settings) === null || _metric$settings === void 0 ? void 0 : _metric$settings.model
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(SettingField, {
+    }), (0,jsx_runtime.jsx)(SettingField, {
       label: "Window",
       settingName: "window",
       metric: metric,
       placeholder: "5"
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(SettingField, {
+    }), (0,jsx_runtime.jsx)(SettingField, {
       label: "Predict",
       settingName: "predict",
       metric: metric
-    }), (isEWMAMovingAverage(metric) || isHoltMovingAverage(metric) || isHoltWintersMovingAverage(metric)) && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (isEWMAMovingAverage(metric) || isHoltMovingAverage(metric) || isHoltWintersMovingAverage(metric)) && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Alpha",
       labelWidth: 16,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         id: `${baseId}-alpha`,
         onBlur: e => {
           var _metric$settings2;
@@ -2473,10 +2325,10 @@ const MovingAverageSettingsEditor = _ref => {
         },
         defaultValue: (_metric$settings3 = metric.settings) === null || _metric$settings3 === void 0 ? void 0 : (_metric$settings3$set = _metric$settings3.settings) === null || _metric$settings3$set === void 0 ? void 0 : _metric$settings3$set.alpha
       })
-    }), (isHoltMovingAverage(metric) || isHoltWintersMovingAverage(metric)) && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (isHoltMovingAverage(metric) || isHoltWintersMovingAverage(metric)) && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Beta",
       labelWidth: 16,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         id: `${baseId}-beta`,
         onBlur: e => {
           var _metric$settings4;
@@ -2491,11 +2343,11 @@ const MovingAverageSettingsEditor = _ref => {
         },
         defaultValue: (_metric$settings5 = metric.settings) === null || _metric$settings5 === void 0 ? void 0 : (_metric$settings5$set = _metric$settings5.settings) === null || _metric$settings5$set === void 0 ? void 0 : _metric$settings5$set.beta
       })
-    }), isHoltWintersMovingAverage(metric) && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), isHoltWintersMovingAverage(metric) && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Gamma",
         labelWidth: 16,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: `${baseId}-gamma`,
           onBlur: e => {
             var _metric$settings6;
@@ -2510,10 +2362,10 @@ const MovingAverageSettingsEditor = _ref => {
           },
           defaultValue: (_metric$settings7 = metric.settings) === null || _metric$settings7 === void 0 ? void 0 : (_metric$settings7$set = _metric$settings7.settings) === null || _metric$settings7$set === void 0 ? void 0 : _metric$settings7$set.gamma
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Period",
         labelWidth: 16,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: `${baseId}-period`,
           onBlur: e => {
             var _metric$settings8;
@@ -2528,10 +2380,10 @@ const MovingAverageSettingsEditor = _ref => {
           },
           defaultValue: (_metric$settings9 = metric.settings) === null || _metric$settings9 === void 0 ? void 0 : (_metric$settings9$set = _metric$settings9.settings) === null || _metric$settings9$set === void 0 ? void 0 : _metric$settings9$set.period
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Pad",
         labelWidth: 16,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           id: `${baseId}-pad`,
           onChange: e => {
             var _metric$settings10;
@@ -2547,10 +2399,10 @@ const MovingAverageSettingsEditor = _ref => {
           checked: !!((_metric$settings11 = metric.settings) !== null && _metric$settings11 !== void 0 && (_metric$settings11$se = _metric$settings11.settings) !== null && _metric$settings11$se !== void 0 && _metric$settings11$se.pad)
         })
       })]
-    }), (isEWMAMovingAverage(metric) || isHoltMovingAverage(metric) || isHoltWintersMovingAverage(metric)) && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (isEWMAMovingAverage(metric) || isHoltMovingAverage(metric) || isHoltWintersMovingAverage(metric)) && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Minimize",
       labelWidth: 16,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
         id: `${baseId}-minimize`,
         onChange: e => dispatch(changeMetricSetting({
           metric,
@@ -2562,7 +2414,7 @@ const MovingAverageSettingsEditor = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/SettingsEditor/TopMetricsSettingsEditor.tsx
+;
 
 
 
@@ -2588,11 +2440,11 @@ const TopMetricsSettingsEditor = _ref => {
   const dispatch = useDispatch();
   const getOrderByOptions = useFields(['number', 'date']);
   const getMetricsOptions = useFields(metric.type);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Metrics",
       labelWidth: 16,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.AsyncMultiSelect, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.AsyncMultiSelect, {
         onChange: e => dispatch(changeMetricSetting({
           metric,
           settingName: 'metrics',
@@ -2603,10 +2455,10 @@ const TopMetricsSettingsEditor = _ref => {
         closeMenuOnSelect: false,
         defaultOptions: true
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Order",
       labelWidth: 16,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         onChange: e => dispatch(changeMetricSetting({
           metric,
           settingName: 'order',
@@ -2615,7 +2467,7 @@ const TopMetricsSettingsEditor = _ref => {
         options: orderOptions,
         value: (_metric$settings2 = metric.settings) === null || _metric$settings2 === void 0 ? void 0 : _metric$settings2.order
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Order By",
       labelWidth: 16,
       className: emotion_css_esm.css`
@@ -2623,7 +2475,7 @@ const TopMetricsSettingsEditor = _ref => {
             width: 100%;
           }
         `,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.SegmentAsync, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.SegmentAsync, {
         className: emotion_css_esm.css`
             margin-right: 0;
           `,
@@ -2639,12 +2491,10 @@ const TopMetricsSettingsEditor = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/SettingsEditor/useDescription.ts
+;
 
 
-const SettingsEditor_useDescription_hasValue = value => object => object.value === value; // FIXME: All the defaults and validations down here should be defined somewhere else
-// as they are also the defaults that are gonna be applied to the query.
-// In the previous version, the same method was taking care of describing the settings and setting defaults.
+const SettingsEditor_useDescription_hasValue = value => object => object.value === value; 
 
 
 const useDescription_useDescription = metric => {
@@ -2692,7 +2542,7 @@ const useDescription_useDescription = metric => {
       return 'Options';
   }
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/SettingsEditor/index.tsx
+;
 
 
 
@@ -2707,7 +2557,6 @@ const useDescription_useDescription = metric => {
 
 
 
- // TODO: Move this somewhere and share it with BucketsAggregation Editor
 
 
 
@@ -2761,47 +2610,47 @@ const SettingsEditor_SettingsEditor = _ref => {
     value: 'value_count',
     label: 'Value count'
   }];
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(SettingsEditorContainer, {
+  return (0,jsx_runtime.jsxs)(SettingsEditorContainer, {
     label: description,
     hidden: metric.hide,
-    children: [metric.type === 'derivative' && /*#__PURE__*/(0,jsx_runtime.jsx)(SettingField, {
+    children: [metric.type === 'derivative' && (0,jsx_runtime.jsx)(SettingField, {
       label: "Unit",
       metric: metric,
       settingName: "unit"
-    }), metric.type === 'serial_diff' && /*#__PURE__*/(0,jsx_runtime.jsx)(SettingField, {
+    }), metric.type === 'serial_diff' && (0,jsx_runtime.jsx)(SettingField, {
       label: "Lag",
       metric: metric,
       settingName: "lag",
       placeholder: "1"
-    }), metric.type === 'cumulative_sum' && /*#__PURE__*/(0,jsx_runtime.jsx)(SettingField, {
+    }), metric.type === 'cumulative_sum' && (0,jsx_runtime.jsx)(SettingField, {
       label: "Format",
       metric: metric,
       settingName: "format"
-    }), metric.type === 'moving_avg' && /*#__PURE__*/(0,jsx_runtime.jsx)(MovingAverageSettingsEditor, {
+    }), metric.type === 'moving_avg' && (0,jsx_runtime.jsx)(MovingAverageSettingsEditor, {
       metric: metric
-    }), metric.type === 'moving_fn' && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(SettingField, {
+    }), metric.type === 'moving_fn' && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(SettingField, {
         label: "Window",
         metric: metric,
         settingName: "window"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(SettingField, {
+      }), (0,jsx_runtime.jsx)(SettingField, {
         label: "Script",
         metric: metric,
         settingName: "script"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(SettingField, {
+      }), (0,jsx_runtime.jsx)(SettingField, {
         label: "Shift",
         metric: metric,
         settingName: "shift"
       })]
-    }), metric.type === 'top_metrics' && /*#__PURE__*/(0,jsx_runtime.jsx)(TopMetricsSettingsEditor, {
+    }), metric.type === 'top_metrics' && (0,jsx_runtime.jsx)(TopMetricsSettingsEditor, {
       metric: metric
-    }), metric.type === 'bucket_script' && /*#__PURE__*/(0,jsx_runtime.jsx)(BucketScriptSettingsEditor, {
+    }), metric.type === 'bucket_script' && (0,jsx_runtime.jsx)(BucketScriptSettingsEditor, {
       value: metric,
       previousMetrics: previousMetrics
-    }), (metric.type === 'raw_data' || metric.type === 'raw_document') && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+    }), (metric.type === 'raw_data' || metric.type === 'raw_document') && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
       label: "Size"
     }, SettingsEditor_inlineFieldProps, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         id: `ES-query-${query.refId}_metric-${metric.id}-size`,
         onBlur: e => dispatch(changeMetricSetting({
           metric,
@@ -2810,20 +2659,20 @@ const SettingsEditor_SettingsEditor = _ref => {
         })),
         defaultValue: (_metric$settings$size = (_metric$settings = metric.settings) === null || _metric$settings === void 0 ? void 0 : _metric$settings.size) !== null && _metric$settings$size !== void 0 ? _metric$settings$size : (_metricAggregationCon = metricAggregationConfig.raw_data.defaults.settings) === null || _metricAggregationCon === void 0 ? void 0 : _metricAggregationCon.size
       })
-    })), metric.type === 'logs' && /*#__PURE__*/(0,jsx_runtime.jsx)(SettingField, {
+    })), metric.type === 'logs' && (0,jsx_runtime.jsx)(SettingField, {
       label: "Limit",
       metric: metric,
       settingName: "limit",
       placeholder: "500"
-    }), metric.type === 'cardinality' && /*#__PURE__*/(0,jsx_runtime.jsx)(SettingField, {
+    }), metric.type === 'cardinality' && (0,jsx_runtime.jsx)(SettingField, {
       label: "Precision Threshold",
       metric: metric,
       settingName: "precision_threshold"
-    }), metric.type === 'extended_stats' && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    }), metric.type === 'extended_stats' && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
       children: [extendedStats.map(stat => {
         var _metric$meta, _metric$meta2, _metricAggregationCon2;
 
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(ExtendedStatSetting, {
+        return (0,jsx_runtime.jsx)(ExtendedStatSetting, {
           stat: stat,
           onChange: newValue => dispatch(changeMetricMeta({
             metric,
@@ -2832,16 +2681,16 @@ const SettingsEditor_SettingsEditor = _ref => {
           })),
           value: ((_metric$meta = metric.meta) === null || _metric$meta === void 0 ? void 0 : _metric$meta[stat.value]) !== undefined ? !!((_metric$meta2 = metric.meta) !== null && _metric$meta2 !== void 0 && _metric$meta2[stat.value]) : !!((_metricAggregationCon2 = metricAggregationConfig.extended_stats.defaults.meta) !== null && _metricAggregationCon2 !== void 0 && _metricAggregationCon2[stat.value])
         }, stat.value);
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(SettingField, {
+      }), (0,jsx_runtime.jsx)(SettingField, {
         label: "Sigma",
         metric: metric,
         settingName: "sigma",
         placeholder: "3"
       })]
-    }), metric.type === 'percentiles' && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+    }), metric.type === 'percentiles' && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
       label: "Percentiles"
     }, SettingsEditor_inlineFieldProps, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         id: `${baseId}-percentiles-percents`,
         onBlur: e => dispatch(changeMetricSetting({
           metric,
@@ -2851,12 +2700,12 @@ const SettingsEditor_SettingsEditor = _ref => {
         defaultValue: ((_metric$settings2 = metric.settings) === null || _metric$settings2 === void 0 ? void 0 : _metric$settings2.percents) || ((_metricAggregationCon3 = metricAggregationConfig.percentiles.defaults.settings) === null || _metricAggregationCon3 === void 0 ? void 0 : _metricAggregationCon3.percents),
         placeholder: "1,5,25,50,75,95,99"
       })
-    })), metric.type === 'rate' && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+    })), metric.type === 'rate' && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
         label: "Unit"
       }, SettingsEditor_inlineFieldProps, {
         "data-testid": "unit-select",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           id: `ES-query-${query.refId}_metric-${metric.id}-unit`,
           onChange: e => dispatch(changeMetricSetting({
             metric,
@@ -2866,11 +2715,11 @@ const SettingsEditor_SettingsEditor = _ref => {
           options: rateAggUnitOptions,
           value: (_metric$settings3 = metric.settings) === null || _metric$settings3 === void 0 ? void 0 : _metric$settings3.unit
         })
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
+      })), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, Object.assign({
         label: "Mode"
       }, SettingsEditor_inlineFieldProps, {
         "data-testid": "mode-select",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           id: `ES-query-${query.refId}_metric-${metric.id}-mode`,
           onChange: e => dispatch(changeMetricSetting({
             metric,
@@ -2881,12 +2730,12 @@ const SettingsEditor_SettingsEditor = _ref => {
           value: (_metric$settings4 = metric.settings) === null || _metric$settings4 === void 0 ? void 0 : _metric$settings4.unit
         })
       }))]
-    }), isMetricAggregationWithInlineScript(metric) && /*#__PURE__*/(0,jsx_runtime.jsx)(SettingField, {
+    }), isMetricAggregationWithInlineScript(metric) && (0,jsx_runtime.jsx)(SettingField, {
       label: "Script",
       metric: metric,
       settingName: "script",
       placeholder: "_value * 1"
-    }), isMetricAggregationWithMissingSupport(metric) && /*#__PURE__*/(0,jsx_runtime.jsx)(SettingField, {
+    }), isMetricAggregationWithMissingSupport(metric) && (0,jsx_runtime.jsx)(SettingField, {
       label: "Missing",
       metric: metric,
       settingName: "missing",
@@ -2901,19 +2750,18 @@ const ExtendedStatSetting = _ref2 => {
     onChange,
     value
   } = _ref2;
-  // this is needed for the htmlFor prop in the label so that clicking the label will toggle the switch state.
   const [id] = (0,react.useState)((0,lodash.uniqueId)(`es-field-id-`));
-  return /*#__PURE__*/(0,react.createElement)(grafana_ui_src.InlineField, Object.assign({
+  return (0,react.createElement)(grafana_ui_src.InlineField, Object.assign({
     label: stat.label
   }, SettingsEditor_inlineFieldProps, {
     key: stat.value
-  }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+  }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
     id: id,
     onChange: e => onChange(e.target.checked),
     value: value
   }));
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/styles.ts
+;
 
 const styles_getStyles = (theme, hidden) => {
   return {
@@ -2927,7 +2775,7 @@ const styles_getStyles = (theme, hidden) => {
       `
   };
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/MetricEditor.tsx
+;
 
 
 
@@ -2951,27 +2799,22 @@ const MetricEditor_toOption = metric => ({
   value: metric.type
 });
 
-// If a metric is a Pipeline Aggregation (https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-pipeline.html)
-// it doesn't make sense to show it in the type picker when there is no non-pipeline-aggregation previously selected
-// as they work on the outputs produced from other aggregations rather than from documents or fields.
-// This means we should filter them out from the type picker if there's no other "basic" aggregation before the current one.
 const isBasicAggregation = metric => !metricAggregationConfig[metric.type].isPipelineAgg;
 
 const getTypeOptions = function (previousMetrics, esVersion) {
   let xpack = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-  // we'll include Pipeline Aggregations only if at least one previous metric is a "Basic" one
   const includePipelineAggregations = previousMetrics.some(isBasicAggregation);
-  return Object.entries(metricAggregationConfig) // Only showing metrics type supported by the configured version of ES
+  return Object.entries(metricAggregationConfig) 
   .filter(_ref => {
     let [_, {
       versionRange = '*'
     }] = _ref;
     return (0,semver.satisfies)(esVersion, versionRange);
-  }) // Filtering out Pipeline Aggregations if there's no basic metric selected before
+  }) 
   .filter(_ref2 => {
     let [_, config] = _ref2;
     return includePipelineAggregations || !config.isPipelineAgg;
-  }) // Filtering out X-Pack plugins if X-Pack is disabled
+  }) 
   .filter(_ref3 => {
     let [_, config] = _ref3;
     return config.xpack ? xpack : true;
@@ -2996,7 +2839,7 @@ const MetricEditor = _ref5 => {
   const dispatch = useDispatch();
   const getFields = useFields(value.type);
   const loadOptions = (0,react.useCallback)(async () => {
-    const remoteFields = await getFields(); // Metric aggregations that have inline script support don't require a field to be set.
+    const remoteFields = await getFields(); 
 
     if (isMetricAggregationWithInlineScript(value)) {
       return [{
@@ -3007,9 +2850,9 @@ const MetricEditor = _ref5 => {
     return remoteFields;
   }, [getFields, value]);
   const previousMetrics = query.metrics.slice(0, query.metrics.findIndex(m => m.id === value.id));
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineSegmentGroup, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Segment, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)(grafana_ui_src.InlineSegmentGroup, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.Segment, {
         className: (0,emotion_css_esm.cx)(styles.color, segmentStyles),
         options: getTypeOptions(previousMetrics, datasource.esVersion, datasource.xpack),
         onChange: e => dispatch(changeMetricType({
@@ -3017,7 +2860,7 @@ const MetricEditor = _ref5 => {
           type: e.value
         })),
         value: MetricEditor_toOption(value)
-      }), isMetricAggregationWithField(value) && !isPipelineAggregation(value) && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.SegmentAsync, {
+      }), isMetricAggregationWithField(value) && !isPipelineAggregation(value) && (0,jsx_runtime.jsx)(grafana_ui_src.SegmentAsync, {
         className: (0,emotion_css_esm.cx)(styles.color, segmentStyles),
         loadOptions: loadOptions,
         onChange: e => dispatch(changeMetricField({
@@ -3026,7 +2869,7 @@ const MetricEditor = _ref5 => {
         })),
         placeholder: "Select Field",
         value: value.field
-      }), isPipelineAggregation(value) && !isPipelineAggregationWithMultipleBucketPaths(value) && /*#__PURE__*/(0,jsx_runtime.jsx)(MetricPicker, {
+      }), isPipelineAggregation(value) && !isPipelineAggregationWithMultipleBucketPaths(value) && (0,jsx_runtime.jsx)(MetricPicker, {
         className: (0,emotion_css_esm.cx)(styles.color, segmentStyles),
         onChange: e => {
           var _e$value;
@@ -3039,13 +2882,13 @@ const MetricEditor = _ref5 => {
         options: previousMetrics,
         value: value.field
       })]
-    }), isMetricAggregationWithSettings(value) && /*#__PURE__*/(0,jsx_runtime.jsx)(SettingsEditor_SettingsEditor, {
+    }), isMetricAggregationWithSettings(value) && (0,jsx_runtime.jsx)(SettingsEditor_SettingsEditor, {
       metric: value,
       previousMetrics: previousMetrics
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/MetricAggregationsEditor/index.tsx
+;
 
 
 
@@ -3066,15 +2909,15 @@ const MetricAggregationsEditor = _ref => {
     metrics
   } = useQuery();
   const totalMetrics = (metrics === null || metrics === void 0 ? void 0 : metrics.length) || 0;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-    children: metrics === null || metrics === void 0 ? void 0 : metrics.map((metric, index) => /*#__PURE__*/(0,jsx_runtime.jsxs)(QueryEditorRow, {
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+    children: metrics === null || metrics === void 0 ? void 0 : metrics.map((metric, index) => (0,jsx_runtime.jsxs)(QueryEditorRow, {
       label: `Metric (${metric.id})`,
       hidden: metric.hide,
       onHideClick: () => dispatch(toggleMetricVisibility(metric.id)),
       onRemoveClick: totalMetrics > 1 && (() => dispatch(removeMetric(metric.id))),
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(MetricEditor, {
+      children: [(0,jsx_runtime.jsx)(MetricEditor, {
         value: metric
-      }), !metricAggregationConfig[metric.type].isSingleMetric && index === 0 && /*#__PURE__*/(0,jsx_runtime.jsx)(IconButton, {
+      }), !metricAggregationConfig[metric.type].isSingleMetric && index === 0 && (0,jsx_runtime.jsx)(IconButton, {
         iconName: "plus",
         onClick: () => dispatch(addMetric(nextId)),
         label: "add"
@@ -3082,7 +2925,7 @@ const MetricAggregationsEditor = _ref => {
     }, `${metric.type}-${metric.id}`))
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/components/QueryEditor/index.tsx
+;
 var _Alert, QueryEditor_InlineLabel;
 
 
@@ -3110,18 +2953,18 @@ const QueryEditor = _ref => {
   } = _ref;
 
   if (!isSupportedVersion(datasource.esVersion)) {
-    return _Alert || (_Alert = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+    return _Alert || (_Alert = (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
       title: `Support for Elasticsearch versions after their end-of-life (currently versions < 7.10) was removed`
     }));
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(ElasticsearchProvider, {
+  return (0,jsx_runtime.jsx)(ElasticsearchProvider, {
     datasource: datasource,
     onChange: onChange,
     onRunQuery: onRunQuery,
     query: query,
     range: range || (0,src.getDefaultTimeRange)(),
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(QueryEditorForm, {
+    children: (0,jsx_runtime.jsx)(QueryEditorForm, {
       value: query
     })
   });
@@ -3145,53 +2988,49 @@ const QueryEditorForm = _ref2 => {
   } = _ref2;
   const dispatch = useDispatch();
   const nextId = useNextId();
-  const styles = (0,grafana_ui_src.useStyles2)(QueryEditor_getStyles); // To be considered a time series query, the last bucked aggregation must be a Date Histogram
+  const styles = (0,grafana_ui_src.useStyles2)(QueryEditor_getStyles); 
 
   const isTimeSeriesQuery = ((_value$bucketAggs = value.bucketAggs) === null || _value$bucketAggs === void 0 ? void 0 : (_value$bucketAggs$sli = _value$bucketAggs.slice(-1)[0]) === null || _value$bucketAggs$sli === void 0 ? void 0 : _value$bucketAggs$sli.type) === 'date_histogram';
   const showBucketAggregationsEditor = (_value$metrics = value.metrics) === null || _value$metrics === void 0 ? void 0 : _value$metrics.every(metric => !metricAggregationConfig[metric.type].isSingleMetric);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)("div", {
       className: styles.root,
-      children: [QueryEditor_InlineLabel || (QueryEditor_InlineLabel = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
+      children: [QueryEditor_InlineLabel || (QueryEditor_InlineLabel = (0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
         width: 17,
         children: "Query"
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      })), (0,jsx_runtime.jsx)("div", {
         className: styles.queryFieldWrapper,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.QueryField, {
-          query: value.query // By default QueryField calls onChange if onBlur is not defined, this will trigger a rerender
-          // And slate will claim the focus, making it impossible to leave the field.
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.QueryField, {
+          query: value.query 
           ,
           onBlur: () => {},
           onChange: query => dispatch(changeQuery(query)),
           placeholder: "Lucene Query",
           portalOrigin: "elasticsearch"
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Alias",
         labelWidth: 15,
         disabled: !isTimeSeriesQuery,
         tooltip: "Aliasing only works for timeseries queries (when the last group is 'Date Histogram'). For all other query types this field is ignored.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: `ES-query-${value.refId}_alias`,
           placeholder: "Alias Pattern",
           onBlur: e => dispatch(changeAliasPattern(e.currentTarget.value)),
           defaultValue: value.alias
         })
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(MetricAggregationsEditor, {
+    }), (0,jsx_runtime.jsx)(MetricAggregationsEditor, {
       nextId: nextId
-    }), showBucketAggregationsEditor && /*#__PURE__*/(0,jsx_runtime.jsx)(BucketAggregationsEditor, {
+    }), showBucketAggregationsEditor && (0,jsx_runtime.jsx)(BucketAggregationsEditor, {
       nextId: nextId
     })]
   });
 };
-// EXTERNAL MODULE: ./public/app/core/config.ts
 var config = __webpack_require__("./public/app/core/config.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/usePrevious.js
 var usePrevious = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/usePrevious.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/configuration/DataLink.tsx
+;
 
 
 
@@ -3241,13 +3080,13 @@ const DataLink = props => {
     }));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: className,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsxs)("div", {
       className: styles.firstRow + ' gf-form',
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(FormField, {
+      children: [(0,jsx_runtime.jsx)(FormField, {
         className: styles.nameField,
-        labelWidth: 6 // A bit of a hack to prevent using default value for the width from FormField
+        labelWidth: 6 
         ,
         inputWidth: null,
         label: "Field",
@@ -3255,7 +3094,7 @@ const DataLink = props => {
         value: value.field,
         tooltip: 'Can be exact field name or a regex pattern that will match on the field name.',
         onChange: handleChange('field')
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
         variant: 'destructive',
         title: "Remove field",
         icon: "times",
@@ -3264,12 +3103,12 @@ const DataLink = props => {
           onDelete();
         }
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    }), (0,jsx_runtime.jsxs)("div", {
       className: "gf-form",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(FormField, {
+      children: [(0,jsx_runtime.jsx)(FormField, {
         label: showInternalLink ? 'Query' : 'URL',
         labelWidth: 6,
-        inputEl: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.DataLinkInput, {
+        inputEl: (0,jsx_runtime.jsx)(grafana_ui_src.DataLinkInput, {
           placeholder: showInternalLink ? '${__value.raw}' : 'http://example.com/${__value.raw}',
           value: value.url || '',
           onChange: newValue => onChange(Object.assign({}, value, {
@@ -3278,7 +3117,7 @@ const DataLink = props => {
           suggestions: suggestions
         }),
         className: styles.urlField
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(FormField, {
+      }), (0,jsx_runtime.jsx)(FormField, {
         className: styles.urlDisplayLabelField,
         inputWidth: null,
         label: "URL Label",
@@ -3287,9 +3126,9 @@ const DataLink = props => {
         onChange: handleChange('urlDisplayLabel'),
         tooltip: 'Use to override the button label.'
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    }), (0,jsx_runtime.jsxs)("div", {
       className: styles.row,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(Switch, {
+      children: [(0,jsx_runtime.jsx)(Switch, {
         labelClass: 'width-6',
         label: "Internal link",
         checked: showInternalLink,
@@ -3302,8 +3141,8 @@ const DataLink = props => {
 
           setShowInternalLink(!showInternalLink);
         }
-      }), showInternalLink && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
-        tracing: true // Uid and value should be always set in the db and so in the items.
+      }), showInternalLink && (0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
+        tracing: true 
         ,
         onChange: ds => {
           onChange(Object.assign({}, value, {
@@ -3318,7 +3157,7 @@ const DataLink = props => {
 
 function useInternalLink(datasourceUid) {
   const [showInternalLink, setShowInternalLink] = (0,react.useState)(!!datasourceUid);
-  const previousUid = (0,usePrevious/* default */.Z)(datasourceUid); // Force internal link visibility change if uid changed outside of this component.
+  const previousUid = (0,usePrevious.Z)(datasourceUid); 
 
   (0,react.useEffect)(() => {
     if (!previousUid && datasourceUid && !showInternalLink) {
@@ -3331,7 +3170,7 @@ function useInternalLink(datasourceUid) {
   }, [previousUid, datasourceUid, showInternalLink]);
   return [showInternalLink, setShowInternalLink];
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/configuration/DataLinks.tsx
+;
 var _h;
 
 
@@ -3361,17 +3200,17 @@ const DataLinks = props => {
     onChange
   } = props;
   const styles = (0,grafana_ui_src.useStyles2)(DataLinks_getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [_h || (_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [_h || (_h = (0,jsx_runtime.jsx)("h3", {
       className: "page-heading",
       children: "Data links"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    })), (0,jsx_runtime.jsx)("div", {
       className: styles.infoText,
       children: "Add links to existing fields. Links will be shown in log row details next to the field value."
-    }), value && value.length > 0 && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), value && value.length > 0 && (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
       children: value.map((field, index) => {
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(DataLink, {
+        return (0,jsx_runtime.jsx)(DataLink, {
           className: styles.dataLink,
           value: field,
           onChange: newField => {
@@ -3392,7 +3231,7 @@ const DataLinks = props => {
           }]
         }, index);
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
       type: "button",
       variant: 'secondary',
       className: emotion_css_esm.css`
@@ -3411,7 +3250,7 @@ const DataLinks = props => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/configuration/utils.ts
+;
 
 
 
@@ -3431,15 +3270,15 @@ const coerceOptions = options => {
   });
 };
 const isValidOptions = options => {
-  return (// esVersion should be a valid semver string
-    !!(0,semver.valid)(options.jsonData.esVersion) && // timeField should not be empty or nullish
-    !!options.jsonData.timeField && // maxConcurrentShardRequests should be a number AND greater than 0
-    !!options.jsonData.maxConcurrentShardRequests && // message & level fields should be defined
+  return (
+    !!(0,semver.valid)(options.jsonData.esVersion) && 
+    !!options.jsonData.timeField && 
+    !!options.jsonData.maxConcurrentShardRequests && 
     options.jsonData.logMessageField !== undefined && options.jsonData.logLevelField !== undefined
   );
 };
 const isTruthy = value => Boolean(value);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/configuration/ElasticDetails.tsx
+;
 var _code;
 
 
@@ -3493,13 +3332,13 @@ const ElasticDetails = _ref => {
     label: value.jsonData.esVersion,
     value: value.jsonData.esVersion
   } : undefined;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.FieldSet, {
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+    children: (0,jsx_runtime.jsxs)(grafana_ui_src.FieldSet, {
       label: "Elasticsearch details",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Index name",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: "es_config_indexName",
           value: value.database || '',
           onChange: changeHandler('database', value, onChange),
@@ -3507,20 +3346,20 @@ const ElasticDetails = _ref => {
           placeholder: "es-index-name",
           required: true
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Pattern",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           inputId: "es_config_indexPattern",
           value: indexPatternTypes.find(pattern => pattern.value === (value.jsonData.interval === undefined ? 'none' : value.jsonData.interval)),
           options: indexPatternTypes,
           onChange: intervalHandler(value, onChange),
           width: 24
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Time field name",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: "es_config_timeField",
           value: value.jsonData.timeField || '',
           onChange: jsonDataChangeHandler('timeField', value, onChange),
@@ -3528,10 +3367,10 @@ const ElasticDetails = _ref => {
           placeholder: "@timestamp",
           required: true
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "ElasticSearch version",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           inputId: "es_config_version",
           options: [customOption, ...esVersions].filter(isTruthy),
           onChange: option => {
@@ -3546,44 +3385,44 @@ const ElasticDetails = _ref => {
           value: currentVersion || customOption,
           width: 24
         })
-      }), (0,semver.gte)(value.jsonData.esVersion, '5.6.0') && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,semver.gte)(value.jsonData.esVersion, '5.6.0') && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Max concurrent Shard Requests",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: "es_config_shardRequests",
           value: value.jsonData.maxConcurrentShardRequests || '',
           onChange: jsonDataChangeHandler('maxConcurrentShardRequests', value, onChange),
           width: 24
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Min time interval",
         labelWidth: 26,
-        tooltip: /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: ["A lower limit for the auto group by time interval. Recommended to be set to write frequency, for example", ' ', _code || (_code = /*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+        tooltip: (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: ["A lower limit for the auto group by time interval. Recommended to be set to write frequency, for example", ' ', _code || (_code = (0,jsx_runtime.jsx)("code", {
             children: "1m"
           })), " if your data is written every minute."]
         }),
         error: "Value is not valid, you can use number with time unit specifier: y, M, w, d, h, m, s",
         invalid: !!value.jsonData.timeInterval && !/^\d+(ms|[Mwdhmsy])$/.test(value.jsonData.timeInterval),
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: "es_config_minTimeInterval",
           value: value.jsonData.timeInterval || '',
           onChange: jsonDataChangeHandler('timeInterval', value, onChange),
           width: 24,
           placeholder: "10s"
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "X-Pack enabled",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           id: "es_config_xpackEnabled",
           checked: value.jsonData.xpack || false,
           onChange: jsonDataSwitchChangeHandler('xpack', value, onChange)
         })
-      }), (0,semver.gte)(value.jsonData.esVersion, '6.6.0') && value.jsonData.xpack && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,semver.gte)(value.jsonData.esVersion, '6.6.0') && value.jsonData.xpack && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Include Frozen Indices",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           id: "es_config_frozenIndices",
           checked: (_value$jsonData$inclu = value.jsonData.includeFrozen) !== null && _value$jsonData$inclu !== void 0 ? _value$jsonData$inclu : false,
           onChange: jsonDataSwitchChangeHandler('includeFrozen', value, onChange)
@@ -3591,13 +3430,13 @@ const ElasticDetails = _ref => {
       })]
     })
   });
-}; // TODO: Use change handlers from @grafana/data
+}; 
 
 const changeHandler = (key, value, onChange) => event => {
   onChange(Object.assign({}, value, {
     [key]: event.currentTarget.value
   }));
-}; // TODO: Use change handlers from @grafana/data
+}; 
 
 
 const jsonDataChangeHandler = (key, value, onChange) => event => {
@@ -3619,7 +3458,7 @@ const jsonDataSwitchChangeHandler = (key, value, onChange) => event => {
 const intervalHandler = (value, onChange) => option => {
   const {
     database
-  } = value; // If option value is undefined it will send its label instead so we have to convert made up value to undefined here.
+  } = value; 
 
   const newInterval = option.value === 'none' ? undefined : option.value;
 
@@ -3666,7 +3505,7 @@ function getMaxConcurrenShardRequestOrDefault(maxConcurrentShardRequests, versio
 function defaultMaxConcurrentShardRequests(version) {
   return (0,semver.gte)(version, '7.0.0') ? 5 : 256;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/configuration/LogsConfig.tsx
+;
 
 
 
@@ -3683,22 +3522,22 @@ const LogsConfig = props => {
     }));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.FieldSet, {
+  return (0,jsx_runtime.jsxs)(grafana_ui_src.FieldSet, {
     label: "Logs",
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Message field name",
       labelWidth: 22,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         id: "es_logs-config_logMessageField",
         value: value.logMessageField,
         onChange: changeHandler('logMessageField'),
         placeholder: "_source",
         width: 24
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Level field name",
       labelWidth: 22,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         id: "es_logs-config_logLevelField",
         value: value.logLevelField,
         onChange: changeHandler('logLevelField'),
@@ -3707,7 +3546,7 @@ const LogsConfig = props => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/configuration/ConfigEditor.tsx
+;
 var ConfigEditor_Alert, _Alert2;
 
 
@@ -3730,35 +3569,34 @@ const ConfigEditor = props => {
   (0,react.useEffect)(() => {
     if (!isValidOptions(originalOptions)) {
       onOptionsChange(coerceOptions(originalOptions));
-    } // We can't enforce the eslint rule here because we only want to run this once.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    } 
 
   }, []);
   const supportedVersion = isSupportedVersion(options.jsonData.esVersion);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [options.access === 'direct' && (ConfigEditor_Alert || (ConfigEditor_Alert = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [options.access === 'direct' && (ConfigEditor_Alert || (ConfigEditor_Alert = (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
       title: "Deprecation Notice",
       severity: "warning",
       children: "Browser access mode in the Elasticsearch datasource is deprecated and will be removed in a future release."
-    }))), !supportedVersion && (_Alert2 || (_Alert2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+    }))), !supportedVersion && (_Alert2 || (_Alert2 = (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
       title: "Deprecation notice",
       severity: "error",
       children: `Support for Elasticsearch versions after their end-of-life (currently versions < 7.10) was removed`
-    }))), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.DataSourceHttpSettings, {
+    }))), (0,jsx_runtime.jsx)(grafana_ui_src.DataSourceHttpSettings, {
       defaultUrl: "http://localhost:9200",
       dataSourceConfig: options,
       showAccessOptions: true,
       onChange: onOptionsChange,
-      sigV4AuthToggleEnabled: config/* config.sigV4AuthEnabled */.vc.sigV4AuthEnabled
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(ElasticDetails, {
+      sigV4AuthToggleEnabled: config.vc.sigV4AuthEnabled
+    }), (0,jsx_runtime.jsx)(ElasticDetails, {
       value: options,
       onChange: onOptionsChange
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(LogsConfig, {
+    }), (0,jsx_runtime.jsx)(LogsConfig, {
       value: options.jsonData,
       onChange: newValue => onOptionsChange(Object.assign({}, options, {
         jsonData: newValue
       }))
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(DataLinks, {
+    }), (0,jsx_runtime.jsx)(DataLinks, {
       value: options.jsonData.dataLinks,
       onChange: newValue => {
         onOptionsChange(Object.assign({}, options, {
@@ -3770,33 +3608,20 @@ const ConfigEditor = props => {
     })]
   });
 };
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/throwError.js
 var throwError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/throwError.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/generate.js
 var generate = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/generate.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js
 var catchError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js
 var mergeMap = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/skipWhile.js
 var skipWhile = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/skipWhile.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/throwIfEmpty.js
 var throwIfEmpty = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/throwIfEmpty.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/first.js
 var first = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/first.js");
-// EXTERNAL MODULE: ./public/app/core/logs_model.ts + 1 modules
 var logs_model = __webpack_require__("./public/app/core/logs_model.ts");
-// EXTERNAL MODULE: ./public/app/features/templating/template_srv.ts + 1 modules
 var template_srv = __webpack_require__("./public/app/features/templating/template_srv.ts");
-// EXTERNAL MODULE: ./public/app/core/table_model.ts
 var table_model = __webpack_require__("./public/app/core/table_model.ts");
-// EXTERNAL MODULE: ./public/app/core/utils/flatten.ts
 var flatten = __webpack_require__("./public/app/core/utils/flatten.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/elastic_response.ts
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -3832,7 +3657,7 @@ class ElasticResponse {
           const aggregations = response.aggregations;
           const target = this.targets[i];
           const tmpSeriesList = [];
-          const table = new table_model/* default */.Z();
+          const table = new table_model.Z();
           table.refId = target.refId;
           this.processBuckets(aggregations, target, tmpSeriesList, table, {}, 0);
           this.trimDatapoints(tmpSeriesList, target);
@@ -3936,7 +3761,7 @@ class ElasticResponse {
 
               for (let i = 0; i < esAgg.buckets.length; i++) {
                 const bucket = esAgg.buckets[i];
-                const stats = bucket[metric.id]; // add stats that are in nested obj to top level obj
+                const stats = bucket[metric.id]; 
 
                 stats.std_deviation_bounds_upper = stats.std_deviation_bounds.upper;
                 stats.std_deviation_bounds_lower = stats.std_deviation_bounds.lower;
@@ -4021,7 +3846,6 @@ class ElasticResponse {
   }
 
   processAggregationDocs(esAgg, aggDef, target, table, props) {
-    // add columns
     if (table.columns.length === 0) {
       for (const propKey of (0,lodash.keys)(props)) {
         table.addColumn({
@@ -4034,7 +3858,7 @@ class ElasticResponse {
         text: aggDef.field,
         filterable: true
       });
-    } // helper func to add values to value array
+    } 
 
 
     const addMetricValue = (values, metricName, value) => {
@@ -4051,7 +3875,7 @@ class ElasticResponse {
 
       for (const propValues of (0,lodash.values)(props)) {
         values.push(propValues);
-      } // add bucket key (value)
+      } 
 
 
       values.push(bucket.key);
@@ -4071,7 +3895,7 @@ class ElasticResponse {
                   continue;
                 }
 
-                const stats = bucket[metric.id]; // add stats that are in nested obj to top level obj
+                const stats = bucket[metric.id]; 
 
                 stats.std_deviation_bounds_upper = stats.std_deviation_bounds.upper;
                 stats.std_deviation_bounds_lower = stats.std_deviation_bounds.lower;
@@ -4100,9 +3924,8 @@ class ElasticResponse {
 
               if ((_metric$settings3 = metric.settings) !== null && _metric$settings3 !== void 0 && _metric$settings3.metrics) {
                 for (const metricField of metric.settings.metrics) {
-                  // If we selected more than one metric we also add each metric name
                   const metricName = metric.settings.metrics.length > 1 ? `${baseName} ${metricField}` : baseName;
-                  const stats = bucket[metric.id]; // Size of top_metrics is fixed to 1.
+                  const stats = bucket[metric.id]; 
 
                   addMetricValue(values, metricName, stats.top[0].metrics[metricField]);
                 }
@@ -4116,7 +3939,7 @@ class ElasticResponse {
               let metricName = this.getMetricName(metric.type);
               const otherMetrics = (0,lodash.filter)(target.metrics, {
                 type: metric.type
-              }); // if more of the same metric type include field field name in property
+              }); 
 
               if (otherMetrics.length > 1) {
                 if (isMetricAggregationWithField(metric)) {
@@ -4124,7 +3947,6 @@ class ElasticResponse {
                 }
 
                 if (metric.type === 'bucket_script') {
-                  //Use the formula in the column name
                   metricName = getScriptValue(metric);
                 }
               }
@@ -4137,8 +3959,7 @@ class ElasticResponse {
 
       table.rows.push(values);
     }
-  } // This is quite complex
-  // need to recurse down the nested buckets to build series
+  } 
 
 
   processBuckets(aggs, target, seriesList, table, props, depth) {
@@ -4304,7 +4125,7 @@ class ElasticResponse {
   }
 
   processHits(hits, seriesList, target) {
-    const hitsTotal = typeof hits.total === 'number' ? hits.total : hits.total.value; // <- Works with Elasticsearch 7.0+
+    const hitsTotal = typeof hits.total === 'number' ? hits.total : hits.total.value; 
 
     const series = {
       target: target.refId,
@@ -4409,26 +4230,18 @@ class ElasticResponse {
 
         if (isLogsRequest) {
           addPreferredVisualisationType(series, 'logs');
-        } // Add a row for each document
+        } 
 
 
         for (const doc of docs) {
           if (logLevelField) {
-            // Remap level field based on the datasource config. This field is
-            // then used in explore to figure out the log level. We may rewrite
-            // some actual data in the level field if they are different.
             doc['level'] = doc[logLevelField];
-          } // When highlighting exists, we need to collect all the highlighted
-          // phrases and add them to the DataFrame's meta.searchWords array.
+          } 
 
 
           if (doc.highlight) {
             var _series$meta;
 
-            // There might be multiple words so we need two versions of the
-            // regular expression. One to match gobally, when used with part.match,
-            // it returns and array of matches. The second one is used to capture the
-            // values between the tags.
             const globalHighlightWordRegex = new RegExp(HIGHLIGHT_TAGS_EXP, 'g');
             const highlightWordRegex = new RegExp(HIGHLIGHT_TAGS_EXP);
             const newSearchWords = Object.keys(doc.highlight).flatMap(key => {
@@ -4444,8 +4257,7 @@ class ElasticResponse {
                   return matches && matches[1] || null;
                 });
               });
-            }).filter(lodash.identity); // If meta and searchWords already exists, add the words and
-            // deduplicate otherwise create a new set of search words.
+            }).filter(lodash.identity); 
 
             const searchWords = (_series$meta = series.meta) !== null && _series$meta !== void 0 && _series$meta.searchWords ? (0,lodash.uniq)([...series.meta.searchWords, ...newSearchWords]) : [...newSearchWords];
             series.meta = series.meta ? Object.assign({}, series.meta, {
@@ -4467,7 +4279,7 @@ class ElasticResponse {
         const aggregations = response.aggregations;
         const target = this.targets[n];
         const tmpSeriesList = [];
-        const table = new table_model/* default */.Z();
+        const table = new table_model.Z();
         this.processBuckets(aggregations, target, tmpSeriesList, table, {}, 0);
         this.trimDatapoints(tmpSeriesList, target);
         this.nameSeries(tmpSeriesList, target);
@@ -4479,7 +4291,7 @@ class ElasticResponse {
         }
 
         for (let y = 0; y < tmpSeriesList.length; y++) {
-          let series = (0,src.toDataFrame)(tmpSeriesList[y]); // When log results, show aggregations only in graph. Log fields are then going to be shown in table.
+          let series = (0,src.toDataFrame)(tmpSeriesList[y]); 
 
           if (isLogsRequest) {
             addPreferredVisualisationType(series, 'graph');
@@ -4498,15 +4310,8 @@ class ElasticResponse {
 
 }
 
-/**
- * Flatten the docs from response mainly the _source part which can be nested. This flattens it so that it is one level
- * deep and the keys are: `level1Name.level2Name...`. Also returns list of all properties from all the docs (not all
- * docs have to have the same keys).
- * @param hits
- */
 const flattenHits = hits => {
-  const docs = []; // We keep a list of all props so that we can create all the fields in the dataFrame, this can lead
-  // to wide sparse dataframes in case the scheme is different per document.
+  const docs = []; 
 
   let propNames = [];
 
@@ -4536,14 +4341,6 @@ const flattenHits = hits => {
     propNames
   };
 };
-/**
- * Create empty dataframe but with created fields. Fields are based from propNames (should be from the response) and
- * also from configuration specified fields for message, time, and level.
- * @param propNames
- * @param timeField
- * @param logMessageField
- * @param logLevelField
- */
 
 
 const createEmptyDataFrame = (props, isLogsRequest, timeField, logMessageField, logLevelField) => {
@@ -4584,10 +4381,9 @@ const createEmptyDataFrame = (props, isLogsRequest, timeField, logMessageField, 
   const fieldNames = series.fields.map(field => field.name);
 
   for (const [name, type] of props) {
-    // Do not duplicate fields. This can mean that we will shadow some fields.
     if (fieldNames.includes(name)) {
       continue;
-    } // Do not add _source field (besides logs) as we are showing each _source field in table instead.
+    } 
 
 
     if (!isLogsRequest && name === '_source') {
@@ -4621,10 +4417,6 @@ const toNameTypePair = docs => propName => {
 
   return [propName, guessType((_docs$find = docs.find(doc => doc[propName] !== undefined)) === null || _docs$find === void 0 ? void 0 : _docs$find[propName])];
 };
-/**
- * Trying to guess data type from its value. This is far from perfect, as in order to have accurate guess
- * we should have access to the elasticsearch mapping, but it covers the most common use cases for numbers, strings & arrays.
- */
 
 
 const guessType = value => {
@@ -4639,7 +4431,7 @@ const guessType = value => {
       return src.FieldType.other;
   }
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/index_pattern.ts
+;
 function index_pattern_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -4685,10 +4477,6 @@ class IndexPattern {
   }
 
   getIndexList(from, to) {
-    // When no `from` or `to` is provided, we request data from 7 subsequent/previous indices
-    // for the provided index pattern.
-    // This is useful when requesting log context where the only time data we have is the log
-    // timestamp.
     const indexOffset = 7;
 
     if (!this.interval) {
@@ -4709,7 +4497,7 @@ class IndexPattern {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/language_provider.ts
+;
 function language_provider_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -4722,9 +4510,6 @@ class ElasticsearchLanguageProvider extends src.LanguageProvider {
     this.datasource = datasource;
     Object.assign(this, initialValues);
   }
-  /**
-   * Queries are transformed to an ES Logs query since it's the behaviour most users expect.
-   **/
 
 
   importFromAbstractQuery(abstractQuery) {
@@ -4765,7 +4550,7 @@ class ElasticsearchLanguageProvider extends src.LanguageProvider {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/query_builder.ts
+;
 function query_builder_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -4802,7 +4587,7 @@ class ElasticQueryBuilder {
 
     if (!aggDef.settings) {
       return queryNode;
-    } // TODO: This default should be somewhere else together with the one used in the UI
+    } 
 
 
     const size = (_aggDef$settings = aggDef.settings) !== null && _aggDef$settings !== void 0 && _aggDef$settings.size ? parseInt(aggDef.settings.size, 10) : 500;
@@ -4815,7 +4600,7 @@ class ElasticQueryBuilder {
         queryNode.terms.order['_key'] = aggDef.settings.order;
       } else {
         queryNode.terms.order[aggDef.settings.orderBy] = aggDef.settings.order;
-      } // if metric ref, look it up and add it to this agg level
+      } 
 
 
       const metricId = convertOrderByToMetricId(aggDef.settings.orderBy);
@@ -4879,8 +4664,6 @@ class ElasticQueryBuilder {
     const interval = settings.interval === 'auto' ? '$__interval' : settings.interval;
 
     if ((0,semver.gte)(this.esVersion, '8.0.0')) {
-      // The deprecation was actually introduced in 7.0.0, we might want to use that instead of the removal date,
-      // but it woudl be a breaking change on our side.
       esAgg.fixed_interval = interval;
     } else {
       esAgg.interval = interval;
@@ -4929,7 +4712,7 @@ class ElasticQueryBuilder {
       _doc: {
         order: 'desc'
       }
-    }]; // fields field not supported on ES 5.x
+    }]; 
 
     if ((0,semver.lt)(this.esVersion, '5.0.0')) {
       query.fields = ['*', '_source'];
@@ -5016,7 +4799,6 @@ class ElasticQueryBuilder {
   build(target, adhocFilters) {
     var _target$metrics, _target$metrics$, _target$metrics2, _target$metrics2$, _metricAgg, _metricAgg2, _metric$settings2, _metric$settings2$met, _metric$settings3;
 
-    // make sure query has defaults;
     target.metrics = target.metrics || [defaultMetricAgg()];
     target.bucketAggs = target.bucketAggs || [defaultBucketAgg()];
     target.timeField = this.timeField;
@@ -5042,7 +4824,7 @@ class ElasticQueryBuilder {
       }];
     }
 
-    this.addAdhocFilters(query, adhocFilters); // If target doesn't have bucketAggs and type is not raw_document, it is invalid query.
+    this.addAdhocFilters(query, adhocFilters); 
 
     if (target.bucketAggs.length === 0) {
       metric = target.metrics[0];
@@ -5053,16 +4835,12 @@ class ElasticQueryBuilder {
         };
       }
     }
-    /* Handle document query:
-     * Check if metric type is raw_document. If metric doesn't have size (or size is 0), update size to 500.
-     * Otherwise it will not be a valid query and error will be thrown.
-     */
 
 
     if (((_target$metrics = target.metrics) === null || _target$metrics === void 0 ? void 0 : (_target$metrics$ = _target$metrics[0]) === null || _target$metrics$ === void 0 ? void 0 : _target$metrics$.type) === 'raw_document' || ((_target$metrics2 = target.metrics) === null || _target$metrics2 === void 0 ? void 0 : (_target$metrics2$ = _target$metrics2[0]) === null || _target$metrics2$ === void 0 ? void 0 : _target$metrics2$.type) === 'raw_data') {
       var _metric$settings;
 
-      metric = target.metrics[0]; // TODO: This default should be somewhere else together with the one used in the UI
+      metric = target.metrics[0]; 
 
       const size = (_metric$settings = metric.settings) !== null && _metric$settings !== void 0 && _metric$settings.size ? parseInt(metric.settings.size, 10) : 500;
       return this.documentQuery(query, size || 500);
@@ -5187,9 +4965,7 @@ class ElasticQueryBuilder {
         }).forEach(_ref2 => {
           let [k, v] = _ref2;
           metricAgg[k] = k === 'script' ? this.buildScript(getScriptValue(metric)) : v;
-        }); // Elasticsearch isn't generally too picky about the data types in the request body,
-        // however some fields are required to be numeric.
-        // Users might have already created some of those with before, where the values were numbers.
+        }); 
 
         switch (metric.type) {
           case 'moving_avg':
@@ -5198,11 +4974,11 @@ class ElasticQueryBuilder {
             }, ((_metricAgg2 = metricAgg) === null || _metricAgg2 === void 0 ? void 0 : _metricAgg2.predict) !== undefined && {
               predict: this.toNumber(metricAgg.predict)
             }, isMovingAverageWithModelSettings(metric) && {
-              settings: Object.assign({}, metricAgg.settings, Object.fromEntries(Object.entries(metricAgg.settings || {}) // Only format properties that are required to be numbers
+              settings: Object.assign({}, metricAgg.settings, Object.fromEntries(Object.entries(metricAgg.settings || {}) 
               .filter(_ref3 => {
                 let [settingName] = _ref3;
                 return ['alpha', 'beta', 'gamma', 'period'].includes(settingName);
-              }) // omitting undefined
+              }) 
               .filter(_ref4 => {
                 let [_, stringValue] = _ref4;
                 return stringValue !== undefined;
@@ -5301,9 +5077,7 @@ class ElasticQueryBuilder {
           order: {}
         }
       }
-    }; // Default behaviour is to order results by { _key: asc }
-    // queryDef.order allows selection of asc/desc
-    // queryDef.orderBy allows selection of doc_count ordering (defaults desc)
+    }; 
 
     const {
       orderBy = 'key',
@@ -5373,7 +5147,7 @@ class ElasticQueryBuilder {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/datasource.ts
+;
 function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -5393,15 +5167,13 @@ function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.d
 
 
 
- // Those are metadata fields as defined in https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-fields.html#_identity_metadata_fields.
-// custom fields can start with underscores, therefore is not safe to exclude anything that starts with one.
 
 const ELASTIC_META_FIELDS = ['_index', '_type', '_id', '_source', '_size', '_field_names', '_ignored', '_routing', '_meta'];
 class ElasticDatasource extends src.DataSourceApi {
   constructor(instanceSettings) {
     var _instanceSettings$dat, _settingsData$include;
 
-    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv/* getTemplateSrv */.J)();
+    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv.J)();
     super(instanceSettings);
     this.templateSrv = templateSrv;
 
@@ -5470,7 +5242,7 @@ class ElasticDatasource extends src.DataSourceApi {
       });
       const payload = [header, esQuery].join('\n') + '\n';
       const url = this.getMultiSearchUrl();
-      const response = await (0,lastValueFrom/* lastValueFrom */.n)(this.post(url, payload));
+      const response = await (0,lastValueFrom.n)(this.post(url, payload));
       const targets = [{
         refId: `${row.dataFrame.refId}`,
         metrics: [{
@@ -5488,13 +5260,6 @@ class ElasticDatasource extends src.DataSourceApi {
           data: []
         };
       }
-      /**
-       * The LogRowContextProvider requires there is a field in the dataFrame.fields
-       * named `ts` for timestamp and `line` for the actual log line to display.
-       * Unfortunatly these fields are hardcoded and are required for the lines to
-       * be properly displayed. This code just copies the fields based on this.timeField
-       * and this.logMessageField and recreates the dataFrame so it works.
-       */
 
 
       const timestampField = dataFrame.fields.find(f => f.name === this.timeField);
@@ -5551,7 +5316,7 @@ class ElasticDatasource extends src.DataSourceApi {
   request(method, url, data, headers) {
     if (!isSupportedVersion(this.esVersion)) {
       const error = new Error('Support for Elasticsearch versions after their end-of-life (currently versions < 7.10) was removed.');
-      return (0,throwError/* throwError */._)(() => error);
+      return (0,throwError._)(() => error);
     }
 
     const options = {
@@ -5571,35 +5336,27 @@ class ElasticDatasource extends src.DataSourceApi {
       };
     }
 
-    return (0,grafana_runtime_src.getBackendSrv)().fetch(options).pipe((0,map/* map */.U)(results => {
+    return (0,grafana_runtime_src.getBackendSrv)().fetch(options).pipe((0,map.U)(results => {
       results.data.$$config = results.config;
       return results.data;
-    }), (0,catchError/* catchError */.K)(err => {
+    }), (0,catchError.K)(err => {
       if (err.data) {
         var _ref, _err$data$error$reaso, _err$data$error;
 
         const message = (_ref = (_err$data$error$reaso = (_err$data$error = err.data.error) === null || _err$data$error === void 0 ? void 0 : _err$data$error.reason) !== null && _err$data$error$reaso !== void 0 ? _err$data$error$reaso : err.data.message) !== null && _ref !== void 0 ? _ref : 'Unknown error';
-        return (0,throwError/* throwError */._)({
+        return (0,throwError._)({
           message: 'Elasticsearch error: ' + message,
           error: err.data.error
         });
       }
 
-      return (0,throwError/* throwError */._)(err);
+      return (0,throwError._)(err);
     }));
   }
 
   async importFromAbstractQueries(abstractQueries) {
     return abstractQueries.map(abstractQuery => this.languageProvider.importFromAbstractQuery(abstractQuery));
   }
-  /**
-   * Sends a GET request to the specified url on the newest matching and available index.
-   *
-   * When multiple indices span the provided time range, the request is sent starting from the newest index,
-   * and then going backwards until an index is found.
-   *
-   * @param url the url to query the index on, for example `/_mapping`.
-   */
 
 
   get(url) {
@@ -5615,28 +5372,27 @@ class ElasticDatasource extends src.DataSourceApi {
   }
 
   requestAllIndices(indexList) {
-    const maxTraversals = 7; // do not go beyond one week (for a daily pattern)
+    const maxTraversals = 7; 
 
     const listLen = indexList.length;
-    return (0,generate/* generate */.R)({
+    return (0,generate.R)({
       initialState: 0,
       condition: i => i < Math.min(listLen, maxTraversals),
       iterate: i => i + 1
-    }).pipe((0,mergeMap/* mergeMap */.z)(index => {
-      // catch all errors and emit an object with an err property to simplify checks later in the pipeline
-      return this.request('GET', indexList[listLen - index - 1]).pipe((0,catchError/* catchError */.K)(err => (0,of.of)({
+    }).pipe((0,mergeMap.z)(index => {
+      return this.request('GET', indexList[listLen - index - 1]).pipe((0,catchError.K)(err => (0,of.of)({
         err
       })));
-    }), (0,skipWhile/* skipWhile */.n)(resp => {
+    }), (0,skipWhile.n)(resp => {
       var _resp$err;
 
       return (resp === null || resp === void 0 ? void 0 : (_resp$err = resp.err) === null || _resp$err === void 0 ? void 0 : _resp$err.status) === 404;
-    }), // skip all requests that fail because missing Elastic index
-    (0,throwIfEmpty/* throwIfEmpty */.T)(() => 'Could not find an available index for this time range.'), // when i === Math.min(listLen, maxTraversals) generate will complete but without emitting any values which means we didn't find a valid index
-    (0,first/* first */.P)(), // take the first value that isn't skipped
-    (0,map/* map */.U)(resp => {
+    }), 
+    (0,throwIfEmpty.T)(() => 'Could not find an available index for this time range.'), 
+    (0,first.P)(), 
+    (0,map.U)(resp => {
       if (resp.err) {
-        throw resp.err; // if there is some other error except 404 then we must throw it
+        throw resp.err; 
       }
 
       return resp;
@@ -5702,7 +5458,7 @@ class ElasticDatasource extends src.DataSourceApi {
     const data = {
       query,
       size: 10000
-    }; // fields field not supported on ES 5.x
+    }; 
 
     if ((0,semver.lt)(this.esVersion, '5.0.0')) {
       data['fields'] = [timeField, '_source'];
@@ -5711,7 +5467,7 @@ class ElasticDatasource extends src.DataSourceApi {
     const header = {
       search_type: 'query_then_fetch',
       ignore_unavailable: true
-    }; // old elastic annotations had index specified on them
+    }; 
 
     if (annotation.index) {
       header.index = annotation.index;
@@ -5720,7 +5476,7 @@ class ElasticDatasource extends src.DataSourceApi {
     }
 
     const payload = JSON.stringify(header) + '\n' + JSON.stringify(data) + '\n';
-    return (0,lastValueFrom/* lastValueFrom */.n)(this.post('_msearch', payload).pipe((0,map/* map */.U)(res => {
+    return (0,lastValueFrom.n)(this.post('_msearch', payload).pipe((0,map.U)(res => {
       const list = [];
       const hits = res.responses[0].hits.hits;
 
@@ -5769,7 +5525,7 @@ class ElasticDatasource extends src.DataSourceApi {
           if (timeEnd) {
             event.timeEnd = (0,src.toUtc)(timeEnd).valueOf();
           }
-        } // legacy support for title tield
+        } 
 
 
         if (annotation.titleField) {
@@ -5796,8 +5552,6 @@ class ElasticDatasource extends src.DataSourceApi {
   }
 
   interpolateVariablesInQueries(queries, scopedVars) {
-    // We need a separate interpolation format for lucene queries, therefore we first interpolate any
-    // lucene query string and then everything else
     const interpolateBucketAgg = bucketAgg => {
       if (bucketAgg.type === 'filters') {
         var _bucketAgg$settings, _bucketAgg$settings$f;
@@ -5828,8 +5582,7 @@ class ElasticDatasource extends src.DataSourceApi {
   }
 
   testDatasource() {
-    // validate that the index exist and has date field
-    return (0,lastValueFrom/* lastValueFrom */.n)(this.getFields(['date']).pipe((0,mergeMap/* mergeMap */.z)(dateFields => {
+    return (0,lastValueFrom.n)(this.getFields(['date']).pipe((0,mergeMap.z)(dateFields => {
       const timeField = (0,lodash.find)(dateFields, {
         text: this.timeField
       });
@@ -5845,7 +5598,7 @@ class ElasticDatasource extends src.DataSourceApi {
         status: 'success',
         message: 'Index OK. Time field name OK.'
       });
-    }), (0,catchError/* catchError */.K)(err => {
+    }), (0,catchError.K)(err => {
       console.error(err);
 
       if (err.message) {
@@ -5877,7 +5630,6 @@ class ElasticDatasource extends src.DataSourceApi {
   }
 
   getQueryDisplayText(query) {
-    // TODO: This might be refactored a bit.
     const metricAggs = query.metrics;
     const bucketAggs = query.bucketAggs;
     let text = '';
@@ -5925,11 +5677,6 @@ class ElasticDatasource extends src.DataSourceApi {
 
     return text;
   }
-  /**
-   * This method checks to ensure the user is running a 5.0+ cluster. This is
-   * necessary bacause the query being used for the getLogRowContext relies on the
-   * search_after feature.
-   */
 
 
   showContextToggle() {
@@ -5991,7 +5738,7 @@ class ElasticDatasource extends src.DataSourceApi {
       };
       return logsVolumeQuery;
     });
-    return (0,logs_model/* queryLogsVolume */.Bz)(this, logsVolumeRequest, {
+    return (0,logs_model.Bz)(this, logsVolumeRequest, {
       range: request.range,
       targets: request.targets,
       extractLevel: dataFrame => (0,src.getLogLevelFromKey)(dataFrame.name || '')
@@ -6002,7 +5749,7 @@ class ElasticDatasource extends src.DataSourceApi {
     let payload = '';
     const targets = this.interpolateVariablesInQueries((0,lodash.cloneDeep)(options.targets), options.scopedVars);
     const sentTargets = [];
-    let targetsContainsLogsQuery = targets.some(target => hasMetricOfType(target, 'logs')); // add global adhoc filters to timeFilter
+    let targetsContainsLogsQuery = targets.some(target => hasMetricOfType(target, 'logs')); 
 
     const adhocFilters = this.templateSrv.getAdhocFilters(this.name);
     const logLimits = [];
@@ -6017,16 +5764,11 @@ class ElasticDatasource extends src.DataSourceApi {
       if (hasMetricOfType(target, 'logs')) {
         var _target$metrics2, _log$settings, _log$settings2;
 
-        // FIXME: All this logic here should be in the query builder.
-        // When moving to the BE-only implementation we should remove this and let the BE
-        // Handle this.
-        // TODO: defaultBucketAgg creates a dete_histogram aggregation without a field, so it fallbacks to
-        // the configured timeField. we should allow people to use a different time field here.
         target.bucketAggs = [defaultBucketAgg()];
         const log = (_target$metrics2 = target.metrics) === null || _target$metrics2 === void 0 ? void 0 : _target$metrics2.find(m => m.type === 'logs');
         const limit = (_log$settings = log.settings) !== null && _log$settings !== void 0 && _log$settings.limit ? parseInt((_log$settings2 = log.settings) === null || _log$settings2 === void 0 ? void 0 : _log$settings2.limit, 10) : 500;
         logLimits.push(limit);
-        target.metrics = []; // Setting this for metrics queries that are typed as logs
+        target.metrics = []; 
 
         queryObj = this.queryBuilder.getLogsQuery(target, limit, adhocFilters);
       } else {
@@ -6051,18 +5793,15 @@ class ElasticDatasource extends src.DataSourceApi {
       return (0,of.of)({
         data: []
       });
-    } // We replace the range here for actual values. We need to replace it together with enclosing "" so that we replace
-    // it as an integer not as string with digits. This is because elastic will convert the string only if the time
-    // field is specified as type date (which probably should) but can also be specified as integer (millisecond epoch)
-    // and then sending string will error out.
+    } 
 
 
     payload = payload.replace(/"\$timeFrom"/g, options.range.from.valueOf().toString());
     payload = payload.replace(/"\$timeTo"/g, options.range.to.valueOf().toString());
     payload = this.templateSrv.replace(payload, options.scopedVars);
     const url = this.getMultiSearchUrl();
-    return this.post(url, payload).pipe((0,map/* map */.U)(res => {
-      const er = new ElasticResponse(sentTargets, res); // TODO: This needs to be revisited, it seems wrong to process ALL the sent queries as logs if only one of them was a log query
+    return this.post(url, payload).pipe((0,map.U)(res => {
+      const er = new ElasticResponse(sentTargets, res); 
 
       if (targetsContainsLogsQuery) {
         const response = er.getLogs(this.logMessageField, this.logLevelField);
@@ -6078,9 +5817,7 @@ class ElasticDatasource extends src.DataSourceApi {
 
   isMetadataField(fieldName) {
     return ELASTIC_META_FIELDS.includes(fieldName);
-  } // TODO: instead of being a string, this could be a custom type representing all the elastic types
-  // FIXME: This doesn't seem to return actual MetricFindValues, we should either change the return type
-  // or fix the implementation.
+  } 
 
 
   getFields(type, range) {
@@ -6097,7 +5834,7 @@ class ElasticDatasource extends src.DataSourceApi {
       nested: 'nested',
       histogram: 'number'
     };
-    return this.get('/_mapping', range).pipe((0,map/* map */.U)(result => {
+    return this.get('/_mapping', range).pipe((0,map.U)(result => {
       const shouldAddField = (obj, key) => {
         if (this.isMetadataField(key)) {
           return false;
@@ -6105,11 +5842,11 @@ class ElasticDatasource extends src.DataSourceApi {
 
         if (!type || type.length === 0) {
           return true;
-        } // equal query type filter, or via typemap translation
+        } 
 
 
         return type.includes(obj.type) || type.includes(typeMap[obj.type]);
-      }; // Store subfield names: [system, process, cpu, total] -> system.process.cpu.total
+      }; 
 
 
       const fieldNameParts = [];
@@ -6117,7 +5854,7 @@ class ElasticDatasource extends src.DataSourceApi {
 
       function getFieldsRecursively(obj) {
         for (const key in obj) {
-          const subObj = obj[key]; // Check mapping field for nested fields
+          const subObj = obj[key]; 
 
           if ((0,lodash.isObject)(subObj.properties)) {
             fieldNameParts.push(key);
@@ -6130,7 +5867,7 @@ class ElasticDatasource extends src.DataSourceApi {
           }
 
           if ((0,lodash.isString)(subObj.type)) {
-            const fieldName = fieldNameParts.concat(key).join('.'); // Hide meta-fields and check field type
+            const fieldName = fieldNameParts.concat(key).join('.'); 
 
             if (shouldAddField(subObj, key)) {
               fields[fieldName] = {
@@ -6160,7 +5897,7 @@ class ElasticDatasource extends src.DataSourceApi {
             getFieldsRecursively(properties);
           }
         }
-      } // transform to array
+      } 
 
 
       return (0,lodash.map)(fields, value => {
@@ -6178,7 +5915,7 @@ class ElasticDatasource extends src.DataSourceApi {
     esQuery = esQuery.replace(/\$timeTo/g, range.to.valueOf().toString());
     esQuery = header + '\n' + esQuery + '\n';
     const url = this.getMultiSearchUrl();
-    return this.post(url, esQuery).pipe((0,map/* map */.U)(res => {
+    return this.post(url, esQuery).pipe((0,map.U)(res => {
       if (!res.responses[0].aggregations) {
         return [];
       }
@@ -6214,13 +5951,13 @@ class ElasticDatasource extends src.DataSourceApi {
     if (query) {
       if (parsedQuery.find === 'fields') {
         parsedQuery.type = this.interpolateLuceneQuery(parsedQuery.type);
-        return (0,lastValueFrom/* lastValueFrom */.n)(this.getFields(parsedQuery.type, range));
+        return (0,lastValueFrom.n)(this.getFields(parsedQuery.type, range));
       }
 
       if (parsedQuery.find === 'terms') {
         parsedQuery.field = this.interpolateLuceneQuery(parsedQuery.field);
         parsedQuery.query = this.interpolateLuceneQuery(parsedQuery.query);
-        return (0,lastValueFrom/* lastValueFrom */.n)(this.getTerms(parsedQuery, range));
+        return (0,lastValueFrom.n)(this.getTerms(parsedQuery, range));
       }
     }
 
@@ -6228,11 +5965,11 @@ class ElasticDatasource extends src.DataSourceApi {
   }
 
   getTagKeys() {
-    return (0,lastValueFrom/* lastValueFrom */.n)(this.getFields());
+    return (0,lastValueFrom.n)(this.getFields());
   }
 
   getTagValues(options) {
-    return (0,lastValueFrom/* lastValueFrom */.n)(this.getTerms({
+    return (0,lastValueFrom.n)(this.getTerms({
       field: options.key
     }));
   }
@@ -6296,10 +6033,6 @@ class ElasticDatasource extends src.DataSourceApi {
   }
 
 }
-/**
- * Modifies dataframe and adds dataLinks from the config.
- * Exported for tests.
- */
 
 function enhanceDataFrame(dataFrame, dataLinks, limit) {
   if (limit) {
@@ -6364,7 +6097,7 @@ function transformHitsBasedOnDirection(response, direction) {
     })]
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/elasticsearch/module.ts
+;
 function module_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -6378,16 +6111,16 @@ module_defineProperty(ElasticAnnotationsQueryCtrl, "templateUrl", 'partials/anno
 
 const module_plugin = new src.DataSourcePlugin(ElasticDatasource).setQueryEditor(QueryEditor).setConfigEditor(ConfigEditor).setAnnotationQueryCtrl(ElasticAnnotationsQueryCtrl);
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/usePrevious.js":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/usePrevious.js":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (/* binding */ usePrevious)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "Z": () => ( usePrevious)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
 
 function usePrevious(state) {
     var ref = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
@@ -6398,15 +6131,14 @@ function usePrevious(state) {
 }
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/lru-cache-npm-6.0.0-b4c8668fe1-f97f499f89.zip/node_modules/lru-cache/index.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/lru-cache-npm-6.0.0-b4c8668fe1-f97f499f89.zip/node_modules/lru-cache/index.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-// A linked list to keep track of recently-used-ness
 const Yallist = __webpack_require__("./.yarn/cache/yallist-npm-4.0.0-b493d9e907-343617202a.zip/node_modules/yallist/yallist.js")
 
 const MAX = Symbol('max')
@@ -6422,14 +6154,6 @@ const UPDATE_AGE_ON_GET = Symbol('updateAgeOnGet')
 
 const naiveLength = () => 1
 
-// lruList is a yallist where the head is the youngest
-// item, and the tail is the oldest.  the list contains the Hit
-// objects as the entries.
-// Each Hit object has a reference to its Yallist.Node.  This
-// never changes.
-//
-// cache is a Map (or PseudoMap) that matches the keys to
-// the Yallist.Node object.
 class LRUCache {
   constructor (options) {
     if (typeof options === 'number')
@@ -6440,7 +6164,6 @@ class LRUCache {
 
     if (options.max && (typeof options.max !== 'number' || options.max < 0))
       throw new TypeError('max must be a non-negative number')
-    // Kind of weird to have a default max of Infinity, but oh well.
     const max = this[MAX] = options.max || Infinity
 
     const lc = options.length || naiveLength
@@ -6455,7 +6178,6 @@ class LRUCache {
     this.reset()
   }
 
-  // resize the cache when the max changes.
   set max (mL) {
     if (typeof mL !== 'number' || mL < 0)
       throw new TypeError('max must be a non-negative number')
@@ -6485,7 +6207,6 @@ class LRUCache {
     return this[MAX_AGE]
   }
 
-  // resize the cache when the lengthCalculator changes.
   set lengthCalculator (lC) {
     if (typeof lC !== 'function')
       lC = naiveLength
@@ -6538,9 +6259,9 @@ class LRUCache {
       this[LRU_LIST].forEach(hit => this[DISPOSE](hit.key, hit.value))
     }
 
-    this[CACHE] = new Map() // hash of items by key
-    this[LRU_LIST] = new Yallist() // list of items in order of use recency
-    this[LENGTH] = 0 // length of items in the list
+    this[CACHE] = new Map() 
+    this[LRU_LIST] = new Yallist() 
+    this[LENGTH] = 0 
   }
 
   dump () {
@@ -6574,8 +6295,6 @@ class LRUCache {
       const node = this[CACHE].get(key)
       const item = node.value
 
-      // dispose of the old one before overwriting
-      // split out into 2 ifs for better coverage tracking
       if (this[DISPOSE]) {
         if (!this[NO_DISPOSE_ON_SET])
           this[DISPOSE](key, item.value)
@@ -6593,7 +6312,6 @@ class LRUCache {
 
     const hit = new Entry(key, value, len, now, maxAge)
 
-    // oversized objects fall out of cache automatically.
     if (hit.length > this[MAX]) {
       if (this[DISPOSE])
         this[DISPOSE](key, value)
@@ -6636,20 +6354,16 @@ class LRUCache {
   }
 
   load (arr) {
-    // reset the cache
     this.reset()
 
     const now = Date.now()
-    // A previous serialized cache has the most recent items first
     for (let l = arr.length - 1; l >= 0; l--) {
       const hit = arr[l]
       const expiresAt = hit.e || 0
       if (expiresAt === 0)
-        // the item was created without expiration in a non aged cache
         this.set(hit.k, hit.v)
       else {
         const maxAge = expiresAt - now
-        // dont add already expired items
         if (maxAge > 0) {
           this.set(hit.k, hit.v, maxAge)
         }
@@ -6694,9 +6408,6 @@ const trim = self => {
   if (self[LENGTH] > self[MAX]) {
     for (let walker = self[LRU_LIST].tail;
       self[LENGTH] > self[MAX] && walker !== null;) {
-      // We know that we're about to delete this one, and also
-      // what the next least recently used key will be, so just
-      // go ahead and set it now.
       const prev = walker.prev
       del(self, walker)
       walker = prev
@@ -6740,13 +6451,12 @@ const forEachStep = (self, fn, node, thisp) => {
 module.exports = LRUCache
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/comparator.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/comparator.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const ANY = Symbol('SemVer ANY')
-// hoisted class for cyclic dependency
 class Comparator {
   static get ANY () {
     return ANY
@@ -6789,7 +6499,6 @@ class Comparator {
       this.operator = ''
     }
 
-    // if it literally is just '>' or '' then allow anything.
     if (!m[2]) {
       this.semver = ANY
     } else {
@@ -6882,12 +6591,11 @@ const SemVer = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5e
 const Range = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/range.js")
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/range.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/range.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-// hoisted class for cyclic dependency
 class Range {
   constructor (range, options) {
     options = parseOptions(options)
@@ -6904,7 +6612,6 @@ class Range {
     }
 
     if (range instanceof Comparator) {
-      // just put it in the set and return
       this.raw = range.value
       this.set = [[range]]
       this.format()
@@ -6915,30 +6622,22 @@ class Range {
     this.loose = !!options.loose
     this.includePrerelease = !!options.includePrerelease
 
-    // First, split based on boolean or ||
     this.raw = range
     this.set = range
       .split(/\s*\|\|\s*/)
-      // map the range to a 2d array of comparators
       .map(range => this.parseRange(range.trim()))
-      // throw out any comparator lists that are empty
-      // this generally means that it was not a valid range, which is allowed
-      // in loose mode, but will still throw if the WHOLE range is invalid.
       .filter(c => c.length)
 
     if (!this.set.length) {
       throw new TypeError(`Invalid SemVer Range: ${range}`)
     }
 
-    // if we have any that are not the null set, throw out null sets.
     if (this.set.length > 1) {
-      // keep the first one, in case they're all null sets
       const first = this.set[0]
       this.set = this.set.filter(c => !isNullSet(c[0]))
       if (this.set.length === 0)
         this.set = [first]
       else if (this.set.length > 1) {
-        // if we have any that are *, then the range is just *
         for (const c of this.set) {
           if (c.length === 1 && isAny(c[0])) {
             this.set = [c]
@@ -6968,8 +6667,6 @@ class Range {
   parseRange (range) {
     range = range.trim()
 
-    // memoize range parsing for performance.
-    // this is a very hot path, and fully deterministic.
     const memoOpts = Object.keys(this.options).join(',')
     const memoKey = `parseRange:${memoOpts}:${range}`
     const cached = cache.get(memoKey)
@@ -6977,25 +6674,18 @@ class Range {
       return cached
 
     const loose = this.options.loose
-    // `1.2.3 - 1.2.4` => `>=1.2.3 <=1.2.4`
     const hr = loose ? re[t.HYPHENRANGELOOSE] : re[t.HYPHENRANGE]
     range = range.replace(hr, hyphenReplace(this.options.includePrerelease))
     debug('hyphen replace', range)
-    // `> 1.2.3 < 1.2.5` => `>1.2.3 <1.2.5`
     range = range.replace(re[t.COMPARATORTRIM], comparatorTrimReplace)
     debug('comparator trim', range, re[t.COMPARATORTRIM])
 
-    // `~ 1.2.3` => `~1.2.3`
     range = range.replace(re[t.TILDETRIM], tildeTrimReplace)
 
-    // `^ 1.2.3` => `^1.2.3`
     range = range.replace(re[t.CARETTRIM], caretTrimReplace)
 
-    // normalize spaces
     range = range.split(/\s+/).join(' ')
 
-    // At this point, the range is completely trimmed and
-    // ready to be split into comparators.
 
     const compRe = loose ? re[t.COMPARATORLOOSE] : re[t.COMPARATOR]
     const rangeList = range
@@ -7003,15 +6693,10 @@ class Range {
       .map(comp => parseComparator(comp, this.options))
       .join(' ')
       .split(/\s+/)
-      // >=0.0.0 is equivalent to *
       .map(comp => replaceGTE0(comp, this.options))
-      // in loose mode, throw out any that are not valid comparators
       .filter(this.options.loose ? comp => !!comp.match(compRe) : () => true)
       .map(comp => new Comparator(comp, this.options))
 
-    // if any comparators are the null set, then replace with JUST null set
-    // if more than one comparator, remove any * comparators
-    // also, don't include the same comparator more than once
     const l = rangeList.length
     const rangeMap = new Map()
     for (const comp of rangeList) {
@@ -7049,7 +6734,6 @@ class Range {
     })
   }
 
-  // if ANY of the sets match ALL of its comparators, then pass
   test (version) {
     if (!version) {
       return false
@@ -7091,8 +6775,6 @@ const {
 const isNullSet = c => c.value === '<0.0.0-0'
 const isAny = c => c.value === ''
 
-// take a set of comparators and determine whether there
-// exists a version which can satisfy it
 const isSatisfiable = (comparators, options) => {
   let result = true
   const remainingComparators = comparators.slice()
@@ -7109,9 +6791,6 @@ const isSatisfiable = (comparators, options) => {
   return result
 }
 
-// comprised of xranges, tildes, stars, and gtlt's at this point.
-// already replaced the hyphen ranges
-// turn into a set of JUST comparators.
 const parseComparator = (comp, options) => {
   debug('comp', comp, options)
   comp = replaceCarets(comp, options)
@@ -7127,12 +6806,6 @@ const parseComparator = (comp, options) => {
 
 const isX = id => !id || id.toLowerCase() === 'x' || id === '*'
 
-// ~, ~> --> * (any, kinda silly)
-// ~2, ~2.x, ~2.x.x, ~>2, ~>2.x ~>2.x.x --> >=2.0.0 <3.0.0-0
-// ~2.0, ~2.0.x, ~>2.0, ~>2.0.x --> >=2.0.0 <2.1.0-0
-// ~1.2, ~1.2.x, ~>1.2, ~>1.2.x --> >=1.2.0 <1.3.0-0
-// ~1.2.3, ~>1.2.3 --> >=1.2.3 <1.3.0-0
-// ~1.2.0, ~>1.2.0 --> >=1.2.0 <1.3.0-0
 const replaceTildes = (comp, options) =>
   comp.trim().split(/\s+/).map((comp) => {
     return replaceTilde(comp, options)
@@ -7149,14 +6822,12 @@ const replaceTilde = (comp, options) => {
     } else if (isX(m)) {
       ret = `>=${M}.0.0 <${+M + 1}.0.0-0`
     } else if (isX(p)) {
-      // ~1.2 == >=1.2.0 <1.3.0-0
       ret = `>=${M}.${m}.0 <${M}.${+m + 1}.0-0`
     } else if (pr) {
       debug('replaceTilde pr', pr)
       ret = `>=${M}.${m}.${p}-${pr
       } <${M}.${+m + 1}.0-0`
     } else {
-      // ~1.2.3 == >=1.2.3 <1.3.0-0
       ret = `>=${M}.${m}.${p
       } <${M}.${+m + 1}.0-0`
     }
@@ -7166,12 +6837,6 @@ const replaceTilde = (comp, options) => {
   })
 }
 
-// ^ --> * (any, kinda silly)
-// ^2, ^2.x, ^2.x.x --> >=2.0.0 <3.0.0-0
-// ^2.0, ^2.0.x --> >=2.0.0 <3.0.0-0
-// ^1.2, ^1.2.x --> >=1.2.0 <2.0.0-0
-// ^1.2.3 --> >=1.2.3 <2.0.0-0
-// ^1.2.0 --> >=1.2.0 <2.0.0-0
 const replaceCarets = (comp, options) =>
   comp.trim().split(/\s+/).map((comp) => {
     return replaceCaret(comp, options)
@@ -7251,29 +6916,21 @@ const replaceXRange = (comp, options) => {
       gtlt = ''
     }
 
-    // if we're including prereleases in the match, then we need
-    // to fix this to -0, the lowest possible prerelease value
     pr = options.includePrerelease ? '-0' : ''
 
     if (xM) {
       if (gtlt === '>' || gtlt === '<') {
-        // nothing is allowed
         ret = '<0.0.0-0'
       } else {
-        // nothing is forbidden
         ret = '*'
       }
     } else if (gtlt && anyX) {
-      // we know patch is an x, because we have any x at all.
-      // replace X with 0
       if (xm) {
         m = 0
       }
       p = 0
 
       if (gtlt === '>') {
-        // >1 => >=2.0.0
-        // >1.2 => >=1.3.0
         gtlt = '>='
         if (xm) {
           M = +M + 1
@@ -7284,8 +6941,6 @@ const replaceXRange = (comp, options) => {
           p = 0
         }
       } else if (gtlt === '<=') {
-        // <=0.7.x is actually <0.8.0, since any 0.7.x should
-        // pass.  Similarly, <=7.x is actually <8.0.0, etc.
         gtlt = '<'
         if (xm) {
           M = +M + 1
@@ -7311,11 +6966,8 @@ const replaceXRange = (comp, options) => {
   })
 }
 
-// Because * is AND-ed with everything else in the comparator,
-// and '' means "any version", just remove the *s entirely.
 const replaceStars = (comp, options) => {
   debug('replaceStars', comp, options)
-  // Looseness is ignored here.  star is always as loose as it gets!
   return comp.trim().replace(re[t.STAR], '')
 }
 
@@ -7325,11 +6977,6 @@ const replaceGTE0 = (comp, options) => {
     .replace(re[options.includePrerelease ? t.GTE0PRE : t.GTE0], '')
 }
 
-// This function is passed to string.replace(re[t.HYPHENRANGE])
-// M, m, patch, prerelease, build
-// 1.2 - 3.4.5 => >=1.2.0 <=3.4.5
-// 1.2.3 - 3.4 => >=1.2.0 <3.5.0-0 Any 3.4.x will do
-// 1.2 - 3.4 => >=1.2.0 <3.5.0-0
 const hyphenReplace = incPr => ($0,
   from, fM, fm, fp, fpr, fb,
   to, tM, tm, tp, tpr, tb) => {
@@ -7370,11 +7017,6 @@ const testSet = (set, version, options) => {
   }
 
   if (version.prerelease.length && !options.includePrerelease) {
-    // Find the set of versions that are allowed to have prereleases
-    // For example, ^1.2.3-pr.1 desugars to >=1.2.3-pr.1 <2.0.0
-    // That should allow `1.2.3-pr.2` to pass.
-    // However, `1.2.4-alpha.notready` should NOT be allowed,
-    // even though it's within the range set by the comparators.
     for (let i = 0; i < set.length; i++) {
       debug(set[i].semver)
       if (set[i].semver === Comparator.ANY) {
@@ -7391,7 +7033,6 @@ const testSet = (set, version, options) => {
       }
     }
 
-    // Version has a -pre, but it's not one of the ones we like.
     return false
   }
 
@@ -7399,10 +7040,10 @@ const testSet = (set, version, options) => {
 }
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/semver.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/semver.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const debug = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/debug.js")
 const { MAX_LENGTH, MAX_SAFE_INTEGER } = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/constants.js")
@@ -7434,8 +7075,6 @@ class SemVer {
     debug('SemVer', version, options)
     this.options = options
     this.loose = !!options.loose
-    // this isn't actually relevant for versions, but keep it so that we
-    // don't run into trouble passing this.options around.
     this.includePrerelease = !!options.includePrerelease
 
     const m = version.trim().match(options.loose ? re[t.LOOSE] : re[t.FULL])
@@ -7446,7 +7085,6 @@ class SemVer {
 
     this.raw = version
 
-    // these are actually numbers
     this.major = +m[1]
     this.minor = +m[2]
     this.patch = +m[3]
@@ -7463,7 +7101,6 @@ class SemVer {
       throw new TypeError('Invalid patch version')
     }
 
-    // numberify any prerelease numeric ids
     if (!m[4]) {
       this.prerelease = []
     } else {
@@ -7527,7 +7164,6 @@ class SemVer {
       other = new SemVer(other, this.options)
     }
 
-    // NOT having a prerelease is > having one
     if (this.prerelease.length && !other.prerelease.length) {
       return -1
     } else if (!this.prerelease.length && other.prerelease.length) {
@@ -7579,8 +7215,6 @@ class SemVer {
     } while (++i)
   }
 
-  // preminor will bump the version up to the next minor release, and immediately
-  // down to pre-release. premajor and prepatch work the same way.
   inc (release, identifier) {
     switch (release) {
       case 'premajor':
@@ -7597,15 +7231,10 @@ class SemVer {
         this.inc('pre', identifier)
         break
       case 'prepatch':
-        // If this is already a prerelease, it will bump to the next version
-        // drop any prereleases that might already exist, since they are not
-        // relevant at this point.
         this.prerelease.length = 0
         this.inc('patch', identifier)
         this.inc('pre', identifier)
         break
-      // If the input is a non-prerelease version, this acts the same as
-      // prepatch.
       case 'prerelease':
         if (this.prerelease.length === 0) {
           this.inc('patch', identifier)
@@ -7614,10 +7243,6 @@ class SemVer {
         break
 
       case 'major':
-        // If this is a pre-major version, bump up to the same major version.
-        // Otherwise increment major.
-        // 1.0.0-5 bumps to 1.0.0
-        // 1.1.0 bumps to 2.0.0
         if (
           this.minor !== 0 ||
           this.patch !== 0 ||
@@ -7630,10 +7255,6 @@ class SemVer {
         this.prerelease = []
         break
       case 'minor':
-        // If this is a pre-minor version, bump up to the same minor version.
-        // Otherwise increment minor.
-        // 1.2.0-5 bumps to 1.2.0
-        // 1.2.1 bumps to 1.3.0
         if (this.patch !== 0 || this.prerelease.length === 0) {
           this.minor++
         }
@@ -7641,17 +7262,11 @@ class SemVer {
         this.prerelease = []
         break
       case 'patch':
-        // If this is not a pre-release version, it will increment the patch.
-        // If it is a pre-release it will bump up to the same patch version.
-        // 1.2.0-5 patches to 1.2.0
-        // 1.2.0 patches to 1.2.1
         if (this.prerelease.length === 0) {
           this.patch++
         }
         this.prerelease = []
         break
-      // This probably shouldn't be used publicly.
-      // 1.0.0 'pre' would become 1.0.0-0 which is the wrong direction.
       case 'pre':
         if (this.prerelease.length === 0) {
           this.prerelease = [0]
@@ -7664,13 +7279,10 @@ class SemVer {
             }
           }
           if (i === -1) {
-            // didn't increment anything
             this.prerelease.push(0)
           }
         }
         if (identifier) {
-          // 1.2.0-beta.1 bumps to 1.2.0-beta.2,
-          // 1.2.0-beta.fooblz or 1.2.0-beta bumps to 1.2.0-beta.0
           if (this.prerelease[0] === identifier) {
             if (isNaN(this.prerelease[1])) {
               this.prerelease = [identifier, 0]
@@ -7693,10 +7305,10 @@ class SemVer {
 module.exports = SemVer
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/clean.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/clean.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const parse = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/parse.js")
 const clean = (version, options) => {
@@ -7706,10 +7318,10 @@ const clean = (version, options) => {
 module.exports = clean
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/cmp.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/cmp.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const eq = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/eq.js")
 const neq = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/neq.js")
@@ -7761,10 +7373,10 @@ const cmp = (a, op, b, loose) => {
 module.exports = cmp
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/coerce.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/coerce.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const SemVer = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/semver.js")
 const parse = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/parse.js")
@@ -7789,14 +7401,6 @@ const coerce = (version, options) => {
   if (!options.rtl) {
     match = version.match(re[t.COERCE])
   } else {
-    // Find the right-most coercible string that does not share
-    // a terminus with a more left-ward coercible string.
-    // Eg, '1.2.3.4' wants to coerce '2.3.4', not '3.4' or '4'
-    //
-    // Walk through the string checking with a /g regexp
-    // Manually set the index so as to pick up overlapping matches.
-    // Stop when we get a match that ends at the string end, since no
-    // coercible string can be more right-ward without the same terminus.
     let next
     while ((next = re[t.COERCERTL].exec(version)) &&
         (!match || match.index + match[0].length !== version.length)
@@ -7807,7 +7411,6 @@ const coerce = (version, options) => {
       }
       re[t.COERCERTL].lastIndex = next.index + next[1].length + next[2].length
     }
-    // leave it in a clean state
     re[t.COERCERTL].lastIndex = -1
   }
 
@@ -7819,10 +7422,10 @@ const coerce = (version, options) => {
 module.exports = coerce
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare-build.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare-build.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const SemVer = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/semver.js")
 const compareBuild = (a, b, loose) => {
@@ -7833,20 +7436,20 @@ const compareBuild = (a, b, loose) => {
 module.exports = compareBuild
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare-loose.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare-loose.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const compare = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare.js")
 const compareLoose = (a, b) => compare(a, b, true)
 module.exports = compareLoose
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const SemVer = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/semver.js")
 const compare = (a, b, loose) =>
@@ -7855,10 +7458,10 @@ const compare = (a, b, loose) =>
 module.exports = compare
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/diff.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/diff.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const parse = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/parse.js")
 const eq = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/eq.js")
@@ -7879,46 +7482,46 @@ const diff = (version1, version2) => {
         }
       }
     }
-    return defaultResult // may be undefined
+    return defaultResult 
   }
 }
 module.exports = diff
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/eq.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/eq.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const compare = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare.js")
 const eq = (a, b, loose) => compare(a, b, loose) === 0
 module.exports = eq
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/gt.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/gt.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const compare = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare.js")
 const gt = (a, b, loose) => compare(a, b, loose) > 0
 module.exports = gt
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/gte.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/gte.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const compare = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare.js")
 const gte = (a, b, loose) => compare(a, b, loose) >= 0
 module.exports = gte
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/inc.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/inc.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const SemVer = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/semver.js")
 
@@ -7937,60 +7540,60 @@ const inc = (version, release, options, identifier) => {
 module.exports = inc
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/lt.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/lt.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const compare = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare.js")
 const lt = (a, b, loose) => compare(a, b, loose) < 0
 module.exports = lt
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/lte.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/lte.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const compare = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare.js")
 const lte = (a, b, loose) => compare(a, b, loose) <= 0
 module.exports = lte
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/major.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/major.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const SemVer = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/semver.js")
 const major = (a, loose) => new SemVer(a, loose).major
 module.exports = major
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/minor.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/minor.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const SemVer = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/semver.js")
 const minor = (a, loose) => new SemVer(a, loose).minor
 module.exports = minor
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/neq.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/neq.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const compare = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare.js")
 const neq = (a, b, loose) => compare(a, b, loose) !== 0
 module.exports = neq
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/parse.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/parse.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const {MAX_LENGTH} = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/constants.js")
 const { re, t } = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/re.js")
@@ -8027,20 +7630,20 @@ const parse = (version, options) => {
 module.exports = parse
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/patch.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/patch.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const SemVer = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/semver.js")
 const patch = (a, loose) => new SemVer(a, loose).patch
 module.exports = patch
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/prerelease.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/prerelease.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const parse = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/parse.js")
 const prerelease = (version, options) => {
@@ -8050,30 +7653,30 @@ const prerelease = (version, options) => {
 module.exports = prerelease
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/rcompare.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/rcompare.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const compare = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare.js")
 const rcompare = (a, b, loose) => compare(b, a, loose)
 module.exports = rcompare
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/rsort.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/rsort.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const compareBuild = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare-build.js")
 const rsort = (list, loose) => list.sort((a, b) => compareBuild(b, a, loose))
 module.exports = rsort
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/satisfies.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/satisfies.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const Range = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/range.js")
 const satisfies = (version, range, options) => {
@@ -8087,20 +7690,20 @@ const satisfies = (version, range, options) => {
 module.exports = satisfies
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/sort.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/sort.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const compareBuild = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare-build.js")
 const sort = (list, loose) => list.sort((a, b) => compareBuild(a, b, loose))
 module.exports = sort
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/valid.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/valid.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const parse = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/parse.js")
 const valid = (version, options) => {
@@ -8110,12 +7713,11 @@ const valid = (version, options) => {
 module.exports = valid
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/index.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/index.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-// just pre-load all the stuff that index.js lazily exports
 const internalRe = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/re.js")
 module.exports = {
   re: internalRe.re,
@@ -8165,20 +7767,17 @@ module.exports = {
 }
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/constants.js":
-/***/ ((module) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/constants.js":
+ ((module) => {
 
-// Note: this is the semver.org version of the spec that it implements
-// Not necessarily the package version of this code.
 const SEMVER_SPEC_VERSION = '2.0.0'
 
 const MAX_LENGTH = 256
 const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER ||
-  /* istanbul ignore next */ 9007199254740991
+ 9007199254740991
 
-// Max safe segment length for coercion.
 const MAX_SAFE_COMPONENT_LENGTH = 16
 
 module.exports = {
@@ -8189,10 +7788,10 @@ module.exports = {
 }
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/debug.js":
-/***/ ((module) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/debug.js":
+ ((module) => {
 
 const debug = (
   typeof process === 'object' &&
@@ -8205,10 +7804,10 @@ const debug = (
 module.exports = debug
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/identifiers.js":
-/***/ ((module) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/identifiers.js":
+ ((module) => {
 
 const numeric = /^[0-9]+$/
 const compareIdentifiers = (a, b) => {
@@ -8235,13 +7834,11 @@ module.exports = {
 }
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/parse-options.js":
-/***/ ((module) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/parse-options.js":
+ ((module) => {
 
-// parse out just the options we care about so we always get a consistent
-// obj with keys in a consistent order.
 const opts = ['includePrerelease', 'loose', 'rtl']
 const parseOptions = options =>
   !options ? {}
@@ -8253,16 +7850,15 @@ const parseOptions = options =>
 module.exports = parseOptions
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/re.js":
-/***/ ((module, exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/re.js":
+ ((module, exports, __webpack_require__) => {
 
 const { MAX_SAFE_COMPONENT_LENGTH } = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/constants.js")
 const debug = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/internal/debug.js")
 exports = module.exports = {}
 
-// The actual regexps go on exports.re
 const re = exports.re = []
 const src = exports.src = []
 const t = exports.t = {}
@@ -8276,23 +7872,14 @@ const createToken = (name, value, isGlobal) => {
   re[index] = new RegExp(value, isGlobal ? 'g' : undefined)
 }
 
-// The following Regular Expressions can be used for tokenizing,
-// validating, and parsing SemVer version strings.
 
-// ## Numeric Identifier
-// A single `0`, or a non-zero digit followed by zero or more digits.
 
 createToken('NUMERICIDENTIFIER', '0|[1-9]\\d*')
 createToken('NUMERICIDENTIFIERLOOSE', '[0-9]+')
 
-// ## Non-numeric Identifier
-// Zero or more digits, followed by a letter or hyphen, and then zero or
-// more letters, digits, or hyphens.
 
 createToken('NONNUMERICIDENTIFIER', '\\d*[a-zA-Z-][a-zA-Z0-9-]*')
 
-// ## Main Version
-// Three dot-separated numeric identifiers.
 
 createToken('MAINVERSION', `(${src[t.NUMERICIDENTIFIER]})\\.` +
                    `(${src[t.NUMERICIDENTIFIER]})\\.` +
@@ -8302,8 +7889,6 @@ createToken('MAINVERSIONLOOSE', `(${src[t.NUMERICIDENTIFIERLOOSE]})\\.` +
                         `(${src[t.NUMERICIDENTIFIERLOOSE]})\\.` +
                         `(${src[t.NUMERICIDENTIFIERLOOSE]})`)
 
-// ## Pre-release Version Identifier
-// A numeric identifier, or a non-numeric identifier.
 
 createToken('PRERELEASEIDENTIFIER', `(?:${src[t.NUMERICIDENTIFIER]
 }|${src[t.NONNUMERICIDENTIFIER]})`)
@@ -8311,9 +7896,6 @@ createToken('PRERELEASEIDENTIFIER', `(?:${src[t.NUMERICIDENTIFIER]
 createToken('PRERELEASEIDENTIFIERLOOSE', `(?:${src[t.NUMERICIDENTIFIERLOOSE]
 }|${src[t.NONNUMERICIDENTIFIER]})`)
 
-// ## Pre-release Version
-// Hyphen, followed by one or more dot-separated pre-release version
-// identifiers.
 
 createToken('PRERELEASE', `(?:-(${src[t.PRERELEASEIDENTIFIER]
 }(?:\\.${src[t.PRERELEASEIDENTIFIER]})*))`)
@@ -8321,26 +7903,14 @@ createToken('PRERELEASE', `(?:-(${src[t.PRERELEASEIDENTIFIER]
 createToken('PRERELEASELOOSE', `(?:-?(${src[t.PRERELEASEIDENTIFIERLOOSE]
 }(?:\\.${src[t.PRERELEASEIDENTIFIERLOOSE]})*))`)
 
-// ## Build Metadata Identifier
-// Any combination of digits, letters, or hyphens.
 
 createToken('BUILDIDENTIFIER', '[0-9A-Za-z-]+')
 
-// ## Build Metadata
-// Plus sign, followed by one or more period-separated build metadata
-// identifiers.
 
 createToken('BUILD', `(?:\\+(${src[t.BUILDIDENTIFIER]
 }(?:\\.${src[t.BUILDIDENTIFIER]})*))`)
 
-// ## Full Version String
-// A main version, followed optionally by a pre-release version and
-// build metadata.
 
-// Note that the only major, minor, patch, and pre-release sections of
-// the version string are capturing groups.  The build metadata is not a
-// capturing group, because it should not ever be used in version
-// comparison.
 
 createToken('FULLPLAIN', `v?${src[t.MAINVERSION]
 }${src[t.PRERELEASE]}?${
@@ -8348,9 +7918,6 @@ createToken('FULLPLAIN', `v?${src[t.MAINVERSION]
 
 createToken('FULL', `^${src[t.FULLPLAIN]}$`)
 
-// like full, but allows v1.2.3 and =1.2.3, which people do sometimes.
-// also, 1.0.0alpha1 (prerelease without the hyphen) which is pretty
-// common in the npm registry.
 createToken('LOOSEPLAIN', `[v=\\s]*${src[t.MAINVERSIONLOOSE]
 }${src[t.PRERELEASELOOSE]}?${
   src[t.BUILD]}?`)
@@ -8359,9 +7926,6 @@ createToken('LOOSE', `^${src[t.LOOSEPLAIN]}$`)
 
 createToken('GTLT', '((?:<|>)?=?)')
 
-// Something like "2.*" or "1.2.x".
-// Note that "x.x" is a valid xRange identifer, meaning "any version"
-// Only the first item is strictly required.
 createToken('XRANGEIDENTIFIERLOOSE', `${src[t.NUMERICIDENTIFIERLOOSE]}|x|X|\\*`)
 createToken('XRANGEIDENTIFIER', `${src[t.NUMERICIDENTIFIER]}|x|X|\\*`)
 
@@ -8382,8 +7946,6 @@ createToken('XRANGEPLAINLOOSE', `[v=\\s]*(${src[t.XRANGEIDENTIFIERLOOSE]})` +
 createToken('XRANGE', `^${src[t.GTLT]}\\s*${src[t.XRANGEPLAIN]}$`)
 createToken('XRANGELOOSE', `^${src[t.GTLT]}\\s*${src[t.XRANGEPLAINLOOSE]}$`)
 
-// Coercion.
-// Extract anything that could conceivably be a part of a valid semver
 createToken('COERCE', `${'(^|[^\\d])' +
               '(\\d{1,'}${MAX_SAFE_COMPONENT_LENGTH}})` +
               `(?:\\.(\\d{1,${MAX_SAFE_COMPONENT_LENGTH}}))?` +
@@ -8391,8 +7953,6 @@ createToken('COERCE', `${'(^|[^\\d])' +
               `(?:$|[^\\d])`)
 createToken('COERCERTL', src[t.COERCE], true)
 
-// Tilde ranges.
-// Meaning is "reasonably at or greater than"
 createToken('LONETILDE', '(?:~>?)')
 
 createToken('TILDETRIM', `(\\s*)${src[t.LONETILDE]}\\s+`, true)
@@ -8401,8 +7961,6 @@ exports.tildeTrimReplace = '$1~'
 createToken('TILDE', `^${src[t.LONETILDE]}${src[t.XRANGEPLAIN]}$`)
 createToken('TILDELOOSE', `^${src[t.LONETILDE]}${src[t.XRANGEPLAINLOOSE]}$`)
 
-// Caret ranges.
-// Meaning is "at least and backwards compatible with"
 createToken('LONECARET', '(?:\\^)')
 
 createToken('CARETTRIM', `(\\s*)${src[t.LONECARET]}\\s+`, true)
@@ -8411,20 +7969,13 @@ exports.caretTrimReplace = '$1^'
 createToken('CARET', `^${src[t.LONECARET]}${src[t.XRANGEPLAIN]}$`)
 createToken('CARETLOOSE', `^${src[t.LONECARET]}${src[t.XRANGEPLAINLOOSE]}$`)
 
-// A simple gt/lt/eq thing, or just "" to indicate "any version"
 createToken('COMPARATORLOOSE', `^${src[t.GTLT]}\\s*(${src[t.LOOSEPLAIN]})$|^$`)
 createToken('COMPARATOR', `^${src[t.GTLT]}\\s*(${src[t.FULLPLAIN]})$|^$`)
 
-// An expression to strip any whitespace between the gtlt and the thing
-// it modifies, so that `> 1.2.3` ==> `>1.2.3`
 createToken('COMPARATORTRIM', `(\\s*)${src[t.GTLT]
 }\\s*(${src[t.LOOSEPLAIN]}|${src[t.XRANGEPLAIN]})`, true)
 exports.comparatorTrimReplace = '$1$2$3'
 
-// Something like `1.2.3 - 1.2.4`
-// Note that these all use the loose form, because they'll be
-// checked against either the strict or loose comparator form
-// later.
 createToken('HYPHENRANGE', `^\\s*(${src[t.XRANGEPLAIN]})` +
                    `\\s+-\\s+` +
                    `(${src[t.XRANGEPLAIN]})` +
@@ -8435,28 +7986,25 @@ createToken('HYPHENRANGELOOSE', `^\\s*(${src[t.XRANGEPLAINLOOSE]})` +
                         `(${src[t.XRANGEPLAINLOOSE]})` +
                         `\\s*$`)
 
-// Star ranges basically just allow anything at all.
 createToken('STAR', '(<|>)?=?\\s*\\*')
-// >=0.0.0 is like a star
 createToken('GTE0', '^\\s*>=\\s*0\.0\.0\\s*$')
 createToken('GTE0PRE', '^\\s*>=\\s*0\.0\.0-0\\s*$')
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/gtr.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/gtr.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-// Determine if version is greater than all the versions possible in the range.
 const outside = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/outside.js")
 const gtr = (version, range, options) => outside(version, range, '>', options)
 module.exports = gtr
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/intersects.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/intersects.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const Range = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/range.js")
 const intersects = (r1, r2, options) => {
@@ -8467,21 +8015,20 @@ const intersects = (r1, r2, options) => {
 module.exports = intersects
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/ltr.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/ltr.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const outside = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/outside.js")
-// Determine if version is less than all the versions possible in the range
 const ltr = (version, range, options) => outside(version, range, '<', options)
 module.exports = ltr
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/max-satisfying.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/max-satisfying.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const SemVer = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/semver.js")
 const Range = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/range.js")
@@ -8497,9 +8044,7 @@ const maxSatisfying = (versions, range, options) => {
   }
   versions.forEach((v) => {
     if (rangeObj.test(v)) {
-      // satisfies(v, range, options)
       if (!max || maxSV.compare(v) === -1) {
-        // compare(max, v, true)
         max = v
         maxSV = new SemVer(max, options)
       }
@@ -8510,10 +8055,10 @@ const maxSatisfying = (versions, range, options) => {
 module.exports = maxSatisfying
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/min-satisfying.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/min-satisfying.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const SemVer = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/semver.js")
 const Range = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/range.js")
@@ -8528,9 +8073,7 @@ const minSatisfying = (versions, range, options) => {
   }
   versions.forEach((v) => {
     if (rangeObj.test(v)) {
-      // satisfies(v, range, options)
       if (!min || minSV.compare(v) === 1) {
-        // compare(min, v, true)
         min = v
         minSV = new SemVer(min, options)
       }
@@ -8541,10 +8084,10 @@ const minSatisfying = (versions, range, options) => {
 module.exports = minSatisfying
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/min-version.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/min-version.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const SemVer = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/semver.js")
 const Range = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/range.js")
@@ -8569,7 +8112,6 @@ const minVersion = (range, loose) => {
 
     let setMin = null
     comparators.forEach((comparator) => {
-      // Clone to avoid manipulating the comparator's semver object.
       const compver = new SemVer(comparator.semver.version)
       switch (comparator.operator) {
         case '>':
@@ -8579,7 +8121,6 @@ const minVersion = (range, loose) => {
             compver.prerelease.push(0)
           }
           compver.raw = compver.format()
-          /* fallthrough */
         case '':
         case '>=':
           if (!setMin || gt(compver, setMin)) {
@@ -8588,9 +8129,7 @@ const minVersion = (range, loose) => {
           break
         case '<':
         case '<=':
-          /* Ignore maximum versions */
           break
-        /* istanbul ignore next */
         default:
           throw new Error(`Unexpected operation: ${comparator.operator}`)
       }
@@ -8608,10 +8147,10 @@ const minVersion = (range, loose) => {
 module.exports = minVersion
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/outside.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/outside.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const SemVer = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/semver.js")
 const Comparator = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/comparator.js")
@@ -8647,13 +8186,10 @@ const outside = (version, range, hilo, options) => {
       throw new TypeError('Must provide a hilo val of "<" or ">"')
   }
 
-  // If it satisfies the range it is not outside
   if (satisfies(version, range, options)) {
     return false
   }
 
-  // From now on, variable terms are as if we're in "gtr" mode.
-  // but note that everything is flipped for the "ltr" function.
 
   for (let i = 0; i < range.set.length; ++i) {
     const comparators = range.set[i]
@@ -8674,14 +8210,10 @@ const outside = (version, range, hilo, options) => {
       }
     })
 
-    // If the edge version comparator has a operator then our version
-    // isn't outside it
     if (high.operator === comp || high.operator === ecomp) {
       return false
     }
 
-    // If the lowest version comparator has an operator and our version
-    // is less than it then it isn't higher than the range
     if ((!low.operator || low.operator === comp) &&
         ltefn(version, low.semver)) {
       return false
@@ -8695,14 +8227,11 @@ const outside = (version, range, hilo, options) => {
 module.exports = outside
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/simplify.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/simplify.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-// given a set of versions and a range, create a "simplified" range
-// that includes the same versions that the original range does
-// If the original range is shorter than the simplified one, return that.
 const satisfies = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/satisfies.js")
 const compare = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare.js")
 module.exports = (versions, range, options) => {
@@ -8746,10 +8275,10 @@ module.exports = (versions, range, options) => {
 }
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/subset.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/subset.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const Range = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/range.js")
 const Comparator = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/comparator.js")
@@ -8757,41 +8286,6 @@ const { ANY } = Comparator
 const satisfies = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/satisfies.js")
 const compare = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/functions/compare.js")
 
-// Complex range `r1 || r2 || ...` is a subset of `R1 || R2 || ...` iff:
-// - Every simple range `r1, r2, ...` is a null set, OR
-// - Every simple range `r1, r2, ...` which is not a null set is a subset of
-//   some `R1, R2, ...`
-//
-// Simple range `c1 c2 ...` is a subset of simple range `C1 C2 ...` iff:
-// - If c is only the ANY comparator
-//   - If C is only the ANY comparator, return true
-//   - Else if in prerelease mode, return false
-//   - else replace c with `[>=0.0.0]`
-// - If C is only the ANY comparator
-//   - if in prerelease mode, return true
-//   - else replace C with `[>=0.0.0]`
-// - Let EQ be the set of = comparators in c
-// - If EQ is more than one, return true (null set)
-// - Let GT be the highest > or >= comparator in c
-// - Let LT be the lowest < or <= comparator in c
-// - If GT and LT, and GT.semver > LT.semver, return true (null set)
-// - If any C is a = range, and GT or LT are set, return false
-// - If EQ
-//   - If GT, and EQ does not satisfy GT, return true (null set)
-//   - If LT, and EQ does not satisfy LT, return true (null set)
-//   - If EQ satisfies every C, return true
-//   - Else return false
-// - If GT
-//   - If GT.semver is lower than any > or >= comp in C, return false
-//   - If GT is >=, and GT.semver does not satisfy every C, return false
-//   - If GT.semver has a prerelease, and not in prerelease mode
-//     - If no C has a prerelease and the GT.semver tuple, return false
-// - If LT
-//   - If LT.semver is greater than any < or <= comp in C, return false
-//   - If LT is <=, and LT.semver does not satisfy every C, return false
-//   - If GT.semver has a prerelease, and not in prerelease mode
-//     - If no C has a prerelease and the LT.semver tuple, return false
-// - Else return true
 
 const subset = (sub, dom, options = {}) => {
   if (sub === dom)
@@ -8808,10 +8302,6 @@ const subset = (sub, dom, options = {}) => {
       if (isSub)
         continue OUTER
     }
-    // the null set is a subset of everything, but null simple ranges in
-    // a complex range should be ignored.  so if we saw a non-null range,
-    // then we know this isn't a subset, but if EVERY simple range was null,
-    // then it is a subset.
     if (sawNonNull)
       return false
   }
@@ -8861,7 +8351,6 @@ const simpleSubset = (sub, dom, options) => {
       return null
   }
 
-  // will iterate one or zero times
   for (const eq of eqSet) {
     if (gt && !satisfies(eq, String(gt), options))
       return null
@@ -8879,15 +8368,12 @@ const simpleSubset = (sub, dom, options) => {
 
   let higher, lower
   let hasDomLT, hasDomGT
-  // if the subset has a prerelease, we need a comparator in the superset
-  // with the same tuple and a prerelease, or it's not a subset
   let needDomLTPre = lt &&
     !options.includePrerelease &&
     lt.semver.prerelease.length ? lt.semver : false
   let needDomGTPre = gt &&
     !options.includePrerelease &&
     gt.semver.prerelease.length ? gt.semver : false
-  // exception: <1.2.3-0 is the same as <1.2.3
   if (needDomLTPre && needDomLTPre.prerelease.length === 1 &&
       lt.operator === '<' && needDomLTPre.prerelease[0] === 0) {
     needDomLTPre = false
@@ -8932,25 +8418,18 @@ const simpleSubset = (sub, dom, options) => {
       return false
   }
 
-  // if there was a < or >, and nothing in the dom, then must be false
-  // UNLESS it was limited by another range in the other direction.
-  // Eg, >1.0.0 <1.0.1 is still a subset of <2.0.0
   if (gt && hasDomLT && !lt && gtltComp !== 0)
     return false
 
   if (lt && hasDomGT && !gt && gtltComp !== 0)
     return false
 
-  // we needed a prerelease range in a specific tuple, but didn't get one
-  // then this isn't a subset.  eg >=1.2.3-pre is not a subset of >=1.0.0,
-  // because it includes prereleases in the 1.2.3 tuple
   if (needDomGTPre || needDomLTPre)
     return false
 
   return true
 }
 
-// >=1.2.3 is lower than >1.2.3
 const higherGT = (a, b, options) => {
   if (!a)
     return b
@@ -8961,7 +8440,6 @@ const higherGT = (a, b, options) => {
     : a
 }
 
-// <=1.2.3 is higher than <1.2.3
 const lowerLT = (a, b, options) => {
   if (!a)
     return b
@@ -8975,14 +8453,13 @@ const lowerLT = (a, b, options) => {
 module.exports = subset
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/to-comparators.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/to-comparators.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const Range = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/range.js")
 
-// Mostly just for testing and legacy API reasons
 const toComparators = (range, options) =>
   new Range(range, options).set
     .map(comp => comp.map(c => c.value).join(' ').trim().split(' '))
@@ -8990,16 +8467,14 @@ const toComparators = (range, options) =>
 module.exports = toComparators
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/valid.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/ranges/valid.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const Range = __webpack_require__("./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/classes/range.js")
 const validRange = (range, options) => {
   try {
-    // Return '*' instead of '' so that truthiness works.
-    // This will throw if it's invalid anyway
     return new Range(range, options).range || '*'
   } catch (er) {
     return null
@@ -9008,10 +8483,10 @@ const validRange = (range, options) => {
 module.exports = validRange
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/yallist-npm-4.0.0-b493d9e907-343617202a.zip/node_modules/yallist/iterator.js":
-/***/ ((module) => {
+ "./.yarn/cache/yallist-npm-4.0.0-b493d9e907-343617202a.zip/node_modules/yallist/iterator.js":
+ ((module) => {
 
 "use strict";
 
@@ -9024,10 +8499,10 @@ module.exports = function (Yallist) {
 }
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/yallist-npm-4.0.0-b493d9e907-343617202a.zip/node_modules/yallist/yallist.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/yallist-npm-4.0.0-b493d9e907-343617202a.zip/node_modules/yallist/yallist.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -9200,7 +8675,6 @@ Yallist.prototype.forEachReverse = function (fn, thisp) {
 
 Yallist.prototype.get = function (n) {
   for (var i = 0, walker = this.head; walker !== null && i < n; i++) {
-    // abort out of the list early if we hit a cycle
     walker = walker.next
   }
   if (i === n && walker !== null) {
@@ -9210,7 +8684,6 @@ Yallist.prototype.get = function (n) {
 
 Yallist.prototype.getReverse = function (n) {
   for (var i = 0, walker = this.tail; walker !== null && i < n; i++) {
-    // abort out of the list early if we hit a cycle
     walker = walker.prev
   }
   if (i === n && walker !== null) {
@@ -9453,11 +8926,10 @@ function Node (value, prev, next, list) {
 }
 
 try {
-  // add if support for Symbol.iterator is present
   __webpack_require__("./.yarn/cache/yallist-npm-4.0.0-b493d9e907-343617202a.zip/node_modules/yallist/iterator.js")(Yallist)
 } catch (er) {}
 
 
-/***/ })
+ })
 
 }]);

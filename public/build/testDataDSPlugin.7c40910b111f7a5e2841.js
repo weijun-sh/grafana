@@ -1,46 +1,34 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[319],{
 
-/***/ "./public/app/plugins/datasource/testdata/module.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/testdata/module.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "plugin": () => (/* binding */ module_plugin)
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/ConfigEditor.tsx
+;
 var _div;
 
-// Libraries
 
 
 
-/**
- * Empty Config Editor -- settings to save
- */
 class ConfigEditor extends react.PureComponent {
   render() {
-    return _div || (_div = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {}));
+    return _div || (_div = (0,jsx_runtime.jsx)("div", {}));
   }
 
 }
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useAsync.js
 var useAsync = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useAsync.js");
-// EXTERNAL MODULE: ./packages/grafana-e2e-selectors/src/index.ts + 3 modules
 var grafana_e2e_selectors_src = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/components/StreamingClientEditor.tsx
+;
 
 
 
@@ -98,7 +86,7 @@ const StreamingClientEditor = _ref => {
         value
       }
     });
-  }; // Convert values to numbers before saving
+  }; 
 
 
   const onInputChange = e => {
@@ -114,11 +102,11 @@ const StreamingClientEditor = _ref => {
     });
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Type",
       labelWidth: 14,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         width: 32,
         onChange: onSelectChange,
         defaultValue: types[0],
@@ -134,10 +122,10 @@ const StreamingClientEditor = _ref => {
         step,
         placeholder
       } = _ref3;
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      return (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: label,
         labelWidth: 14,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           width: 32,
           type: "number",
           id: `stream.${id}-${query.refId}`,
@@ -149,11 +137,11 @@ const StreamingClientEditor = _ref => {
           onChange: onInputChange
         })
       }, id);
-    }), (query === null || query === void 0 ? void 0 : (_query$stream3 = query.stream) === null || _query$stream3 === void 0 ? void 0 : _query$stream3.type) === 'fetch' && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (query === null || query === void 0 ? void 0 : (_query$stream3 = query.stream) === null || _query$stream3 === void 0 ? void 0 : _query$stream3.type) === 'fetch' && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "URL",
       labelWidth: 14,
       grow: true,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         type: "text",
         name: "url",
         id: `stream.url-${query.refId}`,
@@ -164,7 +152,7 @@ const StreamingClientEditor = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/components/RandomWalkEditor.tsx
+;
 
 
 
@@ -211,13 +199,13 @@ const randomWalkFields = [{
   step: 1,
   tooltip: 'Exclude some percent (chance) points'
 }];
-const testSelectors = grafana_e2e_selectors_src/* selectors.components.DataSource.TestData.QueryTab */.wl.components.DataSource.TestData.QueryTab;
+const testSelectors = grafana_e2e_selectors_src.wl.components.DataSource.TestData.QueryTab;
 const RandomWalkEditor = _ref => {
   let {
     onChange,
     query
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
     children: randomWalkFields.map(_ref2 => {
       let {
         label,
@@ -228,12 +216,12 @@ const RandomWalkEditor = _ref => {
         tooltip
       } = _ref2;
       const selector = testSelectors === null || testSelectors === void 0 ? void 0 : testSelectors[id];
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      return (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: label,
         labelWidth: 14,
         "aria-label": selector,
         tooltip: tooltip,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           width: 32,
           name: id,
           type: "number",
@@ -248,10 +236,10 @@ const RandomWalkEditor = _ref => {
     })
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/components/index.ts
+;
 
 
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/components/CSVContentEditor.tsx
+;
 
 
 
@@ -269,7 +257,7 @@ const CSVContentEditor = _ref => {
     }));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
     height: 300,
     language: "csv",
     value: (_query$csvContent = query.csvContent) !== null && _query$csvContent !== void 0 ? _query$csvContent : '',
@@ -279,7 +267,7 @@ const CSVContentEditor = _ref => {
     showLineNumbers: true
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/components/CSVFileEditor.tsx
+;
 
 
 
@@ -302,11 +290,11 @@ const CSVFileEditor = _ref => {
     label: name,
     value: name
   }));
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "File",
       labelWidth: 14,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         width: 32,
         onChange: onChangeFileName,
         placeholder: "Select csv file",
@@ -316,7 +304,7 @@ const CSVFileEditor = _ref => {
     })
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/constants.ts
+;
 const defaultPulseQuery = {
   timeStep: 60,
   onCount: 3,
@@ -332,7 +320,7 @@ const defaultQuery = {
   scenarioId: 'random_walk',
   refId: ''
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/components/CSVWaveEditor.tsx
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -378,48 +366,48 @@ class CSVWaveEditor extends react.PureComponent {
 
     if (!last) {
       action = () => {
-        this.props.onChange(this.props.index, undefined); // remove
+        this.props.onChange(this.props.index, undefined); 
       };
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    return (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: 'Values',
         grow: true,
         tooltip: "Comma separated values. Each value may be an int, float, or null and must not be empty. Whitespace and trailing commas are removed",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           value: wave.valuesCSV,
           placeholder: 'CSV values',
           onChange: this.onCSVChange,
           autoFocus: true
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: 'Step',
         tooltip: "The number of seconds between datapoints.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           value: wave.timeStep,
           type: "number",
           placeholder: '60',
           width: 6,
           onChange: this.onTimeStepChange
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: 'Labels',
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           value: wave.labels,
           placeholder: 'labels',
           width: 12,
           onChange: this.onLabelsChange
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: 'Name',
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           value: wave.name,
           placeholder: 'name',
           width: 10,
           onChange: this.onNameChange
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
         icon: last ? 'plus' : 'minus',
         variant: "secondary",
         onClick: action
@@ -441,7 +429,6 @@ class CSVWavesEditor extends react.PureComponent {
       if (wave) {
         waves[index] = Object.assign({}, wave);
       } else {
-        // remove the element
         waves.splice(index, 1);
       }
 
@@ -466,8 +453,8 @@ class CSVWavesEditor extends react.PureComponent {
       waves = defaultCSVWaveQuery;
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-      children: waves.map((wave, index) => /*#__PURE__*/(0,jsx_runtime.jsx)(CSVWaveEditor, {
+    return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+      children: waves.map((wave, index) => (0,jsx_runtime.jsx)(CSVWaveEditor, {
         wave: wave,
         index: index,
         onAdd: this.onAdd,
@@ -478,7 +465,7 @@ class CSVWavesEditor extends react.PureComponent {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/components/ErrorEditor.tsx
+;
 
 
 
@@ -498,11 +485,11 @@ const FrontendErrorQueryEditor = _ref => {
     query,
     onChange
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       labelWidth: 14,
       label: "Error type",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         options: ERROR_OPTIONS,
         value: query.errorType,
         onChange: v => {
@@ -515,8 +502,8 @@ const FrontendErrorQueryEditor = _ref => {
   });
 };
 
-/* harmony default export */ const ErrorEditor = (FrontendErrorQueryEditor);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/components/GrafanaLiveEditor.tsx
+ const ErrorEditor = (FrontendErrorQueryEditor);
+;
 
 
 
@@ -552,11 +539,11 @@ const GrafanaLiveEditor = _ref => {
     }));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Channel",
       labelWidth: 14,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         width: 32,
         onChange: onChannelChange,
         placeholder: "Select channel",
@@ -566,7 +553,7 @@ const GrafanaLiveEditor = _ref => {
     })
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/components/NodeGraphEditor.tsx
+;
 
 
 
@@ -579,11 +566,11 @@ function NodeGraphEditor(_ref) {
     onChange
   } = _ref;
   const type = ((_query$nodes = query.nodes) === null || _query$nodes === void 0 ? void 0 : _query$nodes.type) || 'random';
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Data type",
       labelWidth: 14,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         options: options.map(o => ({
           label: o,
           value: o
@@ -594,10 +581,10 @@ function NodeGraphEditor(_ref) {
         })),
         width: 32
       })
-    }), type === 'random' && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), type === 'random' && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Count",
       labelWidth: 14,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         type: "number",
         name: "count",
         value: (_query$nodes2 = query.nodes) === null || _query$nodes2 === void 0 ? void 0 : _query$nodes2.count,
@@ -611,7 +598,7 @@ function NodeGraphEditor(_ref) {
   });
 }
 const options = ['random', 'response'];
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/components/PredictablePulseEditor.tsx
+;
 
 
 
@@ -647,7 +634,6 @@ const PredictablePulseEditor = _ref => {
     query
   } = _ref;
 
-  // Convert values to numbers before saving
   const onInputChange = e => {
     const {
       name,
@@ -661,7 +647,7 @@ const PredictablePulseEditor = _ref => {
     });
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
     children: fields.map(_ref2 => {
       var _query$pulseWave;
 
@@ -671,11 +657,11 @@ const PredictablePulseEditor = _ref => {
         placeholder,
         tooltip
       } = _ref2;
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      return (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: label,
         labelWidth: 14,
         tooltip: tooltip,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           width: 32,
           type: "number",
           name: id,
@@ -688,11 +674,9 @@ const PredictablePulseEditor = _ref => {
     })
   });
 };
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/components/RawFrameEditor.tsx
+;
 
 
 
@@ -724,14 +708,13 @@ const RawFrameEditor = _ref => {
         return;
       }
 
-      let data = undefined; // Copy paste from panel json
+      let data = undefined; 
 
       if ((0,lodash.isArray)(json.series) && json.state) {
         data = json.series.map(v => (0,src.toDataFrameDTO)((0,src.toDataFrame)(v)));
       } else {
         var _v$data;
 
-        // Chek if it is a copy of the raw resuls
         const v = (0,grafana_runtime_src.toDataQueryResponse)({
           data: json
         });
@@ -760,14 +743,14 @@ const RawFrameEditor = _ref => {
     }
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [error && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [error && (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
       title: error,
       severity: "error"
-    }), warning && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+    }), warning && (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
       title: warning,
       severity: "warning"
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
       height: 300,
       language: "json",
       value: (_query$rawFrameConten = query.rawFrameContent) !== null && _query$rawFrameConten !== void 0 ? _query$rawFrameConten : '[]',
@@ -778,7 +761,7 @@ const RawFrameEditor = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/components/SimulationQueryEditor.tsx
+;
 var _Button;
 
 
@@ -796,9 +779,9 @@ const SimulationQueryEditor = _ref => {
     ds
   } = _ref;
   const simQuery = (_query$sim = query.sim) !== null && _query$sim !== void 0 ? _query$sim : {};
-  const simKey = (_simQuery$key = simQuery.key) !== null && _simQuery$key !== void 0 ? _simQuery$key : {}; // This only changes once
+  const simKey = (_simQuery$key = simQuery.key) !== null && _simQuery$key !== void 0 ? _simQuery$key : {}; 
 
-  const info = (0,useAsync/* default */.Z)(async () => {
+  const info = (0,useAsync.Z)(async () => {
     const v = await ds.getResource('sims');
     return {
       sims: v,
@@ -821,7 +804,7 @@ const SimulationQueryEditor = _ref => {
       option: info.value.options.find(v => v.value === type)
     };
   }, [info.value, simKey === null || simKey === void 0 ? void 0 : simKey.type]);
-  let config = (0,useAsync/* default */.Z)(async () => {
+  let config = (0,useAsync.Z)(async () => {
     var _await$ds$getResource;
 
     let path = simKey.type + '/' + simKey.tick + 'hz';
@@ -889,13 +872,13 @@ const SimulationQueryEditor = _ref => {
     ds.postResource('sim/' + path, JSON.parse(data.config));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         labelWidth: 14,
         label: "Simulation",
         tooltip: "",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           isLoading: info.loading,
           options: (_info$value$options = (_info$value = info.value) === null || _info$value === void 0 ? void 0 : _info$value.options) !== null && _info$value$options !== void 0 ? _info$value$options : [],
           value: current.option,
@@ -903,19 +886,19 @@ const SimulationQueryEditor = _ref => {
           width: 32
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         labelWidth: 14,
         label: "Stream",
         tooltip: "connect to the live channel",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           value: Boolean(simQuery.stream),
           onChange: onToggleStream
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Interval",
         tooltip: "the rate a simulation will spit out events",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           width: 10,
           type: "number",
           value: simKey.tick,
@@ -924,49 +907,49 @@ const SimulationQueryEditor = _ref => {
           max: 50,
           suffix: "hz"
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Last",
         tooltip: "Only return the last value",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Label, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Label, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
             value: Boolean(simQuery.last),
             onChange: onToggleLast
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "UID",
         tooltip: "A UID will allow multiple simulations to run at the same time",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           type: "text",
           placeholder: "optional",
           value: simQuery.key.uid,
           onChange: onUIDChanged
         })
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Form, {
+    }), (0,jsx_runtime.jsxs)("div", {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.Form, {
         onSubmit: onSubmitChange,
         children: _ref2 => {
           let {
             register
           } = _ref2;
-          return /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.FieldSet, {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.TextArea, Object.assign({}, register('config'), {
+          return (0,jsx_runtime.jsxs)(grafana_ui_src.FieldSet, {
+            children: [(0,jsx_runtime.jsx)(grafana_ui_src.TextArea, Object.assign({}, register('config'), {
               defaultValue: JSON.stringify(config.value, null, 2),
               rows: 7
-            })), _Button || (_Button = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+            })), _Button || (_Button = (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
               type: "submit",
               children: "Submit"
             }))]
           });
         }
-      }), "SCHEMA:", /*#__PURE__*/(0,jsx_runtime.jsx)("pre", {
+      }), "SCHEMA:", (0,jsx_runtime.jsx)("pre", {
         children: JSON.stringify((_current$details = current.details) === null || _current$details === void 0 ? void 0 : _current$details.config.schema, null, 2)
       })]
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/components/USAQueryEditor.tsx
+;
 
 
 
@@ -977,12 +960,12 @@ function USAQueryEditor(_ref) {
     query,
     onChange
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         labelWidth: 14,
         label: "Mode",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           options: usaQueryModes,
           onChange: v => {
             onChange(Object.assign({}, query, {
@@ -992,9 +975,9 @@ function USAQueryEditor(_ref) {
           width: 32,
           value: usaQueryModes.find(ep => ep.value === query.mode)
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Period",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           value: query.period,
           placeholder: '30m',
           onChange: v => {
@@ -1004,11 +987,11 @@ function USAQueryEditor(_ref) {
           }
         })
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         labelWidth: 14,
         label: "Fields",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.MultiSelect, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.MultiSelect, {
           options: fieldNames,
           onChange: vals => {
             onChange(Object.assign({}, query, {
@@ -1019,10 +1002,10 @@ function USAQueryEditor(_ref) {
           placeholder: "all",
           value: query.fields
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "States",
         grow: true,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.MultiSelect, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.MultiSelect, {
           options: stateNames,
           onChange: vals => {
             onChange(Object.assign({}, query, {
@@ -1040,7 +1023,7 @@ const usaQueryModes = ['values-as-rows', 'values-as-fields', 'values-as-labeled-
   label: f,
   value: f
 }));
-const fieldNames = ['foo', 'bar', 'baz' // all short
+const fieldNames = ['foo', 'bar', 'baz' 
 ].map(f => ({
   label: f,
   value: f
@@ -1049,13 +1032,10 @@ const stateNames = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FL', 
   label: f,
   value: f
 }));
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Observable.js
 var Observable = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Observable.js");
-// EXTERNAL MODULE: ./public/app/features/dashboard/dashgrid/liveTimer.ts
 var liveTimer = __webpack_require__("./public/app/features/dashboard/dashgrid/liveTimer.ts");
-// EXTERNAL MODULE: ./public/app/features/live/data/StreamingDataFrame.ts
 var StreamingDataFrame = __webpack_require__("./public/app/features/live/data/StreamingDataFrame.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/LogIpsum.ts
+;
 
 let index = 0;
 function getRandomLogLevel() {
@@ -1102,7 +1082,7 @@ function getRandomLine() {
   return line;
 }
 const words = ['At', 'vero', 'eos', 'et', 'accusamus', 'et', 'iusto', 'odio', 'dignissimos', 'ducimus', 'qui', 'blanditiis', 'praesentium', 'voluptatum', 'deleniti', 'atque', 'corrupti', 'quos', 'dolores', 'et', 'quas', 'molestias', 'excepturi', 'sint', 'occaecati', 'cupiditate', 'non', 'provident', 'similique', 'sunt', 'in', 'culpa', 'qui', 'officia', 'deserunt', 'mollitia', 'animi', 'id', 'est', 'laborum', 'et', 'dolorum', 'fuga', 'Et', 'harum', 'quidem', 'rerum', 'facilis', 'est', 'et', 'expedita', 'distinctio', 'Nam', 'libero', 'tempore', 'cum', 'soluta', 'nobis', 'est', 'eligendi', 'optio', 'cumque', 'nihil', 'impedit', 'quo', 'minus', 'id', 'quod', 'maxime', 'placeat', 'facere', 'possimus', 'omnis', 'voluptas', 'assumenda', 'est', 'omnis', 'dolor', 'repellendus', 'Temporibus', 'autem', 'quibusdam', 'et', 'aut', 'officiis', 'debitis', 'aut', 'rerum', 'necessitatibus', 'saepe', 'eveniet', 'ut', 'et', 'voluptates', 'repudiandae', 'sint', 'et', 'molestiae', 'non', 'recusandae', 'Itaque', 'earum', 'rerum', 'hic', 'tenetur', 'a', 'sapiente', 'delectus', 'ut', 'aut', 'reiciendis', 'voluptatibus', 'maiores', 'alias', 'consequatur', 'aut', 'perferendis', 'doloribus', 'asperiores', 'repellat'];
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/runStreams.ts
+;
 
 
 
@@ -1112,7 +1092,6 @@ const words = ['At', 'vero', 'eos', 'et', 'accusamus', 'et', 'iusto', 'odio', 'd
 const defaultStreamQuery = {
   type: 'signal',
   speed: 250,
-  // ms
   spread: 3.5,
   noise: 2.2,
   bands: 1
@@ -1135,7 +1114,7 @@ function runStream(target, req) {
   throw new Error(`Unknown Stream Type: ${query.type}`);
 }
 function runSignalStream(target, query, req) {
-  return new Observable/* Observable */.y(subscriber => {
+  return new Observable.y(subscriber => {
     var _target$alias;
 
     const streamId = `signal-${req.panelId}-${target.refId}`;
@@ -1169,7 +1148,7 @@ function runSignalStream(target, query, req) {
       });
     }
 
-    const frame = StreamingDataFrame/* StreamingDataFrame.fromDataFrameJSON */.Av.fromDataFrameJSON({
+    const frame = StreamingDataFrame.Av.fromDataFrameJSON({
       schema
     }, {
       maxLength: maxDataPoints
@@ -1197,7 +1176,7 @@ function runSignalStream(target, query, req) {
         data
       };
       return frame.push(event);
-    }; // Fill the buffer on init
+    }; 
 
 
     if (true) {
@@ -1211,19 +1190,19 @@ function runSignalStream(target, query, req) {
 
     const pushNextEvent = () => {
       addNextRow(Date.now());
-      const elapsed = liveTimer/* liveTimer.lastUpdate */.A.lastUpdate - lastSent;
+      const elapsed = liveTimer.A.lastUpdate - lastSent;
 
-      if (elapsed > 1000 || liveTimer/* liveTimer.ok */.A.ok) {
+      if (elapsed > 1000 || liveTimer.A.ok) {
         subscriber.next({
           data: [frame],
           key: streamId,
           state: src.LoadingState.Streaming
         });
-        lastSent = liveTimer/* liveTimer.lastUpdate */.A.lastUpdate;
+        lastSent = liveTimer.A.lastUpdate;
       }
 
       timeoutId = setTimeout(pushNextEvent, speed);
-    }; // Send first event in 5ms
+    }; 
 
 
     setTimeout(pushNextEvent, 5);
@@ -1234,7 +1213,7 @@ function runSignalStream(target, query, req) {
   });
 }
 function runLogsStream(target, query, req) {
-  return new Observable/* Observable */.y(subscriber => {
+  return new Observable.y(subscriber => {
     const streamId = `logs-${req.panelId}-${target.refId}`;
     const maxDataPoints = req.maxDataPoints || 1000;
     const data = new src.CircularDataFrame({
@@ -1267,7 +1246,7 @@ function runLogsStream(target, query, req) {
         key: streamId
       });
       timeoutId = setTimeout(pushNextEvent, speed);
-    }; // Send first event in 5ms
+    }; 
 
 
     setTimeout(pushNextEvent, 5);
@@ -1278,7 +1257,7 @@ function runLogsStream(target, query, req) {
   });
 }
 function runFetchStream(target, query, req) {
-  return new Observable/* Observable */.y(subscriber => {
+  return new Observable.y(subscriber => {
     const streamId = `fetch-${req.panelId}-${target.refId}`;
     const maxDataPoints = req.maxDataPoints || 1000;
     let data = new src.CircularDataFrame({
@@ -1291,7 +1270,6 @@ function runFetchStream(target, query, req) {
     const csv = new src.CSVReader({
       callback: {
         onHeader: fields => {
-          // Clear any existing fields
           if (data.fields.length) {
             data = new src.CircularDataFrame({
               append: 'tail',
@@ -1325,7 +1303,7 @@ function runFetchStream(target, query, req) {
 
       if (value.done) {
         console.log('Finished stream');
-        subscriber.complete(); // necessary?
+        subscriber.complete(); 
 
         return;
       }
@@ -1344,12 +1322,11 @@ function runFetchStream(target, query, req) {
       }
     });
     return () => {
-      // Cancel fetch?
       console.log('unsubscribing to stream ' + streamId);
     };
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/QueryEditor.tsx
+;
 var _br, _br2, _br3, _br4;
 
 
@@ -1383,7 +1360,7 @@ const endpoints = [{
   value: 'annotations',
   label: 'Annotations'
 }];
-const selectors = grafana_e2e_selectors_src/* selectors.components.DataSource.TestData.QueryTab */.wl.components.DataSource.TestData.QueryTab;
+const selectors = grafana_e2e_selectors_src.wl.components.DataSource.TestData.QueryTab;
 const QueryEditor = _ref => {
   var _query, _query$usa;
 
@@ -1397,8 +1374,7 @@ const QueryEditor = _ref => {
   const {
     loading,
     value: scenarioList
-  } = (0,useAsync/* default */.Z)(async () => {
-    // migrate manual_entry (unusable since 7, removed in 8)
+  } = (0,useAsync.Z)(async () => {
     if (query.scenarioId === 'manual_entry' && query.points) {
       let csvContent = 'Time,Value\n';
 
@@ -1435,7 +1411,7 @@ const QueryEditor = _ref => {
 
     if (!scenario) {
       return;
-    } // Clear model from existing props that belong to other scenarios
+    } 
 
 
     const update = {
@@ -1459,7 +1435,7 @@ const QueryEditor = _ref => {
         break;
 
       case 'live':
-        update.channel = 'random-2s-stream'; // default stream
+        update.channel = 'random-2s-stream'; 
 
         break;
 
@@ -1469,7 +1445,7 @@ const QueryEditor = _ref => {
             type: 'flight',
             tick: 10
           }
-        }; // default stream
+        }; 
 
         break;
 
@@ -1568,22 +1544,22 @@ const QueryEditor = _ref => {
     return null;
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
       "aria-label": selectors.scenarioSelectContainer,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         labelWidth: 14,
         label: "Scenario",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           inputId: `test-data-scenario-select-${query.refId}`,
           options: options,
           value: options.find(item => item.value === query.scenarioId),
           onChange: onScenarioChange,
           width: 32
         })
-      }), (currentScenario === null || currentScenario === void 0 ? void 0 : currentScenario.stringInput) && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (currentScenario === null || currentScenario === void 0 ? void 0 : currentScenario.stringInput) && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "String Input",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           width: 32,
           id: `stringInput-${query.refId}`,
           name: "stringInput",
@@ -1591,10 +1567,10 @@ const QueryEditor = _ref => {
           value: query.stringInput,
           onChange: onInputChange
         })
-      }), Boolean(!(currentScenario !== null && currentScenario !== void 0 && currentScenario.hideAliasField)) && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), Boolean(!(currentScenario !== null && currentScenario !== void 0 && currentScenario.hideAliasField)) && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Alias",
         labelWidth: 14,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           width: 32,
           id: `alias-${query.refId}`,
           type: "text",
@@ -1604,13 +1580,13 @@ const QueryEditor = _ref => {
           value: query.alias,
           onChange: onInputChange
         })
-      }), showLabels && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), showLabels && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Labels",
         labelWidth: 14,
-        tooltip: /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: ["Set labels using a key=value syntax:", _br || (_br = /*#__PURE__*/(0,jsx_runtime.jsx)("br", {})), `{ key = "value", key2 = "value" }`, _br2 || (_br2 = /*#__PURE__*/(0,jsx_runtime.jsx)("br", {})), "key=\"value\", key2=\"value\"", _br3 || (_br3 = /*#__PURE__*/(0,jsx_runtime.jsx)("br", {})), "key=value, key2=value", _br4 || (_br4 = /*#__PURE__*/(0,jsx_runtime.jsx)("br", {}))]
+        tooltip: (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: ["Set labels using a key=value syntax:", _br || (_br = (0,jsx_runtime.jsx)("br", {})), `{ key = "value", key2 = "value" }`, _br2 || (_br2 = (0,jsx_runtime.jsx)("br", {})), "key=\"value\", key2=\"value\"", _br3 || (_br3 = (0,jsx_runtime.jsx)("br", {})), "key=value, key2=value", _br4 || (_br4 = (0,jsx_runtime.jsx)("br", {}))]
         }),
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           width: 32,
           id: `labels-${query.refId}`,
           name: "labels",
@@ -1619,39 +1595,39 @@ const QueryEditor = _ref => {
           placeholder: "key=value, key2=value2"
         })
       })]
-    }), scenarioId === 'random_walk' && /*#__PURE__*/(0,jsx_runtime.jsx)(RandomWalkEditor, {
+    }), scenarioId === 'random_walk' && (0,jsx_runtime.jsx)(RandomWalkEditor, {
       onChange: onInputChange,
       query: query,
       ds: datasource
-    }), scenarioId === 'streaming_client' && /*#__PURE__*/(0,jsx_runtime.jsx)(StreamingClientEditor, {
+    }), scenarioId === 'streaming_client' && (0,jsx_runtime.jsx)(StreamingClientEditor, {
       onChange: onStreamClientChange,
       query: query,
       ds: datasource
-    }), scenarioId === 'live' && /*#__PURE__*/(0,jsx_runtime.jsx)(GrafanaLiveEditor, {
+    }), scenarioId === 'live' && (0,jsx_runtime.jsx)(GrafanaLiveEditor, {
       onChange: onUpdate,
       query: query,
       ds: datasource
-    }), scenarioId === 'simulation' && /*#__PURE__*/(0,jsx_runtime.jsx)(SimulationQueryEditor, {
+    }), scenarioId === 'simulation' && (0,jsx_runtime.jsx)(SimulationQueryEditor, {
       onChange: onUpdate,
       query: query,
       ds: datasource
-    }), scenarioId === 'raw_frame' && /*#__PURE__*/(0,jsx_runtime.jsx)(RawFrameEditor, {
+    }), scenarioId === 'raw_frame' && (0,jsx_runtime.jsx)(RawFrameEditor, {
       onChange: onUpdate,
       query: query,
       ds: datasource
-    }), scenarioId === 'csv_file' && /*#__PURE__*/(0,jsx_runtime.jsx)(CSVFileEditor, {
+    }), scenarioId === 'csv_file' && (0,jsx_runtime.jsx)(CSVFileEditor, {
       onChange: onUpdate,
       query: query,
       ds: datasource
-    }), scenarioId === 'csv_content' && /*#__PURE__*/(0,jsx_runtime.jsx)(CSVContentEditor, {
+    }), scenarioId === 'csv_content' && (0,jsx_runtime.jsx)(CSVContentEditor, {
       onChange: onUpdate,
       query: query,
       ds: datasource
-    }), scenarioId === 'logs' && /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), scenarioId === 'logs' && (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Lines",
         labelWidth: 14,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           type: "number",
           name: "lines",
           value: query.lines,
@@ -1659,63 +1635,61 @@ const QueryEditor = _ref => {
           onChange: onInputChange,
           placeholder: "10"
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Level",
         labelWidth: 14,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           onChange: onInputChange,
           name: "levelColumn",
           value: !!query.levelColumn
         })
       })]
-    }), scenarioId === 'usa' && /*#__PURE__*/(0,jsx_runtime.jsx)(USAQueryEditor, {
+    }), scenarioId === 'usa' && (0,jsx_runtime.jsx)(USAQueryEditor, {
       onChange: onUSAStatsChange,
       query: (_query$usa = query.usa) !== null && _query$usa !== void 0 ? _query$usa : {}
-    }), scenarioId === 'grafana_api' && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), scenarioId === 'grafana_api' && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       labelWidth: 14,
       label: "Endpoint",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         options: endpoints,
         onChange: onEndPointChange,
         width: 32,
         value: endpoints.find(ep => ep.value === query.stringInput)
       })
-    }), scenarioId === 'arrow' && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), scenarioId === 'arrow' && (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       grow: true,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.TextArea, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.TextArea, {
         name: "stringInput",
         value: query.stringInput,
         rows: 10,
         placeholder: "Copy base64 text data from query result",
         onChange: onInputChange
       })
-    }), scenarioId === 'predictable_pulse' && /*#__PURE__*/(0,jsx_runtime.jsx)(PredictablePulseEditor, {
+    }), scenarioId === 'predictable_pulse' && (0,jsx_runtime.jsx)(PredictablePulseEditor, {
       onChange: onPulseWaveChange,
       query: query,
       ds: datasource
-    }), scenarioId === 'predictable_csv_wave' && /*#__PURE__*/(0,jsx_runtime.jsx)(CSVWavesEditor, {
+    }), scenarioId === 'predictable_csv_wave' && (0,jsx_runtime.jsx)(CSVWavesEditor, {
       onChange: onCSVWaveChange,
       waves: query.csvWave
-    }), scenarioId === 'node_graph' && /*#__PURE__*/(0,jsx_runtime.jsx)(NodeGraphEditor, {
+    }), scenarioId === 'node_graph' && (0,jsx_runtime.jsx)(NodeGraphEditor, {
       onChange: val => onChange(Object.assign({}, query, {
         nodes: val
       })),
       query: query
-    }), scenarioId === 'server_error_500' && /*#__PURE__*/(0,jsx_runtime.jsx)(ErrorEditor, {
+    }), scenarioId === 'server_error_500' && (0,jsx_runtime.jsx)(ErrorEditor, {
       onChange: onUpdate,
       query: query,
       ds: datasource
-    }), description && /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+    }), description && (0,jsx_runtime.jsx)("p", {
       children: description
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/TestInfoTab.tsx
+;
 var TestInfoTab_div;
 
-// Libraries
 
- // Types
 
 
 
@@ -1725,43 +1699,25 @@ class TestInfoTab extends react.PureComponent {
   }
 
   render() {
-    return TestInfoTab_div || (TestInfoTab_div = /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-      children: ["See github for more information about setting up a reproducible test environment.", /*#__PURE__*/(0,jsx_runtime.jsx)("br", {}), /*#__PURE__*/(0,jsx_runtime.jsx)("br", {}), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+    return TestInfoTab_div || (TestInfoTab_div = (0,jsx_runtime.jsxs)("div", {
+      children: ["See github for more information about setting up a reproducible test environment.", (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
         variant: "secondary",
         href: "https://github.com/grafana/grafana/tree/main/devenv",
         target: "_blank",
         rel: "noopener noreferrer",
         children: "GitHub"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("br", {})]
+      }), (0,jsx_runtime.jsx)("br", {})]
     }));
   }
 
 }
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/merge.js
 var merge = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/merge.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/throwError.js
 var throwError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/throwError.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/from.js
 var from = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/from.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/delay.js
 var delay = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/delay.js");
-// EXTERNAL MODULE: ./public/app/features/variables/utils.ts
 var utils = __webpack_require__("./public/app/features/variables/utils.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/metricTree.ts
-/*
- *  Builds a nested tree like
- *  [
- *    {
- *      name: 'A',
- *      children: [
- *        { name: 'AA', children: [] },
- *        { name: 'AB', children: [] },
- *      ]
- *    }
- *  ]
- */
+;
 function buildMetricTree(parent, depth) {
   const chars = ['A', 'B', 'C'];
   const children = [];
@@ -1792,7 +1748,7 @@ function queryTree(children, query, queryIndex) {
 
   const nodeQuery = query[queryIndex];
   let result = [];
-  let namesToMatch = [nodeQuery]; // handle glob queries
+  let namesToMatch = [nodeQuery]; 
 
   if (nodeQuery.startsWith('{')) {
     namesToMatch = nodeQuery.replace(/\{|\}/g, '').split(',');
@@ -1827,7 +1783,7 @@ function queryMetricTree(query) {
   const children = buildMetricTree('', 0);
   return queryTree(children, query.split('.'), 0);
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/testData/serviceMapResponse.ts
+;
 
 const nodes = {
   fields: [{
@@ -2054,7 +2010,7 @@ const edges = {
   },
   name: 'edges'
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/nodeGraphUtils.ts
+;
 
 
 function generateRandomNodes() {
@@ -2086,7 +2042,7 @@ function generateRandomNodes() {
     }
 
     nodesWithoutMaxEdges.push(node);
-  } // Add some random edges to create possible cycle
+  } 
 
 
   const additionalEdges = Math.floor(count / 2);
@@ -2196,7 +2152,7 @@ function generateRandomNodes() {
     nodeFields.arc__errors.values.add(node.error);
 
     for (const edge of node.edges) {
-      const id = `${node.id}--${edge}`; // We can have duplicate edges when we added some more by random
+      const id = `${node.id}--${edge}`; 
 
       if (edgesSet.has(id)) {
         continue;
@@ -2230,7 +2186,7 @@ function makeRandomNode(index) {
 function savedNodesResponse() {
   return [new src.MutableDataFrame(nodes), new src.MutableDataFrame(edges)];
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/variables.ts
+;
 
 class TestDataVariableSupport extends src.StandardVariableSupport {
   toDataQuery(query) {
@@ -2243,7 +2199,7 @@ class TestDataVariableSupport extends src.StandardVariableSupport {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/datasource.ts
+;
 function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -2269,7 +2225,7 @@ class TestDataDataSource extends grafana_runtime_src.DataSourceWithBackend {
 
   query(options) {
     const backendQueries = [];
-    const streams = []; // Start streams and prepare queries
+    const streams = []; 
 
     for (const target of options.targets) {
       if (target.hide) {
@@ -2308,12 +2264,9 @@ class TestDataDataSource extends grafana_runtime_src.DataSourceWithBackend {
           break;
 
         case 'server_error_500':
-          // this now has an option where it can return/throw an error from the frontend.
-          // if it doesn't, send it to the backend where it might panic there :)
           const query = this.serverErrorQuery(target, options);
           query ? streams.push(query) : backendQueries.push(target);
           break;
-        // Unusable since 7, removed in 8
 
         case 'manual_entry':
           {
@@ -2347,7 +2300,7 @@ class TestDataDataSource extends grafana_runtime_src.DataSourceWithBackend {
       });
     }
 
-    return (0,merge/* merge */.T)(...streams);
+    return (0,merge.T)(...streams);
   }
 
   resolveTemplateVariables(query, scopedVars) {
@@ -2385,7 +2338,7 @@ class TestDataDataSource extends grafana_runtime_src.DataSourceWithBackend {
     return (0,of.of)({
       key: target.refId,
       data: [dataFrame]
-    }).pipe((0,delay/* delay */.g)(100));
+    }).pipe((0,delay.g)(100));
   }
 
   buildFakeAnnotationEvents(range, count) {
@@ -2441,7 +2394,7 @@ class TestDataDataSource extends grafana_runtime_src.DataSourceWithBackend {
     var _target$stringInput;
 
     const query = (_target$stringInput = target.stringInput) !== null && _target$stringInput !== void 0 ? _target$stringInput : '';
-    const interpolatedQuery = this.templateSrv.replace(query, (0,utils/* getSearchFilterScopedVar */._6)({
+    const interpolatedQuery = this.templateSrv.replace(query, (0,utils._6)({
       query,
       wildcardChar: '*',
       options: options.scopedVars
@@ -2454,7 +2407,7 @@ class TestDataDataSource extends grafana_runtime_src.DataSourceWithBackend {
     const dataFrame = new src.ArrayDataFrame(items);
     return (0,of.of)({
       data: [dataFrame]
-    }).pipe((0,delay/* delay */.g)(100));
+    }).pipe((0,delay.g)(100));
   }
 
   nodesQuery(target, options) {
@@ -2478,7 +2431,7 @@ class TestDataDataSource extends grafana_runtime_src.DataSourceWithBackend {
 
     return (0,of.of)({
       data: frames
-    }).pipe((0,delay/* delay */.g)(100));
+    }).pipe((0,delay.g)(100));
   }
 
   rawFrameQuery(target, options) {
@@ -2493,12 +2446,12 @@ class TestDataDataSource extends grafana_runtime_src.DataSourceWithBackend {
       return (0,of.of)({
         data,
         state: src.LoadingState.Done
-      }).pipe((0,delay/* delay */.g)(100));
+      }).pipe((0,delay.g)(100));
     } catch (ex) {
       return (0,of.of)({
         data: [],
         error: ex
-      }).pipe((0,delay/* delay */.g)(100));
+      }).pipe((0,delay.g)(100));
     }
   }
 
@@ -2520,7 +2473,7 @@ class TestDataDataSource extends grafana_runtime_src.DataSourceWithBackend {
       if (errorType === 'frontend_exception') {
         throw new Error('Scenario threw an exception in the frontend because the input was empty.');
       } else {
-        return (0,throwError/* throwError */._)(() => new Error('Scenario returned an error because the input was empty.'));
+        return (0,throwError._)(() => new Error('Scenario returned an error because the input was empty.'));
       }
     }
 
@@ -2531,7 +2484,7 @@ class TestDataDataSource extends grafana_runtime_src.DataSourceWithBackend {
 
 function runGrafanaAPI(target, req) {
   const url = `/api/${target.stringInput}`;
-  return (0,from/* from */.D)((0,grafana_runtime_src.getBackendSrv)().get(url).then(res => {
+  return (0,from.D)((0,grafana_runtime_src.getBackendSrv)().get(url).then(res => {
     const frame = new src.ArrayDataFrame(res);
     return {
       state: src.LoadingState.Done,
@@ -2556,7 +2509,7 @@ function runGrafanaLiveQuery(target, req) {
     key: `testStream.${liveQueryCounter++}`
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/testdata/module.tsx
+;
 function module_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -2581,6 +2534,6 @@ const module_plugin = new src.DataSourcePlugin(TestDataDataSource).setConfigEdit
   id: 'setup'
 });
 
-/***/ })
+ })
 
 }]);

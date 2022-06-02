@@ -1,7 +1,7 @@
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[7428],{
 
-/***/ "./public/app/angular/components/code_editor/theme-grafana-dark.js":
-/***/ (() => {
+ "./public/app/angular/components/code_editor/theme-grafana-dark.js":
+ (() => {
 
 ace.define(
   'ace/theme/grafana-dark',
@@ -122,6 +122,6 @@ ace.define(
 );
 
 
-/***/ })
+ })
 
 }]);

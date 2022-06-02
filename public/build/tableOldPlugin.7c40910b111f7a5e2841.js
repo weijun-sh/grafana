@@ -1,16 +1,15 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[6784],{
 
-/***/ "./public/app/angular/AngularLocationWrapper.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/AngularLocationWrapper.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "O": () => (/* binding */ AngularLocationWrapper)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "O": () => ( AngularLocationWrapper)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
 
- // Ref: https://github.com/angular/angular.js/blob/ae8e903edf88a83fedd116ae02c0628bf72b150c/src/ng/location.js#L5
 
 const DEFAULT_PORTS = {
   http: 80,
@@ -118,7 +117,6 @@ class AngularLocationWrapper {
       }
 
       for (const key of Object.keys(newQuery)) {
-        // removing params with null | undefined
         if (newQuery[key] === null || newQuery[key] === undefined) {
           delete newQuery[key];
         }
@@ -163,19 +161,19 @@ class AngularLocationWrapper {
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/angular/panel/metrics_panel_ctrl.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/panel/metrics_panel_ctrl.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "k": () => (/* binding */ MetricsPanelCtrl)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/panel/panel_ctrl.ts");
-/* harmony import */ var app_features_dashboard_utils_panel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/dashboard/utils/panel.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "k": () => ( MetricsPanelCtrl)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/panel/panel_ctrl.ts");
+ var app_features_dashboard_utils_panel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/dashboard/utils/panel.ts");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -183,7 +181,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__/* .PanelCtrl */ .q {
+class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ .q {
   constructor($scope, $injector) {
     super($scope, $injector);
 
@@ -220,7 +218,7 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
         if (data.state === _grafana_data__WEBPACK_IMPORTED_MODULE_1__.LoadingState.Error) {
           this.loading = false;
           this.processDataError(data.error);
-        } // Ignore data in loading state
+        } 
 
 
         if (data.state === _grafana_data__WEBPACK_IMPORTED_MODULE_1__.LoadingState.Loading) {
@@ -246,7 +244,6 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
         if (this.useDataFrames) {
           this.handleDataFrames(data.series);
         } else {
-          // Make the results look as if they came directly from a <6.2 datasource request
           const legacy = data.series.map(v => (0,_grafana_data__WEBPACK_IMPORTED_MODULE_1__.toLegacyResponseData)(v));
           this.handleQueryResult({
             data: legacy
@@ -283,15 +280,14 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
   }
 
   onMetricsPanelRefresh() {
-    // ignore fetching data if another panel is in fullscreen
     if (this.otherPanelInFullscreenMode()) {
       return;
-    } // if we have snapshot data use that
+    } 
 
 
     if (this.panel.snapshotData) {
       this.updateTimeRange();
-      let data = this.panel.snapshotData; // backward compatibility
+      let data = this.panel.snapshotData; 
 
       if (!(0,lodash__WEBPACK_IMPORTED_MODULE_0__.isArray)(data)) {
         data = data.data;
@@ -301,17 +297,16 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
         state: _grafana_data__WEBPACK_IMPORTED_MODULE_1__.LoadingState.Done,
         series: data,
         timeRange: this.range
-      }; // Defer panel rendering till the next digest cycle.
-      // For some reason snapshot panels don't init at this time, so this helps to avoid rendering issues.
+      }; 
 
       return this.$timeout(() => {
         this.events.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_1__.PanelEvents.dataSnapshotLoad, data);
       });
-    } // clear loading/error state
+    } 
 
 
     delete this.error;
-    this.loading = true; // load datasource service
+    this.loading = true; 
 
     return this.datasourceSrv.get(this.panel.datasource, this.panel.scopedVars).then(this.issueQueries.bind(this)).catch(err => {
       this.processDataError(err);
@@ -319,7 +314,6 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
   }
 
   processDataError(err) {
-    // if canceled  keep loading set to true
     if (err.cancelled) {
       console.log('Panel request cancelled', err);
       return;
@@ -342,13 +336,13 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
     if (!this.$scope.$root.$$phase) {
       this.$scope.$digest();
     }
-  } // Updates the response with information from the stream
+  } 
 
 
   updateTimeRange(datasource) {
     this.datasource = datasource || this.datasource;
     this.range = this.timeSrv.timeRange();
-    const newTimeData = (0,app_features_dashboard_utils_panel__WEBPACK_IMPORTED_MODULE_3__/* .applyPanelTimeOverrides */ .W1)(this.panel, this.range);
+    const newTimeData = (0,app_features_dashboard_utils_panel__WEBPACK_IMPORTED_MODULE_3__ .W1)(this.panel, this.range);
     this.timeInfo = newTimeData.timeInfo;
     this.range = newTimeData.timeRange;
   }
@@ -413,20 +407,20 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
 
 
 
-/***/ }),
+ }),
 
-/***/ "./public/app/angular/panel/panel_ctrl.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/panel/panel_ctrl.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "q": () => (/* binding */ PanelCtrl)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var app_angular_AngularLocationWrapper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/AngularLocationWrapper.ts");
-/* harmony import */ var app_core_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/config.ts");
-/* harmony import */ var app_core_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/core.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "q": () => ( PanelCtrl)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var app_angular_AngularLocationWrapper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/AngularLocationWrapper.ts");
+ var app_core_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/config.ts");
+ var app_core_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/core.ts");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -474,11 +468,11 @@ class PanelCtrl {
     this.$scope = $scope;
     this.$timeout = $injector.get('$timeout');
     this.editorTabs = [];
-    this.$location = new app_angular_AngularLocationWrapper__WEBPACK_IMPORTED_MODULE_2__/* .AngularLocationWrapper */ .O();
+    this.$location = new app_angular_AngularLocationWrapper__WEBPACK_IMPORTED_MODULE_2__ .O();
     this.events = new _grafana_data__WEBPACK_IMPORTED_MODULE_1__.EventBusSrv();
-    this.timing = {}; // not used but here to not break plugins
+    this.timing = {}; 
 
-    const plugin = app_core_config__WEBPACK_IMPORTED_MODULE_3__/* ["default"].panels */ .ZP.panels[this.panel.type];
+    const plugin = app_core_config__WEBPACK_IMPORTED_MODULE_3__ .ZP.panels[this.panel.type];
 
     if (plugin) {
       this.pluginId = plugin.id;
@@ -495,7 +489,7 @@ class PanelCtrl {
   }
 
   renderingCompleted() {
-    app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .profiler.renderingCompleted */ .rv.renderingCompleted();
+    app_core_core__WEBPACK_IMPORTED_MODULE_4__ .rv.renderingCompleted();
   }
 
   refresh() {
@@ -539,7 +533,7 @@ class PanelCtrl {
     const menu = [];
     this.events.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_1__.PanelEvents.initPanelActions, menu);
     return menu;
-  } // Override in sub-class to add items before extended menu
+  } 
 
 
   async getAdditionalMenuItems() {
@@ -552,21 +546,21 @@ class PanelCtrl {
 
   render(payload) {
     this.events.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_1__.PanelEvents.render, payload);
-  } // overriden from react
+  } 
 
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/angular/panel/query_ctrl.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/panel/query_ctrl.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "G": () => (/* binding */ QueryCtrl)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ __webpack_require__.d(__webpack_exports__, {
+   "G": () => ( QueryCtrl)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -606,42 +600,32 @@ class QueryCtrl {
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/panel/table-old/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/panel/table-old/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "TablePanelCtrl": () => (/* binding */ TablePanelCtrl),
-  "plugin": () => (/* binding */ module_plugin)
+  "TablePanelCtrl": () => ( TablePanelCtrl),
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./.yarn/cache/jquery-npm-3.6.0-ca7872bdbb-8fd5fef4aa.zip/node_modules/jquery/dist/jquery-exposed.js
 var jquery_exposed = __webpack_require__("./.yarn/cache/jquery-npm-3.6.0-ca7872bdbb-8fd5fef4aa.zip/node_modules/jquery/dist/jquery-exposed.js");
-var jquery_exposed_default = /*#__PURE__*/__webpack_require__.n(jquery_exposed);
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
+var jquery_exposed_default = __webpack_require__.n(jquery_exposed);
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/config.ts
 var config = __webpack_require__("./public/app/core/config.ts");
-// EXTERNAL MODULE: ./public/app/features/variables/adhoc/actions.ts
 var actions = __webpack_require__("./public/app/features/variables/adhoc/actions.ts");
-// EXTERNAL MODULE: ./public/app/plugins/sdk.ts
 var sdk = __webpack_require__("./public/app/plugins/sdk.ts");
-// EXTERNAL MODULE: ./public/app/store/store.ts
 var store = __webpack_require__("./public/app/store/store.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/table-old/column_options.ts
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 class ColumnOptionsCtrl {
-  /** @ngInject */
   constructor($scope) {
     _defineProperty(this, "panel", void 0);
 
@@ -766,7 +750,7 @@ class ColumnOptionsCtrl {
     };
     const styles = this.panel.styles;
     const stylesCount = styles.length;
-    let indexToInsert = stylesCount; // check if last is a catch all rule, then add it before that one
+    let indexToInsert = stylesCount; 
 
     if (stylesCount > 0) {
       const last = styles[stylesCount - 1];
@@ -861,13 +845,10 @@ function columnOptionsTab() {
     controller: ColumnOptionsCtrl
   };
 }
-// EXTERNAL MODULE: ./public/app/core/table_model.ts
 var table_model = __webpack_require__("./public/app/core/table_model.ts");
-// EXTERNAL MODULE: ./public/app/core/time_series2.ts
 var time_series2 = __webpack_require__("./public/app/core/time_series2.ts");
-// EXTERNAL MODULE: ./public/app/core/utils/flatten.ts
 var flatten = __webpack_require__("./public/app/core/utils/flatten.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/table-old/transformers.ts
+;
 
 
 
@@ -934,7 +915,7 @@ transformers['timeseries_to_columns'] = {
     model.columns.push({
       text: 'Time',
       type: 'date'
-    }); // group by time
+    }); 
 
     const points = {};
     const filteredData = timeSeriesFormatFilterer(data);
@@ -1011,7 +992,7 @@ transformers['timeseries_aggregations'] = {
     const filteredData = timeSeriesFormatFilterer(data);
 
     for (i = 0; i < filteredData.length; i++) {
-      const series = new time_series2/* default */.Z({
+      const series = new time_series2.Z({
         datapoints: filteredData[i].datapoints,
         alias: filteredData[i].target
       });
@@ -1061,16 +1042,16 @@ transformers['table'] = {
   getColumns: data => {
     if (!data || data.length === 0) {
       return [];
-    } // Single query returns data columns as is
+    } 
 
 
     if (data.length === 1) {
       return [...data[0].columns];
     }
 
-    const filteredData = tableDataFormatFilterer(data); // Track column indexes: name -> index
+    const filteredData = tableDataFormatFilterer(data); 
 
-    const columnNames = {}; // Union of all columns
+    const columnNames = {}; 
 
     const columns = filteredData.reduce((acc, series) => {
       series.columns.forEach(col => {
@@ -1101,7 +1082,7 @@ transformers['table'] = {
       };
     }
 
-    (0,table_model/* mergeTablesIntoModel */.M)(model, ...filteredData);
+    (0,table_model.M)(model, ...filteredData);
   }
 };
 transformers['json'] = {
@@ -1118,7 +1099,7 @@ transformers['json'] = {
 
       if (series.type !== 'docs') {
         continue;
-      } // only look at 100 docs
+      } 
 
 
       const maxDocs = Math.min(series.datapoints.length, 100);
@@ -1146,7 +1127,7 @@ transformers['json'] = {
     for (const column of panel.columns) {
       const tableCol = {
         text: column.text
-      }; // if filterable data then set columns to filterable
+      }; 
 
       if (data.length > 0 && data[0].filterable) {
         tableCol.filterable = true;
@@ -1185,7 +1166,7 @@ transformers['json'] = {
 };
 
 function transformDataToTable(data, panel) {
-  const model = new table_model/* default */.Z();
+  const model = new table_model.Z();
 
   if (!data || data.length === 0) {
     return model;
@@ -1204,13 +1185,12 @@ function transformDataToTable(data, panel) {
 }
 
 
-;// CONCATENATED MODULE: ./public/app/plugins/panel/table-old/editor.ts
+;
 function editor_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 class TablePanelEditorCtrl {
-  /** @ngInject */
   constructor($scope, uiSegmentSrv) {
     this.uiSegmentSrv = uiSegmentSrv;
 
@@ -1331,9 +1311,8 @@ function tablePanelEditor(uiSegmentSrv) {
     controller: TablePanelEditorCtrl
   };
 }
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/table-old/renderer.ts
+;
 function renderer_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1444,7 +1423,7 @@ class TableRenderer {
 
         if ((0,lodash.isArray)(v)) {
           v = v[0];
-        } // if is an epoch (numeric string and len > 12)
+        } 
 
 
         if ((0,lodash.isString)(v) && !isNaN(v) && v.length > 12) {
@@ -1482,7 +1461,7 @@ class TableRenderer {
               }
 
               continue;
-            } // Allow both numeric and string values to be mapped
+            } 
 
 
             if (!(0,lodash.isString)(v) && Number(map.value) === Number(v) || map.value === v) {
@@ -1601,9 +1580,7 @@ class TableRenderer {
     } else if (this.colorState.value) {
       cellStyles.push('color:' + this.colorState.value);
       this.colorState.value = null;
-    } // because of the fixed table headers css only solution
-    // there is an issue if header cell is wider the cell
-    // this hack adds header content to cell (not visible)
+    } 
 
 
     let columnHtml = '';
@@ -1640,7 +1617,6 @@ class TableRenderer {
     }
 
     if (column.style && column.style.link) {
-      // Render cell as link
       const scopedVars = this.renderRowVariables(rowIndex);
       scopedVars['__cell'] = {
         value: value,
@@ -1735,7 +1711,7 @@ class TableRenderer {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/table-old/module.ts
+;
 function module_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1750,7 +1726,6 @@ function module_defineProperty(obj, key, value) { if (key in obj) { Object.defin
 
 
 class TablePanelCtrl extends sdk.MetricsPanelCtrl {
-  /** @ngInject */
   constructor($scope, $injector, annotationsSrv, $sanitize) {
     super($scope, $injector);
     this.annotationsSrv = annotationsSrv;
@@ -1823,7 +1798,7 @@ class TablePanelCtrl extends sdk.MetricsPanelCtrl {
   }
 
   migrateToPanel(type) {
-    this.onPluginTypeChange(config/* default.panels */.ZP.panels[type]);
+    this.onPluginTypeChange(config.ZP.panels[type]);
   }
 
   issueQueries(datasource) {
@@ -1841,7 +1816,7 @@ class TablePanelCtrl extends sdk.MetricsPanelCtrl {
         this.render();
         return {
           data: this.dataRaw
-        }; // Not used
+        }; 
       });
     }
 
@@ -1850,7 +1825,7 @@ class TablePanelCtrl extends sdk.MetricsPanelCtrl {
 
   onDataReceived(dataList) {
     this.dataRaw = dataList;
-    this.pageIndex = 0; // automatically correct transform mode based on data
+    this.pageIndex = 0; 
 
     if (this.dataRaw && this.dataRaw.length) {
       if ((0,src.isTableData)(this.dataRaw[0])) {
@@ -1872,12 +1847,11 @@ class TablePanelCtrl extends sdk.MetricsPanelCtrl {
   render() {
     this.table = transformDataToTable(this.dataRaw, this.panel);
     this.table.sort(this.panel.sort);
-    this.renderer = new TableRenderer(this.panel, this.table, this.dashboard.getTimezone(), this.$sanitize, this.templateSrv, config/* default.theme */.ZP.theme);
+    this.renderer = new TableRenderer(this.panel, this.table, this.dashboard.getTimezone(), this.$sanitize, this.templateSrv, config.ZP.theme);
     return super.render(this.table);
   }
 
   toggleColumnSort(col, colIndex) {
-    // remove sort flag from current column
     if (this.table.columns[this.panel.sort.col]) {
       this.table.columns[this.panel.sort.col].sort = false;
     }
@@ -1959,7 +1933,7 @@ class TablePanelCtrl extends sdk.MetricsPanelCtrl {
       rootElem.css({
         'max-height': getTableHeight()
       });
-    } // hook up link tooltips
+    } 
 
 
     elem.tooltip({
@@ -1974,7 +1948,7 @@ class TablePanelCtrl extends sdk.MetricsPanelCtrl {
         value: data.rows[filterData.row][filterData.column],
         operator: filterData.operator
       };
-      (0,store/* dispatch */.WI)((0,actions/* applyFilterFromTable */.m2)(options));
+      (0,store.WI)((0,actions.m2)(options));
     }
 
     elem.on('click', '.table-panel-page-link', switchPage);
@@ -2004,33 +1978,33 @@ const module_plugin = new src.PanelPlugin(null);
 module_plugin.angularPanelCtrl = TablePanelCtrl;
 module_plugin.setNoPadding();
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/sdk.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/sdk.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MetricsPanelCtrl": () => (/* binding */ MetricsPanelCtrl),
-/* harmony export */   "PanelCtrl": () => (/* binding */ PanelCtrl),
-/* harmony export */   "QueryCtrl": () => (/* binding */ QueryCtrl),
-/* harmony export */   "loadPluginCss": () => (/* reexport safe */ _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__.loadPluginCss)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/panel/metrics_panel_ctrl.ts");
-/* harmony import */ var app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/angular/panel/panel_ctrl.ts");
-/* harmony import */ var app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/angular/panel/query_ctrl.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "MetricsPanelCtrl": () => ( MetricsPanelCtrl),
+   "PanelCtrl": () => ( PanelCtrl),
+   "QueryCtrl": () => ( QueryCtrl),
+   "loadPluginCss": () => ( _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__.loadPluginCss)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/panel/metrics_panel_ctrl.ts");
+ var app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/angular/panel/panel_ctrl.ts");
+ var app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/angular/panel/query_ctrl.ts");
 
 
 
 
 
-const PanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__/* .PanelCtrl */ .q);
-const MetricsPanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__/* .MetricsPanelCtrl */ .k);
-const QueryCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__/* .QueryCtrl */ .G);
+const PanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__ .q);
+const MetricsPanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ .k);
+const QueryCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__ .G);
 
 
-/***/ })
+ })
 
 }]);

@@ -1,7 +1,7 @@
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[557],{
 
-/***/ "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/ext/language_tools.js":
-/***/ (() => {
+ "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/ext/language_tools.js":
+ (() => {
 
 ace.define("ace/snippets",["require","exports","module","ace/lib/oop","ace/lib/event_emitter","ace/lib/lang","ace/range","ace/anchor","ace/keyboard/hash_handler","ace/tokenizer","ace/lib/dom","ace/editor"], function(acequire, exports, module) {
 "use strict";
@@ -21,8 +21,8 @@ var SnippetManager = function() {
 
 (function() {
     oop.implement(this, EventEmitter);
-    
-    this.getTokenizer = function() {
+
+        this.getTokenizer = function() {
         function TabstopToken(str, _, stack) {
             str = str.substr(1);
             if (/^\d+$/.test(str) && !stack.inFormatString)
@@ -136,7 +136,7 @@ var SnippetManager = function() {
                 return s.getTextRange(r);
             case "CURRENT_LINE":
                 return s.getLine(editor.getCursorPosition().row);
-            case "PREV_LINE": // not possible in textmate
+            case "PREV_LINE": 
                 return s.getLine(editor.getCursorPosition().row - 1);
             case "LINE_INDEX":
                 return editor.getCursorPosition().column;
@@ -244,8 +244,8 @@ var SnippetManager = function() {
         var line = editor.session.getLine(cursor.row);
         var tabString = editor.session.getTabString();
         var indentString = line.match(/^\s*/)[0];
-        
-        if (cursor.column < indentString.length)
+
+                if (cursor.column < indentString.length)
             indentString = indentString.slice(0, cursor.column);
 
         snippetText = snippetText.replace(/\r/g, "");
@@ -311,8 +311,8 @@ var SnippetManager = function() {
                     expanding[id] = null;
                 continue;
             }
-            
-            var ts = tabstops[id];
+
+                        var ts = tabstops[id];
             var arg = typeof ts.value == "string" ? [ts.value] : copyValue(ts.value);
             arg.unshift(i + 1, Math.max(0, i1 - i));
             arg.push(p);
@@ -347,17 +347,17 @@ var SnippetManager = function() {
         var selectionId = editor.inVirtualSelectionMode && editor.selection.index;
         tabstopManager.addTabstops(tabstops, range.start, end, selectionId);
     };
-    
-    this.insertSnippet = function(editor, snippetText) {
+
+        this.insertSnippet = function(editor, snippetText) {
         var self = this;
         if (editor.inVirtualSelectionMode)
             return self.insertSnippetForSelection(editor, snippetText);
-        
-        editor.forEachSelection(function() {
+
+                editor.forEachSelection(function() {
             self.insertSnippetForSelection(editor, snippetText);
         }, null, {keepOrder: true});
-        
-        if (editor.tabstopManager)
+
+                if (editor.tabstopManager)
             editor.tabstopManager.tabNext();
     };
 
@@ -381,8 +381,8 @@ var SnippetManager = function() {
                     scope = "php";
             }
         }
-        
-        return scope;
+
+                return scope;
     };
 
     this.getActiveScopes = function(editor) {
@@ -405,8 +405,8 @@ var SnippetManager = function() {
             editor.tabstopManager.tabNext();
         return result;
     };
-    
-    this.expandSnippetForSelection = function(editor, options) {
+
+        this.expandSnippetForSelection = function(editor, options) {
         var cursor = editor.getCursorPosition();
         var line = editor.session.getLine(cursor.row);
         var before = line.substring(0, cursor.column);
@@ -461,11 +461,11 @@ var SnippetManager = function() {
         var snippetMap = this.snippetMap;
         var snippetNameMap = this.snippetNameMap;
         var self = this;
-        
-        if (!snippets) 
+
+                if (!snippets) 
             snippets = [];
-        
-        function wrapRegexp(src) {
+
+                function wrapRegexp(src) {
             if (src && !/^\^?\(.*\)\$?$|^\\b$/.test(src))
                 src = "(?:" + src + ")";
 
@@ -509,11 +509,11 @@ var SnippetManager = function() {
                     s.guard = "\\b";
                 s.trigger = lang.escapeRegExp(s.tabTrigger);
             }
-            
-            if (!s.trigger && !s.guard && !s.endTrigger && !s.endGuard)
+
+                        if (!s.trigger && !s.guard && !s.endTrigger && !s.endGuard)
                 return;
-            
-            s.startRe = guardedRegexp(s.trigger, s.guard, true);
+
+                        s.startRe = guardedRegexp(s.trigger, s.guard, true);
             s.triggerRe = new RegExp(s.trigger, "", true);
 
             s.endRe = guardedRegexp(s.endTrigger, s.endGuard, true);
@@ -524,8 +524,8 @@ var SnippetManager = function() {
             addSnippet(snippets);
         else if (Array.isArray(snippets))
             snippets.forEach(addSnippet);
-        
-        this._signal("registerSnippets", {scope: scope});
+
+                this._signal("registerSnippets", {scope: scope});
     };
     this.unregister = function(snippets, scope) {
         var snippetMap = this.snippetMap;
@@ -741,8 +741,8 @@ var TabstopManager = function(editor) {
         ts = this.tabstops[this.index];
         if (!ts || !ts.length)
             return;
-        
-        this.selectedTabstop = ts;
+
+                this.selectedTabstop = ts;
         if (!this.editor.inVirtualSelectionMode) {        
             var sel = this.editor.multiSelect;
             sel.toSingleRange(ts.firstNonLinked.clone());
@@ -756,8 +756,8 @@ var TabstopManager = function(editor) {
         } else {
             this.editor.selection.setRange(ts.firstNonLinked);
         }
-        
-        this.editor.keyBinding.addKeyboardHandler(this.keyboardHandler);
+
+                this.editor.keyBinding.addKeyboardHandler(this.keyboardHandler);
     };
     this.addTabstops = function(tabstops, start, end) {
         if (!this.$openTabstops)
@@ -775,8 +775,8 @@ var TabstopManager = function(editor) {
         var ranges = this.ranges;
         tabstops.forEach(function(ts, index) {
             var dest = this.$openTabstops[index] || ts;
-                
-            for (var i = ts.length; i--;) {
+
+                            for (var i = ts.length; i--;) {
                 var p = ts[i];
                 var range = Range.fromPoints(p.start, p.end || p.start);
                 movePoint(range.start, start);
@@ -802,8 +802,8 @@ var TabstopManager = function(editor) {
             }
             this.addTabstopMarkers(dest);
         }, this);
-        
-        if (arg.length > 2) {
+
+                if (arg.length > 2) {
             if (this.tabstops.length)
                 arg.push(arg.splice(2, 1)[0]);
             this.tabstops.splice.apply(this.tabstops, arg);
@@ -1344,8 +1344,8 @@ var Autocomplete = function() {
         this.popup.setData(this.completions.filtered);
 
         editor.keyBinding.addKeyboardHandler(this.keyboardHandler);
-        
-        var renderer = editor.renderer;
+
+                var renderer = editor.renderer;
         this.popup.setRow(this.autoSelect ? 0 : -1);
         if (!keepPopupPosition) {
             this.popup.setTheme(editor.getTheme());
@@ -1747,8 +1747,8 @@ exports.FilteredList = FilteredList;
 
 ace.define("ace/autocomplete/text_completer",["require","exports","module","ace/range"], function(acequire, exports, module) {
     var Range = acequire("../range").Range;
-    
-    var splitRegex = /[^a-zA-Z_0-9\$\-\u00C0-\u1FFF\u2C00-\uD7FF\w]+/;
+
+        var splitRegex = /[^a-zA-Z_0-9\$\-\u00C0-\u1FFF\u2C00-\uD7FF\w]+/;
 
     function getWordIndex(doc, pos) {
         var textBefore = doc.getTextRange(Range.fromPoints({row: 0, column:0}, pos));
@@ -1758,8 +1758,8 @@ ace.define("ace/autocomplete/text_completer",["require","exports","module","ace/
         var prefixPos = getWordIndex(doc, pos);
         var words = doc.getValue().split(splitRegex);
         var wordScores = Object.create(null);
-        
-        var currentWord = words[prefixPos];
+
+                var currentWord = words[prefixPos];
 
         words.forEach(function(word, idx) {
             if (!word || word === currentWord) return;
@@ -1958,8 +1958,8 @@ acequire("../config").defineOptions(Editor.prototype, "editor", {
                 (function() {
                     ace.acequire(["ace/ext/language_tools"], function() {});
                 })();
-            
 
-/***/ })
+
+ })
 
 }]);

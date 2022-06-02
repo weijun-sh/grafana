@@ -1,24 +1,19 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[7004],{
 
-/***/ "./public/app/plugins/datasource/prometheus/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/prometheus/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "plugin": () => (/* binding */ module_plugin)
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/components/PromCheatSheet.tsx
+;
 var _h;
 
 
@@ -41,44 +36,38 @@ const CHEAT_SHEET_ITEMS = [{
   label: 'Defines the graph resolution using a duration format (15s, 1m, 3h, ...). Small steps create high-resolution graphs but can be slow over larger time ranges. Using a longer step lowers the resolution and smooths the graph by producing fewer datapoints. If no step is given the resolution is calculated automatically.'
 }];
 
-const PromCheatSheet = props => /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-  children: [_h || (_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h2", {
+const PromCheatSheet = props => (0,jsx_runtime.jsxs)("div", {
+  children: [_h || (_h = (0,jsx_runtime.jsx)("h2", {
     children: "PromQL Cheat Sheet"
-  })), CHEAT_SHEET_ITEMS.map((item, index) => /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  })), CHEAT_SHEET_ITEMS.map((item, index) => (0,jsx_runtime.jsxs)("div", {
     className: "cheat-sheet-item",
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    children: [(0,jsx_runtime.jsx)("div", {
       className: "cheat-sheet-item__title",
       children: item.title
-    }), item.expression ? /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), item.expression ? (0,jsx_runtime.jsx)("div", {
       className: "cheat-sheet-item__example",
       onClick: e => props.onClickExample({
         refId: 'A',
         expr: item.expression
       }),
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+      children: (0,jsx_runtime.jsx)("code", {
         children: item.expression
       })
-    }) : null, /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }) : null, (0,jsx_runtime.jsx)("div", {
       className: "cheat-sheet-item__label",
       children: item.label
     })]
   }, index))]
 });
 
-/* harmony default export */ const components_PromCheatSheet = (PromCheatSheet);
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
+ const components_PromCheatSheet = (PromCheatSheet);
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/@grafana-experimental-virtual-22e4fdfd25/0/cache/@grafana-experimental-npm-0.0.2-canary.30-71a280d204-b5b453b937.zip/node_modules/@grafana/experimental/index.js
 var experimental = __webpack_require__("./.yarn/__virtual__/@grafana-experimental-virtual-22e4fdfd25/0/cache/@grafana-experimental-npm-0.0.2-canary.30-71a280d204-b5b453b937.zip/node_modules/@grafana/experimental/index.js");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/PromQueryModeller.ts + 2 modules
 var PromQueryModeller = __webpack_require__("./public/app/plugins/datasource/prometheus/querybuilder/PromQueryModeller.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/parsing.ts
 var parsing = __webpack_require__("./public/app/plugins/datasource/prometheus/querybuilder/parsing.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/shared/FeedbackLink.tsx
+;
 var _Icon;
 
 
@@ -98,15 +87,15 @@ function FeedbackLink(_ref) {
     return null;
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.Stack, {
+  return (0,jsx_runtime.jsx)(experimental.Stack, {
     gap: 1,
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)("a", {
+    children: (0,jsx_runtime.jsxs)("a", {
       href: feedbackUrl,
       className: styles.link,
       title: "This query builder is new, please let us know how we can improve it",
       target: "_blank",
       rel: "noreferrer noopener",
-      children: [_Icon || (_Icon = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      children: [_Icon || (_Icon = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: "comment-alt-message"
       })), " Give feedback"]
     })
@@ -124,26 +113,20 @@ function getStyles(theme) {
     })
   };
 }
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/shared/QueryEditorModeToggle.tsx
 var QueryEditorModeToggle = __webpack_require__("./public/app/plugins/datasource/prometheus/querybuilder/shared/QueryEditorModeToggle.tsx");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/shared/QueryHeaderSwitch.tsx
 var QueryHeaderSwitch = __webpack_require__("./public/app/plugins/datasource/prometheus/querybuilder/shared/QueryHeaderSwitch.tsx");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/shared/types.ts
 var types = __webpack_require__("./public/app/plugins/datasource/prometheus/querybuilder/shared/types.ts");
-// EXTERNAL MODULE: ./public/app/core/store.ts
 var store = __webpack_require__("./public/app/core/store.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/types.ts
 var prometheus_types = __webpack_require__("./public/app/plugins/datasource/prometheus/types.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/state.ts
+;
 
 
 
 
 const queryEditorModeDefaultLocalStorageKey = 'PrometheusQueryEditorModeDefault';
 function changeEditorMode(query, editorMode, onChange) {
-  // If empty query store new mode as default
   if (query.expr === '') {
-    store/* default.set */.Z.set(queryEditorModeDefaultLocalStorageKey, editorMode);
+    store.Z.set(queryEditorModeDefaultLocalStorageKey, editorMode);
   }
 
   onChange(Object.assign({}, query, {
@@ -152,26 +135,22 @@ function changeEditorMode(query, editorMode, onChange) {
 }
 
 function getDefaultEditorMode(expr) {
-  // If we already have an expression default to code view
   if (expr != null && expr !== '') {
-    return types/* QueryEditorMode.Code */.c.Code;
+    return types.c.Code;
   }
 
-  const value = store/* default.get */.Z.get(queryEditorModeDefaultLocalStorageKey);
+  const value = store.Z.get(queryEditorModeDefaultLocalStorageKey);
 
   switch (value) {
-    case types/* QueryEditorMode.Builder */.c.Builder:
-    case types/* QueryEditorMode.Code */.c.Code:
-    case types/* QueryEditorMode.Explain */.c.Explain:
+    case types.c.Builder:
+    case types.c.Code:
+    case types.c.Explain:
       return value;
 
     default:
-      return types/* QueryEditorMode.Builder */.c.Builder;
+      return types.c.Builder;
   }
 }
-/**
- * Returns query with defaults, and boolean true/false depending on change was required
- */
 
 
 function getQueryWithDefaults(query, app) {
@@ -186,15 +165,14 @@ function getQueryWithDefaults(query, app) {
   if (query.expr == null) {
     result = Object.assign({}, result, {
       expr: '',
-      legendFormat: prometheus_types/* LegendFormatMode.Auto */.pD.Auto
+      legendFormat: prometheus_types.pD.Auto
     });
   }
 
   if (query.range == null && query.instant == null) {
-    // Default to range query
     result = Object.assign({}, result, {
       range: true
-    }); // In explore we default to both instant & range
+    }); 
 
     if (app === src.CoreApp.Explore) {
       result.instant = true;
@@ -203,29 +181,21 @@ function getQueryWithDefaults(query, app) {
 
   return result;
 }
-// EXTERNAL MODULE: ./.yarn/__virtual__/@reduxjs-toolkit-virtual-341575ab98/0/cache/@reduxjs-toolkit-npm-1.8.0-436263eab0-e229571b80.zip/node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js + 2 modules
 var redux_toolkit_esm = __webpack_require__("./.yarn/__virtual__/@reduxjs-toolkit-virtual-341575ab98/0/cache/@reduxjs-toolkit-npm-1.8.0-436263eab0-e229571b80.zip/node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/language_provider.ts
 var language_provider = __webpack_require__("./public/app/plugins/datasource/prometheus/language_provider.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/shared/LabelFilters.tsx + 1 modules
 var LabelFilters = __webpack_require__("./public/app/plugins/datasource/prometheus/querybuilder/shared/LabelFilters.tsx");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/shared/OperationList.tsx + 4 modules
 var OperationList = __webpack_require__("./public/app/plugins/datasource/prometheus/querybuilder/shared/OperationList.tsx");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/shared/OperationsEditorRow.tsx
 var OperationsEditorRow = __webpack_require__("./public/app/plugins/datasource/prometheus/querybuilder/shared/OperationsEditorRow.tsx");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-highlight-words-virtual-d2265e757c/0/cache/react-highlight-words-npm-0.17.0-880b4a18ed-41b3d0e451.zip/node_modules/react-highlight-words/dist/main.js
 var main = __webpack_require__("./.yarn/__virtual__/react-highlight-words-virtual-d2265e757c/0/cache/react-highlight-words-npm-0.17.0-880b4a18ed-41b3d0e451.zip/node_modules/react-highlight-words/dist/main.js");
-var main_default = /*#__PURE__*/__webpack_require__.n(main);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/components/MetricSelect.tsx
-
- // @ts-ignore
+var main_default = __webpack_require__.n(main);
+;
 
 
 
 
 
 
-// We are matching words split with space
+
 const splitSeparator = ' ';
 function MetricSelect(_ref) {
   let {
@@ -242,7 +212,7 @@ function MetricSelect(_ref) {
 
     if (!label) {
       return false;
-    } // custom value is not a string label but a react node
+    } 
 
 
     if (!label.toLowerCase) {
@@ -255,21 +225,20 @@ function MetricSelect(_ref) {
   const formatOptionLabel = (0,react.useCallback)((option, meta) => {
     var _option$label2;
 
-    // For newly created custom value we don't want to add highlight
     if (option['__isNew__']) {
       return option.label;
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsx)((main_default()), {
+    return (0,jsx_runtime.jsx)((main_default()), {
       searchWords: meta.inputValue.split(splitSeparator),
       textToHighlight: (_option$label2 = option.label) !== null && _option$label2 !== void 0 ? _option$label2 : '',
       highlightClassName: styles.highlight
     });
   }, [styles.highlight]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorFieldGroup, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+  return (0,jsx_runtime.jsx)(experimental.EditorFieldGroup, {
+    children: (0,jsx_runtime.jsx)(experimental.EditorField, {
       label: "Metric",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         inputId: "prometheus-metric-select",
         className: styles.select,
         value: query.metric ? (0,src.toOption)(query.metric) : undefined,
@@ -317,11 +286,9 @@ const MetricSelect_getStyles = theme => ({
     background-color: rgba(${theme.colors.warning.main}, 0.1);
   `
 });
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/binaryScalarOperations.ts
 var binaryScalarOperations = __webpack_require__("./public/app/plugins/datasource/prometheus/querybuilder/binaryScalarOperations.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/shared/AutoSizeInput.tsx
 var AutoSizeInput = __webpack_require__("./public/app/plugins/datasource/prometheus/querybuilder/shared/AutoSizeInput.tsx");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/components/NestedQuery.tsx
+;
 var _FlexItem;
 
 
@@ -334,7 +301,7 @@ var _FlexItem;
 
 
 
-const NestedQuery = /*#__PURE__*/react.memo(_ref => {
+const NestedQuery = react.memo(_ref => {
   let {
     nestedQuery,
     index,
@@ -344,14 +311,14 @@ const NestedQuery = /*#__PURE__*/react.memo(_ref => {
     onRunQuery
   } = _ref;
   const styles = (0,grafana_ui_src.useStyles2)(NestedQuery_getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: styles.card,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsxs)("div", {
       className: styles.header,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      children: [(0,jsx_runtime.jsx)("div", {
         className: styles.name,
         children: "Operator"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         width: "auto",
         options: operators,
         value: (0,src.toOption)(nestedQuery.operator),
@@ -360,12 +327,12 @@ const NestedQuery = /*#__PURE__*/react.memo(_ref => {
             operator: value.value
           }));
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: styles.name,
         children: "Vector matches"
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), (0,jsx_runtime.jsxs)("div", {
         className: styles.vectorMatchWrapper,
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           width: "auto",
           value: nestedQuery.vectorMatchesType || 'on',
           allowCustomValue: true,
@@ -381,7 +348,7 @@ const NestedQuery = /*#__PURE__*/react.memo(_ref => {
               vectorMatchesType: val.value
             }));
           }
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(AutoSizeInput/* AutoSizeInput */.H, {
+        }), (0,jsx_runtime.jsx)(AutoSizeInput.H, {
           className: styles.vectorMatchInput,
           minWidth: 20,
           defaultValue: nestedQuery.vectorMatches,
@@ -392,17 +359,17 @@ const NestedQuery = /*#__PURE__*/react.memo(_ref => {
             }));
           }
         })]
-      }), _FlexItem || (_FlexItem = /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.FlexItem, {
+      }), _FlexItem || (_FlexItem = (0,jsx_runtime.jsx)(experimental.FlexItem, {
         grow: 1
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
+      })), (0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
         name: "times",
         size: "sm",
         onClick: () => onRemove(index)
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), (0,jsx_runtime.jsx)("div", {
       className: styles.body,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorRows, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(PromQueryBuilder, {
+      children: (0,jsx_runtime.jsx)(experimental.EditorRows, {
+        children: (0,jsx_runtime.jsx)(PromQueryBuilder, {
           query: nestedQuery.query,
           datasource: datasource,
           nested: true,
@@ -417,7 +384,7 @@ const NestedQuery = /*#__PURE__*/react.memo(_ref => {
     })]
   });
 });
-const operators = binaryScalarOperations/* binaryScalarDefs.map */.iQ.map(def => ({
+const operators = binaryScalarOperations.iQ.map(def => ({
   label: def.sign,
   value: def.sign
 }));
@@ -456,7 +423,7 @@ const NestedQuery_getStyles = theme => {
     })
   };
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/components/NestedQueryList.tsx
+;
 
 
 
@@ -487,10 +454,10 @@ function NestedQueryList(_ref) {
     }));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.Stack, {
+  return (0,jsx_runtime.jsx)(experimental.Stack, {
     direction: "column",
     gap: 1,
-    children: nestedQueries.map((nestedQuery, index) => /*#__PURE__*/(0,jsx_runtime.jsx)(NestedQuery, {
+    children: nestedQueries.map((nestedQuery, index) => (0,jsx_runtime.jsx)(NestedQuery, {
       nestedQuery: nestedQuery,
       index: index,
       onChange: onNestedQueryUpdate,
@@ -500,7 +467,7 @@ function NestedQueryList(_ref) {
     }, index.toString()))
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/components/PromQueryBuilderHints.tsx
+;
 
 
 
@@ -508,7 +475,7 @@ function NestedQueryList(_ref) {
 
 
 
-const PromQueryBuilderHints = /*#__PURE__*/react.memo(_ref => {
+const PromQueryBuilderHints = react.memo(_ref => {
   let {
     datasource,
     query,
@@ -519,9 +486,9 @@ const PromQueryBuilderHints = /*#__PURE__*/react.memo(_ref => {
   const styles = (0,grafana_ui_src.useStyles2)(PromQueryBuilderHints_getStyles);
   (0,react.useEffect)(() => {
     const promQuery = {
-      expr: PromQueryModeller/* promQueryModeller.renderQuery */.Z.renderQuery(query),
+      expr: PromQueryModeller.Z.renderQuery(query),
       refId: ''
-    }; // For now show only actionable hints
+    }; 
 
     const hints = datasource.getQueryHints(promQuery, (data === null || data === void 0 ? void 0 : data.series) || []).filter(hint => {
       var _hint$fix;
@@ -530,22 +497,22 @@ const PromQueryBuilderHints = /*#__PURE__*/react.memo(_ref => {
     });
     setHints(hints);
   }, [datasource, query, onChange, data, styles.hint]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-    children: hints.length > 0 && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+    children: hints.length > 0 && (0,jsx_runtime.jsx)("div", {
       className: styles.container,
       children: hints.map(hint => {
         var _hint$fix2, _hint$fix3, _hint$fix3$action;
 
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Tooltip, {
+        return (0,jsx_runtime.jsx)(grafana_ui_src.Tooltip, {
           content: `${hint.label} ${(_hint$fix2 = hint.fix) === null || _hint$fix2 === void 0 ? void 0 : _hint$fix2.label}`,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
             onClick: () => {
               const promQuery = {
-                expr: PromQueryModeller/* promQueryModeller.renderQuery */.Z.renderQuery(query),
+                expr: PromQueryModeller.Z.renderQuery(query),
                 refId: ''
               };
               const newPromQuery = datasource.modifyQuery(promQuery, hint.fix.action);
-              const visualQuery = (0,parsing/* buildVisualQueryFromString */._)(newPromQuery.expr);
+              const visualQuery = (0,parsing._)(newPromQuery.expr);
               return onChange(visualQuery.query);
             },
             fill: "outline",
@@ -572,7 +539,7 @@ const PromQueryBuilderHints_getStyles = theme => {
     `
   };
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/components/PromQueryBuilder.tsx
+;
 
 
 
@@ -586,7 +553,7 @@ const PromQueryBuilderHints_getStyles = theme => {
 
 
 
-const PromQueryBuilder = /*#__PURE__*/react.memo(_ref => {
+const PromQueryBuilder = react.memo(_ref => {
   let {
     datasource,
     query,
@@ -600,9 +567,6 @@ const PromQueryBuilder = /*#__PURE__*/react.memo(_ref => {
       labels
     }));
   };
-  /**
-   * Map metric metadata to SelectableValue for Select component and also adds defined template variables to the list.
-   */
 
 
   const withTemplateVariableOptions = (0,react.useCallback)(async optionsPromise => {
@@ -619,9 +583,7 @@ const PromQueryBuilder = /*#__PURE__*/react.memo(_ref => {
   }, [datasource]);
 
   const onGetLabelNames = async forLabel => {
-    // If no metric we need to use a different method
     if (!query.metric) {
-      // Todo add caching but inside language provider!
       await datasource.languageProvider.fetchLabels();
       return datasource.languageProvider.getLabelKeys().map(k => ({
         value: k
@@ -634,8 +596,8 @@ const PromQueryBuilder = /*#__PURE__*/react.memo(_ref => {
       op: '=',
       value: query.metric
     });
-    const expr = PromQueryModeller/* promQueryModeller.renderLabels */.Z.renderLabels(labelsToConsider);
-    const labelsIndex = await datasource.languageProvider.fetchSeriesLabels(expr); // filter out already used labels
+    const expr = PromQueryModeller.Z.renderLabels(labelsToConsider);
+    const labelsIndex = await datasource.languageProvider.fetchSeriesLabels(expr); 
 
     return Object.keys(labelsIndex).filter(labelName => !labelsToConsider.find(filter => filter.label === labelName)).map(k => ({
       value: k
@@ -647,7 +609,7 @@ const PromQueryBuilder = /*#__PURE__*/react.memo(_ref => {
 
     if (!forLabel.label) {
       return [];
-    } // If no metric we need to use a different method
+    } 
 
 
     if (!query.metric) {
@@ -662,7 +624,7 @@ const PromQueryBuilder = /*#__PURE__*/react.memo(_ref => {
       op: '=',
       value: query.metric
     });
-    const expr = PromQueryModeller/* promQueryModeller.renderLabels */.Z.renderLabels(labelsToConsider);
+    const expr = PromQueryModeller.Z.renderLabels(labelsToConsider);
     const result = await datasource.languageProvider.fetchSeriesLabels(expr);
     const forLabelInterpolated = datasource.interpolateString(forLabel.label);
     return (_result$forLabelInter = result[forLabelInterpolated].map(v => ({
@@ -673,32 +635,32 @@ const PromQueryBuilder = /*#__PURE__*/react.memo(_ref => {
   const onGetMetrics = (0,react.useCallback)(() => {
     return withTemplateVariableOptions(getMetrics(datasource, query));
   }, [datasource, query, withTemplateVariableOptions]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorRow, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(MetricSelect, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)(experimental.EditorRow, {
+      children: [(0,jsx_runtime.jsx)(MetricSelect, {
         query: query,
         onChange: onChange,
         onGetMetrics: onGetMetrics
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(LabelFilters/* LabelFilters */.P, {
+      }), (0,jsx_runtime.jsx)(LabelFilters.P, {
         labelsFilters: query.labels,
         onChange: onChangeLabels,
         onGetLabelNames: forLabel => withTemplateVariableOptions(onGetLabelNames(forLabel)),
         onGetLabelValues: forLabel => withTemplateVariableOptions(onGetLabelValues(forLabel))
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(OperationsEditorRow/* OperationsEditorRow */.B, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(OperationList/* OperationList */.P, {
-        queryModeller: PromQueryModeller/* promQueryModeller */.Z,
+    }), (0,jsx_runtime.jsxs)(OperationsEditorRow.B, {
+      children: [(0,jsx_runtime.jsx)(OperationList.P, {
+        queryModeller: PromQueryModeller.Z,
         datasource: datasource,
         query: query,
         onChange: onChange,
         onRunQuery: onRunQuery
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(PromQueryBuilderHints, {
+      }), (0,jsx_runtime.jsx)(PromQueryBuilderHints, {
         datasource: datasource,
         query: query,
         onChange: onChange,
         data: data
       })]
-    }), query.binaryQueries && query.binaryQueries.length > 0 && /*#__PURE__*/(0,jsx_runtime.jsx)(NestedQueryList, {
+    }), query.binaryQueries && query.binaryQueries.length > 0 && (0,jsx_runtime.jsx)(NestedQueryList, {
       query: query,
       datasource: datasource,
       onChange: onChange,
@@ -706,16 +668,8 @@ const PromQueryBuilder = /*#__PURE__*/react.memo(_ref => {
     })]
   });
 });
-/**
- * Returns list of metrics, either all or filtered by query param. It also adds description string to each metric if it
- * exists.
- * @param datasource
- * @param query
- */
 
 async function getMetrics(datasource, query) {
-  // Makes sure we loaded the metadata for metrics. Usually this is done in the start() method of the provider but we
-  // don't use it with the visual builder and there is no need to run all the start() setup anyway.
   if (!datasource.languageProvider.metricsMetadata) {
     await datasource.languageProvider.loadMetricsMetadata();
   }
@@ -725,7 +679,7 @@ async function getMetrics(datasource, query) {
   if (query.labels.length > 0) {
     var _await$datasource$lan;
 
-    const expr = PromQueryModeller/* promQueryModeller.renderLabels */.Z.renderLabels(query.labels);
+    const expr = PromQueryModeller.Z.renderLabels(query.labels);
     metrics = (_await$datasource$lan = (await datasource.languageProvider.getSeries(expr, true))['__name__']) !== null && _await$datasource$lan !== void 0 ? _await$datasource$lan : [];
   } else {
     var _await$datasource$lan2;
@@ -735,17 +689,15 @@ async function getMetrics(datasource, query) {
 
   return metrics.map(m => ({
     value: m,
-    description: (0,language_provider/* getMetadataString */.UQ)(m, datasource.languageProvider.metricsMetadata)
+    description: (0,language_provider.UQ)(m, datasource.languageProvider.metricsMetadata)
   }));
 }
 
 PromQueryBuilder.displayName = 'PromQueryBuilder';
-// EXTERNAL MODULE: ./.yarn/cache/prismjs-npm-1.27.0-ca4e1667c6-85c7f4a3e9.zip/node_modules/prismjs/prism.js
 var prism = __webpack_require__("./.yarn/cache/prismjs-npm-1.27.0-ca4e1667c6-85c7f4a3e9.zip/node_modules/prismjs/prism.js");
-var prism_default = /*#__PURE__*/__webpack_require__.n(prism);
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/promql.ts
+var prism_default = __webpack_require__.n(prism);
 var promql = __webpack_require__("./public/app/plugins/datasource/prometheus/promql.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/components/QueryPreview.tsx
+;
 
 
 
@@ -759,12 +711,12 @@ function QueryPreview(_ref) {
   } = _ref;
   const theme = (0,grafana_ui_src.useTheme2)();
   const styles = QueryPreview_getStyles(theme);
-  const highlighted = prism_default().highlight(query, promql/* promqlGrammar */.Fe, 'promql');
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorRow, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorFieldGroup, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+  const highlighted = prism_default().highlight(query, promql.Fe, 'promql');
+  return (0,jsx_runtime.jsx)(experimental.EditorRow, {
+    children: (0,jsx_runtime.jsx)(experimental.EditorFieldGroup, {
+      children: (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Raw query",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsx)("div", {
           className: (0,emotion_css_esm.cx)(styles.editorField, 'prism-syntax-highlight'),
           "aria-label": "selector",
           dangerouslySetInnerHTML: {
@@ -784,7 +736,7 @@ const QueryPreview_getStyles = theme => {
     })
   };
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/components/PromQueryBuilderContainer.tsx
+;
 
 
 
@@ -795,9 +747,6 @@ const QueryPreview_getStyles = theme => {
 
 
 
-/**
- * This component is here just to contain the translation logic between string query and the visual query builder model.
- */
 function PromQueryBuilderContainer(props) {
   const {
     query,
@@ -808,14 +757,14 @@ function PromQueryBuilderContainer(props) {
   } = props;
   const [state, dispatch] = (0,react.useReducer)(stateSlice.reducer, {
     expr: query.expr
-  }); // Only rebuild visual query if expr changes from outside
+  }); 
 
   (0,react.useEffect)(() => {
     dispatch(exprChanged(query.expr));
   }, [query.expr]);
 
   const onVisQueryChange = visQuery => {
-    const expr = PromQueryModeller/* promQueryModeller.renderQuery */.Z.renderQuery(visQuery);
+    const expr = PromQueryModeller.Z.renderQuery(visQuery);
     dispatch(visualQueryChange({
       visQuery,
       expr
@@ -829,19 +778,19 @@ function PromQueryBuilderContainer(props) {
     return null;
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(PromQueryBuilder, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(PromQueryBuilder, {
       query: state.visQuery,
       datasource: datasource,
       onChange: onVisQueryChange,
       onRunQuery: onRunQuery,
       data: data
-    }), query.rawQuery && /*#__PURE__*/(0,jsx_runtime.jsx)(QueryPreview, {
+    }), query.rawQuery && (0,jsx_runtime.jsx)(QueryPreview, {
       query: query.expr
     })]
   });
 }
-const stateSlice = (0,redux_toolkit_esm/* createSlice */.oM)({
+const stateSlice = (0,redux_toolkit_esm.oM)({
   name: 'prom-builder-container',
   initialState: {
     expr: ''
@@ -854,7 +803,7 @@ const stateSlice = (0,redux_toolkit_esm/* createSlice */.oM)({
     exprChanged: (state, action) => {
       if (!state.visQuery || state.expr !== action.payload) {
         state.expr = action.payload;
-        const parseResult = (0,parsing/* buildVisualQueryFromString */._)(action.payload);
+        const parseResult = (0,parsing._)(action.payload);
         state.visQuery = parseResult.query;
       }
     }
@@ -864,11 +813,9 @@ const {
   visualQueryChange,
   exprChanged
 } = stateSlice.actions;
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/shared/OperationExplainedBox.tsx
 var OperationExplainedBox = __webpack_require__("./public/app/plugins/datasource/prometheus/querybuilder/shared/OperationExplainedBox.tsx");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/shared/OperationListExplained.tsx
 var OperationListExplained = __webpack_require__("./public/app/plugins/datasource/prometheus/querybuilder/shared/OperationListExplained.tsx");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/components/PromQueryBuilderExplained.tsx
+;
 
 
 
@@ -877,32 +824,30 @@ var OperationListExplained = __webpack_require__("./public/app/plugins/datasourc
 
 
 
-const PromQueryBuilderExplained = /*#__PURE__*/react.memo(_ref => {
+const PromQueryBuilderExplained = react.memo(_ref => {
   let {
     query,
     nested
   } = _ref;
-  const visQuery = (0,parsing/* buildVisualQueryFromString */._)(query || '').query;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.Stack, {
+  const visQuery = (0,parsing._)(query || '').query;
+  return (0,jsx_runtime.jsxs)(experimental.Stack, {
     gap: 0,
     direction: "column",
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(OperationExplainedBox/* OperationExplainedBox */.B, {
+    children: [(0,jsx_runtime.jsx)(OperationExplainedBox.B, {
       stepNumber: 1,
       title: `${visQuery.metric} ${PromQueryModeller/* promQueryModeller.renderLabels */.Z.renderLabels(visQuery.labels)}`,
       children: "Fetch all series matching metric name and label filters."
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(OperationListExplained/* OperationListExplained */.V, {
+    }), (0,jsx_runtime.jsx)(OperationListExplained.V, {
       stepNumber: 2,
-      queryModeller: PromQueryModeller/* promQueryModeller */.Z,
+      queryModeller: PromQueryModeller.Z,
       query: visQuery
     })]
   });
 });
 PromQueryBuilderExplained.displayName = 'PromQueryBuilderExplained';
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/usePrevious.js
 var usePrevious = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/usePrevious.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/components/PromExemplarField.tsx
+;
 const _excluded = ["datasource", "onChange", "query"];
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -923,7 +868,7 @@ function PromExemplarField(_ref) {
 
   const [error, setError] = (0,react.useState)(null);
   const styles = (0,grafana_ui_src.useStyles2)(PromExemplarField_getStyles);
-  const prevError = (0,usePrevious/* default */.Z)(error);
+  const prevError = (0,usePrevious.Z)(error);
   (0,react.useEffect)(() => {
     if (!datasource.exemplarsAvailable) {
       setError('Exemplars for this query are not available');
@@ -932,7 +877,7 @@ function PromExemplarField(_ref) {
       setError('Exemplars are not available for instant queries');
       onChange(false);
     } else {
-      setError(null); // If error is cleared, we want to change exemplar to true
+      setError(null); 
 
       if (prevError && !error) {
         onChange(true);
@@ -942,14 +887,14 @@ function PromExemplarField(_ref) {
   const iconButtonStyles = (0,emotion_css_esm.cx)({
     [styles.activeIcon]: !!query.exemplar
   }, styles.eyeIcon);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
     width: "auto",
     "data-testid": rest['data-testid'],
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Tooltip, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Tooltip, {
       content: error !== null && error !== void 0 ? error : '',
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      children: (0,jsx_runtime.jsxs)("div", {
         className: styles.iconWrapper,
-        children: ["Exemplars", /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
+        children: ["Exemplars", (0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
           name: "eye",
           tooltip: !!query.exemplar ? 'Disable query with exemplars' : 'Enable query with exemplars',
           disabled: !!error,
@@ -977,7 +922,7 @@ function PromExemplarField_getStyles(theme) {
     `
   };
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/components/PromExploreExtraField.tsx
+;
 var _InlineFormLabel, _InlineFormLabel2;
 
 
@@ -988,7 +933,7 @@ var _InlineFormLabel, _InlineFormLabel2;
 
 
 
-const PromExploreExtraField = /*#__PURE__*/(0,react.memo)(_ref => {
+const PromExploreExtraField = (0,react.memo)(_ref => {
   var _query$interval;
 
   let {
@@ -998,7 +943,7 @@ const PromExploreExtraField = /*#__PURE__*/(0,react.memo)(_ref => {
     onRunQuery
   } = _ref;
   const rangeOptions = getQueryTypeOptions(true);
-  const prevQuery = (0,usePrevious/* default */.Z)(query);
+  const prevQuery = (0,usePrevious.Z)(query);
   const onExemplarChange = (0,react.useCallback)(exemplar => {
     if (!(0,lodash.isEqual)(query, prevQuery) || exemplar !== query.exemplar) {
       onChange(Object.assign({}, query, {
@@ -1026,35 +971,35 @@ const PromExploreExtraField = /*#__PURE__*/(0,react.memo)(_ref => {
   }
 
   const onQueryTypeChange = getQueryTypeChangeHandler(query, onChange);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     "aria-label": "Prometheus extra field",
     className: "gf-form-inline",
     "data-testid": testIds.extraFieldEditor,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsxs)("div", {
       "data-testid": testIds.queryTypeField,
       className: (0,emotion_css_esm.cx)('gf-form explore-input-margin', emotion_css_esm.css`
               flex-wrap: nowrap;
             `),
       "aria-label": "Query type field",
-      children: [_InlineFormLabel || (_InlineFormLabel = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+      children: [_InlineFormLabel || (_InlineFormLabel = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
         width: "auto",
         children: "Query type"
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.RadioButtonGroup, {
+      })), (0,jsx_runtime.jsx)(grafana_ui_src.RadioButtonGroup, {
         options: rangeOptions,
         value: query.range && query.instant ? 'both' : query.instant ? 'instant' : 'range',
         onChange: onQueryTypeChange
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    }), (0,jsx_runtime.jsxs)("div", {
       "data-testid": testIds.stepField,
       className: (0,emotion_css_esm.cx)('gf-form', emotion_css_esm.css`
               flex-wrap: nowrap;
             `),
       "aria-label": "Step field",
-      children: [_InlineFormLabel2 || (_InlineFormLabel2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+      children: [_InlineFormLabel2 || (_InlineFormLabel2 = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
         width: 6,
         tooltip: 'Time units and built-in variables can be used here, for example: $__interval, $__rate_interval, 5s, 1m, 3h, 1d, 1y (Default if no unit is specified: s)',
         children: "Min step"
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)("input", {
+      })), (0,jsx_runtime.jsx)("input", {
         type: 'text',
         className: "gf-form-input width-4",
         placeholder: 'auto',
@@ -1062,7 +1007,7 @@ const PromExploreExtraField = /*#__PURE__*/(0,react.memo)(_ref => {
         onKeyDown: onReturnKeyDown,
         value: (_query$interval = query.interval) !== null && _query$interval !== void 0 ? _query$interval : ''
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(PromExemplarField, {
+    }), (0,jsx_runtime.jsx)(PromExemplarField, {
       onChange: onExemplarChange,
       datasource: datasource,
       query: query
@@ -1117,7 +1062,7 @@ const testIds = {
   stepField: 'prom-editor-extra-field-step',
   queryTypeField: 'prom-editor-extra-field-query-type'
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/components/PromLink.tsx
+;
 
 
 
@@ -1178,7 +1123,7 @@ const PromLink = _ref => {
       setHref(getExternalLink());
     }
   }, [datasource, panelData, query]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+  return (0,jsx_runtime.jsx)("a", {
     href: src.textUtil.sanitizeUrl(href),
     target: "_blank",
     rel: "noopener noreferrer",
@@ -1186,11 +1131,9 @@ const PromLink = _ref => {
   });
 };
 
-/* harmony default export */ const components_PromLink = (/*#__PURE__*/(0,react.memo)(PromLink));
-// EXTERNAL MODULE: ./public/app/core/components/LocalStorageValueProvider/index.tsx + 1 modules
+ const components_PromLink = ((0,react.memo)(PromLink));
 var LocalStorageValueProvider = __webpack_require__("./public/app/core/components/LocalStorageValueProvider/index.tsx");
-;// CONCATENATED MODULE: ./public/app/core/utils/CancelablePromise.ts
-// https://github.com/facebook/react/issues/5465
+;
 const makePromiseCancelable = promise => {
   let hasCanceled_ = false;
   const wrappedPromise = new Promise((resolve, reject) => {
@@ -1210,11 +1153,9 @@ const makePromiseCancelable = promise => {
 
   };
 };
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/language_utils.ts
 var language_utils = __webpack_require__("./public/app/plugins/datasource/prometheus/language_utils.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-window-virtual-0f9a8c6a67/0/cache/react-window-npm-1.8.6-4f5a230226-54ccf2b16c.zip/node_modules/react-window/dist/index.esm.js
 var index_esm = __webpack_require__("./.yarn/__virtual__/react-window-virtual-0f9a8c6a67/0/cache/react-window-npm-1.8.6-4f5a230226-54ccf2b16c.zip/node_modules/react-window/dist/index.esm.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/components/PrometheusMetricsBrowser.tsx
+;
 var _LoadingPlaceholder, _Label, _Label2, _Label3, _Label4;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1223,7 +1164,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
- // Hard limit on labels to render
 
 
 
@@ -1260,13 +1200,11 @@ function facetLabels(labels, possibleLabels, lastFacetted) {
       let existingValues;
 
       if (label.name === lastFacetted && label.values) {
-        // Facetting this label, show all values
         existingValues = label.values;
       } else {
         var _label$values;
 
-        // Keep selection in other facets
-        const selectedValues = new Set(((_label$values = label.values) === null || _label$values === void 0 ? void 0 : _label$values.filter(value => value.selected).map(value => value.name)) || []); // Values for this label have not been requested yet, let's use the facetted ones as the initial values
+        const selectedValues = new Set(((_label$values = label.values) === null || _label$values === void 0 ? void 0 : _label$values.filter(value => value.selected).map(value => value.name)) || []); 
 
         existingValues = possibleValues.map(value => ({
           name: value,
@@ -1280,7 +1218,7 @@ function facetLabels(labels, possibleLabels, lastFacetted) {
         hidden: !possibleValues,
         facets: existingValues.length
       });
-    } // Label is facetted out, hide all values
+    } 
 
 
     return Object.assign({}, label, {
@@ -1361,16 +1299,12 @@ const PrometheusMetricsBrowser_getStyles = (0,grafana_ui_src.stylesFactory)(them
     text-overflow: ellipsis;
   `
 }));
-/**
- * TODO #33976: Remove duplicated code. The component is very similar to LokiLabelBrowser.tsx. Check if it's possible
- *              to create a single, generic component.
- */
 
 class UnthemedPrometheusMetricsBrowser extends react.Component {
   constructor() {
     super(...arguments);
 
-    _defineProperty(this, "valueListsRef", /*#__PURE__*/react.createRef());
+    _defineProperty(this, "valueListsRef", react.createRef());
 
     _defineProperty(this, "state", {
       labels: [],
@@ -1430,7 +1364,7 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
           valueSearchTerm: ''
         };
       });
-      this.props.deleteLastUsedLabels(); // Get metrics
+      this.props.deleteLastUsedLabels(); 
 
       this.fetchValues(METRIC_LABEL, EMPTY_SELECTOR);
     });
@@ -1440,7 +1374,7 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
 
       if (!label) {
         return;
-      } // Toggle selected state
+      } 
 
 
       const selected = !label.selected;
@@ -1449,7 +1383,6 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
       };
 
       if (label.values && !selected) {
-        // Deselect all values if label was deselected
         const values = label.values.map(value => Object.assign({}, value, {
           selected: false
         }));
@@ -1457,7 +1390,7 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
           facets: 0,
           values
         });
-      } // Resetting search to prevent empty results
+      } 
 
 
       this.setState({
@@ -1471,12 +1404,12 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
 
       if (!label || !label.values) {
         return;
-      } // Resetting search to prevent empty results
+      } 
 
 
       this.setState({
         labelSearchTerm: ''
-      }); // Toggling value for selected label, leaving other values intact
+      }); 
 
       const values = label.values.map(v => Object.assign({}, v, {
         selected: v.name === value ? !v.selected : v.selected
@@ -1487,21 +1420,20 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
     });
 
     _defineProperty(this, "onClickMetric", (name, value, event) => {
-      // Finding special metric label
       const label = this.state.labels.find(l => l.name === name);
 
       if (!label || !label.values) {
         return;
-      } // Resetting search to prevent empty results
+      } 
 
 
       this.setState({
         metricSearchTerm: ''
-      }); // Toggling value for selected label, leaving other values intact
+      }); 
 
       const values = label.values.map(v => Object.assign({}, v, {
         selected: v.name === value || v.selected ? !v.selected : v.selected
-      })); // Toggle selected state of special metrics label
+      })); 
 
       const selected = values.some(v => v.selected);
       this.updateLabelState(name, {
@@ -1519,7 +1451,6 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
       const selector = buildSelector(this.state.labels);
 
       if (selector === EMPTY_SELECTOR) {
-        // Clear up facetting
         const labels = this.state.labels.map(label => {
           return Object.assign({}, label, {
             facets: 0,
@@ -1530,11 +1461,9 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
         this.setState({
           labels
         }, () => {
-          // Get fresh set of values
           this.state.labels.forEach(label => (label.selected || label.name === METRIC_LABEL) && this.fetchValues(label.name, selector));
         });
       } else {
-        // Do facetting
         this.fetchSeries(selector, lastFacetted);
       }
     });
@@ -1550,7 +1479,7 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
         }
 
         return label;
-      }); // New status overrides errors
+      }); 
 
       const error = status ? '' : state.error;
       return {
@@ -1571,15 +1500,15 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
     if (languageProvider) {
       const selectedLabels = lastUsedLabels;
       languageProvider.start().then(() => {
-        let rawLabels = languageProvider.getLabelKeys(); // Get metrics
+        let rawLabels = languageProvider.getLabelKeys(); 
 
-        this.fetchValues(METRIC_LABEL, EMPTY_SELECTOR); // Auto-select previously selected labels
+        this.fetchValues(METRIC_LABEL, EMPTY_SELECTOR); 
 
         const labels = rawLabels.map((label, i, arr) => ({
           name: label,
           selected: selectedLabels.includes(label),
           loading: false
-        })); // Pre-fetch values for selected labels
+        })); 
 
         this.setState({
           labels
@@ -1605,12 +1534,10 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
     this.props.storeLastUsedLabels(selectedLabels);
 
     if (label.selected) {
-      // Refetch values for newly selected label...
       if (!label.values) {
         this.fetchValues(name, buildSelector(this.state.labels));
       }
     } else {
-      // Only need to facet when deselecting labels
       this.doFacetting();
     }
   }
@@ -1624,7 +1551,7 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
     }, `Fetching values for ${name}`);
 
     try {
-      let rawValues = await languageProvider.getLabelValues(name); // If selector changed, clear loading state and discard result by returning early
+      let rawValues = await languageProvider.getLabelValues(name); 
 
       if (selector !== buildSelector(this.state.labels)) {
         this.updateLabelState(name, {
@@ -1641,7 +1568,7 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
       for (const labelValue of rawValues) {
         const value = {
           name: labelValue
-        }; // Adding type/help text to metrics
+        }; 
 
         if (name === METRIC_LABEL && metricsMetadata) {
           const meta = metricsMetadata[labelValue];
@@ -1675,7 +1602,7 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
     }
 
     try {
-      const possibleLabels = await languageProvider.fetchSeriesLabels(selector, true); // If selector changed, clear loading state and discard result by returning early
+      const possibleLabels = await languageProvider.fetchSeriesLabels(selector, true); 
 
       if (selector !== buildSelector(this.state.labels)) {
         if (lastFacetted) {
@@ -1742,13 +1669,13 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
     const styles = PrometheusMetricsBrowser_getStyles(theme);
 
     if (labels.length === 0) {
-      return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      return (0,jsx_runtime.jsx)("div", {
         className: styles.wrapper,
-        children: _LoadingPlaceholder || (_LoadingPlaceholder = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LoadingPlaceholder, {
+        children: _LoadingPlaceholder || (_LoadingPlaceholder = (0,jsx_runtime.jsx)(grafana_ui_src.LoadingPlaceholder, {
           text: "Loading labels..."
         }))
       });
-    } // Filter metrics
+    } 
 
 
     let metrics = labels.find(label => label.name === METRIC_LABEL);
@@ -1759,14 +1686,14 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
       metrics = Object.assign({}, metrics, {
         values: (_metrics$values = metrics.values) === null || _metrics$values === void 0 ? void 0 : _metrics$values.filter(value => value.selected || value.name.includes(metricSearchTerm))
       });
-    } // Filter labels
+    } 
 
 
     let nonMetricLabels = labels.filter(label => !label.hidden && label.name !== METRIC_LABEL);
 
     if (labelSearchTerm) {
       nonMetricLabels = nonMetricLabels.filter(label => label.selected || label.name.includes(labelSearchTerm));
-    } // Filter non-metric label values
+    } 
 
 
     let selectedLabels = nonMetricLabels.filter(label => label.selected && label.values);
@@ -1784,27 +1711,27 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
     const selector = buildSelector(this.state.labels);
     const empty = selector === EMPTY_SELECTOR;
     const metricCount = ((_metrics = metrics) === null || _metrics === void 0 ? void 0 : (_metrics$values2 = _metrics.values) === null || _metrics$values2 === void 0 ? void 0 : _metrics$values2.length) || 0;
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    return (0,jsx_runtime.jsxs)("div", {
       className: styles.wrapper,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
+      children: [(0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
         align: "flex-start",
         spacing: "lg",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-          children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: [(0,jsx_runtime.jsx)("div", {
+          children: (0,jsx_runtime.jsxs)("div", {
             className: styles.section,
-            children: [_Label || (_Label = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Label, {
+            children: [_Label || (_Label = (0,jsx_runtime.jsx)(grafana_ui_src.Label, {
               description: "Once a metric is selected only possible labels are shown.",
               children: "1. Select a metric"
-            })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+            })), (0,jsx_runtime.jsx)("div", {
+              children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
                 onChange: this.onChangeMetricSearch,
                 "aria-label": "Filter expression for metric",
                 value: metricSearchTerm
               })
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+            }), (0,jsx_runtime.jsx)("div", {
               role: "list",
               className: styles.valueListWrapper,
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FixedSizeList */.t7, {
+              children: (0,jsx_runtime.jsx)(index_esm.t7, {
                 height: Math.min(450, metricCount * LIST_ITEM_SIZE),
                 itemCount: metricCount,
                 itemSize: LIST_ITEM_SIZE,
@@ -1824,9 +1751,9 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
                     return null;
                   }
 
-                  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+                  return (0,jsx_runtime.jsx)("div", {
                     style: style,
-                    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.BrowserLabel, {
+                    children: (0,jsx_runtime.jsx)(grafana_ui_src.BrowserLabel, {
                       name: metrics.name,
                       value: value === null || value === void 0 ? void 0 : value.name,
                       title: value.details,
@@ -1839,24 +1766,24 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
               })
             })]
           })
-        }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        }), (0,jsx_runtime.jsxs)("div", {
+          children: [(0,jsx_runtime.jsxs)("div", {
             className: styles.section,
-            children: [_Label2 || (_Label2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Label, {
+            children: [_Label2 || (_Label2 = (0,jsx_runtime.jsx)(grafana_ui_src.Label, {
               description: "Once label values are selected, only possible label combinations are shown.",
               children: "2. Select labels to search in"
-            })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+            })), (0,jsx_runtime.jsx)("div", {
+              children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
                 onChange: this.onChangeLabelSearch,
                 "aria-label": "Filter expression for label",
                 value: labelSearchTerm
               })
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+            }), (0,jsx_runtime.jsx)("div", {
               className: styles.list,
               style: {
                 height: 120
               },
-              children: nonMetricLabels.map(label => /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.BrowserLabel, {
+              children: nonMetricLabels.map(label => (0,jsx_runtime.jsx)(grafana_ui_src.BrowserLabel, {
                 name: label.name,
                 loading: label.loading,
                 active: label.selected,
@@ -1866,39 +1793,39 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
                 searchTerm: labelSearchTerm
               }, label.name))
             })]
-          }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+          }), (0,jsx_runtime.jsxs)("div", {
             className: styles.section,
-            children: [_Label3 || (_Label3 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Label, {
+            children: [_Label3 || (_Label3 = (0,jsx_runtime.jsx)(grafana_ui_src.Label, {
               description: "Use the search field to find values across selected labels.",
               children: "3. Select (multiple) values for your labels"
-            })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+            })), (0,jsx_runtime.jsx)("div", {
+              children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
                 onChange: this.onChangeValueSearch,
                 "aria-label": "Filter expression for label values",
                 value: valueSearchTerm
               })
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+            }), (0,jsx_runtime.jsx)("div", {
               className: styles.valueListArea,
               ref: this.valueListsRef,
               children: selectedLabels.map(label => {
                 var _label$values3, _label$values4, _label$values5;
 
-                return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+                return (0,jsx_runtime.jsxs)("div", {
                   role: "list",
                   "aria-label": `Values for ${label.name}`,
                   className: styles.valueListWrapper,
-                  children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+                  children: [(0,jsx_runtime.jsx)("div", {
                     className: styles.valueTitle,
-                    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.BrowserLabel, {
+                    children: (0,jsx_runtime.jsx)(grafana_ui_src.BrowserLabel, {
                       name: label.name,
                       loading: label.loading,
                       active: label.selected,
-                      hidden: label.hidden //If no facets, we want to show number of all label values
+                      hidden: label.hidden 
                       ,
                       facets: label.facets || ((_label$values3 = label.values) === null || _label$values3 === void 0 ? void 0 : _label$values3.length),
                       onClick: this.onClickLabel
                     })
-                  }), /*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FixedSizeList */.t7, {
+                  }), (0,jsx_runtime.jsx)(index_esm.t7, {
                     height: Math.min(200, LIST_ITEM_SIZE * (((_label$values4 = label.values) === null || _label$values4 === void 0 ? void 0 : _label$values4.length) || 0)),
                     itemCount: ((_label$values5 = label.values) === null || _label$values5 === void 0 ? void 0 : _label$values5.length) || 0,
                     itemSize: 28,
@@ -1918,9 +1845,9 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
                         return null;
                       }
 
-                      return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+                      return (0,jsx_runtime.jsx)("div", {
                         style: style,
-                        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.BrowserLabel, {
+                        children: (0,jsx_runtime.jsx)(grafana_ui_src.BrowserLabel, {
                           name: label.name,
                           value: value === null || value === void 0 ? void 0 : value.name,
                           active: value === null || value === void 0 ? void 0 : value.selected,
@@ -1935,43 +1862,43 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
             })]
           })]
         })]
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), (0,jsx_runtime.jsxs)("div", {
         className: styles.section,
-        children: [_Label4 || (_Label4 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Label, {
+        children: [_Label4 || (_Label4 = (0,jsx_runtime.jsx)(grafana_ui_src.Label, {
           children: "4. Resulting selector"
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        })), (0,jsx_runtime.jsx)("div", {
           "aria-label": "selector",
           className: styles.selector,
           children: selector
-        }), validationStatus && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        }), validationStatus && (0,jsx_runtime.jsx)("div", {
           className: styles.validationStatus,
           children: validationStatus
-        }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+        }), (0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
+          children: [(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
             "aria-label": "Use selector for query button",
             disabled: empty,
             onClick: this.onClickRunQuery,
             children: "Use query"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+          }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
             "aria-label": "Use selector as metrics button",
             variant: "secondary",
             disabled: empty,
             onClick: this.onClickRunRateQuery,
             children: "Use as rate query"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+          }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
             "aria-label": "Validate submit button",
             variant: "secondary",
             disabled: empty,
             onClick: this.onClickValidate,
             children: "Validate selector"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+          }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
             "aria-label": "Selector clear button",
             variant: "secondary",
             onClick: this.onClickClear,
             children: "Clear"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          }), (0,jsx_runtime.jsx)("div", {
             className: (0,emotion_css_esm.cx)(styles.status, (status || error) && styles.statusShowing),
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+            children: (0,jsx_runtime.jsx)("span", {
               className: error ? styles.error : '',
               children: error || status
             })
@@ -1983,17 +1910,17 @@ class UnthemedPrometheusMetricsBrowser extends react.Component {
 
 }
 const PrometheusMetricsBrowser = (0,grafana_ui_src.withTheme)(UnthemedPrometheusMetricsBrowser);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/components/monaco-query-field/MonacoQueryFieldLazy.tsx
+;
 
 
-const Field = /*#__PURE__*/react.lazy(() => __webpack_require__.e(/* import() | prom-query-field */ 6031).then(__webpack_require__.bind(__webpack_require__, "./public/app/plugins/datasource/prometheus/components/monaco-query-field/MonacoQueryField.tsx")));
+const Field = react.lazy(() => __webpack_require__.e( 6031).then(__webpack_require__.bind(__webpack_require__, "./public/app/plugins/datasource/prometheus/components/monaco-query-field/MonacoQueryField.tsx")));
 const MonacoQueryFieldLazy = props => {
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(react.Suspense, {
+  return (0,jsx_runtime.jsx)(react.Suspense, {
     fallback: null,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(Field, Object.assign({}, props))
+    children: (0,jsx_runtime.jsx)(Field, Object.assign({}, props))
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/components/monaco-query-field/MonacoQueryFieldWrapper.tsx
+;
 const MonacoQueryFieldWrapper_excluded = ["runQueryOnBlur", "onRunQuery", "onChange"];
 
 function MonacoQueryFieldWrapper_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -2019,7 +1946,6 @@ const MonacoQueryFieldWrapper = props => {
 
   const handleBlur = value => {
     if (runQueryOnBlur) {
-      // run handleRunQuery only if the current value is different from the last-time-executed value
       if (value !== lastRunValueRef.current) {
         handleRunQuery(value);
       }
@@ -2028,12 +1954,12 @@ const MonacoQueryFieldWrapper = props => {
     }
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(MonacoQueryFieldLazy, Object.assign({
+  return (0,jsx_runtime.jsx)(MonacoQueryFieldLazy, Object.assign({
     onRunQuery: handleRunQuery,
     onBlur: handleBlur
   }, rest));
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/components/PromQueryField.tsx
+;
 function PromQueryField_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -2073,7 +1999,6 @@ function willApplySuggestion(suggestion, _ref) {
     typeaheadText
   } = _ref;
 
-  // Modify suggestion based on context
   switch (typeaheadContext) {
     case 'context-labels':
       {
@@ -2088,7 +2013,6 @@ function willApplySuggestion(suggestion, _ref) {
 
     case 'context-label-values':
       {
-        // Always add quotes and remove existing ones instead
         if (!typeaheadText.match(/^(!?=~?"|")/)) {
           suggestion = `"${suggestion}`;
         }
@@ -2163,7 +2087,6 @@ class PromQueryField extends react.PureComponent {
     });
 
     PromQueryField_defineProperty(this, "onChangeQuery", (value, override) => {
-      // Send text change to parent
       const {
         query,
         onChange,
@@ -2293,14 +2216,12 @@ class PromQueryField extends react.PureComponent {
     } = this.props;
 
     if (languageProvider !== prevProps.datasource.languageProvider) {
-      // We reset this only on DS change so we do not flesh loading state on every rangeChange which happens on every
-      // query run if using relative range.
       this.setState({
         syntaxLoaded: false
       });
     }
 
-    const changedRangeToRefresh = this.rangeChangedToRefresh(range, prevProps.range); // We want to refresh metrics when language provider changes and/or when range changes (we round up intervals to a minute)
+    const changedRangeToRefresh = this.rangeChangedToRefresh(range, prevProps.range); 
 
     if (languageProvider !== prevProps.datasource.languageProvider || changedRangeToRefresh) {
       this.refreshMetrics();
@@ -2313,17 +2234,14 @@ class PromQueryField extends react.PureComponent {
 
   rangeChangedToRefresh(range, prevRange) {
     if (range && prevRange) {
-      const sameMinuteFrom = (0,language_utils/* roundMsToMin */.o8)(range.from.valueOf()) === (0,language_utils/* roundMsToMin */.o8)(prevRange.from.valueOf());
-      const sameMinuteTo = (0,language_utils/* roundMsToMin */.o8)(range.to.valueOf()) === (0,language_utils/* roundMsToMin */.o8)(prevRange.to.valueOf()); // If both are same, don't need to refresh.
+      const sameMinuteFrom = (0,language_utils.o8)(range.from.valueOf()) === (0,language_utils.o8)(prevRange.from.valueOf());
+      const sameMinuteTo = (0,language_utils.o8)(range.to.valueOf()) === (0,language_utils.o8)(prevRange.to.valueOf()); 
 
       return !(sameMinuteFrom && sameMinuteTo);
     }
 
     return false;
   }
-  /**
-   * TODO #33976: Remove this, add histogram group (query = `histogram_quantile(0.95, sum(rate(${metric}[5m])) by (le))`;)
-   */
 
 
   render() {
@@ -2344,26 +2262,26 @@ class PromQueryField extends react.PureComponent {
     const hasMetrics = languageProvider.metrics.length > 0;
     const chooserText = getChooserText(datasource.lookupsDisabled, syntaxLoaded, hasMetrics);
     const buttonDisabled = !(syntaxLoaded && hasMetrics);
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(LocalStorageValueProvider/* LocalStorageValueProvider */.G, {
+    return (0,jsx_runtime.jsx)(LocalStorageValueProvider.G, {
       storageKey: LAST_USED_LABELS_KEY,
       defaultValue: [],
       children: (lastUsedLabels, onLastUsedLabelsSave, onLastUsedLabelsDelete) => {
         var _query$expr;
 
-        return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: [(0,jsx_runtime.jsxs)("div", {
             className: "gf-form-inline gf-form-inline--xs-view-flex-column flex-grow-1",
             "data-testid": this.props['data-testid'],
-            children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("button", {
+            children: [(0,jsx_runtime.jsxs)("button", {
               className: "gf-form-label query-keyword pointer",
               onClick: this.onClickChooserButton,
               disabled: buttonDisabled,
-              children: [chooserText, /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+              children: [chooserText, (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
                 name: labelBrowserVisible ? 'angle-down' : 'angle-right'
               })]
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+            }), (0,jsx_runtime.jsx)("div", {
               className: "gf-form gf-form--grow flex-shrink-1 min-width-15",
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(MonacoQueryFieldWrapper, {
+              children: (0,jsx_runtime.jsx)(MonacoQueryFieldWrapper, {
                 runQueryOnBlur: this.props.app !== src.CoreApp.Explore,
                 languageProvider: languageProvider,
                 history: history,
@@ -2372,20 +2290,20 @@ class PromQueryField extends react.PureComponent {
                 initialValue: (_query$expr = query.expr) !== null && _query$expr !== void 0 ? _query$expr : ''
               })
             })]
-          }), labelBrowserVisible && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          }), labelBrowserVisible && (0,jsx_runtime.jsx)("div", {
             className: "gf-form",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(PrometheusMetricsBrowser, {
+            children: (0,jsx_runtime.jsx)(PrometheusMetricsBrowser, {
               languageProvider: languageProvider,
               onChange: this.onChangeLabelBrowser,
               lastUsedLabels: lastUsedLabels || [],
               storeLastUsedLabels: onLastUsedLabelsSave,
               deleteLastUsedLabels: onLastUsedLabelsDelete
             })
-          }), ExtraFieldElement, hint ? /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          }), ExtraFieldElement, hint ? (0,jsx_runtime.jsx)("div", {
             className: "query-row-break",
-            children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+            children: (0,jsx_runtime.jsxs)("div", {
               className: "prom-query-field-info text-warning",
-              children: [hint.label, ' ', hint.fix ? /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+              children: [hint.label, ' ', hint.fix ? (0,jsx_runtime.jsx)("a", {
                 className: "text-link muted",
                 onClick: this.onClickHintFix,
                 children: hint.fix.label
@@ -2399,14 +2317,13 @@ class PromQueryField extends react.PureComponent {
 
 }
 
-/* harmony default export */ const components_PromQueryField = (PromQueryField);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/components/PromQueryEditor.tsx
+ const components_PromQueryField = (PromQueryField);
+;
 var PromQueryEditor_InlineFormLabel, PromQueryEditor_InlineFormLabel2, _div, _div2;
 
 function PromQueryEditor_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
- // Types
 
 
 
@@ -2434,9 +2351,8 @@ const INTERVAL_FACTOR_OPTIONS = (0,lodash.map)([1, 2, 3, 4, 5, 10], value => ({
   label: '1/' + value
 }));
 class PromQueryEditor extends react.PureComponent {
-  // Query target to be modified and used for queries
   constructor(props) {
-    super(props); // Use default query to prevent undefined input values
+    super(props); 
 
     PromQueryEditor_defineProperty(this, "query", void 0);
 
@@ -2492,7 +2408,7 @@ class PromQueryEditor extends react.PureComponent {
     PromQueryEditor_defineProperty(this, "onRunQuery", () => {
       const {
         query
-      } = this; // Change of query.hide happens outside of this component and is just passed as prop. We have to update it when running queries.
+      } = this; 
 
       const {
         hide
@@ -2507,22 +2423,18 @@ class PromQueryEditor extends react.PureComponent {
       expr: '',
       legendFormat: '',
       interval: '',
-      // Set exemplar to false for alerting queries
       exemplar: props.app === src.CoreApp.UnifiedAlerting ? false : true
     };
 
     const _query = Object.assign({}, defaultQuery, props.query);
 
-    this.query = _query; // Query target properties that are fully controlled inputs
+    this.query = _query; 
 
     this.state = {
-      // Fully controlled text inputs
       interval: _query.interval,
       legendFormat: _query.legendFormat,
-      // Select options
       formatOption: FORMAT_OPTIONS.find(option => option.value === _query.format) || FORMAT_OPTIONS[0],
       intervalFactorOption: INTERVAL_FACTOR_OPTIONS.find(option => option.value === _query.intervalFactor) || INTERVAL_FACTOR_OPTIONS[0],
-      // Switch options
       instant: Boolean(_query.instant),
       exemplar: Boolean(_query.exemplar)
     };
@@ -2541,10 +2453,10 @@ class PromQueryEditor extends react.PureComponent {
       interval,
       intervalFactorOption,
       legendFormat
-    } = this.state; //We want to hide exemplar field for unified alerting as exemplars in alerting don't make sense and are source of confusion
+    } = this.state; 
 
     const showExemplarField = this.props.app !== src.CoreApp.UnifiedAlerting;
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(components_PromQueryField, {
+    return (0,jsx_runtime.jsx)(components_PromQueryField, {
       datasource: datasource,
       query: query,
       range: range,
@@ -2553,15 +2465,15 @@ class PromQueryEditor extends react.PureComponent {
       history: [],
       data: data,
       "data-testid": PromQueryEditor_testIds.editor,
-      ExtraFieldElement: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      ExtraFieldElement: (0,jsx_runtime.jsxs)("div", {
         className: "gf-form-inline",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: [(0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [PromQueryEditor_InlineFormLabel || (PromQueryEditor_InlineFormLabel = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [PromQueryEditor_InlineFormLabel || (PromQueryEditor_InlineFormLabel = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             width: 7,
             tooltip: "Controls the name of the time series, using name or pattern. For example {{hostname}} will be replaced with label value for the label hostname.",
             children: "Legend"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)("input", {
+          })), (0,jsx_runtime.jsx)("input", {
             type: "text",
             className: "gf-form-input",
             placeholder: "legend format",
@@ -2569,19 +2481,19 @@ class PromQueryEditor extends react.PureComponent {
             onChange: this.onLegendChange,
             onBlur: this.onRunQuery
           })]
-        }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        }), (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [PromQueryEditor_InlineFormLabel2 || (PromQueryEditor_InlineFormLabel2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [PromQueryEditor_InlineFormLabel2 || (PromQueryEditor_InlineFormLabel2 = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             width: 7,
-            tooltip: /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-              children: ["An additional lower limit for the step parameter of the Prometheus query and for the", ' ', /*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+            tooltip: (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+              children: ["An additional lower limit for the step parameter of the Prometheus query and for the", ' ', (0,jsx_runtime.jsx)("code", {
                 children: "$__interval"
-              }), " and ", /*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+              }), " and ", (0,jsx_runtime.jsx)("code", {
                 children: "$__rate_interval"
               }), " variables. The limit is absolute and not modified by the \"Resolution\" setting."]
             }),
             children: "Min step"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)("input", {
+          })), (0,jsx_runtime.jsx)("input", {
             type: "text",
             className: "gf-form-input width-8",
             "aria-label": "Set lower limit for the step parameter",
@@ -2590,24 +2502,24 @@ class PromQueryEditor extends react.PureComponent {
             onBlur: this.onRunQuery,
             value: interval
           })]
-        }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        }), (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_div || (_div = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          children: [_div || (_div = (0,jsx_runtime.jsx)("div", {
             className: "gf-form-label",
             children: "Resolution"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+          })), (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
             "aria-label": "Select resolution",
             isSearchable: false,
             options: INTERVAL_FACTOR_OPTIONS,
             onChange: this.onIntervalFactorChange,
             value: intervalFactorOption
           })]
-        }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        }), (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_div2 || (_div2 = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          children: [_div2 || (_div2 = (0,jsx_runtime.jsx)("div", {
             className: "gf-form-label width-7",
             children: "Format"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+          })), (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
             className: "select-container",
             width: 16,
             isSearchable: false,
@@ -2615,21 +2527,21 @@ class PromQueryEditor extends react.PureComponent {
             onChange: this.onFormatChange,
             value: formatOption,
             "aria-label": "Select format"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(Switch, {
+          }), (0,jsx_runtime.jsx)(Switch, {
             label: "Instant",
             checked: instant,
             onChange: this.onInstantChange
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             width: 10,
             tooltip: "Link to Graph in Prometheus",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(components_PromLink, {
+            children: (0,jsx_runtime.jsx)(components_PromLink, {
               datasource: datasource,
-              query: this.query // Use modified query
+              query: this.query 
               ,
               panelData: data
             })
           })]
-        }), showExemplarField && /*#__PURE__*/(0,jsx_runtime.jsx)(PromExemplarField, {
+        }), showExemplarField && (0,jsx_runtime.jsx)(PromExemplarField, {
           onChange: this.onExemplarChange,
           datasource: datasource,
           query: this.query,
@@ -2644,9 +2556,8 @@ const PromQueryEditor_testIds = {
   editor: 'prom-editor',
   exemplar: 'exemplar-editor'
 };
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/shared/QueryOptionGroup.tsx
 var QueryOptionGroup = __webpack_require__("./public/app/plugins/datasource/prometheus/querybuilder/shared/QueryOptionGroup.tsx");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/components/PromQueryLegendEditor.tsx
+;
 
 
 
@@ -2657,22 +2568,19 @@ var QueryOptionGroup = __webpack_require__("./public/app/plugins/datasource/prom
 
 const legendModeOptions = [{
   label: 'Auto',
-  value: prometheus_types/* LegendFormatMode.Auto */.pD.Auto,
+  value: prometheus_types.pD.Auto,
   description: 'Only includes unique labels'
 }, {
   label: 'Verbose',
-  value: prometheus_types/* LegendFormatMode.Verbose */.pD.Verbose,
+  value: prometheus_types.pD.Verbose,
   description: 'All label names and values'
 }, {
   label: 'Custom',
-  value: prometheus_types/* LegendFormatMode.Custom */.pD.Custom,
+  value: prometheus_types.pD.Custom,
   description: 'Provide a naming template'
 }];
-/**
- * Tests for this component are on the parent level (PromQueryBuilderOptions).
- */
 
-const PromQueryLegendEditor = /*#__PURE__*/react.memo(_ref => {
+const PromQueryLegendEditor = react.memo(_ref => {
   let {
     legendFormat,
     onChange,
@@ -2685,7 +2593,7 @@ const PromQueryLegendEditor = /*#__PURE__*/react.memo(_ref => {
     let newFormat = evt.currentTarget.value;
 
     if (newFormat.length === 0) {
-      newFormat = prometheus_types/* LegendFormatMode.Auto */.pD.Auto;
+      newFormat = prometheus_types.pD.Auto;
     }
 
     if (newFormat !== legendFormat) {
@@ -2696,11 +2604,11 @@ const PromQueryLegendEditor = /*#__PURE__*/react.memo(_ref => {
 
   const onLegendModeChanged = value => {
     switch (value.value) {
-      case prometheus_types/* LegendFormatMode.Auto */.pD.Auto:
-        onChange(prometheus_types/* LegendFormatMode.Auto */.pD.Auto);
+      case prometheus_types.pD.Auto:
+        onChange(prometheus_types.pD.Auto);
         break;
 
-      case prometheus_types/* LegendFormatMode.Custom */.pD.Custom:
+      case prometheus_types.pD.Custom:
         onChange('{{label_name}}');
         setTimeout(() => {
           var _inputRef$current, _inputRef$current2;
@@ -2710,7 +2618,7 @@ const PromQueryLegendEditor = /*#__PURE__*/react.memo(_ref => {
         }, 10);
         break;
 
-      case prometheus_types/* LegendFormatMode.Verbose */.pD.Verbose:
+      case prometheus_types.pD.Verbose:
         onChange('');
         break;
     }
@@ -2718,18 +2626,18 @@ const PromQueryLegendEditor = /*#__PURE__*/react.memo(_ref => {
     onRunQuery();
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+  return (0,jsx_runtime.jsx)(experimental.EditorField, {
     label: "Legend",
     tooltip: "Series name override or template. Ex. {{hostname}} will be replaced with label value for hostname.",
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [mode === prometheus_types/* LegendFormatMode.Custom */.pD.Custom && /*#__PURE__*/(0,jsx_runtime.jsx)(AutoSizeInput/* AutoSizeInput */.H, {
+    children: (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [mode === prometheus_types.pD.Custom && (0,jsx_runtime.jsx)(AutoSizeInput.H, {
         id: "legendFormat",
         minWidth: 22,
         placeholder: "auto",
         defaultValue: legendFormat,
         onCommitChange: onLegendFormatChanged,
         ref: inputRef
-      }), mode !== prometheus_types/* LegendFormatMode.Custom */.pD.Custom && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      }), mode !== prometheus_types.pD.Custom && (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         inputId: "legend.mode",
         isSearchable: false,
         placeholder: "Select legend mode",
@@ -2744,23 +2652,22 @@ const PromQueryLegendEditor = /*#__PURE__*/react.memo(_ref => {
 PromQueryLegendEditor.displayName = 'PromQueryLegendEditor';
 
 function getLegendMode(legendFormat) {
-  // This special value means the new smart minimal series naming
-  if (legendFormat === prometheus_types/* LegendFormatMode.Auto */.pD.Auto) {
-    return prometheus_types/* LegendFormatMode.Auto */.pD.Auto;
-  } // Missing or empty legend format is the old verbose behavior
+  if (legendFormat === prometheus_types.pD.Auto) {
+    return prometheus_types.pD.Auto;
+  } 
 
 
   if (legendFormat == null || legendFormat === '') {
-    return prometheus_types/* LegendFormatMode.Verbose */.pD.Verbose;
+    return prometheus_types.pD.Verbose;
   }
 
-  return prometheus_types/* LegendFormatMode.Custom */.pD.Custom;
+  return prometheus_types.pD.Custom;
 }
 
 function getLegendModeLabel(legendFormat) {
   const mode = getLegendMode(legendFormat);
 
-  if (mode !== prometheus_types/* LegendFormatMode.Custom */.pD.Custom) {
+  if (mode !== prometheus_types.pD.Custom) {
     var _legendModeOptions$fi;
 
     return (_legendModeOptions$fi = legendModeOptions.find(x => x.value === mode)) === null || _legendModeOptions$fi === void 0 ? void 0 : _legendModeOptions$fi.label;
@@ -2768,7 +2675,7 @@ function getLegendModeLabel(legendFormat) {
 
   return legendFormat;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/components/PromQueryBuilderOptions.tsx
+;
 var _code, _code2;
 
 
@@ -2783,7 +2690,7 @@ var _code, _code2;
 
 
 
-const PromQueryBuilderOptions = /*#__PURE__*/react.memo(_ref => {
+const PromQueryBuilderOptions = react.memo(_ref => {
   let {
     query,
     app,
@@ -2826,26 +2733,26 @@ const PromQueryBuilderOptions = /*#__PURE__*/react.memo(_ref => {
   const formatOption = FORMAT_OPTIONS.find(option => option.value === query.format) || FORMAT_OPTIONS[0];
   const queryTypeValue = getQueryTypeValue(query);
   const queryTypeLabel = queryTypeOptions.find(x => x.value === queryTypeValue).label;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorRow, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)(QueryOptionGroup/* QueryOptionGroup */.d, {
+  return (0,jsx_runtime.jsx)(experimental.EditorRow, {
+    children: (0,jsx_runtime.jsxs)(QueryOptionGroup.d, {
       title: "Options",
       collapsedInfo: getCollapsedInfo(query, formatOption.label, queryTypeLabel),
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(PromQueryLegendEditor, {
+      children: [(0,jsx_runtime.jsx)(PromQueryLegendEditor, {
         legendFormat: query.legendFormat,
         onChange: legendFormat => onChange(Object.assign({}, query, {
           legendFormat
         })),
         onRunQuery: onRunQuery
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }), (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Min step",
-        tooltip: /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: ["An additional lower limit for the step parameter of the Prometheus query and for the", ' ', _code || (_code = /*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+        tooltip: (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: ["An additional lower limit for the step parameter of the Prometheus query and for the", ' ', _code || (_code = (0,jsx_runtime.jsx)("code", {
             children: "$__interval"
-          })), " and ", _code2 || (_code2 = /*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+          })), " and ", _code2 || (_code2 = (0,jsx_runtime.jsx)("code", {
             children: "$__rate_interval"
           })), " variables."]
         }),
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(AutoSizeInput/* AutoSizeInput */.H, {
+        children: (0,jsx_runtime.jsx)(AutoSizeInput.H, {
           type: "text",
           "aria-label": "Set lower limit for the step parameter",
           placeholder: 'auto',
@@ -2853,30 +2760,30 @@ const PromQueryBuilderOptions = /*#__PURE__*/react.memo(_ref => {
           onCommitChange: onChangeStep,
           defaultValue: query.interval
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }), (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Format",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           value: formatOption,
           allowCustomValue: true,
           onChange: onChangeFormat,
           options: FORMAT_OPTIONS
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }), (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Type",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.RadioButtonGroup, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.RadioButtonGroup, {
           options: queryTypeOptions,
           value: queryTypeValue,
           onChange: onQueryTypeChange
         })
-      }), shouldShowExemplarSwitch(query, app) && /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }), shouldShowExemplarSwitch(query, app) && (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Exemplars",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorSwitch, {
+        children: (0,jsx_runtime.jsx)(experimental.EditorSwitch, {
           value: query.exemplar,
           onChange: onExemplarChange
         })
-      }), query.intervalFactor && query.intervalFactor > 1 && /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.EditorField, {
+      }), query.intervalFactor && query.intervalFactor > 1 && (0,jsx_runtime.jsx)(experimental.EditorField, {
         label: "Resolution",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           "aria-label": "Select resolution",
           isSearchable: false,
           options: INTERVAL_FACTOR_OPTIONS,
@@ -2919,7 +2826,7 @@ function getCollapsedInfo(query, formatOption, queryType) {
 }
 
 PromQueryBuilderOptions.displayName = 'PromQueryBuilderOptions';
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/components/PromQueryCodeEditor.tsx
+;
 
 
 
@@ -2937,9 +2844,9 @@ function PromQueryCodeEditor(_ref) {
     app
   } = _ref;
   const styles = (0,grafana_ui_src.useStyles2)(PromQueryCodeEditor_getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: styles.wrapper,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(components_PromQueryField, {
+    children: (0,jsx_runtime.jsx)(components_PromQueryField, {
       datasource: datasource,
       query: query,
       range: range,
@@ -2955,8 +2862,6 @@ function PromQueryCodeEditor(_ref) {
 
 const PromQueryCodeEditor_getStyles = theme => {
   return {
-    // This wrapper styling can be removed after the old PromQueryEditor is removed.
-    // This is removing margin bottom on the old legacy inline form styles
     wrapper: emotion_css_esm.css`
       .gf-form {
         margin-bottom: 0;
@@ -2964,7 +2869,7 @@ const PromQueryCodeEditor_getStyles = theme => {
     `
   };
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/querybuilder/components/PromQueryEditorSelector.tsx
+;
 var _FeedbackLink, PromQueryEditorSelector_FlexItem, _Space;
 
 
@@ -2986,7 +2891,7 @@ var _FeedbackLink, PromQueryEditorSelector_FlexItem, _Space;
 
 
 
-const PromQueryEditorSelector = /*#__PURE__*/react.memo(props => {
+const PromQueryEditorSelector = react.memo(props => {
   const {
     onChange,
     onRunQuery,
@@ -3007,8 +2912,8 @@ const PromQueryEditorSelector = /*#__PURE__*/react.memo(props => {
       app: app !== null && app !== void 0 ? app : ''
     });
 
-    if (newMetricEditorMode === types/* QueryEditorMode.Builder */.c.Builder) {
-      const result = (0,parsing/* buildVisualQueryFromString */._)(query.expr || ''); // If there are errors, give user a chance to decide if they want to go to builder as that can loose some data.
+    if (newMetricEditorMode === types.c.Builder) {
+      const result = (0,parsing._)(query.expr || ''); 
 
       if (result.errors.length) {
         setParseModalOpen(true);
@@ -3034,20 +2939,20 @@ const PromQueryEditorSelector = /*#__PURE__*/react.memo(props => {
     onChange(query);
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.ConfirmModal, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.ConfirmModal, {
       isOpen: parseModalOpen,
       title: "Query parsing",
       body: "There were errors while trying to parse the query. Continuing to visual builder may loose some parts of the query.",
       confirmText: "Continue",
       onConfirm: () => {
-        changeEditorMode(query, types/* QueryEditorMode.Builder */.c.Builder, onChange);
+        changeEditorMode(query, types.c.Builder, onChange);
         setParseModalOpen(false);
       },
       onDismiss: () => setParseModalOpen(false)
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorHeader, {
-      children: [editorMode === types/* QueryEditorMode.Builder */.c.Builder && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(experimental.InlineSelect, {
+    }), (0,jsx_runtime.jsxs)(experimental.EditorHeader, {
+      children: [editorMode === types.c.Builder && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [(0,jsx_runtime.jsx)(experimental.InlineSelect, {
           value: null,
           placeholder: "Query patterns",
           allowCustomValue: true,
@@ -3055,50 +2960,48 @@ const PromQueryEditorSelector = /*#__PURE__*/react.memo(props => {
             let {
               value
             } = _ref;
-            // TODO: Bit convoluted as we don't have access to visualQuery model here. Maybe would make sense to
-            //  move it inside the editor?
-            const result = (0,parsing/* buildVisualQueryFromString */._)(query.expr || '');
+            const result = (0,parsing._)(query.expr || '');
             result.query.operations = value === null || value === void 0 ? void 0 : value.operations;
             onChange(Object.assign({}, query, {
-              expr: PromQueryModeller/* promQueryModeller.renderQuery */.Z.renderQuery(result.query)
+              expr: PromQueryModeller.Z.renderQuery(result.query)
             }));
           },
-          options: PromQueryModeller/* promQueryModeller.getQueryPatterns */.Z.getQueryPatterns().map(x => ({
+          options: PromQueryModeller.Z.getQueryPatterns().map(x => ({
             label: x.name,
             value: x
           }))
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(QueryHeaderSwitch/* QueryHeaderSwitch */.n, {
+        }), (0,jsx_runtime.jsx)(QueryHeaderSwitch.n, {
           label: "Raw query",
           value: query.rawQuery,
           onChange: onQueryPreviewChange
         })]
-      }), editorMode === types/* QueryEditorMode.Builder */.c.Builder && (_FeedbackLink || (_FeedbackLink = /*#__PURE__*/(0,jsx_runtime.jsx)(FeedbackLink, {
+      }), editorMode === types.c.Builder && (_FeedbackLink || (_FeedbackLink = (0,jsx_runtime.jsx)(FeedbackLink, {
         feedbackUrl: "https://github.com/grafana/grafana/discussions/47693"
-      }))), PromQueryEditorSelector_FlexItem || (PromQueryEditorSelector_FlexItem = /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.FlexItem, {
+      }))), PromQueryEditorSelector_FlexItem || (PromQueryEditorSelector_FlexItem = (0,jsx_runtime.jsx)(experimental.FlexItem, {
         grow: 1
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      })), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
         variant: dataIsStale ? 'primary' : 'secondary',
         size: "sm",
         onClick: onRunQuery,
         icon: (data === null || data === void 0 ? void 0 : data.state) === src.LoadingState.Loading ? 'fa fa-spinner' : undefined,
         disabled: (data === null || data === void 0 ? void 0 : data.state) === src.LoadingState.Loading,
         children: "Run query"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(QueryEditorModeToggle/* QueryEditorModeToggle */.k, {
+      }), (0,jsx_runtime.jsx)(QueryEditorModeToggle.k, {
         mode: editorMode,
         onChange: onEditorModeChange
       })]
-    }), _Space || (_Space = /*#__PURE__*/(0,jsx_runtime.jsx)(experimental.Space, {
+    }), _Space || (_Space = (0,jsx_runtime.jsx)(experimental.Space, {
       v: 0.5
-    })), /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.EditorRows, {
-      children: [editorMode === types/* QueryEditorMode.Code */.c.Code && /*#__PURE__*/(0,jsx_runtime.jsx)(PromQueryCodeEditor, Object.assign({}, props)), editorMode === types/* QueryEditorMode.Builder */.c.Builder && /*#__PURE__*/(0,jsx_runtime.jsx)(PromQueryBuilderContainer, {
+    })), (0,jsx_runtime.jsxs)(experimental.EditorRows, {
+      children: [editorMode === types.c.Code && (0,jsx_runtime.jsx)(PromQueryCodeEditor, Object.assign({}, props)), editorMode === types.c.Builder && (0,jsx_runtime.jsx)(PromQueryBuilderContainer, {
         query: query,
         datasource: props.datasource,
         onChange: onChangeInternal,
         onRunQuery: props.onRunQuery,
         data: data
-      }), editorMode === types/* QueryEditorMode.Explain */.c.Explain && /*#__PURE__*/(0,jsx_runtime.jsx)(PromQueryBuilderExplained, {
+      }), editorMode === types.c.Explain && (0,jsx_runtime.jsx)(PromQueryBuilderExplained, {
         query: query.expr
-      }), editorMode !== types/* QueryEditorMode.Explain */.c.Explain && /*#__PURE__*/(0,jsx_runtime.jsx)(PromQueryBuilderOptions, {
+      }), editorMode !== types.c.Explain && (0,jsx_runtime.jsx)(PromQueryBuilderOptions, {
         query: query,
         app: props.app,
         onChange: onChange,
@@ -3108,13 +3011,13 @@ const PromQueryEditorSelector = /*#__PURE__*/react.memo(props => {
   });
 });
 PromQueryEditorSelector.displayName = 'PromQueryEditorSelector';
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/components/PromExploreQueryEditor.tsx
+;
 
 
 
 
 
-const PromExploreQueryEditor = /*#__PURE__*/(0,react.memo)(props => {
+const PromExploreQueryEditor = (0,react.memo)(props => {
   const {
     range,
     query,
@@ -3123,7 +3026,7 @@ const PromExploreQueryEditor = /*#__PURE__*/(0,react.memo)(props => {
     history,
     onChange,
     onRunQuery
-  } = props; // Setting default values
+  } = props; 
 
   (0,react.useEffect)(() => {
     if (query.expr === undefined) {
@@ -3136,7 +3039,7 @@ const PromExploreQueryEditor = /*#__PURE__*/(0,react.memo)(props => {
       onChange(Object.assign({}, query, {
         exemplar: true
       }));
-    } // Override query type to "Both" only for new queries (no query.expr).
+    } 
 
 
     if (!query.instant && !query.range && !query.expr) {
@@ -3146,7 +3049,7 @@ const PromExploreQueryEditor = /*#__PURE__*/(0,react.memo)(props => {
       }));
     }
   }, [onChange, query]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(components_PromQueryField, {
+  return (0,jsx_runtime.jsx)(components_PromQueryField, {
     app: src.CoreApp.Explore,
     datasource: datasource,
     query: query,
@@ -3157,7 +3060,7 @@ const PromExploreQueryEditor = /*#__PURE__*/(0,react.memo)(props => {
     history: history,
     data: data,
     "data-testid": PromExploreQueryEditor_testIds.editor,
-    ExtraFieldElement: /*#__PURE__*/(0,jsx_runtime.jsx)(PromExploreExtraField, {
+    ExtraFieldElement: (0,jsx_runtime.jsx)(PromExploreExtraField, {
       query: query,
       onChange: onChange,
       datasource: datasource,
@@ -3169,7 +3072,7 @@ PromExploreQueryEditor.displayName = 'PromExploreQueryEditor';
 const PromExploreQueryEditor_testIds = {
   editor: 'prom-editor-explore'
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/components/PromQueryEditorForAlerting.tsx
+;
 
 
 
@@ -3182,7 +3085,7 @@ function PromQueryEditorForAlerting(props) {
     onChange,
     onRunQuery
   } = props;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(components_PromQueryField, {
+  return (0,jsx_runtime.jsx)(components_PromQueryField, {
     datasource: datasource,
     query: query,
     onRunQuery: onRunQuery,
@@ -3196,7 +3099,7 @@ function PromQueryEditorForAlerting(props) {
 const PromQueryEditorForAlerting_testIds = {
   editor: 'prom-editor-cloud-alerting'
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/components/PromQueryEditorByApp.tsx
+;
 
 
 
@@ -3212,29 +3115,27 @@ function PromQueryEditorByApp(props) {
 
   switch (app) {
     case src.CoreApp.CloudAlerting:
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(PromQueryEditorForAlerting, Object.assign({}, props));
+      return (0,jsx_runtime.jsx)(PromQueryEditorForAlerting, Object.assign({}, props));
 
     case src.CoreApp.Explore:
       if (grafana_runtime_src.config.featureToggles.promQueryBuilder) {
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(PromQueryEditorSelector, Object.assign({}, props));
+        return (0,jsx_runtime.jsx)(PromQueryEditorSelector, Object.assign({}, props));
       }
 
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(PromExploreQueryEditor, Object.assign({}, props));
+      return (0,jsx_runtime.jsx)(PromExploreQueryEditor, Object.assign({}, props));
 
     default:
       if (grafana_runtime_src.config.featureToggles.promQueryBuilder) {
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(PromQueryEditorSelector, Object.assign({}, props));
+        return (0,jsx_runtime.jsx)(PromQueryEditorSelector, Object.assign({}, props));
       }
 
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(PromQueryEditor, Object.assign({}, props));
+      return (0,jsx_runtime.jsx)(PromQueryEditor, Object.assign({}, props));
   }
 }
-/* harmony default export */ const components_PromQueryEditorByApp = (/*#__PURE__*/(0,react.memo)(PromQueryEditorByApp));
-// EXTERNAL MODULE: ./public/app/core/config.ts
+ const components_PromQueryEditorByApp = ((0,react.memo)(PromQueryEditorByApp));
 var config = __webpack_require__("./public/app/core/config.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/alertmanager.ts
 var alertmanager = __webpack_require__("./public/app/features/alerting/unified/utils/alertmanager.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/configuration/AzureCredentials.ts
+;
 let AzureCloud;
 
 (function (AzureCloud) {
@@ -3267,7 +3168,7 @@ function isCredentialsComplete(credentials) {
       return !!(credentials.azureCloud && credentials.tenantId && credentials.clientId && credentials.clientSecret);
   }
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/configuration/AzureCredentialsConfig.ts
+;
 
 
 const concealed = Symbol('Concealed client secret');
@@ -3278,7 +3179,6 @@ function getDefaultAzureCloud() {
 
 function getSecret(options) {
   if (options.secureJsonFields.azureClientSecret) {
-    // The secret is concealed on server
     return concealed;
   } else {
     var _options$secureJsonDa;
@@ -3304,8 +3204,7 @@ function getDefaultCredentials() {
   }
 }
 function getCredentials(options) {
-  const credentials = options.jsonData.azureCredentials; // If no credentials saved, then return empty credentials
-  // of type based on whether the managed identity enabled
+  const credentials = options.jsonData.azureCredentials; 
 
   if (!credentials) {
     return getDefaultCredentials();
@@ -3318,8 +3217,6 @@ function getCredentials(options) {
           authType: 'msi'
         };
       } else {
-        // If authentication type is managed identity but managed identities were disabled in Grafana config,
-        // then we should fallback to an empty app registration (client secret) configuration
         return {
           authType: 'clientsecret',
           azureCloud: getDefaultAzureCloud()
@@ -3388,13 +3285,10 @@ function resetCredentials(options) {
     })
   };
 }
-// EXTERNAL MODULE: ./packages/grafana-ui/src/components/index.ts + 186 modules
 var components = __webpack_require__("./packages/grafana-ui/src/components/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/components/Forms/Legacy/Input/Input.tsx
 var Input = __webpack_require__("./packages/grafana-ui/src/components/Forms/Legacy/Input/Input.tsx");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/components/Forms/Legacy/Select/Select.tsx + 1 modules
 var Select = __webpack_require__("./packages/grafana-ui/src/components/Forms/Legacy/Select/Select.tsx");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/configuration/AzureCredentialsForm.tsx
+;
 var AzureCredentialsForm_InlineFormLabel, AzureCredentialsForm_InlineFormLabel2, _InlineFormLabel3, _InlineFormLabel4, AzureCredentialsForm_div, _InlineFormLabel5, _InlineFormLabel6;
 
 
@@ -3436,8 +3330,7 @@ const AzureCredentialsForm = props => {
     });
     return () => {
       canceled = true;
-    }; // This effect is intended to be called only once initially and on Load Subscriptions click
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }; 
   }, [loadSubscriptionsClicked]);
 
   const updateSubscriptions = function (received) {
@@ -3446,13 +3339,11 @@ const AzureCredentialsForm = props => {
 
     if (getSubscriptions) {
       if (autoSelect && !credentials.defaultSubscriptionId && received.length > 0) {
-        // Selecting the default subscription if subscriptions received but no default subscription selected
         onSubscriptionChange(received[0]);
       } else if (credentials.defaultSubscriptionId) {
         const found = received.find(opt => opt.value === credentials.defaultSubscriptionId);
 
         if (!found) {
-          // Unselecting the default subscription if it isn't found among the received subscriptions
           onSubscriptionChange(undefined);
         }
       }
@@ -3534,49 +3425,49 @@ const AzureCredentialsForm = props => {
     }
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: "gf-form-group",
-    children: [props.managedIdentityEnabled && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    children: [props.managedIdentityEnabled && (0,jsx_runtime.jsx)("div", {
       className: "gf-form-inline",
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      children: (0,jsx_runtime.jsxs)("div", {
         className: "gf-form",
-        children: [AzureCredentialsForm_InlineFormLabel || (AzureCredentialsForm_InlineFormLabel = /*#__PURE__*/(0,jsx_runtime.jsx)(components/* InlineFormLabel */.cJ0, {
+        children: [AzureCredentialsForm_InlineFormLabel || (AzureCredentialsForm_InlineFormLabel = (0,jsx_runtime.jsx)(components.cJ0, {
           className: "width-12",
           tooltip: "Choose the type of authentication to Azure services",
           children: "Authentication"
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)(Select/* Select */.Ph, {
+        })), (0,jsx_runtime.jsx)(Select.Ph, {
           className: "width-15",
           value: authTypeOptions.find(opt => opt.value === credentials.authType),
           options: authTypeOptions,
           onChange: onAuthTypeChange
         })]
       })
-    }), credentials.authType === 'clientsecret' && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [azureCloudOptions && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), credentials.authType === 'clientsecret' && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [azureCloudOptions && (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [AzureCredentialsForm_InlineFormLabel2 || (AzureCredentialsForm_InlineFormLabel2 = /*#__PURE__*/(0,jsx_runtime.jsx)(components/* InlineFormLabel */.cJ0, {
+          children: [AzureCredentialsForm_InlineFormLabel2 || (AzureCredentialsForm_InlineFormLabel2 = (0,jsx_runtime.jsx)(components.cJ0, {
             className: "width-12",
             tooltip: "Choose an Azure Cloud",
             children: "Azure Cloud"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)(Select/* Select */.Ph, {
+          })), (0,jsx_runtime.jsx)(Select.Ph, {
             className: "width-15",
             value: azureCloudOptions.find(opt => opt.value === credentials.azureCloud),
             options: azureCloudOptions,
             onChange: onAzureCloudChange
           })]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_InlineFormLabel3 || (_InlineFormLabel3 = /*#__PURE__*/(0,jsx_runtime.jsx)(components/* InlineFormLabel */.cJ0, {
+          children: [_InlineFormLabel3 || (_InlineFormLabel3 = (0,jsx_runtime.jsx)(components.cJ0, {
             className: "width-12",
             children: "Directory (tenant) ID"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          })), (0,jsx_runtime.jsx)("div", {
             className: "width-15",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input/* Input */.I, {
+            children: (0,jsx_runtime.jsx)(Input.I, {
               className: "width-30",
               placeholder: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
               value: credentials.tenantId || '',
@@ -3584,16 +3475,16 @@ const AzureCredentialsForm = props => {
             })
           })]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_InlineFormLabel4 || (_InlineFormLabel4 = /*#__PURE__*/(0,jsx_runtime.jsx)(components/* InlineFormLabel */.cJ0, {
+          children: [_InlineFormLabel4 || (_InlineFormLabel4 = (0,jsx_runtime.jsx)(components.cJ0, {
             className: "width-12",
             children: "Application (client) ID"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          })), (0,jsx_runtime.jsx)("div", {
             className: "width-15",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input/* Input */.I, {
+            children: (0,jsx_runtime.jsx)(Input.I, {
               className: "width-30",
               placeholder: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
               value: credentials.clientId || '',
@@ -3601,23 +3492,23 @@ const AzureCredentialsForm = props => {
             })
           })]
         })
-      }), typeof credentials.clientSecret === 'symbol' ? /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), typeof credentials.clientSecret === 'symbol' ? (0,jsx_runtime.jsxs)("div", {
         className: "gf-form-inline",
-        children: [AzureCredentialsForm_div || (AzureCredentialsForm_div = /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: [AzureCredentialsForm_div || (AzureCredentialsForm_div = (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(components/* InlineFormLabel */.cJ0, {
+          children: [(0,jsx_runtime.jsx)(components.cJ0, {
             className: "width-12",
             children: "Client Secret"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(Input/* Input */.I, {
+          }), (0,jsx_runtime.jsx)(Input.I, {
             className: "width-25",
             placeholder: "configured",
             disabled: true
           })]
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        })), (0,jsx_runtime.jsx)("div", {
           className: "gf-form",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          children: (0,jsx_runtime.jsx)("div", {
             className: "max-width-30 gf-form-inline",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(components/* Button */.zxk, {
+            children: (0,jsx_runtime.jsx)(components.zxk, {
               variant: "secondary",
               type: "button",
               onClick: onClientSecretReset,
@@ -3625,16 +3516,16 @@ const AzureCredentialsForm = props => {
             })
           })
         })]
-      }) : /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }) : (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_InlineFormLabel5 || (_InlineFormLabel5 = /*#__PURE__*/(0,jsx_runtime.jsx)(components/* InlineFormLabel */.cJ0, {
+          children: [_InlineFormLabel5 || (_InlineFormLabel5 = (0,jsx_runtime.jsx)(components.cJ0, {
             className: "width-12",
             children: "Client Secret"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          })), (0,jsx_runtime.jsx)("div", {
             className: "width-15",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input/* Input */.I, {
+            children: (0,jsx_runtime.jsx)(Input.I, {
               className: "width-30",
               placeholder: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
               value: credentials.clientSecret || '',
@@ -3643,30 +3534,30 @@ const AzureCredentialsForm = props => {
           })]
         })
       })]
-    }), getSubscriptions && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), getSubscriptions && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_InlineFormLabel6 || (_InlineFormLabel6 = /*#__PURE__*/(0,jsx_runtime.jsx)(components/* InlineFormLabel */.cJ0, {
+          children: [_InlineFormLabel6 || (_InlineFormLabel6 = (0,jsx_runtime.jsx)(components.cJ0, {
             className: "width-12",
             children: "Default Subscription"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          })), (0,jsx_runtime.jsx)("div", {
             className: "width-25",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(Select/* Select */.Ph, {
+            children: (0,jsx_runtime.jsx)(Select.Ph, {
               value: credentials.defaultSubscriptionId ? subscriptions.find(opt => opt.value === credentials.defaultSubscriptionId) : undefined,
               options: subscriptions,
               onChange: onSubscriptionChange
             })
           })]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsx)("div", {
           className: "gf-form",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          children: (0,jsx_runtime.jsx)("div", {
             className: "max-width-30 gf-form-inline",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(components/* Button */.zxk, {
+            children: (0,jsx_runtime.jsx)(components.zxk, {
               variant: "secondary",
               size: "sm",
               type: "button",
@@ -3680,8 +3571,8 @@ const AzureCredentialsForm = props => {
     })]
   });
 };
-/* harmony default export */ const configuration_AzureCredentialsForm = ((/* unused pure expression or super */ null && (AzureCredentialsForm)));
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/configuration/AzureAuthSettings.tsx
+ const configuration_AzureCredentialsForm = (( null && (AzureCredentialsForm)));
+;
 var AzureAuthSettings_h, _h2, AzureAuthSettings_InlineFormLabel;
 
 
@@ -3704,28 +3595,28 @@ const AzureAuthSettings = props => {
     onChange(updateCredentials(dataSourceConfig, credentials));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [AzureAuthSettings_h || (AzureAuthSettings_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h6", {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [AzureAuthSettings_h || (AzureAuthSettings_h = (0,jsx_runtime.jsx)("h6", {
       children: "Azure Authentication"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(AzureCredentialsForm, {
+    })), (0,jsx_runtime.jsx)(AzureCredentialsForm, {
       managedIdentityEnabled: grafana_runtime_src.config.azure.managedIdentityEnabled,
       credentials: credentials,
       azureCloudOptions: KnownAzureClouds,
       onCredentialsChange: onCredentialsChange
-    }), _h2 || (_h2 = /*#__PURE__*/(0,jsx_runtime.jsx)("h6", {
+    }), _h2 || (_h2 = (0,jsx_runtime.jsx)("h6", {
       children: "Azure Configuration"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    })), (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      children: (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [AzureAuthSettings_InlineFormLabel || (AzureAuthSettings_InlineFormLabel = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [AzureAuthSettings_InlineFormLabel || (AzureAuthSettings_InlineFormLabel = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             className: "width-12",
             children: "AAD resource ID"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          })), (0,jsx_runtime.jsx)("div", {
             className: "width-15",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
               className: "width-30",
               value: dataSourceConfig.jsonData.azureEndpointResourceId || '',
               onChange: event => onChange(Object.assign({}, dataSourceConfig, {
@@ -3740,10 +3631,9 @@ const AzureAuthSettings = props => {
     })]
   });
 };
-/* harmony default export */ const configuration_AzureAuthSettings = ((/* unused pure expression or super */ null && (AzureAuthSettings)));
-// EXTERNAL MODULE: ./packages/grafana-e2e-selectors/src/index.ts + 3 modules
+ const configuration_AzureAuthSettings = (( null && (AzureAuthSettings)));
 var grafana_e2e_selectors_src = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/configuration/ExemplarSetting.tsx
+;
 
 
 
@@ -3759,17 +3649,17 @@ function ExemplarSetting(_ref) {
     onDelete
   } = _ref;
   const [isInternalLink, setIsInternalLink] = (0,react.useState)(Boolean(value.datasourceUid));
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: "gf-form-group",
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Internal link",
       labelWidth: 24,
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+      children: (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           value: isInternalLink,
-          "aria-label": grafana_e2e_selectors_src/* selectors.components.DataSource.Prometheus.configPage.internalLinkSwitch */.wl.components.DataSource.Prometheus.configPage.internalLinkSwitch,
+          "aria-label": grafana_e2e_selectors_src.wl.components.DataSource.Prometheus.configPage.internalLinkSwitch,
           onChange: ev => setIsInternalLink(ev.currentTarget.checked)
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           variant: "destructive",
           title: "Remove link",
           icon: "times",
@@ -3782,11 +3672,11 @@ function ExemplarSetting(_ref) {
             `
         })]
       })
-    }), isInternalLink ? /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), isInternalLink ? (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Data source",
       labelWidth: 24,
       tooltip: "The data source the exemplar is going to navigate to.",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
+      children: (0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
         tracing: true,
         current: value.datasourceUid,
         noDefault: true,
@@ -3796,11 +3686,11 @@ function ExemplarSetting(_ref) {
           url: undefined
         }))
       })
-    }) : /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }) : (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "URL",
       labelWidth: 24,
       tooltip: "The URL of the trace backend the user would go to see its trace.",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         placeholder: "https://example.com/${__value.raw}",
         spellCheck: false,
         width: 40,
@@ -3810,11 +3700,11 @@ function ExemplarSetting(_ref) {
           url: event.currentTarget.value
         }))
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "URL Label",
       labelWidth: 24,
       tooltip: "Use to override the button label on the exemplar traceID field.",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         placeholder: "Go to example.com",
         spellCheck: false,
         width: 40,
@@ -3823,11 +3713,11 @@ function ExemplarSetting(_ref) {
           urlDisplayLabel: event.currentTarget.value
         }))
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
       label: "Label name",
       labelWidth: 24,
       tooltip: "The name of the field in the labels object that should be used to get the traceID.",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         placeholder: "traceID",
         spellCheck: false,
         width: 40,
@@ -3839,7 +3729,7 @@ function ExemplarSetting(_ref) {
     })]
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/configuration/ExemplarsSettings.tsx
+;
 var ExemplarsSettings_h;
 
 
@@ -3855,12 +3745,12 @@ function ExemplarsSettings(_ref) {
     options,
     onChange
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [ExemplarsSettings_h || (ExemplarsSettings_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [ExemplarsSettings_h || (ExemplarsSettings_h = (0,jsx_runtime.jsx)("h3", {
       className: "page-heading",
       children: "Exemplars"
     })), options && options.map((option, index) => {
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(ExemplarSetting, {
+      return (0,jsx_runtime.jsx)(ExemplarSetting, {
         value: option,
         onChange: newField => {
           const newOptions = [...options];
@@ -3873,9 +3763,9 @@ function ExemplarsSettings(_ref) {
           onChange(newOptions);
         }
       }, index);
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
       variant: "secondary",
-      "aria-label": grafana_e2e_selectors_src/* selectors.components.DataSource.Prometheus.configPage.exemplarsAddButton */.wl.components.DataSource.Prometheus.configPage.exemplarsAddButton,
+      "aria-label": grafana_e2e_selectors_src.wl.components.DataSource.Prometheus.configPage.exemplarsAddButton,
       className: emotion_css_esm.css`
           margin-bottom: 10px;
         `,
@@ -3891,7 +3781,7 @@ function ExemplarsSettings(_ref) {
     })]
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/configuration/PromSettings.tsx
+;
 var PromSettings_InlineFormLabel, PromSettings_h;
 
 
@@ -3919,23 +3809,23 @@ const PromSettings = props => {
   const {
     options,
     onOptionsChange
-  } = props; // We are explicitly adding httpMethod so it is correctly displayed in dropdown. This way, it is more predictable for users.
+  } = props; 
 
   if (!options.jsonData.httpMethod) {
     options.jsonData.httpMethod = 'POST';
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)("div", {
       className: "gf-form-group",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      children: [(0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsx)("div", {
           className: "gf-form",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(FormField, {
+          children: (0,jsx_runtime.jsx)(FormField, {
             label: "Scrape interval",
             labelWidth: 13,
-            inputEl: /*#__PURE__*/(0,jsx_runtime.jsx)(PromSettings_Input, {
+            inputEl: (0,jsx_runtime.jsx)(PromSettings_Input, {
               className: "width-6",
               value: options.jsonData.timeInterval,
               spellCheck: false,
@@ -3946,14 +3836,14 @@ const PromSettings = props => {
             tooltip: "Set this to the typical scrape and evaluation interval configured in Prometheus. Defaults to 15s."
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsx)("div", {
           className: "gf-form",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(FormField, {
+          children: (0,jsx_runtime.jsx)(FormField, {
             label: "Query timeout",
             labelWidth: 13,
-            inputEl: /*#__PURE__*/(0,jsx_runtime.jsx)(PromSettings_Input, {
+            inputEl: (0,jsx_runtime.jsx)(PromSettings_Input, {
               className: "width-6",
               value: options.jsonData.queryTimeout,
               onChange: onChangeHandler('queryTimeout', options, onOptionsChange),
@@ -3964,13 +3854,13 @@ const PromSettings = props => {
             tooltip: "Set the Prometheus query timeout."
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), (0,jsx_runtime.jsxs)("div", {
         className: "gf-form",
-        children: [PromSettings_InlineFormLabel || (PromSettings_InlineFormLabel = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+        children: [PromSettings_InlineFormLabel || (PromSettings_InlineFormLabel = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
           width: 13,
           tooltip: "You can use either POST or GET HTTP method to query your Prometheus data source. POST is the recommended method as it allows bigger queries. Change this to GET if you have a Prometheus version older than 2.1 or if POST requests are restricted in your network.",
           children: "HTTP Method"
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)(PromSettings_Select, {
+        })), (0,jsx_runtime.jsx)(PromSettings_Select, {
           "aria-label": "Select HTTP method",
           options: httpOptions,
           value: httpOptions.find(o => o.value === options.jsonData.httpMethod),
@@ -3978,31 +3868,31 @@ const PromSettings = props => {
           width: 7
         })]
       })]
-    }), PromSettings_h || (PromSettings_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+    }), PromSettings_h || (PromSettings_h = (0,jsx_runtime.jsx)("h3", {
       className: "page-heading",
       children: "Misc"
-    })), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    })), (0,jsx_runtime.jsxs)("div", {
       className: "gf-form-group",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      children: [(0,jsx_runtime.jsx)("div", {
         className: "gf-form",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           labelWidth: 28,
           label: "Disable metrics lookup",
           tooltip: "Checking this option will disable the metrics chooser and metric/label support in the query field's autocomplete. This helps if you have performance issues with bigger Prometheus instances.",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
             value: (_options$jsonData$dis = options.jsonData.disableMetricsLookup) !== null && _options$jsonData$dis !== void 0 ? _options$jsonData$dis : false,
             onChange: (0,src.onUpdateDatasourceJsonDataOptionChecked)(props, 'disableMetricsLookup')
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsx)("div", {
           className: "gf-form max-width-30",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(FormField, {
+          children: (0,jsx_runtime.jsx)(FormField, {
             label: "Custom query parameters",
             labelWidth: 14,
             tooltip: "Add Custom parameters to all Prometheus or Thanos queries.",
-            inputEl: /*#__PURE__*/(0,jsx_runtime.jsx)(PromSettings_Input, {
+            inputEl: (0,jsx_runtime.jsx)(PromSettings_Input, {
               className: "width-25",
               value: options.jsonData.customQueryParameters,
               onChange: onChangeHandler('customQueryParameters', options, onOptionsChange),
@@ -4012,7 +3902,7 @@ const PromSettings = props => {
           })
         })
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(ExemplarsSettings, {
+    }), (0,jsx_runtime.jsx)(ExemplarsSettings, {
       options: options.jsonData.exemplarTraceIdDestinations,
       onChange: exemplarOptions => (0,src.updateDatasourcePluginJsonDataOption)({
         onOptionsChange,
@@ -4043,7 +3933,7 @@ const onChangeHandler = (key, options, onOptionsChange) => eventItem => {
     })
   }));
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/configuration/ConfigEditor.tsx
+;
 var _Alert;
 
 
@@ -4063,38 +3953,37 @@ const ConfigEditor = props => {
     options,
     onOptionsChange
   } = props;
-  const alertmanagers = (0,alertmanager/* getAllAlertmanagerDataSources */.Tc)();
+  const alertmanagers = (0,alertmanager.Tc)();
   const azureAuthSettings = {
-    azureAuthSupported: (_config$featureToggle = config/* config.featureToggles.prometheus_azure_auth */.vc.featureToggles.prometheus_azure_auth) !== null && _config$featureToggle !== void 0 ? _config$featureToggle : false,
+    azureAuthSupported: (_config$featureToggle = config.vc.featureToggles.prometheus_azure_auth) !== null && _config$featureToggle !== void 0 ? _config$featureToggle : false,
     getAzureAuthEnabled: config => hasCredentials(config),
     setAzureAuthEnabled: (config, enabled) => enabled ? setDefaultCredentials(config) : resetCredentials(config),
     azureSettingsUI: AzureAuthSettings
   };
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [options.access === 'direct' && (_Alert || (_Alert = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [options.access === 'direct' && (_Alert || (_Alert = (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
       title: "Deprecation Notice",
       severity: "warning",
       children: "Browser access mode in the Prometheus datasource is deprecated and will be removed in a future release."
-    }))), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.DataSourceHttpSettings, {
+    }))), (0,jsx_runtime.jsx)(grafana_ui_src.DataSourceHttpSettings, {
       defaultUrl: "http://localhost:9090",
       dataSourceConfig: options,
       showAccessOptions: true,
       onChange: onOptionsChange,
-      sigV4AuthToggleEnabled: config/* config.sigV4AuthEnabled */.vc.sigV4AuthEnabled,
+      sigV4AuthToggleEnabled: config.vc.sigV4AuthEnabled,
       azureAuthSettings: azureAuthSettings
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.AlertingSettings, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.AlertingSettings, {
       alertmanagerDataSources: alertmanagers,
       options: options,
       onOptionsChange: onOptionsChange
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(PromSettings, {
+    }), (0,jsx_runtime.jsx)(PromSettings, {
       options: options,
       onOptionsChange: onOptionsChange
     })]
   });
 };
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/datasource.tsx + 4 modules
 var datasource = __webpack_require__("./public/app/plugins/datasource/prometheus/datasource.tsx");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/prometheus/module.ts
+;
 function module_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -4105,31 +3994,29 @@ function module_defineProperty(obj, key, value) { if (key in obj) { Object.defin
 
 class PrometheusAnnotationsQueryCtrl {
   constructor() {
-    module_defineProperty(this, "stepDefaultValuePlaceholder", datasource/* ANNOTATION_QUERY_STEP_DEFAULT */.cf);
+    module_defineProperty(this, "stepDefaultValuePlaceholder", datasource.cf);
   }
 
 }
 
 module_defineProperty(PrometheusAnnotationsQueryCtrl, "templateUrl", 'partials/annotations.editor.html');
 
-const module_plugin = new src.DataSourcePlugin(datasource/* PrometheusDatasource */.vQ).setQueryEditor(components_PromQueryEditorByApp).setConfigEditor(ConfigEditor).setAnnotationQueryCtrl(PrometheusAnnotationsQueryCtrl).setQueryEditorHelp(components_PromCheatSheet);
+const module_plugin = new src.DataSourcePlugin(datasource.vQ).setQueryEditor(components_PromQueryEditorByApp).setConfigEditor(ConfigEditor).setAnnotationQueryCtrl(PrometheusAnnotationsQueryCtrl).setQueryEditorHelp(components_PromCheatSheet);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/prometheus/promql.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/prometheus/promql.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Fe": () => (/* binding */ promqlGrammar),
-/* harmony export */   "Os": () => (/* binding */ LOGICAL_OPERATORS),
-/* harmony export */   "Ty": () => (/* binding */ RATE_RANGES),
-/* harmony export */   "YO": () => (/* binding */ PROM_KEYWORDS),
-/* harmony export */   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "fP": () => (/* binding */ OPERATORS),
-/* harmony export */   "r8": () => (/* binding */ FUNCTIONS)
-/* harmony export */ });
-// When changing RATE_RANGES, check if Loki/LogQL ranges should be changed too
-// @see public/app/plugins/datasource/loki/language_provider.ts
+ __webpack_require__.d(__webpack_exports__, {
+   "Fe": () => ( promqlGrammar),
+   "Os": () => ( LOGICAL_OPERATORS),
+   "Ty": () => ( RATE_RANGES),
+   "YO": () => ( PROM_KEYWORDS),
+   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__),
+   "fP": () => ( OPERATORS),
+   "r8": () => ( FUNCTIONS)
+ });
 const RATE_RANGES = [{
   label: '$__interval',
   sortValue: '$__interval'
@@ -4553,7 +4440,6 @@ const promqlGrammar = {
   },
   'context-aggregation': {
     pattern: /((by|without)\s*)\([^)]*\)/,
-    // by ()
     lookbehind: true,
     inside: {
       'label-key': {
@@ -4586,7 +4472,6 @@ const promqlGrammar = {
   function: new RegExp(`\\b(?:${FUNCTIONS.map(f => f.label).join('|')})(?=\\s*\\()`, 'i'),
   'context-range': [{
     pattern: /\[[^\]]*(?=])/,
-    // [1m]
     inside: {
       'range-duration': {
         pattern: /\b\d+[smhdwy]\b/i,
@@ -4595,7 +4480,6 @@ const promqlGrammar = {
     }
   }, {
     pattern: /(offset\s+)\w+/,
-    // offset 1m
     lookbehind: true,
     inside: {
       'range-duration': {
@@ -4612,8 +4496,8 @@ const promqlGrammar = {
   operator: new RegExp(`/[-+*/=%^~]|&&?|\\|?\\||!=?|<(?:=>?|<|>)?|>[>=]?|\\b(?:${OPERATORS.join('|')})\\b`, 'i'),
   punctuation: /[{};()`,.]/
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (promqlGrammar);
+ const __WEBPACK_DEFAULT_EXPORT__ = (promqlGrammar);
 
-/***/ })
+ })
 
 }]);

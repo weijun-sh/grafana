@@ -1,44 +1,29 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[7040],{
 
-/***/ "./public/app/features/inspector/InspectDataTab.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/inspector/InspectDataTab.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "E": () => (/* binding */ InspectDataTab)
+  "E": () => ( InspectDataTab)
 });
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/file-saver-npm-2.0.5-2c3bc40d53-c62d96e5ce.zip/node_modules/file-saver/dist/FileSaver.min.js
 var FileSaver_min = __webpack_require__("./.yarn/cache/file-saver-npm-2.0.5-2c3bc40d53-c62d96e5ce.zip/node_modules/file-saver/dist/FileSaver.min.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-virtualized-auto-sizer-virtual-b5ab366cb0/0/cache/react-virtualized-auto-sizer-npm-1.0.6-50869b8392-81270e9d32.zip/node_modules/react-virtualized-auto-sizer/dist/index.esm.js
 var index_esm = __webpack_require__("./.yarn/__virtual__/react-virtualized-auto-sizer-virtual-b5ab366cb0/0/cache/react-virtualized-auto-sizer-npm-1.0.6-50869b8392-81270e9d32.zip/node_modules/react-virtualized-auto-sizer/dist/index.esm.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-e2e-selectors/src/index.ts + 3 modules
 var grafana_e2e_selectors_src = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/config.ts
 var config = __webpack_require__("./public/app/core/config.ts");
-// EXTERNAL MODULE: ./public/app/core/logs_model.ts + 1 modules
 var logs_model = __webpack_require__("./public/app/core/logs_model.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/jaeger/responseTransform.ts
 var responseTransform = __webpack_require__("./public/app/plugins/datasource/jaeger/responseTransform.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/tempo/resultTransformer.ts + 43 modules
 var resultTransformer = __webpack_require__("./public/app/plugins/datasource/tempo/resultTransformer.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/zipkin/utils/transforms.ts
 var transforms = __webpack_require__("./public/app/plugins/datasource/zipkin/utils/transforms.ts");
-// EXTERNAL MODULE: ./public/app/core/components/QueryOperationRow/QueryOperationRow.tsx
 var QueryOperationRow = __webpack_require__("./public/app/core/components/QueryOperationRow/QueryOperationRow.tsx");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/inspector/DetailText.tsx
+;
 
 
 
@@ -56,14 +41,13 @@ const DetailText = _ref => {
     children
   } = _ref;
   const collapsedTextStyles = (0,grafana_ui_src.useStyles)(getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+  return (0,jsx_runtime.jsx)("p", {
     className: collapsedTextStyles,
     children: children
   });
 };
-// EXTERNAL MODULE: ./public/app/features/inspector/styles.ts
 var inspector_styles = __webpack_require__("./public/app/features/inspector/styles.ts");
-;// CONCATENATED MODULE: ./public/app/features/inspector/InspectDataOptions.tsx
+;
 
 
 
@@ -88,7 +72,7 @@ const InspectDataOptions = _ref => {
     downloadForExcel,
     toggleDownloadForExcel
   } = _ref;
-  const styles = (0,inspector_styles/* getPanelInspectorStyles */.S)();
+  const styles = (0,inspector_styles.S)();
   const panelTransformations = panel === null || panel === void 0 ? void 0 : panel.getTransformations();
   const showPanelTransformationsOption = Boolean(panelTransformations === null || panelTransformations === void 0 ? void 0 : panelTransformations.length) && transformId !== 'join by time';
   const showFieldConfigsOption = panel && !((_panel$plugin = panel.plugin) !== null && _panel$plugin !== void 0 && _panel$plugin.fieldConfigRegistry.isEmpty());
@@ -140,54 +124,54 @@ const InspectDataOptions = _ref => {
     return parts.join(', ');
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: styles.dataDisplayOptions,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(QueryOperationRow/* QueryOperationRow */.t, {
+    children: (0,jsx_runtime.jsx)(QueryOperationRow.t, {
       id: "Data options",
       index: 0,
       title: "Data options",
-      headerElement: /*#__PURE__*/(0,jsx_runtime.jsx)(DetailText, {
+      headerElement: (0,jsx_runtime.jsx)(DetailText, {
         children: getActiveString()
       }),
       isOpen: false,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      children: (0,jsx_runtime.jsx)("div", {
         className: styles.options,
         "data-testid": "dataOptions",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.VerticalGroup, {
+        children: (0,jsx_runtime.jsxs)(grafana_ui_src.VerticalGroup, {
           spacing: "none",
-          children: [data.length > 1 && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+          children: [data.length > 1 && (0,jsx_runtime.jsx)(grafana_ui_src.Field, {
             label: "Show data frame",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
               options: selectableOptions,
               value: selectedDataFrame,
               onChange: onDataFrameChange,
               width: 30,
               "aria-label": "Select dataframe"
             })
-          }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
-            children: [showPanelTransformationsOption && onOptionsChange && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+          }), (0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
+            children: [showPanelTransformationsOption && onOptionsChange && (0,jsx_runtime.jsx)(grafana_ui_src.Field, {
               label: "Apply panel transformations",
               description: "Table data is displayed with transformations defined in the panel Transform tab.",
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Switch, {
+              children: (0,jsx_runtime.jsx)(grafana_ui_src.Switch, {
                 value: !!options.withTransforms,
                 onChange: () => onOptionsChange(Object.assign({}, options, {
                   withTransforms: !options.withTransforms
                 }))
               })
-            }), showFieldConfigsOption && onOptionsChange && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+            }), showFieldConfigsOption && onOptionsChange && (0,jsx_runtime.jsx)(grafana_ui_src.Field, {
               label: "Formatted data",
               description: "Table data is formatted with options defined in the Field and Override tabs.",
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Switch, {
+              children: (0,jsx_runtime.jsx)(grafana_ui_src.Switch, {
                 id: "formatted-data-toggle",
                 value: !!options.withFieldConfig,
                 onChange: () => onOptionsChange(Object.assign({}, options, {
                   withFieldConfig: !options.withFieldConfig
                 }))
               })
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+            }), (0,jsx_runtime.jsx)(grafana_ui_src.Field, {
               label: "Download for Excel",
               description: "Adds header to CSV for use with Excel",
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Switch, {
+              children: (0,jsx_runtime.jsx)(grafana_ui_src.Switch, {
                 id: "excel-toggle",
                 value: downloadForExcel,
                 onChange: toggleDownloadForExcel
@@ -199,7 +183,7 @@ const InspectDataOptions = _ref => {
     })
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/inspector/InspectDataTab.tsx
+;
 var _div, _div2;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -252,7 +236,7 @@ class InspectDataTab extends react.PureComponent {
         data,
         panel
       } = this.props;
-      const logsModel = (0,logs_model/* dataFrameToLogsModel */.aB)(data || [], undefined);
+      const logsModel = (0,logs_model.aB)(data || [], undefined);
       let textToDownload = '';
       (_logsModel$meta = logsModel.meta) === null || _logsModel$meta === void 0 ? void 0 : _logsModel$meta.forEach(metaItem => {
         const string = `${metaItem.label}: ${JSON.stringify(metaItem.value)}\n`;
@@ -286,7 +270,6 @@ class InspectDataTab extends react.PureComponent {
       for (const df of data) {
         var _df$meta;
 
-        // Only export traces
         if (((_df$meta = df.meta) === null || _df$meta === void 0 ? void 0 : _df$meta.preferredVisualisationType) !== 'trace') {
           continue;
         }
@@ -294,14 +277,14 @@ class InspectDataTab extends react.PureComponent {
         switch ((_df$meta2 = df.meta) === null || _df$meta2 === void 0 ? void 0 : (_df$meta2$custom = _df$meta2.custom) === null || _df$meta2$custom === void 0 ? void 0 : _df$meta2$custom.traceFormat) {
           case 'jaeger':
             {
-              let res = (0,responseTransform/* transformToJaeger */.c6)(new src.MutableDataFrame(df));
+              let res = (0,responseTransform.c6)(new src.MutableDataFrame(df));
               this.saveTraceJson(res, panel);
               break;
             }
 
           case 'zipkin':
             {
-              let res = (0,transforms/* transformToZipkin */.H)(new src.MutableDataFrame(df));
+              let res = (0,transforms.H)(new src.MutableDataFrame(df));
               this.saveTraceJson(res, panel);
               break;
             }
@@ -309,7 +292,7 @@ class InspectDataTab extends react.PureComponent {
           case 'otlp':
           default:
             {
-              let res = (0,resultTransformer/* transformToOTLP */.g9)(new src.MutableDataFrame(df));
+              let res = (0,resultTransformer.g9)(new src.MutableDataFrame(df));
               this.saveTraceJson(res, panel);
               break;
             }
@@ -398,13 +381,12 @@ class InspectDataTab extends react.PureComponent {
 
     if (!options.withFieldConfig || !panel) {
       return (0,src.applyRawFieldOverrides)(data);
-    } // We need to apply field config even though it was already applied in the PanelQueryRunner.
-    // That's because transformers create new fields and data frames, so i.e. display processor is no longer there
+    } 
 
 
     return (0,src.applyFieldOverrides)({
       data,
-      theme: config/* config.theme2 */.vc.theme2,
+      theme: config.vc.theme2,
       fieldConfig: panel.fieldConfig,
       timeZone,
       replaceVariables: value => {
@@ -428,11 +410,11 @@ class InspectDataTab extends react.PureComponent {
       selectedDataFrame,
       downloadForExcel
     } = this.state;
-    const styles = (0,inspector_styles/* getPanelInspectorStyles */.S)();
+    const styles = (0,inspector_styles.S)();
 
     if (isLoading) {
-      return _div || (_div = /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Spinner, {
+      return _div || (_div = (0,jsx_runtime.jsxs)("div", {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.Spinner, {
           inline: true
         }), " Loading"]
       }));
@@ -441,10 +423,10 @@ class InspectDataTab extends react.PureComponent {
     const dataFrames = this.getProcessedData();
 
     if (!dataFrames || !dataFrames.length) {
-      return _div2 || (_div2 = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      return _div2 || (_div2 = (0,jsx_runtime.jsx)("div", {
         children: "No Data"
       }));
-    } // let's make sure we don't try to render a frame that doesn't exists
+    } 
 
 
     const index = !dataFrames[dataFrameIndex] ? 0 : dataFrameIndex;
@@ -459,12 +441,12 @@ class InspectDataTab extends react.PureComponent {
 
       return (df === null || df === void 0 ? void 0 : (_df$meta4 = df.meta) === null || _df$meta4 === void 0 ? void 0 : _df$meta4.preferredVisualisationType) === 'trace';
     });
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    return (0,jsx_runtime.jsxs)("div", {
       className: styles.wrap,
-      "aria-label": grafana_e2e_selectors_src/* selectors.components.PanelInspector.Data.content */.wl.components.PanelInspector.Data.content,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      "aria-label": grafana_e2e_selectors_src.wl.components.PanelInspector.Data.content,
+      children: [(0,jsx_runtime.jsxs)("div", {
         className: styles.toolbar,
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(InspectDataOptions, {
+        children: [(0,jsx_runtime.jsx)(InspectDataOptions, {
           data: data,
           panel: panel,
           options: options,
@@ -476,7 +458,7 @@ class InspectDataTab extends react.PureComponent {
           onOptionsChange: onOptionsChange,
           onDataFrameChange: this.onDataFrameChange,
           toggleDownloadForExcel: this.toggleDownloadForExcel
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           variant: "primary",
           onClick: () => this.exportCsv(dataFrames[dataFrameIndex], {
             useExcelHeader: this.state.downloadForExcel
@@ -485,7 +467,7 @@ class InspectDataTab extends react.PureComponent {
               margin-bottom: 10px;
             `,
           children: "Download CSV"
-        }), hasLogs && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+        }), hasLogs && (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           variant: "primary",
           onClick: this.exportLogsAsTxt,
           className: emotion_css_esm.css`
@@ -493,7 +475,7 @@ class InspectDataTab extends react.PureComponent {
                 margin-left: 10px;
               `,
           children: "Download logs"
-        }), hasTraces && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+        }), hasTraces && (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           variant: "primary",
           onClick: this.exportTracesAsJson,
           className: emotion_css_esm.css`
@@ -502,9 +484,9 @@ class InspectDataTab extends react.PureComponent {
               `,
           children: "Download traces"
         })]
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: styles.content,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* default */.Z, {
+        children: (0,jsx_runtime.jsx)(index_esm.Z, {
           children: _ref => {
             let {
               width,
@@ -515,12 +497,12 @@ class InspectDataTab extends react.PureComponent {
               return null;
             }
 
-            return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+            return (0,jsx_runtime.jsx)("div", {
               style: {
                 width,
                 height
               },
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Table, {
+              children: (0,jsx_runtime.jsx)(grafana_ui_src.Table, {
                 width: width,
                 height: height,
                 data: dataFrame,
@@ -549,17 +531,17 @@ function buildTransformationOptions() {
   return transformations;
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/inspector/InspectErrorTab.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/inspector/InspectErrorTab.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "l": () => (/* binding */ InspectErrorTab)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "l": () => ( InspectErrorTab)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _div, _h, _JSONFormatter;
 
 
@@ -593,10 +575,10 @@ const InspectErrorTab = _ref => {
   }
 
   if (error.data) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
         children: error.data.message
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.JSONFormatter, {
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.JSONFormatter, {
         json: error,
         open: 2
       })]
@@ -610,14 +592,14 @@ const InspectErrorTab = _ref => {
     } = parseErrorMessage(error.message);
 
     if (!json) {
-      return _div || (_div = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      return _div || (_div = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         children: msg
       }));
     } else {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
-        children: [msg !== '' && (_h || (_h = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+      return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+        children: [msg !== '' && (_h || (_h = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
           children: msg
-        }))), _JSONFormatter || (_JSONFormatter = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.JSONFormatter, {
+        }))), _JSONFormatter || (_JSONFormatter = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.JSONFormatter, {
           json: json,
           open: 5
         }))]
@@ -625,28 +607,28 @@ const InspectErrorTab = _ref => {
     }
   }
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.JSONFormatter, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.JSONFormatter, {
     json: error,
     open: 2
   });
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/inspector/InspectJSONTab.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/inspector/InspectJSONTab.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "W": () => (/* binding */ InspectJSONTab)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var react_virtualized_auto_sizer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-virtualized-auto-sizer-virtual-b5ab366cb0/0/cache/react-virtualized-auto-sizer-npm-1.0.6-50869b8392-81270e9d32.zip/node_modules/react-virtualized-auto-sizer/dist/index.esm.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var app_core_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/core/core.ts");
-/* harmony import */ var _inspector_styles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/inspector/styles.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "W": () => ( InspectJSONTab)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var react_virtualized_auto_sizer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-virtualized-auto-sizer-virtual-b5ab366cb0/0/cache/react-virtualized-auto-sizer-npm-1.0.6-50869b8392-81270e9d32.zip/node_modules/react-virtualized-auto-sizer/dist/index.esm.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var app_core_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/core/core.ts");
+ var _inspector_styles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/inspector/styles.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -710,24 +692,24 @@ class InspectJSONTab extends react__WEBPACK_IMPORTED_MODULE_0__.PureComponent {
       if (this.hasPanelJSON) {
         try {
           if (!dashboard.meta.canEdit) {
-            app_core_core__WEBPACK_IMPORTED_MODULE_5__/* .appEvents.emit */ .h$.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_2__.AppEvents.alertError, ['Unable to apply']);
+            app_core_core__WEBPACK_IMPORTED_MODULE_5__ .h$.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_2__.AppEvents.alertError, ['Unable to apply']);
           } else {
             const updates = JSON.parse(this.state.text);
             dashboard.shouldUpdateDashboardPanelFromJSON(updates, panel);
             panel.restoreModel(updates);
             panel.refresh();
-            app_core_core__WEBPACK_IMPORTED_MODULE_5__/* .appEvents.emit */ .h$.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_2__.AppEvents.alertSuccess, ['Panel model updated']);
+            app_core_core__WEBPACK_IMPORTED_MODULE_5__ .h$.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_2__.AppEvents.alertSuccess, ['Panel model updated']);
           }
         } catch (err) {
           console.error('Error applying updates', err);
-          app_core_core__WEBPACK_IMPORTED_MODULE_5__/* .appEvents.emit */ .h$.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_2__.AppEvents.alertError, ['Invalid JSON text']);
+          app_core_core__WEBPACK_IMPORTED_MODULE_5__ .h$.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_2__.AppEvents.alertError, ['Invalid JSON text']);
         }
 
         onClose();
       }
     });
 
-    this.hasPanelJSON = !!(props.panel && props.dashboard); // If we are in panel, we want to show PanelJSON, otherwise show DataFrames
+    this.hasPanelJSON = !!(props.panel && props.dashboard); 
 
     this.state = {
       show: this.hasPanelJSON ? ShowContent.PanelJSON : ShowContent.DataFrames,
@@ -778,35 +760,35 @@ class InspectJSONTab extends react__WEBPACK_IMPORTED_MODULE_0__.PureComponent {
     const selected = options.find(v => v.value === show);
     const isPanelJSON = show === ShowContent.PanelJSON;
     const canEdit = dashboard && dashboard.meta.canEdit;
-    const styles = (0,_inspector_styles__WEBPACK_IMPORTED_MODULE_6__/* .getPanelInspectorStyles */ .S)();
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+    const styles = (0,_inspector_styles__WEBPACK_IMPORTED_MODULE_6__ .S)();
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       className: styles.wrap,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
         className: styles.toolbar,
-        "aria-label": _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_3__/* .selectors.components.PanelInspector.Json.content */ .wl.components.PanelInspector.Json.content,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Field, {
+        "aria-label": _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_3__ .wl.components.PanelInspector.Json.content,
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Field, {
           label: "Select source",
           className: "flex-grow-1",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Select, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Select, {
             inputId: "select-source-dropdown",
             options: jsonOptions,
             value: selected,
             onChange: this.onSelectChanged
           })
-        }), this.hasPanelJSON && isPanelJSON && canEdit && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Button, {
+        }), this.hasPanelJSON && isPanelJSON && canEdit && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Button, {
           className: styles.toolbarItem,
           onClick: this.onApplyPanelModel,
           children: "Apply"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
         className: styles.content,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_virtualized_auto_sizer__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_virtualized_auto_sizer__WEBPACK_IMPORTED_MODULE_1__ .Z, {
           disableWidth: true,
           children: _ref => {
             let {
               height
             } = _ref;
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.CodeEditor, {
+            return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.CodeEditor, {
               width: "100%",
               height: height,
               language: "json",
@@ -828,30 +810,23 @@ function getPrettyJSON(obj) {
   return JSON.stringify(obj, null, 2);
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/inspector/InspectStatsTab.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/inspector/InspectStatsTab.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "f": () => (/* binding */ InspectStatsTab)
+  "f": () => ( InspectStatsTab)
 });
 
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-e2e-selectors/src/index.ts + 3 modules
 var src = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var grafana_data_src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/inspector/InspectStatsTable.tsx
+;
 
 
 
@@ -871,19 +846,19 @@ const InspectStatsTable = _ref => {
     return null;
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: styles.wrapper,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    children: [(0,jsx_runtime.jsx)("div", {
       className: "section-heading",
       children: name
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("table", {
+    }), (0,jsx_runtime.jsx)("table", {
       className: "filter-table width-30",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("tbody", {
+      children: (0,jsx_runtime.jsx)("tbody", {
         children: stats.map((stat, index) => {
-          return /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+          return (0,jsx_runtime.jsxs)("tr", {
+            children: [(0,jsx_runtime.jsx)("td", {
               children: stat.displayName
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+            }), (0,jsx_runtime.jsx)("td", {
               className: styles.cell,
               children: formatStat(stat, timeZone, theme)
             })]
@@ -916,7 +891,7 @@ const getStyles = (0,grafana_ui_src.stylesFactory)(theme => {
     `
   };
 });
-;// CONCATENATED MODULE: ./public/app/features/inspector/InspectStatsTab.tsx
+;
 
 
 
@@ -975,13 +950,13 @@ const InspectStatsTab = _ref => {
     }
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    "aria-label": src/* selectors.components.PanelInspector.Stats.content */.wl.components.PanelInspector.Stats.content,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(InspectStatsTable, {
+  return (0,jsx_runtime.jsxs)("div", {
+    "aria-label": src.wl.components.PanelInspector.Stats.content,
+    children: [(0,jsx_runtime.jsx)(InspectStatsTable, {
       timeZone: timeZone,
       name: 'Stats',
       stats: stats
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(InspectStatsTable, {
+    }), (0,jsx_runtime.jsx)(InspectStatsTable, {
       timeZone: timeZone,
       name: 'Data source stats',
       stats: dataStats
@@ -989,27 +964,27 @@ const InspectStatsTab = _ref => {
   });
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/inspector/QueryInspector.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/inspector/QueryInspector.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "D": () => (/* binding */ QueryInspector)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subscription.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
-/* harmony import */ var _grafana_experimental__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/__virtual__/@grafana-experimental-virtual-22e4fdfd25/0/cache/@grafana-experimental-npm-0.0.2-canary.30-71a280d204-b5b453b937.zip/node_modules/@grafana/experimental/index.js");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var app_core_app_events__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./public/app/core/app_events.ts");
-/* harmony import */ var app_core_services_backend_srv__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./public/app/core/services/backend_srv.ts");
-/* harmony import */ var app_features_dashboard_components_PanelEditor_utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./public/app/features/dashboard/components/PanelEditor/utils.ts");
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./public/app/features/inspector/styles.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "D": () => ( QueryInspector)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var rxjs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subscription.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
+ var _grafana_experimental__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/__virtual__/@grafana-experimental-virtual-22e4fdfd25/0/cache/@grafana-experimental-npm-0.0.2-canary.30-71a280d204-b5b453b937.zip/node_modules/@grafana/experimental/index.js");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var app_core_app_events__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./public/app/core/app_events.ts");
+ var app_core_services_backend_srv__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./public/app/core/services/backend_srv.ts");
+ var app_features_dashboard_components_PanelEditor_utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./public/app/features/dashboard/components/PanelEditor/utils.ts");
+ var _styles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./public/app/features/inspector/styles.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _h, _p, _div, _LoadingPlaceholder, _p2;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1034,7 +1009,7 @@ class QueryInspector extends react__WEBPACK_IMPORTED_MODULE_1__.PureComponent {
 
     _defineProperty(this, "formattedJson", void 0);
 
-    _defineProperty(this, "subs", new rxjs__WEBPACK_IMPORTED_MODULE_12__/* .Subscription */ .w0());
+    _defineProperty(this, "subs", new rxjs__WEBPACK_IMPORTED_MODULE_12__ .w0());
 
     _defineProperty(this, "onPanelRefresh", () => {
       this.setState(prevState => Object.assign({}, prevState, {
@@ -1054,7 +1029,7 @@ class QueryInspector extends react__WEBPACK_IMPORTED_MODULE_1__.PureComponent {
     });
 
     _defineProperty(this, "onClipboardSuccess", () => {
-      app_core_app_events__WEBPACK_IMPORTED_MODULE_7__/* ["default"].emit */ .Z.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_2__.AppEvents.alertSuccess, ['Content copied to clipboard']);
+      app_core_app_events__WEBPACK_IMPORTED_MODULE_7__ .Z.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_2__.AppEvents.alertSuccess, ['Content copied to clipboard']);
     });
 
     _defineProperty(this, "onToggleExpand", () => {
@@ -1071,7 +1046,7 @@ class QueryInspector extends react__WEBPACK_IMPORTED_MODULE_1__.PureComponent {
 
     _defineProperty(this, "getNrOfOpenNodes", () => {
       if (this.state.allNodesExpanded === null) {
-        return 3; // 3 is default, ie when state is null
+        return 3; 
       } else if (this.state.allNodesExpanded) {
         return 20;
       }
@@ -1102,7 +1077,7 @@ class QueryInspector extends react__WEBPACK_IMPORTED_MODULE_1__.PureComponent {
     const {
       panel
     } = this.props;
-    this.subs.add(app_core_services_backend_srv__WEBPACK_IMPORTED_MODULE_8__/* .backendSrv.getInspectorStream */ .ae.getInspectorStream().subscribe({
+    this.subs.add(app_core_services_backend_srv__WEBPACK_IMPORTED_MODULE_8__ .ae.getInspectorStream().subscribe({
       next: response => this.onDataSourceResponse(response)
     }));
 
@@ -1117,9 +1092,6 @@ class QueryInspector extends react__WEBPACK_IMPORTED_MODULE_1__.PureComponent {
       this.updateQueryList();
     }
   }
-  /**
-   * Find the list of executed queries
-   */
 
 
   updateQueryList() {
@@ -1168,12 +1140,11 @@ class QueryInspector extends react__WEBPACK_IMPORTED_MODULE_1__.PureComponent {
   onDataSourceResponse(response) {
     var _response$config;
 
-    // ignore silent requests
     if ((_response$config = response.config) !== null && _response$config !== void 0 && _response$config.hideFromInspector) {
       return;
     }
 
-    response = Object.assign({}, response); // clone - dont modify the response
+    response = Object.assign({}, response); 
 
     if (response.headers) {
       delete response.headers;
@@ -1226,21 +1197,21 @@ class QueryInspector extends react__WEBPACK_IMPORTED_MODULE_1__.PureComponent {
         margin-right: 8px;
       `
     };
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
       children: executedQueries.map(info => {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_grafana_experimental__WEBPACK_IMPORTED_MODULE_4__.Stack, {
+        return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_grafana_experimental__WEBPACK_IMPORTED_MODULE_4__.Stack, {
           gap: 1,
           direction: "column",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("span", {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("span", {
               className: styles.refId,
               children: [info.refId, ":"]
-            }), info.frames > 1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("span", {
+            }), info.frames > 1 && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("span", {
               children: [info.frames, " frames, "]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("span", {
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("span", {
               children: [info.rows, " rows"]
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("pre", {
+          }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("pre", {
             children: info.query
           })]
         }, info.refId);
@@ -1262,62 +1233,62 @@ class QueryInspector extends react__WEBPACK_IMPORTED_MODULE_1__.PureComponent {
       isLoading
     } = this.state.dsQuery;
     const openNodes = this.getNrOfOpenNodes();
-    const styles = (0,_styles__WEBPACK_IMPORTED_MODULE_10__/* .getPanelInspectorStyles */ .S)();
+    const styles = (0,_styles__WEBPACK_IMPORTED_MODULE_10__ .S)();
     const haveData = Object.keys(response).length > 0;
 
-    if (panel && !(0,app_features_dashboard_components_PanelEditor_utils__WEBPACK_IMPORTED_MODULE_9__/* .supportsDataQuery */ .sY)(panel.plugin)) {
+    if (panel && !(0,app_features_dashboard_components_PanelEditor_utils__WEBPACK_IMPORTED_MODULE_9__ .sY)(panel.plugin)) {
       return null;
     }
 
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
       className: styles.wrap,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
-        "aria-label": _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_3__/* .selectors.components.PanelInspector.Query.content */ .wl.components.PanelInspector.Query.content,
-        children: [_h || (_h = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h3", {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+        "aria-label": _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_3__ .wl.components.PanelInspector.Query.content,
+        children: [_h || (_h = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h3", {
           className: "section-heading",
           children: "Query inspector"
-        })), _p || (_p = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
+        })), _p || (_p = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
           className: "small muted",
           children: "Query inspector allows you to view raw request and response. To collect this data Grafana needs to issue a new query. Click refresh button below to trigger a new query."
         }))]
-      }), this.renderExecutedQueries(executedQueries), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+      }), this.renderExecutedQueries(executedQueries), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
         className: styles.toolbar,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_6__.Button, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_6__.Button, {
           icon: "sync",
           onClick: onRefreshQuery,
-          "aria-label": _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_3__/* .selectors.components.PanelInspector.Query.refreshButton */ .wl.components.PanelInspector.Query.refreshButton,
+          "aria-label": _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_3__ .wl.components.PanelInspector.Query.refreshButton,
           children: "Refresh"
-        }), haveData && allNodesExpanded && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_6__.Button, {
+        }), haveData && allNodesExpanded && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_6__.Button, {
           icon: "minus",
           variant: "secondary",
           className: styles.toolbarItem,
           onClick: this.onToggleExpand,
           children: "Collapse all"
-        }), haveData && !allNodesExpanded && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_6__.Button, {
+        }), haveData && !allNodesExpanded && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_6__.Button, {
           icon: "plus",
           variant: "secondary",
           className: styles.toolbarItem,
           onClick: this.onToggleExpand,
           children: "Expand all"
-        }), haveData && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_6__.ClipboardButton, {
+        }), haveData && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_6__.ClipboardButton, {
           getText: this.getTextForClipboard,
           onClipboardCopy: this.onClipboardSuccess,
           className: styles.toolbarItem,
           icon: "copy",
           variant: "secondary",
           children: "Copy to clipboard"
-        }), _div || (_div = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+        }), _div || (_div = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
           className: "flex-grow-1"
         }))]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
         className: styles.content,
-        children: [isLoading && (_LoadingPlaceholder || (_LoadingPlaceholder = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_6__.LoadingPlaceholder, {
+        children: [isLoading && (_LoadingPlaceholder || (_LoadingPlaceholder = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_6__.LoadingPlaceholder, {
           text: "Loading query inspector..."
-        }))), !isLoading && haveData && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_6__.JSONFormatter, {
+        }))), !isLoading && haveData && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_6__.JSONFormatter, {
           json: response,
           open: openNodes,
           onDidRender: this.setFormattedJson
-        }), !isLoading && !haveData && (_p2 || (_p2 = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
+        }), !isLoading && !haveData && (_p2 || (_p2 = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
           className: "muted",
           children: "No request and response collected yet. Hit refresh button"
         })))]
@@ -1327,17 +1298,17 @@ class QueryInspector extends react__WEBPACK_IMPORTED_MODULE_1__.PureComponent {
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/inspector/styles.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/inspector/styles.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ getPanelInspectorStyles)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var app_core_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/core/config.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "S": () => ( getPanelInspectorStyles)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var app_core_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/core/config.ts");
 
 
 
@@ -1403,19 +1374,19 @@ const getPanelInspectorStyles = (0,_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.styl
   };
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/query/components/QueryEditorRows.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/query/components/QueryEditorRows.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "l": () => (/* binding */ QueryEditorRows)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/__virtual__/react-beautiful-dnd-virtual-27e4b658e7/0/cache/react-beautiful-dnd-npm-13.1.0-fcf5568b1c-12b7e9fbe8.zip/node_modules/react-beautiful-dnd/dist/react-beautiful-dnd.esm.js");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var _QueryEditorRow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/query/components/QueryEditorRow.tsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "l": () => ( QueryEditorRows)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/__virtual__/react-beautiful-dnd-virtual-27e4b658e7/0/cache/react-beautiful-dnd-npm-13.1.0-fcf5568b1c-12b7e9fbe8.zip/node_modules/react-beautiful-dnd/dist/react-beautiful-dnd.esm.js");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var _QueryEditorRow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/query/components/QueryEditorRow.tsx");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1485,7 +1456,7 @@ class QueryEditorRows extends react__WEBPACK_IMPORTED_MODULE_0__.PureComponent {
     const {
       queries,
       onQueriesChange
-    } = this.props; // update query in array
+    } = this.props; 
 
     onQueriesChange(queries.map((item, itemIndex) => {
       if (itemIndex === index) {
@@ -1538,20 +1509,20 @@ class QueryEditorRows extends react__WEBPACK_IMPORTED_MODULE_0__.PureComponent {
       history,
       eventBus
     } = this.props;
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_4__/* .DragDropContext */ .Z5, {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_4__ .Z5, {
       onDragStart: this.onDragStart,
       onDragEnd: this.onDragEnd,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_4__/* .Droppable */ .bK, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_4__ .bK, {
         droppableId: "transformations-list",
         direction: "vertical",
         children: provided => {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", Object.assign({
+          return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", Object.assign({
             ref: provided.innerRef
           }, provided.droppableProps, {
             children: [queries.map((query, index) => {
               const dataSourceSettings = getDataSourceSettings(query, dsSettings);
               const onChangeDataSourceSettings = dsSettings.meta.mixed ? settings => this.onDataSourceChange(settings, index) : undefined;
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_QueryEditorRow__WEBPACK_IMPORTED_MODULE_2__/* .QueryEditorRow */ .x, {
+              return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_QueryEditorRow__WEBPACK_IMPORTED_MODULE_2__ .x, {
                 id: query.refId,
                 index: index,
                 data: data,
@@ -1585,18 +1556,18 @@ const getDataSourceSettings = (query, groupSettings) => {
   return querySettings || groupSettings;
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/jaeger/responseTransform.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/jaeger/responseTransform.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Wp": () => (/* binding */ createTableFrame),
-/* harmony export */   "c6": () => (/* binding */ transformToJaeger),
-/* harmony export */   "xM": () => (/* binding */ createTraceFrame)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _jaegertracing_jaeger_ui_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/jaeger-ui-components/src/index.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "Wp": () => ( createTableFrame),
+   "c6": () => ( transformToJaeger),
+   "xM": () => ( createTraceFrame)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _jaegertracing_jaeger_ui_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/jaeger-ui-components/src/index.ts");
 
 
 function createTraceFrame(data) {
@@ -1662,7 +1633,6 @@ function toSpanRow(span, processes) {
     traceID: span.traceID,
     parentSpanID: (_span$references = span.references) === null || _span$references === void 0 ? void 0 : (_span$references$find = _span$references.find(r => r.refType === 'CHILD_OF')) === null || _span$references$find === void 0 ? void 0 : _span$references$find.spanID,
     operationName: span.operationName,
-    // from micro to millis
     startTime: span.startTime / 1000,
     duration: span.duration / 1000,
     logs: span.logs.map(l => Object.assign({}, l, {
@@ -1719,7 +1689,7 @@ function createTableFrame(data, instanceSettings) {
     meta: {
       preferredVisualisationType: 'table'
     }
-  }); // Show the most recent traces
+  }); 
 
   const traceData = data.map(transformToTraceData).sort((a, b) => (b === null || b === void 0 ? void 0 : b.startTime) - (a === null || a === void 0 ? void 0 : a.startTime));
 
@@ -1731,7 +1701,7 @@ function createTableFrame(data, instanceSettings) {
 }
 
 function transformToTraceData(data) {
-  const traceData = (0,_jaegertracing_jaeger_ui_components__WEBPACK_IMPORTED_MODULE_1__/* .transformTraceData */ .R1)(data);
+  const traceData = (0,_jaegertracing_jaeger_ui_components__WEBPACK_IMPORTED_MODULE_1__ .R1)(data);
 
   if (!traceData) {
     return;
@@ -1755,11 +1725,11 @@ function transformToJaeger(data) {
   let processes = [];
 
   for (let i = 0; i < data.length; i++) {
-    const span = data.get(i); // Set traceID
+    const span = data.get(i); 
 
     if (!traceResponse.traceID) {
       traceResponse.traceID = span.traceID;
-    } // Create process if doesn't exist
+    } 
 
 
     if (!processes.find(p => p === span.serviceName)) {
@@ -1768,7 +1738,7 @@ function transformToJaeger(data) {
         serviceName: span.serviceName,
         tags: span.serviceTags
       };
-    } // Create span
+    } 
 
 
     traceResponse.spans.push({
@@ -1801,24 +1771,21 @@ function transformToJaeger(data) {
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/zipkin/utils/transforms.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/zipkin/utils/transforms.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "H": () => (/* binding */ transformToZipkin),
-/* harmony export */   "m": () => (/* binding */ transformResponse)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "H": () => ( transformToZipkin),
+   "m": () => ( transformResponse)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
 
 
 
-/**
- * Transforms response to Grafana trace data frame.
- */
 function transformResponse(zSpans) {
   const spanRows = zSpans.map(transformSpan);
   const frame = new _grafana_data__WEBPACK_IMPORTED_MODULE_1__.MutableDataFrame({
@@ -1882,7 +1849,6 @@ function transformSpan(span) {
     duration: span.duration / 1000,
     logs: (_span$annotations$map = (_span$annotations = span.annotations) === null || _span$annotations === void 0 ? void 0 : _span$annotations.map(transformAnnotation)) !== null && _span$annotations$map !== void 0 ? _span$annotations$map : [],
     tags: Object.keys(span.tags || {}).reduce((acc, key) => {
-      // If tag is error we remap it to simple boolean so that the trace ui will show an error icon.
       if (key === 'error') {
         acc.push({
           key: 'error',
@@ -1923,10 +1889,6 @@ function transformSpan(span) {
 
   return row;
 }
-/**
- * Maps annotations as a log as that seems to be the closest thing.
- * See https://zipkin.io/zipkin-api/#/default/get_trace__traceId_
- */
 
 
 function transformAnnotation(annotation) {
@@ -1959,9 +1921,6 @@ function valueToTag(key, value) {
     value
   };
 }
-/**
- * Transforms data frame to Zipkin response
- */
 
 
 const transformToZipkin = data => {
@@ -2000,7 +1959,7 @@ const transformToZipkin = data => {
   }
 
   return response;
-}; // Returns remote or local endpoint object
+}; 
 
 const getEndpoint = span => {
   var _span$serviceTags$fin, _span$serviceTags$fin2, _span$serviceTags$fin3, _span$serviceTags$fin4;
@@ -2016,15 +1975,15 @@ const getEndpoint = span => {
   } : undefined;
 };
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useToggle.js":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useToggle.js":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
 
 var toggleReducer = function (state, nextValue) {
     return typeof nextValue === 'boolean' ? nextValue : !state;
@@ -2032,9 +1991,9 @@ var toggleReducer = function (state, nextValue) {
 var useToggle = function (initialValue) {
     return (0,react__WEBPACK_IMPORTED_MODULE_0__.useReducer)(toggleReducer, initialValue);
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useToggle);
+ const __WEBPACK_DEFAULT_EXPORT__ = (useToggle);
 
 
-/***/ })
+ })
 
 }]);

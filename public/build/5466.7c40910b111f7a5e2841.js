@@ -1,17 +1,17 @@
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[5466],{
 
-/***/ "./public/app/core/components/NodeGraphSettings.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/components/NodeGraphSettings.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "n": () => (/* binding */ NodeGraphSettings)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "n": () => ( NodeGraphSettings)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _h;
 
 
@@ -28,18 +28,18 @@ function NodeGraphSettings(_ref) {
     onOptionsChange
   } = _ref;
   const styles = (0,_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.useStyles)(getStyles);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: styles.container,
-    children: [_h || (_h = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
+    children: [_h || (_h = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
       className: "page-heading",
       children: "Node Graph"
-    })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineFieldRow, {
+    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineFieldRow, {
       className: styles.row,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineField, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineField, {
         tooltip: "Enables the Node Graph visualization in the trace viewer.",
         label: "Enable Node Graph",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineSwitch, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineSwitch, {
           id: "enableNodeGraph",
           value: (_options$jsonData$nod = options.jsonData.nodeGraph) === null || _options$jsonData$nod === void 0 ? void 0 : _options$jsonData$nod.enabled,
           onChange: event => (0,_grafana_data__WEBPACK_IMPORTED_MODULE_2__.updateDatasourcePluginJsonDataOption)({
@@ -65,31 +65,24 @@ const getStyles = theme => ({
   `
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ TraceToLogsSettings)
+  "Z": () => ( TraceToLogsSettings)
 });
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/core/components/TraceToLogs/KeyValueInput.tsx
+;
 var _Icon, _Icon2, _Icon3;
 
 
@@ -97,7 +90,7 @@ var _Icon, _Icon2, _Icon3;
 
 
 
-const EQ_WIDTH = 3; // = 24px in inline label
+const EQ_WIDTH = 3; 
 
 const KeyValueInput = _ref => {
   let {
@@ -108,11 +101,11 @@ const KeyValueInput = _ref => {
     valuePlaceholder = 'Value (optional)'
   } = _ref;
   const styles = (0,grafana_ui_src.useStyles)(getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: styles.wrapper,
-    children: values.length ? values.map((value, idx) => /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    children: values.length ? values.map((value, idx) => (0,jsx_runtime.jsxs)("div", {
       className: styles.pair,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.SegmentInput, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.SegmentInput, {
         id: `${id}-key-${idx}`,
         placeholder: keyPlaceholder,
         value: value.key,
@@ -125,12 +118,12 @@ const KeyValueInput = _ref => {
             return v;
           }));
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
         "aria-label": "equals",
         className: styles.operator,
         width: EQ_WIDTH,
         children: "="
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.SegmentInput, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.SegmentInput, {
         id: `${id}-value-${idx}`,
         placeholder: valuePlaceholder,
         value: value.value,
@@ -143,39 +136,39 @@ const KeyValueInput = _ref => {
             return v;
           }));
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+      }), (0,jsx_runtime.jsx)("button", {
         onClick: () => onChange([...values.slice(0, idx), ...values.slice(idx + 1)]),
         className: "gf-form-label query-part",
         "aria-label": "Remove tag",
-        children: _Icon || (_Icon = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+        children: _Icon || (_Icon = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
           name: "times"
         }))
-      }), idx === values.length - 1 ? /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+      }), idx === values.length - 1 ? (0,jsx_runtime.jsx)("button", {
         onClick: () => onChange([...values, {
           key: '',
           value: ''
         }]),
         className: "gf-form-label query-part",
         "aria-label": "Add tag",
-        children: _Icon2 || (_Icon2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+        children: _Icon2 || (_Icon2 = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
           name: "plus"
         }))
       }) : null]
-    }, idx)) : /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+    }, idx)) : (0,jsx_runtime.jsx)("button", {
       onClick: () => onChange([...values, {
         key: '',
         value: ''
       }]),
       className: "gf-form-label query-part",
       "aria-label": "Add tag",
-      children: _Icon3 || (_Icon3 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      children: _Icon3 || (_Icon3 = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: "plus"
       }))
     })
   });
 };
 
-/* harmony default export */ const TraceToLogs_KeyValueInput = (KeyValueInput);
+ const TraceToLogs_KeyValueInput = (KeyValueInput);
 
 const getStyles = theme => ({
   wrapper: emotion_css_esm.css`
@@ -192,7 +185,7 @@ const getStyles = theme => ({
     color: ${theme.palette.orange};
   `
 });
-;// CONCATENATED MODULE: ./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx
+;
 var _h;
 
 
@@ -211,25 +204,24 @@ function TraceToLogsSettings(_ref) {
     onOptionsChange
   } = _ref;
   const styles = (0,grafana_ui_src.useStyles)(TraceToLogsSettings_getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: (0,emotion_css_esm.css)({
       width: '100%'
     }),
-    children: [_h || (_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+    children: [_h || (_h = (0,jsx_runtime.jsx)("h3", {
       className: "page-heading",
       children: "Trace to logs"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    })), (0,jsx_runtime.jsx)("div", {
       className: styles.infoText,
       children: "Trace to logs lets you navigate from a trace span to the selected data source's logs."
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         tooltip: "The data source the trace is going to navigate to",
         label: "Data source",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
+        children: (0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
           inputId: "trace-to-logs-data-source-picker",
           filter: ds => {
-            // Trace to logs only supports loki and splunk at the moment
             return ds.type === 'loki' || ds.type === 'grafana-splunk-datasource';
           },
           current: (_options$jsonData$tra = options.jsonData.tracesToLogs) === null || _options$jsonData$tra === void 0 ? void 0 : _options$jsonData$tra.datasourceUid,
@@ -248,12 +240,12 @@ function TraceToLogsSettings(_ref) {
           }
         })
       })
-    }), (_options$jsonData$tra3 = options.jsonData.tracesToLogs) !== null && _options$jsonData$tra3 !== void 0 && _options$jsonData$tra3.mapTagNamesEnabled ? /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (_options$jsonData$tra3 = options.jsonData.tracesToLogs) !== null && _options$jsonData$tra3 !== void 0 && _options$jsonData$tra3.mapTagNamesEnabled ? (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         tooltip: "Tags that will be used in the Loki query. Default tags: 'cluster', 'hostname', 'namespace', 'pod'",
         label: "Tags",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(TraceToLogs_KeyValueInput, {
+        children: (0,jsx_runtime.jsx)(TraceToLogs_KeyValueInput, {
           keyPlaceholder: "Tag",
           values: (_ref2 = (_options$jsonData$tra4 = (_options$jsonData$tra5 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra5 === void 0 ? void 0 : _options$jsonData$tra5.mappedTags) !== null && _options$jsonData$tra4 !== void 0 ? _options$jsonData$tra4 : (_options$jsonData$tra6 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra6 === void 0 ? void 0 : (_options$jsonData$tra7 = _options$jsonData$tra6.tags) === null || _options$jsonData$tra7 === void 0 ? void 0 : _options$jsonData$tra7.map(tag => ({
             key: tag
@@ -266,12 +258,12 @@ function TraceToLogsSettings(_ref) {
           }))
         })
       })
-    }) : /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }) : (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         tooltip: "Tags that will be used in the Loki query. Default tags: 'cluster', 'hostname', 'namespace', 'pod'",
         label: "Tags",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.TagsInput, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.TagsInput, {
           tags: (_options$jsonData$tra8 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra8 === void 0 ? void 0 : _options$jsonData$tra8.tags,
           width: 40,
           onChange: tags => (0,src.updateDatasourcePluginJsonDataOption)({
@@ -282,13 +274,13 @@ function TraceToLogsSettings(_ref) {
           }))
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Map tag names",
         labelWidth: 26,
         grow: true,
         tooltip: "Map trace tag names to log label names. Ex: k8s.pod.name -> pod",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           id: "mapTagNames",
           value: (_options$jsonData$tra9 = (_options$jsonData$tra10 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra10 === void 0 ? void 0 : _options$jsonData$tra10.mapTagNamesEnabled) !== null && _options$jsonData$tra9 !== void 0 ? _options$jsonData$tra9 : false,
           onChange: event => (0,src.updateDatasourcePluginJsonDataOption)({
@@ -299,13 +291,13 @@ function TraceToLogsSettings(_ref) {
           }))
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Span start time shift",
         labelWidth: 26,
         grow: true,
         tooltip: "Shifts the start time of the span. Default 0 (Time units can be used here, for example: 5s, 1m, 3h)",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           type: "text",
           placeholder: "1h",
           width: 40,
@@ -318,13 +310,13 @@ function TraceToLogsSettings(_ref) {
           value: ((_options$jsonData$tra11 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra11 === void 0 ? void 0 : _options$jsonData$tra11.spanStartTimeShift) || ''
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Span end time shift",
         labelWidth: 26,
         grow: true,
         tooltip: "Shifts the end time of the span. Default 0 Time units can be used here, for example: 5s, 1m, 3h",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           type: "text",
           placeholder: "1h",
           width: 40,
@@ -337,13 +329,13 @@ function TraceToLogsSettings(_ref) {
           value: ((_options$jsonData$tra12 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra12 === void 0 ? void 0 : _options$jsonData$tra12.spanEndTimeShift) || ''
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Filter by Trace ID",
         labelWidth: 26,
         grow: true,
         tooltip: "Filters logs by Trace ID. Appends '|=<trace id>' to the query.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           id: "filterByTraceID",
           value: (_options$jsonData$tra13 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra13 === void 0 ? void 0 : _options$jsonData$tra13.filterByTraceID,
           onChange: event => (0,src.updateDatasourcePluginJsonDataOption)({
@@ -354,13 +346,13 @@ function TraceToLogsSettings(_ref) {
           }))
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Filter by Span ID",
         labelWidth: 26,
         grow: true,
         tooltip: "Filters logs by Span ID. Appends '|=<span id>' to the query.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           id: "filterBySpanID",
           value: (_options$jsonData$tra14 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra14 === void 0 ? void 0 : _options$jsonData$tra14.filterBySpanID,
           onChange: event => (0,src.updateDatasourcePluginJsonDataOption)({
@@ -382,21 +374,21 @@ const TraceToLogsSettings_getStyles = theme => ({
   `
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/core/components/TraceToMetrics/TraceToMetricsSettings.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/components/TraceToMetrics/TraceToMetricsSettings.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "F": () => (/* binding */ TraceToMetricsSettings)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "F": () => ( TraceToMetricsSettings)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _h;
 
 
@@ -414,23 +406,23 @@ function TraceToMetricsSettings(_ref) {
     onOptionsChange
   } = _ref;
   const styles = (0,_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.useStyles)(getStyles);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: (0,_emotion_css__WEBPACK_IMPORTED_MODULE_0__.css)({
       width: '100%'
     }),
-    children: [_h || (_h = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
+    children: [_h || (_h = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
       className: "page-heading",
       children: "Trace to metrics"
-    })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
       className: styles.infoText,
       children: "Trace to metrics lets you navigate from a trace span to the selected data source."
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineFieldRow, {
+    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineFieldRow, {
       className: styles.row,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
         tooltip: "The data source the trace is going to navigate to",
         label: "Data source",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_runtime__WEBPACK_IMPORTED_MODULE_3__.DataSourcePicker, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_runtime__WEBPACK_IMPORTED_MODULE_3__.DataSourcePicker, {
           inputId: "trace-to-metrics-data-source-picker",
           pluginId: "prometheus",
           current: (_options$jsonData$tra = options.jsonData.tracesToMetrics) === null || _options$jsonData$tra === void 0 ? void 0 : _options$jsonData$tra.datasourceUid,
@@ -443,7 +435,7 @@ function TraceToMetricsSettings(_ref) {
             datasourceUid: ds.uid
           }))
         })
-      }), (_options$jsonData$tra2 = options.jsonData.tracesToMetrics) !== null && _options$jsonData$tra2 !== void 0 && _options$jsonData$tra2.datasourceUid ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Button, {
+      }), (_options$jsonData$tra2 = options.jsonData.tracesToMetrics) !== null && _options$jsonData$tra2 !== void 0 && _options$jsonData$tra2.datasourceUid ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Button, {
         type: "button",
         variant: "secondary",
         size: "sm",
@@ -458,13 +450,13 @@ function TraceToMetricsSettings(_ref) {
         },
         children: "Clear"
       }) : null]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineFieldRow, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
+    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineFieldRow, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
         label: "Query",
         labelWidth: 26,
         tooltip: "The Prometheus query that will run when navigating from a trace to metrics",
         grow: true,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Input, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Input, {
           label: "Query",
           type: "text",
           allowFullScreen: true,
@@ -494,22 +486,19 @@ const getStyles = theme => ({
   `
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/core/utils/tracing.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/utils/tracing.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "et": () => (/* binding */ getNonOverlappingDuration),
-/* harmony export */   "fy": () => (/* binding */ getStats),
-/* harmony export */   "nO": () => (/* binding */ makeSpanMap),
-/* harmony export */   "np": () => (/* binding */ makeFrames)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/**
- * Get non overlapping duration of the ranges as they can overlap or have gaps.
- */
+ __webpack_require__.d(__webpack_exports__, {
+   "et": () => ( getNonOverlappingDuration),
+   "fy": () => ( getStats),
+   "nO": () => ( makeSpanMap),
+   "np": () => ( makeFrames)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
 
 function getNonOverlappingDuration(ranges) {
   ranges.sort((a, b) => a[0] - b[0]);
@@ -523,14 +512,12 @@ function getNonOverlappingDuration(ranges) {
     const [start, end] = range;
 
     if (end < prevEnd) {
-      // In this case the range is completely inside the prev range so we can just ignore it.
       return acc;
     }
 
     if (start > prevEnd) {
-      // There is no overlap so we can just add it to stack
       return [...acc, range];
-    } // We know there is overlap and current range ends later than previous so we can just extend the range
+    } 
 
 
     return [...acc.slice(0, -1), [prevStart, end]];
@@ -539,11 +526,6 @@ function getNonOverlappingDuration(ranges) {
     return acc + (range[1] - range[0]);
   }, 0);
 }
-/**
- * Returns a map of the spans with children array for easier processing. It will also contain empty spans in case
- * span is missing but other spans are it's children. This is more generic because it needs to allow iterating over
- * both arrays and dataframe views.
- */
 
 function makeSpanMap(getSpan) {
   const spanMap = {};
@@ -585,9 +567,6 @@ function getStats(duration, traceDuration, selfDuration) {
 function toFixedNoTrailingZeros(n) {
   return parseFloat(n.toFixed(2));
 }
-/**
- * Create default frames used when returning data for node graph.
- */
 
 
 function makeFrames() {
@@ -645,37 +624,27 @@ function makeFrames() {
   return [nodesFrame, edgesFrame];
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/jaeger/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/jaeger/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "plugin": () => (/* binding */ module_plugin)
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/components/NodeGraphSettings.tsx
 var NodeGraphSettings = __webpack_require__("./public/app/core/components/NodeGraphSettings.tsx");
-// EXTERNAL MODULE: ./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx + 1 modules
 var TraceToLogsSettings = __webpack_require__("./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx");
-// EXTERNAL MODULE: ./public/app/core/components/TraceToMetrics/TraceToMetricsSettings.tsx
 var TraceToMetricsSettings = __webpack_require__("./public/app/core/components/TraceToMetrics/TraceToMetricsSettings.tsx");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/jaeger/components/ConfigEditor.tsx
+;
 
 
 
@@ -690,47 +659,41 @@ const ConfigEditor = _ref => {
     options,
     onOptionsChange
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.DataSourceHttpSettings, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.DataSourceHttpSettings, {
       defaultUrl: "http://localhost:16686",
       dataSourceConfig: options,
       showAccessOptions: false,
       onChange: onOptionsChange
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(TraceToLogsSettings/* TraceToLogsSettings */.Z, {
+      children: (0,jsx_runtime.jsx)(TraceToLogsSettings.Z, {
         options: options,
         onOptionsChange: onOptionsChange
       })
-    }), grafana_runtime_src.config.featureToggles.traceToMetrics ? /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), grafana_runtime_src.config.featureToggles.traceToMetrics ? (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(TraceToMetricsSettings/* TraceToMetricsSettings */.F, {
+      children: (0,jsx_runtime.jsx)(TraceToMetricsSettings.F, {
         options: options,
         onOptionsChange: onOptionsChange
       })
-    }) : null, /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }) : null, (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(NodeGraphSettings/* NodeGraphSettings */.n, {
+      children: (0,jsx_runtime.jsx)(NodeGraphSettings.n, {
         options: options,
         onOptionsChange: onOptionsChange
       })
     })]
   });
 };
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./public/app/core/actions/index.ts
 var actions = __webpack_require__("./public/app/core/actions/index.ts");
-// EXTERNAL MODULE: ./public/app/core/copy/appNotification.ts
 var appNotification = __webpack_require__("./public/app/core/copy/appNotification.ts");
-// EXTERNAL MODULE: ./public/app/store/store.ts
 var store = __webpack_require__("./public/app/store/store.ts");
-// EXTERNAL MODULE: ./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/logfmt.js
 var logfmt = __webpack_require__("./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/logfmt.js");
-var logfmt_default = /*#__PURE__*/__webpack_require__.n(logfmt);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/jaeger/util.ts
+var logfmt_default = __webpack_require__.n(logfmt);
+;
 
 function convertTagsLogfmt(tags) {
   if (!tags) {
@@ -758,9 +721,8 @@ function transformToLogfmt(tags) {
     return tags;
   }
 }
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-transition-group-virtual-8df824fae8/0/cache/react-transition-group-npm-4.4.2-5052c30656-b67bf5b3e8.zip/node_modules/react-transition-group/esm/CSSTransition.js + 3 modules
 var CSSTransition = __webpack_require__("./.yarn/__virtual__/react-transition-group-virtual-8df824fae8/0/cache/react-transition-group-npm-4.4.2-5052c30656-b67bf5b3e8.zip/node_modules/react-transition-group/esm/CSSTransition.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/jaeger/components/AdvancedOptions.tsx
+;
 
 
 
@@ -775,32 +737,32 @@ function AdvancedOptions(_ref) {
   } = _ref;
   const [showAdvancedOptions, setShowAdvancedOptions] = (0,react.useState)(false);
   const styles = (0,grafana_ui_src.useStyles)(getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)("div", {
         className: styles.advancedOptionsContainer,
         onClick: () => setShowAdvancedOptions(!showAdvancedOptions),
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineLabel, {
+        children: (0,jsx_runtime.jsxs)(grafana_ui_src.InlineLabel, {
           as: "div",
-          children: ["Advanced options", ' ', /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+          children: ["Advanced options", ' ', (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
             className: showAdvancedOptions ? styles.angleUp : styles.angleDown,
             name: "angle-down"
           })]
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(CSSTransition/* default */.Z, {
+    }), (0,jsx_runtime.jsx)(CSSTransition.Z, {
       in: showAdvancedOptions,
       mountOnEnter: true,
       unmountOnExit: true,
       timeout: 300,
       classNames: styles,
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      children: (0,jsx_runtime.jsxs)("div", {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
             label: "Min Duration",
             labelWidth: 21,
             grow: true,
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
               id: "minDuration",
               name: "minDuration",
               value: query.minDuration || '',
@@ -810,12 +772,12 @@ function AdvancedOptions(_ref) {
               }))
             })
           })
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
             label: "Max Duration",
             labelWidth: 21,
             grow: true,
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
               id: "maxDuration",
               name: "maxDuration",
               value: query.maxDuration || '',
@@ -825,13 +787,13 @@ function AdvancedOptions(_ref) {
               }))
             })
           })
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
             label: "Limit",
             labelWidth: 21,
             grow: true,
             tooltip: "Maximum numbers of returned results",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
               id: "limit",
               name: "limit",
               value: query.limit || '',
@@ -886,7 +848,7 @@ function getStyles(theme) {
     `
   };
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/jaeger/components/SearchForm.tsx
+;
 
 
 
@@ -938,7 +900,7 @@ function SearchForm(_ref) {
       const filteredOptions = serviceOptions.filter(item => item.value ? (0,grafana_ui_src.fuzzyMatch)(item.value, query).found : false);
       return filteredOptions;
     } catch (error) {
-      (0,store/* dispatch */.WI)((0,actions/* notifyApp */.$l)((0,appNotification/* createErrorNotification */.t_)('Error', error)));
+      (0,store.WI)((0,actions.$l)((0,appNotification.t_)('Error', error)));
       return [];
     } finally {
       setIsLoading(prevValue => Object.assign({}, prevValue, {
@@ -981,16 +943,16 @@ function SearchForm(_ref) {
       getOperations();
     }
   }, [datasource, query.service, loadServices]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: (0,emotion_css_esm.css)({
       maxWidth: '500px'
     }),
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Service",
         labelWidth: 14,
         grow: true,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.AsyncSelect, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.AsyncSelect, {
           inputId: "service",
           cacheOptions: false,
           loadOptions: serviceSearch,
@@ -1007,13 +969,13 @@ function SearchForm(_ref) {
           "aria-label": 'select-service-name'
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Operation",
         labelWidth: 14,
         grow: true,
         disabled: !query.service,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.AsyncSelect, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.AsyncSelect, {
           inputId: "operation",
           cacheOptions: false,
           loadOptions: operationSearch,
@@ -1029,12 +991,12 @@ function SearchForm(_ref) {
           "aria-label": 'select-operation-name'
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Tags",
         labelWidth: 14,
         grow: true,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           id: "tags",
           value: transformToLogfmt(query.tags),
           placeholder: "http.status_code=200 error=true",
@@ -1043,14 +1005,14 @@ function SearchForm(_ref) {
           }))
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(AdvancedOptions, {
+    }), (0,jsx_runtime.jsx)(AdvancedOptions, {
       query: query,
       onChange: onChange
     })]
   });
 }
-/* harmony default export */ const components_SearchForm = ((/* unused pure expression or super */ null && (SearchForm)));
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/jaeger/components/QueryEditor.tsx
+ const components_SearchForm = (( null && (SearchForm)));
+;
 
 
 
@@ -1079,18 +1041,18 @@ function QueryEditor(_ref) {
   const renderEditorBody = () => {
     switch (query.queryType) {
       case 'search':
-        return _SearchForm || (_SearchForm = /*#__PURE__*/(0,jsx_runtime.jsx)(SearchForm, {
+        return _SearchForm || (_SearchForm = (0,jsx_runtime.jsx)(SearchForm, {
           datasource: datasource,
           query: query,
           onChange: onChange
         }));
 
       case 'upload':
-        return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        return (0,jsx_runtime.jsx)("div", {
           className: (0,emotion_css_esm.css)({
             padding: theme.spacing(2)
           }),
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.FileDropzone, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.FileDropzone, {
             options: {
               multiple: false
             },
@@ -1102,12 +1064,12 @@ function QueryEditor(_ref) {
         });
 
       default:
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+        return (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
             label: "Trace ID",
             labelWidth: 14,
             grow: true,
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.QueryField, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.QueryField, {
               query: query.query,
               onChange: onChangeQuery,
               onRunQuery: onRunQuery,
@@ -1120,15 +1082,15 @@ function QueryEditor(_ref) {
     }
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+    children: (0,jsx_runtime.jsxs)("div", {
       className: (0,emotion_css_esm.css)({
         width: '100%'
       }),
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Query type",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.RadioButtonGroup, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.RadioButtonGroup, {
             options: [{
               value: 'search',
               label: 'Search'
@@ -1150,21 +1112,14 @@ function QueryEditor(_ref) {
     })
   });
 }
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js
 var lastValueFrom = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js
 var catchError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js");
-// EXTERNAL MODULE: ./public/app/core/utils/fetch.ts
 var fetch = __webpack_require__("./public/app/core/utils/fetch.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/services/TimeSrv.ts + 1 modules
 var TimeSrv = __webpack_require__("./public/app/features/dashboard/services/TimeSrv.ts");
-// EXTERNAL MODULE: ./public/app/core/utils/tracing.ts
 var tracing = __webpack_require__("./public/app/core/utils/tracing.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/jaeger/graphTransform.ts
+;
 
 
 function createGraphFrames(data) {
@@ -1172,7 +1127,7 @@ function createGraphFrames(data) {
     nodes,
     edges
   } = convertTraceToGraph(data);
-  const [nodesFrame, edgesFrame] = (0,tracing/* makeFrames */.np)();
+  const [nodesFrame, edgesFrame] = (0,tracing.np)();
 
   for (const node of nodes) {
     nodesFrame.add(node);
@@ -1189,7 +1144,7 @@ function convertTraceToGraph(data) {
   const nodes = [];
   const edges = [];
   const traceDuration = findTraceDuration(data.spans);
-  const spanMap = (0,tracing/* makeSpanMap */.nO)(index => {
+  const spanMap = (0,tracing.nO)(index => {
     var _span$references;
 
     if (index >= data.spans.length) {
@@ -1212,9 +1167,9 @@ function convertTraceToGraph(data) {
       const span = spanMap[c].span;
       return [span.startTime, span.startTime + span.duration];
     });
-    const childrenDuration = (0,tracing/* getNonOverlappingDuration */.et)(ranges);
+    const childrenDuration = (0,tracing.et)(ranges);
     const selfDuration = span.duration - childrenDuration;
-    const stats = (0,tracing/* getStats */.fy)(span.duration / 1000, traceDuration / 1000, selfDuration / 1000);
+    const stats = (0,tracing.fy)(span.duration / 1000, traceDuration / 1000, selfDuration / 1000);
     nodes.push({
       [src.NodeGraphDataFrameFieldNames.id]: span.spanID,
       [src.NodeGraphDataFrameFieldNames.title]: (_process$serviceName = process === null || process === void 0 ? void 0 : process.serviceName) !== null && _process$serviceName !== void 0 ? _process$serviceName : '',
@@ -1223,7 +1178,7 @@ function convertTraceToGraph(data) {
       [src.NodeGraphDataFrameFieldNames.secondaryStat]: stats.secondary,
       [src.NodeGraphDataFrameFieldNames.color]: selfDuration / traceDuration
     });
-    const parentSpanID = (_span$references2 = span.references) === null || _span$references2 === void 0 ? void 0 : (_span$references2$fin = _span$references2.find(r => r.refType === 'CHILD_OF')) === null || _span$references2$fin === void 0 ? void 0 : _span$references2$fin.spanID; // Sometimes some span can be missing. Don't add edges for those.
+    const parentSpanID = (_span$references2 = span.references) === null || _span$references2 === void 0 ? void 0 : (_span$references2$fin = _span$references2.find(r => r.refType === 'CHILD_OF')) === null || _span$references2$fin === void 0 ? void 0 : _span$references2$fin.spanID; 
 
     if (parentSpanID && spanMap[parentSpanID].span) {
       edges.push({
@@ -1239,10 +1194,6 @@ function convertTraceToGraph(data) {
     edges
   };
 }
-/**
- * Get the duration of the whole trace as it isn't a part of the response data.
- * Note: Seems like this should be the same as just longest span, but this is probably safer.
- */
 
 
 function findTraceDuration(spans) {
@@ -1261,9 +1212,8 @@ function findTraceDuration(spans) {
 
   return traceEndTime - traceStartTime;
 }
-// EXTERNAL MODULE: ./public/app/plugins/datasource/jaeger/responseTransform.ts
 var responseTransform = __webpack_require__("./public/app/plugins/datasource/jaeger/responseTransform.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/jaeger/datasource.ts
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1279,7 +1229,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 class JaegerDatasource extends src.DataSourceApi {
   constructor(instanceSettings) {
-    let timeSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,TimeSrv/* getTimeSrv */.$t)();
+    let timeSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,TimeSrv.$t)();
     super(instanceSettings);
     this.instanceSettings = instanceSettings;
     this.timeSrv = timeSrv;
@@ -1294,15 +1244,13 @@ class JaegerDatasource extends src.DataSourceApi {
   }
 
   async metadataRequest(url, params) {
-    const res = await (0,lastValueFrom/* lastValueFrom */.n)(this._request(url, params, {
+    const res = await (0,lastValueFrom.n)(this._request(url, params, {
       hideFromInspector: true
     }));
     return res.data.data;
   }
 
   query(options) {
-    // At this moment we expect only one target. In case we somehow change the UI to be able to show multiple
-    // traces at one we need to change this.
     const target = options.targets[0];
 
     if (!target) {
@@ -1312,7 +1260,7 @@ class JaegerDatasource extends src.DataSourceApi {
     }
 
     if (target.queryType !== 'search' && target.query) {
-      return this._request(`/api/traces/${encodeURIComponent((0,grafana_runtime_src.getTemplateSrv)().replace(target.query, options.scopedVars))}`).pipe((0,map/* map */.U)(response => {
+      return this._request(`/api/traces/${encodeURIComponent((0,grafana_runtime_src.getTemplateSrv)().replace(target.query, options.scopedVars))}`).pipe((0,map.U)(response => {
         var _response$data, _response$data$data, _this$nodeGraph;
 
         const traceData = response === null || response === void 0 ? void 0 : (_response$data = response.data) === null || _response$data === void 0 ? void 0 : (_response$data$data = _response$data.data) === null || _response$data$data === void 0 ? void 0 : _response$data$data[0];
@@ -1323,7 +1271,7 @@ class JaegerDatasource extends src.DataSourceApi {
           };
         }
 
-        let data = [(0,responseTransform/* createTraceFrame */.xM)(traceData)];
+        let data = [(0,responseTransform.xM)(traceData)];
 
         if ((_this$nodeGraph = this.nodeGraph) !== null && _this$nodeGraph !== void 0 && _this$nodeGraph.enabled) {
           data.push(...createGraphFrames(traceData));
@@ -1346,7 +1294,7 @@ class JaegerDatasource extends src.DataSourceApi {
         var _this$nodeGraph2;
 
         const traceData = JSON.parse(this.uploadedJson).data[0];
-        let data = [(0,responseTransform/* createTraceFrame */.xM)(traceData)];
+        let data = [(0,responseTransform.xM)(traceData)];
 
         if ((_this$nodeGraph2 = this.nodeGraph) !== null && _this$nodeGraph2 !== void 0 && _this$nodeGraph2.enabled) {
           data.push(...createGraphFrames(traceData));
@@ -1365,7 +1313,7 @@ class JaegerDatasource extends src.DataSourceApi {
       }
     }
 
-    let jaegerQuery = (0,lodash.pick)(target, ['operation', 'service', 'tags', 'minDuration', 'maxDuration', 'limit']); // remove empty properties
+    let jaegerQuery = (0,lodash.pick)(target, ['operation', 'service', 'tags', 'minDuration', 'maxDuration', 'limit']); 
 
     jaegerQuery = (0,lodash.pickBy)(jaegerQuery, lodash.identity);
 
@@ -1377,20 +1325,20 @@ class JaegerDatasource extends src.DataSourceApi {
 
     if (jaegerQuery.operation === ALL_OPERATIONS_KEY) {
       jaegerQuery = (0,lodash.omit)(jaegerQuery, 'operation');
-    } // TODO: this api is internal, used in jaeger ui. Officially they have gRPC api that should be used.
+    } 
 
 
     return this._request(`/api/traces`, Object.assign({}, jaegerQuery, this.getTimeRange(), {
       lookback: 'custom'
-    })).pipe((0,map/* map */.U)(response => {
+    })).pipe((0,map.U)(response => {
       return {
-        data: [(0,responseTransform/* createTableFrame */.Wp)(response.data.data, this.instanceSettings)]
+        data: [(0,responseTransform.Wp)(response.data.data, this.instanceSettings)]
       };
     }));
   }
 
   async testDatasource() {
-    return (0,lastValueFrom/* lastValueFrom */.n)(this._request('/api/services').pipe((0,map/* map */.U)(res => {
+    return (0,lastValueFrom.n)(this._request('/api/services').pipe((0,map.U)(res => {
       var _res$data;
 
       const values = (res === null || res === void 0 ? void 0 : (_res$data = res.data) === null || _res$data === void 0 ? void 0 : _res$data.data) || [];
@@ -1402,7 +1350,7 @@ class JaegerDatasource extends src.DataSourceApi {
         message: 'Data source connected, but no services received. Verify that Jaeger is configured properly.'
       };
       return testResult;
-    }), (0,catchError/* catchError */.K)(err => {
+    }), (0,catchError.K)(err => {
       let message = 'Jaeger: ';
 
       if (err.statusText) {
@@ -1441,7 +1389,7 @@ class JaegerDatasource extends src.DataSourceApi {
   }
 
   _request(apiUrl, data, options) {
-    const params = data ? (0,fetch/* serializeParams */.tW)(data) : '';
+    const params = data ? (0,fetch.tW)(data) : '';
     const url = `${this.instanceSettings.url}${apiUrl}${params.length ? `?${params}` : ''}`;
     const req = Object.assign({}, options, {
       url
@@ -1472,26 +1420,26 @@ const emptyTraceDataFrame = new src.MutableDataFrame({
     }
   }
 });
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/jaeger/module.ts
+;
 
 
 
 
 const module_plugin = new src.DataSourcePlugin(JaegerDatasource).setConfigEditor(ConfigEditor).setQueryEditor(QueryEditor);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/jaeger/responseTransform.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/jaeger/responseTransform.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Wp": () => (/* binding */ createTableFrame),
-/* harmony export */   "c6": () => (/* binding */ transformToJaeger),
-/* harmony export */   "xM": () => (/* binding */ createTraceFrame)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _jaegertracing_jaeger_ui_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/jaeger-ui-components/src/index.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "Wp": () => ( createTableFrame),
+   "c6": () => ( transformToJaeger),
+   "xM": () => ( createTraceFrame)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _jaegertracing_jaeger_ui_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/jaeger-ui-components/src/index.ts");
 
 
 function createTraceFrame(data) {
@@ -1557,7 +1505,6 @@ function toSpanRow(span, processes) {
     traceID: span.traceID,
     parentSpanID: (_span$references = span.references) === null || _span$references === void 0 ? void 0 : (_span$references$find = _span$references.find(r => r.refType === 'CHILD_OF')) === null || _span$references$find === void 0 ? void 0 : _span$references$find.spanID,
     operationName: span.operationName,
-    // from micro to millis
     startTime: span.startTime / 1000,
     duration: span.duration / 1000,
     logs: span.logs.map(l => Object.assign({}, l, {
@@ -1614,7 +1561,7 @@ function createTableFrame(data, instanceSettings) {
     meta: {
       preferredVisualisationType: 'table'
     }
-  }); // Show the most recent traces
+  }); 
 
   const traceData = data.map(transformToTraceData).sort((a, b) => (b === null || b === void 0 ? void 0 : b.startTime) - (a === null || a === void 0 ? void 0 : a.startTime));
 
@@ -1626,7 +1573,7 @@ function createTableFrame(data, instanceSettings) {
 }
 
 function transformToTraceData(data) {
-  const traceData = (0,_jaegertracing_jaeger_ui_components__WEBPACK_IMPORTED_MODULE_1__/* .transformTraceData */ .R1)(data);
+  const traceData = (0,_jaegertracing_jaeger_ui_components__WEBPACK_IMPORTED_MODULE_1__ .R1)(data);
 
   if (!traceData) {
     return;
@@ -1650,11 +1597,11 @@ function transformToJaeger(data) {
   let processes = [];
 
   for (let i = 0; i < data.length; i++) {
-    const span = data.get(i); // Set traceID
+    const span = data.get(i); 
 
     if (!traceResponse.traceID) {
       traceResponse.traceID = span.traceID;
-    } // Create process if doesn't exist
+    } 
 
 
     if (!processes.find(p => p === span.serviceName)) {
@@ -1663,7 +1610,7 @@ function transformToJaeger(data) {
         serviceName: span.serviceName,
         tags: span.serviceTags
       };
-    } // Create span
+    } 
 
 
     traceResponse.spans.push({
@@ -1696,29 +1643,13 @@ function transformToJaeger(data) {
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/body_parser.js":
-/***/ ((module, exports) => {
+ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/body_parser.js":
+ ((module, exports) => {
 
 
-/*
-Module dependencies.
-*/
 
-/*
-JSON:
-
-Parse logplex request bodies, providing the
-parsed object as `req.body`.
-
-Options: none
-
-@param content_type {String} use when Content-Type matches this string
-@param parser {Function} parsing function takes String body and returns new body
-@return {Function}
-@api public
-*/
 
 exports = module.exports = function(options) {
   var limit;
@@ -1754,10 +1685,10 @@ exports = module.exports = function(options) {
 };
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/body_parser_stream.js":
-/***/ ((module, exports, __webpack_require__) => {
+ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/body_parser_stream.js":
+ ((module, exports, __webpack_require__) => {
 
 var split = __webpack_require__("./.yarn/cache/split-npm-0.2.10-a950dc8c82-9eb1195608.zip/node_modules/split/index.js");
 var through = __webpack_require__("./.yarn/cache/through-npm-2.3.8-df5f72a16e-a38c3e0598.zip/node_modules/through/index.js");
@@ -1771,10 +1702,8 @@ exports = module.exports = function(options){
 
   return function(req, res, next) {
 
-    //honor already parsed bodies
     if (req._body) return next();
 
-    //mime-type check
     var is_mime = req.header('content-type') === mime;
     if (!is_mime) return next();
     req._body = true;
@@ -1787,10 +1716,10 @@ exports = module.exports = function(options){
 
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/logfmt_parser.js":
-/***/ ((__unused_webpack_module, exports) => {
+ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/logfmt_parser.js":
+ ((__unused_webpack_module, exports) => {
 
 exports.debug = false;
 
@@ -1833,7 +1762,6 @@ exports.parse = function(line) {
 
     if(line[i] == '=' && !in_quote){
       if(debug) console.log('split')
-      //split
       in_key = false;
       in_value = true;
     }
@@ -1866,10 +1794,10 @@ exports.parse = function(line) {
 }
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/logger.js":
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/logger.js":
+ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 exports.log = function(data, stream) {
   this.stream = this.stream || process.stdout;
@@ -1930,18 +1858,16 @@ exports.error = function(err, id) {
 }
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/request_logger.js":
-/***/ ((__unused_webpack_module, exports) => {
+ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/request_logger.js":
+ ((__unused_webpack_module, exports) => {
 
 var commonFormatter = function(req, res){
   if((typeof req.path) == 'function'){
-    //in restify path is a function
     var path = req.path();
   }
   else{
-    //in express it is an attribute
     var path = req.originalUrl || req.path || req.url;
   }
 
@@ -2020,16 +1946,15 @@ exports.init = function(logger, options, formatter) {
 exports.commonFormatter = commonFormatter;
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/streaming.js":
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/streaming.js":
+ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 var split       = __webpack_require__("./.yarn/cache/split-npm-0.2.10-a950dc8c82-9eb1195608.zip/node_modules/split/index.js")
 var through     = __webpack_require__("./.yarn/cache/through-npm-2.3.8-df5f72a16e-a38c3e0598.zip/node_modules/through/index.js");
 var PassThrough = (__webpack_require__("?7db0").PassThrough);
 
-//returns a stream that splits and parses logfmt into objects
 exports.streamParser = function(options){
   var options = options || {};
 
@@ -2040,15 +1965,11 @@ exports.streamParser = function(options){
     if(line !== '') this.queue(self.parse(line))
   })
 
-  // When a source stream is piped to us, undo that pipe, and save
-  // off the source stream piped into our internally managed streams.
   streamParser.on('pipe', function(source) {
     if(source.unpipe) source.unpipe(this);
     this.transformStream = source.pipe(split()).pipe(logfmtStream);
   });
 
-  // When we're piped to another stream, instead pipe our internal
-  // transform stream to that destination.
   streamParser.pipe = function(destination, options) {
     return this.transformStream.pipe(destination, options);
   };
@@ -2056,7 +1977,6 @@ exports.streamParser = function(options){
   return streamParser;
 }
 
-// returns a stream that stringifies objects
 exports.streamStringify = function(options){
   var self = this;
   var options = options || {};
@@ -2074,10 +1994,10 @@ exports.streamStringify = function(options){
 }
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/stringify.js":
-/***/ ((__unused_webpack_module, exports) => {
+ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/stringify.js":
+ ((__unused_webpack_module, exports) => {
 
 exports.stringify = function(data){
   var line = '';
@@ -2101,18 +2021,16 @@ exports.stringify = function(data){
     line += key + '=' + value + ' ';
   }
 
-  //trim traling space
   return line.substring(0,line.length-1);
 }
 
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/logfmt.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/logfmt.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-//constructor
 function logfmt() {
 }
 module.exports = logfmt;
@@ -2125,21 +2043,18 @@ var logger           = __webpack_require__("./.yarn/cache/logfmt-npm-1.3.2-37fab
 var requestLogger    = __webpack_require__("./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/request_logger.js");
 var serializer       = __webpack_require__("./.yarn/cache/logfmt-npm-1.3.2-37fabee436-639d327c1e.zip/node_modules/logfmt/lib/stringify.js");
 
-//Build up logfmt prototype
 Object.assign(logfmt.prototype, logger);
 Object.assign(logfmt.prototype, streaming);
 
 logfmt.prototype.stringify = serializer.stringify;
 logfmt.prototype.parse = logfmtParser.parse;
 
-// Synchronous body parser
 logfmt.prototype.bodyParser = function(options) {
   options || (options = {});
   var mime = options.contentType || "application/logplex-1";
   return bodyParser({ contentType: mime, parser: this.parse });
 };
 
-// Stream parser
 logfmt.prototype.bodyParserStream = function(options) {
   options || (options = {});
   var mime = options.contentType || "application/logplex-1";
@@ -2155,16 +2070,12 @@ logfmt.prototype.requestLogger.commonFormatter = requestLogger.commonFormatter;
 Object.assign(logfmt, logfmt.prototype);
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/split-npm-0.2.10-a950dc8c82-9eb1195608.zip/node_modules/split/index.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/split-npm-0.2.10-a950dc8c82-9eb1195608.zip/node_modules/split/index.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-//filter will reemit the data if cb(err,pass) pass is truthy
 
-// reduce is more tricky
-// maybe we want to group the reductions or emit progress updates occasionally
-// the most basic reduce just emits one 'data' event after it has recieved 'end'
 
 
 var through = __webpack_require__("./.yarn/cache/through-npm-2.3.8-df5f72a16e-a38c3e0598.zip/node_modules/through/index.js")
@@ -2172,7 +2083,6 @@ var Decoder = (__webpack_require__("?1a5c").StringDecoder)
 
 module.exports = split
 
-//TODO pass in a function to map across the lines.
 
 function split (matcher, mapper) {
   var decoder = new Decoder()
@@ -2221,22 +2131,17 @@ function split (matcher, mapper) {
 
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/through-npm-2.3.8-df5f72a16e-a38c3e0598.zip/node_modules/through/index.js":
-/***/ ((module, exports, __webpack_require__) => {
+ "./.yarn/cache/through-npm-2.3.8-df5f72a16e-a38c3e0598.zip/node_modules/through/index.js":
+ ((module, exports, __webpack_require__) => {
 
 var Stream = __webpack_require__("?dcf2")
 
-// through
-//
-// a stream that does nothing but re-emit the input.
-// useful for aggregating a series of changing but not ending streams into one stream)
 
 exports = module.exports = through
 through.through = through
 
-//create a readable writable stream.
 
 function through (write, end, opts) {
   write = write || function (data) { this.queue(data) }
@@ -2247,7 +2152,6 @@ function through (write, end, opts) {
   stream.readable = stream.writable = true
   stream.paused = false
 
-//  stream.autoPause   = !(opts && opts.autoPause   === false)
   stream.autoDestroy = !(opts && opts.autoDestroy === false)
 
   stream.write = function (data) {
@@ -2266,7 +2170,6 @@ function through (write, end, opts) {
   }
 
   stream.queue = stream.push = function (data) {
-//    console.error(ended)
     if(_ended) return stream
     if(data === null) _ended = true
     buffer.push(data)
@@ -2274,11 +2177,6 @@ function through (write, end, opts) {
     return stream
   }
 
-  //this will be registered as the first 'end' listener
-  //must call destroy next tick, to make sure we're after any
-  //stream piped from here.
-  //this is only a problem if end is not emitted synchronously.
-  //a nicer way to do this is to make sure this is the last listener for 'end'
 
   stream.on('end', function () {
     stream.readable = false
@@ -2299,7 +2197,7 @@ function through (write, end, opts) {
     if(ended) return
     ended = true
     if(arguments.length) stream.write(data)
-    _end() // will emit or queue
+    _end() 
     return stream
   }
 
@@ -2325,8 +2223,6 @@ function through (write, end, opts) {
       stream.emit('resume')
     }
     drain()
-    //may have become paused again,
-    //as drain emits 'data'.
     if(!stream.paused)
       stream.emit('drain')
     return stream
@@ -2336,6 +2232,6 @@ function through (write, end, opts) {
 
 
 
-/***/ })
+ })
 
 }]);

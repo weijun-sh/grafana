@@ -1,105 +1,77 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[5372],{
 
-/***/ "./public/app/core/hooks/useCleanup.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/hooks/useCleanup.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "x": () => (/* binding */ useCleanup)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
-/* harmony import */ var _actions_cleanUp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/core/actions/cleanUp.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "x": () => ( useCleanup)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
+ var _actions_cleanUp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/core/actions/cleanUp.ts");
 
 
 
 function useCleanup(stateSelector) {
-  const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(); //bit of a hack to unburden user from having to wrap stateSelcetor in a useCallback. Otherwise cleanup would happen on every render
+  const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(); 
 
   const selectorRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(stateSelector);
   selectorRef.current = stateSelector;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     return () => {
-      dispatch((0,_actions_cleanUp__WEBPACK_IMPORTED_MODULE_2__/* .cleanUpAction */ .e)({
+      dispatch((0,_actions_cleanUp__WEBPACK_IMPORTED_MODULE_2__ .e)({
         stateSelector: selectorRef.current
       }));
     };
   }, [dispatch]);
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/RuleEditor.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/RuleEditor.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ unified_RuleEditor)
+  "default": () => ( unified_RuleEditor)
 });
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js + 20 modules
 var es = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useAsync.js
 var useAsync = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useAsync.js");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/components/Page/Page.tsx + 1 modules
 var Page = __webpack_require__("./public/app/core/components/Page/Page.tsx");
-// EXTERNAL MODULE: ./public/app/core/hooks/useCleanup.ts
 var useCleanup = __webpack_require__("./public/app/core/hooks/useCleanup.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-hook-form-virtual-92b6119fd4/0/cache/react-hook-form-npm-7.5.3-f9cc466c62-fbfaa3b664.zip/node_modules/react-hook-form/dist/index.esm.js
 var index_esm = __webpack_require__("./.yarn/__virtual__/react-hook-form-virtual-92b6119fd4/0/cache/react-hook-form-npm-7.5.3-f9cc466c62-fbfaa3b664.zip/node_modules/react-hook-form/dist/index.esm.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-router-dom-virtual-e45eb1b58b/0/cache/react-router-dom-npm-5.3.0-aa9adb5bec-47584fd629.zip/node_modules/react-router-dom/esm/react-router-dom.js
 var react_router_dom = __webpack_require__("./.yarn/__virtual__/react-router-dom-virtual-e45eb1b58b/0/cache/react-router-dom-npm-5.3.0-aa9adb5bec-47584fd629.zip/node_modules/react-router-dom/esm/react-router-dom.js");
-// EXTERNAL MODULE: ./public/app/core/copy/appNotification.ts
 var appNotification = __webpack_require__("./public/app/core/copy/appNotification.ts");
-// EXTERNAL MODULE: ./public/app/core/hooks/useQueryParams.ts
 var useQueryParams = __webpack_require__("./public/app/core/hooks/useQueryParams.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts
 var useUnifiedAlertingSelector = __webpack_require__("./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/state/actions.ts + 4 modules
 var actions = __webpack_require__("./public/app/features/alerting/unified/state/actions.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/types/rule-form.ts
 var rule_form = __webpack_require__("./public/app/features/alerting/unified/types/rule-form.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/redux.ts
 var redux = __webpack_require__("./public/app/features/alerting/unified/utils/redux.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/rule-form.ts
 var utils_rule_form = __webpack_require__("./public/app/features/alerting/unified/utils/rule-form.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/rule-id.ts
 var rule_id = __webpack_require__("./public/app/features/alerting/unified/utils/rule-id.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/time.ts + 1 modules
 var time = __webpack_require__("./public/app/features/alerting/unified/utils/time.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useMountedState.js
 var useMountedState = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useMountedState.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/takeWhile.js
 var takeWhile = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/takeWhile.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var grafana_data_src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js
 var catchError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/share.js
 var share = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/share.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/types/preview.ts
+;
 function isCloudPreviewRequest(request) {
   return 'expr' in request;
 }
 function isGrafanaPreviewRequest(request) {
   return 'grafana_condition' in request;
 }
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/api/preview.ts
+;
 
 
 
@@ -119,14 +91,14 @@ function previewAlertRule(request) {
 }
 
 function previewGrafanaAlertRule(request) {
-  const type = rule_form/* RuleFormType.grafana */.$.grafana;
+  const type = rule_form.$.grafana;
   return (0,grafana_data_src.withLoadingIndicator)({
     whileLoading: createResponse(type),
     source: (0,grafana_runtime_src.getBackendSrv)().fetch({
       method: 'POST',
       url: `/api/v1/rule/test/grafana`,
       data: request
-    }).pipe((0,map/* map */.U)(_ref => {
+    }).pipe((0,map.U)(_ref => {
       let {
         data
       } = _ref;
@@ -134,12 +106,12 @@ function previewGrafanaAlertRule(request) {
         state: grafana_data_src.LoadingState.Done,
         series: data.instances.map(grafana_data_src.dataFrameFromJSON)
       });
-    }), (0,catchError/* catchError */.K)(error => {
+    }), (0,catchError.K)(error => {
       return (0,of.of)(createResponse(type, {
         state: grafana_data_src.LoadingState.Error,
         error: (0,grafana_runtime_src.toDataQueryError)(error)
       }));
-    }), (0,share/* share */.B)())
+    }), (0,share.B)())
   });
 }
 
@@ -158,13 +130,10 @@ function createResponse(ruleType) {
 function previewCloudAlertRule(request) {
   throw new Error('preview for cloud alerting rules is not implemented');
 }
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/hooks/useAlertQueriesStatus.ts
 var useAlertQueriesStatus = __webpack_require__("./public/app/features/alerting/unified/hooks/useAlertQueriesStatus.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-virtualized-auto-sizer-virtual-b5ab366cb0/0/cache/react-virtualized-auto-sizer-npm-1.0.6-50869b8392-81270e9d32.zip/node_modules/react-virtualized-auto-sizer/dist/index.esm.js
 var dist_index_esm = __webpack_require__("./.yarn/__virtual__/react-virtualized-auto-sizer-virtual-b5ab366cb0/0/cache/react-virtualized-auto-sizer-npm-1.0.6-50869b8392-81270e9d32.zip/node_modules/react-virtualized-auto-sizer/dist/index.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/PreviewRuleResult.tsx
+;
 var _span;
 
 
@@ -206,39 +175,39 @@ function PreviewRuleResult(props) {
   } = preview;
 
   if (data.state === grafana_data_src.LoadingState.Loading) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       className: styles.container,
-      children: _span || (_span = /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+      children: _span || (_span = (0,jsx_runtime.jsx)("span", {
         children: "Loading preview..."
       }))
     });
   }
 
   if (data.state === grafana_data_src.LoadingState.Error) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       className: styles.container,
-      children: data.error ? (0,redux/* messageFromError */.kk)(data.error) : 'Failed to preview alert rule'
+      children: data.error ? (0,redux.kk)(data.error) : 'Failed to preview alert rule'
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: styles.container,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("span", {
-      children: ["Preview based on the result of running the query, for this moment.", ' ', ruleType === rule_form/* RuleFormType.grafana */.$.grafana ? 'Configuration for `no data` and `error handling` is not applied.' : null]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    children: [(0,jsx_runtime.jsxs)("span", {
+      children: ["Preview based on the result of running the query, for this moment.", ' ', ruleType === rule_form.$.grafana ? 'Configuration for `no data` and `error handling` is not applied.' : null]
+    }), (0,jsx_runtime.jsx)("div", {
       className: styles.table,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(dist_index_esm/* default */.Z, {
+      children: (0,jsx_runtime.jsx)(dist_index_esm.Z, {
         children: _ref => {
           let {
             width,
             height
           } = _ref;
-          return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          return (0,jsx_runtime.jsx)("div", {
             style: {
               width: `${width}px`,
               height: `${height}px`
             },
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_runtime_src.PanelRenderer, {
+            children: (0,jsx_runtime.jsx)(grafana_runtime_src.PanelRenderer, {
               title: "",
               width: width,
               height: height,
@@ -267,7 +236,7 @@ function getStyles(theme) {
     `
   };
 }
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/PreviewRule.tsx
+;
 var _Alert;
 
 
@@ -289,32 +258,32 @@ function PreviewRule() {
   const [preview, onPreview] = usePreview();
   const {
     watch
-  } = (0,index_esm/* useFormContext */.Gc)();
+  } = (0,index_esm.Gc)();
   const [type, condition, queries] = watch(['type', 'condition', 'queries']);
   const {
     allDataSourcesAvailable
-  } = (0,useAlertQueriesStatus/* useAlertQueriesStatus */.S)(queries);
+  } = (0,useAlertQueriesStatus.S)(queries);
 
-  if (type === rule_form/* RuleFormType.cloudRecording */.$.cloudRecording || type === rule_form/* RuleFormType.cloudAlerting */.$.cloudAlerting) {
+  if (type === rule_form.$.cloudRecording || type === rule_form.$.cloudAlerting) {
     return null;
   }
 
   const isPreviewAvailable = Boolean(condition) && allDataSourcesAvailable;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: styles.container,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(src.HorizontalGroup, {
-      children: [allDataSourcesAvailable && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+    children: [(0,jsx_runtime.jsxs)(src.HorizontalGroup, {
+      children: [allDataSourcesAvailable && (0,jsx_runtime.jsx)(src.Button, {
         disabled: !isPreviewAvailable,
         type: "button",
         variant: "primary",
         onClick: onPreview,
         children: "Preview alerts"
-      }), !allDataSourcesAvailable && (_Alert || (_Alert = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Alert, {
+      }), !allDataSourcesAvailable && (_Alert || (_Alert = (0,jsx_runtime.jsx)(src.Alert, {
         title: "Preview is not available",
         severity: "warning",
         children: "Cannot display the query preview. Some of the data sources used in the queries are not available."
       })))]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(PreviewRuleResult, {
+    }), (0,jsx_runtime.jsx)(PreviewRuleResult, {
       preview: preview
     })]
   });
@@ -324,12 +293,12 @@ function usePreview() {
   const [preview, setPreview] = (0,react.useState)();
   const {
     getValues
-  } = (0,index_esm/* useFormContext */.Gc)();
-  const isMounted = (0,useMountedState/* default */.Z)();
+  } = (0,index_esm.Gc)();
+  const isMounted = (0,useMountedState.Z)();
   const onPreview = (0,react.useCallback)(() => {
     const values = getValues(fields);
     const request = createPreviewRequest(values);
-    previewAlertRule(request).pipe((0,takeWhile/* takeWhile */.o)(response => !isCompleted(response), true)).subscribe(response => {
+    previewAlertRule(request).pipe((0,takeWhile.o)(response => !isCompleted(response), true)).subscribe(response => {
       if (!isMounted()) {
         return;
       }
@@ -344,13 +313,13 @@ function createPreviewRequest(values) {
   const [type, dataSourceName, condition, queries, expression] = values;
 
   switch (type) {
-    case rule_form/* RuleFormType.cloudAlerting */.$.cloudAlerting:
+    case rule_form.$.cloudAlerting:
       return {
         dataSourceName,
         expr: expression
       };
 
-    case rule_form/* RuleFormType.grafana */.$.grafana:
+    case rule_form.$.grafana:
       return {
         grafana_condition: {
           condition,
@@ -383,7 +352,7 @@ function PreviewRule_getStyles(theme) {
     `
   };
 }
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/RuleEditorSection.tsx
+;
 
 
 
@@ -397,19 +366,19 @@ const RuleEditorSection = _ref => {
     description
   } = _ref;
   const styles = (0,src.useStyles2)(RuleEditorSection_getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: styles.parent,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+    children: [(0,jsx_runtime.jsx)("div", {
+      children: (0,jsx_runtime.jsx)("span", {
         className: styles.stepNo,
         children: stepNo
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), (0,jsx_runtime.jsx)("div", {
       className: styles.content,
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)(src.FieldSet, {
+      children: (0,jsx_runtime.jsxs)(src.FieldSet, {
         label: title,
         className: styles.fieldset,
-        children: [description && /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+        children: [description && (0,jsx_runtime.jsx)("p", {
           className: styles.description,
           children: description
         }), children]
@@ -452,7 +421,7 @@ const RuleEditorSection_getStyles = theme => ({
     flex: 1;
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/CloudEvaluationBehavior.tsx
+;
 var _PreviewRule;
 
 const _excluded = ["onChange", "ref"];
@@ -480,26 +449,26 @@ const CloudEvaluationBehavior = () => {
     formState: {
       errors
     }
-  } = (0,index_esm/* useFormContext */.Gc)();
-  const type = watch('type'); // cloud recording rules do not have alert conditions
+  } = (0,index_esm.Gc)();
+  const type = watch('type'); 
 
-  if (type === rule_form/* RuleFormType.cloudRecording */.$.cloudRecording) {
+  if (type === rule_form.$.cloudRecording) {
     return null;
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(RuleEditorSection, {
+  return (0,jsx_runtime.jsxs)(RuleEditorSection, {
     stepNo: 2,
     title: "Alert evaluation behavior",
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+    children: [(0,jsx_runtime.jsx)(src.Field, {
       label: "For",
       description: "Expression has to be true for this long for the alert to be fired.",
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      children: (0,jsx_runtime.jsxs)("div", {
         className: styles.flexRow,
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+        children: [(0,jsx_runtime.jsx)(src.Field, {
           invalid: !!((_errors$forTime = errors.forTime) !== null && _errors$forTime !== void 0 && _errors$forTime.message),
           error: (_errors$forTime2 = errors.forTime) === null || _errors$forTime2 === void 0 ? void 0 : _errors$forTime2.message,
           className: styles.inlineField,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Input, Object.assign({}, register('forTime', {
+          children: (0,jsx_runtime.jsx)(src.Input, Object.assign({}, register('forTime', {
             pattern: {
               value: /^\d+$/,
               message: 'Must be a positive integer.'
@@ -507,7 +476,7 @@ const CloudEvaluationBehavior = () => {
           }), {
             width: 8
           }))
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+        }), (0,jsx_runtime.jsx)(src.InputControl, {
           name: "forTimeUnit",
           render: _ref => {
             let {
@@ -517,8 +486,8 @@ const CloudEvaluationBehavior = () => {
             } = _ref,
                 field = _objectWithoutPropertiesLoose(_ref.field, _excluded);
 
-            return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Select, Object.assign({}, field, {
-              options: time/* timeOptions */.qr,
+            return (0,jsx_runtime.jsx)(src.Select, Object.assign({}, field, {
+              options: time.qr,
               onChange: value => onChange(value === null || value === void 0 ? void 0 : value.value),
               width: 15,
               className: styles.timeUnit
@@ -527,7 +496,7 @@ const CloudEvaluationBehavior = () => {
           control: control
         })]
       })
-    }), _PreviewRule || (_PreviewRule = /*#__PURE__*/(0,jsx_runtime.jsx)(PreviewRule, {}))]
+    }), _PreviewRule || (_PreviewRule = (0,jsx_runtime.jsx)(PreviewRule, {}))]
   });
 };
 
@@ -545,15 +514,11 @@ const CloudEvaluationBehavior_getStyles = theme => ({
     margin-left: ${theme.spacing.xs};
   `
 });
-// EXTERNAL MODULE: ./.yarn/__virtual__/@grafana-experimental-virtual-22e4fdfd25/0/cache/@grafana-experimental-npm-0.0.2-canary.30-71a280d204-b5b453b937.zip/node_modules/@grafana/experimental/index.js
 var experimental = __webpack_require__("./.yarn/__virtual__/@grafana-experimental-virtual-22e4fdfd25/0/cache/@grafana-experimental-npm-0.0.2-canary.30-71a280d204-b5b453b937.zip/node_modules/@grafana/experimental/index.js");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/rule-editor/AnnotationsField.tsx + 1 modules
 var AnnotationsField = __webpack_require__("./public/app/features/alerting/unified/components/rule-editor/AnnotationsField.tsx");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/rule-editor/SelectWIthAdd.tsx
 var SelectWIthAdd = __webpack_require__("./public/app/features/alerting/unified/components/rule-editor/SelectWIthAdd.tsx");
-// EXTERNAL MODULE: ./public/app/features/expressions/guards.ts
 var guards = __webpack_require__("./public/app/features/expressions/guards.ts");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/util.ts
+;
 
 function queriesWithUpdatedReferences(queries, previousRefId, newRefId) {
   return queries.map(query => {
@@ -561,7 +526,7 @@ function queriesWithUpdatedReferences(queries, previousRefId, newRefId) {
       return query;
     }
 
-    if (!(0,guards/* isExpressionQuery */.j)(query.model)) {
+    if (!(0,guards.j)(query.model)) {
       return query;
     }
 
@@ -611,10 +576,7 @@ function updateMathExpressionRefs(expression, previousRefId, newRefId) {
   const oldExpression = new RegExp('(\\$' + previousRefId + '\\b)|(\\${' + previousRefId + '})', 'gm');
   const newExpression = '${' + newRefId + '}';
   return expression.replace(oldExpression, newExpression);
-} // some gateways (like Istio) will decode "/" and "\" characters – this will cause 404 errors for any API call
-// that includes these values in the URL (ie. /my/path%2fto/resource -> /my/path/to/resource)
-//
-// see https://istio.io/latest/docs/ops/best-practices/security/#customize-your-system-on-path-normalization
+} 
 
 function checkForPathSeparator(value) {
   const containsPathSeparator = value.includes('/') || value.includes('\\');
@@ -625,7 +587,7 @@ function checkForPathSeparator(value) {
 
   return true;
 }
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/GroupAndNamespaceFields.tsx
+;
 const GroupAndNamespaceFields_excluded = ["onChange", "ref"],
       _excluded2 = ["ref"];
 
@@ -655,13 +617,13 @@ const GroupAndNamespaceFields = _ref => {
       errors
     },
     setValue
-  } = (0,index_esm/* useFormContext */.Gc)();
+  } = (0,index_esm.Gc)();
   const style = (0,src.useStyles2)(getStyle);
   const [customGroup, setCustomGroup] = (0,react.useState)(false);
-  const rulerRequests = (0,useUnifiedAlertingSelector/* useUnifiedAlertingSelector */._)(state => state.rulerRules);
+  const rulerRequests = (0,useUnifiedAlertingSelector._)(state => state.rulerRules);
   const dispatch = (0,es.useDispatch)();
   (0,react.useEffect)(() => {
-    dispatch((0,actions/* fetchRulerRulesAction */.UR)({
+    dispatch((0,actions.UR)({
       rulesSourceName
     }));
   }, [rulesSourceName, dispatch]);
@@ -679,14 +641,14 @@ const GroupAndNamespaceFields = _ref => {
       value: group.name
     }))) || [];
   }, [namespace, rulesConfig]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: style.flexRow,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+    children: [(0,jsx_runtime.jsx)(src.Field, {
       "data-testid": "namespace-picker",
       label: "Namespace",
       error: (_errors$namespace = errors.namespace) === null || _errors$namespace === void 0 ? void 0 : _errors$namespace.message,
       invalid: !!((_errors$namespace2 = errors.namespace) !== null && _errors$namespace2 !== void 0 && _errors$namespace2.message),
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+      children: (0,jsx_runtime.jsx)(src.InputControl, {
         render: _ref2 => {
           let {
             field: {
@@ -695,10 +657,10 @@ const GroupAndNamespaceFields = _ref => {
           } = _ref2,
               field = GroupAndNamespaceFields_objectWithoutPropertiesLoose(_ref2.field, GroupAndNamespaceFields_excluded);
 
-          return /*#__PURE__*/(0,jsx_runtime.jsx)(SelectWIthAdd/* SelectWithAdd */.P, Object.assign({}, field, {
+          return (0,jsx_runtime.jsx)(SelectWIthAdd.P, Object.assign({}, field, {
             className: style.input,
             onChange: value => {
-              setValue('group', ''); //reset if namespace changes
+              setValue('group', ''); 
 
               onChange(value);
             },
@@ -721,17 +683,17 @@ const GroupAndNamespaceFields = _ref => {
           }
         }
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+    }), (0,jsx_runtime.jsx)(src.Field, {
       "data-testid": "group-picker",
       label: "Group",
       error: (_errors$group = errors.group) === null || _errors$group === void 0 ? void 0 : _errors$group.message,
       invalid: !!((_errors$group2 = errors.group) !== null && _errors$group2 !== void 0 && _errors$group2.message),
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+      children: (0,jsx_runtime.jsx)(src.InputControl, {
         render: _ref3 => {
           let {} = _ref3,
               field = GroupAndNamespaceFields_objectWithoutPropertiesLoose(_ref3.field, _excluded2);
 
-          return /*#__PURE__*/(0,jsx_runtime.jsx)(SelectWIthAdd/* SelectWithAdd */.P, Object.assign({}, field, {
+          return (0,jsx_runtime.jsx)(SelectWIthAdd.P, Object.assign({}, field, {
             options: groupOptions,
             width: 42,
             custom: customGroup,
@@ -768,11 +730,9 @@ const getStyle = theme => ({
     width: 330px !important;
   `
 });
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/rule-editor/LabelsField.tsx
 var LabelsField = __webpack_require__("./public/app/features/alerting/unified/components/rule-editor/LabelsField.tsx");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/rule-editor/RuleFolderPicker.tsx
 var RuleFolderPicker = __webpack_require__("./public/app/features/alerting/unified/components/rule-editor/RuleFolderPicker.tsx");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/DetailsStep.tsx
+;
 const DetailsStep_excluded = ["ref"];
 
 var _Label, _AnnotationsField, _LabelsField;
@@ -806,32 +766,31 @@ const DetailsStep = () => {
     formState: {
       errors
     }
-  } = (0,index_esm/* useFormContext */.Gc)();
+  } = (0,index_esm.Gc)();
   const styles = (0,src.useStyles2)(DetailsStep_getStyles);
   const ruleFormType = watch('type');
   const dataSourceName = watch('dataSourceName');
   const type = watch('type');
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(RuleEditorSection, {
-    stepNo: type === rule_form/* RuleFormType.cloudRecording */.$.cloudRecording ? 2 : 3,
-    title: type === rule_form/* RuleFormType.cloudRecording */.$.cloudRecording ? 'Add details for your recording rule' : 'Add details for your alert',
-    description: type === rule_form/* RuleFormType.cloudRecording */.$.cloudRecording ? 'Add labels to help you better manage your rules' : 'Write a summary and add labels to help you better manage your alerts',
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+  return (0,jsx_runtime.jsxs)(RuleEditorSection, {
+    stepNo: type === rule_form.$.cloudRecording ? 2 : 3,
+    title: type === rule_form.$.cloudRecording ? 'Add details for your recording rule' : 'Add details for your alert',
+    description: type === rule_form.$.cloudRecording ? 'Add labels to help you better manage your rules' : 'Write a summary and add labels to help you better manage your alerts',
+    children: [(0,jsx_runtime.jsx)(src.Field, {
       className: styles.formInput,
       label: "Rule name",
       error: errors === null || errors === void 0 ? void 0 : (_errors$name = errors.name) === null || _errors$name === void 0 ? void 0 : _errors$name.message,
       invalid: !!((_errors$name2 = errors.name) !== null && _errors$name2 !== void 0 && _errors$name2.message),
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Input, Object.assign({
+      children: (0,jsx_runtime.jsx)(src.Input, Object.assign({
         id: "name"
       }, register('name', {
         required: {
           value: true,
           message: 'Must enter an alert name'
         },
-        pattern: ruleFormType === rule_form/* RuleFormType.cloudRecording */.$.cloudRecording ? recordingRuleNameValidationPattern : undefined,
+        pattern: ruleFormType === rule_form.$.cloudRecording ? recordingRuleNameValidationPattern : undefined,
         validate: {
           pathSeparator: value => {
-            // we use the alert rule name as the "groupname" for Grafana managed alerts, so we can't allow path separators
-            if (ruleFormType === rule_form/* RuleFormType.grafana */.$.grafana) {
+            if (ruleFormType === rule_form.$.grafana) {
               return checkForPathSeparator(value);
             }
 
@@ -839,22 +798,22 @@ const DetailsStep = () => {
           }
         }
       })))
-    }), (ruleFormType === rule_form/* RuleFormType.cloudRecording */.$.cloudRecording || ruleFormType === rule_form/* RuleFormType.cloudAlerting */.$.cloudAlerting) && dataSourceName && /*#__PURE__*/(0,jsx_runtime.jsx)(GroupAndNamespaceFields, {
+    }), (ruleFormType === rule_form.$.cloudRecording || ruleFormType === rule_form.$.cloudAlerting) && dataSourceName && (0,jsx_runtime.jsx)(GroupAndNamespaceFields, {
       rulesSourceName: dataSourceName
-    }), ruleFormType === rule_form/* RuleFormType.grafana */.$.grafana && /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    }), ruleFormType === rule_form.$.grafana && (0,jsx_runtime.jsxs)("div", {
       className: styles.flexRow,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
-        label: _Label || (_Label = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Label, {
+      children: [(0,jsx_runtime.jsx)(src.Field, {
+        label: _Label || (_Label = (0,jsx_runtime.jsx)(src.Label, {
           htmlFor: "folder",
           description: 'Select a folder to store your rule.',
-          children: /*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.Stack, {
+          children: (0,jsx_runtime.jsxs)(experimental.Stack, {
             gap: 0.5,
-            children: ["Folder", /*#__PURE__*/(0,jsx_runtime.jsx)(src.Tooltip, {
+            children: ["Folder", (0,jsx_runtime.jsx)(src.Tooltip, {
               placement: "top",
-              content: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+              content: (0,jsx_runtime.jsx)("div", {
                 children: "Each folder has unique folder permission. When you store multiple rules in a folder, the folder access permissions get assigned to the rules."
               }),
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Icon, {
+              children: (0,jsx_runtime.jsx)(src.Icon, {
                 name: "info-circle",
                 size: "xs"
               })
@@ -865,12 +824,12 @@ const DetailsStep = () => {
         error: (_errors$folder = errors.folder) === null || _errors$folder === void 0 ? void 0 : _errors$folder.message,
         invalid: !!((_errors$folder2 = errors.folder) !== null && _errors$folder2 !== void 0 && _errors$folder2.message),
         "data-testid": "folder-picker",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+        children: (0,jsx_runtime.jsx)(src.InputControl, {
           render: _ref => {
             let {} = _ref,
                 field = DetailsStep_objectWithoutPropertiesLoose(_ref.field, DetailsStep_excluded);
 
-            return /*#__PURE__*/(0,jsx_runtime.jsx)(RuleFolderPicker/* RuleFolderPicker */.W, Object.assign({
+            return (0,jsx_runtime.jsx)(RuleFolderPicker.W, Object.assign({
               inputId: "folder"
             }, field, {
               enableCreateNew: true,
@@ -888,14 +847,14 @@ const DetailsStep = () => {
             }
           }
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+      }), (0,jsx_runtime.jsx)(src.Field, {
         label: "Group",
         "data-testid": "group-picker",
         description: "Rules within the same group are evaluated after the same time interval.",
         className: styles.formInput,
         error: (_errors$group = errors.group) === null || _errors$group === void 0 ? void 0 : _errors$group.message,
         invalid: !!((_errors$group2 = errors.group) !== null && _errors$group2 !== void 0 && _errors$group2.message),
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Input, Object.assign({
+        children: (0,jsx_runtime.jsx)(src.Input, Object.assign({
           id: "group"
         }, register('group', {
           required: {
@@ -904,7 +863,7 @@ const DetailsStep = () => {
           }
         })))
       })]
-    }), type !== rule_form/* RuleFormType.cloudRecording */.$.cloudRecording && (_AnnotationsField || (_AnnotationsField = /*#__PURE__*/(0,jsx_runtime.jsx)(AnnotationsField/* default */.Z, {}))), _LabelsField || (_LabelsField = /*#__PURE__*/(0,jsx_runtime.jsx)(LabelsField/* default */.Z, {}))]
+    }), type !== rule_form.$.cloudRecording && (_AnnotationsField || (_AnnotationsField = (0,jsx_runtime.jsx)(AnnotationsField.Z, {}))), _LabelsField || (_LabelsField = (0,jsx_runtime.jsx)(LabelsField.Z, {}))]
   });
 };
 
@@ -922,11 +881,9 @@ const DetailsStep_getStyles = theme => ({
     align-items: flex-end;
   `
 });
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/CollapseToggle.tsx
 var CollapseToggle = __webpack_require__("./public/app/features/alerting/unified/components/CollapseToggle.tsx");
-// EXTERNAL MODULE: ./public/app/types/unified-alerting-dto.ts
 var unified_alerting_dto = __webpack_require__("./public/app/types/unified-alerting-dto.ts");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/GrafanaAlertStatePicker.tsx
+;
 const GrafanaAlertStatePicker_excluded = ["includeNoData", "includeError"];
 
 function GrafanaAlertStatePicker_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -936,16 +893,16 @@ function GrafanaAlertStatePicker_objectWithoutPropertiesLoose(source, excluded) 
 
 
 const options = [{
-  value: unified_alerting_dto/* GrafanaAlertStateDecision.Alerting */.g0.Alerting,
+  value: unified_alerting_dto.g0.Alerting,
   label: 'Alerting'
 }, {
-  value: unified_alerting_dto/* GrafanaAlertStateDecision.NoData */.g0.NoData,
+  value: unified_alerting_dto.g0.NoData,
   label: 'No Data'
 }, {
-  value: unified_alerting_dto/* GrafanaAlertStateDecision.OK */.g0.OK,
+  value: unified_alerting_dto.g0.OK,
   label: 'OK'
 }, {
-  value: unified_alerting_dto/* GrafanaAlertStateDecision.Error */.g0.Error,
+  value: unified_alerting_dto.g0.Error,
   label: 'Error'
 }];
 const GrafanaAlertStatePicker = _ref => {
@@ -957,22 +914,21 @@ const GrafanaAlertStatePicker = _ref => {
 
   const opts = (0,react.useMemo)(() => {
     if (!includeNoData) {
-      return options.filter(opt => opt.value !== unified_alerting_dto/* GrafanaAlertStateDecision.NoData */.g0.NoData);
+      return options.filter(opt => opt.value !== unified_alerting_dto.g0.NoData);
     }
 
     if (!includeError) {
-      return options.filter(opt => opt.value !== unified_alerting_dto/* GrafanaAlertStateDecision.Error */.g0.Error);
+      return options.filter(opt => opt.value !== unified_alerting_dto.g0.Error);
     }
 
     return options;
   }, [includeNoData, includeError]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Select, Object.assign({
+  return (0,jsx_runtime.jsx)(src.Select, Object.assign({
     options: opts
   }, props));
 };
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/GrafanaConditionEvalWarning.tsx
+;
 var GrafanaConditionEvalWarning_Alert;
 
 
@@ -981,11 +937,10 @@ var GrafanaConditionEvalWarning_Alert;
 
 
 
-// a warning that will be shown if a problematic yet technically valid combination of "evaluate every" and "evaluate for" is enetered
 const GrafanaConditionEvalWarning = () => {
   const {
     watch
-  } = (0,index_esm/* useFormContext */.Gc)();
+  } = (0,index_esm.Gc)();
   const evaluateFor = watch('evaluateFor');
   const evaluateEvery = watch('evaluateEvery');
 
@@ -1004,7 +959,7 @@ const GrafanaConditionEvalWarning = () => {
   const millisEvery = (0,grafana_data_src.durationToMilliseconds)(durationEvery);
 
   if (millisFor && millisEvery && millisFor <= millisEvery) {
-    return GrafanaConditionEvalWarning_Alert || (GrafanaConditionEvalWarning_Alert = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Alert, {
+    return GrafanaConditionEvalWarning_Alert || (GrafanaConditionEvalWarning_Alert = (0,jsx_runtime.jsx)(src.Alert, {
       severity: "warning",
       title: "",
       children: "Setting a \"for\" duration that is less than or equal to the evaluation interval will result in the evaluation interval being used to calculate when an alert that has stopped receiving data will be closed."
@@ -1013,7 +968,7 @@ const GrafanaConditionEvalWarning = () => {
 
   return null;
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/GrafanaEvaluationBehavior.tsx
+;
 const GrafanaEvaluationBehavior_excluded = ["onChange", "ref"],
       GrafanaEvaluationBehavior_excluded2 = ["onChange", "ref"];
 
@@ -1035,21 +990,21 @@ function GrafanaEvaluationBehavior_objectWithoutPropertiesLoose(source, excluded
 
 
 
-const MIN_TIME_RANGE_STEP_S = 10; // 10 seconds
+const MIN_TIME_RANGE_STEP_S = 10; 
 
 const forValidationOptions = {
   required: {
     value: true,
     message: 'Required.'
   },
-  pattern: time/* durationValidationPattern */.lR
+  pattern: time.lR
 };
 const evaluateEveryValidationOptions = {
   required: {
     value: true,
     message: 'Required.'
   },
-  pattern: time/* positiveDurationValidationPattern */.O8,
+  pattern: time.O8,
   validate: value => {
     const duration = (0,grafana_data_src.parseDuration)(value);
 
@@ -1078,54 +1033,52 @@ const GrafanaEvaluationBehavior = () => {
     formState: {
       errors
     }
-  } = (0,index_esm/* useFormContext */.Gc)();
+  } = (0,index_esm.Gc)();
   const evaluateEveryId = 'eval-every-input';
   const evaluateForId = 'eval-for-input';
   return (
-    /*#__PURE__*/
-    // TODO remove "and alert condition" for recording rules
     (0,jsx_runtime.jsxs)(RuleEditorSection, {
       stepNo: 2,
       title: "Alert evaluation behavior",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+      children: [(0,jsx_runtime.jsx)(src.Field, {
         label: "Evaluate",
         description: "Evaluation interval applies to every rule within a group. It can overwrite the interval of an existing alert rule.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: styles.flexRow,
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(src.InlineLabel, {
+          children: [(0,jsx_runtime.jsx)(src.InlineLabel, {
             htmlFor: evaluateEveryId,
             width: 16,
             tooltip: "How often the alert will be evaluated to see if it fires",
             children: "Evaluate every"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Input, Object.assign({
+          }), (0,jsx_runtime.jsx)(src.Input, Object.assign({
             id: evaluateEveryId,
             width: 8
-          }, register('evaluateEvery', evaluateEveryValidationOptions))), /*#__PURE__*/(0,jsx_runtime.jsx)(src.InlineLabel, {
+          }, register('evaluateEvery', evaluateEveryValidationOptions))), (0,jsx_runtime.jsx)(src.InlineLabel, {
             htmlFor: evaluateForId,
             width: 7,
             tooltip: "Once condition is breached, alert will go into pending state. If it is pending for longer than the \"for\" value, it will become a firing alert.",
             children: "for"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+          }), (0,jsx_runtime.jsx)(src.Field, {
             className: styles.inlineField,
             error: (_errors$evaluateFor = errors.evaluateFor) === null || _errors$evaluateFor === void 0 ? void 0 : _errors$evaluateFor.message,
             invalid: !!((_errors$evaluateFor2 = errors.evaluateFor) !== null && _errors$evaluateFor2 !== void 0 && _errors$evaluateFor2.message),
             validationMessageHorizontalOverflow: true,
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Input, Object.assign({
+            children: (0,jsx_runtime.jsx)(src.Input, Object.assign({
               id: evaluateForId,
               width: 8
             }, register('evaluateFor', forValidationOptions)))
           })]
         })
-      }), _GrafanaConditionEval || (_GrafanaConditionEval = /*#__PURE__*/(0,jsx_runtime.jsx)(GrafanaConditionEvalWarning, {})), /*#__PURE__*/(0,jsx_runtime.jsx)(CollapseToggle/* CollapseToggle */.U, {
+      }), _GrafanaConditionEval || (_GrafanaConditionEval = (0,jsx_runtime.jsx)(GrafanaConditionEvalWarning, {})), (0,jsx_runtime.jsx)(CollapseToggle.U, {
         isCollapsed: !showErrorHandling,
         onToggle: collapsed => setShowErrorHandling(!collapsed),
         text: "Configure no data and error handling",
         className: styles.collapseToggle
-      }), showErrorHandling && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+      }), showErrorHandling && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [(0,jsx_runtime.jsx)(src.Field, {
           htmlFor: "no-data-state-input",
           label: "Alert state if no data or all values are null",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+          children: (0,jsx_runtime.jsx)(src.InputControl, {
             render: _ref => {
               let {
                 field: {
@@ -1134,7 +1087,7 @@ const GrafanaEvaluationBehavior = () => {
               } = _ref,
                   field = GrafanaEvaluationBehavior_objectWithoutPropertiesLoose(_ref.field, GrafanaEvaluationBehavior_excluded);
 
-              return /*#__PURE__*/(0,jsx_runtime.jsx)(GrafanaAlertStatePicker, Object.assign({}, field, {
+              return (0,jsx_runtime.jsx)(GrafanaAlertStatePicker, Object.assign({}, field, {
                 inputId: "no-data-state-input",
                 width: 42,
                 includeNoData: true,
@@ -1144,10 +1097,10 @@ const GrafanaEvaluationBehavior = () => {
             },
             name: "noDataState"
           })
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+        }), (0,jsx_runtime.jsx)(src.Field, {
           htmlFor: "exec-err-state-input",
           label: "Alert state if execution error or timeout",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+          children: (0,jsx_runtime.jsx)(src.InputControl, {
             render: _ref2 => {
               let {
                 field: {
@@ -1156,7 +1109,7 @@ const GrafanaEvaluationBehavior = () => {
               } = _ref2,
                   field = GrafanaEvaluationBehavior_objectWithoutPropertiesLoose(_ref2.field, GrafanaEvaluationBehavior_excluded2);
 
-              return /*#__PURE__*/(0,jsx_runtime.jsx)(GrafanaAlertStatePicker, Object.assign({}, field, {
+              return (0,jsx_runtime.jsx)(GrafanaAlertStatePicker, Object.assign({}, field, {
                 inputId: "exec-err-state-input",
                 width: 42,
                 includeNoData: false,
@@ -1167,7 +1120,7 @@ const GrafanaEvaluationBehavior = () => {
             name: "execErrState"
           })
         })]
-      }), GrafanaEvaluationBehavior_PreviewRule || (GrafanaEvaluationBehavior_PreviewRule = /*#__PURE__*/(0,jsx_runtime.jsx)(PreviewRule, {}))]
+      }), GrafanaEvaluationBehavior_PreviewRule || (GrafanaEvaluationBehavior_PreviewRule = (0,jsx_runtime.jsx)(PreviewRule, {}))]
     })
   );
 };
@@ -1186,9 +1139,8 @@ const GrafanaEvaluationBehavior_getStyles = theme => ({
     margin: ${theme.spacing(2, 0, 2, -1)};
   `
 });
-;// CONCATENATED MODULE: ./.yarn/cache/js-yaml-npm-4.1.0-3606f32312-c7830dfd45.zip/node_modules/js-yaml/dist/js-yaml.mjs
+;
 
-/*! js-yaml 4.1.0 https://github.com/nodeca/js-yaml @license MIT */
 function isNothing(subject) {
   return (typeof subject === 'undefined') || (subject === null);
 }
@@ -1255,7 +1207,6 @@ var common = {
 	extend: extend_1
 };
 
-// YAML error class. http://stackoverflow.com/questions/8458984
 
 
 function formatError(exception, compact) {
@@ -1278,7 +1229,6 @@ function formatError(exception, compact) {
 
 
 function YAMLException$1(reason, mark) {
-  // Super constructor
   Error.call(this);
 
   this.name = 'YAMLException';
@@ -1286,18 +1236,14 @@ function YAMLException$1(reason, mark) {
   this.mark = mark;
   this.message = formatError(this, false);
 
-  // Include stack trace in error object
   if (Error.captureStackTrace) {
-    // Chrome and NodeJS
     Error.captureStackTrace(this, this.constructor);
   } else {
-    // FF, IE 10+ and Safari 6+. Fallback for others
     this.stack = (new Error()).stack || '';
   }
 }
 
 
-// Inherit from Error
 YAMLException$1.prototype = Object.create(Error.prototype);
 YAMLException$1.prototype.constructor = YAMLException$1;
 
@@ -1309,7 +1255,6 @@ YAMLException$1.prototype.toString = function toString(compact) {
 
 var exception = YAMLException$1;
 
-// get snippet for a single line, respecting maxLength
 function getLine(buffer, lineStart, lineEnd, position, maxLineLength) {
   var head = '';
   var tail = '';
@@ -1327,7 +1272,7 @@ function getLine(buffer, lineStart, lineEnd, position, maxLineLength) {
 
   return {
     str: head + buffer.slice(lineStart, lineEnd).replace(/\t/g, '→') + tail,
-    pos: position - lineStart + head.length // relative position
+    pos: position - lineStart + head.length 
   };
 }
 
@@ -1447,8 +1392,7 @@ function Type$1(tag, options) {
     }
   });
 
-  // TODO: Add tag format check.
-  this.options       = options; // keep original options in case user wants to extend this type later
+  this.options       = options; 
   this.tag           = tag;
   this.kind          = options['kind']          || null;
   this.resolve       = options['resolve']       || function () { return true; };
@@ -1468,7 +1412,6 @@ function Type$1(tag, options) {
 
 var type = Type$1;
 
-/*eslint-disable max-len*/
 
 
 
@@ -1496,7 +1439,7 @@ function compileList(schema, name) {
 }
 
 
-function compileMap(/* lists... */) {
+function compileMap() {
   var result = {
         scalar: {},
         sequence: {},
@@ -1536,15 +1479,12 @@ Schema$1.prototype.extend = function extend(definition) {
   var explicit = [];
 
   if (definition instanceof type) {
-    // Schema.extend(type)
     explicit.push(definition);
 
   } else if (Array.isArray(definition)) {
-    // Schema.extend([ type1, type2, ... ])
     explicit = explicit.concat(definition);
 
   } else if (definition && (Array.isArray(definition.implicit) || Array.isArray(definition.explicit))) {
-    // Schema.extend({ explicit: [ type1, type2, ... ], implicit: [ type1, type2, ... ] })
     if (definition.implicit) implicit = implicit.concat(definition.implicit);
     if (definition.explicit) explicit = explicit.concat(definition.explicit);
 
@@ -1676,17 +1616,17 @@ var bool = new type('tag:yaml.org,2002:bool', {
 });
 
 function isHexCode(c) {
-  return ((0x30/* 0 */ <= c) && (c <= 0x39/* 9 */)) ||
-         ((0x41/* A */ <= c) && (c <= 0x46/* F */)) ||
-         ((0x61/* a */ <= c) && (c <= 0x66/* f */));
+  return ((0x30 <= c) && (c <= 0x39)) ||
+         ((0x41 <= c) && (c <= 0x46)) ||
+         ((0x61 <= c) && (c <= 0x66));
 }
 
 function isOctCode(c) {
-  return ((0x30/* 0 */ <= c) && (c <= 0x37/* 7 */));
+  return ((0x30 <= c) && (c <= 0x37));
 }
 
 function isDecCode(c) {
-  return ((0x30/* 0 */ <= c) && (c <= 0x39/* 9 */));
+  return ((0x30 <= c) && (c <= 0x39));
 }
 
 function resolveYamlInteger(data) {
@@ -1701,20 +1641,16 @@ function resolveYamlInteger(data) {
 
   ch = data[index];
 
-  // sign
   if (ch === '-' || ch === '+') {
     ch = data[++index];
   }
 
   if (ch === '0') {
-    // 0
     if (index + 1 === max) return true;
     ch = data[++index];
 
-    // base 2, base 8, base 16
 
     if (ch === 'b') {
-      // base 2
       index++;
 
       for (; index < max; index++) {
@@ -1728,7 +1664,6 @@ function resolveYamlInteger(data) {
 
 
     if (ch === 'x') {
-      // base 16
       index++;
 
       for (; index < max; index++) {
@@ -1742,7 +1677,6 @@ function resolveYamlInteger(data) {
 
 
     if (ch === 'o') {
-      // base 8
       index++;
 
       for (; index < max; index++) {
@@ -1755,9 +1689,7 @@ function resolveYamlInteger(data) {
     }
   }
 
-  // base 10 (except 0)
 
-  // value should not start with `_`;
   if (ch === '_') return false;
 
   for (; index < max; index++) {
@@ -1769,7 +1701,6 @@ function resolveYamlInteger(data) {
     hasDigits = true;
   }
 
-  // Should have digits and should not end with `_`
   if (!hasDigits || ch === '_') return false;
 
   return true;
@@ -1815,7 +1746,6 @@ var js_yaml_int = new type('tag:yaml.org,2002:int', {
     binary:      function (obj) { return obj >= 0 ? '0b' + obj.toString(2) : '-0b' + obj.toString(2).slice(1); },
     octal:       function (obj) { return obj >= 0 ? '0o'  + obj.toString(8) : '-0o'  + obj.toString(8).slice(1); },
     decimal:     function (obj) { return obj.toString(10); },
-    /* eslint-disable max-len */
     hexadecimal: function (obj) { return obj >= 0 ? '0x' + obj.toString(16).toUpperCase() :  '-0x' + obj.toString(16).toUpperCase().slice(1); }
   },
   defaultStyle: 'decimal',
@@ -1828,22 +1758,15 @@ var js_yaml_int = new type('tag:yaml.org,2002:int', {
 });
 
 var YAML_FLOAT_PATTERN = new RegExp(
-  // 2.5e4, 2.5 and integers
   '^(?:[-+]?(?:[0-9][0-9_]*)(?:\\.[0-9_]*)?(?:[eE][-+]?[0-9]+)?' +
-  // .2e4, .2
-  // special case, seems not from spec
   '|\\.[0-9_]+(?:[eE][-+]?[0-9]+)?' +
-  // .inf
   '|[-+]?\\.(?:inf|Inf|INF)' +
-  // .nan
   '|\\.(?:nan|NaN|NAN))$');
 
 function resolveYamlFloat(data) {
   if (data === null) return false;
 
   if (!YAML_FLOAT_PATTERN.test(data) ||
-      // Quick hack to not allow integers end with `_`
-      // Probably should update regexp & check speed
       data[data.length - 1] === '_') {
     return false;
   }
@@ -1900,8 +1823,6 @@ function representYamlFloat(object, style) {
 
   res = object.toString(10);
 
-  // JS stringifier can build scientific format without dots: 5e-100,
-  // while YAML requres dot: 5.e-100. Fix it with simple hack
 
   return SCIENTIFIC_WITHOUT_DOT.test(res) ? res.replace('e', '.e') : res;
 }
@@ -1932,21 +1853,21 @@ var json = failsafe.extend({
 var core = json;
 
 var YAML_DATE_REGEXP = new RegExp(
-  '^([0-9][0-9][0-9][0-9])'          + // [1] year
-  '-([0-9][0-9])'                    + // [2] month
-  '-([0-9][0-9])$');                   // [3] day
+  '^([0-9][0-9][0-9][0-9])'          + 
+  '-([0-9][0-9])'                    + 
+  '-([0-9][0-9])$');                   
 
 var YAML_TIMESTAMP_REGEXP = new RegExp(
-  '^([0-9][0-9][0-9][0-9])'          + // [1] year
-  '-([0-9][0-9]?)'                   + // [2] month
-  '-([0-9][0-9]?)'                   + // [3] day
-  '(?:[Tt]|[ \\t]+)'                 + // ...
-  '([0-9][0-9]?)'                    + // [4] hour
-  ':([0-9][0-9])'                    + // [5] minute
-  ':([0-9][0-9])'                    + // [6] second
-  '(?:\\.([0-9]*))?'                 + // [7] fraction
-  '(?:[ \\t]*(Z|([-+])([0-9][0-9]?)' + // [8] tz [9] tz_sign [10] tz_hour
-  '(?::([0-9][0-9]))?))?$');           // [11] tz_minute
+  '^([0-9][0-9][0-9][0-9])'          + 
+  '-([0-9][0-9]?)'                   + 
+  '-([0-9][0-9]?)'                   + 
+  '(?:[Tt]|[ \\t]+)'                 + 
+  '([0-9][0-9]?)'                    + 
+  ':([0-9][0-9])'                    + 
+  ':([0-9][0-9])'                    + 
+  '(?:\\.([0-9]*))?'                 + 
+  '(?:[ \\t]*(Z|([-+])([0-9][0-9]?)' + 
+  '(?::([0-9][0-9]))?))?$');           
 
 function resolveYamlTimestamp(data) {
   if (data === null) return false;
@@ -1964,17 +1885,15 @@ function constructYamlTimestamp(data) {
 
   if (match === null) throw new Error('Date resolve error');
 
-  // match: [1] year [2] month [3] day
 
   year = +(match[1]);
-  month = +(match[2]) - 1; // JS month starts with 0
+  month = +(match[2]) - 1; 
   day = +(match[3]);
 
-  if (!match[4]) { // no hour
+  if (!match[4]) { 
     return new Date(Date.UTC(year, month, day));
   }
 
-  // match: [4] hour [5] minute [6] second [7] fraction
 
   hour = +(match[4]);
   minute = +(match[5]);
@@ -1982,18 +1901,17 @@ function constructYamlTimestamp(data) {
 
   if (match[7]) {
     fraction = match[7].slice(0, 3);
-    while (fraction.length < 3) { // milli-seconds
+    while (fraction.length < 3) { 
       fraction += '0';
     }
     fraction = +fraction;
   }
 
-  // match: [8] tz [9] tz_sign [10] tz_hour [11] tz_minute
 
   if (match[9]) {
     tz_hour = +(match[10]);
     tz_minute = +(match[11] || 0);
-    delta = (tz_hour * 60 + tz_minute) * 60000; // delta in mili-seconds
+    delta = (tz_hour * 60 + tz_minute) * 60000; 
     if (match[9] === '-') delta = -delta;
   }
 
@@ -2004,7 +1922,7 @@ function constructYamlTimestamp(data) {
   return date;
 }
 
-function representYamlTimestamp(object /*, style*/) {
+function representYamlTimestamp(object ) {
   return object.toISOString();
 }
 
@@ -2025,13 +1943,11 @@ var merge = new type('tag:yaml.org,2002:merge', {
   resolve: resolveYamlMerge
 });
 
-/*eslint-disable no-bitwise*/
 
 
 
 
 
-// [ 64, 65, 66 ] -> [ padding, CR, LF ]
 var BASE64_MAP = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=\n\r';
 
 
@@ -2040,32 +1956,27 @@ function resolveYamlBinary(data) {
 
   var code, idx, bitlen = 0, max = data.length, map = BASE64_MAP;
 
-  // Convert one by one.
   for (idx = 0; idx < max; idx++) {
     code = map.indexOf(data.charAt(idx));
 
-    // Skip CR/LF
     if (code > 64) continue;
 
-    // Fail on illegal characters
     if (code < 0) return false;
 
     bitlen += 6;
   }
 
-  // If there are any bits left, source was corrupted
   return (bitlen % 8) === 0;
 }
 
 function constructYamlBinary(data) {
   var idx, tailbits,
-      input = data.replace(/[\r\n=]/g, ''), // remove CR/LF & padding to simplify scan
+      input = data.replace(/[\r\n=]/g, ''), 
       max = input.length,
       map = BASE64_MAP,
       bits = 0,
       result = [];
 
-  // Collect by 6*4 bits (3 bytes)
 
   for (idx = 0; idx < max; idx++) {
     if ((idx % 4 === 0) && idx) {
@@ -2077,7 +1988,6 @@ function constructYamlBinary(data) {
     bits = (bits << 6) | map.indexOf(input.charAt(idx));
   }
 
-  // Dump tail
 
   tailbits = (max % 4) * 6;
 
@@ -2095,12 +2005,11 @@ function constructYamlBinary(data) {
   return new Uint8Array(result);
 }
 
-function representYamlBinary(object /*, style*/) {
+function representYamlBinary(object ) {
   var result = '', bits = 0, idx, tail,
       max = object.length,
       map = BASE64_MAP;
 
-  // Convert every three bytes to 4 ASCII characters.
 
   for (idx = 0; idx < max; idx++) {
     if ((idx % 3 === 0) && idx) {
@@ -2113,7 +2022,6 @@ function representYamlBinary(object /*, style*/) {
     bits = (bits << 8) + object[idx];
   }
 
-  // Dump tail
 
   tail = max % 3;
 
@@ -2279,7 +2187,6 @@ var _default = core.extend({
   ]
 });
 
-/*eslint-disable max-len,no-use-before-define*/
 
 
 
@@ -2311,39 +2218,38 @@ var PATTERN_TAG_URI               = /^(?:!|[^,\[\]\{\}])(?:%[0-9a-f]{2}|[0-9a-z\
 function _class(obj) { return Object.prototype.toString.call(obj); }
 
 function is_EOL(c) {
-  return (c === 0x0A/* LF */) || (c === 0x0D/* CR */);
+  return (c === 0x0A) || (c === 0x0D);
 }
 
 function is_WHITE_SPACE(c) {
-  return (c === 0x09/* Tab */) || (c === 0x20/* Space */);
+  return (c === 0x09) || (c === 0x20);
 }
 
 function is_WS_OR_EOL(c) {
-  return (c === 0x09/* Tab */) ||
-         (c === 0x20/* Space */) ||
-         (c === 0x0A/* LF */) ||
-         (c === 0x0D/* CR */);
+  return (c === 0x09) ||
+         (c === 0x20) ||
+         (c === 0x0A) ||
+         (c === 0x0D);
 }
 
 function is_FLOW_INDICATOR(c) {
-  return c === 0x2C/* , */ ||
-         c === 0x5B/* [ */ ||
-         c === 0x5D/* ] */ ||
-         c === 0x7B/* { */ ||
-         c === 0x7D/* } */;
+  return c === 0x2C ||
+         c === 0x5B ||
+         c === 0x5D ||
+         c === 0x7B ||
+         c === 0x7D;
 }
 
 function fromHexCode(c) {
   var lc;
 
-  if ((0x30/* 0 */ <= c) && (c <= 0x39/* 9 */)) {
+  if ((0x30 <= c) && (c <= 0x39)) {
     return c - 0x30;
   }
 
-  /*eslint-disable no-bitwise*/
   lc = c | 0x20;
 
-  if ((0x61/* a */ <= lc) && (lc <= 0x66/* f */)) {
+  if ((0x61 <= lc) && (lc <= 0x66)) {
     return lc - 0x61 + 10;
   }
 
@@ -2351,14 +2257,14 @@ function fromHexCode(c) {
 }
 
 function escapedHexLen(c) {
-  if (c === 0x78/* x */) { return 2; }
-  if (c === 0x75/* u */) { return 4; }
-  if (c === 0x55/* U */) { return 8; }
+  if (c === 0x78) { return 2; }
+  if (c === 0x75) { return 4; }
+  if (c === 0x55) { return 8; }
   return 0;
 }
 
 function fromDecimalCode(c) {
-  if ((0x30/* 0 */ <= c) && (c <= 0x39/* 9 */)) {
+  if ((0x30 <= c) && (c <= 0x39)) {
     return c - 0x30;
   }
 
@@ -2366,40 +2272,37 @@ function fromDecimalCode(c) {
 }
 
 function simpleEscapeSequence(c) {
-  /* eslint-disable indent */
-  return (c === 0x30/* 0 */) ? '\x00' :
-        (c === 0x61/* a */) ? '\x07' :
-        (c === 0x62/* b */) ? '\x08' :
-        (c === 0x74/* t */) ? '\x09' :
-        (c === 0x09/* Tab */) ? '\x09' :
-        (c === 0x6E/* n */) ? '\x0A' :
-        (c === 0x76/* v */) ? '\x0B' :
-        (c === 0x66/* f */) ? '\x0C' :
-        (c === 0x72/* r */) ? '\x0D' :
-        (c === 0x65/* e */) ? '\x1B' :
-        (c === 0x20/* Space */) ? ' ' :
-        (c === 0x22/* " */) ? '\x22' :
-        (c === 0x2F/* / */) ? '/' :
-        (c === 0x5C/* \ */) ? '\x5C' :
-        (c === 0x4E/* N */) ? '\x85' :
-        (c === 0x5F/* _ */) ? '\xA0' :
-        (c === 0x4C/* L */) ? '\u2028' :
-        (c === 0x50/* P */) ? '\u2029' : '';
+  return (c === 0x30) ? '\x00' :
+        (c === 0x61) ? '\x07' :
+        (c === 0x62) ? '\x08' :
+        (c === 0x74) ? '\x09' :
+        (c === 0x09) ? '\x09' :
+        (c === 0x6E) ? '\x0A' :
+        (c === 0x76) ? '\x0B' :
+        (c === 0x66) ? '\x0C' :
+        (c === 0x72) ? '\x0D' :
+        (c === 0x65) ? '\x1B' :
+        (c === 0x20) ? ' ' :
+        (c === 0x22) ? '\x22' :
+        (c === 0x2F) ? '/' :
+        (c === 0x5C) ? '\x5C' :
+        (c === 0x4E) ? '\x85' :
+        (c === 0x5F) ? '\xA0' :
+        (c === 0x4C) ? '\u2028' :
+        (c === 0x50) ? '\u2029' : '';
 }
 
 function charFromCodepoint(c) {
   if (c <= 0xFFFF) {
     return String.fromCharCode(c);
   }
-  // Encode UTF-16 surrogate pair
-  // https://en.wikipedia.org/wiki/UTF-16#Code_points_U.2B010000_to_U.2B10FFFF
   return String.fromCharCode(
     ((c - 0x010000) >> 10) + 0xD800,
     ((c - 0x010000) & 0x03FF) + 0xDC00
   );
 }
 
-var simpleEscapeCheck = new Array(256); // integer, for fast access
+var simpleEscapeCheck = new Array(256); 
 var simpleEscapeMap = new Array(256);
 for (var i = 0; i < 256; i++) {
   simpleEscapeCheck[i] = simpleEscapeSequence(i) ? 1 : 0;
@@ -2413,8 +2316,6 @@ function State$1(input, options) {
   this.filename  = options['filename']  || null;
   this.schema    = options['schema']    || _default;
   this.onWarning = options['onWarning'] || null;
-  // (Hidden) Remove? makes the loader to expect YAML 1.1 documents
-  // if such documents have no explicit %YAML directive
   this.legacy    = options['legacy']    || false;
 
   this.json      = options['json']      || false;
@@ -2429,21 +2330,10 @@ function State$1(input, options) {
   this.lineStart  = 0;
   this.lineIndent = 0;
 
-  // position of first leading tab in the current line,
-  // used to make sure there are no tabs in the indentation
   this.firstTabInLine = -1;
 
   this.documents = [];
 
-  /*
-  this.version;
-  this.checkLineBreaks;
-  this.tagMap;
-  this.anchorMap;
-  this.tag;
-  this.anchor;
-  this.kind;
-  this.result;*/
 
 }
 
@@ -2451,7 +2341,7 @@ function State$1(input, options) {
 function generateError(state, message) {
   var mark = {
     name:     state.filename,
-    buffer:   state.input.slice(0, -1), // omit trailing \0
+    buffer:   state.input.slice(0, -1), 
     position: state.position,
     line:     state.line,
     column:   state.position - state.lineStart
@@ -2588,9 +2478,6 @@ function storeMappingPair(state, _result, overridableKeys, keyTag, keyNode, valu
 
   var index, quantity;
 
-  // The output is a plain object here, so keys can only be strings.
-  // We need to convert keyNode to a string, but doing so can hang the process
-  // (deeply nested arrays that explode exponentially using aliases).
   if (Array.isArray(keyNode)) {
     keyNode = Array.prototype.slice.call(keyNode);
 
@@ -2605,9 +2492,6 @@ function storeMappingPair(state, _result, overridableKeys, keyTag, keyNode, valu
     }
   }
 
-  // Avoid code execution in load() via toString property
-  // (still use its own toString for arrays, timestamps,
-  // and whatever user schema extensions happen to have @@toStringTag)
   if (typeof keyNode === 'object' && _class(keyNode) === '[object Object]') {
     keyNode = '[object Object]';
   }
@@ -2637,7 +2521,6 @@ function storeMappingPair(state, _result, overridableKeys, keyTag, keyNode, valu
       throwError(state, 'duplicated mapping key');
     }
 
-    // used for this specific key only because Object.defineProperty is slow
     if (keyNode === '__proto__') {
       Object.defineProperty(_result, keyNode, {
         configurable: true,
@@ -2659,11 +2542,11 @@ function readLineBreak(state) {
 
   ch = state.input.charCodeAt(state.position);
 
-  if (ch === 0x0A/* LF */) {
+  if (ch === 0x0A) {
     state.position++;
-  } else if (ch === 0x0D/* CR */) {
+  } else if (ch === 0x0D) {
     state.position++;
-    if (state.input.charCodeAt(state.position) === 0x0A/* LF */) {
+    if (state.input.charCodeAt(state.position) === 0x0A) {
       state.position++;
     }
   } else {
@@ -2681,16 +2564,16 @@ function skipSeparationSpace(state, allowComments, checkIndent) {
 
   while (ch !== 0) {
     while (is_WHITE_SPACE(ch)) {
-      if (ch === 0x09/* Tab */ && state.firstTabInLine === -1) {
+      if (ch === 0x09 && state.firstTabInLine === -1) {
         state.firstTabInLine = state.position;
       }
       ch = state.input.charCodeAt(++state.position);
     }
 
-    if (allowComments && ch === 0x23/* # */) {
+    if (allowComments && ch === 0x23) {
       do {
         ch = state.input.charCodeAt(++state.position);
-      } while (ch !== 0x0A/* LF */ && ch !== 0x0D/* CR */ && ch !== 0);
+      } while (ch !== 0x0A && ch !== 0x0D && ch !== 0);
     }
 
     if (is_EOL(ch)) {
@@ -2700,7 +2583,7 @@ function skipSeparationSpace(state, allowComments, checkIndent) {
       lineBreaks++;
       state.lineIndent = 0;
 
-      while (ch === 0x20/* Space */) {
+      while (ch === 0x20) {
         state.lineIndent++;
         ch = state.input.charCodeAt(++state.position);
       }
@@ -2722,9 +2605,7 @@ function testDocumentSeparator(state) {
 
   ch = state.input.charCodeAt(_position);
 
-  // Condition state.position === state.lineStart is tested
-  // in parent on each call, for efficiency. No needs to test here again.
-  if ((ch === 0x2D/* - */ || ch === 0x2E/* . */) &&
+  if ((ch === 0x2D || ch === 0x2E) &&
       ch === state.input.charCodeAt(_position + 1) &&
       ch === state.input.charCodeAt(_position + 2)) {
 
@@ -2766,21 +2647,21 @@ function readPlainScalar(state, nodeIndent, withinFlowCollection) {
 
   if (is_WS_OR_EOL(ch)      ||
       is_FLOW_INDICATOR(ch) ||
-      ch === 0x23/* # */    ||
-      ch === 0x26/* & */    ||
-      ch === 0x2A/* * */    ||
-      ch === 0x21/* ! */    ||
-      ch === 0x7C/* | */    ||
-      ch === 0x3E/* > */    ||
-      ch === 0x27/* ' */    ||
-      ch === 0x22/* " */    ||
-      ch === 0x25/* % */    ||
-      ch === 0x40/* @ */    ||
-      ch === 0x60/* ` */) {
+      ch === 0x23    ||
+      ch === 0x26    ||
+      ch === 0x2A    ||
+      ch === 0x21    ||
+      ch === 0x7C    ||
+      ch === 0x3E    ||
+      ch === 0x27    ||
+      ch === 0x22    ||
+      ch === 0x25    ||
+      ch === 0x40    ||
+      ch === 0x60) {
     return false;
   }
 
-  if (ch === 0x3F/* ? */ || ch === 0x2D/* - */) {
+  if (ch === 0x3F || ch === 0x2D) {
     following = state.input.charCodeAt(state.position + 1);
 
     if (is_WS_OR_EOL(following) ||
@@ -2795,7 +2676,7 @@ function readPlainScalar(state, nodeIndent, withinFlowCollection) {
   hasPendingContent = false;
 
   while (ch !== 0) {
-    if (ch === 0x3A/* : */) {
+    if (ch === 0x3A) {
       following = state.input.charCodeAt(state.position + 1);
 
       if (is_WS_OR_EOL(following) ||
@@ -2803,7 +2684,7 @@ function readPlainScalar(state, nodeIndent, withinFlowCollection) {
         break;
       }
 
-    } else if (ch === 0x23/* # */) {
+    } else if (ch === 0x23) {
       preceding = state.input.charCodeAt(state.position - 1);
 
       if (is_WS_OR_EOL(preceding)) {
@@ -2864,7 +2745,7 @@ function readSingleQuotedScalar(state, nodeIndent) {
 
   ch = state.input.charCodeAt(state.position);
 
-  if (ch !== 0x27/* ' */) {
+  if (ch !== 0x27) {
     return false;
   }
 
@@ -2874,11 +2755,11 @@ function readSingleQuotedScalar(state, nodeIndent) {
   captureStart = captureEnd = state.position;
 
   while ((ch = state.input.charCodeAt(state.position)) !== 0) {
-    if (ch === 0x27/* ' */) {
+    if (ch === 0x27) {
       captureSegment(state, captureStart, state.position, true);
       ch = state.input.charCodeAt(++state.position);
 
-      if (ch === 0x27/* ' */) {
+      if (ch === 0x27) {
         captureStart = state.position;
         state.position++;
         captureEnd = state.position;
@@ -2913,7 +2794,7 @@ function readDoubleQuotedScalar(state, nodeIndent) {
 
   ch = state.input.charCodeAt(state.position);
 
-  if (ch !== 0x22/* " */) {
+  if (ch !== 0x22) {
     return false;
   }
 
@@ -2923,19 +2804,18 @@ function readDoubleQuotedScalar(state, nodeIndent) {
   captureStart = captureEnd = state.position;
 
   while ((ch = state.input.charCodeAt(state.position)) !== 0) {
-    if (ch === 0x22/* " */) {
+    if (ch === 0x22) {
       captureSegment(state, captureStart, state.position, true);
       state.position++;
       return true;
 
-    } else if (ch === 0x5C/* \ */) {
+    } else if (ch === 0x5C) {
       captureSegment(state, captureStart, state.position, true);
       ch = state.input.charCodeAt(++state.position);
 
       if (is_EOL(ch)) {
         skipSeparationSpace(state, false, nodeIndent);
 
-        // TODO: rework to inline fn with no type cast?
       } else if (ch < 256 && simpleEscapeCheck[ch]) {
         state.result += simpleEscapeMap[ch];
         state.position++;
@@ -3003,12 +2883,12 @@ function readFlowCollection(state, nodeIndent) {
 
   ch = state.input.charCodeAt(state.position);
 
-  if (ch === 0x5B/* [ */) {
-    terminator = 0x5D;/* ] */
+  if (ch === 0x5B) {
+    terminator = 0x5D;
     isMapping = false;
     _result = [];
-  } else if (ch === 0x7B/* { */) {
-    terminator = 0x7D;/* } */
+  } else if (ch === 0x7B) {
+    terminator = 0x7D;
     isMapping = true;
     _result = {};
   } else {
@@ -3035,15 +2915,14 @@ function readFlowCollection(state, nodeIndent) {
       return true;
     } else if (!readNext) {
       throwError(state, 'missed comma between flow collection entries');
-    } else if (ch === 0x2C/* , */) {
-      // "flow collection entries can never be completely empty", as per YAML 1.2, section 7.4
+    } else if (ch === 0x2C) {
       throwError(state, "expected the node content, but found ','");
     }
 
     keyTag = keyNode = valueNode = null;
     isPair = isExplicitPair = false;
 
-    if (ch === 0x3F/* ? */) {
+    if (ch === 0x3F) {
       following = state.input.charCodeAt(state.position + 1);
 
       if (is_WS_OR_EOL(following)) {
@@ -3053,7 +2932,7 @@ function readFlowCollection(state, nodeIndent) {
       }
     }
 
-    _line = state.line; // Save the current line.
+    _line = state.line; 
     _lineStart = state.lineStart;
     _pos = state.position;
     composeNode(state, nodeIndent, CONTEXT_FLOW_IN, false, true);
@@ -3063,7 +2942,7 @@ function readFlowCollection(state, nodeIndent) {
 
     ch = state.input.charCodeAt(state.position);
 
-    if ((isExplicitPair || state.line === _line) && ch === 0x3A/* : */) {
+    if ((isExplicitPair || state.line === _line) && ch === 0x3A) {
       isPair = true;
       ch = state.input.charCodeAt(++state.position);
       skipSeparationSpace(state, true, nodeIndent);
@@ -3083,7 +2962,7 @@ function readFlowCollection(state, nodeIndent) {
 
     ch = state.input.charCodeAt(state.position);
 
-    if (ch === 0x2C/* , */) {
+    if (ch === 0x2C) {
       readNext = true;
       ch = state.input.charCodeAt(++state.position);
     } else {
@@ -3108,9 +2987,9 @@ function readBlockScalar(state, nodeIndent) {
 
   ch = state.input.charCodeAt(state.position);
 
-  if (ch === 0x7C/* | */) {
+  if (ch === 0x7C) {
     folding = false;
-  } else if (ch === 0x3E/* > */) {
+  } else if (ch === 0x3E) {
     folding = true;
   } else {
     return false;
@@ -3122,9 +3001,9 @@ function readBlockScalar(state, nodeIndent) {
   while (ch !== 0) {
     ch = state.input.charCodeAt(++state.position);
 
-    if (ch === 0x2B/* + */ || ch === 0x2D/* - */) {
+    if (ch === 0x2B || ch === 0x2D) {
       if (CHOMPING_CLIP === chomping) {
-        chomping = (ch === 0x2B/* + */) ? CHOMPING_KEEP : CHOMPING_STRIP;
+        chomping = (ch === 0x2B) ? CHOMPING_KEEP : CHOMPING_STRIP;
       } else {
         throwError(state, 'repeat of a chomping mode identifier');
       }
@@ -3148,7 +3027,7 @@ function readBlockScalar(state, nodeIndent) {
     do { ch = state.input.charCodeAt(++state.position); }
     while (is_WHITE_SPACE(ch));
 
-    if (ch === 0x23/* # */) {
+    if (ch === 0x23) {
       do { ch = state.input.charCodeAt(++state.position); }
       while (!is_EOL(ch) && (ch !== 0));
     }
@@ -3161,7 +3040,7 @@ function readBlockScalar(state, nodeIndent) {
     ch = state.input.charCodeAt(state.position);
 
     while ((!detectedIndent || state.lineIndent < textIndent) &&
-           (ch === 0x20/* Space */)) {
+           (ch === 0x20)) {
       state.lineIndent++;
       ch = state.input.charCodeAt(++state.position);
     }
@@ -3175,50 +3054,39 @@ function readBlockScalar(state, nodeIndent) {
       continue;
     }
 
-    // End of the scalar.
     if (state.lineIndent < textIndent) {
 
-      // Perform the chomping.
       if (chomping === CHOMPING_KEEP) {
         state.result += common.repeat('\n', didReadContent ? 1 + emptyLines : emptyLines);
       } else if (chomping === CHOMPING_CLIP) {
-        if (didReadContent) { // i.e. only if the scalar is not empty.
+        if (didReadContent) { 
           state.result += '\n';
         }
       }
 
-      // Break this `while` cycle and go to the funciton's epilogue.
       break;
     }
 
-    // Folded style: use fancy rules to handle line breaks.
     if (folding) {
 
-      // Lines starting with white space characters (more-indented lines) are not folded.
       if (is_WHITE_SPACE(ch)) {
         atMoreIndented = true;
-        // except for the first content line (cf. Example 8.1)
         state.result += common.repeat('\n', didReadContent ? 1 + emptyLines : emptyLines);
 
-      // End of more-indented block.
       } else if (atMoreIndented) {
         atMoreIndented = false;
         state.result += common.repeat('\n', emptyLines + 1);
 
-      // Just one line break - perceive as the same line.
       } else if (emptyLines === 0) {
-        if (didReadContent) { // i.e. only if we have already read some scalar content.
+        if (didReadContent) { 
           state.result += ' ';
         }
 
-      // Several line breaks - perceive as different lines.
       } else {
         state.result += common.repeat('\n', emptyLines);
       }
 
-    // Literal style: just add exact number of line breaks between content lines.
     } else {
-      // Keep all line breaks except the header line break.
       state.result += common.repeat('\n', didReadContent ? 1 + emptyLines : emptyLines);
     }
 
@@ -3246,8 +3114,6 @@ function readBlockSequence(state, nodeIndent) {
       detected  = false,
       ch;
 
-  // there is a leading tab before this token, so it can't be a block sequence/mapping;
-  // it can still be flow sequence/mapping or a scalar
   if (state.firstTabInLine !== -1) return false;
 
   if (state.anchor !== null) {
@@ -3262,7 +3128,7 @@ function readBlockSequence(state, nodeIndent) {
       throwError(state, 'tab characters must not be used in indentation');
     }
 
-    if (ch !== 0x2D/* - */) {
+    if (ch !== 0x2D) {
       break;
     }
 
@@ -3325,8 +3191,6 @@ function readBlockMapping(state, nodeIndent, flowIndent) {
       detected      = false,
       ch;
 
-  // there is a leading tab before this token, so it can't be a block sequence/mapping;
-  // it can still be flow sequence/mapping or a scalar
   if (state.firstTabInLine !== -1) return false;
 
   if (state.anchor !== null) {
@@ -3342,15 +3206,11 @@ function readBlockMapping(state, nodeIndent, flowIndent) {
     }
 
     following = state.input.charCodeAt(state.position + 1);
-    _line = state.line; // Save the current line.
+    _line = state.line; 
 
-    //
-    // Explicit notation case. There are two separate blocks:
-    // first for the key (denoted by "?") and second for the value (denoted by ":")
-    //
-    if ((ch === 0x3F/* ? */ || ch === 0x3A/* : */) && is_WS_OR_EOL(following)) {
+    if ((ch === 0x3F || ch === 0x3A) && is_WS_OR_EOL(following)) {
 
-      if (ch === 0x3F/* ? */) {
+      if (ch === 0x3F) {
         if (atExplicitKey) {
           storeMappingPair(state, _result, overridableKeys, keyTag, keyNode, null, _keyLine, _keyLineStart, _keyPos);
           keyTag = keyNode = valueNode = null;
@@ -3361,7 +3221,6 @@ function readBlockMapping(state, nodeIndent, flowIndent) {
         allowCompact = true;
 
       } else if (atExplicitKey) {
-        // i.e. 0x3A/* : */ === character after the explicit key.
         atExplicitKey = false;
         allowCompact = true;
 
@@ -3372,17 +3231,12 @@ function readBlockMapping(state, nodeIndent, flowIndent) {
       state.position += 1;
       ch = following;
 
-    //
-    // Implicit notation case. Flow-style node as the key first, then ":", and the value.
-    //
     } else {
       _keyLine = state.line;
       _keyLineStart = state.lineStart;
       _keyPos = state.position;
 
       if (!composeNode(state, flowIndent, CONTEXT_FLOW_OUT, false, true)) {
-        // Neither implicit nor explicit notation.
-        // Reading is done. Go to the epilogue.
         break;
       }
 
@@ -3393,7 +3247,7 @@ function readBlockMapping(state, nodeIndent, flowIndent) {
           ch = state.input.charCodeAt(++state.position);
         }
 
-        if (ch === 0x3A/* : */) {
+        if (ch === 0x3A) {
           ch = state.input.charCodeAt(++state.position);
 
           if (!is_WS_OR_EOL(ch)) {
@@ -3417,7 +3271,7 @@ function readBlockMapping(state, nodeIndent, flowIndent) {
         } else {
           state.tag = _tag;
           state.anchor = _anchor;
-          return true; // Keep the result of `composeNode`.
+          return true; 
         }
 
       } else if (detected) {
@@ -3426,13 +3280,10 @@ function readBlockMapping(state, nodeIndent, flowIndent) {
       } else {
         state.tag = _tag;
         state.anchor = _anchor;
-        return true; // Keep the result of `composeNode`.
+        return true; 
       }
     }
 
-    //
-    // Common reading code for both explicit and implicit notations.
-    //
     if (state.line === _line || state.lineIndent > nodeIndent) {
       if (atExplicitKey) {
         _keyLine = state.line;
@@ -3464,16 +3315,11 @@ function readBlockMapping(state, nodeIndent, flowIndent) {
     }
   }
 
-  //
-  // Epilogue.
-  //
 
-  // Special case: last mapping's node contains only the key in explicit notation.
   if (atExplicitKey) {
     storeMappingPair(state, _result, overridableKeys, keyTag, keyNode, null, _keyLine, _keyLineStart, _keyPos);
   }
 
-  // Expose the resulting mapping.
   if (detected) {
     state.tag = _tag;
     state.anchor = _anchor;
@@ -3494,7 +3340,7 @@ function readTagProperty(state) {
 
   ch = state.input.charCodeAt(state.position);
 
-  if (ch !== 0x21/* ! */) return false;
+  if (ch !== 0x21) return false;
 
   if (state.tag !== null) {
     throwError(state, 'duplication of a tag property');
@@ -3502,11 +3348,11 @@ function readTagProperty(state) {
 
   ch = state.input.charCodeAt(++state.position);
 
-  if (ch === 0x3C/* < */) {
+  if (ch === 0x3C) {
     isVerbatim = true;
     ch = state.input.charCodeAt(++state.position);
 
-  } else if (ch === 0x21/* ! */) {
+  } else if (ch === 0x21) {
     isNamed = true;
     tagHandle = '!!';
     ch = state.input.charCodeAt(++state.position);
@@ -3519,7 +3365,7 @@ function readTagProperty(state) {
 
   if (isVerbatim) {
     do { ch = state.input.charCodeAt(++state.position); }
-    while (ch !== 0 && ch !== 0x3E/* > */);
+    while (ch !== 0 && ch !== 0x3E);
 
     if (state.position < state.length) {
       tagName = state.input.slice(_position, state.position);
@@ -3530,7 +3376,7 @@ function readTagProperty(state) {
   } else {
     while (ch !== 0 && !is_WS_OR_EOL(ch)) {
 
-      if (ch === 0x21/* ! */) {
+      if (ch === 0x21) {
         if (!isNamed) {
           tagHandle = state.input.slice(_position - 1, state.position + 1);
 
@@ -3590,7 +3436,7 @@ function readAnchorProperty(state) {
 
   ch = state.input.charCodeAt(state.position);
 
-  if (ch !== 0x26/* & */) return false;
+  if (ch !== 0x26) return false;
 
   if (state.anchor !== null) {
     throwError(state, 'duplication of an anchor property');
@@ -3617,7 +3463,7 @@ function readAlias(state) {
 
   ch = state.input.charCodeAt(state.position);
 
-  if (ch !== 0x2A/* * */) return false;
+  if (ch !== 0x2A) return false;
 
   ch = state.input.charCodeAt(++state.position);
   _position = state.position;
@@ -3645,7 +3491,7 @@ function composeNode(state, parentIndent, nodeContext, allowToSeek, allowCompact
   var allowBlockStyles,
       allowBlockScalars,
       allowBlockCollections,
-      indentStatus = 1, // 1: this>parent, 0: this=parent, -1: this<parent
+      indentStatus = 1, 
       atNewLine  = false,
       hasContent = false,
       typeIndex,
@@ -3746,8 +3592,6 @@ function composeNode(state, parentIndent, nodeContext, allowToSeek, allowCompact
         }
       }
     } else if (indentStatus === 0) {
-      // Special case: block sequences are allowed to have same indentation level as the parent.
-      // http://www.yaml.org/spec/1.2/spec.html#id2799784
       hasContent = allowBlockCollections && readBlockSequence(state, blockIndent);
     }
   }
@@ -3758,12 +3602,6 @@ function composeNode(state, parentIndent, nodeContext, allowToSeek, allowCompact
     }
 
   } else if (state.tag === '?') {
-    // Implicit resolving is not allowed for non-scalar types, and '?'
-    // non-specific tag is only automatically assigned to plain scalars.
-    //
-    // We only need to check kind conformity in case user explicitly assigns '?'
-    // tag, for example like this: "!<?> [0]"
-    //
     if (state.result !== null && state.kind !== 'scalar') {
       throwError(state, 'unacceptable node kind for !<?> tag; it should be "scalar", not "' + state.kind + '"');
     }
@@ -3771,7 +3609,7 @@ function composeNode(state, parentIndent, nodeContext, allowToSeek, allowCompact
     for (typeIndex = 0, typeQuantity = state.implicitTypes.length; typeIndex < typeQuantity; typeIndex += 1) {
       type = state.implicitTypes[typeIndex];
 
-      if (type.resolve(state.result)) { // `state.result` updated in resolver if matched
+      if (type.resolve(state.result)) { 
         state.result = type.construct(state.result);
         state.tag = type.tag;
         if (state.anchor !== null) {
@@ -3784,7 +3622,6 @@ function composeNode(state, parentIndent, nodeContext, allowToSeek, allowCompact
     if (_hasOwnProperty$1.call(state.typeMap[state.kind || 'fallback'], state.tag)) {
       type = state.typeMap[state.kind || 'fallback'][state.tag];
     } else {
-      // looking for multi type
       type = null;
       typeList = state.typeMap.multi[state.kind || 'fallback'];
 
@@ -3804,7 +3641,7 @@ function composeNode(state, parentIndent, nodeContext, allowToSeek, allowCompact
       throwError(state, 'unacceptable node kind for !<' + state.tag + '> tag; it should be "' + type.kind + '", not "' + state.kind + '"');
     }
 
-    if (!type.resolve(state.result, state.tag)) { // `state.result` updated in resolver if matched
+    if (!type.resolve(state.result, state.tag)) { 
       throwError(state, 'cannot resolve a node with !<' + state.tag + '> explicit tag');
     } else {
       state.result = type.construct(state.result, state.tag);
@@ -3838,7 +3675,7 @@ function readDocument(state) {
 
     ch = state.input.charCodeAt(state.position);
 
-    if (state.lineIndent > 0 || ch !== 0x25/* % */) {
+    if (state.lineIndent > 0 || ch !== 0x25) {
       break;
     }
 
@@ -3862,7 +3699,7 @@ function readDocument(state) {
         ch = state.input.charCodeAt(++state.position);
       }
 
-      if (ch === 0x23/* # */) {
+      if (ch === 0x23) {
         do { ch = state.input.charCodeAt(++state.position); }
         while (ch !== 0 && !is_EOL(ch));
         break;
@@ -3891,9 +3728,9 @@ function readDocument(state) {
   skipSeparationSpace(state, true, -1);
 
   if (state.lineIndent === 0 &&
-      state.input.charCodeAt(state.position)     === 0x2D/* - */ &&
-      state.input.charCodeAt(state.position + 1) === 0x2D/* - */ &&
-      state.input.charCodeAt(state.position + 2) === 0x2D/* - */) {
+      state.input.charCodeAt(state.position)     === 0x2D &&
+      state.input.charCodeAt(state.position + 1) === 0x2D &&
+      state.input.charCodeAt(state.position + 2) === 0x2D) {
     state.position += 3;
     skipSeparationSpace(state, true, -1);
 
@@ -3913,7 +3750,7 @@ function readDocument(state) {
 
   if (state.position === state.lineStart && testDocumentSeparator(state)) {
 
-    if (state.input.charCodeAt(state.position) === 0x2E/* . */) {
+    if (state.input.charCodeAt(state.position) === 0x2E) {
       state.position += 3;
       skipSeparationSpace(state, true, -1);
     }
@@ -3934,13 +3771,11 @@ function loadDocuments(input, options) {
 
   if (input.length !== 0) {
 
-    // Add tailing `\n` if not exists
-    if (input.charCodeAt(input.length - 1) !== 0x0A/* LF */ &&
-        input.charCodeAt(input.length - 1) !== 0x0D/* CR */) {
+    if (input.charCodeAt(input.length - 1) !== 0x0A &&
+        input.charCodeAt(input.length - 1) !== 0x0D) {
       input += '\n';
     }
 
-    // Strip BOM
     if (input.charCodeAt(0) === 0xFEFF) {
       input = input.slice(1);
     }
@@ -3955,10 +3790,9 @@ function loadDocuments(input, options) {
     throwError(state, 'null byte is not allowed in input');
   }
 
-  // Use 0 as string terminator. That significantly simplifies bounds check.
   state.input += '\0';
 
-  while (state.input.charCodeAt(state.position) === 0x20/* Space */) {
+  while (state.input.charCodeAt(state.position) === 0x20) {
     state.lineIndent += 1;
     state.position += 1;
   }
@@ -3993,7 +3827,6 @@ function load$1(input, options) {
   var documents = loadDocuments(input, options);
 
   if (documents.length === 0) {
-    /*eslint-disable no-undefined*/
     return undefined;
   } else if (documents.length === 1) {
     return documents[0];
@@ -4010,7 +3843,6 @@ var loader = {
 	load: load_1
 };
 
-/*eslint-disable no-use-before-define*/
 
 
 
@@ -4020,30 +3852,30 @@ var _toString       = Object.prototype.toString;
 var _hasOwnProperty = Object.prototype.hasOwnProperty;
 
 var CHAR_BOM                  = 0xFEFF;
-var CHAR_TAB                  = 0x09; /* Tab */
-var CHAR_LINE_FEED            = 0x0A; /* LF */
-var CHAR_CARRIAGE_RETURN      = 0x0D; /* CR */
-var CHAR_SPACE                = 0x20; /* Space */
-var CHAR_EXCLAMATION          = 0x21; /* ! */
-var CHAR_DOUBLE_QUOTE         = 0x22; /* " */
-var CHAR_SHARP                = 0x23; /* # */
-var CHAR_PERCENT              = 0x25; /* % */
-var CHAR_AMPERSAND            = 0x26; /* & */
-var CHAR_SINGLE_QUOTE         = 0x27; /* ' */
-var CHAR_ASTERISK             = 0x2A; /* * */
-var CHAR_COMMA                = 0x2C; /* , */
-var CHAR_MINUS                = 0x2D; /* - */
-var CHAR_COLON                = 0x3A; /* : */
-var CHAR_EQUALS               = 0x3D; /* = */
-var CHAR_GREATER_THAN         = 0x3E; /* > */
-var CHAR_QUESTION             = 0x3F; /* ? */
-var CHAR_COMMERCIAL_AT        = 0x40; /* @ */
-var CHAR_LEFT_SQUARE_BRACKET  = 0x5B; /* [ */
-var CHAR_RIGHT_SQUARE_BRACKET = 0x5D; /* ] */
-var CHAR_GRAVE_ACCENT         = 0x60; /* ` */
-var CHAR_LEFT_CURLY_BRACKET   = 0x7B; /* { */
-var CHAR_VERTICAL_LINE        = 0x7C; /* | */
-var CHAR_RIGHT_CURLY_BRACKET  = 0x7D; /* } */
+var CHAR_TAB                  = 0x09; 
+var CHAR_LINE_FEED            = 0x0A; 
+var CHAR_CARRIAGE_RETURN      = 0x0D; 
+var CHAR_SPACE                = 0x20; 
+var CHAR_EXCLAMATION          = 0x21; 
+var CHAR_DOUBLE_QUOTE         = 0x22; 
+var CHAR_SHARP                = 0x23; 
+var CHAR_PERCENT              = 0x25; 
+var CHAR_AMPERSAND            = 0x26; 
+var CHAR_SINGLE_QUOTE         = 0x27; 
+var CHAR_ASTERISK             = 0x2A; 
+var CHAR_COMMA                = 0x2C; 
+var CHAR_MINUS                = 0x2D; 
+var CHAR_COLON                = 0x3A; 
+var CHAR_EQUALS               = 0x3D; 
+var CHAR_GREATER_THAN         = 0x3E; 
+var CHAR_QUESTION             = 0x3F; 
+var CHAR_COMMERCIAL_AT        = 0x40; 
+var CHAR_LEFT_SQUARE_BRACKET  = 0x5B; 
+var CHAR_RIGHT_SQUARE_BRACKET = 0x5D; 
+var CHAR_GRAVE_ACCENT         = 0x60; 
+var CHAR_LEFT_CURLY_BRACKET   = 0x7B; 
+var CHAR_VERTICAL_LINE        = 0x7C; 
+var CHAR_RIGHT_CURLY_BRACKET  = 0x7D; 
 
 var ESCAPE_SEQUENCES = {};
 
@@ -4148,7 +3980,6 @@ function State(options) {
   this.usedDuplicates = null;
 }
 
-// Indents every line in a string. Empty lines (\n only) are not indented.
 function indentString(string, spaces) {
   var ind = common.repeat(' ', spaces),
       position = 0,
@@ -4193,15 +4024,10 @@ function testImplicitResolving(state, str) {
   return false;
 }
 
-// [33] s-white ::= s-space | s-tab
 function isWhitespace(c) {
   return c === CHAR_SPACE || c === CHAR_TAB;
 }
 
-// Returns true if the character can be printed without escaping.
-// From YAML 1.2: "any allowed characters known to be non-printable
-// should also be escaped. [However,] This isn’t mandatory"
-// Derived from nb-char - \t - #x85 - #xA0 - #x2028 - #x2029.
 function isPrintable(c) {
   return  (0x00020 <= c && c <= 0x00007E)
       || ((0x000A1 <= c && c <= 0x00D7FF) && c !== 0x2028 && c !== 0x2029)
@@ -4209,59 +4035,35 @@ function isPrintable(c) {
       ||  (0x10000 <= c && c <= 0x10FFFF);
 }
 
-// [34] ns-char ::= nb-char - s-white
-// [27] nb-char ::= c-printable - b-char - c-byte-order-mark
-// [26] b-char  ::= b-line-feed | b-carriage-return
-// Including s-white (for some reason, examples doesn't match specs in this aspect)
-// ns-char ::= c-printable - b-line-feed - b-carriage-return - c-byte-order-mark
 function isNsCharOrWhitespace(c) {
   return isPrintable(c)
     && c !== CHAR_BOM
-    // - b-char
     && c !== CHAR_CARRIAGE_RETURN
     && c !== CHAR_LINE_FEED;
 }
 
-// [127]  ns-plain-safe(c) ::= c = flow-out  ⇒ ns-plain-safe-out
-//                             c = flow-in   ⇒ ns-plain-safe-in
-//                             c = block-key ⇒ ns-plain-safe-out
-//                             c = flow-key  ⇒ ns-plain-safe-in
-// [128] ns-plain-safe-out ::= ns-char
-// [129]  ns-plain-safe-in ::= ns-char - c-flow-indicator
-// [130]  ns-plain-char(c) ::=  ( ns-plain-safe(c) - “:” - “#” )
-//                            | ( /* An ns-char preceding */ “#” )
-//                            | ( “:” /* Followed by an ns-plain-safe(c) */ )
 function isPlainSafe(c, prev, inblock) {
   var cIsNsCharOrWhitespace = isNsCharOrWhitespace(c);
   var cIsNsChar = cIsNsCharOrWhitespace && !isWhitespace(c);
   return (
-    // ns-plain-safe
-    inblock ? // c = flow-in
+    inblock ? 
       cIsNsCharOrWhitespace
       : cIsNsCharOrWhitespace
-        // - c-flow-indicator
         && c !== CHAR_COMMA
         && c !== CHAR_LEFT_SQUARE_BRACKET
         && c !== CHAR_RIGHT_SQUARE_BRACKET
         && c !== CHAR_LEFT_CURLY_BRACKET
         && c !== CHAR_RIGHT_CURLY_BRACKET
   )
-    // ns-plain-char
-    && c !== CHAR_SHARP // false on '#'
-    && !(prev === CHAR_COLON && !cIsNsChar) // false on ': '
-    || (isNsCharOrWhitespace(prev) && !isWhitespace(prev) && c === CHAR_SHARP) // change to true on '[^ ]#'
-    || (prev === CHAR_COLON && cIsNsChar); // change to true on ':[^ ]'
+    && c !== CHAR_SHARP 
+    && !(prev === CHAR_COLON && !cIsNsChar) 
+    || (isNsCharOrWhitespace(prev) && !isWhitespace(prev) && c === CHAR_SHARP) 
+    || (prev === CHAR_COLON && cIsNsChar); 
 }
 
-// Simplified test for values allowed as the first character in plain style.
 function isPlainSafeFirst(c) {
-  // Uses a subset of ns-char - c-indicator
-  // where ns-char = nb-char - s-white.
-  // No support of ( ( “?” | “:” | “-” ) /* Followed by an ns-plain-safe(c)) */ ) part
   return isPrintable(c) && c !== CHAR_BOM
-    && !isWhitespace(c) // - s-white
-    // - (c-indicator ::=
-    // “-” | “?” | “:” | “,” | “[” | “]” | “{” | “}”
+    && !isWhitespace(c) 
     && c !== CHAR_MINUS
     && c !== CHAR_QUESTION
     && c !== CHAR_COLON
@@ -4270,7 +4072,6 @@ function isPlainSafeFirst(c) {
     && c !== CHAR_RIGHT_SQUARE_BRACKET
     && c !== CHAR_LEFT_CURLY_BRACKET
     && c !== CHAR_RIGHT_CURLY_BRACKET
-    // | “#” | “&” | “*” | “!” | “|” | “=” | “>” | “'” | “"”
     && c !== CHAR_SHARP
     && c !== CHAR_AMPERSAND
     && c !== CHAR_ASTERISK
@@ -4280,32 +4081,26 @@ function isPlainSafeFirst(c) {
     && c !== CHAR_GREATER_THAN
     && c !== CHAR_SINGLE_QUOTE
     && c !== CHAR_DOUBLE_QUOTE
-    // | “%” | “@” | “`”)
     && c !== CHAR_PERCENT
     && c !== CHAR_COMMERCIAL_AT
     && c !== CHAR_GRAVE_ACCENT;
 }
 
-// Simplified test for values allowed as the last character in plain style.
 function isPlainSafeLast(c) {
-  // just not whitespace or colon, it will be checked to be plain character later
   return !isWhitespace(c) && c !== CHAR_COLON;
 }
 
-// Same as 'string'.codePointAt(pos), but works in older browsers.
 function codePointAt(string, pos) {
   var first = string.charCodeAt(pos), second;
   if (first >= 0xD800 && first <= 0xDBFF && pos + 1 < string.length) {
     second = string.charCodeAt(pos + 1);
     if (second >= 0xDC00 && second <= 0xDFFF) {
-      // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
       return (first - 0xD800) * 0x400 + second - 0xDC00 + 0x10000;
     }
   }
   return first;
 }
 
-// Determines whether block indentation indicator is required.
 function needIndentIndicator(string) {
   var leadingSpaceRe = /^\n* /;
   return leadingSpaceRe.test(string);
@@ -4317,13 +4112,6 @@ var STYLE_PLAIN   = 1,
     STYLE_FOLDED  = 4,
     STYLE_DOUBLE  = 5;
 
-// Determines which scalar styles are possible and returns the preferred style.
-// lineWidth = -1 => no limit.
-// Pre-conditions: str.length > 0.
-// Post-conditions:
-//    STYLE_PLAIN or STYLE_SINGLE => no \n are in the string.
-//    STYLE_LITERAL => no lines are suitable for folding (or lineWidth is -1).
-//    STYLE_FOLDED => a line > lineWidth and can be folded (and lineWidth != -1).
 function chooseScalarStyle(string, singleLineOnly, indentPerLevel, lineWidth,
   testAmbiguousType, quotingType, forceQuotes, inblock) {
 
@@ -4331,15 +4119,13 @@ function chooseScalarStyle(string, singleLineOnly, indentPerLevel, lineWidth,
   var char = 0;
   var prevChar = null;
   var hasLineBreak = false;
-  var hasFoldableLine = false; // only checked if shouldTrackWidth
+  var hasFoldableLine = false; 
   var shouldTrackWidth = lineWidth !== -1;
-  var previousLineBreak = -1; // count the first line correctly
+  var previousLineBreak = -1; 
   var plain = isPlainSafeFirst(codePointAt(string, 0))
           && isPlainSafeLast(codePointAt(string, string.length - 1));
 
   if (singleLineOnly || forceQuotes) {
-    // Case: no block styles.
-    // Check for disallowed characters to rule out plain and single.
     for (i = 0; i < string.length; char >= 0x10000 ? i += 2 : i++) {
       char = codePointAt(string, i);
       if (!isPrintable(char)) {
@@ -4349,15 +4135,12 @@ function chooseScalarStyle(string, singleLineOnly, indentPerLevel, lineWidth,
       prevChar = char;
     }
   } else {
-    // Case: block styles permitted.
     for (i = 0; i < string.length; char >= 0x10000 ? i += 2 : i++) {
       char = codePointAt(string, i);
       if (char === CHAR_LINE_FEED) {
         hasLineBreak = true;
-        // Check if any line can be folded.
         if (shouldTrackWidth) {
           hasFoldableLine = hasFoldableLine ||
-            // Foldable line = too long, and not more-indented.
             (i - previousLineBreak - 1 > lineWidth &&
              string[previousLineBreak + 1] !== ' ');
           previousLineBreak = i;
@@ -4368,40 +4151,25 @@ function chooseScalarStyle(string, singleLineOnly, indentPerLevel, lineWidth,
       plain = plain && isPlainSafe(char, prevChar, inblock);
       prevChar = char;
     }
-    // in case the end is missing a \n
     hasFoldableLine = hasFoldableLine || (shouldTrackWidth &&
       (i - previousLineBreak - 1 > lineWidth &&
        string[previousLineBreak + 1] !== ' '));
   }
-  // Although every style can represent \n without escaping, prefer block styles
-  // for multiline, since they're more readable and they don't add empty lines.
-  // Also prefer folding a super-long line.
   if (!hasLineBreak && !hasFoldableLine) {
-    // Strings interpretable as another type have to be quoted;
-    // e.g. the string 'true' vs. the boolean true.
     if (plain && !forceQuotes && !testAmbiguousType(string)) {
       return STYLE_PLAIN;
     }
     return quotingType === QUOTING_TYPE_DOUBLE ? STYLE_DOUBLE : STYLE_SINGLE;
   }
-  // Edge case: block indentation indicator can only have one digit.
   if (indentPerLevel > 9 && needIndentIndicator(string)) {
     return STYLE_DOUBLE;
   }
-  // At this point we know block styles are valid.
-  // Prefer literal style unless we want to fold.
   if (!forceQuotes) {
     return hasFoldableLine ? STYLE_FOLDED : STYLE_LITERAL;
   }
   return quotingType === QUOTING_TYPE_DOUBLE ? STYLE_DOUBLE : STYLE_SINGLE;
 }
 
-// Note: line breaking/folding is implemented for only the folded style.
-// NB. We drop the last trailing newline (if any) of a returned block scalar
-//  since the dumper adds its own newline. This always works:
-//    • No ending newline => unaffected; already using strip "-" chomping.
-//    • Ending newline    => removed then restored.
-//  Importantly, this keeps the "+" chomp indicator from gaining an extra line.
 function writeScalar(state, string, level, iskey, inblock) {
   state.dump = (function () {
     if (string.length === 0) {
@@ -4413,20 +4181,11 @@ function writeScalar(state, string, level, iskey, inblock) {
       }
     }
 
-    var indent = state.indent * Math.max(1, level); // no 0-indent scalars
-    // As indentation gets deeper, let the width decrease monotonically
-    // to the lower bound min(state.lineWidth, 40).
-    // Note that this implies
-    //  state.lineWidth ≤ 40 + state.indent: width is fixed at the lower bound.
-    //  state.lineWidth > 40 + state.indent: width decreases until the lower bound.
-    // This behaves better than a constant minimum width which disallows narrower options,
-    // or an indent threshold which causes the width to suddenly increase.
+    var indent = state.indent * Math.max(1, level); 
     var lineWidth = state.lineWidth === -1
       ? -1 : Math.max(Math.min(state.lineWidth, 40), state.lineWidth - indent);
 
-    // Without knowing if keys are implicit/explicit, assume implicit for safety.
     var singleLineOnly = iskey
-      // No block styles in flow mode.
       || (state.flowLevel > -1 && level >= state.flowLevel);
     function testAmbiguity(string) {
       return testImplicitResolving(state, string);
@@ -4453,11 +4212,9 @@ function writeScalar(state, string, level, iskey, inblock) {
   }());
 }
 
-// Pre-conditions: string is valid for a block scalar, 1 <= indentPerLevel <= 9.
 function blockHeader(string, indentPerLevel) {
   var indentIndicator = needIndentIndicator(string) ? String(indentPerLevel) : '';
 
-  // note the special case: the string '\n' counts as a "trailing" empty line.
   var clip =          string[string.length - 1] === '\n';
   var keep = clip && (string[string.length - 2] === '\n' || string === '\n');
   var chomp = keep ? '+' : (clip ? '' : '-');
@@ -4465,32 +4222,22 @@ function blockHeader(string, indentPerLevel) {
   return indentIndicator + chomp + '\n';
 }
 
-// (See the note for writeScalar.)
 function dropEndingNewline(string) {
   return string[string.length - 1] === '\n' ? string.slice(0, -1) : string;
 }
 
-// Note: a long line without a suitable break point will exceed the width limit.
-// Pre-conditions: every char in str isPrintable, str.length > 0, width > 0.
 function foldString(string, width) {
-  // In folded style, $k$ consecutive newlines output as $k+1$ newlines—
-  // unless they're before or after a more-indented line, or at the very
-  // beginning or end, in which case $k$ maps to $k$.
-  // Therefore, parse each chunk as newline(s) followed by a content line.
   var lineRe = /(\n+)([^\n]*)/g;
 
-  // first line (possibly an empty line)
   var result = (function () {
     var nextLF = string.indexOf('\n');
     nextLF = nextLF !== -1 ? nextLF : string.length;
     lineRe.lastIndex = nextLF;
     return foldLine(string.slice(0, nextLF), width);
   }());
-  // If we haven't reached the first content line yet, don't add an extra \n.
   var prevMoreIndented = string[0] === '\n' || string[0] === ' ';
   var moreIndented;
 
-  // rest of the lines
   var match;
   while ((match = lineRe.exec(string))) {
     var prefix = match[1], line = match[2];
@@ -4505,50 +4252,34 @@ function foldString(string, width) {
   return result;
 }
 
-// Greedy line breaking.
-// Picks the longest line under the limit each time,
-// otherwise settles for the shortest line over the limit.
-// NB. More-indented lines *cannot* be folded, as that would add an extra \n.
 function foldLine(line, width) {
   if (line === '' || line[0] === ' ') return line;
 
-  // Since a more-indented line adds a \n, breaks can't be followed by a space.
-  var breakRe = / [^ ]/g; // note: the match index will always be <= length-2.
+  var breakRe = / [^ ]/g; 
   var match;
-  // start is an inclusive index. end, curr, and next are exclusive.
   var start = 0, end, curr = 0, next = 0;
   var result = '';
 
-  // Invariants: 0 <= start <= length-1.
-  //   0 <= curr <= next <= max(0, length-2). curr - start <= width.
-  // Inside the loop:
-  //   A match implies length >= 2, so curr and next are <= length-2.
   while ((match = breakRe.exec(line))) {
     next = match.index;
-    // maintain invariant: curr - start <= width
     if (next - start > width) {
-      end = (curr > start) ? curr : next; // derive end <= length-2
+      end = (curr > start) ? curr : next; 
       result += '\n' + line.slice(start, end);
-      // skip the space that was output as \n
-      start = end + 1;                    // derive start <= length-1
+      start = end + 1;                    
     }
     curr = next;
   }
 
-  // By the invariants, start <= length-1, so there is something left over.
-  // It is either the whole string or a part starting from non-whitespace.
   result += '\n';
-  // Insert a break if the remainder is too long and there is a break available.
   if (line.length - start > width && curr > start) {
     result += line.slice(start, curr) + '\n' + line.slice(curr + 1);
   } else {
     result += line.slice(start);
   }
 
-  return result.slice(1); // drop extra \n joiner
+  return result.slice(1); 
 }
 
-// Escapes a double-quoted string.
 function escapeString(string) {
   var result = '';
   var char = 0;
@@ -4583,7 +4314,6 @@ function writeFlowSequence(state, level, object) {
       value = state.replacer.call(object, String(index), value);
     }
 
-    // Write only valid elements, put null instead of invalid elements.
     if (writeNode(state, level, value, false, false) ||
         (typeof value === 'undefined' &&
          writeNode(state, level, null, false, false))) {
@@ -4611,7 +4341,6 @@ function writeBlockSequence(state, level, object, compact) {
       value = state.replacer.call(object, String(index), value);
     }
 
-    // Write only valid elements, put null instead of invalid elements.
     if (writeNode(state, level + 1, value, true, true, false, true) ||
         (typeof value === 'undefined' &&
          writeNode(state, level + 1, null, true, true, false, true))) {
@@ -4631,7 +4360,7 @@ function writeBlockSequence(state, level, object, compact) {
   }
 
   state.tag = _tag;
-  state.dump = _result || '[]'; // Empty sequence if no valid values.
+  state.dump = _result || '[]'; 
 }
 
 function writeFlowMapping(state, level, object) {
@@ -4659,7 +4388,7 @@ function writeFlowMapping(state, level, object) {
     }
 
     if (!writeNode(state, level, objectKey, false, false)) {
-      continue; // Skip this pair because of invalid key;
+      continue; 
     }
 
     if (state.dump.length > 1024) pairBuffer += '? ';
@@ -4667,12 +4396,11 @@ function writeFlowMapping(state, level, object) {
     pairBuffer += state.dump + (state.condenseFlow ? '"' : '') + ':' + (state.condenseFlow ? '' : ' ');
 
     if (!writeNode(state, level, objectValue, false, false)) {
-      continue; // Skip this pair because of invalid value.
+      continue; 
     }
 
     pairBuffer += state.dump;
 
-    // Both key and value are valid.
     _result += pairBuffer;
   }
 
@@ -4691,15 +4419,11 @@ function writeBlockMapping(state, level, object, compact) {
       explicitPair,
       pairBuffer;
 
-  // Allow sorting keys so that the output file is deterministic
   if (state.sortKeys === true) {
-    // Default sorting
     objectKeyList.sort();
   } else if (typeof state.sortKeys === 'function') {
-    // Custom sort function
     objectKeyList.sort(state.sortKeys);
   } else if (state.sortKeys) {
-    // Something is wrong
     throw new exception('sortKeys must be a boolean or a function');
   }
 
@@ -4718,7 +4442,7 @@ function writeBlockMapping(state, level, object, compact) {
     }
 
     if (!writeNode(state, level + 1, objectKey, true, true, true)) {
-      continue; // Skip this pair because of invalid key.
+      continue; 
     }
 
     explicitPair = (state.tag !== null && state.tag !== '?') ||
@@ -4739,7 +4463,7 @@ function writeBlockMapping(state, level, object, compact) {
     }
 
     if (!writeNode(state, level + 1, objectValue, true, explicitPair)) {
-      continue; // Skip this pair because of invalid value.
+      continue; 
     }
 
     if (state.dump && CHAR_LINE_FEED === state.dump.charCodeAt(0)) {
@@ -4750,12 +4474,11 @@ function writeBlockMapping(state, level, object, compact) {
 
     pairBuffer += state.dump;
 
-    // Both key and value are valid.
     _result += pairBuffer;
   }
 
   state.tag = _tag;
-  state.dump = _result || '{}'; // Empty mapping if no valid pairs.
+  state.dump = _result || '{}'; 
 }
 
 function detectType(state, object, explicit) {
@@ -4801,9 +4524,6 @@ function detectType(state, object, explicit) {
   return false;
 }
 
-// Serializes `object` and writes it to global `result`.
-// Returns true on success, or false on invalid object.
-//
 function writeNode(state, level, object, block, compact, iskey, isblockseq) {
   state.tag = null;
   state.dump = object;
@@ -4879,19 +4599,6 @@ function writeNode(state, level, object, block, compact, iskey, isblockseq) {
     }
 
     if (state.tag !== null && state.tag !== '?') {
-      // Need to encode all characters except those allowed by the spec:
-      //
-      // [35] ns-dec-digit    ::=  [#x30-#x39] /* 0-9 */
-      // [36] ns-hex-digit    ::=  ns-dec-digit
-      //                         | [#x41-#x46] /* A-F */ | [#x61-#x66] /* a-f */
-      // [37] ns-ascii-letter ::=  [#x41-#x5A] /* A-Z */ | [#x61-#x7A] /* a-z */
-      // [38] ns-word-char    ::=  ns-dec-digit | ns-ascii-letter | “-”
-      // [39] ns-uri-char     ::=  “%” ns-hex-digit ns-hex-digit | ns-word-char | “#”
-      //                         | “;” | “/” | “?” | “:” | “@” | “&” | “=” | “+” | “$” | “,”
-      //                         | “_” | “.” | “!” | “~” | “*” | “'” | “(” | “)” | “[” | “]”
-      //
-      // Also need to encode '!' because it has special meaning (end of tag prefix).
-      //
       tagStr = encodeURI(
         state.tag[0] === '!' ? state.tag.slice(1) : state.tag
       ).replace(/!/g, '%21');
@@ -4997,7 +4704,6 @@ var loadAll             = loader.loadAll;
 var dump                = dumper.dump;
 var YAMLException       = exception;
 
-// Re-export all types in case user wants to create custom schema
 var types = {
   binary:    binary,
   float:     js_yaml_float,
@@ -5014,7 +4720,6 @@ var types = {
   str:       str
 };
 
-// Removed functions from JS-YAML 3.0.x
 var safeLoad            = renamed('safeLoad', 'load');
 var safeLoadAll         = renamed('safeLoadAll', 'loadAll');
 var safeDump            = renamed('safeDump', 'dump');
@@ -5036,10 +4741,10 @@ var jsYaml = {
 	safeDump: safeDump
 };
 
-/* harmony default export */ const js_yaml = ((/* unused pure expression or super */ null && (jsYaml)));
+ const js_yaml = (( null && (jsYaml)));
 
 
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/RuleInspector.tsx
+;
 
 
 
@@ -5060,31 +4765,28 @@ const RuleInspector = _ref => {
   const [activeTab, setActiveTab] = (0,react.useState)('yaml');
   const {
     setValue
-  } = (0,index_esm/* useFormContext */.Gc)();
+  } = (0,index_esm.Gc)();
   const styles = (0,src.useStyles2)(drawerStyles);
 
   const onApply = formValues => {
-    // Need to loop through all values and set them individually
-    // TODO this is not type-safe :(
     for (const key in formValues) {
-      // @ts-ignore
       setValue(key, formValues[key]);
     }
 
     onClose();
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Drawer, {
+  return (0,jsx_runtime.jsx)(src.Drawer, {
     title: "Inspect Alert rule",
-    subtitle: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    subtitle: (0,jsx_runtime.jsx)("div", {
       className: styles.subtitle,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(RuleInspectorSubtitle, {
+      children: (0,jsx_runtime.jsx)(RuleInspectorSubtitle, {
         setActiveTab: setActiveTab,
         activeTab: activeTab
       })
     }),
     onClose: onClose,
-    children: activeTab === 'yaml' && /*#__PURE__*/(0,jsx_runtime.jsx)(InspectorYamlTab, {
+    children: activeTab === 'yaml' && (0,jsx_runtime.jsx)(InspectorYamlTab, {
       onSubmit: onApply
     })
   });
@@ -5095,9 +4797,9 @@ const RuleInspectorSubtitle = _ref2 => {
     activeTab,
     setActiveTab
   } = _ref2;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(src.TabsBar, {
+  return (0,jsx_runtime.jsx)(src.TabsBar, {
     children: tabs.map((tab, index) => {
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Tab, {
+      return (0,jsx_runtime.jsx)(src.Tab, {
         label: tab.label,
         value: tab.value,
         onChangeTab: () => setActiveTab(tab.value),
@@ -5114,30 +4816,30 @@ const InspectorYamlTab = _ref3 => {
   const styles = (0,src.useStyles2)(yamlTabStyle);
   const {
     getValues
-  } = (0,index_esm/* useFormContext */.Gc)();
+  } = (0,index_esm.Gc)();
   const [alertRuleAsYaml, setAlertRuleAsYaml] = (0,react.useState)(dump(getValues()));
 
   const onApply = () => {
     onSubmit(load(alertRuleAsYaml));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)("div", {
       className: styles.applyButton,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+      children: (0,jsx_runtime.jsx)(src.Button, {
         type: "button",
         onClick: onApply,
         children: "Apply"
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), (0,jsx_runtime.jsx)("div", {
       className: styles.content,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(dist_index_esm/* default */.Z, {
+      children: (0,jsx_runtime.jsx)(dist_index_esm.Z, {
         disableWidth: true,
         children: _ref4 => {
           let {
             height
           } = _ref4;
-          return /*#__PURE__*/(0,jsx_runtime.jsx)(src.CodeEditor, {
+          return (0,jsx_runtime.jsx)(src.CodeEditor, {
             width: "100%",
             height: height,
             language: "yaml",
@@ -5175,9 +4877,8 @@ const drawerStyles = () => ({
     justify-content: space-between;
   `
 });
-// EXTERNAL MODULE: ./public/app/features/expressions/ExpressionDatasource.ts + 6 modules
 var ExpressionDatasource = __webpack_require__("./public/app/features/expressions/ExpressionDatasource.ts");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/ConditionField.tsx
+;
 const ConditionField_excluded = ["onChange", "ref"];
 
 function ConditionField_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -5197,7 +4898,7 @@ const ConditionField = () => {
     formState: {
       errors
     }
-  } = (0,index_esm/* useFormContext */.Gc)();
+  } = (0,index_esm.Gc)();
   const queries = watch('queries');
   const condition = watch('condition');
   const options = (0,react.useMemo)(() => queries.filter(q => !!q.refId).map(q => ({
@@ -5205,8 +4906,8 @@ const ConditionField = () => {
     label: q.refId
   })), [queries]);
   const expressions = (0,react.useMemo)(() => {
-    return queries.filter(query => query.datasourceUid === ExpressionDatasource/* ExpressionDatasourceUID */.Yq);
-  }, [queries]); // automatically use the last expression when new expressions have been added
+    return queries.filter(query => query.datasourceUid === ExpressionDatasource.Yq);
+  }, [queries]); 
 
   (0,react.useEffect)(() => {
     const lastExpression = (0,lodash.last)(expressions);
@@ -5216,7 +4917,7 @@ const ConditionField = () => {
         shouldValidate: true
       });
     }
-  }, [expressions, setValue]); // reset condition if option no longer exists or if it is unset, but there are options available
+  }, [expressions, setValue]); 
 
   (0,react.useEffect)(() => {
     const lastExpression = (0,lodash.last)(expressions);
@@ -5237,12 +4938,12 @@ const ConditionField = () => {
       });
     }
   }, [condition, expressions, options, setValue]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+  return (0,jsx_runtime.jsx)(src.Field, {
     label: "Condition",
     description: "The query or expression that will be alerted on",
     error: (_errors$condition = errors.condition) === null || _errors$condition === void 0 ? void 0 : _errors$condition.message,
     invalid: !!((_errors$condition2 = errors.condition) !== null && _errors$condition2 !== void 0 && _errors$condition2.message),
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+    children: (0,jsx_runtime.jsx)(src.InputControl, {
       name: "condition",
       render: _ref2 => {
         let {
@@ -5252,7 +4953,7 @@ const ConditionField = () => {
         } = _ref2,
             field = ConditionField_objectWithoutPropertiesLoose(_ref2.field, ConditionField_excluded);
 
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Select, Object.assign({
+        return (0,jsx_runtime.jsx)(src.Select, Object.assign({
           "aria-label": "Condition"
         }, field, {
           width: 42,
@@ -5274,22 +4975,19 @@ const ConditionField = () => {
     })
   });
 };
-// EXTERNAL MODULE: ./public/app/core/services/context_srv.ts
 var context_srv = __webpack_require__("./public/app/core/services/context_srv.ts");
-// EXTERNAL MODULE: ./public/app/types/index.ts + 4 modules
 var app_types = __webpack_require__("./public/app/types/index.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/datasource.ts
 var datasource = __webpack_require__("./public/app/features/alerting/unified/utils/datasource.ts");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/hooks/useRuleSourcesWithRuler.ts
+;
 
 
 function useRulesSourcesWithRuler() {
-  const dataSources = (0,useUnifiedAlertingSelector/* useUnifiedAlertingSelector */._)(state => state.dataSources);
-  const dataSourcesWithRuler = Object.values(dataSources).map(ds => ds.result).filter(ds => Boolean(ds === null || ds === void 0 ? void 0 : ds.rulerConfig)); // try fetching rules for each prometheus to see if it has ruler
+  const dataSources = (0,useUnifiedAlertingSelector._)(state => state.dataSources);
+  const dataSourcesWithRuler = Object.values(dataSources).map(ds => ds.result).filter(ds => Boolean(ds === null || ds === void 0 ? void 0 : ds.rulerConfig)); 
 
-  return dataSourcesWithRuler.map(ds => (0,datasource/* getDataSourceByName */.c$)(ds.name)).filter(dsConfig => Boolean(dsConfig));
+  return dataSourcesWithRuler.map(ds => (0,datasource.c$)(ds.name)).filter(dsConfig => Boolean(dsConfig));
 }
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/CloudRulesSourcePicker.tsx
+;
 const CloudRulesSourcePicker_excluded = ["value"];
 
 function CloudRulesSourcePicker_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -5313,14 +5011,14 @@ function CloudRulesSourcePicker(_ref) {
       return id === ds.id;
     });
   }, [rulesSourcesWithRuler]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, Object.assign({
+  return (0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, Object.assign({
     noDefault: true,
     alerting: true,
     filter: dataSourceFilter,
     current: value
   }, props));
 }
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/rule-types/RuleType.tsx
+;
 
 
 
@@ -5342,18 +5040,18 @@ const RuleType = props => {
     [styles.wrapper]: true,
     [styles.disabled]: disabled
   });
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(src.Card, {
+  return (0,jsx_runtime.jsxs)(src.Card, {
     className: cardStyles,
     isSelected: selected,
     onClick: () => onClick(value),
     disabled: disabled,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(src.Card.Figure, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("img", {
+    children: [(0,jsx_runtime.jsx)(src.Card.Figure, {
+      children: (0,jsx_runtime.jsx)("img", {
         src: image
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Card.Heading, {
+    }), (0,jsx_runtime.jsx)(src.Card.Heading, {
       children: name
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Card.Description, {
+    }), (0,jsx_runtime.jsx)(src.Card.Description, {
       children: description
     })]
   });
@@ -5371,7 +5069,7 @@ const RuleType_getStyles = theme => ({
 });
 
 
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/rule-types/GrafanaManagedAlert.tsx
+;
 var GrafanaManagedAlert_span;
 
 
@@ -5386,21 +5084,21 @@ const GrafanaManagedRuleType = _ref => {
     disabled,
     onClick
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(RuleType, {
+  return (0,jsx_runtime.jsx)(RuleType, {
     name: "Grafana managed alert",
-    description: GrafanaManagedAlert_span || (GrafanaManagedAlert_span = /*#__PURE__*/(0,jsx_runtime.jsxs)("span", {
-      children: ["Supports multiple data sources of any kind.", /*#__PURE__*/(0,jsx_runtime.jsx)("br", {}), "Transform data with expressions."]
+    description: GrafanaManagedAlert_span || (GrafanaManagedAlert_span = (0,jsx_runtime.jsxs)("span", {
+      children: ["Supports multiple data sources of any kind.", (0,jsx_runtime.jsx)("br", {}), "Transform data with expressions."]
     })),
     image: "/public/img/grafana_icon.svg",
     selected: selected,
     disabled: disabled,
-    value: rule_form/* RuleFormType.grafana */.$.grafana,
+    value: rule_form.$.grafana,
     onClick: onClick
   });
 };
 
 
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/rule-types/DisabledTooltip.tsx
+;
 
 
 
@@ -5413,22 +5111,22 @@ const DisabledTooltip = _ref => {
   } = _ref;
 
   if (!visible) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+    return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
       children: children
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Tooltip, {
+  return (0,jsx_runtime.jsx)(src.Tooltip, {
     content: "You do not appear to have any compatible datasources.",
     placement: "top",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    children: (0,jsx_runtime.jsx)("div", {
       children: children
     })
   });
 };
 
 
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/rule-types/MimirOrLokiAlert.tsx
+;
 var MimirOrLokiAlert_span;
 
 
@@ -5444,24 +5142,24 @@ const MimirFlavoredType = _ref => {
     disabled = false,
     onClick
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(DisabledTooltip, {
+  return (0,jsx_runtime.jsx)(DisabledTooltip, {
     visible: disabled,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(RuleType, {
+    children: (0,jsx_runtime.jsx)(RuleType, {
       name: "Mimir or Loki alert",
-      description: MimirOrLokiAlert_span || (MimirOrLokiAlert_span = /*#__PURE__*/(0,jsx_runtime.jsxs)("span", {
-        children: ["Use a Mimir, Loki or Cortex datasource.", /*#__PURE__*/(0,jsx_runtime.jsx)("br", {}), "Expressions are not supported."]
+      description: MimirOrLokiAlert_span || (MimirOrLokiAlert_span = (0,jsx_runtime.jsxs)("span", {
+        children: ["Use a Mimir, Loki or Cortex datasource.", (0,jsx_runtime.jsx)("br", {}), "Expressions are not supported."]
       })),
       image: "/public/img/alerting/mimir_logo.svg",
       selected: selected,
       disabled: disabled,
-      value: rule_form/* RuleFormType.cloudAlerting */.$.cloudAlerting,
+      value: rule_form.$.cloudAlerting,
       onClick: onClick
     })
   });
 };
 
 
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/rule-types/MimirOrLokiRecordingRule.tsx
+;
 var MimirOrLokiRecordingRule_span;
 
 
@@ -5477,24 +5175,24 @@ const RecordingRuleType = _ref => {
     disabled = false,
     onClick
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(DisabledTooltip, {
+  return (0,jsx_runtime.jsx)(DisabledTooltip, {
     visible: disabled,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(RuleType, {
+    children: (0,jsx_runtime.jsx)(RuleType, {
       name: "Mimir or Loki recording rule",
-      description: MimirOrLokiRecordingRule_span || (MimirOrLokiRecordingRule_span = /*#__PURE__*/(0,jsx_runtime.jsxs)("span", {
-        children: ["Precompute expressions.", /*#__PURE__*/(0,jsx_runtime.jsx)("br", {}), "Should be combined with an alert rule."]
+      description: MimirOrLokiRecordingRule_span || (MimirOrLokiRecordingRule_span = (0,jsx_runtime.jsxs)("span", {
+        children: ["Precompute expressions.", (0,jsx_runtime.jsx)("br", {}), "Should be combined with an alert rule."]
       })),
       image: "/public/img/alerting/mimir_logo_recording.svg",
       selected: selected,
       disabled: disabled,
-      value: rule_form/* RuleFormType.cloudRecording */.$.cloudRecording,
+      value: rule_form.$.cloudRecording,
       onClick: onClick
     })
   });
 };
 
 
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/rule-types/RuleTypePicker.tsx
+;
 
 
 
@@ -5518,23 +5216,23 @@ const RuleTypePicker = _ref => {
   const rulesSourcesWithRuler = useRulesSourcesWithRuler();
   const hasLotexDatasources = !(0,lodash.isEmpty)(rulesSourcesWithRuler);
   const styles = (0,src.useStyles2)(RuleTypePicker_getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(experimental.Stack, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)(experimental.Stack, {
       direction: "row",
       gap: 2,
-      children: [enabledTypes.includes(rule_form/* RuleFormType.grafana */.$.grafana) && /*#__PURE__*/(0,jsx_runtime.jsx)(GrafanaManagedRuleType, {
-        selected: selected === rule_form/* RuleFormType.grafana */.$.grafana,
+      children: [enabledTypes.includes(rule_form.$.grafana) && (0,jsx_runtime.jsx)(GrafanaManagedRuleType, {
+        selected: selected === rule_form.$.grafana,
         onClick: onChange
-      }), enabledTypes.includes(rule_form/* RuleFormType.cloudAlerting */.$.cloudAlerting) && /*#__PURE__*/(0,jsx_runtime.jsx)(MimirFlavoredType, {
-        selected: selected === rule_form/* RuleFormType.cloudAlerting */.$.cloudAlerting,
+      }), enabledTypes.includes(rule_form.$.cloudAlerting) && (0,jsx_runtime.jsx)(MimirFlavoredType, {
+        selected: selected === rule_form.$.cloudAlerting,
         onClick: onChange,
         disabled: !hasLotexDatasources
-      }), enabledTypes.includes(rule_form/* RuleFormType.cloudRecording */.$.cloudRecording) && /*#__PURE__*/(0,jsx_runtime.jsx)(RecordingRuleType, {
-        selected: selected === rule_form/* RuleFormType.cloudRecording */.$.cloudRecording,
+      }), enabledTypes.includes(rule_form.$.cloudRecording) && (0,jsx_runtime.jsx)(RecordingRuleType, {
+        selected: selected === rule_form.$.cloudRecording,
         onClick: onChange,
         disabled: !hasLotexDatasources
       })]
-    }), enabledTypes.includes(rule_form/* RuleFormType.grafana */.$.grafana) && /*#__PURE__*/(0,jsx_runtime.jsx)("small", {
+    }), enabledTypes.includes(rule_form.$.grafana) && (0,jsx_runtime.jsx)("small", {
       className: styles.meta,
       children: "Select \u201CGrafana managed\u201D unless you have a Mimir, Loki or Cortex data source with the Ruler API enabled."
     })]
@@ -5548,7 +5246,7 @@ const RuleTypePicker_getStyles = theme => ({
 });
 
 
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/query-and-alert-condition/AlertType.tsx
+;
 const AlertType_excluded = ["onChange", "ref"];
 
 function AlertType_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -5583,15 +5281,15 @@ const AlertType = _ref => {
     getValues,
     setValue,
     watch
-  } = (0,index_esm/* useFormContext */.Gc)();
+  } = (0,index_esm.Gc)();
   const styles = (0,src.useStyles2)(AlertType_getStyles);
   const ruleFormType = watch('type');
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [!editingExistingRule && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [!editingExistingRule && (0,jsx_runtime.jsx)(src.Field, {
       error: (_errors$type = errors.type) === null || _errors$type === void 0 ? void 0 : _errors$type.message,
       invalid: !!((_errors$type2 = errors.type) !== null && _errors$type2 !== void 0 && _errors$type2.message),
       "data-testid": "alert-type-picker",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+      children: (0,jsx_runtime.jsx)(src.InputControl, {
         render: _ref2 => {
           var _getValues;
 
@@ -5600,7 +5298,7 @@ const AlertType = _ref => {
               onChange
             }
           } = _ref2;
-          return /*#__PURE__*/(0,jsx_runtime.jsx)(RuleTypePicker, {
+          return (0,jsx_runtime.jsx)(RuleTypePicker, {
             "aria-label": "Rule type",
             selected: (_getValues = getValues('type')) !== null && _getValues !== void 0 ? _getValues : defaultRuleType,
             onChange: onChange,
@@ -5616,15 +5314,15 @@ const AlertType = _ref => {
           }
         }
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), (0,jsx_runtime.jsx)("div", {
       className: styles.flexRow,
-      children: (ruleFormType === rule_form/* RuleFormType.cloudRecording */.$.cloudRecording || ruleFormType === rule_form/* RuleFormType.cloudAlerting */.$.cloudAlerting) && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+      children: (ruleFormType === rule_form.$.cloudRecording || ruleFormType === rule_form.$.cloudAlerting) && (0,jsx_runtime.jsx)(src.Field, {
         className: styles.formInput,
         label: "Select data source",
         error: (_errors$dataSourceNam = errors.dataSourceName) === null || _errors$dataSourceNam === void 0 ? void 0 : _errors$dataSourceNam.message,
         invalid: !!((_errors$dataSourceNam2 = errors.dataSourceName) !== null && _errors$dataSourceNam2 !== void 0 && _errors$dataSourceNam2.message),
         "data-testid": "datasource-picker",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+        children: (0,jsx_runtime.jsx)(src.InputControl, {
           render: _ref3 => {
             let {
               field: {
@@ -5633,11 +5331,10 @@ const AlertType = _ref => {
             } = _ref3,
                 field = AlertType_objectWithoutPropertiesLoose(_ref3.field, AlertType_excluded);
 
-            return /*#__PURE__*/(0,jsx_runtime.jsx)(CloudRulesSourcePicker, Object.assign({}, field, {
+            return (0,jsx_runtime.jsx)(CloudRulesSourcePicker, Object.assign({}, field, {
               onChange: ds => {
                 var _ds$name;
 
-                // reset location if switching data sources, as different rules source will have different groups and namespaces
                 setValue('location', undefined);
                 onChange((_ds$name = ds === null || ds === void 0 ? void 0 : ds.name) !== null && _ds$name !== void 0 ? _ds$name : null);
               }
@@ -5658,17 +5355,17 @@ const AlertType = _ref => {
 };
 
 function getAvailableRuleTypes() {
-  const canCreateGrafanaRules = context_srv/* contextSrv.hasPermission */.Vt.hasPermission(app_types/* AccessControlAction.AlertingRuleCreate */.bW.AlertingRuleCreate);
-  const canCreateCloudRules = context_srv/* contextSrv.hasPermission */.Vt.hasPermission(app_types/* AccessControlAction.AlertingRuleExternalWrite */.bW.AlertingRuleExternalWrite);
-  const defaultRuleType = canCreateGrafanaRules ? rule_form/* RuleFormType.grafana */.$.grafana : rule_form/* RuleFormType.cloudAlerting */.$.cloudAlerting;
+  const canCreateGrafanaRules = context_srv.Vt.hasPermission(app_types.bW.AlertingRuleCreate);
+  const canCreateCloudRules = context_srv.Vt.hasPermission(app_types.bW.AlertingRuleExternalWrite);
+  const defaultRuleType = canCreateGrafanaRules ? rule_form.$.grafana : rule_form.$.cloudAlerting;
   const enabledRuleTypes = [];
 
   if (canCreateGrafanaRules) {
-    enabledRuleTypes.push(rule_form/* RuleFormType.grafana */.$.grafana);
+    enabledRuleTypes.push(rule_form.$.grafana);
   }
 
   if (canCreateCloudRules) {
-    enabledRuleTypes.push(rule_form/* RuleFormType.cloudAlerting */.$.cloudAlerting, rule_form/* RuleFormType.cloudRecording */.$.cloudRecording);
+    enabledRuleTypes.push(rule_form.$.cloudAlerting, rule_form.$.cloudRecording);
   }
 
   return {
@@ -5691,7 +5388,7 @@ const AlertType_getStyles = theme => ({
     align-items: flex-end;
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/ExpressionEditor.tsx
+;
 var _div;
 
 
@@ -5721,7 +5418,7 @@ const ExpressionEditor = _ref => {
     error,
     loading,
     value: dataSource
-  } = (0,useAsync/* default */.Z)(() => {
+  } = (0,useAsync.Z)(() => {
     return (0,grafana_runtime_src.getDataSourceSrv)().get(dataSourceName);
   }, [dataSourceName]);
   const onChangeQuery = (0,react.useCallback)(query => {
@@ -5735,13 +5432,13 @@ const ExpressionEditor = _ref => {
 
   if (error || !dataSource || !(dataSource !== null && dataSource !== void 0 && (_dataSource$component = dataSource.components) !== null && _dataSource$component !== void 0 && _dataSource$component.QueryEditor)) {
     const errorMessage = (error === null || error === void 0 ? void 0 : error.message) || 'Data source plugin does not export any Query Editor component';
-    return _div || (_div = /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    return _div || (_div = (0,jsx_runtime.jsxs)("div", {
       children: ["Could not load query editor due to: ", errorMessage]
     }));
   }
 
   const QueryEditor = dataSource === null || dataSource === void 0 ? void 0 : (_dataSource$component2 = dataSource.components) === null || _dataSource$component2 === void 0 ? void 0 : _dataSource$component2.QueryEditor;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(QueryEditor, {
+  return (0,jsx_runtime.jsx)(QueryEditor, {
     query: query,
     queries: [query],
     app: grafana_data_src.CoreApp.CloudAlerting,
@@ -5770,47 +5467,30 @@ function useQueryMappers(dataSourceName) {
     }
   }, [dataSourceName]);
 }
-// EXTERNAL MODULE: ./packages/grafana-e2e-selectors/src/index.ts + 3 modules
 var grafana_e2e_selectors_src = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/utils/query.ts
 var utils_query = __webpack_require__("./public/app/core/utils/query.ts");
-// EXTERNAL MODULE: ./public/app/features/expressions/types.ts
 var expressions_types = __webpack_require__("./public/app/features/expressions/types.ts");
-// EXTERNAL MODULE: ./public/app/features/expressions/utils/expressionTypes.ts
 var expressionTypes = __webpack_require__("./public/app/features/expressions/utils/expressionTypes.ts");
-// EXTERNAL MODULE: ./public/app/features/plugins/datasource_srv.ts
 var datasource_srv = __webpack_require__("./public/app/features/plugins/datasource_srv.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/state/AlertingQueryRunner.ts + 1 modules
 var AlertingQueryRunner = __webpack_require__("./public/app/features/alerting/unified/state/AlertingQueryRunner.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-beautiful-dnd-virtual-27e4b658e7/0/cache/react-beautiful-dnd-npm-13.1.0-fcf5568b1c-12b7e9fbe8.zip/node_modules/react-beautiful-dnd/dist/react-beautiful-dnd.esm.js + 4 modules
 var react_beautiful_dnd_esm = __webpack_require__("./.yarn/__virtual__/react-beautiful-dnd-virtual-27e4b658e7/0/cache/react-beautiful-dnd-npm-13.1.0-fcf5568b1c-12b7e9fbe8.zip/node_modules/react-beautiful-dnd/dist/react-beautiful-dnd.esm.js");
-// EXTERNAL MODULE: ./public/app/core/components/QueryOperationRow/QueryOperationRow.tsx
 var QueryOperationRow = __webpack_require__("./public/app/core/components/QueryOperationRow/QueryOperationRow.tsx");
-// EXTERNAL MODULE: ./public/app/features/query/components/QueryEditorRow.tsx + 2 modules
 var QueryEditorRow = __webpack_require__("./public/app/features/query/components/QueryEditorRow.tsx");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/constants.ts
 var constants = __webpack_require__("./public/app/features/alerting/unified/utils/constants.ts");
-// EXTERNAL MODULE: ./packages/grafana-schema/src/index.ts + 1 modules
 var grafana_schema_src = __webpack_require__("./packages/grafana-schema/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/app_events.ts
 var app_events = __webpack_require__("./public/app/core/app_events.ts");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/hooks/useVizHeight.ts
+;
 
 
 function useVizHeight(data, pluginId, frameIndex) {
   const theme = (0,src.useTheme2)();
 
-  if (pluginId === constants/* TIMESERIES */.GC || pluginId === constants/* STAT */.Kd || dataIsEmpty(data)) {
+  if (pluginId === constants.GC || pluginId === constants.Kd || dataIsEmpty(data)) {
     return 200;
   }
 
   const values = data.series[frameIndex].fields[0].values.length;
   const rowHeight = theme.spacing.gridSize * 5;
-  /*
-   Calculate how if we can make  the table smaller than 200px
-   for when we only have 1-2 values
-   The extra rowHeight is to accommodate the header.
-  */
 
   const tableHeight = values * rowHeight + rowHeight;
   return tableHeight >= 200 ? 200 : tableHeight;
@@ -5819,9 +5499,8 @@ function useVizHeight(data, pluginId, frameIndex) {
 function dataIsEmpty(data) {
   return !data || !data.series[0] || !data.series[0].fields[0] || !data.series[0].fields[0].values;
 }
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/PanelPluginsButtonGroup.tsx
 var PanelPluginsButtonGroup = __webpack_require__("./public/app/features/alerting/unified/components/PanelPluginsButtonGroup.tsx");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/VizWrapper.tsx
+;
 
 
 
@@ -5855,14 +5534,14 @@ const VizWrapper = _ref => {
         unit: defaultUnit(data),
         custom: Object.assign({}, fieldConfig.defaults.custom, {
           thresholdsStyle: {
-            mode: grafana_schema_src/* GraphTresholdsStyleMode.Line */.i3.Line
+            mode: grafana_schema_src.i3.Line
           }
         })
       })
     }));
   }, [thresholds, setFieldConfig, data]);
   const context = (0,react.useMemo)(() => ({
-    eventBus: app_events/* default */.Z,
+    eventBus: app_events.Z,
     canEditThresholds: true,
     onThresholdsChange: onThresholdsChange
   }), [onThresholdsChange]);
@@ -5871,15 +5550,15 @@ const VizWrapper = _ref => {
     return null;
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: styles.wrapper,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    children: [(0,jsx_runtime.jsx)("div", {
       className: styles.buttonGroup,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(PanelPluginsButtonGroup/* PanelPluginsButtonGroup */.j, {
+      children: (0,jsx_runtime.jsx)(PanelPluginsButtonGroup.j, {
         onChange: changePanel,
         value: currentPanel
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(dist_index_esm/* default */.Z, {
+    }), (0,jsx_runtime.jsx)(dist_index_esm.Z, {
       children: _ref2 => {
         let {
           width
@@ -5889,14 +5568,14 @@ const VizWrapper = _ref => {
           return null;
         }
 
-        return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        return (0,jsx_runtime.jsx)("div", {
           style: {
             height: `${vizHeight}px`,
             width: `${width}px`
           },
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.PanelContextProvider, {
+          children: (0,jsx_runtime.jsx)(src.PanelContextProvider, {
             value: context,
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_runtime_src.PanelRenderer, {
+            children: (0,jsx_runtime.jsx)(grafana_runtime_src.PanelRenderer, {
               height: vizHeight,
               width: width,
               data: data,
@@ -5944,14 +5623,14 @@ function defaultFieldConfig(thresholds, data) {
       unit: defaultUnit(data),
       custom: {
         thresholdsStyle: {
-          mode: grafana_schema_src/* GraphTresholdsStyleMode.Line */.i3.Line
+          mode: grafana_schema_src.i3.Line
         }
       }
     },
     overrides: []
   };
 }
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/QueryWrapper.tsx
+;
 
 
 
@@ -5979,25 +5658,25 @@ const QueryWrapper = _ref => {
     onChangeThreshold
   } = _ref;
   const styles = (0,src.useStyles2)(QueryWrapper_getStyles);
-  const isExpression = (0,guards/* isExpressionQuery */.j)(query.model);
-  const [pluginId, changePluginId] = (0,react.useState)(isExpression ? constants/* TABLE */.Fe : constants/* TIMESERIES */.GC);
+  const isExpression = (0,guards.j)(query.model);
+  const [pluginId, changePluginId] = (0,react.useState)(isExpression ? constants.Fe : constants.GC);
 
   const renderTimePicker = (query, index) => {
     var _query$relativeTimeRa;
 
-    if ((0,guards/* isExpressionQuery */.j)(query.model) || !onChangeTimeRange) {
+    if ((0,guards.j)(query.model) || !onChangeTimeRange) {
       return null;
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(src.RelativeTimeRangePicker, {
+    return (0,jsx_runtime.jsx)(src.RelativeTimeRangePicker, {
       timeRange: (_query$relativeTimeRa = query.relativeTimeRange) !== null && _query$relativeTimeRa !== void 0 ? _query$relativeTimeRa : (0,grafana_data_src.getDefaultRelativeTimeRange)(),
       onChange: range => onChangeTimeRange(range, index)
     });
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: styles.wrapper,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(QueryEditorRow/* QueryEditorRow */.x, {
+    children: (0,jsx_runtime.jsx)(QueryEditorRow.x, {
       alerting: true,
       dataSource: dsSettings,
       onChangeDataSource: !isExpression ? settings => onChangeDataSource(settings, index) : undefined,
@@ -6012,7 +5691,7 @@ const QueryWrapper = _ref => {
       queries: queries,
       renderHeaderExtras: () => renderTimePicker(query, index),
       app: grafana_data_src.CoreApp.UnifiedAlerting,
-      visualization: data.state !== grafana_data_src.LoadingState.NotStarted ? /*#__PURE__*/(0,jsx_runtime.jsx)(VizWrapper, {
+      visualization: data.state !== grafana_data_src.LoadingState.NotStarted ? (0,jsx_runtime.jsx)(VizWrapper, {
         data: data,
         changePanel: changePluginId,
         currentPanel: pluginId,
@@ -6028,7 +5707,7 @@ const EmptyQueryWrapper = _ref2 => {
     children
   } = _ref2;
   const styles = (0,src.useStyles2)(QueryWrapper_getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: styles.wrapper,
     children: children
   });
@@ -6042,7 +5721,7 @@ const QueryWrapper_getStyles = theme => ({
     border-radius: ${theme.shape.borderRadius(1)};
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/QueryRows.tsx
+;
 var _Card$Figure;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -6093,7 +5772,7 @@ class QueryRows extends react.PureComponent {
       } = this.props;
       const referencedRefId = queries[index].refId;
       onQueriesChange(queries.map(query => {
-        if (!(0,guards/* isExpressionQuery */.j)(query.model)) {
+        if (!(0,guards.j)(query.model)) {
           return query;
         }
 
@@ -6101,7 +5780,6 @@ class QueryRows extends react.PureComponent {
           return Object.assign({}, query, {
             model: Object.assign({}, query.model, {
               conditions: query.model.conditions.map((condition, conditionIndex) => {
-                // Only update the first condition for a given refId.
                 if (condition.query.params[0] === referencedRefId && conditionIndex === 0) {
                   return Object.assign({}, condition, {
                     evaluator: Object.assign({}, condition.evaluator, {
@@ -6139,7 +5817,7 @@ class QueryRows extends react.PureComponent {
       const {
         queries,
         onQueriesChange
-      } = this.props; // find what queries still have a reference to the old name
+      } = this.props; 
 
       const previousRefId = queries[index].refId;
       const newRefId = query.refId;
@@ -6197,7 +5875,7 @@ class QueryRows extends react.PureComponent {
       const record = {};
 
       for (const query of queries) {
-        if (!(0,guards/* isExpressionQuery */.j)(query.model)) {
+        if (!(0,guards.j)(query.model)) {
           continue;
         }
 
@@ -6249,13 +5927,13 @@ class QueryRows extends react.PureComponent {
       queries
     } = this.props;
     const thresholdByRefId = this.getThresholdsForQueries(queries);
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(react_beautiful_dnd_esm/* DragDropContext */.Z5, {
+    return (0,jsx_runtime.jsx)(react_beautiful_dnd_esm.Z5, {
       onDragEnd: this.onDragEnd,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(react_beautiful_dnd_esm/* Droppable */.bK, {
+      children: (0,jsx_runtime.jsx)(react_beautiful_dnd_esm.bK, {
         droppableId: "alerting-queries",
         direction: "vertical",
         children: provided => {
-          return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", Object.assign({
+          return (0,jsx_runtime.jsxs)("div", Object.assign({
             ref: provided.innerRef
           }, provided.droppableProps, {
             children: [queries.map((query, index) => {
@@ -6268,11 +5946,11 @@ class QueryRows extends react.PureComponent {
               const dsSettings = this.getDataSourceSettings(query);
 
               if (!dsSettings) {
-                return /*#__PURE__*/(0,jsx_runtime.jsx)(DatasourceNotFound, {
+                return (0,jsx_runtime.jsx)(DatasourceNotFound, {
                   index: index,
                   model: query.model,
                   onUpdateDatasource: () => {
-                    const defaultDataSource = (0,datasource_srv/* getDatasourceSrv */.ak)().getInstanceSettings(null);
+                    const defaultDataSource = (0,datasource_srv.ak)().getInstanceSettings(null);
 
                     if (defaultDataSource) {
                       this.onChangeDataSource(defaultDataSource, index);
@@ -6284,7 +5962,7 @@ class QueryRows extends react.PureComponent {
                 }, `${query.refId}-${index}`);
               }
 
-              return /*#__PURE__*/(0,jsx_runtime.jsx)(QueryWrapper, {
+              return (0,jsx_runtime.jsx)(QueryWrapper, {
                 index: index,
                 dsSettings: dsSettings,
                 data: data,
@@ -6333,32 +6011,32 @@ const DatasourceNotFound = _ref => {
     onUpdateDatasource();
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(EmptyQueryWrapper, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)(QueryOperationRow/* QueryOperationRow */.t, {
+  return (0,jsx_runtime.jsx)(EmptyQueryWrapper, {
+    children: (0,jsx_runtime.jsxs)(QueryOperationRow.t, {
       title: refId,
       draggable: true,
       index: index,
       id: refId,
       isOpen: true,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(src.Card, {
+      children: [(0,jsx_runtime.jsxs)(src.Card, {
         heading: "This datasource has been removed",
         description: 'The datasource for this query was not found, it was either removed or is not installed correctly.',
-        children: [_Card$Figure || (_Card$Figure = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Card.Figure, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Icon, {
+        children: [_Card$Figure || (_Card$Figure = (0,jsx_runtime.jsx)(src.Card.Figure, {
+          children: (0,jsx_runtime.jsx)(src.Icon, {
             name: "question-circle"
           })
-        })), /*#__PURE__*/(0,jsx_runtime.jsxs)(src.Card.Actions, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+        })), (0,jsx_runtime.jsxs)(src.Card.Actions, {
+          children: [(0,jsx_runtime.jsx)(src.Button, {
             variant: "secondary",
             onClick: handleUpdateDatasource,
             children: "Update datasource"
-          }, "update"), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+          }, "update"), (0,jsx_runtime.jsx)(src.Button, {
             variant: "destructive",
             onClick: onRemoveQuery,
             children: "Remove query"
           }, "remove")]
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Card.SecondaryActions, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+        }), (0,jsx_runtime.jsx)(src.Card.SecondaryActions, {
+          children: (0,jsx_runtime.jsx)(src.Button, {
             onClick: toggleDetails,
             icon: showDetails ? 'angle-up' : 'angle-down',
             fill: "text",
@@ -6366,9 +6044,9 @@ const DatasourceNotFound = _ref => {
             children: "Show details"
           }, "details")
         })]
-      }), showDetails && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("pre", {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+      }), showDetails && (0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsx)("pre", {
+          children: (0,jsx_runtime.jsx)("code", {
             children: JSON.stringify(model, null, 2)
           })
         })
@@ -6376,7 +6054,7 @@ const DatasourceNotFound = _ref => {
     })
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/QueryEditor.tsx
+;
 function QueryEditor_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -6432,7 +6110,7 @@ class QueryEditor extends react.PureComponent {
       const {
         queries
       } = this;
-      const defaultDataSource = (0,datasource_srv/* getDatasourceSrv */.ak)().getInstanceSettings('default');
+      const defaultDataSource = (0,datasource_srv.ak)().getInstanceSettings('default');
 
       if (!defaultDataSource) {
         return;
@@ -6455,10 +6133,10 @@ class QueryEditor extends react.PureComponent {
         queries
       } = this;
       this.onChangeQueries(addQuery(queries, {
-        datasourceUid: ExpressionDatasource/* ExpressionDatasourceUID */.Yq,
-        model: ExpressionDatasource/* dataSource.newQuery */.mV.newQuery({
-          type: expressions_types/* ExpressionQueryType.classic */.Us.classic,
-          conditions: [expressionTypes/* defaultCondition */.R]
+        datasourceUid: ExpressionDatasource.Yq,
+        model: ExpressionDatasource.mV.newQuery({
+          type: expressions_types.Us.classic,
+          conditions: [expressionTypes.R]
         })
       }));
     });
@@ -6466,7 +6144,7 @@ class QueryEditor extends react.PureComponent {
     this.state = {
       panelDataByRefId: {}
     };
-    this.runner = new AlertingQueryRunner/* AlertingQueryRunner */.v();
+    this.runner = new AlertingQueryRunner.v();
     this.queries = (_props$value = props.value) !== null && _props$value !== void 0 ? _props$value : [];
   }
 
@@ -6491,7 +6169,7 @@ class QueryEditor extends react.PureComponent {
     const isRunning = this.isRunning();
 
     if (isRunning) {
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+      return (0,jsx_runtime.jsx)(src.Button, {
         icon: "fa fa-spinner",
         type: "button",
         variant: "destructive",
@@ -6500,7 +6178,7 @@ class QueryEditor extends react.PureComponent {
       });
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+    return (0,jsx_runtime.jsx)(src.Button, {
       icon: "sync",
       type: "button",
       onClick: this.onRunQueries,
@@ -6516,25 +6194,25 @@ class QueryEditor extends react.PureComponent {
       panelDataByRefId
     } = this.state;
     const styles = QueryEditor_getStyles(grafana_runtime_src.config.theme2);
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    return (0,jsx_runtime.jsxs)("div", {
       className: styles.container,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(QueryRows, {
+      children: [(0,jsx_runtime.jsx)(QueryRows, {
         data: panelDataByRefId,
         queries: value,
         onQueriesChange: this.onChangeQueries,
         onDuplicateQuery: this.onDuplicateQuery,
         onRunQueries: this.onRunQueries
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)(src.HorizontalGroup, {
+      }), (0,jsx_runtime.jsxs)(src.HorizontalGroup, {
         spacing: "sm",
         align: "flex-start",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+        children: [(0,jsx_runtime.jsx)(src.Button, {
           type: "button",
           icon: "plus",
           onClick: this.onNewAlertingQuery,
           variant: "secondary",
-          "aria-label": grafana_e2e_selectors_src/* selectors.components.QueryTab.addQuery */.wl.components.QueryTab.addQuery,
+          "aria-label": grafana_e2e_selectors_src.wl.components.QueryTab.addQuery,
           children: "Add query"
-        }), grafana_runtime_src.config.expressionsEnabled && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+        }), grafana_runtime_src.config.expressionsEnabled && (0,jsx_runtime.jsx)(src.Button, {
           type: "button",
           icon: "plus",
           onClick: this.onNewExpressionQuery,
@@ -6548,7 +6226,7 @@ class QueryEditor extends react.PureComponent {
 }
 
 const addQuery = (queries, queryToAdd) => {
-  const refId = (0,utils_query/* getNextRefIdChar */.Hs)(queries);
+  const refId = (0,utils_query.Hs)(queries);
   const query = Object.assign({}, queryToAdd, {
     refId,
     queryType: '',
@@ -6562,7 +6240,7 @@ const addQuery = (queries, queryToAdd) => {
 };
 
 const defaultTimeRange = model => {
-  if ((0,guards/* isExpressionQuery */.j)(model)) {
+  if ((0,guards.j)(model)) {
     return;
   }
 
@@ -6585,7 +6263,7 @@ const QueryEditor_getStyles = (0,src.stylesFactory)(theme => {
     `
   };
 });
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/query-and-alert-condition/Query.tsx
+;
 const Query_excluded = ["ref"],
       Query_excluded2 = ["ref"];
 
@@ -6608,24 +6286,24 @@ const Query = () => {
     formState: {
       errors
     }
-  } = (0,index_esm/* useFormContext */.Gc)();
+  } = (0,index_esm.Gc)();
   const type = watch('type');
   const dataSourceName = watch('dataSourceName');
-  const isGrafanaManagedType = type === rule_form/* RuleFormType.grafana */.$.grafana;
-  const isCloudAlertRuleType = type === rule_form/* RuleFormType.cloudAlerting */.$.cloudAlerting;
-  const isRecordingRuleType = type === rule_form/* RuleFormType.cloudRecording */.$.cloudRecording;
+  const isGrafanaManagedType = type === rule_form.$.grafana;
+  const isCloudAlertRuleType = type === rule_form.$.cloudAlerting;
+  const isRecordingRuleType = type === rule_form.$.cloudRecording;
   const showCloudExpressionEditor = (isRecordingRuleType || isCloudAlertRuleType) && dataSourceName;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [showCloudExpressionEditor && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+  return (0,jsx_runtime.jsxs)("div", {
+    children: [showCloudExpressionEditor && (0,jsx_runtime.jsx)(src.Field, {
       error: (_errors$expression = errors.expression) === null || _errors$expression === void 0 ? void 0 : _errors$expression.message,
       invalid: !!((_errors$expression2 = errors.expression) !== null && _errors$expression2 !== void 0 && _errors$expression2.message),
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+      children: (0,jsx_runtime.jsx)(src.InputControl, {
         name: "expression",
         render: _ref => {
           let {} = _ref,
               field = Query_objectWithoutPropertiesLoose(_ref.field, Query_excluded);
 
-          return /*#__PURE__*/(0,jsx_runtime.jsx)(ExpressionEditor, Object.assign({}, field, {
+          return (0,jsx_runtime.jsx)(ExpressionEditor, Object.assign({}, field, {
             dataSourceName: dataSourceName
           }));
         },
@@ -6637,16 +6315,16 @@ const Query = () => {
           }
         }
       })
-    }), isGrafanaManagedType && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+    }), isGrafanaManagedType && (0,jsx_runtime.jsx)(src.Field, {
       invalid: !!errors.queries,
       error: !!errors.queries && 'Must provide at least one valid query.' || undefined,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+      children: (0,jsx_runtime.jsx)(src.InputControl, {
         name: "queries",
         render: _ref2 => {
           let {} = _ref2,
               field = Query_objectWithoutPropertiesLoose(_ref2.field, Query_excluded2);
 
-          return /*#__PURE__*/(0,jsx_runtime.jsx)(QueryEditor, Object.assign({}, field));
+          return (0,jsx_runtime.jsx)(QueryEditor, Object.assign({}, field));
         },
         control: control,
         rules: {
@@ -6656,7 +6334,7 @@ const Query = () => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/query-and-alert-condition/QueryAndAlertConditionStep.tsx
+;
 var _Query, _ConditionField;
 
 
@@ -6674,18 +6352,18 @@ const QueryAndAlertConditionStep = _ref => {
   } = _ref;
   const {
     watch
-  } = (0,index_esm/* useFormContext */.Gc)();
+  } = (0,index_esm.Gc)();
   const type = watch('type');
-  const isGrafanaManagedType = type === rule_form/* RuleFormType.grafana */.$.grafana;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(RuleEditorSection, {
+  const isGrafanaManagedType = type === rule_form.$.grafana;
+  return (0,jsx_runtime.jsxs)(RuleEditorSection, {
     stepNo: 1,
     title: "Set a query and alert condition",
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(AlertType, {
+    children: [(0,jsx_runtime.jsx)(AlertType, {
       editingExistingRule: editingExistingRule
-    }), type && (_Query || (_Query = /*#__PURE__*/(0,jsx_runtime.jsx)(Query, {}))), isGrafanaManagedType && (_ConditionField || (_ConditionField = /*#__PURE__*/(0,jsx_runtime.jsx)(ConditionField, {})))]
+    }), type && (_Query || (_Query = (0,jsx_runtime.jsx)(Query, {}))), isGrafanaManagedType && (_ConditionField || (_ConditionField = (0,jsx_runtime.jsx)(ConditionField, {})))]
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/AlertRuleForm.tsx
+;
 var _GrafanaEvaluationBeh, _CloudEvaluationBehav, _DetailsStep;
 
 
@@ -6719,23 +6397,23 @@ const AlertRuleForm = _ref => {
   } = _ref;
   const styles = (0,src.useStyles2)(AlertRuleForm_getStyles);
   const dispatch = (0,es.useDispatch)();
-  const notifyApp = (0,appNotification/* useAppNotification */.iG)();
-  const [queryParams] = (0,useQueryParams/* useQueryParams */.K)();
+  const notifyApp = (0,appNotification.iG)();
+  const [queryParams] = (0,useQueryParams.K)();
   const [showEditYaml, setShowEditYaml] = (0,react.useState)(false);
   const returnTo = (_ref2 = queryParams['returnTo']) !== null && _ref2 !== void 0 ? _ref2 : '/alerting/list';
   const [showDeleteModal, setShowDeleteModal] = (0,react.useState)(false);
   const defaultValues = (0,react.useMemo)(() => {
     if (existing) {
-      return (0,utils_rule_form/* rulerRuleToFormValues */.DQ)(existing);
+      return (0,utils_rule_form.DQ)(existing);
     }
 
-    return Object.assign({}, (0,utils_rule_form/* getDefaultFormValues */.uZ)(), {
-      queries: (0,utils_rule_form/* getDefaultQueries */.s0)()
+    return Object.assign({}, (0,utils_rule_form.uZ)(), {
+      queries: (0,utils_rule_form.s0)()
     }, queryParams['defaults'] ? JSON.parse(queryParams['defaults']) : {}, {
-      type: rule_form/* RuleFormType.grafana */.$.grafana
+      type: rule_form.$.grafana
     });
   }, [existing, queryParams]);
-  const formAPI = (0,index_esm/* useForm */.cI)({
+  const formAPI = (0,index_esm.cI)({
     mode: 'onSubmit',
     defaultValues,
     shouldFocusError: true
@@ -6746,14 +6424,14 @@ const AlertRuleForm = _ref => {
   } = formAPI;
   const type = watch('type');
   const dataSourceName = watch('dataSourceName');
-  const showStep2 = Boolean(type && (type === rule_form/* RuleFormType.grafana */.$.grafana || !!dataSourceName));
-  const submitState = (0,useUnifiedAlertingSelector/* useUnifiedAlertingSelector */._)(state => state.ruleForm.saveRule) || redux/* initialAsyncRequestState */.oq;
-  (0,useCleanup/* useCleanup */.x)(state => state.unifiedAlerting.ruleForm.saveRule);
+  const showStep2 = Boolean(type && (type === rule_form.$.grafana || !!dataSourceName));
+  const submitState = (0,useUnifiedAlertingSelector._)(state => state.ruleForm.saveRule) || redux.oq;
+  (0,useCleanup.x)(state => state.unifiedAlerting.ruleForm.saveRule);
 
   const submit = (values, exitOnSave) => {
     var _values$annotations$m, _values$annotations, _values$labels$map$fi, _values$labels;
 
-    dispatch((0,actions/* saveRuleFormAction */.wy)({
+    dispatch((0,actions.wy)({
       values: Object.assign({}, defaultValues, values, {
         annotations: (_values$annotations$m = (_values$annotations = values.annotations) === null || _values$annotations === void 0 ? void 0 : _values$annotations.map(_ref3 => {
           let {
@@ -6794,8 +6472,8 @@ const AlertRuleForm = _ref => {
 
   const deleteRule = () => {
     if (existing) {
-      const identifier = rule_id/* fromRulerRule */.Zk(existing.ruleSourceName, existing.namespace, existing.group.name, existing.rule);
-      dispatch((0,actions/* deleteRuleAction */.hS)(identifier, {
+      const identifier = rule_id.Zk(existing.ruleSourceName, existing.namespace, existing.group.name, existing.rule);
+      dispatch((0,actions.hS)(identifier, {
         navigateTo: '/alerting/list'
       }));
     }
@@ -6805,68 +6483,68 @@ const AlertRuleForm = _ref => {
     notifyApp.error('There are errors in the form. Please correct them and try again!');
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(index_esm/* FormProvider */.RV, Object.assign({}, formAPI, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("form", {
+  return (0,jsx_runtime.jsxs)(index_esm.RV, Object.assign({}, formAPI, {
+    children: [(0,jsx_runtime.jsxs)("form", {
       onSubmit: e => e.preventDefault(),
       className: styles.form,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(src.PageToolbar, {
+      children: [(0,jsx_runtime.jsxs)(src.PageToolbar, {
         title: `${existing ? 'Edit' : 'Create'} alert rule`,
         pageIcon: "bell",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(react_router_dom.Link, {
+        children: [(0,jsx_runtime.jsx)(react_router_dom.Link, {
           to: returnTo,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+          children: (0,jsx_runtime.jsx)(src.Button, {
             variant: "secondary",
             disabled: submitState.loading,
             type: "button",
             fill: "outline",
             children: "Cancel"
           })
-        }), existing ? /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+        }), existing ? (0,jsx_runtime.jsx)(src.Button, {
           variant: "destructive",
           type: "button",
           onClick: () => setShowDeleteModal(true),
           children: "Delete"
-        }) : null, isCortexLokiOrRecordingRule(watch) && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+        }) : null, isCortexLokiOrRecordingRule(watch) && (0,jsx_runtime.jsx)(src.Button, {
           variant: "secondary",
           type: "button",
           onClick: () => setShowEditYaml(true),
           disabled: submitState.loading,
           children: "Edit yaml"
-        }), /*#__PURE__*/(0,jsx_runtime.jsxs)(src.Button, {
+        }), (0,jsx_runtime.jsxs)(src.Button, {
           variant: "primary",
           type: "button",
           onClick: handleSubmit(values => submit(values, false), onInvalid),
           disabled: submitState.loading,
-          children: [submitState.loading && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Spinner, {
+          children: [submitState.loading && (0,jsx_runtime.jsx)(src.Spinner, {
             className: styles.buttonSpinner,
             inline: true
           }), "Save"]
-        }), /*#__PURE__*/(0,jsx_runtime.jsxs)(src.Button, {
+        }), (0,jsx_runtime.jsxs)(src.Button, {
           variant: "primary",
           type: "button",
           onClick: handleSubmit(values => submit(values, true), onInvalid),
           disabled: submitState.loading,
-          children: [submitState.loading && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Spinner, {
+          children: [submitState.loading && (0,jsx_runtime.jsx)(src.Spinner, {
             className: styles.buttonSpinner,
             inline: true
           }), "Save and exit"]
         })]
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: styles.contentOuter,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.CustomScrollbar, {
+        children: (0,jsx_runtime.jsx)(src.CustomScrollbar, {
           autoHeightMin: "100%",
           hideHorizontalTrack: true,
-          children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+          children: (0,jsx_runtime.jsxs)("div", {
             className: styles.contentInner,
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)(QueryAndAlertConditionStep, {
+            children: [(0,jsx_runtime.jsx)(QueryAndAlertConditionStep, {
               editingExistingRule: !!existing
-            }), showStep2 && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-              children: [type === rule_form/* RuleFormType.grafana */.$.grafana ? _GrafanaEvaluationBeh || (_GrafanaEvaluationBeh = /*#__PURE__*/(0,jsx_runtime.jsx)(GrafanaEvaluationBehavior, {})) : _CloudEvaluationBehav || (_CloudEvaluationBehav = /*#__PURE__*/(0,jsx_runtime.jsx)(CloudEvaluationBehavior, {})), _DetailsStep || (_DetailsStep = /*#__PURE__*/(0,jsx_runtime.jsx)(DetailsStep, {}))]
+            }), showStep2 && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+              children: [type === rule_form.$.grafana ? _GrafanaEvaluationBeh || (_GrafanaEvaluationBeh = (0,jsx_runtime.jsx)(GrafanaEvaluationBehavior, {})) : _CloudEvaluationBehav || (_CloudEvaluationBehav = (0,jsx_runtime.jsx)(CloudEvaluationBehavior, {})), _DetailsStep || (_DetailsStep = (0,jsx_runtime.jsx)(DetailsStep, {}))]
             })]
           })
         })
       })]
-    }), showDeleteModal ? /*#__PURE__*/(0,jsx_runtime.jsx)(src.ConfirmModal, {
+    }), showDeleteModal ? (0,jsx_runtime.jsx)(src.ConfirmModal, {
       isOpen: true,
       title: "Delete rule",
       body: "Deleting this rule will permanently remove it. Are you sure you want to delete this rule?",
@@ -6874,7 +6552,7 @@ const AlertRuleForm = _ref => {
       icon: "exclamation-triangle",
       onConfirm: deleteRule,
       onDismiss: () => setShowDeleteModal(false)
-    }) : null, showEditYaml ? /*#__PURE__*/(0,jsx_runtime.jsx)(RuleInspector, {
+    }) : null, showEditYaml ? (0,jsx_runtime.jsx)(RuleInspector, {
       onClose: () => setShowEditYaml(false)
     }) : null]
   }));
@@ -6882,7 +6560,7 @@ const AlertRuleForm = _ref => {
 
 const isCortexLokiOrRecordingRule = watch => {
   const [ruleType, dataSourceName] = watch(['type', 'dataSourceName']);
-  return (ruleType === rule_form/* RuleFormType.cloudAlerting */.$.cloudAlerting || ruleType === rule_form/* RuleFormType.cloudRecording */.$.cloudRecording) && dataSourceName !== '';
+  return (ruleType === rule_form.$.cloudAlerting || ruleType === rule_form.$.cloudRecording) && dataSourceName !== '';
 };
 
 const AlertRuleForm_getStyles = theme => {
@@ -6915,11 +6593,9 @@ const AlertRuleForm_getStyles = theme => {
     `
   };
 };
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/hooks/useIsRuleEditable.ts
 var useIsRuleEditable = __webpack_require__("./public/app/features/alerting/unified/hooks/useIsRuleEditable.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/accessControlHooks.ts
 var accessControlHooks = __webpack_require__("./public/app/features/alerting/unified/utils/accessControlHooks.ts");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/RuleEditor.tsx
+;
 var _Page$Contents, _AlertWarning, _AlertWarning2, _AlertWarning3, _AlertWarning4, _Page$Contents2, _AlertRuleForm, _LinkButton;
 
 
@@ -6942,34 +6618,34 @@ const ExistingRuleEditor = _ref => {
   let {
     identifier
   } = _ref;
-  (0,useCleanup/* useCleanup */.x)(state => state.unifiedAlerting.ruleForm.existingRule);
+  (0,useCleanup.x)(state => state.unifiedAlerting.ruleForm.existingRule);
   const {
     loading,
     result,
     error,
     dispatched
-  } = (0,useUnifiedAlertingSelector/* useUnifiedAlertingSelector */._)(state => state.ruleForm.existingRule);
+  } = (0,useUnifiedAlertingSelector._)(state => state.ruleForm.existingRule);
   const dispatch = (0,es.useDispatch)();
   const {
     isEditable
-  } = (0,useIsRuleEditable/* useIsRuleEditable */.M)(rule_id/* ruleIdentifierToRuleSourceName */.s0(identifier), result === null || result === void 0 ? void 0 : result.rule);
+  } = (0,useIsRuleEditable.M)(rule_id.s0(identifier), result === null || result === void 0 ? void 0 : result.rule);
   (0,react.useEffect)(() => {
     if (!dispatched) {
-      dispatch((0,actions/* fetchEditableRuleAction */.on)(identifier));
+      dispatch((0,actions.on)(identifier));
     }
   }, [dispatched, dispatch, identifier]);
 
   if (loading || isEditable === undefined) {
-    return _Page$Contents || (_Page$Contents = /*#__PURE__*/(0,jsx_runtime.jsx)(Page/* default.Contents */.Z.Contents, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.LoadingPlaceholder, {
+    return _Page$Contents || (_Page$Contents = (0,jsx_runtime.jsx)(Page.Z.Contents, {
+      children: (0,jsx_runtime.jsx)(src.LoadingPlaceholder, {
         text: "Loading rule..."
       })
     }));
   }
 
   if (error) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(Page/* default.Contents */.Z.Contents, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Alert, {
+    return (0,jsx_runtime.jsx)(Page.Z.Contents, {
+      children: (0,jsx_runtime.jsx)(src.Alert, {
         severity: "error",
         title: "Failed to load rule",
         children: error.message
@@ -6978,20 +6654,20 @@ const ExistingRuleEditor = _ref => {
   }
 
   if (!result) {
-    return _AlertWarning || (_AlertWarning = /*#__PURE__*/(0,jsx_runtime.jsx)(AlertWarning, {
+    return _AlertWarning || (_AlertWarning = (0,jsx_runtime.jsx)(AlertWarning, {
       title: "Rule not found",
       children: "Sorry! This rule does not exist."
     }));
   }
 
   if (isEditable === false) {
-    return _AlertWarning2 || (_AlertWarning2 = /*#__PURE__*/(0,jsx_runtime.jsx)(AlertWarning, {
+    return _AlertWarning2 || (_AlertWarning2 = (0,jsx_runtime.jsx)(AlertWarning, {
       title: "Cannot edit rule",
       children: "Sorry! You do not have permission to edit this rule."
     }));
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(AlertRuleForm, {
+  return (0,jsx_runtime.jsx)(AlertRuleForm, {
     existing: result
   });
 };
@@ -7004,47 +6680,47 @@ const RuleEditor = _ref2 => {
   const {
     id
   } = match.params;
-  const identifier = rule_id/* tryParse */.OA(id, true);
+  const identifier = rule_id.OA(id, true);
   const {
     loading
-  } = (0,useAsync/* default */.Z)(async () => {
-    await dispatch((0,actions/* fetchAllPromBuildInfoAction */.dV)());
+  } = (0,useAsync.Z)(async () => {
+    await dispatch((0,actions.dV)());
   }, [dispatch]);
   const {
     canCreateGrafanaRules,
     canCreateCloudRules,
     canEditRules
-  } = (0,accessControlHooks/* useRulesAccess */.B)();
+  } = (0,accessControlHooks.B)();
 
   if (!identifier && !canCreateGrafanaRules && !canCreateCloudRules) {
-    return _AlertWarning3 || (_AlertWarning3 = /*#__PURE__*/(0,jsx_runtime.jsx)(AlertWarning, {
+    return _AlertWarning3 || (_AlertWarning3 = (0,jsx_runtime.jsx)(AlertWarning, {
       title: "Cannot create rules",
       children: "Sorry! You are not allowed to create rules."
     }));
   }
 
   if (identifier && !canEditRules(identifier.ruleSourceName)) {
-    return _AlertWarning4 || (_AlertWarning4 = /*#__PURE__*/(0,jsx_runtime.jsx)(AlertWarning, {
+    return _AlertWarning4 || (_AlertWarning4 = (0,jsx_runtime.jsx)(AlertWarning, {
       title: "Cannot edit rules",
       children: "Sorry! You are not allowed to edit rules."
     }));
   }
 
   if (loading) {
-    return _Page$Contents2 || (_Page$Contents2 = /*#__PURE__*/(0,jsx_runtime.jsx)(Page/* default.Contents */.Z.Contents, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.LoadingPlaceholder, {
+    return _Page$Contents2 || (_Page$Contents2 = (0,jsx_runtime.jsx)(Page.Z.Contents, {
+      children: (0,jsx_runtime.jsx)(src.LoadingPlaceholder, {
         text: "Loading..."
       })
     }));
   }
 
   if (identifier) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(ExistingRuleEditor, {
+    return (0,jsx_runtime.jsx)(ExistingRuleEditor, {
       identifier: identifier
     }, id);
   }
 
-  return _AlertRuleForm || (_AlertRuleForm = /*#__PURE__*/(0,jsx_runtime.jsx)(AlertRuleForm, {}));
+  return _AlertRuleForm || (_AlertRuleForm = (0,jsx_runtime.jsx)(AlertRuleForm, {}));
 };
 
 const AlertWarning = _ref3 => {
@@ -7052,13 +6728,13 @@ const AlertWarning = _ref3 => {
     title,
     children
   } = _ref3;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(src.Alert, {
+  return (0,jsx_runtime.jsxs)(src.Alert, {
     className: (0,src.useStyles2)(warningStyles).warning,
     severity: "warning",
     title: title,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+    children: [(0,jsx_runtime.jsx)("p", {
       children: children
-    }), _LinkButton || (_LinkButton = /*#__PURE__*/(0,jsx_runtime.jsx)(src.LinkButton, {
+    }), _LinkButton || (_LinkButton = (0,jsx_runtime.jsx)(src.LinkButton, {
       href: "alerting/list",
       children: "To rule list"
     }))]
@@ -7071,23 +6747,23 @@ const warningStyles = theme => ({
   `
 });
 
-/* harmony default export */ const unified_RuleEditor = ((0,src.withErrorBoundary)(RuleEditor, {
+ const unified_RuleEditor = ((0,src.withErrorBoundary)(RuleEditor, {
   style: 'page'
 }));
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/PanelPluginsButtonGroup.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/PanelPluginsButtonGroup.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "j": () => (/* binding */ PanelPluginsButtonGroup)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/utils/constants.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "j": () => ( PanelPluginsButtonGroup)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var _utils_constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/utils/constants.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 
 
 
@@ -7100,7 +6776,7 @@ function PanelPluginsButtonGroup(props) {
     size = 'md'
   } = props;
   const panels = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => getSupportedPanels(), []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.RadioButtonGroup, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.RadioButtonGroup, {
     options: panels,
     value: value,
     onChange: onChange,
@@ -7124,9 +6800,9 @@ function getSupportedPanels() {
 
 function isSupportedPanelPlugin(id) {
   switch (id) {
-    case _utils_constants__WEBPACK_IMPORTED_MODULE_3__/* .TIMESERIES */ .GC:
-    case _utils_constants__WEBPACK_IMPORTED_MODULE_3__/* .TABLE */ .Fe:
-    case _utils_constants__WEBPACK_IMPORTED_MODULE_3__/* .STAT */ .Kd:
+    case _utils_constants__WEBPACK_IMPORTED_MODULE_3__ .GC:
+    case _utils_constants__WEBPACK_IMPORTED_MODULE_3__ .Fe:
+    case _utils_constants__WEBPACK_IMPORTED_MODULE_3__ .Kd:
       return true;
 
     default:
@@ -7134,32 +6810,24 @@ function isSupportedPanelPlugin(id) {
   }
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/rule-editor/AnnotationsField.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/rule-editor/AnnotationsField.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ rule_editor_AnnotationsField)
+  "Z": () => ( rule_editor_AnnotationsField)
 });
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-hook-form-virtual-92b6119fd4/0/cache/react-hook-form-npm-7.5.3-f9cc466c62-fbfaa3b664.zip/node_modules/react-hook-form/dist/index.esm.js
 var index_esm = __webpack_require__("./.yarn/__virtual__/react-hook-form-virtual-92b6119fd4/0/cache/react-hook-form-npm-7.5.3-f9cc466c62-fbfaa3b664.zip/node_modules/react-hook-form/dist/index.esm.js");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/constants.ts
 var constants = __webpack_require__("./public/app/features/alerting/unified/utils/constants.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/rule-editor/SelectWIthAdd.tsx
 var SelectWIthAdd = __webpack_require__("./public/app/features/alerting/unified/components/rule-editor/SelectWIthAdd.tsx");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/AnnotationKeyInput.tsx
+;
 const _excluded = ["value", "existingKeys", "aria-label"];
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -7176,19 +6844,19 @@ const AnnotationKeyInput = _ref => {
   } = _ref,
       rest = _objectWithoutPropertiesLoose(_ref, _excluded);
 
-  const annotationOptions = (0,react.useMemo)(() => Object.values(constants/* Annotation */.q6).filter(key => !existingKeys.includes(key)) // remove keys already taken in other annotations
+  const annotationOptions = (0,react.useMemo)(() => Object.values(constants.q6).filter(key => !existingKeys.includes(key)) 
   .map(key => ({
     value: key,
-    label: constants/* annotationLabels */.vY[key]
+    label: constants.vY[key]
   })), [existingKeys]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(SelectWIthAdd/* SelectWithAdd */.P, Object.assign({
+  return (0,jsx_runtime.jsx)(SelectWIthAdd.P, Object.assign({
     "aria-label": ariaLabel,
     value: value,
     options: annotationOptions,
-    custom: !!value && !Object.values(constants/* Annotation */.q6).includes(value)
+    custom: !!value && !Object.values(constants.q6).includes(value)
   }, rest));
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/AnnotationsField.tsx
+;
 const AnnotationsField_excluded = ["ref"];
 
 var _Label;
@@ -7213,7 +6881,7 @@ const AnnotationsField = () => {
     formState: {
       errors
     }
-  } = (0,index_esm/* useFormContext */.Gc)();
+  } = (0,index_esm.Gc)();
   const annotations = watch('annotations');
   const existingKeys = (0,react.useCallback)(index => annotations.filter((_, idx) => idx !== index).map(_ref => {
     let {
@@ -7221,10 +6889,10 @@ const AnnotationsField = () => {
     } = _ref;
     return key;
   }), [annotations]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [_Label || (_Label = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Label, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [_Label || (_Label = (0,jsx_runtime.jsx)(src.Label, {
       children: "Summary and annotations"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(src.FieldArray, {
+    })), (0,jsx_runtime.jsx)(src.FieldArray, {
       name: 'annotations',
       control: control,
       children: _ref2 => {
@@ -7233,27 +6901,27 @@ const AnnotationsField = () => {
           append,
           remove
         } = _ref2;
-        return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        return (0,jsx_runtime.jsxs)("div", {
           className: styles.flexColumn,
           children: [fields.map((field, index) => {
             var _annotations$index, _annotations$index$ke, _errors$annotations, _errors$annotations$i, _errors$annotations$i2, _errors$annotations2, _errors$annotations2$, _errors$annotations2$2, _annotations$index2, _errors$annotations3, _errors$annotations3$, _errors$annotations3$2, _errors$annotations4, _errors$annotations4$, _errors$annotations4$2;
 
             const isUrl = (_annotations$index = annotations[index]) === null || _annotations$index === void 0 ? void 0 : (_annotations$index$ke = _annotations$index.key) === null || _annotations$index$ke === void 0 ? void 0 : _annotations$index$ke.toLocaleLowerCase().endsWith('url');
             const ValueInputComponent = isUrl ? src.Input : src.TextArea;
-            return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+            return (0,jsx_runtime.jsxs)("div", {
               className: styles.flexRow,
-              children: [/*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+              children: [(0,jsx_runtime.jsx)(src.Field, {
                 className: styles.field,
                 invalid: !!((_errors$annotations = errors.annotations) !== null && _errors$annotations !== void 0 && (_errors$annotations$i = _errors$annotations[index]) !== null && _errors$annotations$i !== void 0 && (_errors$annotations$i2 = _errors$annotations$i.key) !== null && _errors$annotations$i2 !== void 0 && _errors$annotations$i2.message),
                 error: (_errors$annotations2 = errors.annotations) === null || _errors$annotations2 === void 0 ? void 0 : (_errors$annotations2$ = _errors$annotations2[index]) === null || _errors$annotations2$ === void 0 ? void 0 : (_errors$annotations2$2 = _errors$annotations2$.key) === null || _errors$annotations2$2 === void 0 ? void 0 : _errors$annotations2$2.message,
                 "data-testid": `annotation-key-${index}`,
-                children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+                children: (0,jsx_runtime.jsx)(src.InputControl, {
                   name: `annotations[${index}].key`,
                   render: _ref3 => {
                     let {} = _ref3,
                         field = AnnotationsField_objectWithoutPropertiesLoose(_ref3.field, AnnotationsField_excluded);
 
-                    return /*#__PURE__*/(0,jsx_runtime.jsx)(AnnotationKeyInput, Object.assign({}, field, {
+                    return (0,jsx_runtime.jsx)(AnnotationKeyInput, Object.assign({}, field, {
                       "aria-label": `Annotation detail ${index + 1}`,
                       existingKeys: existingKeys(index),
                       width: 18
@@ -7267,11 +6935,11 @@ const AnnotationsField = () => {
                     }
                   }
                 })
-              }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+              }), (0,jsx_runtime.jsx)(src.Field, {
                 className: (0,emotion_css_esm.cx)(styles.flexRowItemMargin, styles.field),
                 invalid: !!((_errors$annotations3 = errors.annotations) !== null && _errors$annotations3 !== void 0 && (_errors$annotations3$ = _errors$annotations3[index]) !== null && _errors$annotations3$ !== void 0 && (_errors$annotations3$2 = _errors$annotations3$.value) !== null && _errors$annotations3$2 !== void 0 && _errors$annotations3$2.message),
                 error: (_errors$annotations4 = errors.annotations) === null || _errors$annotations4 === void 0 ? void 0 : (_errors$annotations4$ = _errors$annotations4[index]) === null || _errors$annotations4$ === void 0 ? void 0 : (_errors$annotations4$2 = _errors$annotations4$.value) === null || _errors$annotations4$2 === void 0 ? void 0 : _errors$annotations4$2.message,
-                children: /*#__PURE__*/(0,jsx_runtime.jsx)(ValueInputComponent, Object.assign({
+                children: (0,jsx_runtime.jsx)(ValueInputComponent, Object.assign({
                   "data-testid": `annotation-value-${index}`,
                   className: (0,emotion_css_esm.cx)(styles.annotationValueInput, {
                     [styles.textarea]: !isUrl
@@ -7280,7 +6948,7 @@ const AnnotationsField = () => {
                   placeholder: isUrl ? 'https://' : `Text`,
                   defaultValue: field.value
                 }))
-              }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+              }), (0,jsx_runtime.jsx)(src.Button, {
                 type: "button",
                 className: styles.flexRowItemMargin,
                 "aria-label": "delete annotation",
@@ -7289,7 +6957,7 @@ const AnnotationsField = () => {
                 onClick: () => remove(index)
               })]
             }, field.id);
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+          }), (0,jsx_runtime.jsx)(src.Button, {
             className: styles.addAnnotationsButton,
             icon: "plus-circle",
             type: "button",
@@ -7337,21 +7005,21 @@ const getStyles = theme => ({
   `
 });
 
-/* harmony default export */ const rule_editor_AnnotationsField = (AnnotationsField);
+ const rule_editor_AnnotationsField = (AnnotationsField);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/rule-editor/LabelsField.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/rule-editor/LabelsField.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/__virtual__/react-hook-form-virtual-92b6119fd4/0/cache/react-hook-form-npm-7.5.3-f9cc466c62-fbfaa3b664.zip/node_modules/react-hook-form/dist/index.esm.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var react_hook_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/__virtual__/react-hook-form-virtual-92b6119fd4/0/cache/react-hook-form-npm-7.5.3-f9cc466c62-fbfaa3b664.zip/node_modules/react-hook-form/dist/index.esm.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _Label, _InlineLabel;
 
 
@@ -7374,13 +7042,13 @@ const LabelsField = _ref => {
     formState: {
       errors
     }
-  } = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_2__/* .useFormContext */ .Gc)();
+  } = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_2__ .Gc)();
   const labels = watch('labels');
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: (0,_emotion_css__WEBPACK_IMPORTED_MODULE_0__.cx)(className, styles.wrapper),
-    children: [_Label || (_Label = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Label, {
+    children: [_Label || (_Label = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Label, {
       children: "Custom Labels"
-    })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.FieldArray, {
+    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.FieldArray, {
       control: control,
       name: "labels",
       children: _ref2 => {
@@ -7389,25 +7057,25 @@ const LabelsField = _ref => {
           append,
           remove
         } = _ref2;
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             className: styles.flexRow,
-            children: [_InlineLabel || (_InlineLabel = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineLabel, {
+            children: [_InlineLabel || (_InlineLabel = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineLabel, {
               width: 18,
               children: "Labels"
-            })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
               className: styles.flexColumn,
               children: [fields.map((field, index) => {
                 var _errors$labels, _errors$labels$index, _errors$labels$index$, _errors$labels2, _errors$labels2$index, _errors$labels2$index2, _labels$index, _errors$labels3, _errors$labels3$index, _errors$labels3$index2, _errors$labels4, _errors$labels4$index, _errors$labels4$index2, _labels$index2;
 
-                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                  children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                     className: (0,_emotion_css__WEBPACK_IMPORTED_MODULE_0__.cx)(styles.flexRow, styles.centerAlignRow),
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Field, {
+                    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Field, {
                       className: styles.labelInput,
                       invalid: !!((_errors$labels = errors.labels) !== null && _errors$labels !== void 0 && (_errors$labels$index = _errors$labels[index]) !== null && _errors$labels$index !== void 0 && (_errors$labels$index$ = _errors$labels$index.key) !== null && _errors$labels$index$ !== void 0 && _errors$labels$index$.message),
                       error: (_errors$labels2 = errors.labels) === null || _errors$labels2 === void 0 ? void 0 : (_errors$labels2$index = _errors$labels2[index]) === null || _errors$labels2$index === void 0 ? void 0 : (_errors$labels2$index2 = _errors$labels2$index.key) === null || _errors$labels2$index2 === void 0 ? void 0 : _errors$labels2$index2.message,
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Input, Object.assign({}, register(`labels[${index}].key`, {
+                      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Input, Object.assign({}, register(`labels[${index}].key`, {
                         required: {
                           value: !!((_labels$index = labels[index]) !== null && _labels$index !== void 0 && _labels$index.value),
                           message: 'Required.'
@@ -7417,14 +7085,14 @@ const LabelsField = _ref => {
                         "data-testid": `label-key-${index}`,
                         defaultValue: field.key
                       }))
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineLabel, {
+                    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineLabel, {
                       className: styles.equalSign,
                       children: "="
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Field, {
+                    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Field, {
                       className: styles.labelInput,
                       invalid: !!((_errors$labels3 = errors.labels) !== null && _errors$labels3 !== void 0 && (_errors$labels3$index = _errors$labels3[index]) !== null && _errors$labels3$index !== void 0 && (_errors$labels3$index2 = _errors$labels3$index.value) !== null && _errors$labels3$index2 !== void 0 && _errors$labels3$index2.message),
                       error: (_errors$labels4 = errors.labels) === null || _errors$labels4 === void 0 ? void 0 : (_errors$labels4$index = _errors$labels4[index]) === null || _errors$labels4$index === void 0 ? void 0 : (_errors$labels4$index2 = _errors$labels4$index.value) === null || _errors$labels4$index2 === void 0 ? void 0 : _errors$labels4$index2.message,
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Input, Object.assign({}, register(`labels[${index}].value`, {
+                      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Input, Object.assign({}, register(`labels[${index}].value`, {
                         required: {
                           value: !!((_labels$index2 = labels[index]) !== null && _labels$index2 !== void 0 && _labels$index2.key),
                           message: 'Required.'
@@ -7434,7 +7102,7 @@ const LabelsField = _ref => {
                         "data-testid": `label-value-${index}`,
                         defaultValue: field.value
                       }))
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Button, {
+                    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Button, {
                       className: styles.deleteLabelButton,
                       "aria-label": "delete label",
                       icon: "trash-alt",
@@ -7445,7 +7113,7 @@ const LabelsField = _ref => {
                     })]
                   })
                 }, field.id);
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Button, {
+              }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Button, {
                 className: styles.addLabelButton,
                 icon: "plus-circle",
                 type: "button",
@@ -7508,19 +7176,19 @@ const getStyles = theme => {
   };
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LabelsField);
+ const __WEBPACK_DEFAULT_EXPORT__ = (LabelsField);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/rule-editor/SelectWIthAdd.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/rule-editor/SelectWIthAdd.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "P": () => (/* binding */ SelectWithAdd)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "P": () => ( SelectWithAdd)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 
 
 
@@ -7551,7 +7219,7 @@ const SelectWithAdd = _ref => {
   }], [options, addLabel]);
 
   if (isCustom) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Input, {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Input, {
       "aria-label": ariaLabel,
       width: width,
       autoFocus: !custom,
@@ -7562,7 +7230,7 @@ const SelectWithAdd = _ref => {
       onChange: e => onChange(e.target.value)
     });
   } else {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Select, {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Select, {
       "aria-label": ariaLabel,
       width: width,
       options: _options,
@@ -7589,16 +7257,16 @@ const SelectWithAdd = _ref => {
   }
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/hooks/useAlertQueriesStatus.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/hooks/useAlertQueriesStatus.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ useAlertQueriesStatus)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "S": () => ( useAlertQueriesStatus)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
 
 
 function useAlertQueriesStatus(queries) {
@@ -7608,19 +7276,19 @@ function useAlertQueriesStatus(queries) {
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/hooks/useFolder.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/hooks/useFolder.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "W": () => (/* binding */ useFolder)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
-/* harmony import */ var _state_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/alerting/unified/state/actions.ts");
-/* harmony import */ var _utils_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/utils/redux.ts");
-/* harmony import */ var _useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "W": () => ( useFolder)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
+ var _state_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/alerting/unified/state/actions.ts");
+ var _utils_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/utils/redux.ts");
+ var _useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts");
 
 
 
@@ -7628,15 +7296,15 @@ function useAlertQueriesStatus(queries) {
 
 function useFolder(uid) {
   const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
-  const folderRequests = (0,_useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__/* .useUnifiedAlertingSelector */ ._)(state => state.folders);
+  const folderRequests = (0,_useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__ ._)(state => state.folders);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (uid) {
-      dispatch((0,_state_actions__WEBPACK_IMPORTED_MODULE_2__/* .fetchFolderIfNotFetchedAction */ .sw)(uid));
+      dispatch((0,_state_actions__WEBPACK_IMPORTED_MODULE_2__ .sw)(uid));
     }
   }, [dispatch, uid]);
 
   if (uid) {
-    const request = folderRequests[uid] || _utils_redux__WEBPACK_IMPORTED_MODULE_3__/* .initialAsyncRequestState */ .oq;
+    const request = folderRequests[uid] || _utils_redux__WEBPACK_IMPORTED_MODULE_3__ .oq;
     return {
       folder: request.result,
       loading: request.loading
@@ -7648,19 +7316,19 @@ function useFolder(uid) {
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/hooks/useIsRuleEditable.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/hooks/useIsRuleEditable.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "M": () => (/* binding */ useIsRuleEditable)
-/* harmony export */ });
-/* harmony import */ var app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./public/app/core/services/context_srv.ts");
-/* harmony import */ var _utils_access_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/alerting/unified/utils/access-control.ts");
-/* harmony import */ var _utils_rules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/alerting/unified/utils/rules.ts");
-/* harmony import */ var _useFolder__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useFolder.ts");
-/* harmony import */ var _useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "M": () => ( useIsRuleEditable)
+ });
+ var app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./public/app/core/services/context_srv.ts");
+ var _utils_access_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/alerting/unified/utils/access-control.ts");
+ var _utils_rules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/alerting/unified/utils/rules.ts");
+ var _useFolder__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useFolder.ts");
+ var _useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts");
 
 
 
@@ -7669,15 +7337,15 @@ function useFolder(uid) {
 function useIsRuleEditable(rulesSourceName, rule) {
   var _dataSources$rulesSou, _dataSources$rulesSou2, _dataSources$rulesSou3;
 
-  const dataSources = (0,_useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__/* .useUnifiedAlertingSelector */ ._)(state => state.dataSources);
-  const folderUID = rule && (0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__/* .isGrafanaRulerRule */ .Pc)(rule) ? rule.grafana_alert.namespace_uid : undefined;
-  const rulePermission = (0,_utils_access_control__WEBPACK_IMPORTED_MODULE_1__/* .getRulesPermissions */ .Bz)(rulesSourceName);
-  const hasEditPermission = app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__/* .contextSrv.hasAccess */ .Vt.hasAccess(rulePermission.update, app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__/* .contextSrv.isEditor */ .Vt.isEditor);
-  const hasRemovePermission = app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__/* .contextSrv.hasAccess */ .Vt.hasAccess(rulePermission.delete, app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__/* .contextSrv.isEditor */ .Vt.isEditor);
+  const dataSources = (0,_useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__ ._)(state => state.dataSources);
+  const folderUID = rule && (0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__ .Pc)(rule) ? rule.grafana_alert.namespace_uid : undefined;
+  const rulePermission = (0,_utils_access_control__WEBPACK_IMPORTED_MODULE_1__ .Bz)(rulesSourceName);
+  const hasEditPermission = app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__ .Vt.hasAccess(rulePermission.update, app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__ .Vt.isEditor);
+  const hasRemovePermission = app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__ .Vt.hasAccess(rulePermission.delete, app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__ .Vt.isEditor);
   const {
     folder,
     loading
-  } = (0,_useFolder__WEBPACK_IMPORTED_MODULE_3__/* .useFolder */ .W)(folderUID);
+  } = (0,_useFolder__WEBPACK_IMPORTED_MODULE_3__ .W)(folderUID);
 
   if (!rule) {
     return {
@@ -7685,10 +7353,10 @@ function useIsRuleEditable(rulesSourceName, rule) {
       isRemovable: false,
       loading: false
     };
-  } // grafana rules can be edited if user can edit the folder they're in
+  } 
 
 
-  if ((0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__/* .isGrafanaRulerRule */ .Pc)(rule)) {
+  if ((0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__ .Pc)(rule)) {
     if (!folderUID) {
       throw new Error(`Rule ${rule.grafana_alert.title} does not have a folder uid, cannot determine if it is editable.`);
     }
@@ -7698,7 +7366,7 @@ function useIsRuleEditable(rulesSourceName, rule) {
       isRemovable: hasRemovePermission && (folder === null || folder === void 0 ? void 0 : folder.canSave),
       loading
     };
-  } // prom rules are only editable by users with Editor role and only if rules source supports editing
+  } 
 
 
   const isRulerAvailable = Boolean((_dataSources$rulesSou = dataSources[rulesSourceName]) === null || _dataSources$rulesSou === void 0 ? void 0 : (_dataSources$rulesSou2 = _dataSources$rulesSou.result) === null || _dataSources$rulesSou2 === void 0 ? void 0 : _dataSources$rulesSou2.rulerConfig);
@@ -7709,46 +7377,31 @@ function useIsRuleEditable(rulesSourceName, rule) {
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/state/AlertingQueryRunner.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/state/AlertingQueryRunner.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "v": () => (/* binding */ AlertingQueryRunner)
+  "v": () => ( AlertingQueryRunner)
 });
 
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/ReplaySubject.js
 var ReplaySubject = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/ReplaySubject.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js
 var catchError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/share.js
 var share = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/share.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./.yarn/cache/uuid-npm-8.3.2-eca0baba53-5575a8a75c.zip/node_modules/uuid/dist/esm-browser/v4.js + 1 modules
 var v4 = __webpack_require__("./.yarn/cache/uuid-npm-8.3.2-eca0baba53-5575a8a75c.zip/node_modules/uuid/dist/esm-browser/v4.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/services/backend_srv.ts + 4 modules
 var backend_srv = __webpack_require__("./public/app/core/services/backend_srv.ts");
-// EXTERNAL MODULE: ./public/app/features/expressions/guards.ts
 var guards = __webpack_require__("./public/app/features/expressions/guards.ts");
-// EXTERNAL MODULE: ./public/app/features/query/state/processing/canceler.ts
 var canceler = __webpack_require__("./public/app/features/query/state/processing/canceler.ts");
-// EXTERNAL MODULE: ./public/app/features/query/state/processing/revision.ts
 var revision = __webpack_require__("./public/app/features/query/state/processing/revision.ts");
-// EXTERNAL MODULE: ./public/app/features/query/state/runRequest.ts + 1 modules
 var runRequest = __webpack_require__("./public/app/features/query/state/runRequest.ts");
-// EXTERNAL MODULE: ./public/app/features/expressions/types.ts
 var types = __webpack_require__("./public/app/features/expressions/types.ts");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/utils/timeRange.ts
+;
 
 const FALL_BACK_TIME_RANGE = {
   from: 21600,
@@ -7778,14 +7431,14 @@ const getTimeRangeForExpression = (query, queries) => {
 
 const getReferencedIds = (model, queries) => {
   switch (model.type) {
-    case types/* ExpressionQueryType.classic */.Us.classic:
+    case types.Us.classic:
       return getReferencedIdsForClassicCondition(model);
 
-    case types/* ExpressionQueryType.math */.Us.math:
+    case types.Us.math:
       return getReferencedIdsForMath(model, queries);
 
-    case types/* ExpressionQueryType.resample */.Us.resample:
-    case types/* ExpressionQueryType.reduce */.Us.reduce:
+    case types.Us.resample:
+    case types.Us.reduce:
       return getReferencedIdsForReduce(model);
   }
 };
@@ -7820,7 +7473,7 @@ const getTimeRanges = (referencedRefIds, queries) => {
 };
 
 const getReferencedIdsForMath = (model, queries) => {
-  return queries // filter queries of type query and filter expression on if it includes any refIds
+  return queries 
   .filter(q => {
     var _model$expression;
 
@@ -7833,7 +7486,7 @@ const getReferencedIdsForMath = (model, queries) => {
 const getReferencedIdsForReduce = model => {
   return model.expression ? [model.expression] : undefined;
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/state/AlertingQueryRunner.ts
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -7849,7 +7502,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 class AlertingQueryRunner {
   constructor() {
-    let backendSrv = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (0,backend_srv/* getBackendSrv */.i)();
+    let backendSrv = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (0,backend_srv.i)();
     let dataSourceSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,grafana_runtime_src.getDataSourceSrv)();
     this.backendSrv = backendSrv;
     this.dataSourceSrv = dataSourceSrv;
@@ -7862,7 +7515,7 @@ class AlertingQueryRunner {
 
     this.backendSrv = backendSrv;
     this.dataSourceSrv = dataSourceSrv;
-    this.subject = new ReplaySubject/* ReplaySubject */.t(1);
+    this.subject = new ReplaySubject.t(1);
     this.lastResult = {};
   }
 
@@ -7874,12 +7527,11 @@ class AlertingQueryRunner {
     if (queries.length === 0) {
       const empty = initialState(queries, src.LoadingState.Done);
       return this.subject.next(empty);
-    } // do not execute if one more of the queries are not runnable,
-    // for example not completely configured
+    } 
 
 
     for (const query of queries) {
-      if (!(0,guards/* isExpressionQuery */.j)(query.model)) {
+      if (!(0,guards.j)(query.model)) {
         const ds = await this.dataSourceSrv.get(query.datasourceUid);
 
         if (ds.filterQuery && !ds.filterQuery(query.model)) {
@@ -7893,8 +7545,8 @@ class AlertingQueryRunner {
       next: dataPerQuery => {
         const nextResult = applyChange(dataPerQuery, (refId, data) => {
           const previous = this.lastResult[refId];
-          const preProcessed = (0,runRequest/* preProcessPanelData */.zR)(data, previous);
-          return (0,revision/* setStructureRevision */.C)(preProcessed, previous);
+          const preProcessed = (0,runRequest.zR)(data, previous);
+          return (0,revision.C)(preProcessed, previous);
         });
         this.lastResult = nextResult;
         this.subject.next(this.lastResult);
@@ -7946,11 +7598,11 @@ const AlertingQueryRunner_runRequest = (backendSrv, queries) => {
     },
     url: '/api/v1/eval',
     method: 'POST',
-    requestId: (0,v4/* default */.Z)()
+    requestId: (0,v4.Z)()
   };
   return (0,src.withLoadingIndicator)({
     whileLoading: initial,
-    source: backendSrv.fetch(request).pipe(mapToPanelData(initial), (0,catchError/* catchError */.K)(error => (0,of.of)(mapErrorToPanelData(initial, error))), (0,canceler/* cancelNetworkRequestsOnUnsubscribe */.V)(backendSrv, request.requestId), (0,share/* share */.B)())
+    source: backendSrv.fetch(request).pipe(mapToPanelData(initial), (0,catchError.K)(error => (0,of.of)(mapErrorToPanelData(initial, error))), (0,canceler.V)(backendSrv, request.requestId), (0,share.B)())
   });
 };
 
@@ -7966,7 +7618,7 @@ const initialState = (queries, state) => {
 };
 
 const getTimeRange = (query, queries) => {
-  if ((0,guards/* isExpressionQuery */.j)(query.model)) {
+  if ((0,guards.j)(query.model)) {
     const relative = getTimeRangeForExpression(query.model, queries);
     return src.rangeUtil.relativeToTimeRange(relative);
   }
@@ -7980,7 +7632,7 @@ const getTimeRange = (query, queries) => {
 };
 
 const mapToPanelData = dataByQuery => {
-  return (0,map/* map */.U)(response => {
+  return (0,map.U)(response => {
     const {
       data
     } = response;
@@ -8018,32 +7670,32 @@ const applyChange = (initial, change) => {
   return nextResult;
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/utils/accessControlHooks.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/utils/accessControlHooks.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "B": () => (/* binding */ useRulesAccess)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _access_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/alerting/unified/utils/access-control.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "B": () => ( useRulesAccess)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _access_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/alerting/unified/utils/access-control.ts");
 
 
 function useRulesAccess() {
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => (0,_access_control__WEBPACK_IMPORTED_MODULE_1__/* .getRulesAccess */ .Rv)(), []);
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => (0,_access_control__WEBPACK_IMPORTED_MODULE_1__ .Rv)(), []);
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/expressions/guards.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/expressions/guards.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "j": () => (/* binding */ isExpressionQuery)
-/* harmony export */ });
-/* harmony import */ var _grafana_runtime_src_utils_DataSourceWithBackend__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-runtime/src/utils/DataSourceWithBackend.ts");
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/expressions/types.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "j": () => ( isExpressionQuery)
+ });
+ var _grafana_runtime_src_utils_DataSourceWithBackend__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-runtime/src/utils/DataSourceWithBackend.ts");
+ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/expressions/types.ts");
 
 
 const isExpressionQuery = dataQuery => {
@@ -8051,7 +7703,7 @@ const isExpressionQuery = dataQuery => {
     return false;
   }
 
-  if ((0,_grafana_runtime_src_utils_DataSourceWithBackend__WEBPACK_IMPORTED_MODULE_0__/* .isExpressionReference */ .Pr)(dataQuery.datasource)) {
+  if ((0,_grafana_runtime_src_utils_DataSourceWithBackend__WEBPACK_IMPORTED_MODULE_0__ .Pr)(dataQuery.datasource)) {
     return true;
   }
 
@@ -8061,9 +7713,9 @@ const isExpressionQuery = dataQuery => {
     return false;
   }
 
-  return Object.values(_types__WEBPACK_IMPORTED_MODULE_1__/* .ExpressionQueryType */ .Us).includes(expression.type);
+  return Object.values(_types__WEBPACK_IMPORTED_MODULE_1__ .Us).includes(expression.type);
 };
 
-/***/ })
+ })
 
 }]);

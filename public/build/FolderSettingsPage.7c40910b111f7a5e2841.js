@@ -1,25 +1,25 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[4827],{
 
-/***/ "./public/app/features/folders/FolderSettingsPage.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/folders/FolderSettingsPage.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FolderSettingsPage": () => (/* binding */ FolderSettingsPage),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var app_core_app_events__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/app_events.ts");
-/* harmony import */ var app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/components/Page/Page.tsx");
-/* harmony import */ var app_core_selectors_navModel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./public/app/core/selectors/navModel.ts");
-/* harmony import */ var _types_events__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/types/events.ts");
-/* harmony import */ var _state_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/folders/state/actions.ts");
-/* harmony import */ var _state_navModel__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./public/app/features/folders/state/navModel.ts");
-/* harmony import */ var _state_reducers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./public/app/features/folders/state/reducers.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "FolderSettingsPage": () => ( FolderSettingsPage),
+   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var app_core_app_events__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/app_events.ts");
+ var app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/components/Page/Page.tsx");
+ var app_core_selectors_navModel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./public/app/core/selectors/navModel.ts");
+ var _types_events__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/types/events.ts");
+ var _state_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/folders/state/actions.ts");
+ var _state_navModel__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./public/app/features/folders/state/navModel.ts");
+ var _state_reducers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./public/app/features/folders/state/reducers.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _h, _label;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -43,17 +43,17 @@ const {
 const mapStateToProps = (state, props) => {
   const uid = props.match.params.uid;
   return {
-    navModel: (0,app_core_selectors_navModel__WEBPACK_IMPORTED_MODULE_10__/* .getNavModel */ .h)(state.navIndex, `folder-settings-${uid}`, (0,_state_navModel__WEBPACK_IMPORTED_MODULE_7__/* .getLoadingNav */ ._)(2)),
+    navModel: (0,app_core_selectors_navModel__WEBPACK_IMPORTED_MODULE_10__ .h)(state.navIndex, `folder-settings-${uid}`, (0,_state_navModel__WEBPACK_IMPORTED_MODULE_7__ ._)(2)),
     folderUid: uid,
     folder: state.folder
   };
 };
 
 const mapDispatchToProps = {
-  getFolderByUid: _state_actions__WEBPACK_IMPORTED_MODULE_6__/* .getFolderByUid */ .Pb,
-  saveFolder: _state_actions__WEBPACK_IMPORTED_MODULE_6__/* .saveFolder */ .OD,
-  setFolderTitle: _state_reducers__WEBPACK_IMPORTED_MODULE_8__/* .setFolderTitle */ .Ss,
-  deleteFolder: _state_actions__WEBPACK_IMPORTED_MODULE_6__/* .deleteFolder */ .Go
+  getFolderByUid: _state_actions__WEBPACK_IMPORTED_MODULE_6__ .Pb,
+  saveFolder: _state_actions__WEBPACK_IMPORTED_MODULE_6__ .OD,
+  setFolderTitle: _state_reducers__WEBPACK_IMPORTED_MODULE_8__ .Ss,
+  deleteFolder: _state_actions__WEBPACK_IMPORTED_MODULE_6__ .Go
 };
 const connector = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapStateToProps, mapDispatchToProps);
 class FolderSettingsPage extends react__WEBPACK_IMPORTED_MODULE_0__.PureComponent {
@@ -80,7 +80,7 @@ class FolderSettingsPage extends react__WEBPACK_IMPORTED_MODULE_0__.PureComponen
       evt.stopPropagation();
       evt.preventDefault();
       const confirmationText = `Do you want to delete this folder and all its dashboards and alerts?`;
-      app_core_app_events__WEBPACK_IMPORTED_MODULE_3__/* ["default"].publish */ .Z.publish(new _types_events__WEBPACK_IMPORTED_MODULE_5__/* .ShowConfirmModalEvent */ .VJ({
+      app_core_app_events__WEBPACK_IMPORTED_MODULE_3__ .Z.publish(new _types_events__WEBPACK_IMPORTED_MODULE_5__ .VJ({
         title: 'Delete',
         text: confirmationText,
         icon: 'trash-alt',
@@ -105,36 +105,36 @@ class FolderSettingsPage extends react__WEBPACK_IMPORTED_MODULE_0__.PureComponen
       navModel,
       folder
     } = this.props;
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_4__ .Z, {
       navModel: navModel,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_4__/* ["default"].Contents */ .Z.Contents, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_4__ .Z.Contents, {
         isLoading: this.state.isLoading,
-        children: [_h || (_h = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h3", {
+        children: [_h || (_h = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h3", {
           className: "page-sub-heading",
           children: "Folder settings"
-        })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+        })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
           className: "section gf-form-group",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("form", {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("form", {
             name: "folderSettingsForm",
             onSubmit: this.onSave,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
               className: "gf-form",
-              children: [_label || (_label = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("label", {
+              children: [_label || (_label = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("label", {
                 className: "gf-form-label width-7",
                 children: "Name"
-              })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(Input, {
+              })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(Input, {
                 type: "text",
                 className: "gf-form-input width-30",
                 value: folder.title,
                 onChange: this.onTitleChange
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
               className: "gf-form-button-row",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Button, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Button, {
                 type: "submit",
                 disabled: !folder.canSave || !folder.hasChanged,
                 children: "Save"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Button, {
+              }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Button, {
                 variant: "destructive",
                 onClick: this.onDelete,
                 disabled: !folder.canDelete,
@@ -148,8 +148,8 @@ class FolderSettingsPage extends react__WEBPACK_IMPORTED_MODULE_0__.PureComponen
   }
 
 }
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (connector(FolderSettingsPage));
+ const __WEBPACK_DEFAULT_EXPORT__ = (connector(FolderSettingsPage));
 
-/***/ })
+ })
 
 }]);

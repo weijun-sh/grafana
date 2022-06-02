@@ -1,17 +1,17 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[4023],{
 
-/***/ "./public/app/core/components/NodeGraphSettings.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/components/NodeGraphSettings.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "n": () => (/* binding */ NodeGraphSettings)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "n": () => ( NodeGraphSettings)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _h;
 
 
@@ -28,18 +28,18 @@ function NodeGraphSettings(_ref) {
     onOptionsChange
   } = _ref;
   const styles = (0,_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.useStyles)(getStyles);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: styles.container,
-    children: [_h || (_h = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
+    children: [_h || (_h = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
       className: "page-heading",
       children: "Node Graph"
-    })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineFieldRow, {
+    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineFieldRow, {
       className: styles.row,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineField, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineField, {
         tooltip: "Enables the Node Graph visualization in the trace viewer.",
         label: "Enable Node Graph",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineSwitch, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineSwitch, {
           id: "enableNodeGraph",
           value: (_options$jsonData$nod = options.jsonData.nodeGraph) === null || _options$jsonData$nod === void 0 ? void 0 : _options$jsonData$nod.enabled,
           onChange: event => (0,_grafana_data__WEBPACK_IMPORTED_MODULE_2__.updateDatasourcePluginJsonDataOption)({
@@ -65,30 +65,23 @@ const getStyles = theme => ({
   `
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ TraceToLogsSettings)
+  "Z": () => ( TraceToLogsSettings)
 });
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/core/components/TraceToLogs/KeyValueInput.tsx
+;
 var _Icon, _Icon2, _Icon3;
 
 
@@ -96,7 +89,7 @@ var _Icon, _Icon2, _Icon3;
 
 
 
-const EQ_WIDTH = 3; // = 24px in inline label
+const EQ_WIDTH = 3; 
 
 const KeyValueInput = _ref => {
   let {
@@ -107,11 +100,11 @@ const KeyValueInput = _ref => {
     valuePlaceholder = 'Value (optional)'
   } = _ref;
   const styles = (0,grafana_ui_src.useStyles)(getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: styles.wrapper,
-    children: values.length ? values.map((value, idx) => /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    children: values.length ? values.map((value, idx) => (0,jsx_runtime.jsxs)("div", {
       className: styles.pair,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.SegmentInput, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.SegmentInput, {
         id: `${id}-key-${idx}`,
         placeholder: keyPlaceholder,
         value: value.key,
@@ -124,12 +117,12 @@ const KeyValueInput = _ref => {
             return v;
           }));
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
         "aria-label": "equals",
         className: styles.operator,
         width: EQ_WIDTH,
         children: "="
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.SegmentInput, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.SegmentInput, {
         id: `${id}-value-${idx}`,
         placeholder: valuePlaceholder,
         value: value.value,
@@ -142,39 +135,39 @@ const KeyValueInput = _ref => {
             return v;
           }));
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+      }), (0,jsx_runtime.jsx)("button", {
         onClick: () => onChange([...values.slice(0, idx), ...values.slice(idx + 1)]),
         className: "gf-form-label query-part",
         "aria-label": "Remove tag",
-        children: _Icon || (_Icon = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+        children: _Icon || (_Icon = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
           name: "times"
         }))
-      }), idx === values.length - 1 ? /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+      }), idx === values.length - 1 ? (0,jsx_runtime.jsx)("button", {
         onClick: () => onChange([...values, {
           key: '',
           value: ''
         }]),
         className: "gf-form-label query-part",
         "aria-label": "Add tag",
-        children: _Icon2 || (_Icon2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+        children: _Icon2 || (_Icon2 = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
           name: "plus"
         }))
       }) : null]
-    }, idx)) : /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+    }, idx)) : (0,jsx_runtime.jsx)("button", {
       onClick: () => onChange([...values, {
         key: '',
         value: ''
       }]),
       className: "gf-form-label query-part",
       "aria-label": "Add tag",
-      children: _Icon3 || (_Icon3 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      children: _Icon3 || (_Icon3 = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: "plus"
       }))
     })
   });
 };
 
-/* harmony default export */ const TraceToLogs_KeyValueInput = (KeyValueInput);
+ const TraceToLogs_KeyValueInput = (KeyValueInput);
 
 const getStyles = theme => ({
   wrapper: emotion_css_esm.css`
@@ -191,7 +184,7 @@ const getStyles = theme => ({
     color: ${theme.palette.orange};
   `
 });
-;// CONCATENATED MODULE: ./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx
+;
 var _h;
 
 
@@ -210,25 +203,24 @@ function TraceToLogsSettings(_ref) {
     onOptionsChange
   } = _ref;
   const styles = (0,grafana_ui_src.useStyles)(TraceToLogsSettings_getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: (0,emotion_css_esm.css)({
       width: '100%'
     }),
-    children: [_h || (_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+    children: [_h || (_h = (0,jsx_runtime.jsx)("h3", {
       className: "page-heading",
       children: "Trace to logs"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    })), (0,jsx_runtime.jsx)("div", {
       className: styles.infoText,
       children: "Trace to logs lets you navigate from a trace span to the selected data source's logs."
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         tooltip: "The data source the trace is going to navigate to",
         label: "Data source",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
+        children: (0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
           inputId: "trace-to-logs-data-source-picker",
           filter: ds => {
-            // Trace to logs only supports loki and splunk at the moment
             return ds.type === 'loki' || ds.type === 'grafana-splunk-datasource';
           },
           current: (_options$jsonData$tra = options.jsonData.tracesToLogs) === null || _options$jsonData$tra === void 0 ? void 0 : _options$jsonData$tra.datasourceUid,
@@ -247,12 +239,12 @@ function TraceToLogsSettings(_ref) {
           }
         })
       })
-    }), (_options$jsonData$tra3 = options.jsonData.tracesToLogs) !== null && _options$jsonData$tra3 !== void 0 && _options$jsonData$tra3.mapTagNamesEnabled ? /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (_options$jsonData$tra3 = options.jsonData.tracesToLogs) !== null && _options$jsonData$tra3 !== void 0 && _options$jsonData$tra3.mapTagNamesEnabled ? (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         tooltip: "Tags that will be used in the Loki query. Default tags: 'cluster', 'hostname', 'namespace', 'pod'",
         label: "Tags",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(TraceToLogs_KeyValueInput, {
+        children: (0,jsx_runtime.jsx)(TraceToLogs_KeyValueInput, {
           keyPlaceholder: "Tag",
           values: (_ref2 = (_options$jsonData$tra4 = (_options$jsonData$tra5 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra5 === void 0 ? void 0 : _options$jsonData$tra5.mappedTags) !== null && _options$jsonData$tra4 !== void 0 ? _options$jsonData$tra4 : (_options$jsonData$tra6 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra6 === void 0 ? void 0 : (_options$jsonData$tra7 = _options$jsonData$tra6.tags) === null || _options$jsonData$tra7 === void 0 ? void 0 : _options$jsonData$tra7.map(tag => ({
             key: tag
@@ -265,12 +257,12 @@ function TraceToLogsSettings(_ref) {
           }))
         })
       })
-    }) : /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }) : (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         tooltip: "Tags that will be used in the Loki query. Default tags: 'cluster', 'hostname', 'namespace', 'pod'",
         label: "Tags",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.TagsInput, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.TagsInput, {
           tags: (_options$jsonData$tra8 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra8 === void 0 ? void 0 : _options$jsonData$tra8.tags,
           width: 40,
           onChange: tags => (0,src.updateDatasourcePluginJsonDataOption)({
@@ -281,13 +273,13 @@ function TraceToLogsSettings(_ref) {
           }))
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Map tag names",
         labelWidth: 26,
         grow: true,
         tooltip: "Map trace tag names to log label names. Ex: k8s.pod.name -> pod",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           id: "mapTagNames",
           value: (_options$jsonData$tra9 = (_options$jsonData$tra10 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra10 === void 0 ? void 0 : _options$jsonData$tra10.mapTagNamesEnabled) !== null && _options$jsonData$tra9 !== void 0 ? _options$jsonData$tra9 : false,
           onChange: event => (0,src.updateDatasourcePluginJsonDataOption)({
@@ -298,13 +290,13 @@ function TraceToLogsSettings(_ref) {
           }))
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Span start time shift",
         labelWidth: 26,
         grow: true,
         tooltip: "Shifts the start time of the span. Default 0 (Time units can be used here, for example: 5s, 1m, 3h)",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           type: "text",
           placeholder: "1h",
           width: 40,
@@ -317,13 +309,13 @@ function TraceToLogsSettings(_ref) {
           value: ((_options$jsonData$tra11 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra11 === void 0 ? void 0 : _options$jsonData$tra11.spanStartTimeShift) || ''
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Span end time shift",
         labelWidth: 26,
         grow: true,
         tooltip: "Shifts the end time of the span. Default 0 Time units can be used here, for example: 5s, 1m, 3h",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           type: "text",
           placeholder: "1h",
           width: 40,
@@ -336,13 +328,13 @@ function TraceToLogsSettings(_ref) {
           value: ((_options$jsonData$tra12 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra12 === void 0 ? void 0 : _options$jsonData$tra12.spanEndTimeShift) || ''
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Filter by Trace ID",
         labelWidth: 26,
         grow: true,
         tooltip: "Filters logs by Trace ID. Appends '|=<trace id>' to the query.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           id: "filterByTraceID",
           value: (_options$jsonData$tra13 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra13 === void 0 ? void 0 : _options$jsonData$tra13.filterByTraceID,
           onChange: event => (0,src.updateDatasourcePluginJsonDataOption)({
@@ -353,13 +345,13 @@ function TraceToLogsSettings(_ref) {
           }))
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Filter by Span ID",
         labelWidth: 26,
         grow: true,
         tooltip: "Filters logs by Span ID. Appends '|=<span id>' to the query.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           id: "filterBySpanID",
           value: (_options$jsonData$tra14 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra14 === void 0 ? void 0 : _options$jsonData$tra14.filterBySpanID,
           onChange: event => (0,src.updateDatasourcePluginJsonDataOption)({
@@ -381,20 +373,20 @@ const TraceToLogsSettings_getStyles = theme => ({
   `
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/core/components/TraceToMetrics/TraceToMetricsSettings.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/components/TraceToMetrics/TraceToMetricsSettings.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "F": () => (/* binding */ TraceToMetricsSettings)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "F": () => ( TraceToMetricsSettings)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _h;
 
 
@@ -412,23 +404,23 @@ function TraceToMetricsSettings(_ref) {
     onOptionsChange
   } = _ref;
   const styles = (0,_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.useStyles)(getStyles);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: (0,_emotion_css__WEBPACK_IMPORTED_MODULE_0__.css)({
       width: '100%'
     }),
-    children: [_h || (_h = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
+    children: [_h || (_h = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
       className: "page-heading",
       children: "Trace to metrics"
-    })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
       className: styles.infoText,
       children: "Trace to metrics lets you navigate from a trace span to the selected data source."
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineFieldRow, {
+    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineFieldRow, {
       className: styles.row,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
         tooltip: "The data source the trace is going to navigate to",
         label: "Data source",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_runtime__WEBPACK_IMPORTED_MODULE_3__.DataSourcePicker, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_runtime__WEBPACK_IMPORTED_MODULE_3__.DataSourcePicker, {
           inputId: "trace-to-metrics-data-source-picker",
           pluginId: "prometheus",
           current: (_options$jsonData$tra = options.jsonData.tracesToMetrics) === null || _options$jsonData$tra === void 0 ? void 0 : _options$jsonData$tra.datasourceUid,
@@ -441,7 +433,7 @@ function TraceToMetricsSettings(_ref) {
             datasourceUid: ds.uid
           }))
         })
-      }), (_options$jsonData$tra2 = options.jsonData.tracesToMetrics) !== null && _options$jsonData$tra2 !== void 0 && _options$jsonData$tra2.datasourceUid ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Button, {
+      }), (_options$jsonData$tra2 = options.jsonData.tracesToMetrics) !== null && _options$jsonData$tra2 !== void 0 && _options$jsonData$tra2.datasourceUid ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Button, {
         type: "button",
         variant: "secondary",
         size: "sm",
@@ -456,13 +448,13 @@ function TraceToMetricsSettings(_ref) {
         },
         children: "Clear"
       }) : null]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineFieldRow, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
+    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineFieldRow, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
         label: "Query",
         labelWidth: 26,
         tooltip: "The Prometheus query that will run when navigating from a trace to metrics",
         grow: true,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Input, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Input, {
           label: "Query",
           type: "text",
           allowFullScreen: true,
@@ -492,21 +484,18 @@ const getStyles = theme => ({
   `
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/core/utils/tracing.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/utils/tracing.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "et": () => (/* binding */ getNonOverlappingDuration),
-/* harmony export */   "fy": () => (/* binding */ getStats),
-/* harmony export */   "nO": () => (/* binding */ makeSpanMap),
-/* harmony export */   "np": () => (/* binding */ makeFrames)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/**
- * Get non overlapping duration of the ranges as they can overlap or have gaps.
- */
+ __webpack_require__.d(__webpack_exports__, {
+   "et": () => ( getNonOverlappingDuration),
+   "fy": () => ( getStats),
+   "nO": () => ( makeSpanMap),
+   "np": () => ( makeFrames)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
 
 function getNonOverlappingDuration(ranges) {
   ranges.sort((a, b) => a[0] - b[0]);
@@ -520,14 +509,12 @@ function getNonOverlappingDuration(ranges) {
     const [start, end] = range;
 
     if (end < prevEnd) {
-      // In this case the range is completely inside the prev range so we can just ignore it.
       return acc;
     }
 
     if (start > prevEnd) {
-      // There is no overlap so we can just add it to stack
       return [...acc, range];
-    } // We know there is overlap and current range ends later than previous so we can just extend the range
+    } 
 
 
     return [...acc.slice(0, -1), [prevStart, end]];
@@ -536,11 +523,6 @@ function getNonOverlappingDuration(ranges) {
     return acc + (range[1] - range[0]);
   }, 0);
 }
-/**
- * Returns a map of the spans with children array for easier processing. It will also contain empty spans in case
- * span is missing but other spans are it's children. This is more generic because it needs to allow iterating over
- * both arrays and dataframe views.
- */
 
 function makeSpanMap(getSpan) {
   const spanMap = {};
@@ -582,9 +564,6 @@ function getStats(duration, traceDuration, selfDuration) {
 function toFixedNoTrailingZeros(n) {
   return parseFloat(n.toFixed(2));
 }
-/**
- * Create default frames used when returning data for node graph.
- */
 
 
 function makeFrames() {
@@ -642,36 +621,26 @@ function makeFrames() {
   return [nodesFrame, edgesFrame];
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/zipkin/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/zipkin/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "plugin": () => (/* binding */ module_plugin)
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/components/NodeGraphSettings.tsx
 var NodeGraphSettings = __webpack_require__("./public/app/core/components/NodeGraphSettings.tsx");
-// EXTERNAL MODULE: ./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx + 1 modules
 var TraceToLogsSettings = __webpack_require__("./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx");
-// EXTERNAL MODULE: ./public/app/core/components/TraceToMetrics/TraceToMetricsSettings.tsx
 var TraceToMetricsSettings = __webpack_require__("./public/app/core/components/TraceToMetrics/TraceToMetricsSettings.tsx");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/zipkin/ConfigEditor.tsx
+;
 
 
 
@@ -686,52 +655,44 @@ const ConfigEditor = _ref => {
     options,
     onOptionsChange
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.DataSourceHttpSettings, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.DataSourceHttpSettings, {
       defaultUrl: "http://localhost:9411",
       dataSourceConfig: options,
       showAccessOptions: false,
       onChange: onOptionsChange
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(TraceToLogsSettings/* TraceToLogsSettings */.Z, {
+      children: (0,jsx_runtime.jsx)(TraceToLogsSettings.Z, {
         options: options,
         onOptionsChange: onOptionsChange
       })
-    }), grafana_runtime_src.config.featureToggles.traceToMetrics ? /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), grafana_runtime_src.config.featureToggles.traceToMetrics ? (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(TraceToMetricsSettings/* TraceToMetricsSettings */.F, {
+      children: (0,jsx_runtime.jsx)(TraceToMetricsSettings.F, {
         options: options,
         onOptionsChange: onOptionsChange
       })
-    }) : null, /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }) : null, (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(NodeGraphSettings/* NodeGraphSettings */.n, {
+      children: (0,jsx_runtime.jsx)(NodeGraphSettings.n, {
         options: options,
         onOptionsChange: onOptionsChange
       })
     })]
   });
 };
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useAsyncFn.js
 var useAsyncFn = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useAsyncFn.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useMount.js
 var useMount = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useMount.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useMountedState.js
 var useMountedState = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useMountedState.js");
-// EXTERNAL MODULE: ./public/app/core/actions/index.ts
 var actions = __webpack_require__("./public/app/core/actions/index.ts");
-// EXTERNAL MODULE: ./public/app/core/copy/appNotification.ts
 var appNotification = __webpack_require__("./public/app/core/copy/appNotification.ts");
-// EXTERNAL MODULE: ./public/app/store/store.ts
 var store = __webpack_require__("./public/app/store/store.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/zipkin/constants.ts
+;
 const apiPrefix = '/api/v2';
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/zipkin/QueryField.tsx
+;
 
 
 
@@ -786,11 +747,11 @@ const ZipkinQueryField = _ref => {
   };
 
   let cascaderOptions = useMapToCascaderOptions(serviceOptions, allOptions);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Query type",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.RadioButtonGroup, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.RadioButtonGroup, {
           options: [{
             value: 'traceID',
             label: 'TraceID'
@@ -805,11 +766,11 @@ const ZipkinQueryField = _ref => {
           size: "md"
         })
       })
-    }), query.queryType === 'upload' ? /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), query.queryType === 'upload' ? (0,jsx_runtime.jsx)("div", {
       className: (0,emotion_css_esm.css)({
         padding: theme.spacing(2)
       }),
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.FileDropzone, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.FileDropzone, {
         options: {
           multiple: false
         },
@@ -818,8 +779,8 @@ const ZipkinQueryField = _ref => {
           onRunQuery();
         }
       })
-    }) : /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.ButtonCascader, {
+    }) : (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.ButtonCascader, {
         options: cascaderOptions,
         onChange: onSelectTrace,
         loadData: onLoadOptions,
@@ -828,9 +789,9 @@ const ZipkinQueryField = _ref => {
           className: styles.tracesCascader
         },
         children: "Traces"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form gf-form--grow flex-shrink-1 min-width-15",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.QueryField, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.QueryField, {
           query: query.query,
           onChange: onChangeQuery,
           onRunQuery: onRunQuery,
@@ -840,11 +801,11 @@ const ZipkinQueryField = _ref => {
       })]
     })]
   });
-}; // Exported for tests
+}; 
 
 function useServices(datasource) {
   const url = `${apiPrefix}/services`;
-  const [servicesOptions, fetch] = (0,useAsyncFn/* default */.Z)(async () => {
+  const [servicesOptions, fetch] = (0,useAsyncFn.Z)(async () => {
     try {
       const services = await datasource.metadataRequest(url);
 
@@ -858,27 +819,22 @@ function useServices(datasource) {
 
       return [];
     } catch (error) {
-      (0,store/* dispatch */.WI)((0,actions/* notifyApp */.$l)((0,appNotification/* createErrorNotification */.t_)('Failed to load services from Zipkin', error)));
+      (0,store.WI)((0,actions.$l)((0,appNotification.t_)('Failed to load services from Zipkin', error)));
       throw error;
     }
   }, [datasource]);
-  (0,useMount/* default */.Z)(() => {
-    // We should probably call this periodically to get new services after mount.
+  (0,useMount.Z)(() => {
     fetch();
   });
   return servicesOptions;
 }
-// Exported for tests
 function useLoadOptions(datasource) {
-  const isMounted = (0,useMountedState/* default */.Z)();
+  const isMounted = (0,useMountedState.Z)();
   const [allOptions, setAllOptions] = (0,react.useState)({});
-  const [, fetchSpans] = (0,useAsyncFn/* default */.Z)(async function findSpans(service) {
+  const [, fetchSpans] = (0,useAsyncFn.Z)(async function findSpans(service) {
     const url = `${apiPrefix}/spans`;
 
     try {
-      // The response of this should have been full ZipkinSpan objects based on API docs but is just list
-      // of span names.
-      // TODO: check if this is some issue of version used or something else
       const response = await datasource.metadataRequest(url, {
         serviceName: service
       });
@@ -892,20 +848,19 @@ function useLoadOptions(datasource) {
         });
       }
     } catch (error) {
-      (0,store/* dispatch */.WI)((0,actions/* notifyApp */.$l)((0,appNotification/* createErrorNotification */.t_)('Failed to load spans from Zipkin', error)));
+      (0,store.WI)((0,actions.$l)((0,appNotification.t_)('Failed to load spans from Zipkin', error)));
       throw error;
     }
   }, [datasource, allOptions]);
-  const [, fetchTraces] = (0,useAsyncFn/* default */.Z)(async function findTraces(serviceName, spanName) {
+  const [, fetchTraces] = (0,useAsyncFn.Z)(async function findTraces(serviceName, spanName) {
     const url = `${apiPrefix}/traces`;
     const search = {
       serviceName,
-      spanName // See other params and default here https://zipkin.io/zipkin-api/#/default/get_traces
+      spanName 
 
     };
 
     try {
-      // This should return just root traces as there isn't any nesting
       const traces = await datasource.metadataRequest(url, search);
 
       if (isMounted()) {
@@ -923,7 +878,7 @@ function useLoadOptions(datasource) {
         });
       }
     } catch (error) {
-      (0,store/* dispatch */.WI)((0,actions/* notifyApp */.$l)((0,appNotification/* createErrorNotification */.t_)('Failed to load spans from Zipkin', error)));
+      (0,store.WI)((0,actions.$l)((0,appNotification.t_)('Failed to load spans from Zipkin', error)));
       throw error;
     }
   }, [datasource]);
@@ -977,24 +932,18 @@ const NO_TRACES_KEY = '__NO_TRACES__';
 const noTracesFoundOptions = [{
   label: 'No traces found',
   value: 'no_traces',
-  isLeaf: true // Cannot be disabled because then cascader shows 'loading' for some reason.
-  // disabled: true,
+  isLeaf: true 
 
 }];
 const noTracesOptions = {
   '[No traces in time range]': NO_TRACES_KEY
 };
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js
 var lastValueFrom = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./public/app/core/utils/fetch.ts
 var fetch = __webpack_require__("./public/app/core/utils/fetch.ts");
-// EXTERNAL MODULE: ./public/app/core/utils/tracing.ts
 var tracing = __webpack_require__("./public/app/core/utils/tracing.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/zipkin/utils/graphTransform.ts
+;
 
 
 function createGraphFrames(data) {
@@ -1002,7 +951,7 @@ function createGraphFrames(data) {
     nodes,
     edges
   } = convertTraceToGraph(data);
-  const [nodesFrame, edgesFrame] = (0,tracing/* makeFrames */.np)();
+  const [nodesFrame, edgesFrame] = (0,tracing.np)();
 
   for (const node of nodes) {
     nodesFrame.add(node);
@@ -1019,7 +968,7 @@ function convertTraceToGraph(spans) {
   const nodes = [];
   const edges = [];
   const traceDuration = findTraceDuration(spans);
-  const spanMap = (0,tracing/* makeSpanMap */.nO)(index => {
+  const spanMap = (0,tracing.nO)(index => {
     if (index >= spans.length) {
       return undefined;
     }
@@ -1038,9 +987,9 @@ function convertTraceToGraph(spans) {
       const span = spanMap[c].span;
       return [span.timestamp, span.timestamp + span.duration];
     });
-    const childrenDuration = (0,tracing/* getNonOverlappingDuration */.et)(ranges);
+    const childrenDuration = (0,tracing.et)(ranges);
     const selfDuration = span.duration - childrenDuration;
-    const stats = (0,tracing/* getStats */.fy)(span.duration / 1000, traceDuration / 1000, selfDuration / 1000);
+    const stats = (0,tracing.fy)(span.duration / 1000, traceDuration / 1000, selfDuration / 1000);
     nodes.push({
       [src.NodeGraphDataFrameFieldNames.id]: span.id,
       [src.NodeGraphDataFrameFieldNames.title]: ((_span$localEndpoint = span.localEndpoint) === null || _span$localEndpoint === void 0 ? void 0 : _span$localEndpoint.serviceName) || ((_span$remoteEndpoint = span.remoteEndpoint) === null || _span$remoteEndpoint === void 0 ? void 0 : _span$remoteEndpoint.serviceName) || 'unknown',
@@ -1064,10 +1013,6 @@ function convertTraceToGraph(spans) {
     edges
   };
 }
-/**
- * Get the duration of the whole trace as it isn't a part of the response data.
- * Note: Seems like this should be the same as just longest span, but this is probably safer.
- */
 
 
 function findTraceDuration(spans) {
@@ -1086,9 +1031,8 @@ function findTraceDuration(spans) {
 
   return traceEndTime - traceStartTime;
 }
-// EXTERNAL MODULE: ./public/app/plugins/datasource/zipkin/utils/transforms.ts
 var transforms = __webpack_require__("./public/app/plugins/datasource/zipkin/utils/transforms.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/zipkin/datasource.ts
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1140,7 +1084,7 @@ class ZipkinDatasource extends src.DataSourceApi {
     }
 
     if (target.query) {
-      return this.request(`${apiPrefix}/trace/${encodeURIComponent(target.query)}`).pipe((0,map/* map */.U)(res => {
+      return this.request(`${apiPrefix}/trace/${encodeURIComponent(target.query)}`).pipe((0,map.U)(res => {
         var _this$nodeGraph2;
 
         return responseToDataQueryResponse(res, (_this$nodeGraph2 = this.nodeGraph) === null || _this$nodeGraph2 === void 0 ? void 0 : _this$nodeGraph2.enabled);
@@ -1151,7 +1095,7 @@ class ZipkinDatasource extends src.DataSourceApi {
   }
 
   async metadataRequest(url, params) {
-    const res = await (0,lastValueFrom/* lastValueFrom */.n)(this.request(url, params, {
+    const res = await (0,lastValueFrom.n)(this.request(url, params, {
       hideFromInspector: true
     }));
     return res.data;
@@ -1170,7 +1114,7 @@ class ZipkinDatasource extends src.DataSourceApi {
   }
 
   request(apiUrl, data, options) {
-    const params = data ? (0,fetch/* serializeParams */.tW)(data) : '';
+    const params = data ? (0,fetch.tW)(data) : '';
     const url = `${this.instanceSettings.url}${apiUrl}${params.length ? `?${params}` : ''}`;
     const req = Object.assign({}, options, {
       url
@@ -1182,7 +1126,7 @@ class ZipkinDatasource extends src.DataSourceApi {
 
 function responseToDataQueryResponse(response) {
   let nodeGraph = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  let data = response !== null && response !== void 0 && response.data ? [(0,transforms/* transformResponse */.m)(response === null || response === void 0 ? void 0 : response.data)] : [];
+  let data = response !== null && response !== void 0 && response.data ? [(0,transforms.m)(response === null || response === void 0 ? void 0 : response.data)] : [];
 
   if (nodeGraph) {
     data.push(...createGraphFrames(response === null || response === void 0 ? void 0 : response.data));
@@ -1208,31 +1152,28 @@ const emptyDataQueryResponse = {
     }
   })]
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/zipkin/module.ts
+;
 
 
 
 
 const module_plugin = new src.DataSourcePlugin(ZipkinDatasource).setQueryEditor(ZipkinQueryField).setConfigEditor(ConfigEditor);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/zipkin/utils/transforms.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/zipkin/utils/transforms.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "H": () => (/* binding */ transformToZipkin),
-/* harmony export */   "m": () => (/* binding */ transformResponse)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "H": () => ( transformToZipkin),
+   "m": () => ( transformResponse)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
 
 
 
-/**
- * Transforms response to Grafana trace data frame.
- */
 function transformResponse(zSpans) {
   const spanRows = zSpans.map(transformSpan);
   const frame = new _grafana_data__WEBPACK_IMPORTED_MODULE_1__.MutableDataFrame({
@@ -1296,7 +1237,6 @@ function transformSpan(span) {
     duration: span.duration / 1000,
     logs: (_span$annotations$map = (_span$annotations = span.annotations) === null || _span$annotations === void 0 ? void 0 : _span$annotations.map(transformAnnotation)) !== null && _span$annotations$map !== void 0 ? _span$annotations$map : [],
     tags: Object.keys(span.tags || {}).reduce((acc, key) => {
-      // If tag is error we remap it to simple boolean so that the trace ui will show an error icon.
       if (key === 'error') {
         acc.push({
           key: 'error',
@@ -1337,10 +1277,6 @@ function transformSpan(span) {
 
   return row;
 }
-/**
- * Maps annotations as a log as that seems to be the closest thing.
- * See https://zipkin.io/zipkin-api/#/default/get_trace__traceId_
- */
 
 
 function transformAnnotation(annotation) {
@@ -1373,9 +1309,6 @@ function valueToTag(key, value) {
     value
   };
 }
-/**
- * Transforms data frame to Zipkin response
- */
 
 
 const transformToZipkin = data => {
@@ -1414,7 +1347,7 @@ const transformToZipkin = data => {
   }
 
   return response;
-}; // Returns remote or local endpoint object
+}; 
 
 const getEndpoint = span => {
   var _span$serviceTags$fin, _span$serviceTags$fin2, _span$serviceTags$fin3, _span$serviceTags$fin4;
@@ -1430,24 +1363,24 @@ const getEndpoint = span => {
   } : undefined;
 };
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useMount.js":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useMount.js":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _useEffectOnce__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useEffectOnce.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+ });
+ var _useEffectOnce__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useEffectOnce.js");
 
 var useMount = function (fn) {
-    (0,_useEffectOnce__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(function () {
+    (0,_useEffectOnce__WEBPACK_IMPORTED_MODULE_0__ .Z)(function () {
         fn();
     });
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useMount);
+ const __WEBPACK_DEFAULT_EXPORT__ = (useMount);
 
 
-/***/ })
+ })
 
 }]);

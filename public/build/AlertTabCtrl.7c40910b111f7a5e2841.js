@@ -1,57 +1,57 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[5718],{
 
-/***/ "./public/app/angular/core_module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/core_module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "hF": () => (/* binding */ coreModule),
-/* harmony export */   "rb": () => (/* binding */ angularModules)
-/* harmony export */ });
-/* harmony import */ var angular__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/angular-npm-1.8.2-307000482b-35ea81a23b.zip/node_modules/angular/index.js");
-/* harmony import */ var angular__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(angular__WEBPACK_IMPORTED_MODULE_0__);
+ __webpack_require__.d(__webpack_exports__, {
+   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__),
+   "hF": () => ( coreModule),
+   "rb": () => ( angularModules)
+ });
+ var angular__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/angular-npm-1.8.2-307000482b-35ea81a23b.zip/node_modules/angular/index.js");
+ var angular__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(angular__WEBPACK_IMPORTED_MODULE_0__);
 
-const coreModule = angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.core', ['ngRoute']); // legacy modules
+const coreModule = angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.core', ['ngRoute']); 
 
 const angularModules = [coreModule, angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.controllers', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.directives', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.factories', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.services', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.filters', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.routes', [])];
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (coreModule);
+ const __WEBPACK_DEFAULT_EXPORT__ = (coreModule);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/angular/promiseToDigest.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/promiseToDigest.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "E": () => (/* binding */ promiseToDigest)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "E": () => ( promiseToDigest)
+ });
 const promiseToDigest = $scope => promise => promise.finally($scope.$evalAsync);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/AlertTabCtrl.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/AlertTabCtrl.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AlertTabCtrl": () => (/* binding */ AlertTabCtrl),
-/* harmony export */   "alertTab": () => (/* binding */ alertTab)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var app_angular_core_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/angular/core_module.ts");
-/* harmony import */ var app_angular_promiseToDigest__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("./public/app/angular/promiseToDigest.ts");
-/* harmony import */ var app_core_app_events__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/app_events.ts");
-/* harmony import */ var app_core_config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/core/config.ts");
-/* harmony import */ var app_features_alerting_state_query_part__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/alerting/state/query_part.ts");
-/* harmony import */ var app_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./public/app/types/index.ts");
-/* harmony import */ var _types_events__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./public/app/types/events.ts");
-/* harmony import */ var _getAlertingValidationMessage__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("./public/app/features/alerting/getAlertingValidationMessage.ts");
-/* harmony import */ var _state_ThresholdMapper__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./public/app/features/alerting/state/ThresholdMapper.ts");
-/* harmony import */ var _state_alertDef__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./public/app/features/alerting/state/alertDef.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "AlertTabCtrl": () => ( AlertTabCtrl),
+   "alertTab": () => ( alertTab)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var app_angular_core_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/angular/core_module.ts");
+ var app_angular_promiseToDigest__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("./public/app/angular/promiseToDigest.ts");
+ var app_core_app_events__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/app_events.ts");
+ var app_core_config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/core/config.ts");
+ var app_features_alerting_state_query_part__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/alerting/state/query_part.ts");
+ var app_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./public/app/types/index.ts");
+ var _types_events__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./public/app/types/events.ts");
+ var _getAlertingValidationMessage__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("./public/app/features/alerting/getAlertingValidationMessage.ts");
+ var _state_ThresholdMapper__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./public/app/features/alerting/state/ThresholdMapper.ts");
+ var _state_alertDef__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./public/app/features/alerting/state/alertDef.ts");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -68,7 +68,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 class AlertTabCtrl {
-  /** @ngInject */
   constructor($scope, dashboardSrv, uiSegmentSrv, datasourceSrv) {
     this.$scope = $scope;
     this.dashboardSrv = dashboardSrv;
@@ -118,7 +117,7 @@ class AlertTabCtrl {
     _defineProperty(this, "enable", () => {
       this.panel.alert = {};
       this.initModel();
-      this.panel.alert.for = '5m'; //default value for new alerts. for existing alerts we use 0m to avoid breaking changes
+      this.panel.alert.for = '5m'; 
     });
 
     this.$scope = $scope;
@@ -129,33 +128,33 @@ class AlertTabCtrl {
     this.panel = this.panelCtrl.panel;
     this.$scope.ctrl = this;
     this.subTabIndex = 0;
-    this.evalFunctions = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__/* ["default"].evalFunctions */ .Z.evalFunctions;
-    this.evalOperators = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__/* ["default"].evalOperators */ .Z.evalOperators;
-    this.conditionTypes = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__/* ["default"].conditionTypes */ .Z.conditionTypes;
-    this.noDataModes = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__/* ["default"].noDataModes */ .Z.noDataModes;
-    this.executionErrorModes = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__/* ["default"].executionErrorModes */ .Z.executionErrorModes;
-    this.appSubUrl = app_core_config__WEBPACK_IMPORTED_MODULE_5__/* ["default"].appSubUrl */ .ZP.appSubUrl;
+    this.evalFunctions = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__ .Z.evalFunctions;
+    this.evalOperators = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__ .Z.evalOperators;
+    this.conditionTypes = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__ .Z.conditionTypes;
+    this.noDataModes = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__ .Z.noDataModes;
+    this.executionErrorModes = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__ .Z.executionErrorModes;
+    this.appSubUrl = app_core_config__WEBPACK_IMPORTED_MODULE_5__ .ZP.appSubUrl;
     this.panelCtrl._enableAlert = this.enable;
-    this.alertingMinIntervalSecs = app_core_config__WEBPACK_IMPORTED_MODULE_5__/* ["default"].alertingMinInterval */ .ZP.alertingMinInterval;
-    this.alertingMinInterval = _grafana_data__WEBPACK_IMPORTED_MODULE_1__.rangeUtil.secondsToHms(app_core_config__WEBPACK_IMPORTED_MODULE_5__/* ["default"].alertingMinInterval */ .ZP.alertingMinInterval);
+    this.alertingMinIntervalSecs = app_core_config__WEBPACK_IMPORTED_MODULE_5__ .ZP.alertingMinInterval;
+    this.alertingMinInterval = _grafana_data__WEBPACK_IMPORTED_MODULE_1__.rangeUtil.secondsToHms(app_core_config__WEBPACK_IMPORTED_MODULE_5__ .ZP.alertingMinInterval);
   }
 
   $onInit() {
-    this.addNotificationSegment = this.uiSegmentSrv.newPlusButton(); // subscribe to graph threshold handle changes
+    this.addNotificationSegment = this.uiSegmentSrv.newPlusButton(); 
 
     const thresholdChangedEventHandler = this.graphThresholdChanged.bind(this);
-    this.panelCtrl.events.on(app_types__WEBPACK_IMPORTED_MODULE_7__/* .CoreEvents.thresholdChanged */ .RW.GL, thresholdChangedEventHandler); // set panel alert edit mode
+    this.panelCtrl.events.on(app_types__WEBPACK_IMPORTED_MODULE_7__ .RW.GL, thresholdChangedEventHandler); 
 
     this.$scope.$on('$destroy', () => {
-      this.panelCtrl.events.off(app_types__WEBPACK_IMPORTED_MODULE_7__/* .CoreEvents.thresholdChanged */ .RW.GL, thresholdChangedEventHandler);
+      this.panelCtrl.events.off(app_types__WEBPACK_IMPORTED_MODULE_7__ .RW.GL, thresholdChangedEventHandler);
       this.panelCtrl.editingThresholds = false;
       this.panelCtrl.render();
-    }); // build notification model
+    }); 
 
     this.notifications = [];
     this.alertNotifications = [];
     this.alertHistory = [];
-    return (0,app_angular_promiseToDigest__WEBPACK_IMPORTED_MODULE_11__/* .promiseToDigest */ .E)(this.$scope)((0,_grafana_runtime__WEBPACK_IMPORTED_MODULE_2__.getBackendSrv)().get('/api/alert-notifications/lookup').then(res => {
+    return (0,app_angular_promiseToDigest__WEBPACK_IMPORTED_MODULE_11__ .E)(this.$scope)((0,_grafana_runtime__WEBPACK_IMPORTED_MODULE_2__.getBackendSrv)().get('/api/alert-notifications/lookup').then(res => {
       this.notifications = res;
       this.initModel();
       this.validateModel();
@@ -163,13 +162,13 @@ class AlertTabCtrl {
   }
 
   getAlertHistory() {
-    (0,app_angular_promiseToDigest__WEBPACK_IMPORTED_MODULE_11__/* .promiseToDigest */ .E)(this.$scope)((0,_grafana_runtime__WEBPACK_IMPORTED_MODULE_2__.getBackendSrv)().get(`/api/annotations?dashboardId=${this.panelCtrl.dashboard.id}&panelId=${this.panel.id}&limit=50&type=alert`).then(res => {
+    (0,app_angular_promiseToDigest__WEBPACK_IMPORTED_MODULE_11__ .E)(this.$scope)((0,_grafana_runtime__WEBPACK_IMPORTED_MODULE_2__.getBackendSrv)().get(`/api/annotations?dashboardId=${this.panelCtrl.dashboard.id}&panelId=${this.panel.id}&limit=50&type=alert`).then(res => {
       this.alertHistory = (0,lodash__WEBPACK_IMPORTED_MODULE_0__.map)(res, ah => {
         var _this$dashboardSrv$ge;
 
         ah.time = (_this$dashboardSrv$ge = this.dashboardSrv.getCurrent()) === null || _this$dashboardSrv$ge === void 0 ? void 0 : _this$dashboardSrv$ge.formatDate(ah.time, 'MMM D, YYYY HH:mm:ss');
-        ah.stateModel = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__/* ["default"].getStateDisplayModel */ .Z.getStateDisplayModel(ah.newState);
-        ah.info = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__/* ["default"].getAlertAnnotationInfo */ .Z.getAlertAnnotationInfo(ah);
+        ah.stateModel = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__ .Z.getStateDisplayModel(ah.newState);
+        ah.info = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__ .Z.getAlertAnnotationInfo(ah);
         return ah;
       });
     }));
@@ -231,13 +230,13 @@ class AlertTabCtrl {
       iconClass: this.getNotificationIcon(model.type),
       isDefault: false,
       uid: model.uid
-    }); // avoid duplicates using both id and uid to be backwards compatible.
+    }); 
 
     if (!(0,lodash__WEBPACK_IMPORTED_MODULE_0__.find)(this.alert.notifications, n => n.id === model.id || n.uid === model.uid)) {
       this.alert.notifications.push({
         uid: model.uid
       });
-    } // reset plus button
+    } 
 
 
     this.addNotificationSegment.value = this.uiSegmentSrv.newPlusButton().value;
@@ -246,8 +245,6 @@ class AlertTabCtrl {
   }
 
   removeNotification(an) {
-    // remove notifiers referred to by id and uid to support notifiers added
-    // before and after we added support for uid
     (0,lodash__WEBPACK_IMPORTED_MODULE_0__.remove)(this.alert.notifications, n => n.uid === an.uid || n.id === an.id);
     (0,lodash__WEBPACK_IMPORTED_MODULE_0__.remove)(this.alertNotifications, n => n.uid === an.uid || n.id === an.id);
   }
@@ -276,11 +273,11 @@ class AlertTabCtrl {
     alert.conditions = alert.conditions || [];
 
     if (alert.conditions.length === 0) {
-      alert.conditions.push((0,_getAlertingValidationMessage__WEBPACK_IMPORTED_MODULE_12__/* .getDefaultCondition */ .z)());
+      alert.conditions.push((0,_getAlertingValidationMessage__WEBPACK_IMPORTED_MODULE_12__ .z)());
     }
 
-    alert.noDataState = alert.noDataState || app_core_config__WEBPACK_IMPORTED_MODULE_5__/* ["default"].alertingNoDataOrNullValues */ .ZP.alertingNoDataOrNullValues;
-    alert.executionErrorState = alert.executionErrorState || app_core_config__WEBPACK_IMPORTED_MODULE_5__/* ["default"].alertingErrorOrTimeout */ .ZP.alertingErrorOrTimeout;
+    alert.noDataState = alert.noDataState || app_core_config__WEBPACK_IMPORTED_MODULE_5__ .ZP.alertingNoDataOrNullValues;
+    alert.executionErrorState = alert.executionErrorState || app_core_config__WEBPACK_IMPORTED_MODULE_5__ .ZP.alertingErrorOrTimeout;
     alert.frequency = alert.frequency || '1m';
     alert.handler = alert.handler || 1;
     alert.notifications = alert.notifications || [];
@@ -292,14 +289,14 @@ class AlertTabCtrl {
       memo.push(this.buildConditionModel(value));
       return memo;
     }, []);
-    _state_ThresholdMapper__WEBPACK_IMPORTED_MODULE_9__/* .ThresholdMapper.alertToGraphThresholds */ .X.alertToGraphThresholds(this.panel);
+    _state_ThresholdMapper__WEBPACK_IMPORTED_MODULE_9__ .X.alertToGraphThresholds(this.panel);
 
     for (const addedNotification of alert.notifications) {
-      let identifier = addedNotification.uid; // lookup notifier type by uid
+      let identifier = addedNotification.uid; 
 
       let model = (0,lodash__WEBPACK_IMPORTED_MODULE_0__.find)(this.notifications, {
         uid: identifier
-      }); // fallback using id if uid is missing
+      }); 
 
       if (!model && addedNotification.id) {
         identifier = addedNotification.id;
@@ -309,7 +306,7 @@ class AlertTabCtrl {
       }
 
       if (!model) {
-        app_core_app_events__WEBPACK_IMPORTED_MODULE_4__/* ["default"].publish */ .Z.publish(new _types_events__WEBPACK_IMPORTED_MODULE_8__/* .ShowConfirmModalEvent */ .VJ({
+        app_core_app_events__WEBPACK_IMPORTED_MODULE_4__ .Z.publish(new _types_events__WEBPACK_IMPORTED_MODULE_8__ .VJ({
           title: 'Notifier with invalid identifier is detected',
           text: `Do you want to delete notifier with invalid identifier: ${identifier} from the dashboard JSON?`,
           text2: 'After successful deletion, make sure to save the dashboard for storing the update JSON.',
@@ -433,8 +430,8 @@ class AlertTabCtrl {
       source: source,
       type: source.type
     };
-    cm.queryPart = new app_features_alerting_state_query_part__WEBPACK_IMPORTED_MODULE_6__/* .QueryPart */ .XN(source.query, _state_alertDef__WEBPACK_IMPORTED_MODULE_10__/* ["default"].alertQueryDef */ .Z.alertQueryDef);
-    cm.reducerPart = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__/* ["default"].createReducerPart */ .Z.createReducerPart(source.reducer);
+    cm.queryPart = new app_features_alerting_state_query_part__WEBPACK_IMPORTED_MODULE_6__ .XN(source.query, _state_alertDef__WEBPACK_IMPORTED_MODULE_10__ .Z.alertQueryDef);
+    cm.reducerPart = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__ .Z.createReducerPart(source.reducer);
     cm.evaluator = source.evaluator;
     cm.operator = source.operator;
     return cm;
@@ -481,7 +478,7 @@ class AlertTabCtrl {
       case 'action':
         {
           conditionModel.source.reducer.type = evt.action.value;
-          conditionModel.reducerPart = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__/* ["default"].createReducerPart */ .Z.createReducerPart(conditionModel.source.reducer);
+          conditionModel.reducerPart = _state_alertDef__WEBPACK_IMPORTED_MODULE_10__ .Z.createReducerPart(conditionModel.source.reducer);
           this.evaluatorParamsChanged();
           break;
         }
@@ -490,7 +487,7 @@ class AlertTabCtrl {
         {
           const result = [];
 
-          for (const type of _state_alertDef__WEBPACK_IMPORTED_MODULE_10__/* ["default"].reducerTypes */ .Z.reducerTypes) {
+          for (const type of _state_alertDef__WEBPACK_IMPORTED_MODULE_10__ .Z.reducerTypes) {
             if (type.value !== conditionModel.source.reducer.type) {
               result.push(type);
             }
@@ -504,9 +501,9 @@ class AlertTabCtrl {
   }
 
   addCondition(type) {
-    const condition = (0,_getAlertingValidationMessage__WEBPACK_IMPORTED_MODULE_12__/* .getDefaultCondition */ .z)(); // add to persited model
+    const condition = (0,_getAlertingValidationMessage__WEBPACK_IMPORTED_MODULE_12__ .z)(); 
 
-    this.alert.conditions.push(condition); // add to view model
+    this.alert.conditions.push(condition); 
 
     this.conditionModels.push(this.buildConditionModel(condition));
   }
@@ -517,7 +514,7 @@ class AlertTabCtrl {
   }
 
   delete() {
-    app_core_app_events__WEBPACK_IMPORTED_MODULE_4__/* ["default"].publish */ .Z.publish(new _types_events__WEBPACK_IMPORTED_MODULE_8__/* .ShowConfirmModalEvent */ .VJ({
+    app_core_app_events__WEBPACK_IMPORTED_MODULE_4__ .Z.publish(new _types_events__WEBPACK_IMPORTED_MODULE_8__ .VJ({
       title: 'Delete Alert',
       text: 'Are you sure you want to delete this alert rule?',
       text2: 'You need to save dashboard for the delete to take effect',
@@ -535,12 +532,11 @@ class AlertTabCtrl {
   }
 
   evaluatorParamsChanged() {
-    _state_ThresholdMapper__WEBPACK_IMPORTED_MODULE_9__/* .ThresholdMapper.alertToGraphThresholds */ .X.alertToGraphThresholds(this.panel);
+    _state_ThresholdMapper__WEBPACK_IMPORTED_MODULE_9__ .X.alertToGraphThresholds(this.panel);
     this.panelCtrl.render();
   }
 
   evaluatorTypeChanged(evaluator) {
-    // ensure params array is correct length
     switch (evaluator.type) {
       case 'lt':
       case 'gt':
@@ -566,13 +562,13 @@ class AlertTabCtrl {
   }
 
   clearHistory() {
-    app_core_app_events__WEBPACK_IMPORTED_MODULE_4__/* ["default"].publish */ .Z.publish(new _types_events__WEBPACK_IMPORTED_MODULE_8__/* .ShowConfirmModalEvent */ .VJ({
+    app_core_app_events__WEBPACK_IMPORTED_MODULE_4__ .Z.publish(new _types_events__WEBPACK_IMPORTED_MODULE_8__ .VJ({
       title: 'Delete Alert History',
       text: 'Are you sure you want to remove all history & annotations for this alert?',
       icon: 'trash-alt',
       yesText: 'Yes',
       onConfirm: () => {
-        (0,app_angular_promiseToDigest__WEBPACK_IMPORTED_MODULE_11__/* .promiseToDigest */ .E)(this.$scope)((0,_grafana_runtime__WEBPACK_IMPORTED_MODULE_2__.getBackendSrv)().post('/api/annotations/mass-delete', {
+        (0,app_angular_promiseToDigest__WEBPACK_IMPORTED_MODULE_11__ .E)(this.$scope)((0,_grafana_runtime__WEBPACK_IMPORTED_MODULE_2__.getBackendSrv)().post('/api/annotations/mass-delete', {
           dashboardId: this.panelCtrl.dashboard.id,
           panelId: this.panel.id
         }).then(() => {
@@ -586,7 +582,6 @@ class AlertTabCtrl {
 }
 AlertTabCtrl.$inject = ["$scope", "dashboardSrv", "uiSegmentSrv", "datasourceSrv"];
 
-/** @ngInject */
 function alertTab() {
   'use strict';
 
@@ -597,24 +592,23 @@ function alertTab() {
     controller: AlertTabCtrl
   };
 }
-app_angular_core_module__WEBPACK_IMPORTED_MODULE_3__/* ["default"].directive */ .ZP.directive('alertTab', alertTab);
+app_angular_core_module__WEBPACK_IMPORTED_MODULE_3__ .ZP.directive('alertTab', alertTab);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/state/ThresholdMapper.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/state/ThresholdMapper.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "X": () => (/* binding */ ThresholdMapper)
-/* harmony export */ });
-/* unused harmony export hiddenReducerTypes */
-/* harmony import */ var app_core_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./public/app/core/config.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "X": () => ( ThresholdMapper)
+ });
+ var app_core_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./public/app/core/config.ts");
 
 const hiddenReducerTypes = ['percent_diff', 'percent_diff_abs'];
 class ThresholdMapper {
   static alertToGraphThresholds(panel) {
-    if (!panel.alert || app_core_config__WEBPACK_IMPORTED_MODULE_0__/* .config.unifiedAlertingEnabled */ .vc.unifiedAlertingEnabled) {
-      return false; // no update when no alerts
+    if (!panel.alert || app_core_config__WEBPACK_IMPORTED_MODULE_0__ .vc.unifiedAlertingEnabled) {
+      return false; 
     }
 
     for (let i = 0; i < panel.alert.conditions.length; i++) {
@@ -733,6 +727,6 @@ class ThresholdMapper {
 
 }
 
-/***/ })
+ })
 
 }]);

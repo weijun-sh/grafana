@@ -1,17 +1,17 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[4886],{
 
-/***/ "./public/app/features/alerting/unified/components/alert-groups/MatcherFilter.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/alert-groups/MatcherFilter.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "F": () => (/* binding */ MatcherFilter)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_experimental__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/__virtual__/@grafana-experimental-virtual-22e4fdfd25/0/cache/@grafana-experimental-npm-0.0.2-canary.30-71a280d204-b5b453b937.zip/node_modules/@grafana/experimental/index.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "F": () => ( MatcherFilter)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_experimental__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/__virtual__/@grafana-experimental-virtual-22e4fdfd25/0/cache/@grafana-experimental-npm-0.0.2-canary.30-71a280d204-b5b453b937.zip/node_modules/@grafana/experimental/index.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _Icon, _span, _div;
 
 
@@ -34,31 +34,31 @@ const MatcherFilter = _ref => {
     onFilterChange(target.value);
   };
 
-  const searchIcon = _Icon || (_Icon = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Icon, {
+  const searchIcon = _Icon || (_Icon = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Icon, {
     name: 'search'
   }));
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: className,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Label, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_grafana_experimental__WEBPACK_IMPORTED_MODULE_2__.Stack, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Label, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_grafana_experimental__WEBPACK_IMPORTED_MODULE_2__.Stack, {
         gap: 0.5,
-        children: [_span || (_span = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+        children: [_span || (_span = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
           children: "Search by label"
-        })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Tooltip, {
-          content: _div || (_div = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            children: ["Filter alerts using label querying, ex:", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("pre", {
+        })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Tooltip, {
+          content: _div || (_div = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            children: ["Filter alerts using label querying, ex:", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("pre", {
               children: `{severity="critical", instance=~"cluster-us-.+"}`
             })]
           })),
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Icon, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Icon, {
             className: styles.icon,
             name: "info-circle",
             size: "sm"
           })
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Input, {
+    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Input, {
       placeholder: "Search",
       defaultValue: defaultQueryString,
       value: queryString,
@@ -80,69 +80,49 @@ const getStyles = theme => ({
   `
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/rules/RuleDetailsActionButtons.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/rules/RuleDetailsActionButtons.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "f": () => (/* binding */ RuleDetailsActionButtons)
+  "f": () => ( RuleDetailsActionButtons)
 });
 
-// UNUSED EXPORTS: getStyles
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js + 20 modules
 var es = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-router-virtual-31642fe47a/0/cache/react-router-npm-5.2.1-ea754d7473-7daae084bf.zip/node_modules/react-router/esm/react-router.js + 1 modules
 var react_router = __webpack_require__("./.yarn/__virtual__/react-router-virtual-31642fe47a/0/cache/react-router-npm-5.2.1-ea754d7473-7daae084bf.zip/node_modules/react-router/esm/react-router.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/copy/appNotification.ts
 var appNotification = __webpack_require__("./public/app/core/copy/appNotification.ts");
-// EXTERNAL MODULE: ./public/app/core/services/context_srv.ts
 var context_srv = __webpack_require__("./public/app/core/services/context_srv.ts");
-// EXTERNAL MODULE: ./public/app/types/index.ts + 4 modules
 var types = __webpack_require__("./public/app/types/index.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/hooks/useIsRuleEditable.ts
 var useIsRuleEditable = __webpack_require__("./public/app/features/alerting/unified/hooks/useIsRuleEditable.ts");
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/state/actions.ts + 4 modules
 var actions = __webpack_require__("./public/app/features/alerting/unified/state/actions.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts
 var useUnifiedAlertingSelector = __webpack_require__("./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/hooks/useManagedAlertStateHistory.ts
+;
 
 
 
 
 function useManagedAlertStateHistory(alertId) {
   const dispatch = (0,es.useDispatch)();
-  const history = (0,useUnifiedAlertingSelector/* useUnifiedAlertingSelector */._)(state => state.managedAlertStateHistory);
+  const history = (0,useUnifiedAlertingSelector._)(state => state.managedAlertStateHistory);
   (0,react.useEffect)(() => {
-    dispatch((0,actions/* fetchGrafanaAnnotationsAction */.Ms)(alertId));
+    dispatch((0,actions.Ms)(alertId));
   }, [dispatch, alertId]);
   return history;
 }
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/AlertLabel.tsx
 var AlertLabel = __webpack_require__("./public/app/features/alerting/unified/components/AlertLabel.tsx");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/DynamicTable.tsx
 var DynamicTable = __webpack_require__("./public/app/features/alerting/unified/components/DynamicTable.tsx");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/rules/AlertStateTag.tsx
 var AlertStateTag = __webpack_require__("./public/app/features/alerting/unified/components/rules/AlertStateTag.tsx");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rules/StateHistory.tsx
+;
 var _LoadingPlaceholder;
 
 
@@ -169,13 +149,13 @@ const StateHistory = _ref => {
   } = useManagedAlertStateHistory(alertId);
 
   if (loading && !error) {
-    return _LoadingPlaceholder || (_LoadingPlaceholder = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LoadingPlaceholder, {
+    return _LoadingPlaceholder || (_LoadingPlaceholder = (0,jsx_runtime.jsx)(grafana_ui_src.LoadingPlaceholder, {
       text: 'Loading history...'
     }));
   }
 
   if (error && !loading) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+    return (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
       title: 'Failed to fetch alert state history',
       children: error.message
     });
@@ -204,7 +184,7 @@ const StateHistory = _ref => {
       text: item.text,
       data: item.data,
       timestamp: item.updated
-    }); // if the preceding state is not the same, create a separate state entry – this likely means the state was reset
+    }); 
 
     if (!hasMatchingPrecedingState(index, result)) {
       acc.push({
@@ -218,7 +198,7 @@ const StateHistory = _ref => {
     id: historyItem.id,
     data: historyItem
   }));
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(DynamicTable/* DynamicTable */.t, {
+  return (0,jsx_runtime.jsx)(DynamicTable.t, {
     cols: columns,
     items: items
   });
@@ -228,9 +208,9 @@ function renderValueCell(item) {
   var _item$data$data$evalM, _item$data$data;
 
   const matches = (_item$data$data$evalM = (_item$data$data = item.data.data) === null || _item$data$data === void 0 ? void 0 : _item$data$data.evalMatches) !== null && _item$data$data$evalM !== void 0 ? _item$data$data$evalM : [];
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [item.data.text, /*#__PURE__*/(0,jsx_runtime.jsx)(LabelsWrapper, {
-      children: matches.map(match => /*#__PURE__*/(0,jsx_runtime.jsx)(AlertLabel/* AlertLabel */.i, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [item.data.text, (0,jsx_runtime.jsx)(LabelsWrapper, {
+      children: matches.map(match => (0,jsx_runtime.jsx)(AlertLabel.i, {
         labelKey: match.metric,
         value: String(match.value)
       }, match.metric))
@@ -239,15 +219,15 @@ function renderValueCell(item) {
 }
 
 function renderStateCell(item) {
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(AlertStateTag/* AlertStateTag */.l, {
+  return (0,jsx_runtime.jsx)(AlertStateTag.l, {
     state: item.data.state
   });
 }
 
 function renderTimestampCell(item) {
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: TimestampStyle,
-    children: item.data.timestamp && /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+    children: item.data.timestamp && (0,jsx_runtime.jsx)("span", {
       children: (0,src.dateTimeFormat)(item.data.timestamp)
     })
   });
@@ -260,7 +240,7 @@ const LabelsWrapper = _ref2 => {
   const {
     wrapper
   } = (0,grafana_ui_src.useStyles)(getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: wrapper,
     children: children
   });
@@ -278,8 +258,7 @@ const getStyles = theme => ({
       margin-right: ${theme.spacing.xs};
     }
   `
-}); // this function will figure out if a given historyItem has a preceding historyItem where the states match - in other words
-// the newState of the previous historyItem is the same as the prevState of the current historyItem
+}); 
 
 
 function hasMatchingPrecedingState(index, items) {
@@ -294,7 +273,7 @@ function hasMatchingPrecedingState(index, items) {
 }
 
 
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/hooks/useStateHistoryModal.tsx
+;
 
 
 
@@ -304,13 +283,13 @@ function useStateHistoryModal(alertId) {
   var _StateHistory;
 
   const [showModal, setShowModal] = (0,react.useState)(false);
-  const StateHistoryModal = (0,react.useMemo)(() => /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Modal, {
+  const StateHistoryModal = (0,react.useMemo)(() => (0,jsx_runtime.jsx)(grafana_ui_src.Modal, {
     isOpen: showModal,
     onDismiss: () => setShowModal(false),
     closeOnBackdropClick: true,
     closeOnEscape: true,
     title: "State history",
-    children: _StateHistory || (_StateHistory = /*#__PURE__*/(0,jsx_runtime.jsx)(StateHistory, {
+    children: _StateHistory || (_StateHistory = (0,jsx_runtime.jsx)(StateHistory, {
       alertId: alertId
     }))
   }), [alertId, showModal]);
@@ -322,19 +301,13 @@ function useStateHistoryModal(alertId) {
 }
 
 
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/alertmanager.ts
 var alertmanager = __webpack_require__("./public/app/features/alerting/unified/utils/alertmanager.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/constants.ts
 var constants = __webpack_require__("./public/app/features/alerting/unified/utils/constants.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/datasource.ts
 var datasource = __webpack_require__("./public/app/features/alerting/unified/utils/datasource.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/misc.ts
 var misc = __webpack_require__("./public/app/features/alerting/unified/utils/misc.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/rule-id.ts
 var rule_id = __webpack_require__("./public/app/features/alerting/unified/utils/rule-id.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/rules.ts
 var rules = __webpack_require__("./public/app/features/alerting/unified/utils/rules.ts");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rules/RuleDetailsActionButtons.tsx
+;
 var _div, _div2;
 
 
@@ -367,8 +340,8 @@ const RuleDetailsActionButtons = _ref => {
     rulesSource
   } = _ref;
   const dispatch = (0,es.useDispatch)();
-  const location = (0,react_router/* useLocation */.TH)();
-  const notifyApp = (0,appNotification/* useAppNotification */.iG)();
+  const location = (0,react_router.TH)();
+  const notifyApp = (0,appNotification.iG)();
   const style = (0,grafana_ui_src.useStyles2)(RuleDetailsActionButtons_getStyles);
   const {
     namespace,
@@ -381,23 +354,23 @@ const RuleDetailsActionButtons = _ref => {
     StateHistoryModal,
     showStateHistoryModal
   } = useStateHistoryModal(alertId);
-  const alertmanagerSourceName = (0,datasource/* isGrafanaRulesSource */.HY)(rulesSource) ? rulesSource : (_getAlertmanagerByUid = (0,alertmanager/* getAlertmanagerByUid */.Xy)(rulesSource.jsonData.alertmanagerUid)) === null || _getAlertmanagerByUid === void 0 ? void 0 : _getAlertmanagerByUid.name;
-  const rulesSourceName = (0,datasource/* getRulesSourceName */.EG)(rulesSource);
-  const hasExplorePermission = context_srv/* contextSrv.hasPermission */.Vt.hasPermission(types/* AccessControlAction.DataSourcesExplore */.bW.DataSourcesExplore);
+  const alertmanagerSourceName = (0,datasource.HY)(rulesSource) ? rulesSource : (_getAlertmanagerByUid = (0,alertmanager.Xy)(rulesSource.jsonData.alertmanagerUid)) === null || _getAlertmanagerByUid === void 0 ? void 0 : _getAlertmanagerByUid.name;
+  const rulesSourceName = (0,datasource.EG)(rulesSource);
+  const hasExplorePermission = context_srv.Vt.hasPermission(types.bW.DataSourcesExplore);
   const leftButtons = [];
   const rightButtons = [];
-  const isFederated = (0,rules/* isFederatedRuleGroup */.Jq)(group);
+  const isFederated = (0,rules.Jq)(group);
   const {
     isEditable,
     isRemovable
-  } = (0,useIsRuleEditable/* useIsRuleEditable */.M)(rulesSourceName, rulerRule);
+  } = (0,useIsRuleEditable.M)(rulesSourceName, rulerRule);
   const returnTo = location.pathname + location.search;
   const isViewMode = inViewMode(location.pathname);
 
   const deleteRule = () => {
     if (ruleToDelete && ruleToDelete.rulerRule) {
-      const identifier = rule_id/* fromRulerRule */.Zk((0,datasource/* getRulesSourceName */.EG)(ruleToDelete.namespace.rulesSource), ruleToDelete.namespace.name, ruleToDelete.group.name, ruleToDelete.rulerRule);
-      dispatch((0,actions/* deleteRuleAction */.hS)(identifier, {
+      const identifier = rule_id.Zk((0,datasource.EG)(ruleToDelete.namespace.rulesSource), ruleToDelete.namespace.name, ruleToDelete.group.name, ruleToDelete.rulerRule);
+      dispatch((0,actions.hS)(identifier, {
         navigateTo: isViewMode ? '/alerting/list' : undefined
       }));
       setRuleToDelete(undefined);
@@ -405,7 +378,7 @@ const RuleDetailsActionButtons = _ref => {
   };
 
   const buildShareUrl = () => {
-    if ((0,datasource/* isCloudRulesSource */.jq)(rulesSource)) {
+    if ((0,datasource.jq)(rulesSource)) {
       const {
         appUrl,
         appSubUrl
@@ -416,39 +389,38 @@ const RuleDetailsActionButtons = _ref => {
     }
 
     return window.location.href.split('?')[0];
-  }; // explore does not support grafana rule queries atm
-  // neither do "federated rules"
+  }; 
 
 
-  if ((0,datasource/* isCloudRulesSource */.jq)(rulesSource) && hasExplorePermission && !isFederated) {
-    leftButtons.push( /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+  if ((0,datasource.jq)(rulesSource) && hasExplorePermission && !isFederated) {
+    leftButtons.push( (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
       className: style.button,
       size: "xs",
       variant: "primary",
       icon: "chart-line",
       target: "__blank",
-      href: (0,misc/* createExploreLink */.mH)(rulesSource.name, rule.query),
+      href: (0,misc.mH)(rulesSource.name, rule.query),
       children: "See graph"
     }, "explore"));
   }
 
-  if (rule.annotations[constants/* Annotation.runbookURL */.q6.runbookURL]) {
-    leftButtons.push( /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+  if (rule.annotations[constants.q6.runbookURL]) {
+    leftButtons.push( (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
       className: style.button,
       size: "xs",
       variant: "primary",
       icon: "book",
       target: "__blank",
-      href: rule.annotations[constants/* Annotation.runbookURL */.q6.runbookURL],
+      href: rule.annotations[constants.q6.runbookURL],
       children: "View runbook"
     }, "runbook"));
   }
 
-  if (rule.annotations[constants/* Annotation.dashboardUID */.q6.dashboardUID]) {
-    const dashboardUID = rule.annotations[constants/* Annotation.dashboardUID */.q6.dashboardUID];
+  if (rule.annotations[constants.q6.dashboardUID]) {
+    const dashboardUID = rule.annotations[constants.q6.dashboardUID];
 
     if (dashboardUID) {
-      leftButtons.push( /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+      leftButtons.push( (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
         className: style.button,
         size: "xs",
         variant: "primary",
@@ -457,10 +429,10 @@ const RuleDetailsActionButtons = _ref => {
         href: `d/${encodeURIComponent(dashboardUID)}`,
         children: "Go to dashboard"
       }, "dashboard"));
-      const panelId = rule.annotations[constants/* Annotation.panelID */.q6.panelID];
+      const panelId = rule.annotations[constants.q6.panelID];
 
       if (panelId) {
-        leftButtons.push( /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+        leftButtons.push( (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
           className: style.button,
           size: "xs",
           variant: "primary",
@@ -473,20 +445,20 @@ const RuleDetailsActionButtons = _ref => {
     }
   }
 
-  if (alertmanagerSourceName && context_srv/* contextSrv.hasAccess */.Vt.hasAccess(types/* AccessControlAction.AlertingInstanceCreate */.bW.AlertingInstanceCreate, context_srv/* contextSrv.isEditor */.Vt.isEditor)) {
-    leftButtons.push( /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+  if (alertmanagerSourceName && context_srv.Vt.hasAccess(types.bW.AlertingInstanceCreate, context_srv.Vt.isEditor)) {
+    leftButtons.push( (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
       className: style.button,
       size: "xs",
       icon: "bell-slash",
       target: "__blank",
-      href: (0,misc/* makeRuleBasedSilenceLink */.Vv)(alertmanagerSourceName, rule),
+      href: (0,misc.Vv)(alertmanagerSourceName, rule),
       children: "Silence"
     }, "silence"));
   }
 
   if (alertId) {
-    leftButtons.push( /*#__PURE__*/(0,jsx_runtime.jsxs)(react.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+    leftButtons.push( (0,jsx_runtime.jsxs)(react.Fragment, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
         className: style.button,
         size: "xs",
         icon: "history",
@@ -497,25 +469,25 @@ const RuleDetailsActionButtons = _ref => {
   }
 
   if (!isViewMode) {
-    rightButtons.push( /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+    rightButtons.push( (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
       className: style.button,
       size: "xs",
       variant: "secondary",
       icon: "eye",
-      href: (0,misc/* createViewLink */.V2)(rulesSource, rule, returnTo),
+      href: (0,misc.V2)(rulesSource, rule, returnTo),
       children: "View"
     }, "view"));
   }
 
   if (isEditable && rulerRule && !isFederated) {
-    const sourceName = (0,datasource/* getRulesSourceName */.EG)(rulesSource);
-    const identifier = rule_id/* fromRulerRule */.Zk(sourceName, namespace.name, group.name, rulerRule);
+    const sourceName = (0,datasource.EG)(rulesSource);
+    const identifier = rule_id.Zk(sourceName, namespace.name, group.name, rulerRule);
     const editURL = src.urlUtil.renderUrl(`${grafana_runtime_src.config.appSubUrl}/alerting/${encodeURIComponent(rule_id/* stringifyIdentifier */.$V(identifier))}/edit`, {
       returnTo
     });
 
     if (isViewMode) {
-      rightButtons.push( /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.ClipboardButton, {
+      rightButtons.push( (0,jsx_runtime.jsx)(grafana_ui_src.ClipboardButton, {
         onClipboardCopy: () => {
           notifyApp.success('URL copied!');
         },
@@ -529,7 +501,7 @@ const RuleDetailsActionButtons = _ref => {
       }, "copy"));
     }
 
-    rightButtons.push( /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+    rightButtons.push( (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
       className: style.button,
       size: "xs",
       variant: "secondary",
@@ -540,7 +512,7 @@ const RuleDetailsActionButtons = _ref => {
   }
 
   if (isRemovable && rulerRule && !isFederated) {
-    rightButtons.push( /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+    rightButtons.push( (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
       className: style.button,
       size: "xs",
       type: "button",
@@ -552,17 +524,17 @@ const RuleDetailsActionButtons = _ref => {
   }
 
   if (leftButtons.length || rightButtons.length) {
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsxs)("div", {
         className: style.wrapper,
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.HorizontalGroup, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.HorizontalGroup, {
           width: "auto",
-          children: leftButtons.length ? leftButtons : _div || (_div = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {}))
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.HorizontalGroup, {
+          children: leftButtons.length ? leftButtons : _div || (_div = (0,jsx_runtime.jsx)("div", {}))
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.HorizontalGroup, {
           width: "auto",
-          children: rightButtons.length ? rightButtons : _div2 || (_div2 = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {}))
+          children: rightButtons.length ? rightButtons : _div2 || (_div2 = (0,jsx_runtime.jsx)("div", {}))
         })]
-      }), !!ruleToDelete && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.ConfirmModal, {
+      }), !!ruleToDelete && (0,jsx_runtime.jsx)(grafana_ui_src.ConfirmModal, {
         isOpen: true,
         title: "Delete rule",
         body: "Deleting this rule will permanently remove it from your alert rule list. Are you sure you want to delete this rule?",
@@ -605,19 +577,19 @@ function isGrafanaRulerRule(rule) {
   return rule.grafana_alert != null;
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/rules/RuleDetailsAnnotations.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/rules/RuleDetailsAnnotations.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "J": () => (/* binding */ RuleDetailsAnnotations)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var _AnnotationDetailsField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/components/AnnotationDetailsField.tsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "J": () => ( RuleDetailsAnnotations)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var _AnnotationDetailsField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/components/AnnotationDetailsField.tsx");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 
 
 
@@ -633,11 +605,11 @@ function RuleDetailsAnnotations(props) {
     return null;
   }
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
     className: styles.annotations,
     children: annotations.map(_ref => {
       let [key, value] = _ref;
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_AnnotationDetailsField__WEBPACK_IMPORTED_MODULE_3__/* .AnnotationDetailsField */ .a, {
+      return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_AnnotationDetailsField__WEBPACK_IMPORTED_MODULE_3__ .a, {
         annotationKey: key,
         value: value
       }, key);
@@ -651,23 +623,23 @@ const getStyles = () => ({
   `
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/rules/RuleDetailsDataSources.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/rules/RuleDetailsDataSources.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "C": () => (/* binding */ RuleDetailsDataSources)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var app_features_expressions_ExpressionDatasource__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/expressions/ExpressionDatasource.ts");
-/* harmony import */ var _utils_datasource__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/alerting/unified/utils/datasource.ts");
-/* harmony import */ var _utils_rules__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/alerting/unified/utils/rules.ts");
-/* harmony import */ var _DetailsField__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./public/app/features/alerting/unified/components/DetailsField.tsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "C": () => ( RuleDetailsDataSources)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var app_features_expressions_ExpressionDatasource__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/expressions/ExpressionDatasource.ts");
+ var _utils_datasource__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/alerting/unified/utils/datasource.ts");
+ var _utils_rules__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/alerting/unified/utils/rules.ts");
+ var _DetailsField__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./public/app/features/alerting/unified/components/DetailsField.tsx");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 
 
 
@@ -686,21 +658,21 @@ function RuleDetailsDataSources(props) {
   } = props;
   const styles = (0,_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.useStyles2)(getStyles);
   const dataSources = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(() => {
-    if ((0,_utils_datasource__WEBPACK_IMPORTED_MODULE_5__/* .isCloudRulesSource */ .jq)(rulesSource)) {
+    if ((0,_utils_datasource__WEBPACK_IMPORTED_MODULE_5__ .jq)(rulesSource)) {
       return [{
         name: rulesSource.name,
         icon: rulesSource.meta.info.logos.small
       }];
     }
 
-    if ((0,_utils_rules__WEBPACK_IMPORTED_MODULE_6__/* .isGrafanaRulerRule */ .Pc)(rule.rulerRule)) {
+    if ((0,_utils_rules__WEBPACK_IMPORTED_MODULE_6__ .Pc)(rule.rulerRule)) {
       const {
         data
       } = rule.rulerRule.grafana_alert;
       const unique = data.reduce((dataSources, query) => {
         const ds = (0,_grafana_runtime__WEBPACK_IMPORTED_MODULE_2__.getDataSourceSrv)().getInstanceSettings(query.datasourceUid);
 
-        if (!ds || ds.uid === app_features_expressions_ExpressionDatasource__WEBPACK_IMPORTED_MODULE_4__/* .ExpressionDatasourceUID */ .Yq) {
+        if (!ds || ds.uid === app_features_expressions_ExpressionDatasource__WEBPACK_IMPORTED_MODULE_4__ .Yq) {
           return dataSources;
         }
 
@@ -720,16 +692,16 @@ function RuleDetailsDataSources(props) {
     return null;
   }
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_DetailsField__WEBPACK_IMPORTED_MODULE_7__/* .DetailsField */ .C, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_DetailsField__WEBPACK_IMPORTED_MODULE_7__ .C, {
     label: "Data source",
     children: dataSources.map((_ref, index) => {
       let {
         name,
         icon
       } = _ref;
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-        children: [icon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+      return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+        children: [icon && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
             alt: `${name} datasource logo`,
             className: styles.dataSourceIcon,
             src: icon
@@ -750,40 +722,28 @@ function getStyles(theme) {
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/rules/RuleDetailsExpression.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/rules/RuleDetailsExpression.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "C": () => (/* binding */ RuleDetailsExpression)
+  "C": () => ( RuleDetailsExpression)
 });
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/datasource.ts
 var datasource = __webpack_require__("./public/app/features/alerting/unified/utils/datasource.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/DetailsField.tsx
 var DetailsField = __webpack_require__("./public/app/features/alerting/unified/components/DetailsField.tsx");
-// EXTERNAL MODULE: ./.yarn/cache/prismjs-npm-1.27.0-ca4e1667c6-85c7f4a3e9.zip/node_modules/prismjs/prism.js
 var prism = __webpack_require__("./.yarn/cache/prismjs-npm-1.27.0-ca4e1667c6-85c7f4a3e9.zip/node_modules/prismjs/prism.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/@grafana-slate-react-virtual-047372596b/0/cache/@grafana-slate-react-npm-0.22.10-grafana-510bc0576d-3417c53d9d.zip/node_modules/@grafana/slate-react/lib/slate-react.es.js + 8 modules
 var slate_react_es = __webpack_require__("./.yarn/__virtual__/@grafana-slate-react-virtual-047372596b/0/cache/@grafana-slate-react-npm-0.22.10-grafana-510bc0576d-3417c53d9d.zip/node_modules/@grafana/slate-react/lib/slate-react.es.js");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/loki/syntax.ts
 var syntax = __webpack_require__("./public/app/plugins/datasource/loki/syntax.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/prometheus/promql.ts
 var promql = __webpack_require__("./public/app/plugins/datasource/prometheus/promql.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/Well.tsx
 var Well = __webpack_require__("./public/app/features/alerting/unified/components/Well.tsx");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/Expression.tsx
+;
 
 
 
@@ -803,10 +763,10 @@ const HighlightedQuery = _ref => {
     onlyIn: node => node.type === 'code_block',
     getSyntax: () => language
   }, Object.assign({}, prism.languages, {
-    [language]: language === 'logql' ? syntax/* default */.ZP : promql/* default */.ZP
+    [language]: language === 'logql' ? syntax.ZP : promql.ZP
   }))], [language]);
   const slateValue = (0,react.useMemo)(() => (0,src.makeValue)(expr), [expr]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(slate_react_es/* Editor */.ML, {
+  return (0,jsx_runtime.jsx)(slate_react_es.ML, {
     plugins: plugins,
     value: slateValue,
     readOnly: true
@@ -818,11 +778,11 @@ const Expression = _ref2 => {
     rulesSource
   } = _ref2;
   const styles = (0,src.useStyles)(getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Well/* Well */.t, {
+  return (0,jsx_runtime.jsx)(Well.t, {
     className: (0,emotion_css_esm.cx)(styles.well, 'slate-query-field'),
-    children: (0,datasource/* isCloudRulesSource */.jq)(rulesSource) ? /*#__PURE__*/(0,jsx_runtime.jsx)(HighlightedQuery, {
+    children: (0,datasource.jq)(rulesSource) ? (0,jsx_runtime.jsx)(HighlightedQuery, {
       expr: query,
-      language: rulesSource.type === datasource/* DataSourceType.Loki */.ye.Loki ? 'logql' : 'promql'
+      language: rulesSource.type === datasource.ye.Loki ? 'logql' : 'promql'
     }) : query
   });
 };
@@ -831,7 +791,7 @@ const getStyles = theme => ({
     font-family: ${theme.typography.fontFamily.monospace};
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rules/RuleDetailsExpression.tsx
+;
 
 
 
@@ -846,17 +806,17 @@ function RuleDetailsExpression(props) {
   } = props;
   const styles = RuleDetailsExpression_getStyles();
 
-  if (!(0,datasource/* isCloudRulesSource */.jq)(rulesSource)) {
+  if (!(0,datasource.jq)(rulesSource)) {
     return null;
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(DetailsField/* DetailsField */.C, {
+  return (0,jsx_runtime.jsx)(DetailsField.C, {
     label: "Expression",
     horizontal: true,
     className: (0,emotion_css_esm.cx)({
       [styles.exprRow]: !!annotations.length
     }),
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(Expression, {
+    children: (0,jsx_runtime.jsx)(Expression, {
       expression: rule.query,
       rulesSource: rulesSource
     })
@@ -869,30 +829,23 @@ const RuleDetailsExpression_getStyles = () => ({
   `
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/rules/RuleDetailsMatchingInstances.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/rules/RuleDetailsMatchingInstances.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "M": () => (/* binding */ RuleDetailsMatchingInstances)
+  "M": () => ( RuleDetailsMatchingInstances)
 });
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/alert-groups/MatcherFilter.tsx
 var MatcherFilter = __webpack_require__("./public/app/features/alerting/unified/components/alert-groups/MatcherFilter.tsx");
-// EXTERNAL MODULE: ./public/app/types/unified-alerting-dto.ts
 var unified_alerting_dto = __webpack_require__("./public/app/types/unified-alerting-dto.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rules/AlertInstanceStateFilter.tsx
+;
 var _Label;
 
 
@@ -906,15 +859,15 @@ const AlertInstanceStateFilter = _ref => {
     onStateFilterChange,
     stateFilter
   } = _ref;
-  const stateOptions = Object.values(unified_alerting_dto/* GrafanaAlertState */.bj).map(value => ({
+  const stateOptions = Object.values(unified_alerting_dto.bj).map(value => ({
     label: value,
     value
   }));
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: className,
-    children: [_Label || (_Label = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Label, {
+    children: [_Label || (_Label = (0,jsx_runtime.jsx)(src.Label, {
       children: "State"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(src.RadioButtonGroup, {
+    })), (0,jsx_runtime.jsx)(src.RadioButtonGroup, {
       options: stateOptions,
       value: stateFilter,
       onChange: onStateFilterChange,
@@ -926,19 +879,13 @@ const AlertInstanceStateFilter = _ref => {
     })]
   });
 };
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/alertmanager.ts
 var alertmanager = __webpack_require__("./public/app/features/alerting/unified/utils/alertmanager.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/misc.ts
 var misc = __webpack_require__("./public/app/features/alerting/unified/utils/misc.ts");
-// EXTERNAL MODULE: ./public/app/plugins/panel/alertlist/types.ts
 var types = __webpack_require__("./public/app/plugins/panel/alertlist/types.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/rules.ts
 var rules = __webpack_require__("./public/app/features/alerting/unified/utils/rules.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/DetailsField.tsx
 var DetailsField = __webpack_require__("./public/app/features/alerting/unified/components/DetailsField.tsx");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/rules/AlertInstancesTable.tsx + 1 modules
 var AlertInstancesTable = __webpack_require__("./public/app/features/alerting/unified/components/rules/AlertInstancesTable.tsx");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rules/RuleDetailsMatchingInstances.tsx
+;
 
 
 
@@ -957,7 +904,7 @@ function RuleDetailsMatchingInstances(props) {
     promRule
   } = props;
   const [queryString, setQueryString] = (0,react.useState)();
-  const [alertState, setAlertState] = (0,react.useState)(); // This key is used to force a rerender on the inputs when the filters are cleared
+  const [alertState, setAlertState] = (0,react.useState)(); 
 
   const [filterKey] = (0,react.useState)(Math.floor(Math.random() * 100));
   const queryStringKey = `queryString-${filterKey}`;
@@ -965,31 +912,31 @@ function RuleDetailsMatchingInstances(props) {
   const alerts = (0,react.useMemo)(() => {
     var _promRule$alerts;
 
-    return (0,rules/* isAlertingRule */.x_)(promRule) && (_promRule$alerts = promRule.alerts) !== null && _promRule$alerts !== void 0 && _promRule$alerts.length ? filterAlerts(queryString, alertState, (0,misc/* sortAlerts */.Zl)(types/* SortOrder.Importance */.As.Importance, promRule.alerts)) : [];
+    return (0,rules.x_)(promRule) && (_promRule$alerts = promRule.alerts) !== null && _promRule$alerts !== void 0 && _promRule$alerts.length ? filterAlerts(queryString, alertState, (0,misc.Zl)(types.As.Importance, promRule.alerts)) : [];
   }, [promRule, alertState, queryString]);
 
-  if (!(0,rules/* isAlertingRule */.x_)(promRule)) {
+  if (!(0,rules.x_)(promRule)) {
     return null;
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(DetailsField/* DetailsField */.C, {
+  return (0,jsx_runtime.jsxs)(DetailsField.C, {
     label: "Matching instances",
     horizontal: true,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    children: [(0,jsx_runtime.jsx)("div", {
       className: (0,emotion_css_esm.cx)(styles.flexRow, styles.spaceBetween),
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      children: (0,jsx_runtime.jsxs)("div", {
         className: styles.flexRow,
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(MatcherFilter/* MatcherFilter */.F, {
+        children: [(0,jsx_runtime.jsx)(MatcherFilter.F, {
           className: styles.rowChild,
           defaultQueryString: queryString,
           onFilterChange: value => setQueryString(value)
-        }, queryStringKey), /*#__PURE__*/(0,jsx_runtime.jsx)(AlertInstanceStateFilter, {
+        }, queryStringKey), (0,jsx_runtime.jsx)(AlertInstanceStateFilter, {
           className: styles.rowChild,
           stateFilter: alertState,
           onStateFilterChange: setAlertState
         })]
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(AlertInstancesTable/* AlertInstancesTable */.o, {
+    }), (0,jsx_runtime.jsx)(AlertInstancesTable.o, {
       instances: alerts
     })]
   });
@@ -999,12 +946,12 @@ function filterAlerts(alertInstanceLabel, alertInstanceState, alerts) {
   let filteredAlerts = [...alerts];
 
   if (alertInstanceLabel) {
-    const matchers = (0,alertmanager/* parseMatchers */.Zh)(alertInstanceLabel || '');
+    const matchers = (0,alertmanager.Zh)(alertInstanceLabel || '');
     filteredAlerts = filteredAlerts.filter(_ref => {
       let {
         labels
       } = _ref;
-      return (0,alertmanager/* labelsMatchMatchers */.eD)(labels, matchers);
+      return (0,alertmanager.eD)(labels, matchers);
     });
   }
 
@@ -1036,18 +983,18 @@ const getStyles = theme => {
   };
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/rules/RuleHealth.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/rules/RuleHealth.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "V": () => (/* binding */ RuleHealth)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "V": () => ( RuleHealth)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _Icon, _span;
 
 
@@ -1063,21 +1010,21 @@ const RuleHealth = _ref => {
   const style = (0,_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.useStyles2)(getStyle);
 
   if (rule.health === 'err' || rule.health === 'error') {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Tooltip, {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Tooltip, {
       theme: "error",
       content: rule.lastError || 'No error message provided.',
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: style.warn,
-        children: [_Icon || (_Icon = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Icon, {
+        children: [_Icon || (_Icon = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Icon, {
           name: "exclamation-triangle"
-        })), _span || (_span = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+        })), _span || (_span = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
           children: "error"
         }))]
       })
     });
   }
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
     children: rule.health
   });
 };
@@ -1093,22 +1040,22 @@ const getStyle = theme => ({
   `
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/rules/RuleState.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/rules/RuleState.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "p": () => (/* binding */ RuleState)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var app_types_unified_alerting_dto__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/types/unified-alerting-dto.ts");
-/* harmony import */ var _utils_rules__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/alerting/unified/utils/rules.ts");
-/* harmony import */ var _AlertStateTag__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/alerting/unified/components/rules/AlertStateTag.tsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "p": () => ( RuleState)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var app_types_unified_alerting_dto__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/types/unified-alerting-dto.ts");
+ var _utils_rules__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/alerting/unified/utils/rules.ts");
+ var _AlertStateTag__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/alerting/unified/components/rules/AlertStateTag.tsx");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _HorizontalGroup, _HorizontalGroup2;
 
 
@@ -1130,17 +1077,16 @@ const RuleState = _ref => {
   const style = (0,_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.useStyles2)(getStyle);
   const {
     promRule
-  } = rule; // return how long the rule has been in it's firing state, if any
+  } = rule; 
 
   const forTime = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(() => {
     var _promRule$alerts;
 
-    if (promRule && (0,_utils_rules__WEBPACK_IMPORTED_MODULE_5__/* .isAlertingRule */ .x_)(promRule) && (_promRule$alerts = promRule.alerts) !== null && _promRule$alerts !== void 0 && _promRule$alerts.length && promRule.state !== app_types_unified_alerting_dto__WEBPACK_IMPORTED_MODULE_4__/* .PromAlertingRuleState.Inactive */ .x_.Inactive) {
-      // find earliest alert
-      const firstActiveAt = (0,_utils_rules__WEBPACK_IMPORTED_MODULE_5__/* .getFirstActiveAt */ .ub)(promRule); // calculate time elapsed from earliest alert
+    if (promRule && (0,_utils_rules__WEBPACK_IMPORTED_MODULE_5__ .x_)(promRule) && (_promRule$alerts = promRule.alerts) !== null && _promRule$alerts !== void 0 && _promRule$alerts.length && promRule.state !== app_types_unified_alerting_dto__WEBPACK_IMPORTED_MODULE_4__ .x_.Inactive) {
+      const firstActiveAt = (0,_utils_rules__WEBPACK_IMPORTED_MODULE_5__ .ub)(promRule); 
 
       if (firstActiveAt) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("span", {
+        return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("span", {
           title: String(firstActiveAt),
           className: style.for,
           children: ["for", ' ', (0,_grafana_data__WEBPACK_IMPORTED_MODULE_2__.intervalToAbbreviatedDurationString)({
@@ -1155,29 +1101,29 @@ const RuleState = _ref => {
   }, [promRule, style]);
 
   if (isDeleting) {
-    return _HorizontalGroup || (_HorizontalGroup = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.HorizontalGroup, {
+    return _HorizontalGroup || (_HorizontalGroup = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.HorizontalGroup, {
       align: "flex-start",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Spinner, {}), "deleting"]
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Spinner, {}), "deleting"]
     }));
   } else if (isCreating) {
-    return _HorizontalGroup2 || (_HorizontalGroup2 = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.HorizontalGroup, {
+    return _HorizontalGroup2 || (_HorizontalGroup2 = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.HorizontalGroup, {
       align: "flex-start",
-      children: [' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Spinner, {}), "creating"]
+      children: [' ', (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Spinner, {}), "creating"]
     }));
-  } else if (promRule && (0,_utils_rules__WEBPACK_IMPORTED_MODULE_5__/* .isAlertingRule */ .x_)(promRule)) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.HorizontalGroup, {
+  } else if (promRule && (0,_utils_rules__WEBPACK_IMPORTED_MODULE_5__ .x_)(promRule)) {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.HorizontalGroup, {
       align: "flex-start",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_AlertStateTag__WEBPACK_IMPORTED_MODULE_6__/* .AlertStateTag */ .l, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_AlertStateTag__WEBPACK_IMPORTED_MODULE_6__ .l, {
         state: promRule.state
       }), forTime]
     });
-  } else if (promRule && (0,_utils_rules__WEBPACK_IMPORTED_MODULE_5__/* .isRecordingRule */ .OP)(promRule)) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+  } else if (promRule && (0,_utils_rules__WEBPACK_IMPORTED_MODULE_5__ .OP)(promRule)) {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
       children: "Recording rule"
     });
   }
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
     children: "n/a"
   });
 };
@@ -1191,34 +1137,31 @@ const getStyle = theme => ({
   `
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/hooks/useCombinedRuleNamespaces.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/hooks/useCombinedRuleNamespaces.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Kd": () => (/* binding */ flattenGrafanaManagedRules),
-/* harmony export */   "Zo": () => (/* binding */ useCombinedRuleNamespaces)
-/* harmony export */ });
-/* unused harmony export sortRulesByName */
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _utils_datasource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/alerting/unified/utils/datasource.ts");
-/* harmony import */ var _utils_rules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/alerting/unified/utils/rules.ts");
-/* harmony import */ var _useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts");
-
+ __webpack_require__.d(__webpack_exports__, {
+   "Kd": () => ( flattenGrafanaManagedRules),
+   "Zo": () => ( useCombinedRuleNamespaces)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _utils_datasource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/alerting/unified/utils/datasource.ts");
+ var _utils_rules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/alerting/unified/utils/rules.ts");
+ var _useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts");
 
 
 
-// this little monster combines prometheus rules and ruler rules to produce a unified data structure
-// can limit to a single rules source
+
 function useCombinedRuleNamespaces(rulesSourceName) {
-  const promRulesResponses = (0,_useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_3__/* .useUnifiedAlertingSelector */ ._)(state => state.promRules);
-  const rulerRulesResponses = (0,_useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_3__/* .useUnifiedAlertingSelector */ ._)(state => state.rulerRules); // cache results per rules source, so we only recalculate those for which results have actually changed
+  const promRulesResponses = (0,_useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_3__ ._)(state => state.promRules);
+  const rulerRulesResponses = (0,_useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_3__ ._)(state => state.rulerRules); 
 
   const cache = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)({});
   const rulesSources = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => {
     if (rulesSourceName) {
-      const rulesSource = (0,_utils_datasource__WEBPACK_IMPORTED_MODULE_1__/* .getRulesSourceByName */ .o_)(rulesSourceName);
+      const rulesSource = (0,_utils_datasource__WEBPACK_IMPORTED_MODULE_1__ .o_)(rulesSourceName);
 
       if (!rulesSource) {
         throw new Error(`Unknown rules source: ${rulesSourceName}`);
@@ -1227,12 +1170,12 @@ function useCombinedRuleNamespaces(rulesSourceName) {
       return [rulesSource];
     }
 
-    return (0,_utils_datasource__WEBPACK_IMPORTED_MODULE_1__/* .getAllRulesSources */ .h_)();
+    return (0,_utils_datasource__WEBPACK_IMPORTED_MODULE_1__ .h_)();
   }, [rulesSourceName]);
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => rulesSources.map(rulesSource => {
     var _promRulesResponses$r, _rulerRulesResponses$;
 
-    const rulesSourceName = (0,_utils_datasource__WEBPACK_IMPORTED_MODULE_1__/* .isCloudRulesSource */ .jq)(rulesSource) ? rulesSource.name : rulesSource;
+    const rulesSourceName = (0,_utils_datasource__WEBPACK_IMPORTED_MODULE_1__ .jq)(rulesSource) ? rulesSource.name : rulesSource;
     const promRules = (_promRulesResponses$r = promRulesResponses[rulesSourceName]) === null || _promRulesResponses$r === void 0 ? void 0 : _promRulesResponses$r.result;
     const rulerRules = (_rulerRulesResponses$ = rulerRulesResponses[rulesSourceName]) === null || _rulerRulesResponses$ === void 0 ? void 0 : _rulerRulesResponses$.result;
     const cached = cache.current[rulesSourceName];
@@ -1241,7 +1184,7 @@ function useCombinedRuleNamespaces(rulesSourceName) {
       return cached.result;
     }
 
-    const namespaces = {}; // first get all the ruler rules in
+    const namespaces = {}; 
 
     Object.entries(rulerRules || {}).forEach(_ref => {
       let [namespaceName, groups] = _ref;
@@ -1252,7 +1195,7 @@ function useCombinedRuleNamespaces(rulesSourceName) {
       };
       namespaces[namespaceName] = namespace;
       addRulerGroupsToCombinedNamespace(namespace, groups);
-    }); // then correlate with prometheus rules
+    }); 
 
     promRules === null || promRules === void 0 ? void 0 : promRules.forEach(_ref2 => {
       let {
@@ -1274,13 +1217,13 @@ function useCombinedRuleNamespaces(rulesSourceName) {
     };
     return result;
   }).flat(), [promRulesResponses, rulerRulesResponses, rulesSources]);
-} // merge all groups in case of grafana managed, essentially treating namespaces (folders) as groups
+} 
 
 function flattenGrafanaManagedRules(namespaces) {
   return namespaces.map(namespace => {
     const newNamespace = Object.assign({}, namespace, {
       groups: []
-    }); // add default group with ungrouped rules
+    }); 
 
     newNamespace.groups.push({
       name: 'default',
@@ -1337,7 +1280,7 @@ function promRuleToCombinedRule(rule, namespace, group) {
     name: rule.name,
     query: rule.query,
     labels: rule.labels || {},
-    annotations: (0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__/* .isAlertingRule */ .x_)(rule) ? rule.annotations || {} : {},
+    annotations: (0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__ .x_)(rule) ? rule.annotations || {} : {},
     promRule: rule,
     namespace: namespace,
     group
@@ -1345,7 +1288,7 @@ function promRuleToCombinedRule(rule, namespace, group) {
 }
 
 function rulerRuleToCombinedRule(rule, namespace, group) {
-  return (0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__/* .isAlertingRulerRule */ .cG)(rule) ? {
+  return (0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__ .cG)(rule) ? {
     name: rule.alert,
     query: rule.expr,
     labels: rule.labels || {},
@@ -1353,7 +1296,7 @@ function rulerRuleToCombinedRule(rule, namespace, group) {
     rulerRule: rule,
     namespace,
     group
-  } : (0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__/* .isRecordingRulerRule */ .yF)(rule) ? {
+  } : (0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__ .yF)(rule) ? {
     name: rule.record,
     query: rule.expr,
     labels: rule.labels || {},
@@ -1370,20 +1313,18 @@ function rulerRuleToCombinedRule(rule, namespace, group) {
     namespace,
     group
   };
-} // find existing rule in group that matches the given prom rule
+} 
 
 
 function getExistingRuleInGroup(rule, group, rulesSource) {
   var _rules$find;
 
-  if ((0,_utils_datasource__WEBPACK_IMPORTED_MODULE_1__/* .isGrafanaRulesSource */ .HY)(rulesSource)) {
-    // assume grafana groups have only the one rule. check name anyway because paranoid
+  if ((0,_utils_datasource__WEBPACK_IMPORTED_MODULE_1__ .HY)(rulesSource)) {
     return group.rules.find(existingRule => existingRule.name === rule.name);
   }
 
-  return (// try finding a rule that matches name, labels, annotations and query
-    (_rules$find = group.rules.find(existingRule => !existingRule.promRule && isCombinedRuleEqualToPromRule(existingRule, rule, true))) !== null && _rules$find !== void 0 ? _rules$find : // if that fails, try finding a rule that only matches name, labels and annotations.
-    // loki & prom can sometimes modify the query so it doesnt match, eg `2 > 1` becomes `1`
+  return (
+    (_rules$find = group.rules.find(existingRule => !existingRule.promRule && isCombinedRuleEqualToPromRule(existingRule, rule, true))) !== null && _rules$find !== void 0 ? _rules$find : 
     group.rules.find(existingRule => !existingRule.promRule && isCombinedRuleEqualToPromRule(existingRule, rule, false))
   );
 }
@@ -1392,38 +1333,37 @@ function isCombinedRuleEqualToPromRule(combinedRule, rule) {
   let checkQuery = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
 
   if (combinedRule.name === rule.name) {
-    return JSON.stringify([checkQuery ? hashQuery(combinedRule.query) : '', combinedRule.labels, combinedRule.annotations]) === JSON.stringify([checkQuery ? hashQuery(rule.query) : '', rule.labels || {}, (0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__/* .isAlertingRule */ .x_)(rule) ? rule.annotations || {} : {}]);
+    return JSON.stringify([checkQuery ? hashQuery(combinedRule.query) : '', combinedRule.labels, combinedRule.annotations]) === JSON.stringify([checkQuery ? hashQuery(rule.query) : '', rule.labels || {}, (0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__ .x_)(rule) ? rule.annotations || {} : {}]);
   }
 
   return false;
-} // there can be slight differences in how prom & ruler render a query, this will hash them accounting for the differences
+} 
 
 
 function hashQuery(query) {
-  // one of them might be wrapped in parens
   if (query.length > 1 && query[0] === '(' && query[query.length - 1] === ')') {
     query = query.slice(1, -1);
-  } // whitespace could be added or removed
+  } 
 
 
-  query = query.replace(/\s|\n/g, ''); // labels matchers can be reordered, so sort the enitre string, esentially comparing just the character counts
+  query = query.replace(/\s|\n/g, ''); 
 
   return query.split('').sort().join('');
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/hooks/useFolder.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/hooks/useFolder.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "W": () => (/* binding */ useFolder)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
-/* harmony import */ var _state_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/alerting/unified/state/actions.ts");
-/* harmony import */ var _utils_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/utils/redux.ts");
-/* harmony import */ var _useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "W": () => ( useFolder)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
+ var _state_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/alerting/unified/state/actions.ts");
+ var _utils_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/utils/redux.ts");
+ var _useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts");
 
 
 
@@ -1431,15 +1371,15 @@ function hashQuery(query) {
 
 function useFolder(uid) {
   const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
-  const folderRequests = (0,_useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__/* .useUnifiedAlertingSelector */ ._)(state => state.folders);
+  const folderRequests = (0,_useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__ ._)(state => state.folders);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (uid) {
-      dispatch((0,_state_actions__WEBPACK_IMPORTED_MODULE_2__/* .fetchFolderIfNotFetchedAction */ .sw)(uid));
+      dispatch((0,_state_actions__WEBPACK_IMPORTED_MODULE_2__ .sw)(uid));
     }
   }, [dispatch, uid]);
 
   if (uid) {
-    const request = folderRequests[uid] || _utils_redux__WEBPACK_IMPORTED_MODULE_3__/* .initialAsyncRequestState */ .oq;
+    const request = folderRequests[uid] || _utils_redux__WEBPACK_IMPORTED_MODULE_3__ .oq;
     return {
       folder: request.result,
       loading: request.loading
@@ -1451,19 +1391,19 @@ function useFolder(uid) {
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/hooks/useIsRuleEditable.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/hooks/useIsRuleEditable.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "M": () => (/* binding */ useIsRuleEditable)
-/* harmony export */ });
-/* harmony import */ var app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./public/app/core/services/context_srv.ts");
-/* harmony import */ var _utils_access_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/alerting/unified/utils/access-control.ts");
-/* harmony import */ var _utils_rules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/alerting/unified/utils/rules.ts");
-/* harmony import */ var _useFolder__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useFolder.ts");
-/* harmony import */ var _useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "M": () => ( useIsRuleEditable)
+ });
+ var app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./public/app/core/services/context_srv.ts");
+ var _utils_access_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/alerting/unified/utils/access-control.ts");
+ var _utils_rules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/alerting/unified/utils/rules.ts");
+ var _useFolder__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useFolder.ts");
+ var _useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts");
 
 
 
@@ -1472,15 +1412,15 @@ function useFolder(uid) {
 function useIsRuleEditable(rulesSourceName, rule) {
   var _dataSources$rulesSou, _dataSources$rulesSou2, _dataSources$rulesSou3;
 
-  const dataSources = (0,_useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__/* .useUnifiedAlertingSelector */ ._)(state => state.dataSources);
-  const folderUID = rule && (0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__/* .isGrafanaRulerRule */ .Pc)(rule) ? rule.grafana_alert.namespace_uid : undefined;
-  const rulePermission = (0,_utils_access_control__WEBPACK_IMPORTED_MODULE_1__/* .getRulesPermissions */ .Bz)(rulesSourceName);
-  const hasEditPermission = app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__/* .contextSrv.hasAccess */ .Vt.hasAccess(rulePermission.update, app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__/* .contextSrv.isEditor */ .Vt.isEditor);
-  const hasRemovePermission = app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__/* .contextSrv.hasAccess */ .Vt.hasAccess(rulePermission.delete, app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__/* .contextSrv.isEditor */ .Vt.isEditor);
+  const dataSources = (0,_useUnifiedAlertingSelector__WEBPACK_IMPORTED_MODULE_4__ ._)(state => state.dataSources);
+  const folderUID = rule && (0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__ .Pc)(rule) ? rule.grafana_alert.namespace_uid : undefined;
+  const rulePermission = (0,_utils_access_control__WEBPACK_IMPORTED_MODULE_1__ .Bz)(rulesSourceName);
+  const hasEditPermission = app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__ .Vt.hasAccess(rulePermission.update, app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__ .Vt.isEditor);
+  const hasRemovePermission = app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__ .Vt.hasAccess(rulePermission.delete, app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_0__ .Vt.isEditor);
   const {
     folder,
     loading
-  } = (0,_useFolder__WEBPACK_IMPORTED_MODULE_3__/* .useFolder */ .W)(folderUID);
+  } = (0,_useFolder__WEBPACK_IMPORTED_MODULE_3__ .W)(folderUID);
 
   if (!rule) {
     return {
@@ -1488,10 +1428,10 @@ function useIsRuleEditable(rulesSourceName, rule) {
       isRemovable: false,
       loading: false
     };
-  } // grafana rules can be edited if user can edit the folder they're in
+  } 
 
 
-  if ((0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__/* .isGrafanaRulerRule */ .Pc)(rule)) {
+  if ((0,_utils_rules__WEBPACK_IMPORTED_MODULE_2__ .Pc)(rule)) {
     if (!folderUID) {
       throw new Error(`Rule ${rule.grafana_alert.title} does not have a folder uid, cannot determine if it is editable.`);
     }
@@ -1501,7 +1441,7 @@ function useIsRuleEditable(rulesSourceName, rule) {
       isRemovable: hasRemovePermission && (folder === null || folder === void 0 ? void 0 : folder.canSave),
       loading
     };
-  } // prom rules are only editable by users with Editor role and only if rules source supports editing
+  } 
 
 
   const isRulerAvailable = Boolean((_dataSources$rulesSou = dataSources[rulesSourceName]) === null || _dataSources$rulesSou === void 0 ? void 0 : (_dataSources$rulesSou2 = _dataSources$rulesSou.result) === null || _dataSources$rulesSou2 === void 0 ? void 0 : _dataSources$rulesSou2.rulerConfig);
@@ -1512,6 +1452,6 @@ function useIsRuleEditable(rulesSourceName, rule) {
   };
 }
 
-/***/ })
+ })
 
 }]);

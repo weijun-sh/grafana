@@ -1,68 +1,68 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[6618],{
 
-/***/ "./public/app/core/hooks/useCleanup.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/hooks/useCleanup.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "x": () => (/* binding */ useCleanup)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
-/* harmony import */ var _actions_cleanUp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/core/actions/cleanUp.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "x": () => ( useCleanup)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
+ var _actions_cleanUp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/core/actions/cleanUp.ts");
 
 
 
 function useCleanup(stateSelector) {
-  const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(); //bit of a hack to unburden user from having to wrap stateSelcetor in a useCallback. Otherwise cleanup would happen on every render
+  const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(); 
 
   const selectorRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(stateSelector);
   selectorRef.current = stateSelector;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     return () => {
-      dispatch((0,_actions_cleanUp__WEBPACK_IMPORTED_MODULE_2__/* .cleanUpAction */ .e)({
+      dispatch((0,_actions_cleanUp__WEBPACK_IMPORTED_MODULE_2__ .e)({
         stateSelector: selectorRef.current
       }));
     };
   }, [dispatch]);
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/core/hooks/useNavModel.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/hooks/useNavModel.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "q": () => (/* binding */ useNavModel)
-/* harmony export */ });
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
-/* harmony import */ var _selectors_navModel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/core/selectors/navModel.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "q": () => ( useNavModel)
+ });
+ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
+ var _selectors_navModel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/core/selectors/navModel.ts");
 
 
 const useNavModel = id => {
   const navIndex = (0,react_redux__WEBPACK_IMPORTED_MODULE_0__.useSelector)(state => state.navIndex);
-  return (0,_selectors_navModel__WEBPACK_IMPORTED_MODULE_1__/* .getNavModel */ .h)(navIndex, id);
+  return (0,_selectors_navModel__WEBPACK_IMPORTED_MODULE_1__ .h)(navIndex, id);
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/NotificationsListPage.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/NotificationsListPage.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var react_use__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useAsyncFn.js");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var app_core_components_EmptyListCTA_EmptyListCTA__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/components/EmptyListCTA/EmptyListCTA.tsx");
-/* harmony import */ var app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/components/Page/Page.tsx");
-/* harmony import */ var app_core_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/core/core.ts");
-/* harmony import */ var app_core_hooks_useNavModel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/core/hooks/useNavModel.ts");
-/* harmony import */ var _types_events__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./public/app/types/events.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var react_use__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useAsyncFn.js");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var app_core_components_EmptyListCTA_EmptyListCTA__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/components/EmptyListCTA/EmptyListCTA.tsx");
+ var app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/components/Page/Page.tsx");
+ var app_core_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/core/core.ts");
+ var app_core_hooks_useNavModel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/core/hooks/useNavModel.ts");
+ var _types_events__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./public/app/types/events.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _div, _strong, _Button, _EmptyListCTA;
 
 
@@ -79,14 +79,14 @@ var _div, _strong, _Button, _EmptyListCTA;
 
 
 const NotificationsListPage = () => {
-  const navModel = (0,app_core_hooks_useNavModel__WEBPACK_IMPORTED_MODULE_6__/* .useNavModel */ .q)('channels');
+  const navModel = (0,app_core_hooks_useNavModel__WEBPACK_IMPORTED_MODULE_6__ .q)('channels');
   const [notifications, setNotifications] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
 
   const getNotifications = async () => {
     return await (0,_grafana_runtime__WEBPACK_IMPORTED_MODULE_1__.getBackendSrv)().get(`/api/alert-notifications`);
   };
 
-  const [state, fetchNotifications] = (0,react_use__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .Z)(getNotifications);
+  const [state, fetchNotifications] = (0,react_use__WEBPACK_IMPORTED_MODULE_9__ .Z)(getNotifications);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     fetchNotifications().then(res => {
       setNotifications(res);
@@ -94,7 +94,7 @@ const NotificationsListPage = () => {
   }, [fetchNotifications]);
 
   const deleteNotification = id => {
-    app_core_core__WEBPACK_IMPORTED_MODULE_5__/* .appEvents.publish */ .h$.publish(new _types_events__WEBPACK_IMPORTED_MODULE_7__/* .ShowConfirmModalEvent */ .VJ({
+    app_core_core__WEBPACK_IMPORTED_MODULE_5__ .h$.publish(new _types_events__WEBPACK_IMPORTED_MODULE_7__ .VJ({
       title: 'Delete',
       text: 'Do you want to delete this notification channel?',
       text2: `Deleting this notification channel will not delete from alerts any references to it`,
@@ -113,67 +113,67 @@ const NotificationsListPage = () => {
     setNotifications(notifications);
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_4__ .Z, {
     navModel: navModel,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_4__/* ["default"].Contents */ .Z.Contents, {
-      children: [state.error && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_4__ .Z.Contents, {
+      children: [state.error && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
         children: state.error
-      }), !!notifications.length && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
-        children: [_div || (_div = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+      }), !!notifications.length && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+        children: [_div || (_div = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
           className: "page-action-bar",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
             className: "page-action-bar__spacer"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.LinkButton, {
+          }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.LinkButton, {
             icon: "channel-add",
             href: "alerting/notification/new",
             children: "New channel"
           })]
-        })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("table", {
+        })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("table", {
           className: "filter-table filter-table--hover",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("thead", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("th", {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("thead", {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("tr", {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("th", {
                 style: {
                   minWidth: '200px'
                 },
-                children: _strong || (_strong = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("strong", {
+                children: _strong || (_strong = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("strong", {
                   children: "Name"
                 }))
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("th", {
+              }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("th", {
                 style: {
                   minWidth: '100px'
                 },
                 children: "Type"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("th", {
+              }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("th", {
                 style: {
                   width: '1%'
                 }
               })]
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("tbody", {
-            children: notifications.map(notification => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
+          }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("tbody", {
+            children: notifications.map(notification => (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("tr", {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
                 className: "link-td",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("a", {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("a", {
                   href: `alerting/notification/${notification.id}/edit`,
                   children: notification.name
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
+              }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
                 className: "link-td",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("a", {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("a", {
                   href: `alerting/notification/${notification.id}/edit`,
                   children: notification.type
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
+              }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
                 className: "text-right",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.HorizontalGroup, {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.HorizontalGroup, {
                   justify: "flex-end",
-                  children: [notification.isDefault && (_Button || (_Button = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Button, {
+                  children: [notification.isDefault && (_Button || (_Button = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Button, {
                     disabled: true,
                     variant: "secondary",
                     size: "sm",
                     children: "default"
-                  }))), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Button, {
+                  }))), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Button, {
                     variant: "destructive",
                     icon: "times",
                     size: "sm",
@@ -186,7 +186,7 @@ const NotificationsListPage = () => {
             }, notification.id))
           })]
         })]
-      }), !(notifications.length || state.loading) && (_EmptyListCTA || (_EmptyListCTA = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(app_core_components_EmptyListCTA_EmptyListCTA__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
+      }), !(notifications.length || state.loading) && (_EmptyListCTA || (_EmptyListCTA = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(app_core_components_EmptyListCTA_EmptyListCTA__WEBPACK_IMPORTED_MODULE_3__ .Z, {
         title: "There are no notification channels defined yet",
         buttonIcon: "channel-add",
         buttonLink: "alerting/notification/new",
@@ -200,40 +200,29 @@ const NotificationsListPage = () => {
   });
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NotificationsListPage);
+ const __WEBPACK_DEFAULT_EXPORT__ = (NotificationsListPage);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/Receivers.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/Receivers.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ unified_Receivers)
+  "default": () => ( unified_Receivers)
 });
 
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js + 20 modules
 var es = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-router-virtual-31642fe47a/0/cache/react-router-npm-5.2.1-ea754d7473-7daae084bf.zip/node_modules/react-router/esm/react-router.js + 1 modules
 var react_router = __webpack_require__("./.yarn/__virtual__/react-router-virtual-31642fe47a/0/cache/react-router-npm-5.2.1-ea754d7473-7daae084bf.zip/node_modules/react-router/esm/react-router.js");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/AlertManagerPicker.tsx
 var AlertManagerPicker = __webpack_require__("./public/app/features/alerting/unified/components/AlertManagerPicker.tsx");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/AlertingPageWrapper.tsx
 var AlertingPageWrapper = __webpack_require__("./public/app/features/alerting/unified/components/AlertingPageWrapper.tsx");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/NoAlertManagerWarning.tsx
 var NoAlertManagerWarning = __webpack_require__("./public/app/features/alerting/unified/components/NoAlertManagerWarning.tsx");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/datasource.ts
 var datasource = __webpack_require__("./public/app/features/alerting/unified/utils/datasource.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/state/actions.ts + 4 modules
 var actions = __webpack_require__("./public/app/features/alerting/unified/state/actions.ts");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/utils/cloud-alertmanager-notifier-types.ts
+;
 function cloud_alertmanager_notifier_types_option(propertyName, label, description) {
   let rest = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
   return Object.assign({
@@ -443,12 +432,12 @@ const cloudNotifierTypes = [{
     validationRule: '(^\\d+$|^$)'
   }), httpConfigOption]
 }];
-const globalConfigOptions = [// email
+const globalConfigOptions = [
 cloud_alertmanager_notifier_types_option('smtp_from', 'SMTP from', 'The default SMTP From header field.'), cloud_alertmanager_notifier_types_option('smtp_smarthost', 'SMTP smarthost', 'The default SMTP smarthost used for sending emails, including port number. Port number usually is 25, or 587 for SMTP over TLS (sometimes referred to as STARTTLS). Example: smtp.example.org:587'), cloud_alertmanager_notifier_types_option('smtp_hello', 'SMTP hello', 'The default hostname to identify to the SMTP server.', {
   placeholder: 'localhost'
 }), cloud_alertmanager_notifier_types_option('smtp_auth_username', 'SMTP auth username', "SMTP Auth using CRAM-MD5, LOGIN and PLAIN. If empty, Alertmanager doesn't authenticate to the SMTP server."), cloud_alertmanager_notifier_types_option('smtp_auth_password', 'SMTP auth password', 'SMTP Auth using LOGIN and PLAIN.'), cloud_alertmanager_notifier_types_option('smtp_auth_identity', 'SMTP auth identity', 'SMTP Auth using PLAIN.'), cloud_alertmanager_notifier_types_option('smtp_auth_secret', 'SMTP auth secret', 'SMTP Auth using CRAM-MD5.'), cloud_alertmanager_notifier_types_option('smtp_require_tls', 'SMTP require TLS', 'The default SMTP TLS requirement. Note that Go does not support unencrypted connections to remote SMTP endpoints.', {
   element: 'checkbox'
-}), // slack
+}), 
 cloud_alertmanager_notifier_types_option('slack_api_url', 'Slack API URL', ''), cloud_alertmanager_notifier_types_option('victorops_api_key', 'VictorOps API key', ''), cloud_alertmanager_notifier_types_option('victorops_api_url', 'VictorOps API URL', '', {
   placeholder: 'https://alert.victorops.com/integrations/generic/20131114/alert/'
 }), cloud_alertmanager_notifier_types_option('pagerduty_url', 'PagerDuty URL', 'https://events.pagerduty.com/v2/enqueue'), cloud_alertmanager_notifier_types_option('opsgenie_api_key', 'OpsGenie API key', ''), cloud_alertmanager_notifier_types_option('opsgenie_api_url', 'OpsGenie API URL', '', {
@@ -458,16 +447,13 @@ cloud_alertmanager_notifier_types_option('slack_api_url', 'Slack API URL', ''), 
 }), cloud_alertmanager_notifier_types_option('wechat_api_secret', 'WeChat API secret', ''), cloud_alertmanager_notifier_types_option('wechat_api_corp_id', 'WeChat API corp id', ''), httpConfigOption, cloud_alertmanager_notifier_types_option('resolve_timeout', 'Resolve timeout', 'ResolveTimeout is the default value used by alertmanager if the alert does not include EndsAt, after this time passes it can declare the alert as resolved if it has not been updated. This has no impact on alerts from Prometheus, as they always include EndsAt.', {
   placeholder: '5m'
 })];
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/utils/receiver-form.ts
+;
 
 function grafanaReceiverToFormValues(receiver, notifiers) {
   var _receiver$grafana_man, _receiver$grafana_man2;
 
-  const channelMap = {}; // giving each form receiver item a unique id so we can use it to map back to "original" items
-  // as well as to use as `key` prop.
-  // @TODO use uid once backend is fixed to provide it. then we can get rid of the GrafanaChannelMap
+  const channelMap = {}; 
 
   let idCounter = 1;
   const values = {
@@ -487,18 +473,18 @@ function grafanaReceiverToFormValues(receiver, notifiers) {
   return [values, channelMap];
 }
 function cloudReceiverToFormValues(receiver, notifiers) {
-  const channelMap = {}; // giving each form receiver item a unique id so we can use it to map back to "original" items
+  const channelMap = {}; 
 
   let idCounter = 1;
-  const items = Object.entries(receiver) // filter out only config items that are relevant to cloud
+  const items = Object.entries(receiver) 
   .filter(_ref2 => {
     let [type] = _ref2;
     return type.endsWith('_configs') && type !== 'grafana_managed_receiver_configs';
-  }) // map property names to cloud notifier types by removing the `_config` suffix
+  }) 
   .map(_ref3 => {
     let [type, configs] = _ref3;
     return [type.replace('_configs', ''), configs];
-  }) // convert channel configs to form values
+  }) 
   .map(_ref4 => {
     let [type, configs] = _ref4;
     return configs.map(config => {
@@ -556,12 +542,12 @@ function formValuesToCloudReceiver(values, defaults) {
     }
   });
   return recv;
-} // will add new receiver, or replace exisitng one
+} 
 
 function updateConfigWithReceiver(config, receiver, replaceReceiverName) {
   var _config$alertmanager_;
 
-  const oldReceivers = (_config$alertmanager_ = config.alertmanager_config.receivers) !== null && _config$alertmanager_ !== void 0 ? _config$alertmanager_ : []; // sanity check that name is not duplicated
+  const oldReceivers = (_config$alertmanager_ = config.alertmanager_config.receivers) !== null && _config$alertmanager_ !== void 0 ? _config$alertmanager_ : []; 
 
   if (receiver.name !== replaceReceiverName && !!oldReceivers.find(_ref6 => {
     let {
@@ -570,7 +556,7 @@ function updateConfigWithReceiver(config, receiver, replaceReceiverName) {
     return name === receiver.name;
   })) {
     throw new Error(`Duplicate receiver name ${receiver.name}`);
-  } // sanity check that existing receiver exists
+  } 
 
 
   if (replaceReceiverName && !oldReceivers.find(_ref7 => {
@@ -586,7 +572,7 @@ function updateConfigWithReceiver(config, receiver, replaceReceiverName) {
     alertmanager_config: Object.assign({}, config.alertmanager_config, {
       receivers: replaceReceiverName ? oldReceivers.map(existingReceiver => existingReceiver.name === replaceReceiverName ? receiver : existingReceiver) : [...oldReceivers, receiver]
     })
-  }); // if receiver was renamed, rename it in routes as well
+  }); 
 
   if (updated.alertmanager_config.route && replaceReceiverName && receiver.name !== replaceReceiverName) {
     updated.alertmanager_config.route = renameReceiverInRoute(updated.alertmanager_config.route, replaceReceiverName, receiver.name);
@@ -628,7 +614,7 @@ function grafanaChannelConfigToFormChannelValues(id, channel, notifier) {
     settings: Object.assign({}, channel.settings),
     secureFields: Object.assign({}, channel.secureFields),
     disableResolveMessage: channel.disableResolveMessage
-  }; // work around https://github.com/grafana/alerting-squad/issues/100
+  }; 
 
   notifier === null || notifier === void 0 ? void 0 : notifier.options.forEach(option => {
     if (option.secure && values.settings[option.propertyName]) {
@@ -655,11 +641,7 @@ function formChannelValuesToGrafanaChannelConfig(values, defaults, name, existin
   }
 
   return channel;
-} // will remove properties that have empty ('', null, undefined) object properties.
-// traverses nested objects and arrays as well. in place, mutates the object.
-// this is needed because form will submit empty string for not filled in fields,
-// but for cloud alertmanager receiver config to use global default value the property must be omitted entirely
-// this isn't a perfect solution though. No way for user to intentionally provide an empty string. Will need rethinking later
+} 
 
 function omitEmptyValues(obj) {
   if ((0,lodash.isArray)(obj)) {
@@ -678,11 +660,9 @@ function omitEmptyValues(obj) {
 
   return obj;
 }
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-hook-form-virtual-92b6119fd4/0/cache/react-hook-form-npm-7.5.3-f9cc466c62-fbfaa3b664.zip/node_modules/react-hook-form/dist/index.esm.js
 var index_esm = __webpack_require__("./.yarn/__virtual__/react-hook-form-virtual-92b6119fd4/0/cache/react-hook-form-npm-7.5.3-f9cc466c62-fbfaa3b664.zip/node_modules/react-hook-form/dist/index.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/CloudCommonChannelSettings.tsx
+;
 
 
 
@@ -695,12 +675,12 @@ const CloudCommonChannelSettings = _ref => {
   } = _ref;
   const {
     register
-  } = (0,index_esm/* useFormContext */.Gc)();
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  } = (0,index_esm.Gc)();
+  return (0,jsx_runtime.jsx)("div", {
     className: className,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+    children: (0,jsx_runtime.jsx)(src.Field, {
       disabled: readOnly,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Checkbox, Object.assign({}, register(`${pathPrefix}sendResolved`), {
+      children: (0,jsx_runtime.jsx)(src.Checkbox, Object.assign({}, register(`${pathPrefix}sendResolved`), {
         label: "Send resolved",
         disabled: readOnly,
         description: "Whether or not to notify about resolved alerts."
@@ -708,23 +688,13 @@ const CloudCommonChannelSettings = _ref => {
     })
   });
 };
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./public/app/core/copy/appNotification.ts
 var appNotification = __webpack_require__("./public/app/core/copy/appNotification.ts");
-// EXTERNAL MODULE: ./public/app/core/hooks/useCleanup.ts
 var useCleanup = __webpack_require__("./public/app/core/hooks/useCleanup.ts");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/hooks/useControlledFieldArray.ts
+;
 
 
 const EMPTY_ARRAY = [];
-/*
- * react-hook-form's own useFieldArray is uncontrolled and super buggy.
- * this is a simple controlled version. It's dead simple and more robust at the cost of re-rendering the form
- * on every change to the sub forms in the array.
- * Warning: you'll have to take care of your own unique identiifer to use as `key` for the ReactNode array.
- * Using index will cause problems.
- */
 
 function useControlledFieldArray(options) {
   var _ref, _watch;
@@ -763,13 +733,10 @@ function useControlledFieldArray(options) {
     }, [update, name, setValue, softDelete])
   };
 }
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts
 var useUnifiedAlertingSelector = __webpack_require__("./public/app/features/alerting/unified/hooks/useUnifiedAlertingSelector.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/misc.ts
 var misc = __webpack_require__("./public/app/features/alerting/unified/utils/misc.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/rules/ActionIcon.tsx
 var ActionIcon = __webpack_require__("./public/app/features/alerting/unified/components/rules/ActionIcon.tsx");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/fields/KeyValueMapInput.tsx
+;
 var _th, _th2, _th3;
 
 
@@ -812,35 +779,35 @@ const KeyValueMapInput = _ref => {
     }
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [!!pairs.length && /*#__PURE__*/(0,jsx_runtime.jsxs)("table", {
+  return (0,jsx_runtime.jsxs)("div", {
+    children: [!!pairs.length && (0,jsx_runtime.jsxs)("table", {
       className: styles.table,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("thead", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
-          children: [_th || (_th = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+      children: [(0,jsx_runtime.jsx)("thead", {
+        children: (0,jsx_runtime.jsxs)("tr", {
+          children: [_th || (_th = (0,jsx_runtime.jsx)("th", {
             children: "Name"
-          })), _th2 || (_th2 = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+          })), _th2 || (_th2 = (0,jsx_runtime.jsx)("th", {
             children: "Value"
-          })), !readOnly && (_th3 || (_th3 = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {})))]
+          })), !readOnly && (_th3 || (_th3 = (0,jsx_runtime.jsx)("th", {})))]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("tbody", {
+      }), (0,jsx_runtime.jsx)("tbody", {
         children: pairs.map((_ref2, index) => {
           let [key, value] = _ref2;
-          return /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("td", {
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Input, {
+          return (0,jsx_runtime.jsxs)("tr", {
+            children: [(0,jsx_runtime.jsx)("td", {
+              children: (0,jsx_runtime.jsx)(src.Input, {
                 readOnly: readOnly,
                 value: key,
                 onChange: e => updatePair([e.currentTarget.value, value], index)
               })
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Input, {
+            }), (0,jsx_runtime.jsx)("td", {
+              children: (0,jsx_runtime.jsx)(src.Input, {
                 readOnly: readOnly,
                 value: value,
                 onChange: e => updatePair([key, e.currentTarget.value], index)
               })
-            }), !readOnly && /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(ActionIcon/* ActionIcon */.A, {
+            }), !readOnly && (0,jsx_runtime.jsx)("td", {
+              children: (0,jsx_runtime.jsx)(ActionIcon.A, {
                 icon: "trash-alt",
                 tooltip: "delete",
                 onClick: () => deleteItem(index)
@@ -849,7 +816,7 @@ const KeyValueMapInput = _ref => {
           }, index);
         })
       })]
-    }), !readOnly && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+    }), !readOnly && (0,jsx_runtime.jsx)(src.Button, {
       className: styles.addButton,
       type: "button",
       variant: "secondary",
@@ -885,7 +852,7 @@ const pairsToRecord = pairs => {
 };
 
 const recordToPairs = obj => Object.entries(obj !== null && obj !== void 0 ? obj : {});
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/fields/StringArrayInput.tsx
+;
 
 
 
@@ -918,20 +885,20 @@ const StringArrayInput = _ref => {
     onChange(value.map((v, i) => i === index ? itemValue : v));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [!!(value !== null && value !== void 0 && value.length) && value.map((v, index) => /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
+    children: [!!(value !== null && value !== void 0 && value.length) && value.map((v, index) => (0,jsx_runtime.jsxs)("div", {
       className: styles.row,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(src.Input, {
+      children: [(0,jsx_runtime.jsx)(src.Input, {
         readOnly: readOnly,
         value: v,
         onChange: e => updateValue(e.currentTarget.value, index)
-      }), !readOnly && /*#__PURE__*/(0,jsx_runtime.jsx)(ActionIcon/* ActionIcon */.A, {
+      }), !readOnly && (0,jsx_runtime.jsx)(ActionIcon.A, {
         className: styles.deleteIcon,
         icon: "trash-alt",
         tooltip: "delete",
         onClick: () => deleteItem(index)
       })]
-    }, index)), !readOnly && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+    }, index)), !readOnly && (0,jsx_runtime.jsx)(src.Button, {
       className: styles.addButton,
       type: "button",
       variant: "secondary",
@@ -957,9 +924,8 @@ const StringArrayInput_getStyles = theme => ({
     margin-top: ${theme.spacing(1)};
   `
 });
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/CollapseToggle.tsx
 var CollapseToggle = __webpack_require__("./public/app/features/alerting/unified/components/CollapseToggle.tsx");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/CollapsibleSection.tsx
+;
 
 
 
@@ -979,23 +945,23 @@ const CollapsibleSection = _ref => {
 
   const toggleCollapse = () => setIsCollapsed(!isCollapsed);
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: (0,emotion_css_esm.cx)(styles.wrapper, className),
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsxs)("div", {
       className: styles.heading,
       onClick: toggleCollapse,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(CollapseToggle/* CollapseToggle */.U, {
+      children: [(0,jsx_runtime.jsx)(CollapseToggle.U, {
         className: styles.caret,
         size: size,
         onToggle: toggleCollapse,
         isCollapsed: isCollapsed
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("h6", {
+      }), (0,jsx_runtime.jsx)("h6", {
         children: label
       })]
-    }), description && /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+    }), description && (0,jsx_runtime.jsx)("p", {
       className: styles.description,
       children: description
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), (0,jsx_runtime.jsx)("div", {
       className: isCollapsed ? styles.hidden : undefined,
       children: children
     })]
@@ -1026,7 +992,7 @@ const CollapsibleSection_getStyles = theme => ({
     margin: 0;
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/fields/styles.ts
+;
 
 const getReceiverFormFieldStyles = theme => ({
   collapsibleSection: emotion_css_esm.css`
@@ -1055,7 +1021,7 @@ const getReceiverFormFieldStyles = theme => ({
     margin-top: ${theme.spacing(1)};
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/fields/SubformArrayField.tsx
+;
 
 
 
@@ -1078,7 +1044,7 @@ const SubformArrayField = _ref => {
   } = _ref;
   const styles = (0,src.useStyles2)(getReceiverFormFieldStyles);
   const path = `${pathPrefix}${option.propertyName}`;
-  const formAPI = (0,index_esm/* useFormContext */.Gc)();
+  const formAPI = (0,index_esm.Gc)();
   const {
     fields,
     append,
@@ -1088,18 +1054,18 @@ const SubformArrayField = _ref => {
     formAPI,
     defaults: defaultValues
   });
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: styles.wrapper,
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)(CollapsibleSection, {
+    children: (0,jsx_runtime.jsxs)(CollapsibleSection, {
       className: styles.collapsibleSection,
       label: `${option.label} (${fields.length})`,
       description: option.description,
       children: [((_ref2 = fields !== null && fields !== void 0 ? fields : defaultValues) !== null && _ref2 !== void 0 ? _ref2 : []).map((field, itemIndex) => {
         var _option$subformOption;
 
-        return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        return (0,jsx_runtime.jsxs)("div", {
           className: styles.wrapper,
-          children: [!readOnly && /*#__PURE__*/(0,jsx_runtime.jsx)(ActionIcon/* ActionIcon */.A, {
+          children: [!readOnly && (0,jsx_runtime.jsx)(ActionIcon.A, {
             "data-testid": `${path}.${itemIndex}.delete-button`,
             icon: "trash-alt",
             tooltip: "delete",
@@ -1108,7 +1074,7 @@ const SubformArrayField = _ref => {
           }), (_option$subformOption = option.subformOptions) === null || _option$subformOption === void 0 ? void 0 : _option$subformOption.map(option => {
             var _errors$itemIndex;
 
-            return /*#__PURE__*/(0,jsx_runtime.jsx)(OptionField, {
+            return (0,jsx_runtime.jsx)(OptionField, {
               readOnly: readOnly,
               defaultValue: field === null || field === void 0 ? void 0 : field[option.propertyName],
               option: option,
@@ -1117,7 +1083,7 @@ const SubformArrayField = _ref => {
             }, option.propertyName);
           })]
         }, itemIndex);
-      }), !readOnly && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+      }), !readOnly && (0,jsx_runtime.jsx)(src.Button, {
         "data-testid": `${path}.add-button`,
         className: styles.addButton,
         type: "button",
@@ -1132,7 +1098,7 @@ const SubformArrayField = _ref => {
     })
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/fields/SubformField.tsx
+;
 
 
 
@@ -1156,29 +1122,29 @@ const SubformField = _ref => {
   const name = `${pathPrefix}${option.propertyName}`;
   const {
     watch
-  } = (0,index_esm/* useFormContext */.Gc)();
+  } = (0,index_esm.Gc)();
 
   const _watchValue = watch(name);
 
   const value = _watchValue === undefined ? defaultValue : _watchValue;
   const [show, setShow] = (0,react.useState)(!!value);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: styles.wrapper,
     "data-testid": `${name}.container`,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h6", {
+    children: [(0,jsx_runtime.jsx)("h6", {
       children: option.label
-    }), option.description && /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+    }), option.description && (0,jsx_runtime.jsx)("p", {
       className: styles.description,
       children: option.description
-    }), show && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [!readOnly && /*#__PURE__*/(0,jsx_runtime.jsx)(ActionIcon/* ActionIcon */.A, {
+    }), show && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [!readOnly && (0,jsx_runtime.jsx)(ActionIcon.A, {
         "data-testid": `${name}.delete-button`,
         icon: "trash-alt",
         tooltip: "delete",
         onClick: () => setShow(false),
         className: styles.deleteIcon
       }), ((_option$subformOption = option.subformOptions) !== null && _option$subformOption !== void 0 ? _option$subformOption : []).map(subOption => {
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(OptionField, {
+        return (0,jsx_runtime.jsx)(OptionField, {
           readOnly: readOnly,
           defaultValue: defaultValue === null || defaultValue === void 0 ? void 0 : defaultValue[subOption.propertyName],
           option: subOption,
@@ -1186,7 +1152,7 @@ const SubformField = _ref => {
           error: errors === null || errors === void 0 ? void 0 : errors[subOption.propertyName]
         }, subOption.propertyName);
       })]
-    }), !show && !readOnly && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+    }), !show && !readOnly && (0,jsx_runtime.jsx)(src.Button, {
       className: styles.addButton,
       type: "button",
       variant: "secondary",
@@ -1198,7 +1164,7 @@ const SubformField = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/fields/OptionField.tsx
+;
 const _excluded = ["onChange", "ref"];
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -1226,7 +1192,7 @@ const OptionField = _ref => {
   const optionPath = `${pathPrefix}${pathSuffix}`;
 
   if (option.element === 'subform') {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(SubformField, {
+    return (0,jsx_runtime.jsx)(SubformField, {
       readOnly: readOnly,
       defaultValue: defaultValue,
       option: option,
@@ -1236,7 +1202,7 @@ const OptionField = _ref => {
   }
 
   if (option.element === 'subform_array') {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(SubformArrayField, {
+    return (0,jsx_runtime.jsx)(SubformArrayField, {
       readOnly: readOnly,
       defaultValues: defaultValue,
       option: option,
@@ -1245,12 +1211,12 @@ const OptionField = _ref => {
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+  return (0,jsx_runtime.jsx)(src.Field, {
     label: option.element !== 'checkbox' ? option.label : undefined,
     description: option.description || undefined,
     invalid: !!error,
     error: error === null || error === void 0 ? void 0 : error.message,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(OptionInput, {
+    children: (0,jsx_runtime.jsx)(OptionInput, {
       id: `${optionPath}${option.propertyName}`,
       defaultValue: defaultValue,
       option: option,
@@ -1276,8 +1242,8 @@ const OptionInput = _ref2 => {
     register,
     unregister,
     getValues
-  } = (0,index_esm/* useFormContext */.Gc)();
-  const name = `${pathPrefix}${option.propertyName}`; // workaround for https://github.com/react-hook-form/react-hook-form/issues/4993#issuecomment-829012506
+  } = (0,index_esm.Gc)();
+  const name = `${pathPrefix}${option.propertyName}`; 
 
   (0,react.useEffect)(() => () => {
     unregister(name, {
@@ -1287,7 +1253,7 @@ const OptionInput = _ref2 => {
 
   switch (option.element) {
     case 'checkbox':
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Checkbox, Object.assign({
+      return (0,jsx_runtime.jsx)(src.Checkbox, Object.assign({
         id: id,
         readOnly: readOnly,
         disabled: readOnly,
@@ -1298,7 +1264,7 @@ const OptionInput = _ref2 => {
       }));
 
     case 'input':
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Input, Object.assign({
+      return (0,jsx_runtime.jsx)(src.Input, Object.assign({
         id: id,
         readOnly: readOnly || determineReadOnly(option, getValues, pathIndex),
         invalid: invalid,
@@ -1311,7 +1277,7 @@ const OptionInput = _ref2 => {
       }));
 
     case 'select':
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+      return (0,jsx_runtime.jsx)(src.InputControl, {
         render: _ref3 => {
           var _option$selectOptions;
 
@@ -1322,7 +1288,7 @@ const OptionInput = _ref2 => {
           } = _ref3,
               field = _objectWithoutPropertiesLoose(_ref3.field, _excluded);
 
-          return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Select, Object.assign({
+          return (0,jsx_runtime.jsx)(src.Select, Object.assign({
             disabled: readOnly
           }, field, {
             options: (_option$selectOptions = option.selectOptions) !== null && _option$selectOptions !== void 0 ? _option$selectOptions : undefined,
@@ -1335,7 +1301,7 @@ const OptionInput = _ref2 => {
       });
 
     case 'textarea':
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(src.TextArea, Object.assign({
+      return (0,jsx_runtime.jsx)(src.TextArea, Object.assign({
         id: id,
         readOnly: readOnly,
         invalid: invalid
@@ -1345,7 +1311,7 @@ const OptionInput = _ref2 => {
       })));
 
     case 'string_array':
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+      return (0,jsx_runtime.jsx)(src.InputControl, {
         render: _ref4 => {
           let {
             field: {
@@ -1353,7 +1319,7 @@ const OptionInput = _ref2 => {
               onChange
             }
           } = _ref4;
-          return /*#__PURE__*/(0,jsx_runtime.jsx)(StringArrayInput, {
+          return (0,jsx_runtime.jsx)(StringArrayInput, {
             readOnly: readOnly,
             value: value,
             onChange: onChange
@@ -1364,7 +1330,7 @@ const OptionInput = _ref2 => {
       });
 
     case 'key_value_map':
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+      return (0,jsx_runtime.jsx)(src.InputControl, {
         render: _ref5 => {
           let {
             field: {
@@ -1372,7 +1338,7 @@ const OptionInput = _ref2 => {
               onChange
             }
           } = _ref5;
-          return /*#__PURE__*/(0,jsx_runtime.jsx)(KeyValueMapInput, {
+          return (0,jsx_runtime.jsx)(KeyValueMapInput, {
             readOnly: readOnly,
             value: value,
             onChange: onChange
@@ -1423,7 +1389,7 @@ const determineReadOnly = (option, getValues, pathIndex) => {
     return getValues(`${pathIndex}secureFields.${option.dependsOn}`);
   }
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/ChannelOptions.tsx
+;
 
 
 
@@ -1442,15 +1408,14 @@ function ChannelOptions(_ref) {
   } = _ref;
   const {
     watch
-  } = (0,index_esm/* useFormContext */.Gc)();
-  const currentFormValues = watch(); // react hook form types ARE LYING!
+  } = (0,index_esm.Gc)();
+  const currentFormValues = watch(); 
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
     children: selectedChannelOptions.map((option, index) => {
       var _ref2, _defaultValues$settin;
 
-      const key = `${option.label}-${index}`; // Some options can be dependent on other options, this determines what is selected in the dependency options
-      // I think this needs more thought.
+      const key = `${option.label}-${index}`; 
 
       const selectedOptionValue = currentFormValues[`${pathPrefix}settings.${option.showWhen.field}`];
 
@@ -1459,13 +1424,13 @@ function ChannelOptions(_ref) {
       }
 
       if (secureFields && secureFields[option.propertyName]) {
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+        return (0,jsx_runtime.jsx)(src.Field, {
           label: option.label,
           description: option.description || undefined,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Input, {
+          children: (0,jsx_runtime.jsx)(src.Input, {
             readOnly: true,
             value: "Configured",
-            suffix: readOnly ? null : /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+            suffix: readOnly ? null : (0,jsx_runtime.jsx)(src.Button, {
               onClick: () => onResetSecureField(option.propertyName),
               fill: "text",
               type: "button",
@@ -1478,7 +1443,7 @@ function ChannelOptions(_ref) {
 
       const error = (_ref2 = option.secure ? errors === null || errors === void 0 ? void 0 : errors.secureSettings : errors === null || errors === void 0 ? void 0 : errors.settings) === null || _ref2 === void 0 ? void 0 : _ref2[option.propertyName];
       const defaultValue = defaultValues === null || defaultValues === void 0 ? void 0 : (_defaultValues$settin = defaultValues.settings) === null || _defaultValues$settin === void 0 ? void 0 : _defaultValues$settin[option.propertyName];
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(OptionField, {
+      return (0,jsx_runtime.jsx)(OptionField, {
         defaultValue: defaultValue,
         readOnly: readOnly,
         error: error,
@@ -1489,7 +1454,7 @@ function ChannelOptions(_ref) {
     })
   });
 }
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/ChannelSubForm.tsx
+;
 const ChannelSubForm_excluded = ["ref", "onChange"];
 
 function ChannelSubForm_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -1529,16 +1494,14 @@ function ChannelSubForm(_ref) {
     trigger,
     formState,
     setValue
-  } = (0,index_esm/* useFormContext */.Gc)();
-  const selectedType = (_watch = watch(name('type'))) !== null && _watch !== void 0 ? _watch : defaultValues.type; // nope, setting "default" does not work at all.
+  } = (0,index_esm.Gc)();
+  const selectedType = (_watch = watch(name('type'))) !== null && _watch !== void 0 ? _watch : defaultValues.type; 
 
   const {
     loading: testingReceiver
-  } = (0,useUnifiedAlertingSelector/* useUnifiedAlertingSelector */._)(state => state.testReceivers);
+  } = (0,useUnifiedAlertingSelector._)(state => state.testReceivers);
   (0,react.useEffect)(() => {
     register(`${pathPrefix}.__id`);
-    /* Need to manually register secureFields or else they'll
-     be lost when testing a contact point */
 
     register(`${pathPrefix}.secureFields`);
   }, [register, pathPrefix]);
@@ -1578,23 +1541,22 @@ function ChannelSubForm(_ref) {
       type
     } = _ref3;
     return type === selectedType;
-  }); // if there are mandatory options defined, optional options will be hidden by a collapse
-  // if there aren't mandatory options, all options will be shown without collapse
+  }); 
 
   const mandatoryOptions = notifier === null || notifier === void 0 ? void 0 : notifier.options.filter(o => o.required);
   const optionalOptions = notifier === null || notifier === void 0 ? void 0 : notifier.options.filter(o => !o.required);
   const contactPointTypeInputId = `contact-point-type-${pathPrefix}`;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: styles.wrapper,
     "data-testid": "item-container",
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsxs)("div", {
       className: styles.topRow,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+      children: [(0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsx)(src.Field, {
           label: "Contact point type",
           htmlFor: contactPointTypeInputId,
           "data-testid": `${pathPrefix}type`,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+          children: (0,jsx_runtime.jsx)(src.InputControl, {
             name: name('type'),
             defaultValue: defaultValues.type,
             render: _ref4 => {
@@ -1605,7 +1567,7 @@ function ChannelSubForm(_ref) {
               } = _ref4,
                   field = ChannelSubForm_objectWithoutPropertiesLoose(_ref4.field, ChannelSubForm_excluded);
 
-              return /*#__PURE__*/(0,jsx_runtime.jsx)(src.Select, Object.assign({
+              return (0,jsx_runtime.jsx)(src.Select, Object.assign({
                 disabled: readOnly,
                 inputId: contactPointTypeInputId
               }, field, {
@@ -1620,9 +1582,9 @@ function ChannelSubForm(_ref) {
             }
           })
         })
-      }), !readOnly && /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), !readOnly && (0,jsx_runtime.jsxs)("div", {
         className: styles.buttons,
-        children: [onTest && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+        children: [onTest && (0,jsx_runtime.jsx)(src.Button, {
           disabled: testingReceiver,
           size: "xs",
           variant: "secondary",
@@ -1630,14 +1592,14 @@ function ChannelSubForm(_ref) {
           onClick: () => handleTest(),
           icon: testingReceiver ? 'fa fa-spinner' : 'message',
           children: "Test"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+        }), (0,jsx_runtime.jsx)(src.Button, {
           size: "xs",
           variant: "secondary",
           type: "button",
           onClick: () => onDuplicate(),
           icon: "copy",
           children: "Duplicate"
-        }), onDelete && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+        }), onDelete && (0,jsx_runtime.jsx)(src.Button, {
           "data-testid": `${pathPrefix}delete-button`,
           size: "xs",
           variant: "secondary",
@@ -1647,9 +1609,9 @@ function ChannelSubForm(_ref) {
           children: "Delete"
         })]
       })]
-    }), notifier && /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    }), notifier && (0,jsx_runtime.jsxs)("div", {
       className: styles.innerContent,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(ChannelOptions, {
+      children: [(0,jsx_runtime.jsx)(ChannelOptions, {
         defaultValues: defaultValues,
         selectedChannelOptions: mandatoryOptions !== null && mandatoryOptions !== void 0 && mandatoryOptions.length ? mandatoryOptions : optionalOptions,
         secureFields: _secureFields,
@@ -1657,13 +1619,13 @@ function ChannelSubForm(_ref) {
         onResetSecureField: onResetSecureField,
         pathPrefix: pathPrefix,
         readOnly: readOnly
-      }), !!(mandatoryOptions !== null && mandatoryOptions !== void 0 && mandatoryOptions.length && optionalOptions !== null && optionalOptions !== void 0 && optionalOptions.length) && /*#__PURE__*/(0,jsx_runtime.jsxs)(CollapsibleSection, {
+      }), !!(mandatoryOptions !== null && mandatoryOptions !== void 0 && mandatoryOptions.length && optionalOptions !== null && optionalOptions !== void 0 && optionalOptions.length) && (0,jsx_runtime.jsxs)(CollapsibleSection, {
         label: `Optional ${notifier.name} settings`,
-        children: [notifier.info !== '' && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Alert, {
+        children: [notifier.info !== '' && (0,jsx_runtime.jsx)(src.Alert, {
           title: "",
           severity: "info",
           children: notifier.info
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(ChannelOptions, {
+        }), (0,jsx_runtime.jsx)(ChannelOptions, {
           defaultValues: defaultValues,
           selectedChannelOptions: optionalOptions,
           secureFields: _secureFields,
@@ -1672,9 +1634,9 @@ function ChannelSubForm(_ref) {
           pathPrefix: pathPrefix,
           readOnly: readOnly
         })]
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(CollapsibleSection, {
+      }), (0,jsx_runtime.jsx)(CollapsibleSection, {
         label: "Notification settings",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(CommonSettingsComponent, {
+        children: (0,jsx_runtime.jsx)(CommonSettingsComponent, {
           pathPrefix: pathPrefix,
           readOnly: readOnly
         })
@@ -1708,29 +1670,26 @@ const ChannelSubForm_getStyles = theme => ({
     margin-top: ${theme.spacing(2)};
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/fields/DeletedSubform.tsx
+;
 
 
 
 
-// we can't drop the deleted item from list entirely because
-// there will be a rece condition with register/unregister calls in react-hook-form
-// and fields will become randomly erroneously unregistered
 function DeletedSubForm(_ref) {
   let {
     pathPrefix
   } = _ref;
   const {
     register
-  } = (0,index_esm/* useFormContext */.Gc)(); // required to be registered or react-hook-form will randomly drop the values when it feels like it
+  } = (0,index_esm.Gc)(); 
 
   (0,react.useEffect)(() => {
     register(`${pathPrefix}.__id`);
     register(`${pathPrefix}.__deleted`);
   }, [register, pathPrefix]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {});
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {});
 }
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/ReceiverForm.tsx
+;
 var _Alert, _Button, _Button2;
 
 
@@ -1760,23 +1719,22 @@ function ReceiverForm(_ref) {
     takenReceiverNames,
     commonSettingsComponent
   } = _ref;
-  const notifyApp = (0,appNotification/* useAppNotification */.iG)();
+  const notifyApp = (0,appNotification.iG)();
   const styles = (0,src.useStyles2)(ReceiverForm_getStyles);
-  const readOnly = (0,datasource/* isVanillaPrometheusAlertManagerDataSource */.RY)(alertManagerSourceName);
+  const readOnly = (0,datasource.RY)(alertManagerSourceName);
   const defaultValues = initialValues || {
     name: '',
     items: [Object.assign({}, defaultItem, {
       __id: String(Math.random())
     })]
   };
-  const formAPI = (0,index_esm/* useForm */.cI)({
-    // making a copy here beacuse react-hook-form will mutate these, and break if the object is frozen. for real.
+  const formAPI = (0,index_esm.cI)({
     defaultValues: JSON.parse(JSON.stringify(defaultValues))
   });
-  (0,useCleanup/* useCleanup */.x)(state => state.unifiedAlerting.saveAMConfig);
+  (0,useCleanup.x)(state => state.unifiedAlerting.saveAMConfig);
   const {
     loading
-  } = (0,useUnifiedAlertingSelector/* useUnifiedAlertingSelector */._)(state => state.saveAMConfig);
+  } = (0,useUnifiedAlertingSelector._)(state => state.saveAMConfig);
   const {
     handleSubmit,
     register,
@@ -1806,22 +1764,22 @@ function ReceiverForm(_ref) {
     notifyApp.error('There are errors in the form. Please correct them and try again!');
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(index_esm/* FormProvider */.RV, Object.assign({}, formAPI, {
-    children: [!config.alertmanager_config.route && (_Alert || (_Alert = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Alert, {
+  return (0,jsx_runtime.jsxs)(index_esm.RV, Object.assign({}, formAPI, {
+    children: [!config.alertmanager_config.route && (_Alert || (_Alert = (0,jsx_runtime.jsx)(src.Alert, {
       severity: "warning",
       title: "Attention",
       children: "Because there is no default policy configured yet, this contact point will automatically be set as default."
-    }))), /*#__PURE__*/(0,jsx_runtime.jsxs)("form", {
+    }))), (0,jsx_runtime.jsxs)("form", {
       onSubmit: handleSubmit(submitCallback, onInvalid),
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h4", {
+      children: [(0,jsx_runtime.jsx)("h4", {
         className: styles.heading,
         children: readOnly ? 'Contact point' : initialValues ? 'Update contact point' : 'Create contact point'
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+      }), (0,jsx_runtime.jsx)(src.Field, {
         label: "Name",
         invalid: !!errors.name,
         error: errors.name && errors.name.message,
         required: true,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Input, Object.assign({
+        children: (0,jsx_runtime.jsx)(src.Input, Object.assign({
           readOnly: readOnly,
           id: "name"
         }, register('name', {
@@ -1839,7 +1797,7 @@ function ReceiverForm(_ref) {
         const pathPrefix = `items.${index}.`;
 
         if (field.__deleted) {
-          return /*#__PURE__*/(0,jsx_runtime.jsx)(DeletedSubForm, {
+          return (0,jsx_runtime.jsx)(DeletedSubForm, {
             pathPrefix: pathPrefix
           }, field.__id);
         }
@@ -1850,7 +1808,7 @@ function ReceiverForm(_ref) {
           } = _ref2;
           return __id === field.__id;
         });
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(ChannelSubForm, {
+        return (0,jsx_runtime.jsx)(ChannelSubForm, {
           defaultValues: field,
           onDuplicate: () => {
             const currentValues = getValues().items[index];
@@ -1870,8 +1828,8 @@ function ReceiverForm(_ref) {
           commonSettingsComponent: commonSettingsComponent,
           readOnly: readOnly
         }, field.__id);
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: [!readOnly && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+      }), (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [!readOnly && (0,jsx_runtime.jsx)(src.Button, {
           type: "button",
           icon: "plus",
           variant: "secondary",
@@ -1879,24 +1837,24 @@ function ReceiverForm(_ref) {
             __id: String(Math.random())
           })),
           children: "New contact point type"
-        }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        }), (0,jsx_runtime.jsxs)("div", {
           className: styles.buttons,
-          children: [!readOnly && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-            children: [loading && (_Button || (_Button = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+          children: [!readOnly && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+            children: [loading && (_Button || (_Button = (0,jsx_runtime.jsx)(src.Button, {
               disabled: true,
               icon: "fa fa-spinner",
               variant: "primary",
               children: "Saving..."
-            }))), !loading && (_Button2 || (_Button2 = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+            }))), !loading && (_Button2 || (_Button2 = (0,jsx_runtime.jsx)(src.Button, {
               type: "submit",
               children: "Save contact point"
             })))]
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.LinkButton, {
+          }), (0,jsx_runtime.jsx)(src.LinkButton, {
             disabled: loading,
             fill: "outline",
             variant: "secondary",
             "data-testid": "cancel-button",
-            href: (0,misc/* makeAMLink */.eQ)('alerting/notifications', alertManagerSourceName),
+            href: (0,misc.eQ)('alerting/notifications', alertManagerSourceName),
             children: "Cancel"
           })]
         })]
@@ -1917,7 +1875,7 @@ const ReceiverForm_getStyles = theme => ({
     }
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/CloudReceiverForm.tsx
+;
 var CloudReceiverForm_Alert;
 
 
@@ -1947,7 +1905,7 @@ const CloudReceiverForm = _ref => {
     config
   } = _ref;
   const dispatch = (0,es.useDispatch)();
-  const isVanillaAM = (0,datasource/* isVanillaPrometheusAlertManagerDataSource */.RY)(alertManagerSourceName); // transform receiver DTO to form values
+  const isVanillaAM = (0,datasource.RY)(alertManagerSourceName); 
 
   const [existingValue] = (0,react.useMemo)(() => {
     if (!existing) {
@@ -1959,7 +1917,7 @@ const CloudReceiverForm = _ref => {
 
   const onSubmit = values => {
     const newReceiver = formValuesToCloudReceiver(values, defaultChannelValues);
-    dispatch((0,actions/* updateAlertManagerConfigAction */.mM)({
+    dispatch((0,actions.mM)({
       newConfig: updateConfigWithReceiver(config, newReceiver, existing === null || existing === void 0 ? void 0 : existing.name),
       oldConfig: config,
       alertManagerSourceName,
@@ -1978,12 +1936,12 @@ const CloudReceiverForm = _ref => {
       return name;
     }).filter(name => name !== (existing === null || existing === void 0 ? void 0 : existing.name))) !== null && _config$alertmanager_ !== void 0 ? _config$alertmanager_ : [];
   }, [config, existing]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [!isVanillaAM && (CloudReceiverForm_Alert || (CloudReceiverForm_Alert = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Alert, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [!isVanillaAM && (CloudReceiverForm_Alert || (CloudReceiverForm_Alert = (0,jsx_runtime.jsx)(src.Alert, {
       title: "Info",
       severity: "info",
       children: "Note that empty string values will be replaced with global defaults where appropriate."
-    }))), /*#__PURE__*/(0,jsx_runtime.jsx)(ReceiverForm, {
+    }))), (0,jsx_runtime.jsx)(ReceiverForm, {
       config: config,
       onSubmit: onSubmit,
       initialValues: existingValue,
@@ -1995,7 +1953,7 @@ const CloudReceiverForm = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/GrafanaCommonChannelSettings.tsx
+;
 
 
 
@@ -2007,22 +1965,20 @@ const GrafanaCommonChannelSettings = _ref => {
   } = _ref;
   const {
     register
-  } = (0,index_esm/* useFormContext */.Gc)();
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  } = (0,index_esm.Gc)();
+  return (0,jsx_runtime.jsx)("div", {
     className: className,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Checkbox, Object.assign({}, register(`${pathPrefix}disableResolveMessage`), {
+    children: (0,jsx_runtime.jsx)(src.Field, {
+      children: (0,jsx_runtime.jsx)(src.Checkbox, Object.assign({}, register(`${pathPrefix}disableResolveMessage`), {
         label: "Disable resolved message",
         description: "Disable the resolve message [OK] that is sent when alerting state returns to false"
       }))
     })
   });
 };
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/rule-editor/AnnotationsField.tsx + 1 modules
 var AnnotationsField = __webpack_require__("./public/app/features/alerting/unified/components/rule-editor/AnnotationsField.tsx");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/rule-editor/LabelsField.tsx
 var LabelsField = __webpack_require__("./public/app/features/alerting/unified/components/rule-editor/LabelsField.tsx");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/TestContactPointModal.tsx
+;
 var _Label, _strong, _AnnotationsField, _LabelsField, _Modal$ButtonRow;
 
 
@@ -2063,7 +2019,7 @@ const TestContactPointModal = _ref => {
   } = _ref;
   const [notificationType, setNotificationType] = (0,react.useState)(NotificationType.predefined);
   const styles = (0,src.useStyles2)(TestContactPointModal_getStyles);
-  const formMethods = (0,index_esm/* useForm */.cI)({
+  const formMethods = (0,index_esm.cI)({
     defaultValues,
     mode: 'onBlur'
   });
@@ -2108,40 +2064,40 @@ const TestContactPointModal = _ref => {
     }
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(src.Modal, {
+  return (0,jsx_runtime.jsxs)(src.Modal, {
     onDismiss: onDismiss,
     isOpen: isOpen,
     title: 'Test contact point',
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsxs)("div", {
       className: styles.section,
-      children: [_Label || (_Label = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Label, {
+      children: [_Label || (_Label = (0,jsx_runtime.jsx)(src.Label, {
         children: "Notification message"
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)(src.RadioButtonGroup, {
+      })), (0,jsx_runtime.jsx)(src.RadioButtonGroup, {
         options: notificationOptions,
         value: notificationType,
         onChange: value => setNotificationType(value)
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FormProvider */.RV, Object.assign({}, formMethods, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)("form", {
+    }), (0,jsx_runtime.jsx)(index_esm.RV, Object.assign({}, formMethods, {
+      children: (0,jsx_runtime.jsxs)("form", {
         onSubmit: formMethods.handleSubmit(onSubmit),
-        children: [notificationType === NotificationType.predefined && /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: [notificationType === NotificationType.predefined && (0,jsx_runtime.jsxs)("div", {
           className: styles.section,
-          children: ["You will send a test notification that uses a predefined alert. If you have defined a custom template or message, for better results switch to ", _strong || (_strong = /*#__PURE__*/(0,jsx_runtime.jsx)("strong", {
+          children: ["You will send a test notification that uses a predefined alert. If you have defined a custom template or message, for better results switch to ", _strong || (_strong = (0,jsx_runtime.jsx)("strong", {
             children: "custom"
           })), " notification message, from above."]
-        }), notificationType === NotificationType.custom && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        }), notificationType === NotificationType.custom && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+          children: [(0,jsx_runtime.jsx)("div", {
             className: styles.section,
             children: "You will send a test notification that uses the annotations defined below. This is a good option if you use custom templates and messages."
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          }), (0,jsx_runtime.jsx)("div", {
             className: styles.section,
-            children: _AnnotationsField || (_AnnotationsField = /*#__PURE__*/(0,jsx_runtime.jsx)(AnnotationsField/* default */.Z, {}))
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+            children: _AnnotationsField || (_AnnotationsField = (0,jsx_runtime.jsx)(AnnotationsField.Z, {}))
+          }), (0,jsx_runtime.jsx)("div", {
             className: styles.section,
-            children: _LabelsField || (_LabelsField = /*#__PURE__*/(0,jsx_runtime.jsx)(LabelsField/* default */.Z, {}))
+            children: _LabelsField || (_LabelsField = (0,jsx_runtime.jsx)(LabelsField.Z, {}))
           })]
-        }), _Modal$ButtonRow || (_Modal$ButtonRow = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Modal.ButtonRow, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+        }), _Modal$ButtonRow || (_Modal$ButtonRow = (0,jsx_runtime.jsx)(src.Modal.ButtonRow, {
+          children: (0,jsx_runtime.jsx)(src.Button, {
             type: "submit",
             children: "Send test notification"
           })
@@ -2162,7 +2118,7 @@ const TestContactPointModal_getStyles = theme => ({
     margin-bottom: ${theme.spacing(2)};
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/form/GrafanaReceiverForm.tsx
+;
 var _LoadingPlaceholder;
 
 
@@ -2192,14 +2148,14 @@ const GrafanaReceiverForm = _ref => {
     alertManagerSourceName,
     config
   } = _ref;
-  const grafanaNotifiers = (0,useUnifiedAlertingSelector/* useUnifiedAlertingSelector */._)(state => state.grafanaNotifiers);
+  const grafanaNotifiers = (0,useUnifiedAlertingSelector._)(state => state.grafanaNotifiers);
   const [testChannelValues, setTestChannelValues] = (0,react.useState)();
   const dispatch = (0,es.useDispatch)();
   (0,react.useEffect)(() => {
     if (!(grafanaNotifiers.result || grafanaNotifiers.loading)) {
-      dispatch((0,actions/* fetchGrafanaNotifiersAction */.Vj)());
+      dispatch((0,actions.Vj)());
     }
-  }, [grafanaNotifiers, dispatch]); // transform receiver DTO to form values
+  }, [grafanaNotifiers, dispatch]); 
 
   const [existingValue, id2original] = (0,react.useMemo)(() => {
     if (!existing || !grafanaNotifiers.result) {
@@ -2211,10 +2167,10 @@ const GrafanaReceiverForm = _ref => {
 
   const onSubmit = values => {
     const newReceiver = formValuesToGrafanaReceiver(values, id2original, GrafanaReceiverForm_defaultChannelValues);
-    dispatch((0,actions/* updateAlertManagerConfigAction */.mM)({
+    dispatch((0,actions.mM)({
       newConfig: updateConfigWithReceiver(config, newReceiver, existing === null || existing === void 0 ? void 0 : existing.name),
       oldConfig: config,
-      alertManagerSourceName: datasource/* GRAFANA_RULES_SOURCE_NAME */.GC,
+      alertManagerSourceName: datasource.GC,
       successMessage: existing ? 'Contact point updated.' : 'Contact point created',
       redirectPath: '/alerting/notifications'
     }));
@@ -2236,7 +2192,7 @@ const GrafanaReceiverForm = _ref => {
         }],
         alert
       };
-      dispatch((0,actions/* testReceiversAction */.D8)(payload));
+      dispatch((0,actions.D8)(payload));
     }
   };
 
@@ -2252,8 +2208,8 @@ const GrafanaReceiverForm = _ref => {
   }, [config, existing]);
 
   if (grafanaNotifiers.result) {
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(ReceiverForm, {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(ReceiverForm, {
         config: config,
         onSubmit: onSubmit,
         initialValues: existingValue,
@@ -2263,19 +2219,19 @@ const GrafanaReceiverForm = _ref => {
         defaultItem: GrafanaReceiverForm_defaultChannelValues,
         takenReceiverNames: takenReceiverNames,
         commonSettingsComponent: GrafanaCommonChannelSettings
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(TestContactPointModal, {
+      }), (0,jsx_runtime.jsx)(TestContactPointModal, {
         onDismiss: () => setTestChannelValues(undefined),
         isOpen: !!testChannelValues,
         onTest: alert => testNotification(alert)
       })]
     });
   } else {
-    return _LoadingPlaceholder || (_LoadingPlaceholder = /*#__PURE__*/(0,jsx_runtime.jsx)(src.LoadingPlaceholder, {
+    return _LoadingPlaceholder || (_LoadingPlaceholder = (0,jsx_runtime.jsx)(src.LoadingPlaceholder, {
       text: "Loading notifiers..."
     }));
   }
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/EditReceiverView.tsx
+;
 var _InfoBox;
 
 
@@ -2300,32 +2256,29 @@ const EditReceiverView = _ref => {
   });
 
   if (!receiver) {
-    return _InfoBox || (_InfoBox = /*#__PURE__*/(0,jsx_runtime.jsx)(src.InfoBox, {
+    return _InfoBox || (_InfoBox = (0,jsx_runtime.jsx)(src.InfoBox, {
       severity: "error",
       title: "Receiver not found",
       children: "Sorry, this receiver does not seem to exit."
     }));
   }
 
-  if (alertManagerSourceName === datasource/* GRAFANA_RULES_SOURCE_NAME */.GC) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(GrafanaReceiverForm, {
+  if (alertManagerSourceName === datasource.GC) {
+    return (0,jsx_runtime.jsx)(GrafanaReceiverForm, {
       config: config,
       alertManagerSourceName: alertManagerSourceName,
       existing: receiver
     });
   } else {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(CloudReceiverForm, {
+    return (0,jsx_runtime.jsx)(CloudReceiverForm, {
       config: config,
       alertManagerSourceName: alertManagerSourceName,
       existing: receiver
     });
   }
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/utils/templates.ts
+;
 function ensureDefine(templateName, templateContent) {
-  // notification template content must be wrapped in {{ define "name" }} tag,
-  // but this is not obvious because user also has to provide name separately in the form.
-  // so if user does not manually add {{ define }} tag, we do it automatically
   let content = templateContent.trim();
 
   if (!content.match(/\{\{\s*define/)) {
@@ -2335,7 +2288,7 @@ function ensureDefine(templateName, templateContent) {
 
   return content;
 }
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/TemplateForm.tsx
+;
 var TemplateForm_Button, TemplateForm_Button2;
 
 
@@ -2365,26 +2318,24 @@ const TemplateForm = _ref => {
   } = _ref;
   const styles = (0,src.useStyles2)(TemplateForm_getStyles);
   const dispatch = (0,es.useDispatch)();
-  (0,useCleanup/* useCleanup */.x)(state => state.unifiedAlerting.saveAMConfig);
+  (0,useCleanup.x)(state => state.unifiedAlerting.saveAMConfig);
   const {
     loading,
     error
-  } = (0,useUnifiedAlertingSelector/* useUnifiedAlertingSelector */._)(state => state.saveAMConfig);
+  } = (0,useUnifiedAlertingSelector._)(state => state.saveAMConfig);
 
   const submit = values => {
     var _config$alertmanager_;
 
-    // wrap content in "define" if it's not already wrapped, in case user did not do it/
-    // it's not obvious that this is needed for template to work
-    const content = ensureDefine(values.name, values.content); // add new template to template map
+    const content = ensureDefine(values.name, values.content); 
 
     const template_files = Object.assign({}, config.template_files, {
       [values.name]: content
-    }); // delete existing one (if name changed, otherwise it was overwritten in previous step)
+    }); 
 
     if (existing && existing.name !== values.name) {
       delete template_files[existing.name];
-    } // make sure name for the template is configured on the alertmanager config object
+    } 
 
 
     const templates = [...((_config$alertmanager_ = config.alertmanager_config.templates) !== null && _config$alertmanager_ !== void 0 ? _config$alertmanager_ : []).filter(name => name !== (existing === null || existing === void 0 ? void 0 : existing.name)), values.name];
@@ -2394,7 +2345,7 @@ const TemplateForm = _ref => {
         templates
       })
     };
-    dispatch((0,actions/* updateAlertManagerConfigAction */.mM)({
+    dispatch((0,actions.mM)({
       alertManagerSourceName,
       newConfig,
       oldConfig: config,
@@ -2409,7 +2360,7 @@ const TemplateForm = _ref => {
     formState: {
       errors
     }
-  } = (0,index_esm/* useForm */.cI)({
+  } = (0,index_esm.cI)({
     mode: 'onSubmit',
     defaultValues: existing !== null && existing !== void 0 ? existing : defaults
   });
@@ -2418,20 +2369,20 @@ const TemplateForm = _ref => {
     return !config.template_files[name] || (existing === null || existing === void 0 ? void 0 : existing.name) === name ? true : 'Another template with this name already exists.';
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("form", {
+  return (0,jsx_runtime.jsxs)("form", {
     onSubmit: handleSubmit(submit),
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h4", {
+    children: [(0,jsx_runtime.jsx)("h4", {
       children: existing ? 'Edit message template' : 'Create message template'
-    }), error && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Alert, {
+    }), error && (0,jsx_runtime.jsx)(src.Alert, {
       severity: "error",
       title: "Error saving template",
       children: error.message || (error === null || error === void 0 ? void 0 : (_data = error.data) === null || _data === void 0 ? void 0 : _data.message) || String(error)
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+    }), (0,jsx_runtime.jsx)(src.Field, {
       label: "Template name",
       error: errors === null || errors === void 0 ? void 0 : (_errors$name = errors.name) === null || _errors$name === void 0 ? void 0 : _errors$name.message,
       invalid: !!((_errors$name2 = errors.name) !== null && _errors$name2 !== void 0 && _errors$name2.message),
       required: true,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Input, Object.assign({}, register('name', {
+      children: (0,jsx_runtime.jsx)(src.Input, Object.assign({}, register('name', {
         required: {
           value: true,
           message: 'Required.'
@@ -2444,15 +2395,15 @@ const TemplateForm = _ref => {
         width: 42,
         autoFocus: true
       }))
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
-      description: /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: ["You can use the", ' ', /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+    }), (0,jsx_runtime.jsx)(src.Field, {
+      description: (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: ["You can use the", ' ', (0,jsx_runtime.jsx)("a", {
           href: "https://pkg.go.dev/text/template?utm_source=godoc",
           target: "__blank",
           rel: "noreferrer",
           className: styles.externalLink,
           children: "Go templating language"
-        }), ".", ' ', /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+        }), ".", ' ', (0,jsx_runtime.jsx)("a", {
           href: "https://prometheus.io/blog/2016/03/03/custom-alertmanager-templates/",
           target: "__blank",
           rel: "noreferrer",
@@ -2464,7 +2415,7 @@ const TemplateForm = _ref => {
       error: errors === null || errors === void 0 ? void 0 : (_errors$content = errors.content) === null || _errors$content === void 0 ? void 0 : _errors$content.message,
       invalid: !!((_errors$content2 = errors.content) !== null && _errors$content2 !== void 0 && _errors$content2.message),
       required: true,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.TextArea, Object.assign({}, register('content', {
+      children: (0,jsx_runtime.jsx)(src.TextArea, Object.assign({}, register('content', {
         required: {
           value: true,
           message: 'Required.'
@@ -2474,20 +2425,20 @@ const TemplateForm = _ref => {
         placeholder: "Message",
         rows: 12
       }))
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    }), (0,jsx_runtime.jsxs)("div", {
       className: styles.buttons,
-      children: [loading && (TemplateForm_Button || (TemplateForm_Button = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+      children: [loading && (TemplateForm_Button || (TemplateForm_Button = (0,jsx_runtime.jsx)(src.Button, {
         disabled: true,
         icon: "fa fa-spinner",
         variant: "primary",
         children: "Saving..."
-      }))), !loading && (TemplateForm_Button2 || (TemplateForm_Button2 = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+      }))), !loading && (TemplateForm_Button2 || (TemplateForm_Button2 = (0,jsx_runtime.jsx)(src.Button, {
         type: "submit",
         variant: "primary",
         children: "Save template"
-      }))), /*#__PURE__*/(0,jsx_runtime.jsx)(src.LinkButton, {
+      }))), (0,jsx_runtime.jsx)(src.LinkButton, {
         disabled: loading,
-        href: (0,misc/* makeAMLink */.eQ)('alerting/notifications', alertManagerSourceName),
+        href: (0,misc.eQ)('alerting/notifications', alertManagerSourceName),
         variant: "secondary",
         type: "button",
         fill: "outline",
@@ -2511,7 +2462,7 @@ const TemplateForm_getStyles = theme => ({
     max-width: 758px;
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/EditTemplateView.tsx
+;
 var EditTemplateView_InfoBox;
 
 
@@ -2529,14 +2480,14 @@ const EditTemplateView = _ref => {
   const template = (_config$template_file = config.template_files) === null || _config$template_file === void 0 ? void 0 : _config$template_file[templateName];
 
   if (!template) {
-    return EditTemplateView_InfoBox || (EditTemplateView_InfoBox = /*#__PURE__*/(0,jsx_runtime.jsx)(src.InfoBox, {
+    return EditTemplateView_InfoBox || (EditTemplateView_InfoBox = (0,jsx_runtime.jsx)(src.InfoBox, {
       severity: "error",
       title: "Template not found",
       children: "Sorry, this template does not seem to exit."
     }));
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(TemplateForm, {
+  return (0,jsx_runtime.jsx)(TemplateForm, {
     alertManagerSourceName: alertManagerSourceName,
     config: config,
     existing: {
@@ -2545,7 +2496,7 @@ const EditTemplateView = _ref => {
     }
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/GlobalConfigForm.tsx
+;
 var GlobalConfigForm_Button, GlobalConfigForm_Button2;
 
 
@@ -2575,15 +2526,14 @@ const GlobalConfigForm = _ref => {
     alertManagerSourceName
   } = _ref;
   const dispatch = (0,es.useDispatch)();
-  (0,useCleanup/* useCleanup */.x)(state => state.unifiedAlerting.saveAMConfig);
+  (0,useCleanup.x)(state => state.unifiedAlerting.saveAMConfig);
   const {
     loading,
     error
-  } = (0,useUnifiedAlertingSelector/* useUnifiedAlertingSelector */._)(state => state.saveAMConfig);
-  const readOnly = (0,datasource/* isVanillaPrometheusAlertManagerDataSource */.RY)(alertManagerSourceName);
+  } = (0,useUnifiedAlertingSelector._)(state => state.saveAMConfig);
+  const readOnly = (0,datasource.RY)(alertManagerSourceName);
   const styles = (0,src.useStyles2)(GlobalConfigForm_getStyles);
-  const formAPI = (0,index_esm/* useForm */.cI)({
-    // making a copy here beacuse react-hook-form will mutate these, and break if the object is frozen. for real.
+  const formAPI = (0,index_esm.cI)({
     defaultValues: JSON.parse(JSON.stringify(Object.assign({}, GlobalConfigForm_defaultValues, (_config$alertmanager_ = config.alertmanager_config.global) !== null && _config$alertmanager_ !== void 0 ? _config$alertmanager_ : {})))
   });
   const {
@@ -2594,7 +2544,7 @@ const GlobalConfigForm = _ref => {
   } = formAPI;
 
   const onSubmitCallback = values => {
-    dispatch((0,actions/* updateAlertManagerConfigAction */.mM)({
+    dispatch((0,actions.mM)({
       newConfig: Object.assign({}, config, {
         alertmanager_config: Object.assign({}, config.alertmanager_config, {
           global: omitEmptyValues(values)
@@ -2603,43 +2553,43 @@ const GlobalConfigForm = _ref => {
       oldConfig: config,
       alertManagerSourceName,
       successMessage: 'Global config updated.',
-      redirectPath: (0,misc/* makeAMLink */.eQ)('/alerting/notifications', alertManagerSourceName)
+      redirectPath: (0,misc.eQ)('/alerting/notifications', alertManagerSourceName)
     }));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FormProvider */.RV, Object.assign({}, formAPI, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)("form", {
+  return (0,jsx_runtime.jsx)(index_esm.RV, Object.assign({}, formAPI, {
+    children: (0,jsx_runtime.jsxs)("form", {
       onSubmit: handleSubmit(onSubmitCallback),
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h4", {
+      children: [(0,jsx_runtime.jsx)("h4", {
         className: styles.heading,
         children: "Global config"
-      }), error && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Alert, {
+      }), error && (0,jsx_runtime.jsx)(src.Alert, {
         severity: "error",
         title: "Error saving receiver",
         children: error.message || String(error)
-      }), globalConfigOptions.map(option => /*#__PURE__*/(0,jsx_runtime.jsx)(OptionField, {
+      }), globalConfigOptions.map(option => (0,jsx_runtime.jsx)(OptionField, {
         readOnly: readOnly,
         defaultValue: GlobalConfigForm_defaultValues[option.propertyName],
         option: option,
         error: errors[option.propertyName],
         pathPrefix: ''
-      }, option.propertyName)), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)(src.HorizontalGroup, {
-          children: [!readOnly && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-            children: [loading && (GlobalConfigForm_Button || (GlobalConfigForm_Button = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+      }, option.propertyName)), (0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsxs)(src.HorizontalGroup, {
+          children: [!readOnly && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+            children: [loading && (GlobalConfigForm_Button || (GlobalConfigForm_Button = (0,jsx_runtime.jsx)(src.Button, {
               disabled: true,
               icon: "fa fa-spinner",
               variant: "primary",
               children: "Saving..."
-            }))), !loading && (GlobalConfigForm_Button2 || (GlobalConfigForm_Button2 = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+            }))), !loading && (GlobalConfigForm_Button2 || (GlobalConfigForm_Button2 = (0,jsx_runtime.jsx)(src.Button, {
               type: "submit",
               children: "Save global config"
             })))]
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.LinkButton, {
+          }), (0,jsx_runtime.jsx)(src.LinkButton, {
             disabled: loading,
             fill: "outline",
             variant: "secondary",
-            href: (0,misc/* makeAMLink */.eQ)('alerting/notifications', alertManagerSourceName),
+            href: (0,misc.eQ)('alerting/notifications', alertManagerSourceName),
             children: "Cancel"
           })]
         })
@@ -2653,7 +2603,7 @@ const GlobalConfigForm_getStyles = theme => ({
     margin: ${theme.spacing(4, 0)};
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/NewReceiverView.tsx
+;
 
 
 
@@ -2665,19 +2615,19 @@ const NewReceiverView = _ref => {
     config
   } = _ref;
 
-  if (alertManagerSourceName === datasource/* GRAFANA_RULES_SOURCE_NAME */.GC) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(GrafanaReceiverForm, {
+  if (alertManagerSourceName === datasource.GC) {
+    return (0,jsx_runtime.jsx)(GrafanaReceiverForm, {
       alertManagerSourceName: alertManagerSourceName,
       config: config
     });
   } else {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(CloudReceiverForm, {
+    return (0,jsx_runtime.jsx)(CloudReceiverForm, {
       alertManagerSourceName: alertManagerSourceName,
       config: config
     });
   }
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/NewTemplateView.tsx
+;
 
 
 
@@ -2686,24 +2636,18 @@ const NewTemplateView = _ref => {
     config,
     alertManagerSourceName
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(TemplateForm, {
+  return (0,jsx_runtime.jsx)(TemplateForm, {
     config: config,
     alertManagerSourceName: alertManagerSourceName
   });
 };
-// EXTERNAL MODULE: ./public/app/types/index.ts + 4 modules
 var types = __webpack_require__("./public/app/types/index.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/Authorize.tsx
 var Authorize = __webpack_require__("./public/app/features/alerting/unified/components/Authorize.tsx");
-// EXTERNAL MODULE: ./public/app/core/services/context_srv.ts
 var context_srv = __webpack_require__("./public/app/core/services/context_srv.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/styles/table.ts
 var table = __webpack_require__("./public/app/features/alerting/unified/styles/table.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/access-control.ts
 var access_control = __webpack_require__("./public/app/features/alerting/unified/utils/access-control.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/alertmanager.ts
 var alertmanager = __webpack_require__("./public/app/features/alerting/unified/utils/alertmanager.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/alertmanager/consts.ts
+;
 const receiverTypeNames = {
   pagerduty: 'PagerDuty',
   pushover: 'Pushover',
@@ -2713,10 +2657,9 @@ const receiverTypeNames = {
   victorops: 'VictorOps',
   wechat: 'WeChat'
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/utils/receivers.ts
+;
 
 
-// name : count
 function extractNotifierTypeCounts(receiver, grafanaNotifiers) {
   if (receiver['grafana_managed_receiver_configs']) {
     var _receiver$grafana_man;
@@ -2731,16 +2674,16 @@ function getCortexAlertManagerNotifierTypeCounts(receiver) {
   return Object.entries(receiver).filter(_ref => {
     let [key] = _ref;
     return key !== 'grafana_managed_receiver_configs' && key.endsWith('_configs');
-  }) // filter out only properties that are alertmanager notifier
+  }) 
   .filter(_ref2 => {
     let [_, value] = _ref2;
     return Array.isArray(value) && !!value.length;
-  }) // check that there are actually notifiers of this type configured
+  }) 
   .reduce((acc, _ref3) => {
     var _receiverTypeNames$ty, _acc$name;
 
     let [key, value] = _ref3;
-    const type = key.replace('_configs', ''); // remove the `_config` part from the key, making it intto a notifier name
+    const type = key.replace('_configs', ''); 
 
     const name = (_receiverTypeNames$ty = receiverTypeNames[type]) !== null && _receiverTypeNames$ty !== void 0 ? _receiverTypeNames$ty : (0,lodash.capitalize)(type);
     return Object.assign({}, acc, {
@@ -2750,12 +2693,12 @@ function getCortexAlertManagerNotifierTypeCounts(receiver) {
 }
 
 function getGrafanaNotifierTypeCounts(configs, grafanaNotifiers) {
-  return configs.map(recv => recv.type) // extract types from config
+  return configs.map(recv => recv.type) 
   .map(type => {
     var _grafanaNotifiers$fin, _grafanaNotifiers$fin2;
 
     return (_grafanaNotifiers$fin = (_grafanaNotifiers$fin2 = grafanaNotifiers.find(r => r.type === type)) === null || _grafanaNotifiers$fin2 === void 0 ? void 0 : _grafanaNotifiers$fin2.name) !== null && _grafanaNotifiers$fin !== void 0 ? _grafanaNotifiers$fin : (0,lodash.capitalize)(type);
-  }) // get readable name from notifier cofnig, or if not available, just capitalize
+  }) 
   .reduce((acc, type) => {
     var _acc$type;
 
@@ -2764,9 +2707,8 @@ function getGrafanaNotifierTypeCounts(configs, grafanaNotifiers) {
     });
   }, {});
 }
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-router-dom-virtual-e45eb1b58b/0/cache/react-router-dom-npm-5.3.0-aa9adb5bec-47584fd629.zip/node_modules/react-router-dom/esm/react-router-dom.js
 var react_router_dom = __webpack_require__("./.yarn/__virtual__/react-router-dom-virtual-e45eb1b58b/0/cache/react-router-dom-npm-5.3.0-aa9adb5bec-47584fd629.zip/node_modules/react-router-dom/esm/react-router-dom.js");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/ReceiversSection.tsx
+;
 
 
 
@@ -2785,19 +2727,19 @@ const ReceiversSection = _ref => {
     showButton = true
   } = _ref;
   const styles = (0,src.useStyles2)(ReceiversSection_getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)("div", {
       className: (0,emotion_css_esm.cx)(styles.heading, className),
-      children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h4", {
+      children: [(0,jsx_runtime.jsxs)("div", {
+        children: [(0,jsx_runtime.jsx)("h4", {
           children: title
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+        }), (0,jsx_runtime.jsx)("p", {
           className: styles.description,
           children: description
         })]
-      }), showButton && /*#__PURE__*/(0,jsx_runtime.jsx)(react_router_dom.Link, {
+      }), showButton && (0,jsx_runtime.jsx)(react_router_dom.Link, {
         to: addButtonTo,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+        children: (0,jsx_runtime.jsx)(src.Button, {
           type: "button",
           icon: "plus",
           children: addButtonLabel
@@ -2816,7 +2758,7 @@ const ReceiversSection_getStyles = theme => ({
     color: ${theme.colors.text.secondary};
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/ReceiversTable.tsx
+;
 var _col, _col2, _col3, ReceiversTable_th, ReceiversTable_th2, ReceiversTable_th3, _td, _p;
 
 
@@ -2844,17 +2786,17 @@ const ReceiversTable = _ref => {
     alertManagerName
   } = _ref;
   const dispatch = (0,es.useDispatch)();
-  const tableStyles = (0,src.useStyles2)(table/* getAlertTableStyles */.D);
+  const tableStyles = (0,src.useStyles2)(table.D);
   const styles = (0,src.useStyles2)(ReceiversTable_getStyles);
-  const isVanillaAM = (0,datasource/* isVanillaPrometheusAlertManagerDataSource */.RY)(alertManagerName);
-  const permissions = (0,access_control/* getNotificationsPermissions */.Ko)(alertManagerName);
-  const grafanaNotifiers = (0,useUnifiedAlertingSelector/* useUnifiedAlertingSelector */._)(state => state.grafanaNotifiers); // receiver name slated for deletion. If this is set, a confirmation modal is shown. If user approves, this receiver is deleted
+  const isVanillaAM = (0,datasource.RY)(alertManagerName);
+  const permissions = (0,access_control.Ko)(alertManagerName);
+  const grafanaNotifiers = (0,useUnifiedAlertingSelector._)(state => state.grafanaNotifiers); 
 
   const [receiverToDelete, setReceiverToDelete] = (0,react.useState)();
   const [showCannotDeleteReceiverModal, setShowCannotDeleteReceiverModal] = (0,react.useState)(false);
 
   const onClickDeleteReceiver = receiverName => {
-    if ((0,alertmanager/* isReceiverUsed */.nv)(receiverName, config)) {
+    if ((0,alertmanager.nv)(receiverName, config)) {
       setShowCannotDeleteReceiverModal(true);
     } else {
       setReceiverToDelete(receiverName);
@@ -2863,7 +2805,7 @@ const ReceiversTable = _ref => {
 
   const deleteReceiver = () => {
     if (receiverToDelete) {
-      dispatch((0,actions/* deleteReceiverAction */.X4)(receiverToDelete, alertManagerName));
+      dispatch((0,actions.X4)(receiverToDelete, alertManagerName));
     }
 
     setReceiverToDelete(undefined);
@@ -2889,74 +2831,74 @@ const ReceiversTable = _ref => {
       };
     })) !== null && _config$alertmanager_ !== void 0 ? _config$alertmanager_ : [];
   }, [config, grafanaNotifiers.result]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(ReceiversSection, {
+  return (0,jsx_runtime.jsxs)(ReceiversSection, {
     className: styles.section,
     title: "Contact points",
     description: "Define where the notifications will be sent to, for example email or Slack.",
-    showButton: !isVanillaAM && context_srv/* contextSrv.hasPermission */.Vt.hasPermission(permissions.create),
+    showButton: !isVanillaAM && context_srv.Vt.hasPermission(permissions.create),
     addButtonLabel: "New contact point",
-    addButtonTo: (0,misc/* makeAMLink */.eQ)('/alerting/notifications/receivers/new', alertManagerName),
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("table", {
+    addButtonTo: (0,misc.eQ)('/alerting/notifications/receivers/new', alertManagerName),
+    children: [(0,jsx_runtime.jsxs)("table", {
       className: tableStyles.table,
       "data-testid": "receivers-table",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("colgroup", {
-        children: [_col || (_col = /*#__PURE__*/(0,jsx_runtime.jsx)("col", {})), _col2 || (_col2 = /*#__PURE__*/(0,jsx_runtime.jsx)("col", {})), /*#__PURE__*/(0,jsx_runtime.jsx)(Authorize/* Authorize */.q, {
+      children: [(0,jsx_runtime.jsxs)("colgroup", {
+        children: [_col || (_col = (0,jsx_runtime.jsx)("col", {})), _col2 || (_col2 = (0,jsx_runtime.jsx)("col", {})), (0,jsx_runtime.jsx)(Authorize.q, {
           actions: [permissions.update, permissions.delete],
-          children: _col3 || (_col3 = /*#__PURE__*/(0,jsx_runtime.jsx)("col", {}))
+          children: _col3 || (_col3 = (0,jsx_runtime.jsx)("col", {}))
         })]
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("thead", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
-          children: [ReceiversTable_th || (ReceiversTable_th = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+      }), (0,jsx_runtime.jsx)("thead", {
+        children: (0,jsx_runtime.jsxs)("tr", {
+          children: [ReceiversTable_th || (ReceiversTable_th = (0,jsx_runtime.jsx)("th", {
             children: "Contact point name"
-          })), ReceiversTable_th2 || (ReceiversTable_th2 = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+          })), ReceiversTable_th2 || (ReceiversTable_th2 = (0,jsx_runtime.jsx)("th", {
             children: "Type"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)(Authorize/* Authorize */.q, {
+          })), (0,jsx_runtime.jsx)(Authorize.q, {
             actions: [permissions.update, permissions.delete],
-            children: ReceiversTable_th3 || (ReceiversTable_th3 = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+            children: ReceiversTable_th3 || (ReceiversTable_th3 = (0,jsx_runtime.jsx)("th", {
               children: "Actions"
             }))
           })]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)("tbody", {
-        children: [!rows.length && /*#__PURE__*/(0,jsx_runtime.jsx)("tr", {
+      }), (0,jsx_runtime.jsxs)("tbody", {
+        children: [!rows.length && (0,jsx_runtime.jsx)("tr", {
           className: tableStyles.evenRow,
-          children: _td || (_td = /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+          children: _td || (_td = (0,jsx_runtime.jsx)("td", {
             colSpan: 3,
             children: "No receivers defined."
           }))
-        }), rows.map((receiver, idx) => /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
+        }), rows.map((receiver, idx) => (0,jsx_runtime.jsxs)("tr", {
           className: idx % 2 === 0 ? tableStyles.evenRow : undefined,
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+          children: [(0,jsx_runtime.jsx)("td", {
             children: receiver.name
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+          }), (0,jsx_runtime.jsx)("td", {
             children: receiver.types.join(', ')
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(Authorize/* Authorize */.q, {
+          }), (0,jsx_runtime.jsx)(Authorize.q, {
             actions: [permissions.update, permissions.delete],
-            children: /*#__PURE__*/(0,jsx_runtime.jsxs)("td", {
+            children: (0,jsx_runtime.jsxs)("td", {
               className: tableStyles.actionsCell,
-              children: [!isVanillaAM && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-                children: [/*#__PURE__*/(0,jsx_runtime.jsx)(Authorize/* Authorize */.q, {
+              children: [!isVanillaAM && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+                children: [(0,jsx_runtime.jsx)(Authorize.q, {
                   actions: [permissions.update],
-                  children: /*#__PURE__*/(0,jsx_runtime.jsx)(ActionIcon/* ActionIcon */.A, {
+                  children: (0,jsx_runtime.jsx)(ActionIcon.A, {
                     "aria-label": "Edit",
                     "data-testid": "edit",
-                    to: (0,misc/* makeAMLink */.eQ)(`/alerting/notifications/receivers/${encodeURIComponent(receiver.name)}/edit`, alertManagerName),
+                    to: (0,misc.eQ)(`/alerting/notifications/receivers/${encodeURIComponent(receiver.name)}/edit`, alertManagerName),
                     tooltip: "Edit contact point",
                     icon: "pen"
                   })
-                }), /*#__PURE__*/(0,jsx_runtime.jsx)(Authorize/* Authorize */.q, {
+                }), (0,jsx_runtime.jsx)(Authorize.q, {
                   actions: [permissions.delete],
-                  children: /*#__PURE__*/(0,jsx_runtime.jsx)(ActionIcon/* ActionIcon */.A, {
+                  children: (0,jsx_runtime.jsx)(ActionIcon.A, {
                     onClick: () => onClickDeleteReceiver(receiver.name),
                     tooltip: "Delete contact point",
                     icon: "trash-alt"
                   })
                 })]
-              }), isVanillaAM && /*#__PURE__*/(0,jsx_runtime.jsx)(Authorize/* Authorize */.q, {
+              }), isVanillaAM && (0,jsx_runtime.jsx)(Authorize.q, {
                 actions: [permissions.update],
-                children: /*#__PURE__*/(0,jsx_runtime.jsx)(ActionIcon/* ActionIcon */.A, {
+                children: (0,jsx_runtime.jsx)(ActionIcon.A, {
                   "data-testid": "view",
-                  to: (0,misc/* makeAMLink */.eQ)(`/alerting/notifications/receivers/${encodeURIComponent(receiver.name)}/edit`, alertManagerName),
+                  to: (0,misc.eQ)(`/alerting/notifications/receivers/${encodeURIComponent(receiver.name)}/edit`, alertManagerName),
                   tooltip: "View contact point",
                   icon: "file-alt"
                 })
@@ -2965,21 +2907,21 @@ const ReceiversTable = _ref => {
           })]
         }, receiver.name))]
       })]
-    }), !!showCannotDeleteReceiverModal && /*#__PURE__*/(0,jsx_runtime.jsxs)(src.Modal, {
+    }), !!showCannotDeleteReceiverModal && (0,jsx_runtime.jsxs)(src.Modal, {
       isOpen: true,
       title: "Cannot delete contact point",
       onDismiss: () => setShowCannotDeleteReceiverModal(false),
-      children: [_p || (_p = /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+      children: [_p || (_p = (0,jsx_runtime.jsx)("p", {
         children: "Contact point cannot be deleted because it is used in more policies. Please update or delete these policies first."
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Modal.ButtonRow, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+      })), (0,jsx_runtime.jsx)(src.Modal.ButtonRow, {
+        children: (0,jsx_runtime.jsx)(src.Button, {
           variant: "secondary",
           onClick: () => setShowCannotDeleteReceiverModal(false),
           fill: "outline",
           children: "Close"
         })
       })]
-    }), !!receiverToDelete && /*#__PURE__*/(0,jsx_runtime.jsx)(src.ConfirmModal, {
+    }), !!receiverToDelete && (0,jsx_runtime.jsx)(src.ConfirmModal, {
       isOpen: true,
       title: "Delete contact point",
       body: `Are you sure you want to delete contact point "${receiverToDelete}"?`,
@@ -2995,9 +2937,8 @@ const ReceiversTable_getStyles = theme => ({
     margin-top: ${theme.spacing(4)};
   `
 });
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/DetailsField.tsx
 var DetailsField = __webpack_require__("./public/app/features/alerting/unified/components/DetailsField.tsx");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/TemplatesTable.tsx
+;
 var TemplatesTable_col, TemplatesTable_col2, TemplatesTable_th, TemplatesTable_th2, TemplatesTable_th3, TemplatesTable_td, _td2;
 
 
@@ -3022,79 +2963,79 @@ const TemplatesTable = _ref => {
   } = _ref;
   const dispatch = (0,es.useDispatch)();
   const [expandedTemplates, setExpandedTemplates] = (0,react.useState)({});
-  const tableStyles = (0,src.useStyles2)(table/* getAlertTableStyles */.D);
-  const permissions = (0,access_control/* getNotificationsPermissions */.Ko)(alertManagerName);
+  const tableStyles = (0,src.useStyles2)(table.D);
+  const permissions = (0,access_control.Ko)(alertManagerName);
   const templateRows = (0,react.useMemo)(() => Object.entries(config.template_files), [config]);
   const [templateToDelete, setTemplateToDelete] = (0,react.useState)();
 
   const deleteTemplate = () => {
     if (templateToDelete) {
-      dispatch((0,actions/* deleteTemplateAction */.S6)(templateToDelete, alertManagerName));
+      dispatch((0,actions.S6)(templateToDelete, alertManagerName));
     }
 
     setTemplateToDelete(undefined);
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(ReceiversSection, {
+  return (0,jsx_runtime.jsxs)(ReceiversSection, {
     title: "Message templates",
     description: "Templates construct the messages that get sent to the contact points.",
     addButtonLabel: "New template",
-    addButtonTo: (0,misc/* makeAMLink */.eQ)('/alerting/notifications/templates/new', alertManagerName),
-    showButton: context_srv/* contextSrv.hasPermission */.Vt.hasPermission(permissions.create),
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("table", {
+    addButtonTo: (0,misc.eQ)('/alerting/notifications/templates/new', alertManagerName),
+    showButton: context_srv.Vt.hasPermission(permissions.create),
+    children: [(0,jsx_runtime.jsxs)("table", {
       className: tableStyles.table,
       "data-testid": "templates-table",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("colgroup", {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("col", {
+      children: [(0,jsx_runtime.jsxs)("colgroup", {
+        children: [(0,jsx_runtime.jsx)("col", {
           className: tableStyles.colExpand
-        }), TemplatesTable_col || (TemplatesTable_col = /*#__PURE__*/(0,jsx_runtime.jsx)("col", {})), TemplatesTable_col2 || (TemplatesTable_col2 = /*#__PURE__*/(0,jsx_runtime.jsx)("col", {}))]
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("thead", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
-          children: [TemplatesTable_th || (TemplatesTable_th = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {})), TemplatesTable_th2 || (TemplatesTable_th2 = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+        }), TemplatesTable_col || (TemplatesTable_col = (0,jsx_runtime.jsx)("col", {})), TemplatesTable_col2 || (TemplatesTable_col2 = (0,jsx_runtime.jsx)("col", {}))]
+      }), (0,jsx_runtime.jsx)("thead", {
+        children: (0,jsx_runtime.jsxs)("tr", {
+          children: [TemplatesTable_th || (TemplatesTable_th = (0,jsx_runtime.jsx)("th", {})), TemplatesTable_th2 || (TemplatesTable_th2 = (0,jsx_runtime.jsx)("th", {
             children: "Template"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)(Authorize/* Authorize */.q, {
+          })), (0,jsx_runtime.jsx)(Authorize.q, {
             actions: [permissions.update, permissions.delete],
-            children: TemplatesTable_th3 || (TemplatesTable_th3 = /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+            children: TemplatesTable_th3 || (TemplatesTable_th3 = (0,jsx_runtime.jsx)("th", {
               children: "Actions"
             }))
           })]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)("tbody", {
-        children: [!templateRows.length && /*#__PURE__*/(0,jsx_runtime.jsx)("tr", {
+      }), (0,jsx_runtime.jsxs)("tbody", {
+        children: [!templateRows.length && (0,jsx_runtime.jsx)("tr", {
           className: tableStyles.evenRow,
-          children: TemplatesTable_td || (TemplatesTable_td = /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+          children: TemplatesTable_td || (TemplatesTable_td = (0,jsx_runtime.jsx)("td", {
             colSpan: 3,
             children: "No templates defined."
           }))
         }), templateRows.map((_ref2, idx) => {
           let [name, content] = _ref2;
           const isExpanded = !!expandedTemplates[name];
-          return /*#__PURE__*/(0,jsx_runtime.jsxs)(react.Fragment, {
-            children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
+          return (0,jsx_runtime.jsxs)(react.Fragment, {
+            children: [(0,jsx_runtime.jsxs)("tr", {
               className: idx % 2 === 0 ? tableStyles.evenRow : undefined,
-              children: [/*#__PURE__*/(0,jsx_runtime.jsx)("td", {
-                children: /*#__PURE__*/(0,jsx_runtime.jsx)(CollapseToggle/* CollapseToggle */.U, {
+              children: [(0,jsx_runtime.jsx)("td", {
+                children: (0,jsx_runtime.jsx)(CollapseToggle.U, {
                   isCollapsed: !expandedTemplates[name],
                   onToggle: () => setExpandedTemplates(Object.assign({}, expandedTemplates, {
                     [name]: !isExpanded
                   }))
                 })
-              }), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+              }), (0,jsx_runtime.jsx)("td", {
                 children: name
-              }), /*#__PURE__*/(0,jsx_runtime.jsx)(Authorize/* Authorize */.q, {
+              }), (0,jsx_runtime.jsx)(Authorize.q, {
                 actions: [permissions.update, permissions.delete],
-                children: /*#__PURE__*/(0,jsx_runtime.jsxs)("td", {
+                children: (0,jsx_runtime.jsxs)("td", {
                   className: tableStyles.actionsCell,
-                  children: [/*#__PURE__*/(0,jsx_runtime.jsx)(Authorize/* Authorize */.q, {
+                  children: [(0,jsx_runtime.jsx)(Authorize.q, {
                     actions: [permissions.update],
-                    children: /*#__PURE__*/(0,jsx_runtime.jsx)(ActionIcon/* ActionIcon */.A, {
-                      to: (0,misc/* makeAMLink */.eQ)(`/alerting/notifications/templates/${encodeURIComponent(name)}/edit`, alertManagerName),
+                    children: (0,jsx_runtime.jsx)(ActionIcon.A, {
+                      to: (0,misc.eQ)(`/alerting/notifications/templates/${encodeURIComponent(name)}/edit`, alertManagerName),
                       tooltip: "edit template",
                       icon: "pen"
                     })
-                  }), /*#__PURE__*/(0,jsx_runtime.jsx)(Authorize/* Authorize */.q, {
+                  }), (0,jsx_runtime.jsx)(Authorize.q, {
                     actions: [permissions.delete],
-                    children: /*#__PURE__*/(0,jsx_runtime.jsx)(ActionIcon/* ActionIcon */.A, {
+                    children: (0,jsx_runtime.jsx)(ActionIcon.A, {
                       onClick: () => setTemplateToDelete(name),
                       tooltip: "delete template",
                       icon: "trash-alt"
@@ -3102,14 +3043,14 @@ const TemplatesTable = _ref => {
                   })]
                 })
               })]
-            }, name), isExpanded && /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
+            }, name), isExpanded && (0,jsx_runtime.jsxs)("tr", {
               className: idx % 2 === 0 ? tableStyles.evenRow : undefined,
-              children: [_td2 || (_td2 = /*#__PURE__*/(0,jsx_runtime.jsx)("td", {})), /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+              children: [_td2 || (_td2 = (0,jsx_runtime.jsx)("td", {})), (0,jsx_runtime.jsx)("td", {
                 colSpan: 2,
-                children: /*#__PURE__*/(0,jsx_runtime.jsx)(DetailsField/* DetailsField */.C, {
+                children: (0,jsx_runtime.jsx)(DetailsField.C, {
                   label: "Description",
                   horizontal: true,
-                  children: /*#__PURE__*/(0,jsx_runtime.jsx)("pre", {
+                  children: (0,jsx_runtime.jsx)("pre", {
                     children: content
                   })
                 })
@@ -3118,7 +3059,7 @@ const TemplatesTable = _ref => {
           }, name);
         })]
       })]
-    }), !!templateToDelete && /*#__PURE__*/(0,jsx_runtime.jsx)(src.ConfirmModal, {
+    }), !!templateToDelete && (0,jsx_runtime.jsx)(src.ConfirmModal, {
       isOpen: true,
       title: "Delete template",
       body: `Are you sure you want to delete template "${templateToDelete}"?`,
@@ -3128,7 +3069,7 @@ const TemplatesTable = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/receivers/ReceiversAndTemplatesView.tsx
+;
 var ReceiversAndTemplatesView_p;
 
 
@@ -3148,26 +3089,26 @@ const ReceiversAndTemplatesView = _ref => {
     config,
     alertManagerName
   } = _ref;
-  const isCloud = alertManagerName !== datasource/* GRAFANA_RULES_SOURCE_NAME */.GC;
+  const isCloud = alertManagerName !== datasource.GC;
   const styles = (0,src.useStyles2)(ReceiversAndTemplatesView_getStyles);
-  const isVanillaAM = (0,datasource/* isVanillaPrometheusAlertManagerDataSource */.RY)(alertManagerName);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [!isVanillaAM && /*#__PURE__*/(0,jsx_runtime.jsx)(TemplatesTable, {
+  const isVanillaAM = (0,datasource.RY)(alertManagerName);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [!isVanillaAM && (0,jsx_runtime.jsx)(TemplatesTable, {
       config: config,
       alertManagerName: alertManagerName
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(ReceiversTable, {
+    }), (0,jsx_runtime.jsx)(ReceiversTable, {
       config: config,
       alertManagerName: alertManagerName
-    }), isCloud && /*#__PURE__*/(0,jsx_runtime.jsx)(Authorize/* Authorize */.q, {
-      actions: [types/* AccessControlAction.AlertingNotificationsExternalWrite */.bW.AlertingNotificationsExternalWrite],
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)(src.Alert, {
+    }), isCloud && (0,jsx_runtime.jsx)(Authorize.q, {
+      actions: [types.bW.AlertingNotificationsExternalWrite],
+      children: (0,jsx_runtime.jsxs)(src.Alert, {
         className: styles.section,
         severity: "info",
         title: "Global config for contact points",
-        children: [ReceiversAndTemplatesView_p || (ReceiversAndTemplatesView_p = /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+        children: [ReceiversAndTemplatesView_p || (ReceiversAndTemplatesView_p = (0,jsx_runtime.jsx)("p", {
           children: "For each external Alertmanager you can define global settings, like server addresses, usernames and password, for all the supported contact points."
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)(src.LinkButton, {
-          href: (0,misc/* makeAMLink */.eQ)('alerting/notifications/global-config', alertManagerName),
+        })), (0,jsx_runtime.jsx)(src.LinkButton, {
+          href: (0,misc.eQ)('alerting/notifications/global-config', alertManagerName),
           variant: "secondary",
           children: isVanillaAM ? 'View global config' : 'Edit global config'
         })]
@@ -3181,13 +3122,10 @@ const ReceiversAndTemplatesView_getStyles = theme => ({
     margin-top: ${theme.spacing(4)};
   `
 });
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/hooks/useAlertManagerSourceName.ts
 var useAlertManagerSourceName = __webpack_require__("./public/app/features/alerting/unified/hooks/useAlertManagerSourceName.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/hooks/useAlertManagerSources.ts
 var useAlertManagerSources = __webpack_require__("./public/app/features/alerting/unified/hooks/useAlertManagerSources.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/redux.ts
 var redux = __webpack_require__("./public/app/features/alerting/unified/utils/redux.ts");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/Receivers.tsx
+;
 var _Redirect, Receivers_LoadingPlaceholder;
 
 
@@ -3213,107 +3151,107 @@ var _Redirect, Receivers_LoadingPlaceholder;
 
 
 const Receivers = () => {
-  const alertManagers = (0,useAlertManagerSources/* useAlertManagersByPermission */.k)('notification');
-  const [alertManagerSourceName, setAlertManagerSourceName] = (0,useAlertManagerSourceName/* useAlertManagerSourceName */.k)(alertManagers);
+  const alertManagers = (0,useAlertManagerSources.k)('notification');
+  const [alertManagerSourceName, setAlertManagerSourceName] = (0,useAlertManagerSourceName.k)(alertManagers);
   const dispatch = (0,es.useDispatch)();
-  const location = (0,react_router/* useLocation */.TH)();
+  const location = (0,react_router.TH)();
   const isRoot = location.pathname.endsWith('/alerting/notifications');
-  const configRequests = (0,useUnifiedAlertingSelector/* useUnifiedAlertingSelector */._)(state => state.amConfigs);
+  const configRequests = (0,useUnifiedAlertingSelector._)(state => state.amConfigs);
   const {
     result: config,
     loading,
     error
-  } = alertManagerSourceName && configRequests[alertManagerSourceName] || redux/* initialAsyncRequestState */.oq;
-  const receiverTypes = (0,useUnifiedAlertingSelector/* useUnifiedAlertingSelector */._)(state => state.grafanaNotifiers);
+  } = alertManagerSourceName && configRequests[alertManagerSourceName] || redux.oq;
+  const receiverTypes = (0,useUnifiedAlertingSelector._)(state => state.grafanaNotifiers);
   const shouldLoadConfig = isRoot || !config;
   (0,react.useEffect)(() => {
     if (alertManagerSourceName && shouldLoadConfig) {
-      dispatch((0,actions/* fetchAlertManagerConfigAction */.Yh)(alertManagerSourceName));
+      dispatch((0,actions.Yh)(alertManagerSourceName));
     }
   }, [alertManagerSourceName, dispatch, shouldLoadConfig]);
   (0,react.useEffect)(() => {
-    if (alertManagerSourceName === datasource/* GRAFANA_RULES_SOURCE_NAME */.GC && !(receiverTypes.result || receiverTypes.loading || receiverTypes.error)) {
-      dispatch((0,actions/* fetchGrafanaNotifiersAction */.Vj)());
+    if (alertManagerSourceName === datasource.GC && !(receiverTypes.result || receiverTypes.loading || receiverTypes.error)) {
+      dispatch((0,actions.Vj)());
     }
   }, [alertManagerSourceName, dispatch, receiverTypes]);
   const disableAmSelect = !isRoot;
 
   if (!alertManagerSourceName) {
-    return isRoot ? /*#__PURE__*/(0,jsx_runtime.jsx)(AlertingPageWrapper/* AlertingPageWrapper */.J, {
+    return isRoot ? (0,jsx_runtime.jsx)(AlertingPageWrapper.J, {
       pageId: "receivers",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(NoAlertManagerWarning/* NoAlertManagerWarning */.I, {
+      children: (0,jsx_runtime.jsx)(NoAlertManagerWarning.I, {
         availableAlertManagers: alertManagers
       })
-    }) : _Redirect || (_Redirect = /*#__PURE__*/(0,jsx_runtime.jsx)(react_router/* Redirect */.l_, {
+    }) : _Redirect || (_Redirect = (0,jsx_runtime.jsx)(react_router.l_, {
       to: "/alerting/notifications"
     }));
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(AlertingPageWrapper/* AlertingPageWrapper */.J, {
+  return (0,jsx_runtime.jsxs)(AlertingPageWrapper.J, {
     pageId: "receivers",
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(AlertManagerPicker/* AlertManagerPicker */.P, {
+    children: [(0,jsx_runtime.jsx)(AlertManagerPicker.P, {
       current: alertManagerSourceName,
       disabled: disableAmSelect,
       onChange: setAlertManagerSourceName,
       dataSources: alertManagers
-    }), error && !loading && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Alert, {
+    }), error && !loading && (0,jsx_runtime.jsx)(src.Alert, {
       severity: "error",
       title: "Error loading Alertmanager config",
       children: error.message || 'Unknown error.'
-    }), loading && !config && (Receivers_LoadingPlaceholder || (Receivers_LoadingPlaceholder = /*#__PURE__*/(0,jsx_runtime.jsx)(src.LoadingPlaceholder, {
+    }), loading && !config && (Receivers_LoadingPlaceholder || (Receivers_LoadingPlaceholder = (0,jsx_runtime.jsx)(src.LoadingPlaceholder, {
       text: "loading configuration..."
-    }))), config && !error && /*#__PURE__*/(0,jsx_runtime.jsxs)(react_router/* Switch */.rs, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(react_router/* Route */.AW, {
+    }))), config && !error && (0,jsx_runtime.jsxs)(react_router.rs, {
+      children: [(0,jsx_runtime.jsx)(react_router.AW, {
         exact: true,
         path: "/alerting/notifications",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(ReceiversAndTemplatesView, {
+        children: (0,jsx_runtime.jsx)(ReceiversAndTemplatesView, {
           config: config,
           alertManagerName: alertManagerSourceName
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(react_router/* Route */.AW, {
+      }), (0,jsx_runtime.jsx)(react_router.AW, {
         exact: true,
         path: "/alerting/notifications/templates/new",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(NewTemplateView, {
+        children: (0,jsx_runtime.jsx)(NewTemplateView, {
           config: config,
           alertManagerSourceName: alertManagerSourceName
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(react_router/* Route */.AW, {
+      }), (0,jsx_runtime.jsx)(react_router.AW, {
         exact: true,
         path: "/alerting/notifications/templates/:name/edit",
         children: _ref => {
           let {
             match
           } = _ref;
-          return (match === null || match === void 0 ? void 0 : match.params.name) && /*#__PURE__*/(0,jsx_runtime.jsx)(EditTemplateView, {
+          return (match === null || match === void 0 ? void 0 : match.params.name) && (0,jsx_runtime.jsx)(EditTemplateView, {
             alertManagerSourceName: alertManagerSourceName,
             config: config,
             templateName: decodeURIComponent(match === null || match === void 0 ? void 0 : match.params.name)
           });
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(react_router/* Route */.AW, {
+      }), (0,jsx_runtime.jsx)(react_router.AW, {
         exact: true,
         path: "/alerting/notifications/receivers/new",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(NewReceiverView, {
+        children: (0,jsx_runtime.jsx)(NewReceiverView, {
           config: config,
           alertManagerSourceName: alertManagerSourceName
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(react_router/* Route */.AW, {
+      }), (0,jsx_runtime.jsx)(react_router.AW, {
         exact: true,
         path: "/alerting/notifications/receivers/:name/edit",
         children: _ref2 => {
           let {
             match
           } = _ref2;
-          return (match === null || match === void 0 ? void 0 : match.params.name) && /*#__PURE__*/(0,jsx_runtime.jsx)(EditReceiverView, {
+          return (match === null || match === void 0 ? void 0 : match.params.name) && (0,jsx_runtime.jsx)(EditReceiverView, {
             alertManagerSourceName: alertManagerSourceName,
             config: config,
             receiverName: decodeURIComponent(match === null || match === void 0 ? void 0 : match.params.name)
           });
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(react_router/* Route */.AW, {
+      }), (0,jsx_runtime.jsx)(react_router.AW, {
         exact: true,
         path: "/alerting/notifications/global-config",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(GlobalConfigForm, {
+        children: (0,jsx_runtime.jsx)(GlobalConfigForm, {
           config: config,
           alertManagerSourceName: alertManagerSourceName
         })
@@ -3322,23 +3260,23 @@ const Receivers = () => {
   });
 };
 
-/* harmony default export */ const unified_Receivers = ((0,src.withErrorBoundary)(Receivers, {
+ const unified_Receivers = ((0,src.withErrorBoundary)(Receivers, {
   style: 'page'
 }));
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/AlertingPageWrapper.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/AlertingPageWrapper.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "J": () => (/* binding */ AlertingPageWrapper)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
-/* harmony import */ var app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/core/components/Page/Page.tsx");
-/* harmony import */ var app_core_selectors_navModel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/selectors/navModel.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "J": () => ( AlertingPageWrapper)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
+ var app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/core/components/Page/Page.tsx");
+ var app_core_selectors_navModel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/selectors/navModel.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 
 
 
@@ -3350,27 +3288,27 @@ const AlertingPageWrapper = _ref => {
     pageId,
     isLoading
   } = _ref;
-  const navModel = (0,app_core_selectors_navModel__WEBPACK_IMPORTED_MODULE_4__/* .getNavModel */ .h)((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(state => state.navIndex), pageId);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
+  const navModel = (0,app_core_selectors_navModel__WEBPACK_IMPORTED_MODULE_4__ .h)((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(state => state.navIndex), pageId);
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_2__ .Z, {
     navModel: navModel,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_2__/* ["default"].Contents */ .Z.Contents, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(app_core_components_Page_Page__WEBPACK_IMPORTED_MODULE_2__ .Z.Contents, {
       isLoading: isLoading,
       children: children
     })
   });
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/Authorize.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/Authorize.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "q": () => (/* binding */ Authorize)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/core/services/context_srv.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "q": () => ( Authorize)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/core/services/context_srv.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 
 
 
@@ -3382,8 +3320,8 @@ const Authorize = _ref => {
     fallback = true
   } = _ref;
 
-  if (actions.some(action => app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_1__/* .contextSrv.hasAccess */ .Vt.hasAccess(action, fallback))) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+  if (actions.some(action => app_core_services_context_srv__WEBPACK_IMPORTED_MODULE_1__ .Vt.hasAccess(action, fallback))) {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
       children: children
     });
   } else {
@@ -3391,19 +3329,19 @@ const Authorize = _ref => {
   }
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/NoAlertManagerWarning.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/NoAlertManagerWarning.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "I": () => (/* binding */ NoAlertManagerWarning)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var _hooks_useAlertManagerSourceName__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useAlertManagerSourceName.ts");
-/* harmony import */ var _AlertManagerPicker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/components/AlertManagerPicker.tsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "I": () => ( NoAlertManagerWarning)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var _hooks_useAlertManagerSourceName__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/alerting/unified/hooks/useAlertManagerSourceName.ts");
+ var _AlertManagerPicker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/components/AlertManagerPicker.tsx");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _Alert, _Alert2, _OtherAlertManagersAv, _NoAlertManagersAvail;
 
 
@@ -3414,13 +3352,13 @@ var _Alert, _Alert2, _OtherAlertManagersAv, _NoAlertManagersAvail;
 
 
 
-const NoAlertManagersAvailable = () => _Alert || (_Alert = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Alert, {
+const NoAlertManagersAvailable = () => _Alert || (_Alert = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Alert, {
   title: "No Alertmanager found",
   severity: "warning",
   children: "We could not find any external Alertmanagers and you may not have access to the built-in Grafana Alertmanager."
 }));
 
-const OtherAlertManagersAvailable = () => _Alert2 || (_Alert2 = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Alert, {
+const OtherAlertManagersAvailable = () => _Alert2 || (_Alert2 = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Alert, {
   title: "Selected Alertmanager not found. Select a different Alertmanager.",
   severity: "warning",
   children: "Selected Alertmanager no longer exists or you may not have permission to access it."
@@ -3430,44 +3368,36 @@ const NoAlertManagerWarning = _ref => {
   let {
     availableAlertManagers
   } = _ref;
-  const [_, setAlertManagerSourceName] = (0,_hooks_useAlertManagerSourceName__WEBPACK_IMPORTED_MODULE_2__/* .useAlertManagerSourceName */ .k)(availableAlertManagers);
+  const [_, setAlertManagerSourceName] = (0,_hooks_useAlertManagerSourceName__WEBPACK_IMPORTED_MODULE_2__ .k)(availableAlertManagers);
   const hasOtherAMs = availableAlertManagers.length > 0;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-    children: hasOtherAMs ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_AlertManagerPicker__WEBPACK_IMPORTED_MODULE_3__/* .AlertManagerPicker */ .P, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+    children: hasOtherAMs ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_AlertManagerPicker__WEBPACK_IMPORTED_MODULE_3__ .P, {
         onChange: setAlertManagerSourceName,
         dataSources: availableAlertManagers
-      }), _OtherAlertManagersAv || (_OtherAlertManagersAv = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(OtherAlertManagersAvailable, {}))]
-    }) : _NoAlertManagersAvail || (_NoAlertManagersAvail = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(NoAlertManagersAvailable, {}))
+      }), _OtherAlertManagersAv || (_OtherAlertManagersAv = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(OtherAlertManagersAvailable, {}))]
+    }) : _NoAlertManagersAvail || (_NoAlertManagersAvail = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(NoAlertManagersAvailable, {}))
   });
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/rule-editor/AnnotationsField.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/rule-editor/AnnotationsField.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ rule_editor_AnnotationsField)
+  "Z": () => ( rule_editor_AnnotationsField)
 });
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-hook-form-virtual-92b6119fd4/0/cache/react-hook-form-npm-7.5.3-f9cc466c62-fbfaa3b664.zip/node_modules/react-hook-form/dist/index.esm.js
 var index_esm = __webpack_require__("./.yarn/__virtual__/react-hook-form-virtual-92b6119fd4/0/cache/react-hook-form-npm-7.5.3-f9cc466c62-fbfaa3b664.zip/node_modules/react-hook-form/dist/index.esm.js");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/utils/constants.ts
 var constants = __webpack_require__("./public/app/features/alerting/unified/utils/constants.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/unified/components/rule-editor/SelectWIthAdd.tsx
 var SelectWIthAdd = __webpack_require__("./public/app/features/alerting/unified/components/rule-editor/SelectWIthAdd.tsx");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/AnnotationKeyInput.tsx
+;
 const _excluded = ["value", "existingKeys", "aria-label"];
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -3484,19 +3414,19 @@ const AnnotationKeyInput = _ref => {
   } = _ref,
       rest = _objectWithoutPropertiesLoose(_ref, _excluded);
 
-  const annotationOptions = (0,react.useMemo)(() => Object.values(constants/* Annotation */.q6).filter(key => !existingKeys.includes(key)) // remove keys already taken in other annotations
+  const annotationOptions = (0,react.useMemo)(() => Object.values(constants.q6).filter(key => !existingKeys.includes(key)) 
   .map(key => ({
     value: key,
-    label: constants/* annotationLabels */.vY[key]
+    label: constants.vY[key]
   })), [existingKeys]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(SelectWIthAdd/* SelectWithAdd */.P, Object.assign({
+  return (0,jsx_runtime.jsx)(SelectWIthAdd.P, Object.assign({
     "aria-label": ariaLabel,
     value: value,
     options: annotationOptions,
-    custom: !!value && !Object.values(constants/* Annotation */.q6).includes(value)
+    custom: !!value && !Object.values(constants.q6).includes(value)
   }, rest));
 };
-;// CONCATENATED MODULE: ./public/app/features/alerting/unified/components/rule-editor/AnnotationsField.tsx
+;
 const AnnotationsField_excluded = ["ref"];
 
 var _Label;
@@ -3521,7 +3451,7 @@ const AnnotationsField = () => {
     formState: {
       errors
     }
-  } = (0,index_esm/* useFormContext */.Gc)();
+  } = (0,index_esm.Gc)();
   const annotations = watch('annotations');
   const existingKeys = (0,react.useCallback)(index => annotations.filter((_, idx) => idx !== index).map(_ref => {
     let {
@@ -3529,10 +3459,10 @@ const AnnotationsField = () => {
     } = _ref;
     return key;
   }), [annotations]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [_Label || (_Label = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Label, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [_Label || (_Label = (0,jsx_runtime.jsx)(src.Label, {
       children: "Summary and annotations"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(src.FieldArray, {
+    })), (0,jsx_runtime.jsx)(src.FieldArray, {
       name: 'annotations',
       control: control,
       children: _ref2 => {
@@ -3541,27 +3471,27 @@ const AnnotationsField = () => {
           append,
           remove
         } = _ref2;
-        return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        return (0,jsx_runtime.jsxs)("div", {
           className: styles.flexColumn,
           children: [fields.map((field, index) => {
             var _annotations$index, _annotations$index$ke, _errors$annotations, _errors$annotations$i, _errors$annotations$i2, _errors$annotations2, _errors$annotations2$, _errors$annotations2$2, _annotations$index2, _errors$annotations3, _errors$annotations3$, _errors$annotations3$2, _errors$annotations4, _errors$annotations4$, _errors$annotations4$2;
 
             const isUrl = (_annotations$index = annotations[index]) === null || _annotations$index === void 0 ? void 0 : (_annotations$index$ke = _annotations$index.key) === null || _annotations$index$ke === void 0 ? void 0 : _annotations$index$ke.toLocaleLowerCase().endsWith('url');
             const ValueInputComponent = isUrl ? src.Input : src.TextArea;
-            return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+            return (0,jsx_runtime.jsxs)("div", {
               className: styles.flexRow,
-              children: [/*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+              children: [(0,jsx_runtime.jsx)(src.Field, {
                 className: styles.field,
                 invalid: !!((_errors$annotations = errors.annotations) !== null && _errors$annotations !== void 0 && (_errors$annotations$i = _errors$annotations[index]) !== null && _errors$annotations$i !== void 0 && (_errors$annotations$i2 = _errors$annotations$i.key) !== null && _errors$annotations$i2 !== void 0 && _errors$annotations$i2.message),
                 error: (_errors$annotations2 = errors.annotations) === null || _errors$annotations2 === void 0 ? void 0 : (_errors$annotations2$ = _errors$annotations2[index]) === null || _errors$annotations2$ === void 0 ? void 0 : (_errors$annotations2$2 = _errors$annotations2$.key) === null || _errors$annotations2$2 === void 0 ? void 0 : _errors$annotations2$2.message,
                 "data-testid": `annotation-key-${index}`,
-                children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.InputControl, {
+                children: (0,jsx_runtime.jsx)(src.InputControl, {
                   name: `annotations[${index}].key`,
                   render: _ref3 => {
                     let {} = _ref3,
                         field = AnnotationsField_objectWithoutPropertiesLoose(_ref3.field, AnnotationsField_excluded);
 
-                    return /*#__PURE__*/(0,jsx_runtime.jsx)(AnnotationKeyInput, Object.assign({}, field, {
+                    return (0,jsx_runtime.jsx)(AnnotationKeyInput, Object.assign({}, field, {
                       "aria-label": `Annotation detail ${index + 1}`,
                       existingKeys: existingKeys(index),
                       width: 18
@@ -3575,11 +3505,11 @@ const AnnotationsField = () => {
                     }
                   }
                 })
-              }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Field, {
+              }), (0,jsx_runtime.jsx)(src.Field, {
                 className: (0,emotion_css_esm.cx)(styles.flexRowItemMargin, styles.field),
                 invalid: !!((_errors$annotations3 = errors.annotations) !== null && _errors$annotations3 !== void 0 && (_errors$annotations3$ = _errors$annotations3[index]) !== null && _errors$annotations3$ !== void 0 && (_errors$annotations3$2 = _errors$annotations3$.value) !== null && _errors$annotations3$2 !== void 0 && _errors$annotations3$2.message),
                 error: (_errors$annotations4 = errors.annotations) === null || _errors$annotations4 === void 0 ? void 0 : (_errors$annotations4$ = _errors$annotations4[index]) === null || _errors$annotations4$ === void 0 ? void 0 : (_errors$annotations4$2 = _errors$annotations4$.value) === null || _errors$annotations4$2 === void 0 ? void 0 : _errors$annotations4$2.message,
-                children: /*#__PURE__*/(0,jsx_runtime.jsx)(ValueInputComponent, Object.assign({
+                children: (0,jsx_runtime.jsx)(ValueInputComponent, Object.assign({
                   "data-testid": `annotation-value-${index}`,
                   className: (0,emotion_css_esm.cx)(styles.annotationValueInput, {
                     [styles.textarea]: !isUrl
@@ -3588,7 +3518,7 @@ const AnnotationsField = () => {
                   placeholder: isUrl ? 'https://' : `Text`,
                   defaultValue: field.value
                 }))
-              }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+              }), (0,jsx_runtime.jsx)(src.Button, {
                 type: "button",
                 className: styles.flexRowItemMargin,
                 "aria-label": "delete annotation",
@@ -3597,7 +3527,7 @@ const AnnotationsField = () => {
                 onClick: () => remove(index)
               })]
             }, field.id);
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+          }), (0,jsx_runtime.jsx)(src.Button, {
             className: styles.addAnnotationsButton,
             icon: "plus-circle",
             type: "button",
@@ -3645,21 +3575,21 @@ const getStyles = theme => ({
   `
 });
 
-/* harmony default export */ const rule_editor_AnnotationsField = (AnnotationsField);
+ const rule_editor_AnnotationsField = (AnnotationsField);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/rule-editor/LabelsField.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/rule-editor/LabelsField.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/__virtual__/react-hook-form-virtual-92b6119fd4/0/cache/react-hook-form-npm-7.5.3-f9cc466c62-fbfaa3b664.zip/node_modules/react-hook-form/dist/index.esm.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var react_hook_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/__virtual__/react-hook-form-virtual-92b6119fd4/0/cache/react-hook-form-npm-7.5.3-f9cc466c62-fbfaa3b664.zip/node_modules/react-hook-form/dist/index.esm.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _Label, _InlineLabel;
 
 
@@ -3682,13 +3612,13 @@ const LabelsField = _ref => {
     formState: {
       errors
     }
-  } = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_2__/* .useFormContext */ .Gc)();
+  } = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_2__ .Gc)();
   const labels = watch('labels');
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: (0,_emotion_css__WEBPACK_IMPORTED_MODULE_0__.cx)(className, styles.wrapper),
-    children: [_Label || (_Label = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Label, {
+    children: [_Label || (_Label = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Label, {
       children: "Custom Labels"
-    })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.FieldArray, {
+    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.FieldArray, {
       control: control,
       name: "labels",
       children: _ref2 => {
@@ -3697,25 +3627,25 @@ const LabelsField = _ref => {
           append,
           remove
         } = _ref2;
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             className: styles.flexRow,
-            children: [_InlineLabel || (_InlineLabel = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineLabel, {
+            children: [_InlineLabel || (_InlineLabel = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineLabel, {
               width: 18,
               children: "Labels"
-            })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
               className: styles.flexColumn,
               children: [fields.map((field, index) => {
                 var _errors$labels, _errors$labels$index, _errors$labels$index$, _errors$labels2, _errors$labels2$index, _errors$labels2$index2, _labels$index, _errors$labels3, _errors$labels3$index, _errors$labels3$index2, _errors$labels4, _errors$labels4$index, _errors$labels4$index2, _labels$index2;
 
-                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                  children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                     className: (0,_emotion_css__WEBPACK_IMPORTED_MODULE_0__.cx)(styles.flexRow, styles.centerAlignRow),
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Field, {
+                    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Field, {
                       className: styles.labelInput,
                       invalid: !!((_errors$labels = errors.labels) !== null && _errors$labels !== void 0 && (_errors$labels$index = _errors$labels[index]) !== null && _errors$labels$index !== void 0 && (_errors$labels$index$ = _errors$labels$index.key) !== null && _errors$labels$index$ !== void 0 && _errors$labels$index$.message),
                       error: (_errors$labels2 = errors.labels) === null || _errors$labels2 === void 0 ? void 0 : (_errors$labels2$index = _errors$labels2[index]) === null || _errors$labels2$index === void 0 ? void 0 : (_errors$labels2$index2 = _errors$labels2$index.key) === null || _errors$labels2$index2 === void 0 ? void 0 : _errors$labels2$index2.message,
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Input, Object.assign({}, register(`labels[${index}].key`, {
+                      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Input, Object.assign({}, register(`labels[${index}].key`, {
                         required: {
                           value: !!((_labels$index = labels[index]) !== null && _labels$index !== void 0 && _labels$index.value),
                           message: 'Required.'
@@ -3725,14 +3655,14 @@ const LabelsField = _ref => {
                         "data-testid": `label-key-${index}`,
                         defaultValue: field.key
                       }))
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineLabel, {
+                    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineLabel, {
                       className: styles.equalSign,
                       children: "="
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Field, {
+                    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Field, {
                       className: styles.labelInput,
                       invalid: !!((_errors$labels3 = errors.labels) !== null && _errors$labels3 !== void 0 && (_errors$labels3$index = _errors$labels3[index]) !== null && _errors$labels3$index !== void 0 && (_errors$labels3$index2 = _errors$labels3$index.value) !== null && _errors$labels3$index2 !== void 0 && _errors$labels3$index2.message),
                       error: (_errors$labels4 = errors.labels) === null || _errors$labels4 === void 0 ? void 0 : (_errors$labels4$index = _errors$labels4[index]) === null || _errors$labels4$index === void 0 ? void 0 : (_errors$labels4$index2 = _errors$labels4$index.value) === null || _errors$labels4$index2 === void 0 ? void 0 : _errors$labels4$index2.message,
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Input, Object.assign({}, register(`labels[${index}].value`, {
+                      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Input, Object.assign({}, register(`labels[${index}].value`, {
                         required: {
                           value: !!((_labels$index2 = labels[index]) !== null && _labels$index2 !== void 0 && _labels$index2.key),
                           message: 'Required.'
@@ -3742,7 +3672,7 @@ const LabelsField = _ref => {
                         "data-testid": `label-value-${index}`,
                         defaultValue: field.value
                       }))
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Button, {
+                    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Button, {
                       className: styles.deleteLabelButton,
                       "aria-label": "delete label",
                       icon: "trash-alt",
@@ -3753,7 +3683,7 @@ const LabelsField = _ref => {
                     })]
                   })
                 }, field.id);
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Button, {
+              }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Button, {
                 className: styles.addLabelButton,
                 icon: "plus-circle",
                 type: "button",
@@ -3816,19 +3746,19 @@ const getStyles = theme => {
   };
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LabelsField);
+ const __WEBPACK_DEFAULT_EXPORT__ = (LabelsField);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/rule-editor/SelectWIthAdd.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/rule-editor/SelectWIthAdd.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "P": () => (/* binding */ SelectWithAdd)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "P": () => ( SelectWithAdd)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 
 
 
@@ -3859,7 +3789,7 @@ const SelectWithAdd = _ref => {
   }], [options, addLabel]);
 
   if (isCustom) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Input, {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Input, {
       "aria-label": ariaLabel,
       width: width,
       autoFocus: !custom,
@@ -3870,7 +3800,7 @@ const SelectWithAdd = _ref => {
       onChange: e => onChange(e.target.value)
     });
   } else {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Select, {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Select, {
       "aria-label": ariaLabel,
       width: width,
       options: _options,
@@ -3897,17 +3827,17 @@ const SelectWithAdd = _ref => {
   }
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/components/rules/ActionIcon.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/components/rules/ActionIcon.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "A": () => (/* binding */ ActionIcon)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "A": () => ( ActionIcon)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 const _excluded = ["tooltip", "icon", "to", "target", "onClick", "className", "tooltipPlacement"];
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -3928,10 +3858,10 @@ const ActionIcon = _ref => {
       rest = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   const ariaLabel = typeof tooltip === 'string' ? tooltip : undefined;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Tooltip, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Tooltip, {
     content: tooltip,
     placement: tooltipPlacement,
-    children: to ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.LinkButton, Object.assign({
+    children: to ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.LinkButton, Object.assign({
       variant: "secondary",
       fill: "text",
       icon: icon,
@@ -3940,7 +3870,7 @@ const ActionIcon = _ref => {
       target: target
     }, rest, {
       "aria-label": ariaLabel
-    })) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Button, Object.assign({
+    })) : (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.Button, Object.assign({
       className: className,
       variant: "secondary",
       fill: "text",
@@ -3954,19 +3884,19 @@ const ActionIcon = _ref => {
   });
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/hooks/useAlertManagerSourceName.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/hooks/useAlertManagerSourceName.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "k": () => (/* binding */ useAlertManagerSourceName)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var app_core_hooks_useQueryParams__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/core/hooks/useQueryParams.ts");
-/* harmony import */ var app_core_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/core/store.ts");
-/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/utils/constants.ts");
-/* harmony import */ var _utils_datasource__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/alerting/unified/utils/datasource.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "k": () => ( useAlertManagerSourceName)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var app_core_hooks_useQueryParams__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/core/hooks/useQueryParams.ts");
+ var app_core_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/core/store.ts");
+ var _utils_constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/alerting/unified/utils/constants.ts");
+ var _utils_datasource__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/alerting/unified/utils/datasource.ts");
 
 
 
@@ -3979,82 +3909,77 @@ function useIsAlertManagerAvailable(availableAlertManagers) {
     return availableAlertManagersNames.includes(alertManagerName);
   }, [availableAlertManagers]);
 }
-/* This will return am name either from query params or from local storage or a default (grafana).
- * Due to RBAC permissions Grafana Managed Alert manager or external alert managers may not be available
- * In the worst case neihter GMA nor external alert manager is available
- */
 
 
 function useAlertManagerSourceName(availableAlertManagers) {
-  const [queryParams, updateQueryParams] = (0,app_core_hooks_useQueryParams__WEBPACK_IMPORTED_MODULE_1__/* .useQueryParams */ .K)();
+  const [queryParams, updateQueryParams] = (0,app_core_hooks_useQueryParams__WEBPACK_IMPORTED_MODULE_1__ .K)();
   const isAlertManagerAvailable = useIsAlertManagerAvailable(availableAlertManagers);
   const update = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(alertManagerSourceName => {
     if (!isAlertManagerAvailable(alertManagerSourceName)) {
       return;
     }
 
-    if (alertManagerSourceName === _utils_datasource__WEBPACK_IMPORTED_MODULE_4__/* .GRAFANA_RULES_SOURCE_NAME */ .GC) {
-      app_core_store__WEBPACK_IMPORTED_MODULE_2__/* ["default"]["delete"] */ .Z["delete"](_utils_constants__WEBPACK_IMPORTED_MODULE_3__/* .ALERTMANAGER_NAME_LOCAL_STORAGE_KEY */ .de);
+    if (alertManagerSourceName === _utils_datasource__WEBPACK_IMPORTED_MODULE_4__ .GC) {
+      app_core_store__WEBPACK_IMPORTED_MODULE_2__ .Z["delete"](_utils_constants__WEBPACK_IMPORTED_MODULE_3__ .de);
       updateQueryParams({
-        [_utils_constants__WEBPACK_IMPORTED_MODULE_3__/* .ALERTMANAGER_NAME_QUERY_KEY */ .c4]: null
+        [_utils_constants__WEBPACK_IMPORTED_MODULE_3__ .c4]: null
       });
     } else {
-      app_core_store__WEBPACK_IMPORTED_MODULE_2__/* ["default"].set */ .Z.set(_utils_constants__WEBPACK_IMPORTED_MODULE_3__/* .ALERTMANAGER_NAME_LOCAL_STORAGE_KEY */ .de, alertManagerSourceName);
+      app_core_store__WEBPACK_IMPORTED_MODULE_2__ .Z.set(_utils_constants__WEBPACK_IMPORTED_MODULE_3__ .de, alertManagerSourceName);
       updateQueryParams({
-        [_utils_constants__WEBPACK_IMPORTED_MODULE_3__/* .ALERTMANAGER_NAME_QUERY_KEY */ .c4]: alertManagerSourceName
+        [_utils_constants__WEBPACK_IMPORTED_MODULE_3__ .c4]: alertManagerSourceName
       });
     }
   }, [updateQueryParams, isAlertManagerAvailable]);
-  const querySource = queryParams[_utils_constants__WEBPACK_IMPORTED_MODULE_3__/* .ALERTMANAGER_NAME_QUERY_KEY */ .c4];
+  const querySource = queryParams[_utils_constants__WEBPACK_IMPORTED_MODULE_3__ .c4];
 
   if (querySource && typeof querySource === 'string') {
     if (isAlertManagerAvailable(querySource)) {
       return [querySource, update];
     } else {
-      // non existing alertmanager
       return [undefined, update];
     }
   }
 
-  const storeSource = app_core_store__WEBPACK_IMPORTED_MODULE_2__/* ["default"].get */ .Z.get(_utils_constants__WEBPACK_IMPORTED_MODULE_3__/* .ALERTMANAGER_NAME_LOCAL_STORAGE_KEY */ .de);
+  const storeSource = app_core_store__WEBPACK_IMPORTED_MODULE_2__ .Z.get(_utils_constants__WEBPACK_IMPORTED_MODULE_3__ .de);
 
   if (storeSource && typeof storeSource === 'string' && isAlertManagerAvailable(storeSource)) {
     update(storeSource);
     return [storeSource, update];
   }
 
-  if (isAlertManagerAvailable(_utils_datasource__WEBPACK_IMPORTED_MODULE_4__/* .GRAFANA_RULES_SOURCE_NAME */ .GC)) {
-    return [_utils_datasource__WEBPACK_IMPORTED_MODULE_4__/* .GRAFANA_RULES_SOURCE_NAME */ .GC, update];
+  if (isAlertManagerAvailable(_utils_datasource__WEBPACK_IMPORTED_MODULE_4__ .GC)) {
+    return [_utils_datasource__WEBPACK_IMPORTED_MODULE_4__ .GC, update];
   }
 
   return [undefined, update];
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/hooks/useAlertManagerSources.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/hooks/useAlertManagerSources.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "k": () => (/* binding */ useAlertManagersByPermission)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _utils_datasource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/alerting/unified/utils/datasource.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "k": () => ( useAlertManagersByPermission)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _utils_datasource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/alerting/unified/utils/datasource.ts");
 
 
 function useAlertManagersByPermission(accessType) {
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => (0,_utils_datasource__WEBPACK_IMPORTED_MODULE_1__/* .getAlertManagerDataSourcesByPermission */ .LE)(accessType), [accessType]);
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => (0,_utils_datasource__WEBPACK_IMPORTED_MODULE_1__ .LE)(accessType), [accessType]);
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/alerting/unified/styles/table.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/unified/styles/table.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "D": () => (/* binding */ getAlertTableStyles)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "D": () => ( getAlertTableStyles)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
 
 const getAlertTableStyles = theme => ({
   table: _emotion_css__WEBPACK_IMPORTED_MODULE_0__.css`
@@ -4092,6 +4017,6 @@ const getAlertTableStyles = theme => ({
   `
 });
 
-/***/ })
+ })
 
 }]);

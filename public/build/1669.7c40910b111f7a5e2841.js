@@ -1,7 +1,7 @@
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[1669],{
 
-/***/ "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/mode/sqlserver.js":
-/***/ (() => {
+ "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/mode/sqlserver.js":
+ (() => {
 
 ace.define("ace/mode/doc_comment_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(acequire, exports, module) {
 "use strict";
@@ -13,7 +13,7 @@ var DocCommentHighlightRules = function() {
     this.$rules = {
         "start" : [ {
             token : "comment.doc.tag",
-            regex : "@[\\w\\d_]+" // TODO: fix email addresses
+            regex : "@[\\w\\d_]+" 
         }, 
         DocCommentHighlightRules.getTagRule(),
         {
@@ -34,7 +34,7 @@ DocCommentHighlightRules.getTagRule = function(start) {
 
 DocCommentHighlightRules.getStartRule = function(start) {
     return {
-        token : "comment.doc", // doc comment
+        token : "comment.doc", 
         regex : "\\/\\*(?=\\*)",
         next  : start
     };
@@ -42,7 +42,7 @@ DocCommentHighlightRules.getStartRule = function(start) {
 
 DocCommentHighlightRules.getEndRule = function (start) {
     return {
-        token : "comment.doc", // closing comment
+        token : "comment.doc", 
         regex : "\\*\\/",
         next  : start
     };
@@ -62,10 +62,10 @@ var TextHighlightRules = acequire("./text_highlight_rules").TextHighlightRules;
 
 var SqlServerHighlightRules = function() {
     var logicalOperators = "ALL|AND|ANY|BETWEEN|EXISTS|IN|LIKE|NOT|OR|SOME";
-    logicalOperators += "|NULL|IS|APPLY|INNER|OUTER|LEFT|RIGHT|JOIN|CROSS"; //SSMS colors these gray too
-    
+    logicalOperators += "|NULL|IS|APPLY|INNER|OUTER|LEFT|RIGHT|JOIN|CROSS"; 
 
-    var builtinFunctions = (
+
+        var builtinFunctions = (
         "OPENDATASOURCE|OPENQUERY|OPENROWSET|OPENXML|" +
         "AVG|CHECKSUM_AGG|COUNT|COUNT_BIG|GROUPING|GROUPING_ID|MAX|MIN|STDEV|STDEVP|SUM|VAR|VARP|" +
         "DENSE_RANK|NTILE|RANK|ROW_NUMBER" +
@@ -95,9 +95,9 @@ var SqlServerHighlightRules = function() {
         return logicalOperators.split('|').indexOf(value) === -1 && builtinFunctions.split('|').indexOf(value) === -1 && dataTypes.split('|').indexOf(value) === -1;
     });
     keywords = keywords.sort().join('|');
-    
-    
-    var keywordMapper = this.createKeywordMapper({
+
+
+            var keywordMapper = this.createKeywordMapper({
         "constant.language": logicalOperators,
         "storage.type": dataTypes,
         "support.function": builtinFunctions,
@@ -109,9 +109,9 @@ var SqlServerHighlightRules = function() {
     for (var i = 0; i < isolationLevels.length; i++) {
         setStatements.push('SET TRANSACTION ISOLATION LEVEL ' + isolationLevels[i]);
     }
-    
-    
-    this.$rules = {
+
+
+            this.$rules = {
         start: [{
             token: "string.start",
             regex: "'",
@@ -134,11 +134,11 @@ var SqlServerHighlightRules = function() {
             start: "/\\*",
             end: "\\*/"
         }, {
-            token: "constant.numeric", // float
+            token: "constant.numeric", 
             regex: "[+-]?\\d+(?:(?:\\.\\d*)?(?:[eE][+-]?\\d+)?)?\\b"
         }, {
             token: keywordMapper,
-            regex: "@{0,2}[a-zA-Z_$][a-zA-Z0-9_$]*\\b(?!])" //up to 2 @symbols for some built in functions
+            regex: "@{0,2}[a-zA-Z_$][a-zA-Z0-9_$]*\\b(?!])" 
         }, {
             token: "constant.class",
             regex: "@@?[a-zA-Z_$][a-zA-Z0-9_$]*\\b"
@@ -174,8 +174,8 @@ var SqlServerHighlightRules = function() {
             regex: setStatements[i]
         });
     }
-    
-    this.embedRules(DocCommentHighlightRules, "doc-", [DocCommentHighlightRules.getEndRule("start")]);
+
+        this.embedRules(DocCommentHighlightRules, "doc-", [DocCommentHighlightRules.getEndRule("start")]);
     this.normalizeRules();
     var completions = [];
     var addCompletions = function(arr, meta) {
@@ -194,8 +194,8 @@ var SqlServerHighlightRules = function() {
     addCompletions(dataTypes.split('|'), 'type');
     addCompletions(setStatements, 'statement');
     addCompletions(keywords.split('|'), 'keyword');
-    
-    this.completions = completions;
+
+        this.completions = completions;
 };
 
 oop.inherits(SqlServerHighlightRules, TextHighlightRules);
@@ -223,8 +223,8 @@ var FoldMode = exports.FoldMode = function(commentRegex) {
 oop.inherits(FoldMode, BaseFoldMode);
 
 (function() {
-    
-    this.foldingStartMarker = /([\{\[\(])[^\}\]\)]*$|^\s*(\/\*)/;
+
+        this.foldingStartMarker = /([\{\[\(])[^\}\]\)]*$|^\s*(\/\*)/;
     this.foldingStopMarker = /^[^\[\{\(]*([\}\]\)])|^[\s\*]*(\*\/)/;
     this.singleLineBlockCommentRe= /^\s*(\/\*).*\*\/\s*$/;
     this.tripleStarBlockCommentRe = /^\s*(\/\*\*\*).*\*\/\s*$/;
@@ -232,43 +232,43 @@ oop.inherits(FoldMode, BaseFoldMode);
     this._getFoldWidgetBase = this.getFoldWidget;
     this.getFoldWidget = function(session, foldStyle, row) {
         var line = session.getLine(row);
-    
-        if (this.singleLineBlockCommentRe.test(line)) {
+
+            if (this.singleLineBlockCommentRe.test(line)) {
             if (!this.startRegionRe.test(line) && !this.tripleStarBlockCommentRe.test(line))
                 return "";
         }
-    
-        var fw = this._getFoldWidgetBase(session, foldStyle, row);
-    
-        if (!fw && this.startRegionRe.test(line))
-            return "start"; // lineCommentRegionStart
-    
-        return fw;
+
+            var fw = this._getFoldWidgetBase(session, foldStyle, row);
+
+            if (!fw && this.startRegionRe.test(line))
+            return "start"; 
+
+            return fw;
     };
 
     this.getFoldWidgetRange = function(session, foldStyle, row, forceMultiline) {
         var line = session.getLine(row);
-        
-        if (this.startRegionRe.test(line))
+
+                if (this.startRegionRe.test(line))
             return this.getCommentRegionBlock(session, line, row);
-        
-        var match = line.match(this.foldingStartMarker);
+
+                var match = line.match(this.foldingStartMarker);
         if (match) {
             var i = match.index;
 
             if (match[1])
                 return this.openingBracketBlock(session, match[1], row, i);
-                
-            var range = session.getCommentFoldRange(row, i + match[0].length, 1);
-            
-            if (range && !range.isMultiLine()) {
+
+                            var range = session.getCommentFoldRange(row, i + match[0].length, 1);
+
+                        if (range && !range.isMultiLine()) {
                 if (forceMultiline) {
                     range = this.getSectionRange(session, row);
                 } else if (foldStyle != "all")
                     range = null;
             }
-            
-            return range;
+
+                        return range;
         }
 
         if (foldStyle === "markbegin")
@@ -284,8 +284,8 @@ oop.inherits(FoldMode, BaseFoldMode);
             return session.getCommentFoldRange(row, i, -1);
         }
     };
-    
-    this.getSectionRange = function(session, row) {
+
+        this.getSectionRange = function(session, row) {
         var line = session.getLine(row);
         var startIndent = line.search(/\S/);
         var startRow = row;
@@ -301,8 +301,8 @@ oop.inherits(FoldMode, BaseFoldMode);
             if  (startIndent > indent)
                 break;
             var subRange = this.getFoldWidgetRange(session, "all", row);
-            
-            if (subRange) {
+
+                        if (subRange) {
                 if (subRange.start.row <= startRow) {
                     break;
                 } else if (subRange.isMultiLine()) {
@@ -313,15 +313,15 @@ oop.inherits(FoldMode, BaseFoldMode);
             }
             endRow = row;
         }
-        
-        return new Range(startRow, startColumn, endRow, session.getLine(endRow).length);
+
+                return new Range(startRow, startColumn, endRow, session.getLine(endRow).length);
     };
     this.getCommentRegionBlock = function(session, line, row) {
         var startColumn = line.search(/\s*$/);
         var maxRow = session.getLength();
         var startRow = row;
-        
-        var re = /^\s*(?:\/\*|\/\/|--)#?(end)?region\b/;
+
+                var re = /^\s*(?:\/\*|\/\/|--)#?(end)?region\b/;
         var depth = 1;
         while (++row < maxRow) {
             line = session.getLine(row);
@@ -355,32 +355,32 @@ var FoldMode = exports.FoldMode = function() {};
 oop.inherits(FoldMode, BaseFoldMode);
 
 (function() {
-    
-    this.foldingStartMarker = /(\bCASE\b|\bBEGIN\b)|^\s*(\/\*)/i;
+
+        this.foldingStartMarker = /(\bCASE\b|\bBEGIN\b)|^\s*(\/\*)/i;
     this.startRegionRe = /^\s*(\/\*|--)#?region\b/;
-    
-    this.getFoldWidgetRange = function(session, foldStyle, row, forceMultiline) {
+
+        this.getFoldWidgetRange = function(session, foldStyle, row, forceMultiline) {
         var line = session.getLine(row);
-    
-        if (this.startRegionRe.test(line)) return this.getCommentRegionBlock(session, line, row);
-    
-        var match = line.match(this.foldingStartMarker);
+
+            if (this.startRegionRe.test(line)) return this.getCommentRegionBlock(session, line, row);
+
+            var match = line.match(this.foldingStartMarker);
         if (match) {
             var i = match.index;
             if (match[1]) return this.getBeginEndBlock(session, row, i, match[1]);
-    
-            var range = session.getCommentFoldRange(row, i + match[0].length, 1);
+
+                var range = session.getCommentFoldRange(row, i + match[0].length, 1);
             if (range && !range.isMultiLine()) {
                 if (forceMultiline) {
                     range = this.getSectionRange(session, row);
                 }
                 else if (foldStyle != "all") range = null;
             }
-    
-            return range;
+
+                return range;
         }
-    
-        if (foldStyle === "markbegin") return;
+
+            if (foldStyle === "markbegin") return;
         return;
     };
     this.getBeginEndBlock = function(session, row, column, matchSequence) {
@@ -390,8 +390,8 @@ oop.inherits(FoldMode, BaseFoldMode);
         };
         var maxRow = session.getLength();
         var line;
-    
-        var depth = 1;
+
+            var depth = 1;
         var re = /(\bCASE\b|\bBEGIN\b)|(\bEND\b)/i;
         while (++row < maxRow) {
             line = session.getLine(row);
@@ -399,8 +399,8 @@ oop.inherits(FoldMode, BaseFoldMode);
             if (!m) continue;
             if (m[1]) depth++;
             else depth--;
-    
-            if (!depth) break;
+
+                if (!depth) break;
         }
         var endRow = row;
         if (endRow > start.row) {
@@ -433,8 +433,8 @@ oop.inherits(Mode, TextMode);
     this.getCompletions = function(state, session, pos, prefix) {
         return session.$mode.$highlightRules.completions;
     };
-    
-    this.$id = "ace/mode/sql";
+
+        this.$id = "ace/mode/sql";
 }).call(Mode.prototype);
 
 exports.Mode = Mode;
@@ -442,6 +442,6 @@ exports.Mode = Mode;
 });
 
 
-/***/ })
+ })
 
 }]);

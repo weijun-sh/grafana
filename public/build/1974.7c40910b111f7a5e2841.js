@@ -1,32 +1,23 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[1974],{
 
-/***/ "./public/app/features/dashboard/dashgrid/DashboardPanel.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/dashboard/dashgrid/DashboardPanel.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "l": () => (/* binding */ DashboardPanel)
+  "l": () => ( DashboardPanel)
 });
 
-// UNUSED EXPORTS: DashboardPanelUnconnected
 
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js + 20 modules
 var es = __webpack_require__("./.yarn/__virtual__/react-redux-virtual-7ad20a440e/0/cache/react-redux-npm-7.2.6-134f5ed64d-0bf142ce0d.zip/node_modules/react-redux/es/index.js");
-// EXTERNAL MODULE: ./public/app/features/panel/state/actions.ts
 var actions = __webpack_require__("./public/app/features/panel/state/actions.ts");
-// EXTERNAL MODULE: ./public/app/features/panel/state/reducers.ts
 var reducers = __webpack_require__("./public/app/features/panel/state/reducers.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useEffectOnce.js
 var useEffectOnce = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useEffectOnce.js");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/influxdb/components/useUniqueId.ts
 var useUniqueId = __webpack_require__("./public/app/plugins/datasource/influxdb/components/useUniqueId.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/dashboard/dashgrid/LazyLoader.tsx
+;
 
 
 
@@ -39,11 +30,11 @@ function LazyLoader(_ref) {
     onLoad,
     onChange
   } = _ref;
-  const id = (0,useUniqueId/* useUniqueId */.L)();
+  const id = (0,useUniqueId.L)();
   const [loaded, setLoaded] = (0,react.useState)(false);
   const [isInView, setIsInView] = (0,react.useState)(false);
   const wrapperRef = (0,react.useRef)(null);
-  (0,useEffectOnce/* default */.Z)(() => {
+  (0,useEffectOnce.Z)(() => {
     LazyLoader.addCallback(id, entry => {
       if (!loaded && entry.isIntersecting) {
         setLoaded(true);
@@ -68,7 +59,7 @@ function LazyLoader(_ref) {
       }
     };
   });
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     id: id,
     ref: wrapperRef,
     style: {
@@ -91,28 +82,18 @@ LazyLoader.observer = new IntersectionObserver(entries => {
 }, {
   rootMargin: '100px'
 });
-// EXTERNAL MODULE: ./.yarn/cache/classnames-npm-2.3.1-f2ae0a8d3c-14db8889d5.zip/node_modules/classnames/index.js
 var classnames = __webpack_require__("./.yarn/cache/classnames-npm-2.3.1-f2ae0a8d3c-14db8889d5.zip/node_modules/classnames/index.js");
-var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subscription.js
+var classnames_default = __webpack_require__.n(classnames);
 var Subscription = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subscription.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-e2e-selectors/src/index.ts + 3 modules
 var grafana_e2e_selectors_src = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/config.ts
 var config = __webpack_require__("./public/app/core/config.ts");
-// EXTERNAL MODULE: ./public/app/core/constants.ts
 var constants = __webpack_require__("./public/app/core/constants.ts");
-// EXTERNAL MODULE: ./public/app/core/profiler.ts
 var profiler = __webpack_require__("./public/app/core/profiler.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/utils/panel.ts
 var utils_panel = __webpack_require__("./public/app/features/dashboard/utils/panel.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/timeseries/overrides/colorSeriesConfigFactory.ts
+;
 
 const changeSeriesColorConfigFactory = (label, color, fieldConfig) => {
   const {
@@ -170,29 +151,20 @@ const createProperty = color => {
     }
   };
 };
-// EXTERNAL MODULE: ./public/app/types/events.ts
 var events = __webpack_require__("./public/app/types/events.ts");
-// EXTERNAL MODULE: ./public/app/core/services/context_srv.ts
 var context_srv = __webpack_require__("./public/app/core/services/context_srv.ts");
-;// CONCATENATED MODULE: ./public/app/routes/utils.ts
+;
 function isSoloRoute(path) {
   return /(d-solo|dashboard-solo)/.test(path === null || path === void 0 ? void 0 : path.toLowerCase());
 }
-// EXTERNAL MODULE: ./public/app/features/annotations/api.ts
 var api = __webpack_require__("./public/app/features/annotations/api.ts");
-// EXTERNAL MODULE: ./public/app/features/query/state/DashboardQueryRunner/DashboardQueryRunner.ts + 6 modules
 var DashboardQueryRunner = __webpack_require__("./public/app/features/query/state/DashboardQueryRunner/DashboardQueryRunner.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/services/TimeSrv.ts + 1 modules
 var TimeSrv = __webpack_require__("./public/app/features/dashboard/services/TimeSrv.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/utils/loadSnapshotData.ts
 var loadSnapshotData = __webpack_require__("./public/app/features/dashboard/utils/loadSnapshotData.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./public/app/features/panel/panellinks/linkSuppliers.ts
 var linkSuppliers = __webpack_require__("./public/app/features/panel/panellinks/linkSuppliers.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderCorner.tsx
 var PanelHeaderCorner = __webpack_require__("./public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderCorner.tsx");
-;// CONCATENATED MODULE: ./public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderLoadingIndicator.tsx
+;
 var _Tooltip;
 
 
@@ -208,12 +180,12 @@ const PanelHeaderLoadingIndicator = _ref => {
   const styles = (0,grafana_ui_src.useStyles)(getStyles);
 
   if (state === src.LoadingState.Loading) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       className: "panel-loading",
       onClick: onClick,
-      children: _Tooltip || (_Tooltip = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Tooltip, {
+      children: _Tooltip || (_Tooltip = (0,jsx_runtime.jsx)(grafana_ui_src.Tooltip, {
         content: "Cancel query",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
           className: "panel-loading__spinner spin-clockwise",
           name: "sync"
         })
@@ -222,10 +194,10 @@ const PanelHeaderLoadingIndicator = _ref => {
   }
 
   if (state === src.LoadingState.Streaming) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       className: "panel-loading",
       onClick: onClick,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      children: (0,jsx_runtime.jsx)("div", {
         title: "Streaming (click to stop)",
         className: styles.streamIndicator
       })
@@ -249,7 +221,7 @@ function getStyles(theme) {
     `
   };
 }
-;// CONCATENATED MODULE: ./public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderMenuTrigger.tsx
+;
 const _excluded = ["children"];
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -278,7 +250,7 @@ const PanelHeaderMenuTrigger = _ref => {
   const onMouseDown = (0,react.useCallback)(event => {
     setClickCoordinates(eventToClickCoordinates(event));
   }, [setClickCoordinates]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("header", Object.assign({}, divProps, {
+  return (0,jsx_runtime.jsx)("header", Object.assign({}, divProps, {
     className: "panel-title-container",
     onClick: onMenuToggle,
     onMouseDown: onMouseDown,
@@ -299,9 +271,8 @@ function eventToClickCoordinates(event) {
     y: Math.floor(event.clientY)
   };
 }
-// EXTERNAL MODULE: ./public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderMenuItem.tsx
 var PanelHeaderMenuItem = __webpack_require__("./public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderMenuItem.tsx");
-;// CONCATENATED MODULE: ./public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderMenu.tsx
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -316,11 +287,11 @@ class PanelHeaderMenu extends react.PureComponent {
 
     _defineProperty(this, "renderItems", function (menu) {
       let isSubMenu = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-      return /*#__PURE__*/(0,jsx_runtime.jsx)("ul", {
+      return (0,jsx_runtime.jsx)("ul", {
         className: "dropdown-menu dropdown-menu--menu panel-menu",
         role: isSubMenu ? '' : 'menu',
         children: menu.map((menuItem, idx) => {
-          return /*#__PURE__*/(0,jsx_runtime.jsx)(PanelHeaderMenuItem/* PanelHeaderMenuItem */.u, {
+          return (0,jsx_runtime.jsx)(PanelHeaderMenuItem.u, {
             type: menuItem.type,
             text: menuItem.text,
             iconClassName: menuItem.iconClassName,
@@ -334,24 +305,19 @@ class PanelHeaderMenu extends react.PureComponent {
   }
 
   render() {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       className: "panel-menu-container dropdown open",
       children: this.renderItems(this.props.items)
     });
   }
 
 }
-// EXTERNAL MODULE: ./public/app/features/panel/state/selectors.ts
 var selectors = __webpack_require__("./public/app/features/panel/state/selectors.ts");
-// EXTERNAL MODULE: ./public/app/features/library-panels/guard.ts
 var guard = __webpack_require__("./public/app/features/library-panels/guard.ts");
-// EXTERNAL MODULE: ./public/app/store/store.ts
 var store = __webpack_require__("./public/app/store/store.ts");
-// EXTERNAL MODULE: ./public/app/core/utils/explore.ts
 var explore = __webpack_require__("./public/app/core/utils/explore.ts");
-// EXTERNAL MODULE: ./public/app/features/explore/state/main.ts
 var main = __webpack_require__("./public/app/features/explore/state/main.ts");
-;// CONCATENATED MODULE: ./public/app/features/dashboard/utils/getPanelMenu.ts
+;
 
 
 
@@ -378,17 +344,17 @@ function getPanelMenu(dashboard, panel, angularComponent) {
 
   const onSharePanel = event => {
     event.preventDefault();
-    (0,utils_panel/* sharePanel */.Po)(dashboard, panel);
+    (0,utils_panel.Po)(dashboard, panel);
   };
 
   const onAddLibraryPanel = event => {
     event.preventDefault();
-    (0,utils_panel/* addLibraryPanel */.Kq)(dashboard, panel);
+    (0,utils_panel.Kq)(dashboard, panel);
   };
 
   const onUnlinkLibraryPanel = event => {
     event.preventDefault();
-    (0,utils_panel/* unlinkLibraryPanel */.oe)(panel);
+    (0,utils_panel.oe)(panel);
   };
 
   const onInspectPanel = tab => {
@@ -404,26 +370,26 @@ function getPanelMenu(dashboard, panel, angularComponent) {
 
   const onDuplicatePanel = event => {
     event.preventDefault();
-    (0,utils_panel/* duplicatePanel */.jN)(dashboard, panel);
+    (0,utils_panel.jN)(dashboard, panel);
   };
 
   const onCopyPanel = event => {
     event.preventDefault();
-    (0,utils_panel/* copyPanel */.bY)(panel);
+    (0,utils_panel.bY)(panel);
   };
 
   const onRemovePanel = event => {
     event.preventDefault();
-    (0,utils_panel/* removePanel */.WJ)(dashboard, panel, true);
+    (0,utils_panel.WJ)(dashboard, panel, true);
   };
 
   const onNavigateToExplore = event => {
     event.preventDefault();
     const openInNewWindow = event.ctrlKey || event.metaKey ? url => window.open(`${config/* default.appSubUrl */.ZP.appSubUrl}${url}`) : undefined;
-    store/* store.dispatch */.h.dispatch((0,main/* navigateToExplore */.m$)(panel, {
+    store.h.dispatch((0,main.m$)(panel, {
       getDataSourceSrv: grafana_runtime_src.getDataSourceSrv,
-      getTimeSrv: TimeSrv/* getTimeSrv */.$t,
-      getExploreUrl: explore/* getExploreUrl */.H6,
+      getTimeSrv: TimeSrv.$t,
+      getExploreUrl: explore.H6,
       openInNewWindow
     }));
   };
@@ -455,7 +421,7 @@ function getPanelMenu(dashboard, panel, angularComponent) {
     shortcut: 'p s'
   });
 
-  if (context_srv/* contextSrv.hasAccessToExplore */.Vt.hasAccessToExplore() && !(panel.plugin && panel.plugin.meta.skipDataQuery)) {
+  if (context_srv.Vt.hasAccessToExplore() && !(panel.plugin && panel.plugin.meta.skipDataQuery)) {
     menu.push({
       text: 'Explore',
       iconClassName: 'compass',
@@ -464,7 +430,7 @@ function getPanelMenu(dashboard, panel, angularComponent) {
     });
   }
 
-  const inspectMenu = []; // Only show these inspect actions for data plugins
+  const inspectMenu = []; 
 
   if (panel.plugin && !panel.plugin.meta.skipDataQuery) {
     inspectMenu.push({
@@ -505,7 +471,7 @@ function getPanelMenu(dashboard, panel, angularComponent) {
       onClick: onCopyPanel
     });
 
-    if ((0,guard/* isPanelModelLibraryPanel */.V)(panel)) {
+    if ((0,guard.V)(panel)) {
       subMenu.push({
         text: 'Unlink library panel',
         onClick: onUnlinkLibraryPanel
@@ -516,7 +482,7 @@ function getPanelMenu(dashboard, panel, angularComponent) {
         onClick: onAddLibraryPanel
       });
     }
-  } // add old angular panel options
+  } 
 
 
   if (angularComponent) {
@@ -568,7 +534,7 @@ function getPanelMenu(dashboard, panel, angularComponent) {
 
   return menu;
 }
-;// CONCATENATED MODULE: ./public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderMenuProvider.tsx
+;
 
 
 
@@ -583,7 +549,7 @@ const PanelHeaderMenuProvider = _ref => {
   const angularComponent = (0,es.useSelector)(state => {
     var _getPanelStateForMode;
 
-    return (_getPanelStateForMode = (0,selectors/* getPanelStateForModel */.i)(state, panel)) === null || _getPanelStateForMode === void 0 ? void 0 : _getPanelStateForMode.angularComponent;
+    return (_getPanelStateForMode = (0,selectors.i)(state, panel)) === null || _getPanelStateForMode === void 0 ? void 0 : _getPanelStateForMode.angularComponent;
   });
   (0,react.useEffect)(() => {
     setItems(getPanelMenu(dashboard, panel, angularComponent));
@@ -592,7 +558,7 @@ const PanelHeaderMenuProvider = _ref => {
     items
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderMenuWrapper.tsx
+;
 
 
 
@@ -610,24 +576,24 @@ const PanelHeaderMenuWrapper = _ref => {
     return null;
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.ClickOutsideWrapper, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.ClickOutsideWrapper, {
     onClick: onClose,
     parent: document,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(PanelHeaderMenuProvider, {
+    children: (0,jsx_runtime.jsx)(PanelHeaderMenuProvider, {
       panel: panel,
       dashboard: dashboard,
       children: _ref2 => {
         let {
           items
         } = _ref2;
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(PanelHeaderMenu, {
+        return (0,jsx_runtime.jsx)(PanelHeaderMenu, {
           items: items
         });
       }
     })
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderNotice.tsx
+;
 
 
 
@@ -637,23 +603,23 @@ const PanelHeaderNotice = _ref => {
     onClick
   } = _ref;
   const iconName = notice.severity === 'error' || notice.severity === 'warning' ? 'exclamation-triangle' : 'info-circle';
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Tooltip, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.Tooltip, {
     content: notice.text,
-    children: notice.inspect ? /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    children: notice.inspect ? (0,jsx_runtime.jsx)("div", {
       className: "panel-info-notice pointer",
       onClick: e => onClick(e, notice.inspect),
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: iconName,
         style: {
           marginRight: '8px'
         }
       })
-    }) : /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+    }) : (0,jsx_runtime.jsx)("a", {
       className: "panel-info-notice",
       href: notice.link,
       target: "_blank",
       rel: "noreferrer",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: iconName,
         style: {
           marginRight: '8px'
@@ -662,7 +628,7 @@ const PanelHeaderNotice = _ref => {
     })
   }, notice.severity);
 };
-;// CONCATENATED MODULE: ./public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderNotices.tsx
+;
 
 
 
@@ -679,7 +645,7 @@ const PanelHeaderNotices = _ref => {
       inspect: panelId,
       inspectTab: tab
     });
-  }, [panelId]); // dedupe on severity
+  }, [panelId]); 
 
   const notices = {};
 
@@ -693,14 +659,14 @@ const PanelHeaderNotices = _ref => {
     }
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-    children: Object.values(notices).map(notice => /*#__PURE__*/(0,jsx_runtime.jsx)(PanelHeaderNotice, {
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+    children: Object.values(notices).map(notice => (0,jsx_runtime.jsx)(PanelHeaderNotice, {
       notice: notice,
       onClick: openInspect
     }, notice.severity))
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/dashboard/dashgrid/PanelHeader/PanelHeader.tsx
+;
 var _Icon, _Icon2;
 
 
@@ -732,52 +698,52 @@ const PanelHeader = _ref => {
   const title = panel.getDisplayTitle();
   const className = (0,emotion_css_esm.cx)('panel-header', !(isViewing || isEditing) ? 'grid-drag-handle' : '');
   const styles = (0,grafana_ui_src.useStyles2)(panelStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(PanelHeaderLoadingIndicator, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(PanelHeaderLoadingIndicator, {
       state: data.state,
       onClick: onCancelQuery
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(PanelHeaderCorner/* default */.Z, {
+    }), (0,jsx_runtime.jsx)(PanelHeaderCorner.Z, {
       panel: panel,
       title: panel.title,
       description: panel.description,
       scopedVars: panel.scopedVars,
-      links: (0,linkSuppliers/* getPanelLinksSupplier */.H)(panel),
+      links: (0,linkSuppliers.H)(panel),
       error: error
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), (0,jsx_runtime.jsx)("div", {
       className: className,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(PanelHeaderMenuTrigger, {
-        "data-testid": grafana_e2e_selectors_src/* selectors.components.Panels.Panel.title */.wl.components.Panels.Panel.title(title),
+      children: (0,jsx_runtime.jsx)(PanelHeaderMenuTrigger, {
+        "data-testid": grafana_e2e_selectors_src.wl.components.Panels.Panel.title(title),
         children: _ref2 => {
           let {
             closeMenu,
             panelMenuOpen
           } = _ref2;
-          return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+          return (0,jsx_runtime.jsxs)("div", {
             className: "panel-title",
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)(PanelHeaderNotices, {
+            children: [(0,jsx_runtime.jsx)(PanelHeaderNotices, {
               frames: data.series,
               panelId: panel.id
-            }), alertState ? /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+            }), alertState ? (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
               name: alertState === 'alerting' ? 'heart-break' : 'heart',
               className: "icon-gf panel-alert-icon",
               style: {
                 marginRight: '4px'
               },
               size: "sm"
-            }) : null, /*#__PURE__*/(0,jsx_runtime.jsx)("h2", {
+            }) : null, (0,jsx_runtime.jsx)("h2", {
               className: styles.titleText,
               children: title
-            }), _Icon || (_Icon = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+            }), _Icon || (_Icon = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
               name: "angle-down",
               className: "panel-menu-toggle"
-            })), /*#__PURE__*/(0,jsx_runtime.jsx)(PanelHeaderMenuWrapper, {
+            })), (0,jsx_runtime.jsx)(PanelHeaderMenuWrapper, {
               panel: panel,
               dashboard: dashboard,
               show: panelMenuOpen,
               onClose: closeMenu
-            }), data.request && data.request.timeInfo && /*#__PURE__*/(0,jsx_runtime.jsxs)("span", {
+            }), data.request && data.request.timeInfo && (0,jsx_runtime.jsxs)("span", {
               className: "panel-time-info",
-              children: [_Icon2 || (_Icon2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+              children: [_Icon2 || (_Icon2 = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
                 name: "clock-nine",
                 size: "sm"
               })), " ", data.request.timeInfo]
@@ -810,11 +776,9 @@ const panelStyles = theme => {
     `
   };
 };
-// EXTERNAL MODULE: ./public/app/features/dashboard/dashgrid/SeriesVisibilityConfigFactory.ts
 var SeriesVisibilityConfigFactory = __webpack_require__("./public/app/features/dashboard/dashgrid/SeriesVisibilityConfigFactory.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/dashgrid/liveTimer.ts
 var liveTimer = __webpack_require__("./public/app/features/dashboard/dashgrid/liveTimer.ts");
-;// CONCATENATED MODULE: ./public/app/features/dashboard/dashgrid/PanelChrome.tsx
+;
 function PanelChrome_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -845,11 +809,11 @@ function PanelChrome_defineProperty(obj, key, value) { if (key in obj) { Object.
 const DEFAULT_PLUGIN_ERROR = 'Error in plugin';
 class PanelChrome extends react.PureComponent {
   constructor(props) {
-    super(props); // Can this eventBus be on PanelModel?  when we have more complex event filtering, that may be a better option
+    super(props); 
 
-    PanelChrome_defineProperty(this, "timeSrv", (0,TimeSrv/* getTimeSrv */.$t)());
+    PanelChrome_defineProperty(this, "timeSrv", (0,TimeSrv.$t)());
 
-    PanelChrome_defineProperty(this, "subs", new Subscription/* Subscription */.w0());
+    PanelChrome_defineProperty(this, "subs", new Subscription.w0());
 
     PanelChrome_defineProperty(this, "eventFilter", {
       onlyLocal: true
@@ -860,7 +824,7 @@ class PanelChrome extends react.PureComponent {
     PanelChrome_defineProperty(this, "canAddAnnotation", () => {
       let canAdd = true;
 
-      if (context_srv/* contextSrv.accessControlEnabled */.Vt.accessControlEnabled()) {
+      if (context_srv.Vt.accessControlEnabled()) {
         var _this$props$dashboard;
 
         canAdd = !!((_this$props$dashboard = this.props.dashboard.meta.annotationsPermissions) !== null && _this$props$dashboard !== void 0 && _this$props$dashboard.dashboard.canAdd);
@@ -872,7 +836,7 @@ class PanelChrome extends react.PureComponent {
     PanelChrome_defineProperty(this, "canEditAnnotation", dashboardId => {
       let canEdit = true;
 
-      if (context_srv/* contextSrv.accessControlEnabled */.Vt.accessControlEnabled()) {
+      if (context_srv.Vt.accessControlEnabled()) {
         if (dashboardId !== 0) {
           var _this$props$dashboard2;
 
@@ -890,7 +854,7 @@ class PanelChrome extends react.PureComponent {
     PanelChrome_defineProperty(this, "canDeleteAnnotation", dashboardId => {
       let canDelete = true;
 
-      if (context_srv/* contextSrv.accessControlEnabled */.Vt.accessControlEnabled()) {
+      if (context_srv.Vt.accessControlEnabled()) {
         if (dashboardId !== 0) {
           var _this$props$dashboard4;
 
@@ -921,11 +885,11 @@ class PanelChrome extends react.PureComponent {
     });
 
     PanelChrome_defineProperty(this, "onSeriesVisibilityChange", (label, mode) => {
-      this.onFieldConfigChange((0,SeriesVisibilityConfigFactory/* seriesVisibilityConfigFactory */.N)(label, mode, this.props.panel.fieldConfig, this.state.data.series));
+      this.onFieldConfigChange((0,SeriesVisibilityConfigFactory.N)(label, mode, this.props.panel.fieldConfig, this.state.data.series));
     });
 
     PanelChrome_defineProperty(this, "onToggleLegendSort", sortKey => {
-      const legendOptions = this.props.panel.options.legend; // We don't want to do anything when legend options are not available
+      const legendOptions = this.props.panel.options.legend; 
 
       if (!legendOptions) {
         return;
@@ -936,7 +900,7 @@ class PanelChrome extends react.PureComponent {
 
       if (sortKey !== sortBy) {
         sortDesc = undefined;
-      } // if already sort ascending, disable sorting
+      } 
 
 
       if (sortDesc === false) {
@@ -969,7 +933,7 @@ class PanelChrome extends react.PureComponent {
         return;
       }
 
-      const timeData = (0,utils_panel/* applyPanelTimeOverrides */.W1)(panel, this.timeSrv.timeRange()); // Issue Query
+      const timeData = (0,utils_panel.W1)(panel, this.timeSrv.timeRange()); 
 
       if (this.wantsQueryExecution) {
         if (width < 0) {
@@ -984,7 +948,6 @@ class PanelChrome extends react.PureComponent {
 
         panel.runAllPanelQueries(this.props.dashboard.id, this.props.dashboard.getTimezone(), timeData, width);
       } else {
-        // The panel should render on refresh as well if it doesn't have a query, like clock panel
         this.setState({
           data: Object.assign({}, this.state.data, {
             timeRange: this.timeSrv.timeRange()
@@ -1037,8 +1000,8 @@ class PanelChrome extends react.PureComponent {
         tags: event.tags,
         text: event.description
       };
-      await (0,api/* saveAnnotation */.xD)(anno);
-      (0,DashboardQueryRunner/* getDashboardQueryRunner */.kt)().run({
+      await (0,api.xD)(anno);
+      (0,DashboardQueryRunner.kt)().run({
         dashboard: this.props.dashboard,
         range: this.timeSrv.timeRange()
       });
@@ -1046,10 +1009,10 @@ class PanelChrome extends react.PureComponent {
     });
 
     PanelChrome_defineProperty(this, "onAnnotationDelete", async id => {
-      await (0,api/* deleteAnnotation */.Dl)({
+      await (0,api.Dl)({
         id
       });
-      (0,DashboardQueryRunner/* getDashboardQueryRunner */.kt)().run({
+      (0,DashboardQueryRunner.kt)().run({
         dashboard: this.props.dashboard,
         range: this.timeSrv.timeRange()
       });
@@ -1070,8 +1033,8 @@ class PanelChrome extends react.PureComponent {
         tags: event.tags,
         text: event.description
       };
-      await (0,api/* updateAnnotation */._E)(anno);
-      (0,DashboardQueryRunner/* getDashboardQueryRunner */.kt)().run({
+      await (0,api._E)(anno);
+      (0,DashboardQueryRunner.kt)().run({
         dashboard: this.props.dashboard,
         range: this.timeSrv.timeRange()
       });
@@ -1133,15 +1096,15 @@ class PanelChrome extends react.PureComponent {
     const {
       panel,
       dashboard
-    } = this.props; // Subscribe to panel events
+    } = this.props; 
 
     this.subs.add(panel.events.subscribe(grafana_runtime_src.RefreshEvent, this.onRefresh));
-    this.subs.add(panel.events.subscribe(events/* RenderEvent */._z, this.onRender));
-    dashboard.panelInitialized(this.props.panel); // Move snapshot data into the query response
+    this.subs.add(panel.events.subscribe(events._z, this.onRender));
+    dashboard.panelInitialized(this.props.panel); 
 
     if (this.hasPanelSnapshot) {
       this.setState({
-        data: (0,loadSnapshotData/* loadSnapshotData */.y)(panel, dashboard),
+        data: (0,loadSnapshotData.y)(panel, dashboard),
         isFirstLoad: false
       });
       return;
@@ -1158,14 +1121,14 @@ class PanelChrome extends react.PureComponent {
       withFieldConfig: true
     }).subscribe({
       next: data => this.onDataUpdate(data)
-    })); // Listen for live timer events
+    })); 
 
-    liveTimer/* liveTimer.listen */.A.listen(this);
+    liveTimer.A.listen(this);
   }
 
   componentWillUnmount() {
     this.subs.unsubscribe();
-    liveTimer/* liveTimer.remove */.A.remove(this);
+    liveTimer.A.remove(this);
   }
 
   liveTimeChanged(liveTime) {
@@ -1177,7 +1140,6 @@ class PanelChrome extends react.PureComponent {
       const delta = liveTime.to.valueOf() - data.timeRange.to.valueOf();
 
       if (delta < 100) {
-        // 10hz
         console.log('Skip tick render', this.props.panel.title, delta);
         return;
       }
@@ -1204,25 +1166,22 @@ class PanelChrome extends react.PureComponent {
           app
         })
       });
-    } // View state has changed
+    } 
 
 
     if (isInView !== prevProps.isInView) {
       if (isInView) {
-        // Check if we need a delayed refresh
         if (this.state.refreshWhenInView) {
           this.onRefresh();
         }
       }
-    } // The timer depends on panel width
+    } 
 
 
     if (width !== prevProps.width) {
-      liveTimer/* liveTimer.updateInterval */.A.updateInterval(this);
+      liveTimer.A.updateInterval(this);
     }
-  } // Updates the response with information from the stream
-  // The next is outside a react synthetic event so setState is not batched
-  // So in this context we can only do a single call to setState
+  } 
 
 
   onDataUpdate(data) {
@@ -1230,7 +1189,7 @@ class PanelChrome extends react.PureComponent {
       dashboard,
       panel,
       plugin
-    } = this.props; // Ignore this data update if we are now a non data panel
+    } = this.props; 
 
     if (plugin.meta.skipDataQuery) {
       this.setState({
@@ -1246,8 +1205,6 @@ class PanelChrome extends react.PureComponent {
 
     switch (data.state) {
       case src.LoadingState.Loading:
-        // Skip updating state data if it is already in loading state
-        // This is to avoid rendering partial loading responses
         if (this.state.data.state === src.LoadingState.Loading) {
           return;
         }
@@ -1268,7 +1225,6 @@ class PanelChrome extends react.PureComponent {
         break;
 
       case src.LoadingState.Done:
-        // If we are doing a snapshot save data in panel model
         if (dashboard.snapshot) {
           panel.snapshotData = data.series.map(frame => (0,src.toDataFrameDTO)(frame));
         }
@@ -1324,41 +1280,39 @@ class PanelChrome extends react.PureComponent {
     } = this.state;
     const {
       theme
-    } = config/* default */.ZP;
+    } = config.ZP;
     const {
       state: loadingState
-    } = data; // do not render component until we have first data
+    } = data; 
 
     if (this.skipFirstRender(loadingState)) {
       return null;
-    } // This is only done to increase a counter that is used by backend
-    // image rendering to know when to capture image
+    } 
 
 
     if (this.shouldSignalRenderingCompleted(loadingState, plugin.meta)) {
-      profiler/* profiler.renderingCompleted */.r.renderingCompleted();
+      profiler.r.renderingCompleted();
     }
 
     const PanelComponent = plugin.panel;
     const timeRange = (_ref = (_this$state$liveTime = this.state.liveTime) !== null && _this$state$liveTime !== void 0 ? _this$state$liveTime : data.timeRange) !== null && _ref !== void 0 ? _ref : this.timeSrv.timeRange();
     const headerHeight = this.hasOverlayHeader() ? 0 : theme.panelHeaderHeight;
     const chromePadding = plugin.noPadding ? 0 : theme.panelPadding;
-    const panelWidth = width - chromePadding * 2 - constants/* PANEL_BORDER */.QO;
-    const innerPanelHeight = height - headerHeight - chromePadding * 2 - constants/* PANEL_BORDER */.QO;
+    const panelWidth = width - chromePadding * 2 - constants.QO;
+    const innerPanelHeight = height - headerHeight - chromePadding * 2 - constants.QO;
     const panelContentClassNames = classnames_default()({
       'panel-content': true,
       'panel-content--no-padding': plugin.noPadding
     });
-    const panelOptions = panel.getOptions(); // Update the event filter (dashboard settings may have changed)
-    // Yes this is called ever render for a function that is triggered on every mouse move
+    const panelOptions = panel.getOptions(); 
 
     this.eventFilter.onlyLocal = dashboard.graphTooltip === 0;
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+      children: (0,jsx_runtime.jsx)("div", {
         className: panelContentClassNames,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.PanelContextProvider, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.PanelContextProvider, {
           value: this.state.context,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(PanelComponent, {
+          children: (0,jsx_runtime.jsx)(PanelComponent, {
             id: panel.id,
             data: data,
             title: panel.title,
@@ -1387,7 +1341,7 @@ class PanelChrome extends react.PureComponent {
     } = this.props;
     const {
       data
-    } = this.state; // always show normal header if we have time override
+    } = this.state; 
 
     if (data.request && data.request.timeInfo) {
       return false;
@@ -1423,10 +1377,10 @@ class PanelChrome extends react.PureComponent {
       'panel-container--no-title': this.hasOverlayHeader(),
       [`panel-alert-state--${alertState}`]: alertState !== undefined
     });
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("section", {
+    return (0,jsx_runtime.jsxs)("section", {
       className: containerClassNames,
-      "aria-label": grafana_e2e_selectors_src/* selectors.components.Panels.Panel.containerByTitle */.wl.components.Panels.Panel.containerByTitle(panel.title),
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(PanelHeader, {
+      "aria-label": grafana_e2e_selectors_src.wl.components.Panels.Panel.containerByTitle(panel.title),
+      children: [(0,jsx_runtime.jsx)(PanelHeader, {
         panel: panel,
         dashboard: dashboard,
         title: panel.title,
@@ -1437,7 +1391,7 @@ class PanelChrome extends react.PureComponent {
         isViewing: isViewing,
         alertState: alertState,
         data: data
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.ErrorBoundary, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.ErrorBoundary, {
         dependencies: [data, plugin, panel.getOptions()],
         onError: this.onPanelError,
         onRecover: this.onPanelErrorRecover,
@@ -1457,7 +1411,7 @@ class PanelChrome extends react.PureComponent {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/features/dashboard/dashgrid/PanelChromeAngular.tsx
+;
 function PanelChromeAngular_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1482,11 +1436,11 @@ class PanelChromeAngularUnconnected extends react.PureComponent {
 
     PanelChromeAngular_defineProperty(this, "element", null);
 
-    PanelChromeAngular_defineProperty(this, "timeSrv", (0,TimeSrv/* getTimeSrv */.$t)());
+    PanelChromeAngular_defineProperty(this, "timeSrv", (0,TimeSrv.$t)());
 
     PanelChromeAngular_defineProperty(this, "scopeProps", void 0);
 
-    PanelChromeAngular_defineProperty(this, "subs", new Subscription/* Subscription */.w0());
+    PanelChromeAngular_defineProperty(this, "subs", new Subscription.w0());
 
     this.state = {
       data: {
@@ -1501,9 +1455,9 @@ class PanelChromeAngularUnconnected extends react.PureComponent {
     const {
       panel
     } = this.props;
-    this.loadAngularPanel(); // subscribe to data events
+    this.loadAngularPanel(); 
 
-    const queryRunner = panel.getQueryRunner(); // we are not displaying any of this data so no need for transforms or field config
+    const queryRunner = panel.getQueryRunner(); 
 
     this.subs.add(queryRunner.getData({
       withTransforms: false,
@@ -1566,10 +1520,10 @@ class PanelChromeAngularUnconnected extends react.PureComponent {
     } = this.props;
     const {
       theme
-    } = config/* default */.ZP;
+    } = config.ZP;
     const headerHeight = this.hasOverlayHeader() ? 0 : theme.panelHeaderHeight;
     const chromePadding = plugin.noPadding ? 0 : theme.panelPadding;
-    return height - headerHeight - chromePadding * 2 - constants/* PANEL_BORDER */.QO;
+    return height - headerHeight - chromePadding * 2 - constants.QO;
   }
 
   getInnerPanelWidth() {
@@ -1579,9 +1533,9 @@ class PanelChromeAngularUnconnected extends react.PureComponent {
     } = this.props;
     const {
       theme
-    } = config/* default */.ZP;
+    } = config.ZP;
     const chromePadding = plugin.noPadding ? 0 : theme.panelPadding;
-    return width - chromePadding * 2 - constants/* PANEL_BORDER */.QO;
+    return width - chromePadding * 2 - constants.QO;
   }
 
   loadAngularPanel() {
@@ -1589,7 +1543,7 @@ class PanelChromeAngularUnconnected extends react.PureComponent {
       panel,
       dashboard,
       setPanelAngularComponent
-    } = this.props; // if we have no element or already have loaded the panel return
+    } = this.props; 
 
     if (!this.element) {
       return;
@@ -1617,7 +1571,7 @@ class PanelChromeAngularUnconnected extends react.PureComponent {
     } = this.props;
     const {
       data
-    } = this.state; // always show normal header if we have time override
+    } = this.state; 
 
     if (data.request && data.request.timeInfo) {
       return false;
@@ -1656,10 +1610,10 @@ class PanelChromeAngularUnconnected extends react.PureComponent {
       'panel-content': true,
       'panel-content--no-padding': plugin.noPadding
     });
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    return (0,jsx_runtime.jsxs)("div", {
       className: containerClassNames,
-      "aria-label": grafana_e2e_selectors_src/* selectors.components.Panels.Panel.containerByTitle */.wl.components.Panels.Panel.containerByTitle(panel.title),
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(PanelHeader, {
+      "aria-label": grafana_e2e_selectors_src.wl.components.Panels.Panel.containerByTitle(panel.title),
+      children: [(0,jsx_runtime.jsx)(PanelHeader, {
         panel: panel,
         dashboard: dashboard,
         title: panel.title,
@@ -1670,9 +1624,9 @@ class PanelChromeAngularUnconnected extends react.PureComponent {
         isEditing: isEditing,
         data: data,
         alertState: alertState
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: panelContentClassNames,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsx)("div", {
           ref: element => this.element = element,
           className: "panel-height-helper"
         })
@@ -1686,15 +1640,15 @@ const mapStateToProps = (state, props) => {
   var _getPanelStateForMode;
 
   return {
-    angularComponent: (_getPanelStateForMode = (0,selectors/* getPanelStateForModel */.i)(state, props.panel)) === null || _getPanelStateForMode === void 0 ? void 0 : _getPanelStateForMode.angularComponent
+    angularComponent: (_getPanelStateForMode = (0,selectors.i)(state, props.panel)) === null || _getPanelStateForMode === void 0 ? void 0 : _getPanelStateForMode.angularComponent
   };
 };
 
 const mapDispatchToProps = {
-  setPanelAngularComponent: reducers/* setPanelAngularComponent */.o8
+  setPanelAngularComponent: reducers.o8
 };
 const PanelChromeAngular = (0,es.connect)(mapStateToProps, mapDispatchToProps)(PanelChromeAngularUnconnected);
-;// CONCATENATED MODULE: ./public/app/features/dashboard/dashgrid/DashboardPanel.tsx
+;
 function DashboardPanel_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1722,8 +1676,8 @@ const DashboardPanel_mapStateToProps = (state, props) => {
 };
 
 const DashboardPanel_mapDispatchToProps = {
-  initPanelState: actions/* initPanelState */.JI,
-  setPanelInstanceState: reducers/* setPanelInstanceState */.pC
+  initPanelState: actions.JI,
+  setPanelInstanceState: reducers.pC
 };
 const connector = (0,es.connect)(DashboardPanel_mapStateToProps, DashboardPanel_mapDispatchToProps);
 class DashboardPanelUnconnected extends react.PureComponent {
@@ -1768,7 +1722,7 @@ class DashboardPanelUnconnected extends react.PureComponent {
       plugin
     } = this.props;
 
-    const renderPanelChrome = isInView => plugin && (plugin.angularPanelCtrl ? /*#__PURE__*/(0,jsx_runtime.jsx)(PanelChromeAngular, {
+    const renderPanelChrome = isInView => plugin && (plugin.angularPanelCtrl ? (0,jsx_runtime.jsx)(PanelChromeAngular, {
       plugin: plugin,
       panel: panel,
       dashboard: dashboard,
@@ -1777,7 +1731,7 @@ class DashboardPanelUnconnected extends react.PureComponent {
       isInView: isInView,
       width: width,
       height: height
-    }) : /*#__PURE__*/(0,jsx_runtime.jsx)(PanelChrome, {
+    }) : (0,jsx_runtime.jsx)(PanelChrome, {
       plugin: plugin,
       panel: panel,
       dashboard: dashboard,
@@ -1789,7 +1743,7 @@ class DashboardPanelUnconnected extends react.PureComponent {
       onInstanceStateChange: this.onInstanceStateChange
     }));
 
-    return lazy ? /*#__PURE__*/(0,jsx_runtime.jsx)(LazyLoader, {
+    return lazy ? (0,jsx_runtime.jsx)(LazyLoader, {
       width: width,
       height: height,
       onChange: this.onVisibilityChange,
@@ -1811,23 +1765,22 @@ DashboardPanel_defineProperty(DashboardPanelUnconnected, "defaultProps", {
 
 const DashboardPanel = connector(DashboardPanelUnconnected);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderCorner.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/dashboard/dashgrid/PanelHeader/PanelHeaderCorner.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* unused harmony export PanelHeaderCorner */
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var app_features_dashboard_services_TimeSrv__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/dashboard/services/TimeSrv.ts");
-/* harmony import */ var app_features_inspector_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/inspector/types.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var app_features_dashboard_services_TimeSrv__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/dashboard/services/TimeSrv.ts");
+ var app_features_inspector_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/inspector/types.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _i, _span;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1853,7 +1806,7 @@ class PanelHeaderCorner extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
   constructor() {
     super(...arguments);
 
-    _defineProperty(this, "timeSrv", (0,app_features_dashboard_services_TimeSrv__WEBPACK_IMPORTED_MODULE_5__/* .getTimeSrv */ .$t)());
+    _defineProperty(this, "timeSrv", (0,app_features_dashboard_services_TimeSrv__WEBPACK_IMPORTED_MODULE_5__ .$t)());
 
     _defineProperty(this, "getInfoMode", () => {
       const {
@@ -1884,17 +1837,17 @@ class PanelHeaderCorner extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       const interpolatedMarkdown = (0,_grafana_runtime__WEBPACK_IMPORTED_MODULE_3__.getTemplateSrv)().replace(markdown, panel.scopedVars);
       const markedInterpolatedMarkdown = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_1__.renderMarkdown)(interpolatedMarkdown);
       const links = this.props.links && this.props.links.getLinks(panel.replaceVariables);
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+      return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
         className: "panel-info-content markdown-html",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
           dangerouslySetInnerHTML: {
             __html: markedInterpolatedMarkdown
           }
-        }), links && links.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("ul", {
+        }), links && links.length > 0 && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("ul", {
           className: "panel-info-corner-links",
           children: links.map((link, idx) => {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("li", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("a", {
+            return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("li", {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("a", {
                 className: "panel-info-corner-links__item",
                 href: link.href,
                 target: link.target,
@@ -1909,7 +1862,7 @@ class PanelHeaderCorner extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
     _defineProperty(this, "onClickError", () => {
       _grafana_runtime__WEBPACK_IMPORTED_MODULE_3__.locationService.partial({
         inspect: this.props.panel.id,
-        inspectTab: app_features_inspector_types__WEBPACK_IMPORTED_MODULE_6__/* .InspectTab.Error */ .q.Error
+        inspectTab: app_features_inspector_types__WEBPACK_IMPORTED_MODULE_6__ .q.Error
       });
     });
   }
@@ -1917,20 +1870,20 @@ class PanelHeaderCorner extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
   renderCornerType(infoMode, content, onClick) {
     const theme = infoMode === InfoMode.Error ? 'error' : 'info';
     const className = `panel-info-corner panel-info-corner--${infoMode.toLowerCase()}`;
-    const ariaLabel = _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_2__/* .selectors.components.Panels.Panel.headerCornerInfo */ .wl.components.Panels.Panel.headerCornerInfo(infoMode.toLowerCase());
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Tooltip, {
+    const ariaLabel = _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_2__ .wl.components.Panels.Panel.headerCornerInfo(infoMode.toLowerCase());
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Tooltip, {
       content: content,
       placement: "top-start",
       theme: theme,
       interactive: true,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("section", {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("section", {
         className: className,
         onClick: onClick,
         "aria-label": ariaLabel,
-        children: [_i || (_i = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("i", {
+        children: [_i || (_i = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("i", {
           "aria-hidden": true,
           className: "fa"
-        })), _span || (_span = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
+        })), _span || (_span = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
           className: "panel-info-corner-inner"
         }))]
       })
@@ -1959,18 +1912,18 @@ class PanelHeaderCorner extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
   }
 
 }
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PanelHeaderCorner);
+ const __WEBPACK_DEFAULT_EXPORT__ = (PanelHeaderCorner);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/dashboard/dashgrid/SeriesVisibilityConfigFactory.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/dashboard/dashgrid/SeriesVisibilityConfigFactory.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "N": () => (/* binding */ seriesVisibilityConfigFactory)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "N": () => ( seriesVisibilityConfigFactory)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
 
 
 const displayOverrideRef = 'hideSeriesFrom';
@@ -2115,55 +2068,37 @@ const getDisplayNames = (data, excludeName) => {
   return Array.from(unique);
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/dashboard/state/initDashboard.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/dashboard/state/initDashboard.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "ZQ": () => (/* binding */ getNewDashboardModelData),
-  "mV": () => (/* binding */ initDashboard),
-  "f1": () => (/* binding */ removeDashboardToFetchFromLocalStorage),
-  "$M": () => (/* binding */ setDashboardToFetchFromLocalStorage)
+  "ZQ": () => ( getNewDashboardModelData),
+  "mV": () => ( initDashboard),
+  "f1": () => ( removeDashboardToFetchFromLocalStorage),
+  "$M": () => ( setDashboardToFetchFromLocalStorage)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./public/app/core/actions/index.ts
 var actions = __webpack_require__("./public/app/core/actions/index.ts");
-// EXTERNAL MODULE: ./public/app/core/copy/appNotification.ts
 var appNotification = __webpack_require__("./public/app/core/copy/appNotification.ts");
-// EXTERNAL MODULE: ./public/app/core/services/backend_srv.ts + 4 modules
 var backend_srv = __webpack_require__("./public/app/core/services/backend_srv.ts");
-// EXTERNAL MODULE: ./public/app/core/services/keybindingSrv.ts + 2 modules
 var keybindingSrv = __webpack_require__("./public/app/core/services/keybindingSrv.ts");
-// EXTERNAL MODULE: ./public/app/core/store.ts
 var store = __webpack_require__("./public/app/core/store.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/services/DashboardLoaderSrv.ts
 var DashboardLoaderSrv = __webpack_require__("./public/app/features/dashboard/services/DashboardLoaderSrv.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/services/DashboardSrv.ts
 var DashboardSrv = __webpack_require__("./public/app/features/dashboard/services/DashboardSrv.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/services/TimeSrv.ts + 1 modules
 var TimeSrv = __webpack_require__("./public/app/features/dashboard/services/TimeSrv.ts");
-// EXTERNAL MODULE: ./public/app/features/live/dashboard/dashboardWatcher.ts + 2 modules
 var dashboardWatcher = __webpack_require__("./public/app/features/live/dashboard/dashboardWatcher.ts");
-// EXTERNAL MODULE: ./public/app/features/variables/utils.ts
 var utils = __webpack_require__("./public/app/features/variables/utils.ts");
-// EXTERNAL MODULE: ./public/app/types/index.ts + 4 modules
 var types = __webpack_require__("./public/app/types/index.ts");
-// EXTERNAL MODULE: ./public/app/features/query/state/DashboardQueryRunner/DashboardQueryRunner.ts + 6 modules
 var DashboardQueryRunner = __webpack_require__("./public/app/features/query/state/DashboardQueryRunner/DashboardQueryRunner.ts");
-// EXTERNAL MODULE: ./public/app/features/variables/state/actions.ts + 1 modules
 var state_actions = __webpack_require__("./public/app/features/variables/state/actions.ts");
-// EXTERNAL MODULE: ./public/app/features/variables/state/selectors.ts
 var selectors = __webpack_require__("./public/app/features/variables/state/selectors.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/state/DashboardModel.ts + 3 modules
 var DashboardModel = __webpack_require__("./public/app/features/dashboard/state/DashboardModel.ts");
-;// CONCATENATED MODULE: ./public/app/features/dashboard/state/analyticsProcessor.ts
+;
 
 function emitDashboardViewEvent(dashboard) {
   const eventData = {
@@ -2175,9 +2110,8 @@ function emitDashboardViewEvent(dashboard) {
   };
   (0,grafana_runtime_src.reportMetaAnalytics)(eventData);
 }
-// EXTERNAL MODULE: ./public/app/features/dashboard/state/reducers.ts
 var reducers = __webpack_require__("./public/app/features/dashboard/state/reducers.ts");
-;// CONCATENATED MODULE: ./public/app/features/dashboard/state/initDashboard.ts
+;
 
 
 
@@ -2199,8 +2133,7 @@ var reducers = __webpack_require__("./public/app/features/dashboard/state/reduce
 
 
 async function fetchDashboard(args, dispatch, getState) {
-  // When creating new or adding panels to a dashboard from explore we load it from local storage
-  const model = store/* default.getObject */.Z.getObject(DASHBOARD_FROM_LS_KEY);
+  const model = store.Z.getObject(DASHBOARD_FROM_LS_KEY);
 
   if (model) {
     removeDashboardToFetchFromLocalStorage();
@@ -2209,16 +2142,15 @@ async function fetchDashboard(args, dispatch, getState) {
 
   try {
     switch (args.routeName) {
-      case types/* DashboardRoutes.Home */.vq.Home:
+      case types.vq.Home:
         {
-          // load home dash
-          const dashDTO = await backend_srv/* backendSrv.get */.ae.get('/api/dashboards/home'); // if user specified a custom home dashboard redirect to that
+          const dashDTO = await backend_srv.ae.get('/api/dashboards/home'); 
 
           if (dashDTO.redirectUri) {
             const newUrl = src.locationUtil.stripBaseFromUrl(dashDTO.redirectUri);
             grafana_runtime_src.locationService.replace(newUrl);
             return null;
-          } // disable some actions on the default home dashboard
+          } 
 
 
           dashDTO.meta.canSave = false;
@@ -2227,17 +2159,15 @@ async function fetchDashboard(args, dispatch, getState) {
           return dashDTO;
         }
 
-      case types/* DashboardRoutes.Normal */.vq.Normal:
+      case types.vq.Normal:
         {
-          const dashDTO = await DashboardLoaderSrv/* dashboardLoaderSrv.loadDashboard */.pD.loadDashboard(args.urlType, args.urlSlug, args.urlUid);
+          const dashDTO = await DashboardLoaderSrv.pD.loadDashboard(args.urlType, args.urlSlug, args.urlUid);
 
           if (args.fixUrl && dashDTO.meta.url) {
-            // check if the current url is correct (might be old slug)
             const dashboardUrl = src.locationUtil.stripBaseFromUrl(dashDTO.meta.url);
             const currentPath = grafana_runtime_src.locationService.getLocation().pathname;
 
             if (dashboardUrl !== currentPath) {
-              // Spread current location to persist search params used for navigation
               grafana_runtime_src.locationService.replace(Object.assign({}, grafana_runtime_src.locationService.getLocation(), {
                 pathname: dashboardUrl
               }));
@@ -2248,7 +2178,7 @@ async function fetchDashboard(args, dispatch, getState) {
           return dashDTO;
         }
 
-      case types/* DashboardRoutes.New */.vq.New:
+      case types.vq.New:
         {
           return getNewDashboardModelData(args.urlFolderId);
         }
@@ -2259,12 +2189,11 @@ async function fetchDashboard(args, dispatch, getState) {
         };
     }
   } catch (err) {
-    // Ignore cancelled errors
     if (err.cancelled) {
       return null;
     }
 
-    dispatch((0,reducers/* dashboardInitFailed */.jA)({
+    dispatch((0,reducers.jA)({
       message: 'Failed to fetch dashboard',
       error: err
     }));
@@ -2272,69 +2201,57 @@ async function fetchDashboard(args, dispatch, getState) {
     return null;
   }
 }
-/**
- * This action (or saga) does everything needed to bootstrap a dashboard & dashboard model.
- * First it handles the process of fetching the dashboard, correcting the url if required (causing redirects/url updates)
- *
- * This is used both for single dashboard & solo panel routes, home & new dashboard routes.
- *
- * Then it handles the initializing of the old angular services that the dashboard components & panels still depend on
- *
- */
 
 
 function initDashboard(args) {
   return async (dispatch, getState) => {
     var _args$urlUid;
 
-    // set fetching state
-    dispatch((0,reducers/* dashboardInitFetching */.sf)()); // fetch dashboard data
+    dispatch((0,reducers.sf)()); 
 
-    const dashDTO = await fetchDashboard(args, dispatch, getState); // returns null if there was a redirect or error
+    const dashDTO = await fetchDashboard(args, dispatch, getState); 
 
     if (!dashDTO) {
       return;
-    } // set initializing state
+    } 
 
 
-    dispatch((0,reducers/* dashboardInitServices */.Nv)()); // create model
+    dispatch((0,reducers.Nv)()); 
 
     let dashboard;
 
     try {
-      dashboard = new DashboardModel/* DashboardModel */.f(dashDTO.dashboard, dashDTO.meta);
+      dashboard = new DashboardModel.f(dashDTO.dashboard, dashDTO.meta);
     } catch (err) {
-      dispatch((0,reducers/* dashboardInitFailed */.jA)({
+      dispatch((0,reducers.jA)({
         message: 'Failed create dashboard model',
         error: err
       }));
       console.error(err);
       return;
-    } // add missing orgId query param
+    } 
 
 
     const storeState = getState();
     const queryParams = grafana_runtime_src.locationService.getSearchObject();
 
     if (!queryParams.orgId) {
-      // TODO this is currently not possible with the LocationService API
       grafana_runtime_src.locationService.partial({
         orgId: storeState.user.orgId
       }, true);
-    } // init services
+    } 
 
 
-    const timeSrv = (0,TimeSrv/* getTimeSrv */.$t)();
-    const dashboardSrv = (0,DashboardSrv/* getDashboardSrv */.h4)(); // legacy srv state, we need this value updated for built-in annotations
+    const timeSrv = (0,TimeSrv.$t)();
+    const dashboardSrv = (0,DashboardSrv.h4)(); 
 
     dashboardSrv.setCurrent(dashboard);
     timeSrv.init(dashboard);
-    const dashboardUid = (0,utils/* toStateKey */.mn)((_args$urlUid = args.urlUid) !== null && _args$urlUid !== void 0 ? _args$urlUid : dashboard.uid); // template values service needs to initialize completely before the rest of the dashboard can load
+    const dashboardUid = (0,utils.mn)((_args$urlUid = args.urlUid) !== null && _args$urlUid !== void 0 ? _args$urlUid : dashboard.uid); 
 
-    await dispatch((0,state_actions/* initVariablesTransaction */.LX)(dashboardUid, dashboard)); // DashboardQueryRunner needs to run after all variables have been resolved so that any annotation query including a variable
-    // will be correctly resolved
+    await dispatch((0,state_actions.LX)(dashboardUid, dashboard)); 
 
-    const runner = (0,DashboardQueryRunner/* createDashboardQueryRunner */.Tl)({
+    const runner = (0,DashboardQueryRunner.Tl)({
       dashboard,
       timeSrv
     });
@@ -2343,49 +2260,46 @@ function initDashboard(args) {
       range: timeSrv.timeRange()
     });
 
-    if ((0,selectors/* getIfExistsLastKey */.cp)(getState()) !== dashboardUid) {
-      // if a previous dashboard has slow running variable queries the batch uid will be the new one
-      // but the args.urlUid will be the same as before initVariablesTransaction was called so then we can't continue initializing
-      // the previous dashboard.
+    if ((0,selectors.cp)(getState()) !== dashboardUid) {
       return;
-    } // If dashboard is in a different init phase it means it cancelled during service init
+    } 
 
 
-    if (getState().dashboard.initPhase !== types/* DashboardInitPhase.Services */.bG.Services) {
+    if (getState().dashboard.initPhase !== types.bG.Services) {
       return;
     }
 
     try {
-      dashboard.processRepeats(); // handle auto fix experimental feature
+      dashboard.processRepeats(); 
 
       if (queryParams.autofitpanels) {
         dashboard.autoFitPanels(window.innerHeight, queryParams.kiosk);
       }
 
-      keybindingSrv/* keybindingSrv.setupDashboardBindings */.K.setupDashboardBindings(dashboard);
+      keybindingSrv.K.setupDashboardBindings(dashboard);
     } catch (err) {
-      dispatch((0,actions/* notifyApp */.$l)((0,appNotification/* createErrorNotification */.t_)('Dashboard init failed', err)));
+      dispatch((0,actions.$l)((0,appNotification.t_)('Dashboard init failed', err)));
       console.error(err);
-    } // send open dashboard event
+    } 
 
 
-    if (args.routeName !== types/* DashboardRoutes.New */.vq.New) {
-      emitDashboardViewEvent(dashboard); // Listen for changes on the current dashboard
+    if (args.routeName !== types.vq.New) {
+      emitDashboardViewEvent(dashboard); 
 
-      dashboardWatcher/* dashboardWatcher.watch */.H.watch(dashboard.uid);
+      dashboardWatcher.H.watch(dashboard.uid);
     } else {
-      dashboardWatcher/* dashboardWatcher.leave */.H.leave();
-    } // set week start
+      dashboardWatcher.H.leave();
+    } 
 
 
     if (dashboard.weekStart !== '') {
       (0,src.setWeekStart)(dashboard.weekStart);
     } else {
       (0,src.setWeekStart)(grafana_runtime_src.config.bootData.user.weekStart);
-    } // yay we are done
+    } 
 
 
-    dispatch((0,reducers/* dashboardInitCompleted */.dS)(dashboard));
+    dispatch((0,reducers.dS)(dashboard));
   };
 }
 function getNewDashboardModelData(urlFolderId) {
@@ -2419,26 +2333,26 @@ function getNewDashboardModelData(urlFolderId) {
 }
 const DASHBOARD_FROM_LS_KEY = 'DASHBOARD_FROM_LS_KEY';
 function setDashboardToFetchFromLocalStorage(model) {
-  store/* default.setObject */.Z.setObject(DASHBOARD_FROM_LS_KEY, model);
+  store.Z.setObject(DASHBOARD_FROM_LS_KEY, model);
 }
 function removeDashboardToFetchFromLocalStorage() {
-  store/* default.delete */.Z["delete"](DASHBOARD_FROM_LS_KEY);
+  store.Z["delete"](DASHBOARD_FROM_LS_KEY);
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/dashboard/utils/loadSnapshotData.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/dashboard/utils/loadSnapshotData.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "y": () => (/* binding */ loadSnapshotData)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var app_core_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/core/config.ts");
-/* harmony import */ var _query_state_DashboardQueryRunner_SnapshotWorker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/query/state/DashboardQueryRunner/SnapshotWorker.ts");
-/* harmony import */ var _query_state_runRequest__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/query/state/runRequest.ts");
-/* harmony import */ var _services_TimeSrv__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/dashboard/services/TimeSrv.ts");
-/* harmony import */ var _panel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/dashboard/utils/panel.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "y": () => ( loadSnapshotData)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var app_core_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/core/config.ts");
+ var _query_state_DashboardQueryRunner_SnapshotWorker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/query/state/DashboardQueryRunner/SnapshotWorker.ts");
+ var _query_state_runRequest__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/query/state/runRequest.ts");
+ var _services_TimeSrv__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/dashboard/services/TimeSrv.ts");
+ var _panel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/dashboard/utils/panel.ts");
 
 
 
@@ -2446,15 +2360,15 @@ function removeDashboardToFetchFromLocalStorage() {
 
 
 function loadSnapshotData(panel, dashboard) {
-  const data = (0,_query_state_runRequest__WEBPACK_IMPORTED_MODULE_3__/* .getProcessedDataFrames */ .F9)(panel.snapshotData);
-  const worker = new _query_state_DashboardQueryRunner_SnapshotWorker__WEBPACK_IMPORTED_MODULE_2__/* .SnapshotWorker */ .g();
+  const data = (0,_query_state_runRequest__WEBPACK_IMPORTED_MODULE_3__ .F9)(panel.snapshotData);
+  const worker = new _query_state_DashboardQueryRunner_SnapshotWorker__WEBPACK_IMPORTED_MODULE_2__ .g();
   const options = {
     dashboard,
     range: (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.getDefaultTimeRange)()
   };
   const annotationEvents = worker.canWork(options) ? worker.getAnnotationsInSnapshot(dashboard, panel.id) : [];
   const annotations = [new _grafana_data__WEBPACK_IMPORTED_MODULE_0__.ArrayDataFrame(annotationEvents)];
-  const timeData = (0,_panel__WEBPACK_IMPORTED_MODULE_5__/* .applyPanelTimeOverrides */ .W1)(panel, (0,_services_TimeSrv__WEBPACK_IMPORTED_MODULE_4__/* .getTimeSrv */ .$t)().timeRange());
+  const timeData = (0,_panel__WEBPACK_IMPORTED_MODULE_5__ .W1)(panel, (0,_services_TimeSrv__WEBPACK_IMPORTED_MODULE_4__ .$t)().timeRange());
   return {
     timeRange: timeData.timeRange,
     state: _grafana_data__WEBPACK_IMPORTED_MODULE_0__.LoadingState.Done,
@@ -2466,21 +2380,21 @@ function loadSnapshotData(panel, dashboard) {
       },
       replaceVariables: panel.replaceVariables,
       fieldConfigRegistry: panel.plugin.fieldConfigRegistry,
-      theme: app_core_config__WEBPACK_IMPORTED_MODULE_1__/* .config.theme2 */ .vc.theme2,
+      theme: app_core_config__WEBPACK_IMPORTED_MODULE_1__ .vc.theme2,
       timeZone: dashboard.getTimezone()
     }),
     annotations
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/inspector/types.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/inspector/types.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "q": () => (/* binding */ InspectTab)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "q": () => ( InspectTab)
+ });
 let InspectTab;
 
 (function (InspectTab) {
@@ -2493,23 +2407,20 @@ let InspectTab;
   InspectTab["Actions"] = "actions";
 })(InspectTab || (InspectTab = {}));
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/panel/panellinks/linkSuppliers.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/panel/panellinks/linkSuppliers.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "H": () => (/* binding */ getPanelLinksSupplier),
-/* harmony export */   "n": () => (/* binding */ getFieldLinksSupplier)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _link_srv__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/panel/panellinks/link_srv.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "H": () => ( getPanelLinksSupplier),
+   "n": () => ( getFieldLinksSupplier)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _link_srv__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/panel/panellinks/link_srv.ts");
 
 
 
-/**
- * Link suppliers creates link models based on a link origin
- */
 const getFieldLinksSupplier = value => {
   const links = value.field.links;
 
@@ -2556,7 +2467,7 @@ const getFieldLinksSupplier = value => {
               },
               text: 'Value'
             };
-          } // Expose other values on the row
+          } 
 
 
           if (value.view) {
@@ -2573,7 +2484,6 @@ const getFieldLinksSupplier = value => {
             };
           }
         } else {
-          // calculation
           scopedVars['__value'] = {
             value: {
               raw: value.display.numeric,
@@ -2594,7 +2504,7 @@ const getFieldLinksSupplier = value => {
       };
 
       return links.map(link => {
-        return (0,_link_srv__WEBPACK_IMPORTED_MODULE_1__/* .getLinkSrv */ .Bq)().getDataLinkUIModel(link, replace, value);
+        return (0,_link_srv__WEBPACK_IMPORTED_MODULE_1__ .Bq)().getDataLinkUIModel(link, replace, value);
       });
     }
   };
@@ -2609,24 +2519,24 @@ const getPanelLinksSupplier = panel => {
   return {
     getLinks: () => {
       return links.map(link => {
-        return (0,_link_srv__WEBPACK_IMPORTED_MODULE_1__/* .getLinkSrv */ .Bq)().getDataLinkUIModel(link, panel.replaceVariables, panel);
+        return (0,_link_srv__WEBPACK_IMPORTED_MODULE_1__ .Bq)().getDataLinkUIModel(link, panel.replaceVariables, panel);
       });
     }
   };
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/panel/state/selectors.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/panel/state/selectors.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "i": () => (/* binding */ getPanelStateForModel)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "i": () => ( getPanelStateForModel)
+ });
 function getPanelStateForModel(state, model) {
   return state.panels[model.key];
 }
 
-/***/ })
+ })
 
 }]);

@@ -1,49 +1,29 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[5303],{
 
-/***/ "./packages/grafana-data/src/datetime/parser.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/datetime/parser.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "J": () => (/* binding */ dateTimeParse)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var moment_timezone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/moment-timezone-npm-0.5.34-e4fe2d01f6-12a1d3d52e.zip/node_modules/moment-timezone/index.js");
-/* harmony import */ var moment_timezone__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment_timezone__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/datetime/common.ts");
-/* harmony import */ var _datemath__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-data/src/datetime/datemath.ts");
-/* harmony import */ var _formats__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-data/src/datetime/formats.ts");
-/* harmony import */ var _moment_wrapper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./packages/grafana-data/src/datetime/moment_wrapper.ts");
-/* eslint-disable id-blacklist, no-restricted-imports, @typescript-eslint/ban-types */
-
+ __webpack_require__.d(__webpack_exports__, {
+   "J": () => ( dateTimeParse)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var moment_timezone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/moment-timezone-npm-0.5.34-e4fe2d01f6-12a1d3d52e.zip/node_modules/moment-timezone/index.js");
+ var moment_timezone__WEBPACK_IMPORTED_MODULE_1___default = __webpack_require__.n(moment_timezone__WEBPACK_IMPORTED_MODULE_1__);
+ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/datetime/common.ts");
+ var _datemath__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-data/src/datetime/datemath.ts");
+ var _formats__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-data/src/datetime/formats.ts");
+ var _moment_wrapper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./packages/grafana-data/src/datetime/moment_wrapper.ts");
 
 
 
 
 
-/**
- * The type that describes options that can be passed when parsing a date and time value.
- * @public
- */
 
-/**
- * Helper function to parse a number, text or Date to a DateTime value. If a timeZone is supplied the incoming value
- * is parsed with that timeZone as a base. The only exception to this is if the passed value is in a UTC-based
- * format. Then it will use UTC as the base. If no format is specified the current system format will be assumed.
- *
- * It can also parse the Grafana quick date and time format, e.g. now-6h will be parsed as Date.now() - 6 hours and
- * returned as a valid DateTime value.
- *
- * If no options are supplied, then default values are used. For more details please see {@link DateTimeOptions}.
- *
- * @param value - should be a parsable date and time value
- * @param options
- *
- * @public
- */
+
 const dateTimeParse = (value, options) => {
-  if ((0,_moment_wrapper__WEBPACK_IMPORTED_MODULE_5__/* .isDateTime */ .v9)(value)) {
+  if ((0,_moment_wrapper__WEBPACK_IMPORTED_MODULE_5__ .v9)(value)) {
     return value;
   }
 
@@ -66,9 +46,9 @@ const parseString = (value, options) => {
     return parsed || moment_timezone__WEBPACK_IMPORTED_MODULE_1___default()();
   }
 
-  const timeZone = (0,_common__WEBPACK_IMPORTED_MODULE_2__/* .getTimeZone */ .Z)(options);
+  const timeZone = (0,_common__WEBPACK_IMPORTED_MODULE_2__ .Z)(options);
   const zone = moment_timezone__WEBPACK_IMPORTED_MODULE_1___default().tz.zone(timeZone);
-  const format = (_options$format = options === null || options === void 0 ? void 0 : options.format) !== null && _options$format !== void 0 ? _options$format : _formats__WEBPACK_IMPORTED_MODULE_4__/* .systemDateFormats.fullDate */ .U6.fullDate;
+  const format = (_options$format = options === null || options === void 0 ? void 0 : options.format) !== null && _options$format !== void 0 ? _options$format : _formats__WEBPACK_IMPORTED_MODULE_4__ .U6.fullDate;
 
   if (zone && zone.name) {
     return moment_timezone__WEBPACK_IMPORTED_MODULE_1___default().tz(value, format, zone.name);
@@ -85,7 +65,7 @@ const parseString = (value, options) => {
 
 const parseOthers = (value, options) => {
   const date = value;
-  const timeZone = (0,_common__WEBPACK_IMPORTED_MODULE_2__/* .getTimeZone */ .Z)(options);
+  const timeZone = (0,_common__WEBPACK_IMPORTED_MODULE_2__ .Z)(options);
   const zone = moment_timezone__WEBPACK_IMPORTED_MODULE_1___default().tz.zone(timeZone);
 
   if (zone && zone.name) {
@@ -101,14 +81,14 @@ const parseOthers = (value, options) => {
   }
 };
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/events/eventFactory.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/events/eventFactory.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "X": () => (/* binding */ eventFactory)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "X": () => ( eventFactory)
+ });
 const typeList = new Set();
 function eventFactory(name) {
   if (typeList.has(name)) {
@@ -121,26 +101,18 @@ function eventFactory(name) {
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/events/types.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/events/types.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "R": () => (/* binding */ BusEventWithPayload),
-/* harmony export */   "m": () => (/* binding */ BusEventBase)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "R": () => ( BusEventWithPayload),
+   "m": () => ( BusEventBase)
+ });
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-/**
- * @alpha
- * internal interface
- */
 
-/**
- * @alpha
- * Base event type
- */
 class BusEventBase {
   constructor() {
     _defineProperty(this, "type", void 0);
@@ -149,15 +121,10 @@ class BusEventBase {
 
     _defineProperty(this, "origin", void 0);
 
-    //@ts-ignore
     this.type = this.__proto__.constructor.type;
   }
 
 }
-/**
- * @alpha
- * Base event type with payload
- */
 
 class BusEventWithPayload extends BusEventBase {
   constructor(payload) {
@@ -169,62 +136,56 @@ class BusEventWithPayload extends BusEventBase {
   }
 
 }
-/*
- * Interface for an event type constructor
- */
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/field/FieldConfigOptionsRegistry.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/field/FieldConfigOptionsRegistry.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (/* binding */ FieldConfigOptionsRegistry)
-/* harmony export */ });
-/* harmony import */ var _utils_Registry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/utils/Registry.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "Z": () => ( FieldConfigOptionsRegistry)
+ });
+ var _utils_Registry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/utils/Registry.ts");
 
-class FieldConfigOptionsRegistry extends _utils_Registry__WEBPACK_IMPORTED_MODULE_0__/* .Registry */ .B {}
+class FieldConfigOptionsRegistry extends _utils_Registry__WEBPACK_IMPORTED_MODULE_0__ .B {}
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/field/fieldComparers.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/field/fieldComparers.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Mo": () => (/* binding */ fieldIndexComparer)
-/* harmony export */ });
-/* unused harmony exports timeComparer, numericComparer, stringComparer, booleanComparer */
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _datetime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/datetime/index.ts");
-/* harmony import */ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "Mo": () => ( fieldIndexComparer)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var _datetime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/datetime/index.ts");
+ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
 
 
 
 
-/** @public */
 const fieldIndexComparer = function (field) {
   let reverse = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
   const values = field.values;
 
   switch (field.type) {
-    case _types_dataFrame__WEBPACK_IMPORTED_MODULE_2__/* .FieldType.number */ .fS.number:
+    case _types_dataFrame__WEBPACK_IMPORTED_MODULE_2__ .fS.number:
       return numericIndexComparer(values, reverse);
 
-    case _types_dataFrame__WEBPACK_IMPORTED_MODULE_2__/* .FieldType.string */ .fS.string:
+    case _types_dataFrame__WEBPACK_IMPORTED_MODULE_2__ .fS.string:
       return stringIndexComparer(values, reverse);
 
-    case _types_dataFrame__WEBPACK_IMPORTED_MODULE_2__/* .FieldType.boolean */ .fS.boolean:
+    case _types_dataFrame__WEBPACK_IMPORTED_MODULE_2__ .fS.boolean:
       return booleanIndexComparer(values, reverse);
 
-    case _types_dataFrame__WEBPACK_IMPORTED_MODULE_2__/* .FieldType.time */ .fS.time:
+    case _types_dataFrame__WEBPACK_IMPORTED_MODULE_2__ .fS.time:
       return timeIndexComparer(values, reverse);
 
     default:
       return naturalIndexComparer(reverse);
   }
 };
-/** @public */
 
 const timeComparer = (a, b) => {
   if (!a || !b) {
@@ -235,22 +196,20 @@ const timeComparer = (a, b) => {
     return numericComparer(a, b);
   }
 
-  if ((0,_datetime__WEBPACK_IMPORTED_MODULE_1__/* .dateTime */ .CQ)(a).isBefore(b)) {
+  if ((0,_datetime__WEBPACK_IMPORTED_MODULE_1__ .CQ)(a).isBefore(b)) {
     return -1;
   }
 
-  if ((0,_datetime__WEBPACK_IMPORTED_MODULE_1__/* .dateTime */ .CQ)(b).isBefore(a)) {
+  if ((0,_datetime__WEBPACK_IMPORTED_MODULE_1__ .CQ)(b).isBefore(a)) {
     return 1;
   }
 
   return 0;
 };
-/** @public */
 
 const numericComparer = (a, b) => {
   return a - b;
 };
-/** @public */
 
 const stringComparer = (a, b) => {
   if (!a || !b) {
@@ -313,27 +272,24 @@ const naturalIndexComparer = reverse => {
   };
 };
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/field/fieldState.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/field/fieldState.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "C": () => (/* binding */ getFieldDisplayName),
-/* harmony export */   "n": () => (/* binding */ getFrameDisplayName)
-/* harmony export */ });
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/types/index.ts");
-/* harmony import */ var _utils_labels__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/utils/labels.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "C": () => ( getFieldDisplayName),
+   "n": () => ( getFrameDisplayName)
+ });
+ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/types/index.ts");
+ var _utils_labels__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/utils/labels.ts");
 
 
-/**
- * Get an appropriate display title
- */
 
 function getFrameDisplayName(frame, index) {
   if (frame.name) {
     return frame.name;
-  } // Single field with tags
+  } 
 
 
   const valuesWithLabels = [];
@@ -345,12 +301,12 @@ function getFrameDisplayName(frame, index) {
   }
 
   if (valuesWithLabels.length === 1) {
-    return (0,_utils_labels__WEBPACK_IMPORTED_MODULE_1__/* .formatLabels */ .aA)(valuesWithLabels[0].labels);
-  } // list all the
+    return (0,_utils_labels__WEBPACK_IMPORTED_MODULE_1__ .aA)(valuesWithLabels[0].labels);
+  } 
 
 
   if (index === undefined) {
-    return frame.fields.filter(f => f.type !== _types__WEBPACK_IMPORTED_MODULE_0__/* .FieldType.time */ .fS.time).map(f => getFieldDisplayName(f, frame)).join(', ');
+    return frame.fields.filter(f => f.type !== _types__WEBPACK_IMPORTED_MODULE_0__ .fS.time).map(f => getFieldDisplayName(f, frame)).join(', ');
   }
 
   if (frame.refId) {
@@ -375,9 +331,6 @@ function getFieldDisplayName(field, frame, allFrames) {
   field.state.multipleFrames = multipleFrames;
   return displayName;
 }
-/**
- * Get an appropriate display name. If the 'displayName' field config is set, use that.
- */
 
 function calculateFieldDisplayName(field, frame, allFrames) {
   var _field$config, _field$config2, _field$config3;
@@ -391,15 +344,13 @@ function calculateFieldDisplayName(field, frame, allFrames) {
 
   if (frame && (_field$config3 = field.config) !== null && _field$config3 !== void 0 && _field$config3.displayNameFromDS) {
     return field.config.displayNameFromDS;
-  } // This is an ugly exception for time field
-  // For time series we should normally treat time field with same name
-  // But in case it has a join source we should handle it as normal field
+  } 
 
 
-  if (field.type === _types__WEBPACK_IMPORTED_MODULE_0__/* .FieldType.time */ .fS.time && !field.labels) {
+  if (field.type === _types__WEBPACK_IMPORTED_MODULE_0__ .fS.time && !field.labels) {
     var _displayName;
 
-    return (_displayName = displayName) !== null && _displayName !== void 0 ? _displayName : _types__WEBPACK_IMPORTED_MODULE_0__/* .TIME_SERIES_TIME_FIELD_NAME */ .Ls;
+    return (_displayName = displayName) !== null && _displayName !== void 0 ? _displayName : _types__WEBPACK_IMPORTED_MODULE_0__ .Ls;
   }
 
   let parts = [];
@@ -424,7 +375,7 @@ function calculateFieldDisplayName(field, frame, allFrames) {
     frameNameAdded = true;
   }
 
-  if (field.name && field.name !== _types__WEBPACK_IMPORTED_MODULE_0__/* .TIME_SERIES_VALUE_FIELD_NAME */ .M5) {
+  if (field.name && field.name !== _types__WEBPACK_IMPORTED_MODULE_0__ .M5) {
     parts.push(field.name);
   }
 
@@ -432,7 +383,7 @@ function calculateFieldDisplayName(field, frame, allFrames) {
     let singleLabelName = getSingleLabelName(allFrames !== null && allFrames !== void 0 ? allFrames : [frame]);
 
     if (!singleLabelName) {
-      let allLabels = (0,_utils_labels__WEBPACK_IMPORTED_MODULE_1__/* .formatLabels */ .aA)(field.labels);
+      let allLabels = (0,_utils_labels__WEBPACK_IMPORTED_MODULE_1__ .aA)(field.labels);
 
       if (allLabels) {
         parts.push(allLabels);
@@ -442,10 +393,10 @@ function calculateFieldDisplayName(field, frame, allFrames) {
       parts.push(field.labels[singleLabelName]);
       labelsAdded = true;
     }
-  } // if we have not added frame name and no labels, and field name = Value, we should add frame name
+  } 
 
 
-  if (frame && !frameNameAdded && !labelsAdded && field.name === _types__WEBPACK_IMPORTED_MODULE_0__/* .TIME_SERIES_VALUE_FIELD_NAME */ .M5) {
+  if (frame && !frameNameAdded && !labelsAdded && field.name === _types__WEBPACK_IMPORTED_MODULE_0__ .M5) {
     if (frame.name && frame.name.length > 0) {
       parts.push(frame.name);
       frameNameAdded = true;
@@ -457,8 +408,8 @@ function calculateFieldDisplayName(field, frame, allFrames) {
   } else if (field.name) {
     displayName = field.name;
   } else {
-    displayName = _types__WEBPACK_IMPORTED_MODULE_0__/* .TIME_SERIES_VALUE_FIELD_NAME */ .M5;
-  } // Ensure unique field name
+    displayName = _types__WEBPACK_IMPORTED_MODULE_0__ .M5;
+  } 
 
 
   if (displayName === field.name) {
@@ -499,9 +450,6 @@ function getUniqueFieldName(field, frame) {
 
   return field.name;
 }
-/**
- * Checks all data frames and return name of label if there is only one label name in all frames
- */
 
 
 function getSingleLabelName(frames) {
@@ -513,7 +461,7 @@ function getSingleLabelName(frames) {
     for (const field of frame.fields) {
       if (!field.labels) {
         continue;
-      } // yes this should be in!
+      } 
 
 
       for (const labelKey in field.labels) {
@@ -529,21 +477,21 @@ function getSingleLabelName(frames) {
   return singleName;
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/text/sanitize.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/text/sanitize.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Nm": () => (/* binding */ sanitizeUrl),
-/* harmony export */   "Nw": () => (/* binding */ sanitize),
-/* harmony export */   "Xv": () => (/* binding */ escapeHtml),
-/* harmony export */   "he": () => (/* binding */ sanitizeTextPanelContent),
-/* harmony export */   "oT": () => (/* binding */ hasAnsiCodes)
-/* harmony export */ });
-/* harmony import */ var _braintree_sanitize_url__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/@braintree-sanitize-url-npm-6.0.0-c4f0ae4c7f-409ce7709d.zip/node_modules/@braintree/sanitize-url/dist/index.js");
-/* harmony import */ var xss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/xss-npm-1.0.11-a8d30aee9c-86104fe3c0.zip/node_modules/xss/lib/index.js");
-/* harmony import */ var xss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(xss__WEBPACK_IMPORTED_MODULE_1__);
+ __webpack_require__.d(__webpack_exports__, {
+   "Nm": () => ( sanitizeUrl),
+   "Nw": () => ( sanitize),
+   "Xv": () => ( escapeHtml),
+   "he": () => ( sanitizeTextPanelContent),
+   "oT": () => ( hasAnsiCodes)
+ });
+ var _braintree_sanitize_url__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/@braintree-sanitize-url-npm-6.0.0-c4f0ae4c7f-409ce7709d.zip/node_modules/@braintree/sanitize-url/dist/index.js");
+ var xss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/xss-npm-1.0.11-a8d30aee9c-86104fe3c0.zip/node_modules/xss/lib/index.js");
+ var xss__WEBPACK_IMPORTED_MODULE_1___default = __webpack_require__.n(xss__WEBPACK_IMPORTED_MODULE_1__);
 
 
 const XSSWL = Object.keys(xss__WEBPACK_IMPORTED_MODULE_1__.whiteList).reduce((acc, element) => {
@@ -576,13 +524,6 @@ const sanitizeTextPanelWhitelist = new xss__WEBPACK_IMPORTED_MODULE_1__.FilterXS
     })
   }
 });
-/**
- * Returns string safe from XSS attacks.
- *
- * Even though we allow the style-attribute, there's still default filtering applied to it
- * Info: https://github.com/leizongmin/js-xss#customize-css-filter
- * Whitelist: https://github.com/leizongmin/js-css-filter/blob/master/lib/default.js
- */
 
 function sanitize(unsanitizedString) {
   try {
@@ -601,7 +542,7 @@ function sanitizeTextPanelContent(unsanitizedString) {
   }
 }
 function sanitizeUrl(url) {
-  return (0,_braintree_sanitize_url__WEBPACK_IMPORTED_MODULE_0__/* .sanitizeUrl */ .N)(url);
+  return (0,_braintree_sanitize_url__WEBPACK_IMPORTED_MODULE_0__ .N)(url);
 }
 function hasAnsiCodes(input) {
   return /\u001b\[\d{1,2}m/.test(input);
@@ -610,23 +551,19 @@ function escapeHtml(str) {
   return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/themes/createTheme.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/themes/createTheme.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "j": () => (/* binding */ createTheme)
+  "j": () => ( createTheme)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/themes/breakpoints.ts
 var themes_breakpoints = __webpack_require__("./packages/grafana-data/src/themes/breakpoints.ts");
-// EXTERNAL MODULE: ./packages/grafana-data/src/themes/createColors.ts
 var createColors = __webpack_require__("./packages/grafana-data/src/themes/createColors.ts");
-;// CONCATENATED MODULE: ./packages/grafana-data/src/themes/createComponents.ts
-/** @beta */
+;
 function createComponents(colors, shadows) {
   const panel = {
     padding: 1,
@@ -674,19 +611,13 @@ function createComponents(colors, shadows) {
     }
   };
 }
-// EXTERNAL MODULE: ./packages/grafana-data/src/themes/createShadows.ts
 var createShadows = __webpack_require__("./packages/grafana-data/src/themes/createShadows.ts");
-// EXTERNAL MODULE: ./packages/grafana-data/src/themes/createShape.ts
 var createShape = __webpack_require__("./packages/grafana-data/src/themes/createShape.ts");
-// EXTERNAL MODULE: ./packages/grafana-data/src/themes/createSpacing.ts
 var createSpacing = __webpack_require__("./packages/grafana-data/src/themes/createSpacing.ts");
-// EXTERNAL MODULE: ./packages/grafana-data/src/themes/createTransitions.ts
 var createTransitions = __webpack_require__("./packages/grafana-data/src/themes/createTransitions.ts");
-// EXTERNAL MODULE: ./packages/grafana-data/src/themes/createTypography.ts
 var createTypography = __webpack_require__("./packages/grafana-data/src/themes/createTypography.ts");
-// EXTERNAL MODULE: ./packages/grafana-data/src/types/index.ts + 17 modules
 var types = __webpack_require__("./packages/grafana-data/src/types/index.ts");
-;// CONCATENATED MODULE: ./packages/grafana-data/src/themes/createV1Theme.ts
+;
 
 function createV1Theme(theme) {
   const oldCommon = {
@@ -747,16 +678,12 @@ function createV1Theme(theme) {
       lg: theme.spacing(3),
       xl: theme.spacing(4),
       gutter: theme.spacing(4),
-      // Next-gen forms spacing variables
-      // TODO: Move variables definition to respective components when implementing
       formSpacingBase: theme.spacing.gridSize,
       formMargin: `${theme.spacing.gridSize * 4}px`,
       formFieldsetMargin: `${theme.spacing.gridSize * 2}px`,
       formInputHeight: theme.spacing.gridSize * 4,
       formButtonHeight: theme.spacing.gridSize * 4,
       formInputPaddingHorizontal: `${theme.spacing.gridSize}px`,
-      // Used for icons do define spacing between icon and input field
-      // Applied on the right(prefix) or left(suffix)
       formInputAffixPaddingHorizontal: `${theme.spacing.gridSize / 2}px`,
       formInputMargin: `${theme.spacing.gridSize * 2}px`,
       formLabelPadding: '0 0 0 2px',
@@ -803,9 +730,7 @@ function createV1Theme(theme) {
     gray4: '#d8d9da',
     gray5: '#ececec',
     gray6: '#f4f5f8',
-    // not used in dark theme
     gray7: '#fbfbfb',
-    // not used in dark theme
     redBase: '#e02f44',
     redShade: '#c4162a',
     greenBase: '#299c46',
@@ -840,7 +765,6 @@ function createV1Theme(theme) {
     textBlue: theme.colors.primary.text
   };
   const form = {
-    // Next-gen forms functional colors
     formLabel: theme.colors.text.primary,
     formDescription: theme.colors.text.secondary,
     formInputBg: theme.components.input.background,
@@ -857,7 +781,7 @@ function createV1Theme(theme) {
     formValidationMessageBg: theme.colors.error.main
   };
   return Object.assign({}, oldCommon, {
-    type: theme.colors.mode === 'dark' ? types/* GrafanaThemeType.Dark */.Qu.Dark : types/* GrafanaThemeType.Light */.Qu.Light,
+    type: theme.colors.mode === 'dark' ? types.Qu.Dark : types.Qu.Light,
     isDark: theme.isDark,
     isLight: theme.isLight,
     name: theme.name,
@@ -895,7 +819,6 @@ function createV1Theme(theme) {
   });
 }
 const commonColorsPalette = {
-  // New greys palette used by next-gen form elements
   gray98: '#f7f8fa',
   gray97: '#f1f5f9',
   gray95: '#e9edf2',
@@ -908,23 +831,15 @@ const commonColorsPalette = {
   gray15: '#202226',
   gray10: '#141619',
   gray05: '#0b0c0e',
-  // New blues palette used by next-gen form elements
   blue95: '#5794f2',
-  // blue95
   blue85: '#33a2e5',
-  // blueText
   blue80: '#3274d9',
-  // blue80
   blue77: '#1f60c4',
-  // blue77
-  // New reds palette used by next-gen form elements
   red88: '#e02f44'
 };
-// EXTERNAL MODULE: ./packages/grafana-data/src/themes/createVisualizationColors.ts
 var createVisualizationColors = __webpack_require__("./packages/grafana-data/src/themes/createVisualizationColors.ts");
-// EXTERNAL MODULE: ./packages/grafana-data/src/themes/zIndex.ts
 var zIndex = __webpack_require__("./packages/grafana-data/src/themes/zIndex.ts");
-;// CONCATENATED MODULE: ./packages/grafana-data/src/themes/createTheme.ts
+;
 
 
 
@@ -936,9 +851,7 @@ var zIndex = __webpack_require__("./packages/grafana-data/src/themes/zIndex.ts")
 
 
 
-/** @internal */
 
-/** @internal */
 function createTheme() {
   let options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   const {
@@ -948,15 +861,15 @@ function createTheme() {
     shape: shapeInput = {},
     typography: typographyInput = {}
   } = options;
-  const colors = (0,createColors/* createColors */.i)(colorsInput);
-  const breakpoints = (0,themes_breakpoints/* createBreakpoints */._)();
-  const spacing = (0,createSpacing/* createSpacing */._)(spacingInput);
-  const shape = (0,createShape/* createShape */.r)(shapeInput);
-  const typography = (0,createTypography/* createTypography */.f)(colors, typographyInput);
-  const shadows = (0,createShadows/* createShadows */.G)(colors);
-  const transitions = (0,createTransitions/* createTransitions */.ig)();
+  const colors = (0,createColors.i)(colorsInput);
+  const breakpoints = (0,themes_breakpoints._)();
+  const spacing = (0,createSpacing._)(spacingInput);
+  const shape = (0,createShape.r)(shapeInput);
+  const typography = (0,createTypography.f)(colors, typographyInput);
+  const shadows = (0,createShadows.G)(colors);
+  const transitions = (0,createTransitions.ig)();
   const components = createComponents(colors, shadows);
-  const visualization = (0,createVisualizationColors/* createVisualizationColors */.x)(colors);
+  const visualization = (0,createVisualizationColors.x)(colors);
   const theme = {
     name,
     isDark: colors.mode === 'dark',
@@ -970,50 +883,39 @@ function createTheme() {
     shadows,
     transitions,
     visualization,
-    zIndex: Object.assign({}, zIndex/* zIndex */.W)
+    zIndex: Object.assign({}, zIndex.W)
   };
   return Object.assign({}, theme, {
     v1: createV1Theme(theme)
   });
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/themes/palette.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/themes/palette.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "D": () => (/* binding */ palette)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "D": () => ( palette)
+ });
 const palette = {
   white: '#FFFFFF',
   black: '#000000',
   gray25: '#2c3235',
   gray15: '#22252b',
-  //'#202226',
   gray10: '#181b1f',
-  // old '#141619',
   gray05: '#111217',
-  // old '#0b0c0e',
-  // new from figma,
   darkLayer0: '#18181A',
   darkLayer1: '#212124',
   darkLayer2: '#2a2a2f',
-  // figma used #34343B but a bit too bright
   darkBorder1: '#34343B',
   darkBorder2: '#64646B',
-  // Dashboard bg / layer 0 (light theme)
   gray90: '#F4F5F5',
-  // Card bg / layer 1
   gray100: '#F4F5F5',
-  // divider line
   gray80: '#D0D1D3',
-  // from figma
   lightBorder1: '#E4E7E7',
   blueDarkMain: '#3D71D9',
-  // '#4165F5',
   blueDarkText: '#6E9FFF',
-  // '#58a6ff', //'#33a2e5', // '#5790FF',
   redDarkMain: '#D10E5C',
   redDarkText: '#FF5286',
   greenDarkMain: '#1A7F4B',
@@ -1030,26 +932,25 @@ const palette = {
   orangeLightText: '#8A6C00'
 };
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/fieldReducer.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/fieldReducer.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Kx": () => (/* binding */ reduceField),
-/* harmony export */   "TB": () => (/* binding */ fieldReducers),
-/* harmony export */   "gz": () => (/* binding */ ReducerID),
-/* harmony export */   "uP": () => (/* binding */ doStandardCalcs)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _types_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/types/index.ts");
-/* harmony import */ var _utils_Registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/utils/Registry.ts");
-// Libraries
-
+ __webpack_require__.d(__webpack_exports__, {
+   "Kx": () => ( reduceField),
+   "TB": () => ( fieldReducers),
+   "gz": () => ( ReducerID),
+   "uP": () => ( doStandardCalcs)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var _types_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/types/index.ts");
+ var _utils_Registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/utils/Registry.ts");
 
 
-let ReducerID; // Internal function
+
+let ReducerID; 
 
 (function (ReducerID) {
   ReducerID["sum"] = "sum";
@@ -1079,11 +980,6 @@ let ReducerID; // Internal function
   ReducerID["uniqueValues"] = "uniqueValues";
 })(ReducerID || (ReducerID = {}));
 
-/**
- * @returns an object with a key for each selected stat
- * NOTE: This will also modify the 'field.state' object,
- * leaving values in a cache until cleared.
- */
 function reduceField(options) {
   var _field$state;
 
@@ -1097,7 +993,6 @@ function reduceField(options) {
   }
 
   if ((_field$state = field.state) !== null && _field$state !== void 0 && _field$state.calcs) {
-    // Find the values we need to calculate
     const missing = [];
 
     for (const s of reducers) {
@@ -1115,8 +1010,7 @@ function reduceField(options) {
     field.state = {};
   }
 
-  const queue = fieldReducers.list(reducers); // Return early for empty series
-  // This lets the concrete implementations assume at least one row
+  const queue = fieldReducers.list(reducers); 
 
   const data = field.values;
 
@@ -1133,14 +1027,14 @@ function reduceField(options) {
   const {
     nullValueMode
   } = field.config;
-  const ignoreNulls = nullValueMode === _types_index__WEBPACK_IMPORTED_MODULE_1__/* .NullValueMode.Ignore */ .Gl.Ignore;
-  const nullAsZero = nullValueMode === _types_index__WEBPACK_IMPORTED_MODULE_1__/* .NullValueMode.AsZero */ .Gl.AsZero; // Avoid calculating all the standard stats if possible
+  const ignoreNulls = nullValueMode === _types_index__WEBPACK_IMPORTED_MODULE_1__ .Gl.Ignore;
+  const nullAsZero = nullValueMode === _types_index__WEBPACK_IMPORTED_MODULE_1__ .Gl.AsZero; 
 
   if (queue.length === 1 && queue[0].reduce) {
     const values = queue[0].reduce(field, ignoreNulls, nullAsZero);
     field.state.calcs = Object.assign({}, field.state.calcs, values);
     return values;
-  } // For now everything can use the standard stats
+  } 
 
 
   let values = doStandardCalcs(field, ignoreNulls, nullAsZero);
@@ -1153,13 +1047,9 @@ function reduceField(options) {
 
   field.state.calcs = Object.assign({}, field.state.calcs, values);
   return values;
-} // ------------------------------------------------------------------------------
-//
-//  No Exported symbols below here.
-//
-// ------------------------------------------------------------------------------
+} 
 
-const fieldReducers = new _utils_Registry__WEBPACK_IMPORTED_MODULE_2__/* .Registry */ .B(() => [{
+const fieldReducers = new _utils_Registry__WEBPACK_IMPORTED_MODULE_2__ .B(() => [{
   id: ReducerID.lastNotNull,
   name: 'Last *',
   description: 'Last non-null value',
@@ -1328,13 +1218,12 @@ function doStandardCalcs(field, ignoreNulls, nullAsZero) {
     delta: 0,
     step: Number.MAX_VALUE,
     diffperc: 0,
-    // Just used for calculations -- not exposed as a stat
     previousDeltaUp: true
   };
   let squareSum = 0;
   const data = field.values;
   calcs.count = data.length;
-  const isNumberField = field.type === _types_index__WEBPACK_IMPORTED_MODULE_1__/* .FieldType.number */ .fS.number || _types_index__WEBPACK_IMPORTED_MODULE_1__/* .FieldType.time */ .fS.time;
+  const isNumberField = field.type === _types_index__WEBPACK_IMPORTED_MODULE_1__ .fS.number || _types_index__WEBPACK_IMPORTED_MODULE_1__ .fS.time;
 
   for (let i = 0; i < data.length; i++) {
     let currentValue = data.get(i);
@@ -1356,7 +1245,6 @@ function doStandardCalcs(field, ignoreNulls, nullAsZero) {
     }
 
     if (currentValue != null) {
-      // null || undefined
       const isFirst = calcs.firstNotNull === null;
 
       if (isFirst) {
@@ -1372,22 +1260,20 @@ function doStandardCalcs(field, ignoreNulls, nullAsZero) {
           const step = currentValue - calcs.lastNotNull;
 
           if (calcs.step > step) {
-            calcs.step = step; // the minimum interval
+            calcs.step = step; 
           }
 
           if (calcs.lastNotNull > currentValue) {
-            // counter reset
             calcs.previousDeltaUp = false;
 
             if (i === data.length - 1) {
-              // reset on last
               calcs.delta += currentValue;
             }
           } else {
             if (calcs.previousDeltaUp) {
-              calcs.delta += step; // normal increment
+              calcs.delta += step; 
             } else {
-              calcs.delta += currentValue; // account for counter reset
+              calcs.delta += currentValue; 
             }
 
             calcs.previousDeltaUp = true;
@@ -1573,24 +1459,23 @@ function calculateDistinctCount(field, ignoreNulls, nullAsZero) {
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/matchers/fieldTypeMatcher.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/matchers/fieldTypeMatcher.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "N": () => (/* binding */ getFieldTypeMatchers)
-/* harmony export */ });
-/* harmony import */ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "N": () => ( getFieldTypeMatchers)
+ });
+ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
 
- // General Field matcher
 
 const fieldTypeMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .FieldMatcherID.byType */ .mi.byType,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .mi.byType,
   name: 'Field Type',
   description: 'match based on the field type',
-  defaultOptions: _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__/* .FieldType.number */ .fS.number,
+  defaultOptions: _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ .fS.number,
   get: type => {
     return (field, frame, allFrames) => {
       return type === field.type;
@@ -1599,54 +1484,47 @@ const fieldTypeMatcher = {
   getOptionsDisplayText: type => {
     return `Field type: ${type}`;
   }
-}; // Numeric Field matcher
-// This gets its own entry so it shows up in the dropdown
+}; 
 
 const numericMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .FieldMatcherID.numeric */ .mi.numeric,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .mi.numeric,
   name: 'Numeric Fields',
   description: 'Fields with type number',
   get: () => {
-    return fieldTypeMatcher.get(_types_dataFrame__WEBPACK_IMPORTED_MODULE_0__/* .FieldType.number */ .fS.number);
+    return fieldTypeMatcher.get(_types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ .fS.number);
   },
   getOptionsDisplayText: () => {
     return 'Numeric Fields';
   }
-}; // Time Field matcher
+}; 
 
 const timeMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .FieldMatcherID.time */ .mi.time,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .mi.time,
   name: 'Time Fields',
   description: 'Fields with type time',
   get: () => {
-    return fieldTypeMatcher.get(_types_dataFrame__WEBPACK_IMPORTED_MODULE_0__/* .FieldType.time */ .fS.time);
+    return fieldTypeMatcher.get(_types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ .fS.time);
   },
   getOptionsDisplayText: () => {
     return 'Time Fields';
   }
 };
-/**
- * Registry Initialization
- */
 
 function getFieldTypeMatchers() {
   return [fieldTypeMatcher, numericMatcher, timeMatcher];
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/matchers/ids.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/matchers/ids.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "E4": () => (/* binding */ FrameMatcherID),
-/* harmony export */   "Ff": () => (/* binding */ MatcherID),
-/* harmony export */   "mE": () => (/* binding */ ValueMatcherID),
-/* harmony export */   "mi": () => (/* binding */ FieldMatcherID)
-/* harmony export */ });
-// This needs to be in its own file to avoid circular references
-// Builtin Predicates
-// not using 'any' and 'never' since they are reserved keywords
+ __webpack_require__.d(__webpack_exports__, {
+   "E4": () => ( FrameMatcherID),
+   "Ff": () => ( MatcherID),
+   "mE": () => ( ValueMatcherID),
+   "mi": () => ( FieldMatcherID)
+ });
 let MatcherID;
 
 (function (MatcherID) {
@@ -1658,9 +1536,6 @@ let MatcherID;
 })(MatcherID || (MatcherID = {}));
 
 let FieldMatcherID;
-/**
- * Field name matchers
- */
 
 (function (FieldMatcherID) {
   FieldMatcherID["numeric"] = "numeric";
@@ -1676,9 +1551,6 @@ let FieldMatcherID;
 })(FieldMatcherID || (FieldMatcherID = {}));
 
 let FrameMatcherID;
-/**
- * @public
- */
 
 (function (FrameMatcherID) {
   FrameMatcherID["byName"] = "byName";
@@ -1702,34 +1574,32 @@ let ValueMatcherID;
   ValueMatcherID["between"] = "between";
 })(ValueMatcherID || (ValueMatcherID = {}));
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/matchers/predicates.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/matchers/predicates.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Qw": () => (/* binding */ notTimeFieldMatcher),
-/* harmony export */   "Ty": () => (/* binding */ getFieldPredicateMatchers),
-/* harmony export */   "fX": () => (/* binding */ getFramePredicateMatchers),
-/* harmony export */   "m3": () => (/* binding */ alwaysFieldMatcher)
-/* harmony export */ });
-/* unused harmony exports alwaysFrameMatcher, neverFieldMatcher, neverFrameMatcher */
-/* harmony import */ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
-/* harmony import */ var _matchers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "Qw": () => ( notTimeFieldMatcher),
+   "Ty": () => ( getFieldPredicateMatchers),
+   "fX": () => ( getFramePredicateMatchers),
+   "m3": () => ( alwaysFieldMatcher)
+ });
+ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
+ var _matchers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
 
 
 
 const anyFieldMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_2__/* .MatcherID.anyMatch */ .Ff.anyMatch,
+  id: _ids__WEBPACK_IMPORTED_MODULE_2__ .Ff.anyMatch,
   name: 'Any',
   description: 'Any child matches (OR)',
   excludeFromPicker: true,
   defaultOptions: [],
-  // empty array
   get: options => {
     const children = options.map(option => {
-      return (0,_matchers__WEBPACK_IMPORTED_MODULE_1__/* .getFieldMatcher */ .sq)(option);
+      return (0,_matchers__WEBPACK_IMPORTED_MODULE_1__ .sq)(option);
     });
     return (field, frame, allFrames) => {
       for (const child of children) {
@@ -1749,7 +1619,7 @@ const anyFieldMatcher = {
         text += ' OR ';
       }
 
-      const matcher = _matchers__WEBPACK_IMPORTED_MODULE_1__/* .fieldMatchers.get */ .Ls.get(sub.id);
+      const matcher = _matchers__WEBPACK_IMPORTED_MODULE_1__ .Ls.get(sub.id);
       text += matcher.getOptionsDisplayText ? matcher.getOptionsDisplayText(sub) : matcher.name;
     }
 
@@ -1757,15 +1627,14 @@ const anyFieldMatcher = {
   }
 };
 const anyFrameMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_2__/* .MatcherID.anyMatch */ .Ff.anyMatch,
+  id: _ids__WEBPACK_IMPORTED_MODULE_2__ .Ff.anyMatch,
   name: 'Any',
   description: 'Any child matches (OR)',
   excludeFromPicker: true,
   defaultOptions: [],
-  // empty array
   get: options => {
     const children = options.map(option => {
-      return (0,_matchers__WEBPACK_IMPORTED_MODULE_1__/* .getFrameMatchers */ .b9)(option);
+      return (0,_matchers__WEBPACK_IMPORTED_MODULE_1__ .b9)(option);
     });
     return frame => {
       for (const child of children) {
@@ -1785,7 +1654,7 @@ const anyFrameMatcher = {
         text += ' OR ';
       }
 
-      const matcher = _matchers__WEBPACK_IMPORTED_MODULE_1__/* .frameMatchers.get */ .Ac.get(sub.id);
+      const matcher = _matchers__WEBPACK_IMPORTED_MODULE_1__ .Ac.get(sub.id);
       text += matcher.getOptionsDisplayText ? matcher.getOptionsDisplayText(sub) : matcher.name;
     }
 
@@ -1793,15 +1662,14 @@ const anyFrameMatcher = {
   }
 };
 const allFieldsMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_2__/* .MatcherID.allMatch */ .Ff.allMatch,
+  id: _ids__WEBPACK_IMPORTED_MODULE_2__ .Ff.allMatch,
   name: 'All',
   description: 'Everything matches (AND)',
   excludeFromPicker: true,
   defaultOptions: [],
-  // empty array
   get: options => {
     const children = options.map(option => {
-      return (0,_matchers__WEBPACK_IMPORTED_MODULE_1__/* .getFieldMatcher */ .sq)(option);
+      return (0,_matchers__WEBPACK_IMPORTED_MODULE_1__ .sq)(option);
     });
     return (field, frame, allFrames) => {
       for (const child of children) {
@@ -1821,7 +1689,7 @@ const allFieldsMatcher = {
         text += ' AND ';
       }
 
-      const matcher = _matchers__WEBPACK_IMPORTED_MODULE_1__/* .fieldMatchers.get */ .Ls.get(sub.id); // Ugho what about frame
+      const matcher = _matchers__WEBPACK_IMPORTED_MODULE_1__ .Ls.get(sub.id); 
 
       text += matcher.getOptionsDisplayText ? matcher.getOptionsDisplayText(sub) : matcher.name;
     }
@@ -1830,15 +1698,14 @@ const allFieldsMatcher = {
   }
 };
 const allFramesMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_2__/* .MatcherID.allMatch */ .Ff.allMatch,
+  id: _ids__WEBPACK_IMPORTED_MODULE_2__ .Ff.allMatch,
   name: 'All',
   description: 'Everything matches (AND)',
   excludeFromPicker: true,
   defaultOptions: [],
-  // empty array
   get: options => {
     const children = options.map(option => {
-      return (0,_matchers__WEBPACK_IMPORTED_MODULE_1__/* .getFrameMatchers */ .b9)(option);
+      return (0,_matchers__WEBPACK_IMPORTED_MODULE_1__ .b9)(option);
     });
     return frame => {
       for (const child of children) {
@@ -1858,7 +1725,7 @@ const allFramesMatcher = {
         text += ' AND ';
       }
 
-      const matcher = _matchers__WEBPACK_IMPORTED_MODULE_1__/* .frameMatchers.get */ .Ac.get(sub.id);
+      const matcher = _matchers__WEBPACK_IMPORTED_MODULE_1__ .Ac.get(sub.id);
       text += matcher.getOptionsDisplayText ? matcher.getOptionsDisplayText(sub) : matcher.name;
     }
 
@@ -1866,35 +1733,35 @@ const allFramesMatcher = {
   }
 };
 const notFieldMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_2__/* .MatcherID.invertMatch */ .Ff.invertMatch,
+  id: _ids__WEBPACK_IMPORTED_MODULE_2__ .Ff.invertMatch,
   name: 'NOT',
   description: 'Inverts other matchers',
   excludeFromPicker: true,
   get: option => {
-    const check = (0,_matchers__WEBPACK_IMPORTED_MODULE_1__/* .getFieldMatcher */ .sq)(option);
+    const check = (0,_matchers__WEBPACK_IMPORTED_MODULE_1__ .sq)(option);
     return (field, frame, allFrames) => {
       return !check(field, frame, allFrames);
     };
   },
   getOptionsDisplayText: options => {
-    const matcher = _matchers__WEBPACK_IMPORTED_MODULE_1__/* .fieldMatchers.get */ .Ls.get(options.id);
+    const matcher = _matchers__WEBPACK_IMPORTED_MODULE_1__ .Ls.get(options.id);
     const text = matcher.getOptionsDisplayText ? matcher.getOptionsDisplayText(options.options) : matcher.name;
     return 'NOT ' + text;
   }
 };
 const notFrameMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_2__/* .MatcherID.invertMatch */ .Ff.invertMatch,
+  id: _ids__WEBPACK_IMPORTED_MODULE_2__ .Ff.invertMatch,
   name: 'NOT',
   description: 'Inverts other matchers',
   excludeFromPicker: true,
   get: option => {
-    const check = (0,_matchers__WEBPACK_IMPORTED_MODULE_1__/* .getFrameMatchers */ .b9)(option);
+    const check = (0,_matchers__WEBPACK_IMPORTED_MODULE_1__ .b9)(option);
     return frame => {
       return !check(frame);
     };
   },
   getOptionsDisplayText: options => {
-    const matcher = _matchers__WEBPACK_IMPORTED_MODULE_1__/* .frameMatchers.get */ .Ac.get(options.id);
+    const matcher = _matchers__WEBPACK_IMPORTED_MODULE_1__ .Ac.get(options.id);
     const text = matcher.getOptionsDisplayText ? matcher.getOptionsDisplayText(options.options) : matcher.name;
     return 'NOT ' + text;
   }
@@ -1909,13 +1776,13 @@ const neverFieldMatcher = field => {
   return false;
 };
 const notTimeFieldMatcher = field => {
-  return field.type !== _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__/* .FieldType.time */ .fS.time;
+  return field.type !== _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ .fS.time;
 };
 const neverFrameMatcher = frame => {
   return false;
 };
 const alwaysFieldMatcherInfo = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_2__/* .MatcherID.alwaysMatch */ .Ff.alwaysMatch,
+  id: _ids__WEBPACK_IMPORTED_MODULE_2__ .Ff.alwaysMatch,
   name: 'All Fields',
   description: 'Always Match',
   get: option => {
@@ -1926,7 +1793,7 @@ const alwaysFieldMatcherInfo = {
   }
 };
 const alwaysFrameMatcherInfo = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_2__/* .MatcherID.alwaysMatch */ .Ff.alwaysMatch,
+  id: _ids__WEBPACK_IMPORTED_MODULE_2__ .Ff.alwaysMatch,
   name: 'All Frames',
   description: 'Always Match',
   get: option => {
@@ -1937,7 +1804,7 @@ const alwaysFrameMatcherInfo = {
   }
 };
 const neverFieldMatcherInfo = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_2__/* .MatcherID.neverMatch */ .Ff.neverMatch,
+  id: _ids__WEBPACK_IMPORTED_MODULE_2__ .Ff.neverMatch,
   name: 'No Fields',
   description: 'Never Match',
   excludeFromPicker: true,
@@ -1949,7 +1816,7 @@ const neverFieldMatcherInfo = {
   }
 };
 const neverFrameMatcherInfo = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_2__/* .MatcherID.neverMatch */ .Ff.neverMatch,
+  id: _ids__WEBPACK_IMPORTED_MODULE_2__ .Ff.neverMatch,
   name: 'No Frames',
   description: 'Never Match',
   get: option => {
@@ -1966,26 +1833,25 @@ function getFramePredicateMatchers() {
   return [anyFrameMatcher, allFramesMatcher, notFrameMatcher, alwaysFrameMatcherInfo, neverFrameMatcherInfo];
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/matchers/refIdMatcher.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/matchers/refIdMatcher.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "n": () => (/* binding */ getRefIdMatchers)
-/* harmony export */ });
-/* harmony import */ var _text__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/text/index.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "n": () => ( getRefIdMatchers)
+ });
+ var _text__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/text/index.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
 
- // General Field matcher
 
 const refIdMacher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .FrameMatcherID.byRefId */ .E4.byRefId,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .E4.byRefId,
   name: 'Query refId',
   description: 'match the refId',
   defaultOptions: 'A',
   get: pattern => {
-    const regex = (0,_text__WEBPACK_IMPORTED_MODULE_0__/* .stringToJsRegex */ .jO)(pattern);
+    const regex = (0,_text__WEBPACK_IMPORTED_MODULE_0__ .jO)(pattern);
     return frame => {
       return regex.test(frame.refId || '');
     };
@@ -1998,20 +1864,20 @@ function getRefIdMatchers() {
   return [refIdMacher];
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/matchers/simpleFieldMatcher.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/matchers/simpleFieldMatcher.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "z": () => (/* binding */ getSimpleFieldMatchers)
-/* harmony export */ });
-/* harmony import */ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "z": () => ( getSimpleFieldMatchers)
+ });
+ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
 
 
 const firstFieldMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .FieldMatcherID.first */ .mi.first,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .mi.first,
   name: 'First Field',
   description: 'The first field in the frame',
   get: type => {
@@ -2024,43 +1890,40 @@ const firstFieldMatcher = {
   }
 };
 const firstTimeFieldMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .FieldMatcherID.firstTimeField */ .mi.firstTimeField,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .mi.firstTimeField,
   name: 'First time field',
   description: 'The first field of type time in a frame',
   get: type => {
     return (field, frame, allFrames) => {
-      return field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__/* .FieldType.time */ .fS.time && field === frame.fields.find(f => f.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__/* .FieldType.time */ .fS.time);
+      return field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ .fS.time && field === frame.fields.find(f => f.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ .fS.time);
     };
   },
   getOptionsDisplayText: () => {
     return `First time field`;
   }
 };
-/**
- * Registry Initialization
- */
 
 function getSimpleFieldMatchers() {
   return [firstFieldMatcher, firstTimeFieldMatcher];
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/matchers/valueMatchers/equalMatchers.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/matchers/valueMatchers/equalMatchers.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "T": () => (/* binding */ getEqualValueMatchers)
-/* harmony export */ });
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "T": () => ( getEqualValueMatchers)
+ });
+ var _ids__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
 
 const isEqualValueMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_0__/* .ValueMatcherID.equal */ .mE.equal,
+  id: _ids__WEBPACK_IMPORTED_MODULE_0__ .mE.equal,
   name: 'Is equal',
   description: 'Match where value for given field is equal to options value.',
   get: options => {
     return (valueIndex, field) => {
-      const value = field.values.get(valueIndex); // eslint-disable-next-line eqeqeq
+      const value = field.values.get(valueIndex); 
 
       return value == options.value;
     };
@@ -2074,12 +1937,12 @@ const isEqualValueMatcher = {
   })
 };
 const isNotEqualValueMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_0__/* .ValueMatcherID.notEqual */ .mE.notEqual,
+  id: _ids__WEBPACK_IMPORTED_MODULE_0__ .mE.notEqual,
   name: 'Is not equal',
   description: 'Match where value for given field is not equal to options value.',
   get: options => {
     return (valueIndex, field) => {
-      const value = field.values.get(valueIndex); // eslint-disable-next-line eqeqeq
+      const value = field.values.get(valueIndex); 
 
       return value != options.value;
     };
@@ -2094,18 +1957,18 @@ const isNotEqualValueMatcher = {
 };
 const getEqualValueMatchers = () => [isEqualValueMatcher, isNotEqualValueMatcher];
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/matchers/valueMatchers/nullMatchers.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/matchers/valueMatchers/nullMatchers.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "a": () => (/* binding */ getNullValueMatchers)
-/* harmony export */ });
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "a": () => ( getNullValueMatchers)
+ });
+ var _ids__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
 
 const isNullValueMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_0__/* .ValueMatcherID.isNull */ .mE.isNull,
+  id: _ids__WEBPACK_IMPORTED_MODULE_0__ .mE.isNull,
   name: 'Is null',
   description: 'Match where value for given field is null.',
   get: () => {
@@ -2121,7 +1984,7 @@ const isNullValueMatcher = {
   getDefaultOptions: () => ({})
 };
 const isNotNullValueMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_0__/* .ValueMatcherID.isNotNull */ .mE.isNotNull,
+  id: _ids__WEBPACK_IMPORTED_MODULE_0__ .mE.isNotNull,
   name: 'Is not null',
   description: 'Match where value for given field is not null.',
   get: () => {
@@ -2138,20 +2001,20 @@ const isNotNullValueMatcher = {
 };
 const getNullValueMatchers = () => [isNullValueMatcher, isNotNullValueMatcher];
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/matchers/valueMatchers/numericMatchers.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/matchers/valueMatchers/numericMatchers.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "H": () => (/* binding */ getNumericValueMatchers)
-/* harmony export */ });
-/* harmony import */ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "H": () => ( getNumericValueMatchers)
+ });
+ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
 
 
 const isGreaterValueMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .ValueMatcherID.greater */ .mE.greater,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .mE.greater,
   name: 'Is greater',
   description: 'Match when field value is greater than option.',
   get: options => {
@@ -2168,13 +2031,13 @@ const isGreaterValueMatcher = {
   getOptionsDisplayText: options => {
     return `Matches all rows where field value is greater than: ${options.value}.`;
   },
-  isApplicable: field => field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__/* .FieldType.number */ .fS.number,
+  isApplicable: field => field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ .fS.number,
   getDefaultOptions: () => ({
     value: 0
   })
 };
 const isGreaterOrEqualValueMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .ValueMatcherID.greaterOrEqual */ .mE.greaterOrEqual,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .mE.greaterOrEqual,
   name: 'Is greater or equal',
   description: 'Match when field value is greater than or equal to option.',
   get: options => {
@@ -2191,13 +2054,13 @@ const isGreaterOrEqualValueMatcher = {
   getOptionsDisplayText: options => {
     return `Matches all rows where field value is greater than or equal to: ${options.value}.`;
   },
-  isApplicable: field => field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__/* .FieldType.number */ .fS.number,
+  isApplicable: field => field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ .fS.number,
   getDefaultOptions: () => ({
     value: 0
   })
 };
 const isLowerValueMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .ValueMatcherID.lower */ .mE.lower,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .mE.lower,
   name: 'Is lower',
   description: 'Match when field value is lower than option.',
   get: options => {
@@ -2214,13 +2077,13 @@ const isLowerValueMatcher = {
   getOptionsDisplayText: options => {
     return `Matches all rows where field value is lower than: ${options.value}.`;
   },
-  isApplicable: field => field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__/* .FieldType.number */ .fS.number,
+  isApplicable: field => field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ .fS.number,
   getDefaultOptions: () => ({
     value: 0
   })
 };
 const isLowerOrEqualValueMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .ValueMatcherID.lowerOrEqual */ .mE.lowerOrEqual,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .mE.lowerOrEqual,
   name: 'Is lower or equal',
   description: 'Match when field value is lower or equal than option.',
   get: options => {
@@ -2237,27 +2100,27 @@ const isLowerOrEqualValueMatcher = {
   getOptionsDisplayText: options => {
     return `Matches all rows where field value is lower or equal than: ${options.value}.`;
   },
-  isApplicable: field => field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__/* .FieldType.number */ .fS.number,
+  isApplicable: field => field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ .fS.number,
   getDefaultOptions: () => ({
     value: 0
   })
 };
 const getNumericValueMatchers = () => [isGreaterValueMatcher, isGreaterOrEqualValueMatcher, isLowerValueMatcher, isLowerOrEqualValueMatcher];
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/matchers/valueMatchers/rangeMatchers.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/matchers/valueMatchers/rangeMatchers.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "G": () => (/* binding */ getRangeValueMatchers)
-/* harmony export */ });
-/* harmony import */ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "G": () => ( getRangeValueMatchers)
+ });
+ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
 
 
 const isBetweenValueMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .ValueMatcherID.between */ .mE.between,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .mE.between,
   name: 'Is between',
   description: 'Match when field value is between given option values.',
   get: options => {
@@ -2274,7 +2137,7 @@ const isBetweenValueMatcher = {
   getOptionsDisplayText: options => {
     return `Matches all rows where field value is between ${options.from} and ${options.to}.`;
   },
-  isApplicable: field => field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__/* .FieldType.number */ .fS.number,
+  isApplicable: field => field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_0__ .fS.number,
   getDefaultOptions: () => ({
     from: 0,
     to: 100
@@ -2282,18 +2145,18 @@ const isBetweenValueMatcher = {
 };
 const getRangeValueMatchers = () => [isBetweenValueMatcher];
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/matchers/valueMatchers/regexMatchers.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/matchers/valueMatchers/regexMatchers.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "G": () => (/* binding */ getRegexValueMatcher)
-/* harmony export */ });
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "G": () => ( getRegexValueMatcher)
+ });
+ var _ids__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
 
 const regexValueMatcher = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_0__/* .ValueMatcherID.regex */ .mE.regex,
+  id: _ids__WEBPACK_IMPORTED_MODULE_0__ .mE.regex,
   name: 'Regex',
   description: 'Match when field value is matching regex.',
   get: options => {
@@ -2313,33 +2176,32 @@ const regexValueMatcher = {
 };
 const getRegexValueMatcher = () => [regexValueMatcher];
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/transformers/ensureColumns.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/transformers/ensureColumns.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "W": () => (/* binding */ ensureColumnsTransformer)
-/* harmony export */ });
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-/* harmony import */ var _dataframe_processDataFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/dataframe/processDataFrame.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
-/* harmony import */ var _seriesToColumns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/seriesToColumns.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "W": () => ( ensureColumnsTransformer)
+ });
+ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
+ var _dataframe_processDataFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/dataframe/processDataFrame.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
+ var _seriesToColumns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/seriesToColumns.ts");
 
 
 
 
 const ensureColumnsTransformer = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .DataTransformerID.ensureColumns */ .W.ensureColumns,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .W.ensureColumns,
   name: 'Ensure Columns Transformer',
   description: 'Will check if current data frames is series or columns. If in series it will convert to columns.',
-  operator: options => source => source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__/* .map */ .U)(data => ensureColumnsTransformer.transformer(options)(data))),
+  operator: options => source => source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ .U)(data => ensureColumnsTransformer.transformer(options)(data))),
   transformer: options => frames => {
-    // Assume timeseries should first be joined by time
     const timeFieldName = findConsistentTimeFieldName(frames);
 
     if (frames.length > 1 && timeFieldName) {
-      return _seriesToColumns__WEBPACK_IMPORTED_MODULE_2__/* .seriesToColumnsTransformer.transformer */ .u.transformer({
+      return _seriesToColumns__WEBPACK_IMPORTED_MODULE_2__ .u.transformer({
         byField: timeFieldName
       })(frames);
     }
@@ -2347,9 +2209,6 @@ const ensureColumnsTransformer = {
     return frames;
   }
 };
-/**
- * Find the name for the time field used in all frames (if one exists)
- */
 
 function findConsistentTimeFieldName(data) {
   let name = undefined;
@@ -2357,16 +2216,15 @@ function findConsistentTimeFieldName(data) {
   for (const frame of data) {
     const {
       timeField
-    } = (0,_dataframe_processDataFrame__WEBPACK_IMPORTED_MODULE_0__/* .getTimeField */ .sV)(frame);
+    } = (0,_dataframe_processDataFrame__WEBPACK_IMPORTED_MODULE_0__ .sV)(frame);
 
     if (!timeField) {
-      return undefined; // Not timeseries
+      return undefined; 
     }
 
     if (!name) {
       name = timeField.name;
     } else if (name !== timeField.name) {
-      // Second frame has a different time column?!
       return undefined;
     }
   }
@@ -2374,45 +2232,40 @@ function findConsistentTimeFieldName(data) {
   return name;
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/transformers/filter.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/transformers/filter.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "P": () => (/* binding */ filterFieldsTransformer),
-/* harmony export */   "u": () => (/* binding */ filterFramesTransformer)
-/* harmony export */ });
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-/* harmony import */ var _matchers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
-/* harmony import */ var _noop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/noop.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "P": () => ( filterFieldsTransformer),
+   "u": () => ( filterFramesTransformer)
+ });
+ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
+ var _matchers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
+ var _noop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/noop.ts");
 
 
 
 
 const filterFieldsTransformer = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .DataTransformerID.filterFields */ .W.filterFields,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .W.filterFields,
   name: 'Filter Fields',
   description: 'select a subset of fields',
   defaultOptions: {},
 
-  /**
-   * Return a modified copy of the series.  If the transform is not or should not
-   * be applied, just return the input series
-   */
   operator: options => source => {
     if (!options.include && !options.exclude) {
-      return source.pipe(_noop__WEBPACK_IMPORTED_MODULE_2__/* .noopTransformer.operator */ .d.operator({}));
+      return source.pipe(_noop__WEBPACK_IMPORTED_MODULE_2__ .d.operator({}));
     }
 
-    return source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__/* .map */ .U)(data => {
-      const include = options.include ? (0,_matchers__WEBPACK_IMPORTED_MODULE_0__/* .getFieldMatcher */ .sq)(options.include) : null;
-      const exclude = options.exclude ? (0,_matchers__WEBPACK_IMPORTED_MODULE_0__/* .getFieldMatcher */ .sq)(options.exclude) : null;
+    return source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ .U)(data => {
+      const include = options.include ? (0,_matchers__WEBPACK_IMPORTED_MODULE_0__ .sq)(options.include) : null;
+      const exclude = options.exclude ? (0,_matchers__WEBPACK_IMPORTED_MODULE_0__ .sq)(options.exclude) : null;
       const processed = [];
 
       for (const series of data) {
-        // Find the matching field indexes
         const fields = [];
 
         for (let i = 0; i < series.fields.length; i++) {
@@ -2438,8 +2291,7 @@ const filterFieldsTransformer = {
         }
 
         const copy = Object.assign({}, series, {
-          // all the other properties
-          fields // but a different set of fields
+          fields 
 
         });
         processed.push(copy);
@@ -2450,23 +2302,19 @@ const filterFieldsTransformer = {
   }
 };
 const filterFramesTransformer = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .DataTransformerID.filterFrames */ .W.filterFrames,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .W.filterFrames,
   name: 'Filter Frames',
   description: 'select a subset of frames',
   defaultOptions: {},
 
-  /**
-   * Return a modified copy of the series.  If the transform is not or should not
-   * be applied, just return the input series
-   */
   operator: options => source => {
     if (!options.include && !options.exclude) {
-      return source.pipe(_noop__WEBPACK_IMPORTED_MODULE_2__/* .noopTransformer.operator */ .d.operator({}));
+      return source.pipe(_noop__WEBPACK_IMPORTED_MODULE_2__ .d.operator({}));
     }
 
-    return source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__/* .map */ .U)(data => {
-      const include = options.include ? (0,_matchers__WEBPACK_IMPORTED_MODULE_0__/* .getFrameMatchers */ .b9)(options.include) : null;
-      const exclude = options.exclude ? (0,_matchers__WEBPACK_IMPORTED_MODULE_0__/* .getFrameMatchers */ .b9)(options.exclude) : null;
+    return source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ .U)(data => {
+      const include = options.include ? (0,_matchers__WEBPACK_IMPORTED_MODULE_0__ .b9)(options.include) : null;
+      const exclude = options.exclude ? (0,_matchers__WEBPACK_IMPORTED_MODULE_0__ .b9)(options.exclude) : null;
       const processed = [];
 
       for (const series of data) {
@@ -2490,31 +2338,27 @@ const filterFramesTransformer = {
   }
 };
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/transformers/filterByName.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/transformers/filterByName.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "w": () => (/* binding */ filterFieldsByNameTransformer)
-/* harmony export */ });
-/* harmony import */ var _matchers_ids__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
-/* harmony import */ var _filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/filter.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "w": () => ( filterFieldsByNameTransformer)
+ });
+ var _matchers_ids__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
+ var _filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/filter.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
 
 
 
 const filterFieldsByNameTransformer = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_2__/* .DataTransformerID.filterFieldsByName */ .W.filterFieldsByName,
+  id: _ids__WEBPACK_IMPORTED_MODULE_2__ .W.filterFieldsByName,
   name: 'Filter fields by name',
   description: 'select a subset of fields',
   defaultOptions: {},
 
-  /**
-   * Return a modified copy of the series.  If the transform is not or should not
-   * be applied, just return the input series
-   */
-  operator: options => source => source.pipe(_filter__WEBPACK_IMPORTED_MODULE_1__/* .filterFieldsTransformer.operator */ .P.operator({
+  operator: options => source => source.pipe(_filter__WEBPACK_IMPORTED_MODULE_1__ .P.operator({
     include: getMatcherConfig(options.include),
     exclude: getMatcherConfig(options.exclude)
   }))
@@ -2536,7 +2380,7 @@ const getMatcherConfig = options => {
 
   if (!pattern) {
     return {
-      id: _matchers_ids__WEBPACK_IMPORTED_MODULE_0__/* .FieldMatcherID.byNames */ .mi.byNames,
+      id: _matchers_ids__WEBPACK_IMPORTED_MODULE_0__ .mi.byNames,
       options: {
         names
       }
@@ -2545,70 +2389,66 @@ const getMatcherConfig = options => {
 
   if (!Array.isArray(names) || names.length === 0) {
     return {
-      id: _matchers_ids__WEBPACK_IMPORTED_MODULE_0__/* .FieldMatcherID.byRegexp */ .mi.byRegexp,
+      id: _matchers_ids__WEBPACK_IMPORTED_MODULE_0__ .mi.byRegexp,
       options: pattern
     };
   }
 
   return {
-    id: _matchers_ids__WEBPACK_IMPORTED_MODULE_0__/* .FieldMatcherID.byRegexpOrNames */ .mi.byRegexpOrNames,
+    id: _matchers_ids__WEBPACK_IMPORTED_MODULE_0__ .mi.byRegexpOrNames,
     options
   };
 };
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/transformers/filterByRefId.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/transformers/filterByRefId.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "J": () => (/* binding */ filterFramesByRefIdTransformer)
-/* harmony export */ });
-/* harmony import */ var _matchers_ids__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
-/* harmony import */ var _filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/filter.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "J": () => ( filterFramesByRefIdTransformer)
+ });
+ var _matchers_ids__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
+ var _filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/filter.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
 
 
 
 const filterFramesByRefIdTransformer = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_2__/* .DataTransformerID.filterByRefId */ .W.filterByRefId,
+  id: _ids__WEBPACK_IMPORTED_MODULE_2__ .W.filterByRefId,
   name: 'Filter data by query refId',
   description: 'select a subset of results',
   defaultOptions: {},
 
-  /**
-   * Return a modified copy of the series.  If the transform is not or should not
-   * be applied, just return the input series
-   */
   operator: options => source => {
     const filterOptions = {};
 
     if (options.include) {
       filterOptions.include = {
-        id: _matchers_ids__WEBPACK_IMPORTED_MODULE_0__/* .FrameMatcherID.byRefId */ .E4.byRefId,
+        id: _matchers_ids__WEBPACK_IMPORTED_MODULE_0__ .E4.byRefId,
         options: options.include
       };
     }
 
     if (options.exclude) {
       filterOptions.exclude = {
-        id: _matchers_ids__WEBPACK_IMPORTED_MODULE_0__/* .FrameMatcherID.byRefId */ .E4.byRefId,
+        id: _matchers_ids__WEBPACK_IMPORTED_MODULE_0__ .E4.byRefId,
         options: options.exclude
       };
     }
 
-    return source.pipe(_filter__WEBPACK_IMPORTED_MODULE_1__/* .filterFramesTransformer.operator */ .u.operator(filterOptions));
+    return source.pipe(_filter__WEBPACK_IMPORTED_MODULE_1__ .u.operator(filterOptions));
   }
 };
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/transformers/ids.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/transformers/ids.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "W": () => (/* binding */ DataTransformerID)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "W": () => ( DataTransformerID)
+ });
 let DataTransformerID;
 
 (function (DataTransformerID) {
@@ -2645,31 +2485,31 @@ let DataTransformerID;
   DataTransformerID["groupingToMatrix"] = "groupingToMatrix";
 })(DataTransformerID || (DataTransformerID = {}));
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/transformers/merge.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/transformers/merge.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "R": () => (/* binding */ mergeTransformer)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-/* harmony import */ var _dataframe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/dataframe/index.ts");
-/* harmony import */ var _vector_ArrayVector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/vector/ArrayVector.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "R": () => ( mergeTransformer)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
+ var _dataframe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/dataframe/index.ts");
+ var _vector_ArrayVector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/vector/ArrayVector.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
 
 
 
 
 
 const mergeTransformer = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_3__/* .DataTransformerID.merge */ .W.merge,
+  id: _ids__WEBPACK_IMPORTED_MODULE_3__ .W.merge,
   name: 'Merge series/tables',
   description: 'Merges multiple series/tables into a single serie/table',
   defaultOptions: {},
-  operator: options => source => source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__/* .map */ .U)(dataFrames => {
+  operator: options => source => source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ .U)(dataFrames => {
     if (!Array.isArray(dataFrames) || dataFrames.length <= 1) {
       return dataFrames;
     }
@@ -2683,7 +2523,7 @@ const mergeTransformer = {
     const fieldNames = new Set();
     const fieldIndexByName = {};
     const fieldNamesForKey = [];
-    const dataFrame = new _dataframe__WEBPACK_IMPORTED_MODULE_1__/* .MutableDataFrame */ .vA();
+    const dataFrame = new _dataframe__WEBPACK_IMPORTED_MODULE_1__ .vA();
 
     for (let frameIndex = 0; frameIndex < data.length; frameIndex++) {
       const frame = data[frameIndex];
@@ -2762,7 +2602,7 @@ const mergeTransformer = {
 
 const copyFieldStructure = field => {
   return Object.assign({}, (0,lodash__WEBPACK_IMPORTED_MODULE_0__.omit)(field, ['values', 'state', 'labels', 'config']), {
-    values: new _vector_ArrayVector__WEBPACK_IMPORTED_MODULE_2__/* .ArrayVector */ .G(),
+    values: new _vector_ArrayVector__WEBPACK_IMPORTED_MODULE_2__ .G(),
     config: Object.assign({}, (0,lodash__WEBPACK_IMPORTED_MODULE_0__.omit)(field.config, 'displayName'))
   });
 };
@@ -2851,47 +2691,43 @@ const createPointer = (key, valuesByKey) => {
   };
 };
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/transformers/noop.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/transformers/noop.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "d": () => (/* binding */ noopTransformer)
-/* harmony export */ });
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "d": () => ( noopTransformer)
+ });
+ var _ids__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
 
 const noopTransformer = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_0__/* .DataTransformerID.noop */ .W.noop,
+  id: _ids__WEBPACK_IMPORTED_MODULE_0__ .W.noop,
   name: 'noop',
   description: 'No-operation transformer',
   defaultOptions: {},
 
-  /**
-   * Return a modified copy of the series.  If the transform is not or should not
-   * be applied, just return the input series
-   */
   operator: options => source => source
 };
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/transformers/organize.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/transformers/organize.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "u": () => (/* binding */ organizeFieldsTransformer)
-/* harmony export */ });
-/* harmony import */ var _filterByName__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/filterByName.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
-/* harmony import */ var _order__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/order.ts");
-/* harmony import */ var _rename__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/rename.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "u": () => ( organizeFieldsTransformer)
+ });
+ var _filterByName__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/filterByName.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
+ var _order__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/order.ts");
+ var _rename__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/rename.ts");
 
 
 
 
 const organizeFieldsTransformer = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .DataTransformerID.organize */ .W.organize,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .W.organize,
   name: 'Organize fields by name',
   description: 'Order, filter and rename fields based on configuration given by user',
   defaultOptions: {
@@ -2900,15 +2736,11 @@ const organizeFieldsTransformer = {
     renameByName: {}
   },
 
-  /**
-   * Return a modified copy of the series.  If the transform is not or should not
-   * be applied, just return the input series
-   */
-  operator: options => source => source.pipe(_filterByName__WEBPACK_IMPORTED_MODULE_0__/* .filterFieldsByNameTransformer.operator */ .w.operator({
+  operator: options => source => source.pipe(_filterByName__WEBPACK_IMPORTED_MODULE_0__ .w.operator({
     exclude: {
       names: mapToExcludeArray(options.excludeByName)
     }
-  }), _order__WEBPACK_IMPORTED_MODULE_2__/* .orderFieldsTransformer.operator */ .t.operator(options), _rename__WEBPACK_IMPORTED_MODULE_3__/* .renameFieldsTransformer.operator */ .M.operator(options))
+  }), _order__WEBPACK_IMPORTED_MODULE_2__ .t.operator(options), _rename__WEBPACK_IMPORTED_MODULE_3__ .M.operator(options))
 };
 
 const mapToExcludeArray = excludeByName => {
@@ -2919,33 +2751,29 @@ const mapToExcludeArray = excludeByName => {
   return Object.keys(excludeByName).filter(name => excludeByName[name]);
 };
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/transformers/rename.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/transformers/rename.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "M": () => (/* binding */ renameFieldsTransformer)
-/* harmony export */ });
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-/* harmony import */ var _field_fieldState__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/field/fieldState.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "M": () => ( renameFieldsTransformer)
+ });
+ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
+ var _field_fieldState__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/field/fieldState.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
 
 
 
 const renameFieldsTransformer = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_1__/* .DataTransformerID.rename */ .W.rename,
+  id: _ids__WEBPACK_IMPORTED_MODULE_1__ .W.rename,
   name: 'Rename fields by name',
   description: 'Rename fields based on configuration given by user',
   defaultOptions: {
     renameByName: {}
   },
 
-  /**
-   * Return a modified copy of the series.  If the transform is not or should not
-   * be applied, just return the input series
-   */
-  operator: options => source => source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_2__/* .map */ .U)(data => {
+  operator: options => source => source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ .U)(data => {
     const renamer = createRenamer(options.renameByName);
 
     if (!Array.isArray(data) || data.length === 0) {
@@ -2964,7 +2792,7 @@ const createRenamer = renameByName => frame => {
   }
 
   return frame.fields.map(field => {
-    const displayName = (0,_field_fieldState__WEBPACK_IMPORTED_MODULE_0__/* .getFieldDisplayName */ .C)(field, frame);
+    const displayName = (0,_field_fieldState__WEBPACK_IMPORTED_MODULE_0__ .C)(field, frame);
     const renameTo = renameByName[displayName];
 
     if (typeof renameTo !== 'string' || renameTo.length === 0) {
@@ -2982,43 +2810,42 @@ const createRenamer = renameByName => frame => {
   });
 };
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/transformers/seriesToColumns.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/transformers/seriesToColumns.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "u": () => (/* binding */ seriesToColumnsTransformer)
-/* harmony export */ });
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-/* harmony import */ var _matchers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers.ts");
-/* harmony import */ var _matchers_ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
-/* harmony import */ var _joinDataFrames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/joinDataFrames.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "u": () => ( seriesToColumnsTransformer)
+ });
+ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
+ var _matchers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers.ts");
+ var _matchers_ids__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/transformations/matchers/ids.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
+ var _joinDataFrames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/joinDataFrames.ts");
 
 
 
 
 
 const seriesToColumnsTransformer = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_2__/* .DataTransformerID.seriesToColumns */ .W.seriesToColumns,
+  id: _ids__WEBPACK_IMPORTED_MODULE_2__ .W.seriesToColumns,
   name: 'Series as columns',
-  // Called 'Outer join' in the UI!
   description: 'Groups series by field and returns values as columns',
   defaultOptions: {
-    byField: undefined // DEFAULT_KEY_FIELD,
+    byField: undefined 
 
   },
-  operator: options => source => source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__/* .map */ .U)(data => seriesToColumnsTransformer.transformer(options)(data))),
+  operator: options => source => source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ .U)(data => seriesToColumnsTransformer.transformer(options)(data))),
   transformer: options => {
     let joinBy = undefined;
     return data => {
       if (data.length > 1) {
         if (options.byField && !joinBy) {
-          joinBy = _matchers__WEBPACK_IMPORTED_MODULE_0__/* .fieldMatchers.get */ .Ls.get(_matchers_ids__WEBPACK_IMPORTED_MODULE_1__/* .FieldMatcherID.byName */ .mi.byName).get(options.byField);
+          joinBy = _matchers__WEBPACK_IMPORTED_MODULE_0__ .Ls.get(_matchers_ids__WEBPACK_IMPORTED_MODULE_1__ .mi.byName).get(options.byField);
         }
 
-        const joined = (0,_joinDataFrames__WEBPACK_IMPORTED_MODULE_3__/* .outerJoinDataFrames */ .JP)({
+        const joined = (0,_joinDataFrames__WEBPACK_IMPORTED_MODULE_3__ .JP)({
           frames: data,
           joinBy
         });
@@ -3033,23 +2860,23 @@ const seriesToColumnsTransformer = {
   }
 };
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/transformers/seriesToRows.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/transformers/seriesToRows.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "D": () => (/* binding */ seriesToRowsTransformer)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-/* harmony import */ var _dataframe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/dataframe/index.ts");
-/* harmony import */ var _dataframe_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/dataframe/utils.ts");
-/* harmony import */ var _field_fieldState__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-data/src/field/fieldState.ts");
-/* harmony import */ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
-/* harmony import */ var _vector__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./packages/grafana-data/src/vector/index.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "D": () => ( seriesToRowsTransformer)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
+ var _dataframe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/dataframe/index.ts");
+ var _dataframe_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/dataframe/utils.ts");
+ var _field_fieldState__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-data/src/field/fieldState.ts");
+ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
+ var _vector__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./packages/grafana-data/src/vector/index.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
 
 
 
@@ -3059,27 +2886,27 @@ const seriesToColumnsTransformer = {
 
 
 const seriesToRowsTransformer = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_6__/* .DataTransformerID.seriesToRows */ .W.seriesToRows,
+  id: _ids__WEBPACK_IMPORTED_MODULE_6__ .W.seriesToRows,
   name: 'Series to rows',
   description: 'Combines multiple series into a single serie and appends a column with metric name per value.',
   defaultOptions: {},
-  operator: options => source => source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__/* .map */ .U)(data => {
+  operator: options => source => source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ .U)(data => {
     if (!Array.isArray(data) || data.length <= 1) {
       return data;
     }
 
-    if (!(0,_dataframe_utils__WEBPACK_IMPORTED_MODULE_2__/* .isTimeSeries */ .hZ)(data)) {
+    if (!(0,_dataframe_utils__WEBPACK_IMPORTED_MODULE_2__ .hZ)(data)) {
       return data;
     }
 
     const timeFieldByIndex = {};
     const targetFields = new Set();
-    const dataFrame = new _dataframe__WEBPACK_IMPORTED_MODULE_1__/* .MutableDataFrame */ .vA();
+    const dataFrame = new _dataframe__WEBPACK_IMPORTED_MODULE_1__ .vA();
     const metricField = {
-      name: _types_dataFrame__WEBPACK_IMPORTED_MODULE_4__/* .TIME_SERIES_METRIC_FIELD_NAME */ .rN,
-      values: new _vector__WEBPACK_IMPORTED_MODULE_5__/* .ArrayVector */ .Gt(),
+      name: _types_dataFrame__WEBPACK_IMPORTED_MODULE_4__ .rN,
+      values: new _vector__WEBPACK_IMPORTED_MODULE_5__ .Gt(),
       config: {},
-      type: _types_dataFrame__WEBPACK_IMPORTED_MODULE_4__/* .FieldType.string */ .fS.string
+      type: _types_dataFrame__WEBPACK_IMPORTED_MODULE_4__ .fS.string
     };
 
     for (let frameIndex = 0; frameIndex < data.length; frameIndex++) {
@@ -3088,21 +2915,21 @@ const seriesToRowsTransformer = {
       for (let fieldIndex = 0; fieldIndex < frame.fields.length; fieldIndex++) {
         const field = frame.fields[fieldIndex];
 
-        if (field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_4__/* .FieldType.time */ .fS.time) {
+        if (field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_4__ .fS.time) {
           timeFieldByIndex[frameIndex] = fieldIndex;
 
-          if (!targetFields.has(_types_dataFrame__WEBPACK_IMPORTED_MODULE_4__/* .TIME_SERIES_TIME_FIELD_NAME */ .Ls)) {
-            dataFrame.addField(copyFieldStructure(field, _types_dataFrame__WEBPACK_IMPORTED_MODULE_4__/* .TIME_SERIES_TIME_FIELD_NAME */ .Ls));
+          if (!targetFields.has(_types_dataFrame__WEBPACK_IMPORTED_MODULE_4__ .Ls)) {
+            dataFrame.addField(copyFieldStructure(field, _types_dataFrame__WEBPACK_IMPORTED_MODULE_4__ .Ls));
             dataFrame.addField(metricField);
-            targetFields.add(_types_dataFrame__WEBPACK_IMPORTED_MODULE_4__/* .TIME_SERIES_TIME_FIELD_NAME */ .Ls);
+            targetFields.add(_types_dataFrame__WEBPACK_IMPORTED_MODULE_4__ .Ls);
           }
 
           continue;
         }
 
-        if (!targetFields.has(_types_dataFrame__WEBPACK_IMPORTED_MODULE_4__/* .TIME_SERIES_VALUE_FIELD_NAME */ .M5)) {
-          dataFrame.addField(copyFieldStructure(field, _types_dataFrame__WEBPACK_IMPORTED_MODULE_4__/* .TIME_SERIES_VALUE_FIELD_NAME */ .M5));
-          targetFields.add(_types_dataFrame__WEBPACK_IMPORTED_MODULE_4__/* .TIME_SERIES_VALUE_FIELD_NAME */ .M5);
+        if (!targetFields.has(_types_dataFrame__WEBPACK_IMPORTED_MODULE_4__ .M5)) {
+          dataFrame.addField(copyFieldStructure(field, _types_dataFrame__WEBPACK_IMPORTED_MODULE_4__ .M5));
+          targetFields.add(_types_dataFrame__WEBPACK_IMPORTED_MODULE_4__ .M5);
         }
       }
     }
@@ -3114,55 +2941,50 @@ const seriesToRowsTransformer = {
         const timeFieldIndex = timeFieldByIndex[frameIndex];
         const valueFieldIndex = timeFieldIndex === 0 ? 1 : 0;
         dataFrame.add({
-          [_types_dataFrame__WEBPACK_IMPORTED_MODULE_4__/* .TIME_SERIES_TIME_FIELD_NAME */ .Ls]: frame.fields[timeFieldIndex].values.get(valueIndex),
-          [_types_dataFrame__WEBPACK_IMPORTED_MODULE_4__/* .TIME_SERIES_METRIC_FIELD_NAME */ .rN]: (0,_field_fieldState__WEBPACK_IMPORTED_MODULE_3__/* .getFrameDisplayName */ .n)(frame),
-          [_types_dataFrame__WEBPACK_IMPORTED_MODULE_4__/* .TIME_SERIES_VALUE_FIELD_NAME */ .M5]: frame.fields[valueFieldIndex].values.get(valueIndex)
+          [_types_dataFrame__WEBPACK_IMPORTED_MODULE_4__ .Ls]: frame.fields[timeFieldIndex].values.get(valueIndex),
+          [_types_dataFrame__WEBPACK_IMPORTED_MODULE_4__ .rN]: (0,_field_fieldState__WEBPACK_IMPORTED_MODULE_3__ .n)(frame),
+          [_types_dataFrame__WEBPACK_IMPORTED_MODULE_4__ .M5]: frame.fields[valueFieldIndex].values.get(valueIndex)
         });
       }
     }
 
-    return [(0,_dataframe__WEBPACK_IMPORTED_MODULE_1__/* .sortDataFrame */ .aK)(dataFrame, 0, true)];
+    return [(0,_dataframe__WEBPACK_IMPORTED_MODULE_1__ .aK)(dataFrame, 0, true)];
   }))
 };
 
 const copyFieldStructure = (field, name) => {
   return Object.assign({}, (0,lodash__WEBPACK_IMPORTED_MODULE_0__.omit)(field, ['values', 'state', 'labels', 'config', 'name']), {
     name: name,
-    values: new _vector__WEBPACK_IMPORTED_MODULE_5__/* .ArrayVector */ .Gt(),
+    values: new _vector__WEBPACK_IMPORTED_MODULE_5__ .Gt(),
     config: Object.assign({}, (0,lodash__WEBPACK_IMPORTED_MODULE_0__.omit)(field.config, ['displayName', 'displayNameFromDS']))
   });
 };
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/transformations/transformers/sortBy.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/transformations/transformers/sortBy.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "t": () => (/* binding */ sortByTransformer)
-/* harmony export */ });
-/* unused harmony export sortDataFrames */
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-/* harmony import */ var _dataframe__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/dataframe/index.ts");
-/* harmony import */ var _field__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/field/index.ts");
-/* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "t": () => ( sortByTransformer)
+ });
+ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
+ var _dataframe__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/dataframe/index.ts");
+ var _field__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/field/index.ts");
+ var _ids__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/transformations/transformers/ids.ts");
 
 
 
 
 const sortByTransformer = {
-  id: _ids__WEBPACK_IMPORTED_MODULE_2__/* .DataTransformerID.sortBy */ .W.sortBy,
+  id: _ids__WEBPACK_IMPORTED_MODULE_2__ .W.sortBy,
   name: 'Sort by',
   description: 'Sort fields in a frame',
   defaultOptions: {
     fields: {}
   },
 
-  /**
-   * Return a modified copy of the series.  If the transform is not or should not
-   * be applied, just return the input series
-   */
-  operator: options => source => source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__/* .map */ .U)(data => {
+  operator: options => source => source.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ .U)(data => {
     var _options$sort;
 
     if (!Array.isArray(data) || data.length === 0 || !(options !== null && options !== void 0 && (_options$sort = options.sort) !== null && _options$sort !== void 0 && _options$sort.length)) {
@@ -3177,7 +2999,7 @@ function sortDataFrames(data, sort) {
     const s = attachFieldIndex(frame, sort);
 
     if (s.length && s[0].index != null) {
-      return (0,_dataframe__WEBPACK_IMPORTED_MODULE_0__/* .sortDataFrame */ .aK)(frame, s[0].index, s[0].desc);
+      return (0,_dataframe__WEBPACK_IMPORTED_MODULE_0__ .aK)(frame, s[0].index, s[0].desc);
     }
 
     return frame;
@@ -3187,35 +3009,27 @@ function sortDataFrames(data, sort) {
 function attachFieldIndex(frame, sort) {
   return sort.map(s => {
     if (s.index != null) {
-      // null or undefined
       return s;
     }
 
     return Object.assign({}, s, {
-      index: frame.fields.findIndex(f => s.field === (0,_field__WEBPACK_IMPORTED_MODULE_1__/* .getFieldDisplayName */ .CZ)(f, frame))
+      index: frame.fields.findIndex(f => s.field === (0,_field__WEBPACK_IMPORTED_MODULE_1__ .CZ)(f, frame))
     });
   });
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/types/dataFrame.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/types/dataFrame.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Ls": () => (/* binding */ TIME_SERIES_TIME_FIELD_NAME),
-/* harmony export */   "M5": () => (/* binding */ TIME_SERIES_VALUE_FIELD_NAME),
-/* harmony export */   "fS": () => (/* binding */ FieldType),
-/* harmony export */   "rN": () => (/* binding */ TIME_SERIES_METRIC_FIELD_NAME)
-/* harmony export */ });
-/** @public */
+ __webpack_require__.d(__webpack_exports__, {
+   "Ls": () => ( TIME_SERIES_TIME_FIELD_NAME),
+   "M5": () => ( TIME_SERIES_VALUE_FIELD_NAME),
+   "fS": () => ( FieldType),
+   "rN": () => ( TIME_SERIES_METRIC_FIELD_NAME)
+ });
 let FieldType;
-/**
- * @public
- * Every property is optional
- *
- * Plugins may extend this with additional properties. Something like series overrides
- */
 
 (function (FieldType) {
   FieldType["time"] = "time";
@@ -3230,29 +3044,17 @@ let FieldType;
 const TIME_SERIES_VALUE_FIELD_NAME = 'Value';
 const TIME_SERIES_TIME_FIELD_NAME = 'Time';
 const TIME_SERIES_METRIC_FIELD_NAME = 'Metric';
-/**
- * Describes where a specific data frame field is located within a
- * dataset of type DataFrame[]
- *
- * @internal -- we will try to make this unnecessary
- */
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/types/fieldColor.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/types/fieldColor.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "R": () => (/* binding */ FALLBACK_COLOR),
-/* harmony export */   "S": () => (/* binding */ FieldColorModeId)
-/* harmony export */ });
-/**
- * @public
- */
+ __webpack_require__.d(__webpack_exports__, {
+   "R": () => ( FALLBACK_COLOR),
+   "S": () => ( FieldColorModeId)
+ });
 let FieldColorModeId;
-/**
- * @public
- */
 
 (function (FieldColorModeId) {
   FieldColorModeId["Thresholds"] = "thresholds";
@@ -3264,14 +3066,14 @@ let FieldColorModeId;
 
 const FALLBACK_COLOR = 'gray';
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/types/theme.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/types/theme.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Q": () => (/* binding */ GrafanaThemeType)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "Q": () => ( GrafanaThemeType)
+ });
 let GrafanaThemeType;
 
 (function (GrafanaThemeType) {
@@ -3279,43 +3081,31 @@ let GrafanaThemeType;
   GrafanaThemeType["Dark"] = "dark";
 })(GrafanaThemeType || (GrafanaThemeType = {}));
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/types/thresholds.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/types/thresholds.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "H": () => (/* binding */ ThresholdsMode)
-/* harmony export */ });
-/**
- *  Display mode
- */
+ __webpack_require__.d(__webpack_exports__, {
+   "H": () => ( ThresholdsMode)
+ });
 let ThresholdsMode;
-/**
- *  Config that is passed to the ThresholdsEditor
- */
 
 (function (ThresholdsMode) {
   ThresholdsMode["Absolute"] = "absolute";
   ThresholdsMode["Percentage"] = "percentage";
 })(ThresholdsMode || (ThresholdsMode = {}));
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/types/valueMapping.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/types/valueMapping.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "H": () => (/* binding */ MappingType),
-/* harmony export */   "e": () => (/* binding */ SpecialValueMatch)
-/* harmony export */ });
-/**
- * @alpha
- */
+ __webpack_require__.d(__webpack_exports__, {
+   "H": () => ( MappingType),
+   "e": () => ( SpecialValueMatch)
+ });
 let MappingType;
-/**
- * @alpha
- */
 
 (function (MappingType) {
   MappingType["ValueToText"] = "value";
@@ -3324,13 +3114,7 @@ let MappingType;
   MappingType["SpecialValue"] = "special";
 })(MappingType || (MappingType = {}));
 
-/**
- * @alpha
- */
 let SpecialValueMatch;
-/**
- * @alpha
- */
 
 (function (SpecialValueMatch) {
   SpecialValueMatch["True"] = "true";
@@ -3341,15 +3125,15 @@ let SpecialValueMatch;
   SpecialValueMatch["Empty"] = "empty";
 })(SpecialValueMatch || (SpecialValueMatch = {}));
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/utils/Registry.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/utils/Registry.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "B": () => (/* binding */ Registry)
-/* harmony export */ });
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/types/index.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "B": () => ( Registry)
+ });
+ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/types/index.ts");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -3439,7 +3223,7 @@ class Registry {
         description: ext.description
       };
 
-      if (ext.state === _types__WEBPACK_IMPORTED_MODULE_0__/* .PluginState.alpha */ .BV.alpha) {
+      if (ext.state === _types__WEBPACK_IMPORTED_MODULE_0__ .BV.alpha) {
         option.label += ' (alpha)';
       }
 
@@ -3451,15 +3235,11 @@ class Registry {
     }
 
     if (current) {
-      // this makes sure we preserve the order of ids
       select.current = Object.values(currentOptions);
     }
 
     return select;
   }
-  /**
-   * Return a list of values by ID, or all values if not specified
-   */
 
 
   list(ids) {
@@ -3513,27 +3293,22 @@ class Registry {
     }
   }
 
-  sort() {// TODO sort the list
+  sort() {
   }
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/utils/anyToNumber.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/utils/anyToNumber.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "I": () => (/* binding */ anyToNumber)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ __webpack_require__.d(__webpack_exports__, {
+   "I": () => ( anyToNumber)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 
-/**
- * Will return any value as a number or NaN
- *
- * @internal
- * */
 
 function anyToNumber(value) {
   if (typeof value === 'number') {
@@ -3541,7 +3316,7 @@ function anyToNumber(value) {
   }
 
   if (value === '' || value === null || value === undefined || Array.isArray(value)) {
-    return NaN; // lodash calls them 0
+    return NaN; 
   }
 
   if (typeof value === 'boolean') {
@@ -3551,16 +3326,16 @@ function anyToNumber(value) {
   return (0,lodash__WEBPACK_IMPORTED_MODULE_0__.toNumber)(value);
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/utils/binaryOperators.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/utils/binaryOperators.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "L": () => (/* binding */ BinaryOperationID),
-/* harmony export */   "n": () => (/* binding */ binaryOperators)
-/* harmony export */ });
-/* harmony import */ var _Registry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/utils/Registry.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "L": () => ( BinaryOperationID),
+   "n": () => ( binaryOperators)
+ });
+ var _Registry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/utils/Registry.ts");
 
 let BinaryOperationID;
 
@@ -3571,7 +3346,7 @@ let BinaryOperationID;
   BinaryOperationID["Multiply"] = "*";
 })(BinaryOperationID || (BinaryOperationID = {}));
 
-const binaryOperators = new _Registry__WEBPACK_IMPORTED_MODULE_0__/* .Registry */ .B(() => {
+const binaryOperators = new _Registry__WEBPACK_IMPORTED_MODULE_0__ .B(() => {
   return [{
     id: BinaryOperationID.Add,
     name: 'Add',
@@ -3591,59 +3366,54 @@ const binaryOperators = new _Registry__WEBPACK_IMPORTED_MODULE_0__/* .Registry *
   }];
 });
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/utils/fieldParser.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/utils/fieldParser.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "d": () => (/* binding */ makeFieldParser)
-/* harmony export */ });
-/* harmony import */ var _dataframe_processDataFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/dataframe/processDataFrame.ts");
-/* harmony import */ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "d": () => ( makeFieldParser)
+ });
+ var _dataframe_processDataFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/dataframe/processDataFrame.ts");
+ var _types_dataFrame__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/types/dataFrame.ts");
 
 
 function makeFieldParser(value, field) {
   if (!field.type) {
     if (field.name === 'time' || field.name === 'Time') {
-      field.type = _types_dataFrame__WEBPACK_IMPORTED_MODULE_1__/* .FieldType.time */ .fS.time;
+      field.type = _types_dataFrame__WEBPACK_IMPORTED_MODULE_1__ .fS.time;
     } else {
-      field.type = (0,_dataframe_processDataFrame__WEBPACK_IMPORTED_MODULE_0__/* .guessFieldTypeFromValue */ .LI)(value);
+      field.type = (0,_dataframe_processDataFrame__WEBPACK_IMPORTED_MODULE_0__ .LI)(value);
     }
   }
 
-  if (field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_1__/* .FieldType.number */ .fS.number) {
+  if (field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_1__ .fS.number) {
     return value => {
       return parseFloat(value);
     };
-  } // Will convert anything that starts with "T" to true
+  } 
 
 
-  if (field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_1__/* .FieldType.boolean */ .fS.boolean) {
+  if (field.type === _types_dataFrame__WEBPACK_IMPORTED_MODULE_1__ .fS.boolean) {
     return value => {
       return !(value[0] === 'F' || value[0] === 'f' || value[0] === '0');
     };
-  } // Just pass the string back
+  } 
 
 
   return value => value;
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/utils/makeClassES5Compatible.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/utils/makeClassES5Compatible.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "s": () => (/* binding */ makeClassES5Compatible)
-/* harmony export */ });
-/**
- * @beta
- * Proxies a ES6 class so that it can be used as a base class for an ES5 class
- */
+ __webpack_require__.d(__webpack_exports__, {
+   "s": () => ( makeClassES5Compatible)
+ });
 function makeClassES5Compatible(ES6Class) {
   return new Proxy(ES6Class, {
-    // ES5 code will call it like a function using super
     apply(target, self, argumentsList) {
       if (typeof Reflect === 'undefined' || !Reflect.construct) {
         alert('Browser is too old');
@@ -3655,20 +3425,18 @@ function makeClassES5Compatible(ES6Class) {
   });
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/valueFormats/categories.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/valueFormats/categories.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "C": () => (/* binding */ getCategories)
+  "C": () => ( getCategories)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/valueFormats/valueFormats.ts
 var valueFormats = __webpack_require__("./packages/grafana-data/src/valueFormats/valueFormats.ts");
-;// CONCATENATED MODULE: ./packages/grafana-data/src/valueFormats/arithmeticFormatters.ts
+;
 
 function toPercent(size, decimals) {
   if (size === null) {
@@ -3678,7 +3446,7 @@ function toPercent(size, decimals) {
   }
 
   return {
-    text: (0,valueFormats/* toFixed */.FH)(size, decimals),
+    text: (0,valueFormats.FH)(size, decimals),
     suffix: '%'
   };
 }
@@ -3690,7 +3458,7 @@ function toPercentUnit(size, decimals) {
   }
 
   return {
-    text: (0,valueFormats/* toFixed */.FH)(100 * size, decimals),
+    text: (0,valueFormats.FH)(100 * size, decimals),
     suffix: '%'
   };
 }
@@ -3719,7 +3487,7 @@ function toHex(value, decimals) {
   }
 
   return {
-    text: parseFloat((0,valueFormats/* toFixed */.FH)(value, decimals)).toString(16).toUpperCase()
+    text: parseFloat((0,valueFormats.FH)(value, decimals)).toString(16).toUpperCase()
   };
 }
 function sci(value, decimals) {
@@ -3733,11 +3501,9 @@ function sci(value, decimals) {
     text: value.toExponential(decimals)
   };
 }
-// EXTERNAL MODULE: ./packages/grafana-data/src/valueFormats/dateTimeFormatters.ts
 var dateTimeFormatters = __webpack_require__("./packages/grafana-data/src/valueFormats/dateTimeFormatters.ts");
-// EXTERNAL MODULE: ./packages/grafana-data/src/valueFormats/symbolFormatters.ts
 var symbolFormatters = __webpack_require__("./packages/grafana-data/src/valueFormats/symbolFormatters.ts");
-;// CONCATENATED MODULE: ./packages/grafana-data/src/valueFormats/categories.ts
+;
 
 
 
@@ -3747,15 +3513,15 @@ const getCategories = () => [{
   formats: [{
     name: 'Number',
     id: 'none',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('')
+    fn: (0,valueFormats.q2)('')
   }, {
     name: 'String',
     id: 'string',
-    fn: valueFormats/* stringFormater */.vb
+    fn: valueFormats.vb
   }, {
     name: 'short',
     id: 'short',
-    fn: (0,valueFormats/* scaledUnits */.Qj)(1000, ['', ' K', ' Mil', ' Bil', ' Tri', ' Quadr', ' Quint', ' Sext', ' Sept'])
+    fn: (0,valueFormats.Qj)(1000, ['', ' K', ' Mil', ' Bil', ' Tri', ' Quadr', ' Quint', ' Sext', ' Sept'])
   }, {
     name: 'Percent (0-100)',
     id: 'percent',
@@ -3767,11 +3533,11 @@ const getCategories = () => [{
   }, {
     name: 'Humidity (%H)',
     id: 'humidity',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('%H')
+    fn: (0,valueFormats.q2)('%H')
   }, {
     name: 'Decibel',
     id: 'dB',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('dB')
+    fn: (0,valueFormats.q2)('dB')
   }, {
     name: 'Hexadecimal (0x)',
     id: 'hex0x',
@@ -3787,1060 +3553,1059 @@ const getCategories = () => [{
   }, {
     name: 'Locale format',
     id: 'locale',
-    fn: valueFormats/* locale */.SP
+    fn: valueFormats.SP
   }, {
     name: 'Pixels',
     id: 'pixel',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('px')
+    fn: (0,valueFormats.q2)('px')
   }]
 }, {
   name: 'Acceleration',
   formats: [{
     name: 'Meters/sec²',
     id: 'accMS2',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('m/sec²')
+    fn: (0,valueFormats.q2)('m/sec²')
   }, {
     name: 'Feet/sec²',
     id: 'accFS2',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('f/sec²')
+    fn: (0,valueFormats.q2)('f/sec²')
   }, {
     name: 'G unit',
     id: 'accG',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('g')
+    fn: (0,valueFormats.q2)('g')
   }]
 }, {
   name: 'Angle',
   formats: [{
     name: 'Degrees (°)',
     id: 'degree',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('°')
+    fn: (0,valueFormats.q2)('°')
   }, {
     name: 'Radians',
     id: 'radian',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('rad')
+    fn: (0,valueFormats.q2)('rad')
   }, {
     name: 'Gradian',
     id: 'grad',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('grad')
+    fn: (0,valueFormats.q2)('grad')
   }, {
     name: 'Arc Minutes',
     id: 'arcmin',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('arcmin')
+    fn: (0,valueFormats.q2)('arcmin')
   }, {
     name: 'Arc Seconds',
     id: 'arcsec',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('arcsec')
+    fn: (0,valueFormats.q2)('arcsec')
   }]
 }, {
   name: 'Area',
   formats: [{
     name: 'Square Meters (m²)',
     id: 'areaM2',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('m²')
+    fn: (0,valueFormats.q2)('m²')
   }, {
     name: 'Square Feet (ft²)',
     id: 'areaF2',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('ft²')
+    fn: (0,valueFormats.q2)('ft²')
   }, {
     name: 'Square Miles (mi²)',
     id: 'areaMI2',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('mi²')
+    fn: (0,valueFormats.q2)('mi²')
   }]
 }, {
   name: 'Computation',
   formats: [{
     name: 'FLOP/s',
     id: 'flops',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('FLOPS')
+    fn: (0,symbolFormatters.i7)('FLOPS')
   }, {
     name: 'MFLOP/s',
     id: 'mflops',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('FLOPS', 2)
+    fn: (0,symbolFormatters.i7)('FLOPS', 2)
   }, {
     name: 'GFLOP/s',
     id: 'gflops',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('FLOPS', 3)
+    fn: (0,symbolFormatters.i7)('FLOPS', 3)
   }, {
     name: 'TFLOP/s',
     id: 'tflops',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('FLOPS', 4)
+    fn: (0,symbolFormatters.i7)('FLOPS', 4)
   }, {
     name: 'PFLOP/s',
     id: 'pflops',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('FLOPS', 5)
+    fn: (0,symbolFormatters.i7)('FLOPS', 5)
   }, {
     name: 'EFLOP/s',
     id: 'eflops',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('FLOPS', 6)
+    fn: (0,symbolFormatters.i7)('FLOPS', 6)
   }, {
     name: 'ZFLOP/s',
     id: 'zflops',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('FLOPS', 7)
+    fn: (0,symbolFormatters.i7)('FLOPS', 7)
   }, {
     name: 'YFLOP/s',
     id: 'yflops',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('FLOPS', 8)
+    fn: (0,symbolFormatters.i7)('FLOPS', 8)
   }]
 }, {
   name: 'Concentration',
   formats: [{
     name: 'parts-per-million (ppm)',
     id: 'ppm',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('ppm')
+    fn: (0,valueFormats.q2)('ppm')
   }, {
     name: 'parts-per-billion (ppb)',
     id: 'conppb',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('ppb')
+    fn: (0,valueFormats.q2)('ppb')
   }, {
     name: 'nanogram per cubic meter (ng/m³)',
     id: 'conngm3',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('ng/m³')
+    fn: (0,valueFormats.q2)('ng/m³')
   }, {
     name: 'nanogram per normal cubic meter (ng/Nm³)',
     id: 'conngNm3',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('ng/Nm³')
+    fn: (0,valueFormats.q2)('ng/Nm³')
   }, {
     name: 'microgram per cubic meter (μg/m³)',
     id: 'conμgm3',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('μg/m³')
+    fn: (0,valueFormats.q2)('μg/m³')
   }, {
     name: 'microgram per normal cubic meter (μg/Nm³)',
     id: 'conμgNm3',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('μg/Nm³')
+    fn: (0,valueFormats.q2)('μg/Nm³')
   }, {
     name: 'milligram per cubic meter (mg/m³)',
     id: 'conmgm3',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('mg/m³')
+    fn: (0,valueFormats.q2)('mg/m³')
   }, {
     name: 'milligram per normal cubic meter (mg/Nm³)',
     id: 'conmgNm3',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('mg/Nm³')
+    fn: (0,valueFormats.q2)('mg/Nm³')
   }, {
     name: 'gram per cubic meter (g/m³)',
     id: 'congm3',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('g/m³')
+    fn: (0,valueFormats.q2)('g/m³')
   }, {
     name: 'gram per normal cubic meter (g/Nm³)',
     id: 'congNm3',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('g/Nm³')
+    fn: (0,valueFormats.q2)('g/Nm³')
   }, {
     name: 'milligrams per decilitre (mg/dL)',
     id: 'conmgdL',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('mg/dL')
+    fn: (0,valueFormats.q2)('mg/dL')
   }, {
     name: 'millimoles per litre (mmol/L)',
     id: 'conmmolL',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('mmol/L')
+    fn: (0,valueFormats.q2)('mmol/L')
   }]
 }, {
   name: 'Currency',
   formats: [{
     name: 'Dollars ($)',
     id: 'currencyUSD',
-    fn: (0,symbolFormatters/* currency */.Aq)('$')
+    fn: (0,symbolFormatters.Aq)('$')
   }, {
     name: 'Pounds (£)',
     id: 'currencyGBP',
-    fn: (0,symbolFormatters/* currency */.Aq)('£')
+    fn: (0,symbolFormatters.Aq)('£')
   }, {
     name: 'Euro (€)',
     id: 'currencyEUR',
-    fn: (0,symbolFormatters/* currency */.Aq)('€')
+    fn: (0,symbolFormatters.Aq)('€')
   }, {
     name: 'Yen (¥)',
     id: 'currencyJPY',
-    fn: (0,symbolFormatters/* currency */.Aq)('¥')
+    fn: (0,symbolFormatters.Aq)('¥')
   }, {
     name: 'Rubles (₽)',
     id: 'currencyRUB',
-    fn: (0,symbolFormatters/* currency */.Aq)('₽')
+    fn: (0,symbolFormatters.Aq)('₽')
   }, {
     name: 'Hryvnias (₴)',
     id: 'currencyUAH',
-    fn: (0,symbolFormatters/* currency */.Aq)('₴')
+    fn: (0,symbolFormatters.Aq)('₴')
   }, {
     name: 'Real (R$)',
     id: 'currencyBRL',
-    fn: (0,symbolFormatters/* currency */.Aq)('R$')
+    fn: (0,symbolFormatters.Aq)('R$')
   }, {
     name: 'Danish Krone (kr)',
     id: 'currencyDKK',
-    fn: (0,symbolFormatters/* currency */.Aq)('kr', true)
+    fn: (0,symbolFormatters.Aq)('kr', true)
   }, {
     name: 'Icelandic Króna (kr)',
     id: 'currencyISK',
-    fn: (0,symbolFormatters/* currency */.Aq)('kr', true)
+    fn: (0,symbolFormatters.Aq)('kr', true)
   }, {
     name: 'Norwegian Krone (kr)',
     id: 'currencyNOK',
-    fn: (0,symbolFormatters/* currency */.Aq)('kr', true)
+    fn: (0,symbolFormatters.Aq)('kr', true)
   }, {
     name: 'Swedish Krona (kr)',
     id: 'currencySEK',
-    fn: (0,symbolFormatters/* currency */.Aq)('kr', true)
+    fn: (0,symbolFormatters.Aq)('kr', true)
   }, {
     name: 'Czech koruna (czk)',
     id: 'currencyCZK',
-    fn: (0,symbolFormatters/* currency */.Aq)('czk')
+    fn: (0,symbolFormatters.Aq)('czk')
   }, {
     name: 'Swiss franc (CHF)',
     id: 'currencyCHF',
-    fn: (0,symbolFormatters/* currency */.Aq)('CHF')
+    fn: (0,symbolFormatters.Aq)('CHF')
   }, {
     name: 'Polish Złoty (PLN)',
     id: 'currencyPLN',
-    fn: (0,symbolFormatters/* currency */.Aq)('PLN')
+    fn: (0,symbolFormatters.Aq)('PLN')
   }, {
     name: 'Bitcoin (฿)',
     id: 'currencyBTC',
-    fn: (0,symbolFormatters/* currency */.Aq)('฿')
+    fn: (0,symbolFormatters.Aq)('฿')
   }, {
     name: 'Milli Bitcoin (฿)',
     id: 'currencymBTC',
-    fn: (0,symbolFormatters/* currency */.Aq)('mBTC')
+    fn: (0,symbolFormatters.Aq)('mBTC')
   }, {
     name: 'Micro Bitcoin (฿)',
     id: 'currencyμBTC',
-    fn: (0,symbolFormatters/* currency */.Aq)('μBTC')
+    fn: (0,symbolFormatters.Aq)('μBTC')
   }, {
     name: 'South African Rand (R)',
     id: 'currencyZAR',
-    fn: (0,symbolFormatters/* currency */.Aq)('R')
+    fn: (0,symbolFormatters.Aq)('R')
   }, {
     name: 'Indian Rupee (₹)',
     id: 'currencyINR',
-    fn: (0,symbolFormatters/* currency */.Aq)('₹')
+    fn: (0,symbolFormatters.Aq)('₹')
   }, {
     name: 'South Korean Won (₩)',
     id: 'currencyKRW',
-    fn: (0,symbolFormatters/* currency */.Aq)('₩')
+    fn: (0,symbolFormatters.Aq)('₩')
   }, {
     name: 'Indonesian Rupiah (Rp)',
     id: 'currencyIDR',
-    fn: (0,symbolFormatters/* currency */.Aq)('Rp')
+    fn: (0,symbolFormatters.Aq)('Rp')
   }, {
     name: 'Philippine Peso (PHP)',
     id: 'currencyPHP',
-    fn: (0,symbolFormatters/* currency */.Aq)('PHP')
+    fn: (0,symbolFormatters.Aq)('PHP')
   }, {
     name: 'Vietnamese Dong (VND)',
     id: 'currencyVND',
-    fn: (0,symbolFormatters/* currency */.Aq)('đ', true)
+    fn: (0,symbolFormatters.Aq)('đ', true)
   }]
 }, {
   name: 'Data',
   formats: [{
     name: 'bytes(IEC)',
     id: 'bytes',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('B')
+    fn: (0,symbolFormatters.Yh)('B')
   }, {
     name: 'bytes(SI)',
     id: 'decbytes',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('B')
+    fn: (0,symbolFormatters.i7)('B')
   }, {
     name: 'bits(IEC)',
     id: 'bits',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('b')
+    fn: (0,symbolFormatters.Yh)('b')
   }, {
     name: 'bits(SI)',
     id: 'decbits',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('b')
+    fn: (0,symbolFormatters.i7)('b')
   }, {
     name: 'kibibytes',
     id: 'kbytes',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('B', 1)
+    fn: (0,symbolFormatters.Yh)('B', 1)
   }, {
     name: 'kilobytes',
     id: 'deckbytes',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('B', 1)
+    fn: (0,symbolFormatters.i7)('B', 1)
   }, {
     name: 'mebibytes',
     id: 'mbytes',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('B', 2)
+    fn: (0,symbolFormatters.Yh)('B', 2)
   }, {
     name: 'megabytes',
     id: 'decmbytes',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('B', 2)
+    fn: (0,symbolFormatters.i7)('B', 2)
   }, {
     name: 'gibibytes',
     id: 'gbytes',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('B', 3)
+    fn: (0,symbolFormatters.Yh)('B', 3)
   }, {
     name: 'gigabytes',
     id: 'decgbytes',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('B', 3)
+    fn: (0,symbolFormatters.i7)('B', 3)
   }, {
     name: 'tebibytes',
     id: 'tbytes',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('B', 4)
+    fn: (0,symbolFormatters.Yh)('B', 4)
   }, {
     name: 'terabytes',
     id: 'dectbytes',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('B', 4)
+    fn: (0,symbolFormatters.i7)('B', 4)
   }, {
     name: 'pebibytes',
     id: 'pbytes',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('B', 5)
+    fn: (0,symbolFormatters.Yh)('B', 5)
   }, {
     name: 'petabytes',
     id: 'decpbytes',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('B', 5)
+    fn: (0,symbolFormatters.i7)('B', 5)
   }]
 }, {
   name: 'Data rate',
   formats: [{
     name: 'packets/sec',
     id: 'pps',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('p/s')
+    fn: (0,symbolFormatters.i7)('p/s')
   }, {
     name: 'bytes/sec(IEC)',
     id: 'binBps',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('B/s')
+    fn: (0,symbolFormatters.Yh)('B/s')
   }, {
     name: 'bytes/sec(SI)',
     id: 'Bps',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('B/s')
+    fn: (0,symbolFormatters.i7)('B/s')
   }, {
     name: 'bits/sec(IEC)',
     id: 'binbps',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('b/s')
+    fn: (0,symbolFormatters.Yh)('b/s')
   }, {
     name: 'bits/sec(SI)',
     id: 'bps',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('b/s')
+    fn: (0,symbolFormatters.i7)('b/s')
   }, {
     name: 'kibibytes/sec',
     id: 'KiBs',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('B/s', 1)
+    fn: (0,symbolFormatters.Yh)('B/s', 1)
   }, {
     name: 'kibibits/sec',
     id: 'Kibits',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('b/s', 1)
+    fn: (0,symbolFormatters.Yh)('b/s', 1)
   }, {
     name: 'kilobytes/sec',
     id: 'KBs',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('B/s', 1)
+    fn: (0,symbolFormatters.i7)('B/s', 1)
   }, {
     name: 'kilobits/sec',
     id: 'Kbits',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('b/s', 1)
+    fn: (0,symbolFormatters.i7)('b/s', 1)
   }, {
     name: 'mebibytes/sec',
     id: 'MiBs',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('B/s', 2)
+    fn: (0,symbolFormatters.Yh)('B/s', 2)
   }, {
     name: 'mebibits/sec',
     id: 'Mibits',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('b/s', 2)
+    fn: (0,symbolFormatters.Yh)('b/s', 2)
   }, {
     name: 'megabytes/sec',
     id: 'MBs',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('B/s', 2)
+    fn: (0,symbolFormatters.i7)('B/s', 2)
   }, {
     name: 'megabits/sec',
     id: 'Mbits',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('b/s', 2)
+    fn: (0,symbolFormatters.i7)('b/s', 2)
   }, {
     name: 'gibibytes/sec',
     id: 'GiBs',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('B/s', 3)
+    fn: (0,symbolFormatters.Yh)('B/s', 3)
   }, {
     name: 'gibibits/sec',
     id: 'Gibits',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('b/s', 3)
+    fn: (0,symbolFormatters.Yh)('b/s', 3)
   }, {
     name: 'gigabytes/sec',
     id: 'GBs',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('B/s', 3)
+    fn: (0,symbolFormatters.i7)('B/s', 3)
   }, {
     name: 'gigabits/sec',
     id: 'Gbits',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('b/s', 3)
+    fn: (0,symbolFormatters.i7)('b/s', 3)
   }, {
     name: 'tebibytes/sec',
     id: 'TiBs',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('B/s', 4)
+    fn: (0,symbolFormatters.Yh)('B/s', 4)
   }, {
     name: 'tebibits/sec',
     id: 'Tibits',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('b/s', 4)
+    fn: (0,symbolFormatters.Yh)('b/s', 4)
   }, {
     name: 'terabytes/sec',
     id: 'TBs',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('B/s', 4)
+    fn: (0,symbolFormatters.i7)('B/s', 4)
   }, {
     name: 'terabits/sec',
     id: 'Tbits',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('b/s', 4)
+    fn: (0,symbolFormatters.i7)('b/s', 4)
   }, {
     name: 'pebibytes/sec',
     id: 'PiBs',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('B/s', 5)
+    fn: (0,symbolFormatters.Yh)('B/s', 5)
   }, {
     name: 'pebibits/sec',
     id: 'Pibits',
-    fn: (0,symbolFormatters/* binaryPrefix */.Yh)('b/s', 5)
+    fn: (0,symbolFormatters.Yh)('b/s', 5)
   }, {
     name: 'petabytes/sec',
     id: 'PBs',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('B/s', 5)
+    fn: (0,symbolFormatters.i7)('B/s', 5)
   }, {
     name: 'petabits/sec',
     id: 'Pbits',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('b/s', 5)
+    fn: (0,symbolFormatters.i7)('b/s', 5)
   }]
 }, {
   name: 'Date & time',
   formats: [{
     name: 'Datetime ISO',
     id: 'dateTimeAsIso',
-    fn: dateTimeFormatters/* dateTimeAsIso */.Qm
+    fn: dateTimeFormatters.Qm
   }, {
     name: 'Datetime ISO (No date if today)',
     id: 'dateTimeAsIsoNoDateIfToday',
-    fn: dateTimeFormatters/* dateTimeAsIsoNoDateIfToday */.QO
+    fn: dateTimeFormatters.QO
   }, {
     name: 'Datetime US',
     id: 'dateTimeAsUS',
-    fn: dateTimeFormatters/* dateTimeAsUS */.DW
+    fn: dateTimeFormatters.DW
   }, {
     name: 'Datetime US (No date if today)',
     id: 'dateTimeAsUSNoDateIfToday',
-    fn: dateTimeFormatters/* dateTimeAsUSNoDateIfToday */.y
+    fn: dateTimeFormatters.y
   }, {
     name: 'Datetime local',
     id: 'dateTimeAsLocal',
-    fn: (0,dateTimeFormatters/* getDateTimeAsLocalFormat */.VS)()
+    fn: (0,dateTimeFormatters.VS)()
   }, {
     name: 'Datetime local (No date if today)',
     id: 'dateTimeAsLocalNoDateIfToday',
-    fn: (0,dateTimeFormatters/* getDateTimeAsLocalFormatNoDateIfToday */.rV)()
+    fn: (0,dateTimeFormatters.rV)()
   }, {
     name: 'Datetime default',
     id: 'dateTimeAsSystem',
-    fn: dateTimeFormatters/* dateTimeSystemFormatter */.Hr
+    fn: dateTimeFormatters.Hr
   }, {
     name: 'From Now',
     id: 'dateTimeFromNow',
-    fn: dateTimeFormatters/* dateTimeFromNow */.Xg
+    fn: dateTimeFormatters.Xg
   }]
 }, {
   name: 'Energy',
   formats: [{
     name: 'Watt (W)',
     id: 'watt',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('W')
+    fn: (0,symbolFormatters.i7)('W')
   }, {
     name: 'Kilowatt (kW)',
     id: 'kwatt',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('W', 1)
+    fn: (0,symbolFormatters.i7)('W', 1)
   }, {
     name: 'Megawatt (MW)',
     id: 'megwatt',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('W', 2)
+    fn: (0,symbolFormatters.i7)('W', 2)
   }, {
     name: 'Gigawatt (GW)',
     id: 'gwatt',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('W', 3)
+    fn: (0,symbolFormatters.i7)('W', 3)
   }, {
     name: 'Milliwatt (mW)',
     id: 'mwatt',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('W', -1)
+    fn: (0,symbolFormatters.i7)('W', -1)
   }, {
     name: 'Watt per square meter (W/m²)',
     id: 'Wm2',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('W/m²')
+    fn: (0,valueFormats.q2)('W/m²')
   }, {
     name: 'Volt-Ampere (VA)',
     id: 'voltamp',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('VA')
+    fn: (0,symbolFormatters.i7)('VA')
   }, {
     name: 'Kilovolt-Ampere (kVA)',
     id: 'kvoltamp',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('VA', 1)
+    fn: (0,symbolFormatters.i7)('VA', 1)
   }, {
     name: 'Volt-Ampere reactive (VAr)',
     id: 'voltampreact',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('VAr')
+    fn: (0,symbolFormatters.i7)('VAr')
   }, {
     name: 'Kilovolt-Ampere reactive (kVAr)',
     id: 'kvoltampreact',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('VAr', 1)
+    fn: (0,symbolFormatters.i7)('VAr', 1)
   }, {
     name: 'Watt-hour (Wh)',
     id: 'watth',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Wh')
+    fn: (0,symbolFormatters.i7)('Wh')
   }, {
     name: 'Watt-hour per Kilogram (Wh/kg)',
     id: 'watthperkg',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Wh/kg')
+    fn: (0,symbolFormatters.i7)('Wh/kg')
   }, {
     name: 'Kilowatt-hour (kWh)',
     id: 'kwatth',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Wh', 1)
+    fn: (0,symbolFormatters.i7)('Wh', 1)
   }, {
     name: 'Kilowatt-min (kWm)',
     id: 'kwattm',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('W-Min', 1)
+    fn: (0,symbolFormatters.i7)('W-Min', 1)
   }, {
     name: 'Ampere-hour (Ah)',
     id: 'amph',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Ah')
+    fn: (0,symbolFormatters.i7)('Ah')
   }, {
     name: 'Kiloampere-hour (kAh)',
     id: 'kamph',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Ah', 1)
+    fn: (0,symbolFormatters.i7)('Ah', 1)
   }, {
     name: 'Milliampere-hour (mAh)',
     id: 'mamph',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Ah', -1)
+    fn: (0,symbolFormatters.i7)('Ah', -1)
   }, {
     name: 'Joule (J)',
     id: 'joule',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('J')
+    fn: (0,symbolFormatters.i7)('J')
   }, {
     name: 'Electron volt (eV)',
     id: 'ev',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('eV')
+    fn: (0,symbolFormatters.i7)('eV')
   }, {
     name: 'Ampere (A)',
     id: 'amp',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('A')
+    fn: (0,symbolFormatters.i7)('A')
   }, {
     name: 'Kiloampere (kA)',
     id: 'kamp',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('A', 1)
+    fn: (0,symbolFormatters.i7)('A', 1)
   }, {
     name: 'Milliampere (mA)',
     id: 'mamp',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('A', -1)
+    fn: (0,symbolFormatters.i7)('A', -1)
   }, {
     name: 'Volt (V)',
     id: 'volt',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('V')
+    fn: (0,symbolFormatters.i7)('V')
   }, {
     name: 'Kilovolt (kV)',
     id: 'kvolt',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('V', 1)
+    fn: (0,symbolFormatters.i7)('V', 1)
   }, {
     name: 'Millivolt (mV)',
     id: 'mvolt',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('V', -1)
+    fn: (0,symbolFormatters.i7)('V', -1)
   }, {
     name: 'Decibel-milliwatt (dBm)',
     id: 'dBm',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('dBm')
+    fn: (0,symbolFormatters.i7)('dBm')
   }, {
     name: 'Ohm (Ω)',
     id: 'ohm',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Ω')
+    fn: (0,symbolFormatters.i7)('Ω')
   }, {
     name: 'Kiloohm (kΩ)',
     id: 'kohm',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Ω', 1)
+    fn: (0,symbolFormatters.i7)('Ω', 1)
   }, {
     name: 'Megaohm (MΩ)',
     id: 'Mohm',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Ω', 2)
+    fn: (0,symbolFormatters.i7)('Ω', 2)
   }, {
     name: 'Farad (F)',
     id: 'farad',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('F')
+    fn: (0,symbolFormatters.i7)('F')
   }, {
     name: 'Microfarad (µF)',
     id: 'µfarad',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('F', -2)
+    fn: (0,symbolFormatters.i7)('F', -2)
   }, {
     name: 'Nanofarad (nF)',
     id: 'nfarad',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('F', -3)
+    fn: (0,symbolFormatters.i7)('F', -3)
   }, {
     name: 'Picofarad (pF)',
     id: 'pfarad',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('F', -4)
+    fn: (0,symbolFormatters.i7)('F', -4)
   }, {
     name: 'Femtofarad (fF)',
     id: 'ffarad',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('F', -5)
+    fn: (0,symbolFormatters.i7)('F', -5)
   }, {
     name: 'Henry (H)',
     id: 'henry',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('H')
+    fn: (0,symbolFormatters.i7)('H')
   }, {
     name: 'Millihenry (mH)',
     id: 'mhenry',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('H', -1)
+    fn: (0,symbolFormatters.i7)('H', -1)
   }, {
     name: 'Microhenry (µH)',
     id: 'µhenry',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('H', -2)
+    fn: (0,symbolFormatters.i7)('H', -2)
   }, {
     name: 'Lumens (Lm)',
     id: 'lumens',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Lm')
+    fn: (0,symbolFormatters.i7)('Lm')
   }]
 }, {
   name: 'Flow',
   formats: [{
     name: 'Gallons/min (gpm)',
     id: 'flowgpm',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('gpm')
+    fn: (0,valueFormats.q2)('gpm')
   }, {
     name: 'Cubic meters/sec (cms)',
     id: 'flowcms',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('cms')
+    fn: (0,valueFormats.q2)('cms')
   }, {
     name: 'Cubic feet/sec (cfs)',
     id: 'flowcfs',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('cfs')
+    fn: (0,valueFormats.q2)('cfs')
   }, {
     name: 'Cubic feet/min (cfm)',
     id: 'flowcfm',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('cfm')
+    fn: (0,valueFormats.q2)('cfm')
   }, {
     name: 'Litre/hour',
     id: 'litreh',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('L/h')
+    fn: (0,valueFormats.q2)('L/h')
   }, {
     name: 'Litre/min (L/min)',
     id: 'flowlpm',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('L/min')
+    fn: (0,valueFormats.q2)('L/min')
   }, {
     name: 'milliLitre/min (mL/min)',
     id: 'flowmlpm',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('mL/min')
+    fn: (0,valueFormats.q2)('mL/min')
   }, {
     name: 'Lux (lx)',
     id: 'lux',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('lux')
+    fn: (0,valueFormats.q2)('lux')
   }]
 }, {
   name: 'Force',
   formats: [{
     name: 'Newton-meters (Nm)',
     id: 'forceNm',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Nm')
+    fn: (0,symbolFormatters.i7)('Nm')
   }, {
     name: 'Kilonewton-meters (kNm)',
     id: 'forcekNm',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Nm', 1)
+    fn: (0,symbolFormatters.i7)('Nm', 1)
   }, {
     name: 'Newtons (N)',
     id: 'forceN',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('N')
+    fn: (0,symbolFormatters.i7)('N')
   }, {
     name: 'Kilonewtons (kN)',
     id: 'forcekN',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('N', 1)
+    fn: (0,symbolFormatters.i7)('N', 1)
   }]
 }, {
   name: 'Hash rate',
   formats: [{
     name: 'hashes/sec',
     id: 'Hs',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('H/s')
+    fn: (0,symbolFormatters.i7)('H/s')
   }, {
     name: 'kilohashes/sec',
     id: 'KHs',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('H/s', 1)
+    fn: (0,symbolFormatters.i7)('H/s', 1)
   }, {
     name: 'megahashes/sec',
     id: 'MHs',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('H/s', 2)
+    fn: (0,symbolFormatters.i7)('H/s', 2)
   }, {
     name: 'gigahashes/sec',
     id: 'GHs',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('H/s', 3)
+    fn: (0,symbolFormatters.i7)('H/s', 3)
   }, {
     name: 'terahashes/sec',
     id: 'THs',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('H/s', 4)
+    fn: (0,symbolFormatters.i7)('H/s', 4)
   }, {
     name: 'petahashes/sec',
     id: 'PHs',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('H/s', 5)
+    fn: (0,symbolFormatters.i7)('H/s', 5)
   }, {
     name: 'exahashes/sec',
     id: 'EHs',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('H/s', 6)
+    fn: (0,symbolFormatters.i7)('H/s', 6)
   }]
 }, {
   name: 'Mass',
   formats: [{
     name: 'milligram (mg)',
     id: 'massmg',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('g', -1)
+    fn: (0,symbolFormatters.i7)('g', -1)
   }, {
     name: 'gram (g)',
     id: 'massg',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('g')
+    fn: (0,symbolFormatters.i7)('g')
   }, {
     name: 'pound (lb)',
     id: 'masslb',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('lb')
+    fn: (0,valueFormats.q2)('lb')
   }, {
     name: 'kilogram (kg)',
     id: 'masskg',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('g', 1)
+    fn: (0,symbolFormatters.i7)('g', 1)
   }, {
     name: 'metric ton (t)',
     id: 'masst',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('t')
+    fn: (0,valueFormats.q2)('t')
   }]
 }, {
   name: 'Length',
   formats: [{
     name: 'millimeter (mm)',
     id: 'lengthmm',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('m', -1)
+    fn: (0,symbolFormatters.i7)('m', -1)
   }, {
     name: 'inch (in)',
     id: 'lengthin',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('in')
+    fn: (0,valueFormats.q2)('in')
   }, {
     name: 'feet (ft)',
     id: 'lengthft',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('ft')
+    fn: (0,valueFormats.q2)('ft')
   }, {
     name: 'meter (m)',
     id: 'lengthm',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('m')
+    fn: (0,symbolFormatters.i7)('m')
   }, {
     name: 'kilometer (km)',
     id: 'lengthkm',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('m', 1)
+    fn: (0,symbolFormatters.i7)('m', 1)
   }, {
     name: 'mile (mi)',
     id: 'lengthmi',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('mi')
+    fn: (0,valueFormats.q2)('mi')
   }]
 }, {
   name: 'Pressure',
   formats: [{
     name: 'Millibars',
     id: 'pressurembar',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('bar', -1)
+    fn: (0,symbolFormatters.i7)('bar', -1)
   }, {
     name: 'Bars',
     id: 'pressurebar',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('bar')
+    fn: (0,symbolFormatters.i7)('bar')
   }, {
     name: 'Kilobars',
     id: 'pressurekbar',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('bar', 1)
+    fn: (0,symbolFormatters.i7)('bar', 1)
   }, {
     name: 'Pascals',
     id: 'pressurepa',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Pa')
+    fn: (0,symbolFormatters.i7)('Pa')
   }, {
     name: 'Hectopascals',
     id: 'pressurehpa',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('hPa')
+    fn: (0,valueFormats.q2)('hPa')
   }, {
     name: 'Kilopascals',
     id: 'pressurekpa',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('kPa')
+    fn: (0,valueFormats.q2)('kPa')
   }, {
     name: 'Inches of mercury',
     id: 'pressurehg',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('"Hg')
+    fn: (0,valueFormats.q2)('"Hg')
   }, {
     name: 'PSI',
     id: 'pressurepsi',
-    fn: (0,valueFormats/* scaledUnits */.Qj)(1000, ['psi', 'ksi', 'Mpsi'])
+    fn: (0,valueFormats.Qj)(1000, ['psi', 'ksi', 'Mpsi'])
   }]
 }, {
   name: 'Radiation',
   formats: [{
     name: 'Becquerel (Bq)',
     id: 'radbq',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Bq')
+    fn: (0,symbolFormatters.i7)('Bq')
   }, {
     name: 'curie (Ci)',
     id: 'radci',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Ci')
+    fn: (0,symbolFormatters.i7)('Ci')
   }, {
     name: 'Gray (Gy)',
     id: 'radgy',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Gy')
+    fn: (0,symbolFormatters.i7)('Gy')
   }, {
     name: 'rad',
     id: 'radrad',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('rad')
+    fn: (0,symbolFormatters.i7)('rad')
   }, {
     name: 'Sievert (Sv)',
     id: 'radsv',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Sv')
+    fn: (0,symbolFormatters.i7)('Sv')
   }, {
     name: 'milliSievert (mSv)',
     id: 'radmsv',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Sv', -1)
+    fn: (0,symbolFormatters.i7)('Sv', -1)
   }, {
     name: 'microSievert (µSv)',
     id: 'radusv',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Sv', -2)
+    fn: (0,symbolFormatters.i7)('Sv', -2)
   }, {
     name: 'rem',
     id: 'radrem',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('rem')
+    fn: (0,symbolFormatters.i7)('rem')
   }, {
     name: 'Exposure (C/kg)',
     id: 'radexpckg',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('C/kg')
+    fn: (0,symbolFormatters.i7)('C/kg')
   }, {
     name: 'roentgen (R)',
     id: 'radr',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('R')
+    fn: (0,symbolFormatters.i7)('R')
   }, {
     name: 'Sievert/hour (Sv/h)',
     id: 'radsvh',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Sv/h')
+    fn: (0,symbolFormatters.i7)('Sv/h')
   }, {
     name: 'milliSievert/hour (mSv/h)',
     id: 'radmsvh',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Sv/h', -1)
+    fn: (0,symbolFormatters.i7)('Sv/h', -1)
   }, {
     name: 'microSievert/hour (µSv/h)',
     id: 'radusvh',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Sv/h', -2)
+    fn: (0,symbolFormatters.i7)('Sv/h', -2)
   }]
 }, {
   name: 'Rotational Speed',
   formats: [{
     name: 'Revolutions per minute (rpm)',
     id: 'rotrpm',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('rpm')
+    fn: (0,valueFormats.q2)('rpm')
   }, {
     name: 'Hertz (Hz)',
     id: 'rothz',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Hz')
+    fn: (0,symbolFormatters.i7)('Hz')
   }, {
     name: 'Radians per second (rad/s)',
     id: 'rotrads',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('rad/s')
+    fn: (0,valueFormats.q2)('rad/s')
   }, {
     name: 'Degrees per second (°/s)',
     id: 'rotdegs',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('°/s')
+    fn: (0,valueFormats.q2)('°/s')
   }]
 }, {
   name: 'Temperature',
   formats: [{
     name: 'Celsius (°C)',
     id: 'celsius',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('°C')
+    fn: (0,valueFormats.q2)('°C')
   }, {
     name: 'Fahrenheit (°F)',
     id: 'fahrenheit',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('°F')
+    fn: (0,valueFormats.q2)('°F')
   }, {
     name: 'Kelvin (K)',
     id: 'kelvin',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('K')
+    fn: (0,valueFormats.q2)('K')
   }]
 }, {
   name: 'Time',
   formats: [{
     name: 'Hertz (1/s)',
     id: 'hertz',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('Hz')
+    fn: (0,symbolFormatters.i7)('Hz')
   }, {
     name: 'nanoseconds (ns)',
     id: 'ns',
-    fn: dateTimeFormatters/* toNanoSeconds */.wf
+    fn: dateTimeFormatters.wf
   }, {
     name: 'microseconds (µs)',
     id: 'µs',
-    fn: dateTimeFormatters/* toMicroSeconds */.dJ
+    fn: dateTimeFormatters.dJ
   }, {
     name: 'milliseconds (ms)',
     id: 'ms',
-    fn: dateTimeFormatters/* toMilliSeconds */.Gz
+    fn: dateTimeFormatters.Gz
   }, {
     name: 'seconds (s)',
     id: 's',
-    fn: dateTimeFormatters/* toSeconds */.my
+    fn: dateTimeFormatters.my
   }, {
     name: 'minutes (m)',
     id: 'm',
-    fn: dateTimeFormatters/* toMinutes */.xM
+    fn: dateTimeFormatters.xM
   }, {
     name: 'hours (h)',
     id: 'h',
-    fn: dateTimeFormatters/* toHours */.bT
+    fn: dateTimeFormatters.bT
   }, {
     name: 'days (d)',
     id: 'd',
-    fn: dateTimeFormatters/* toDays */.rP
+    fn: dateTimeFormatters.rP
   }, {
     name: 'duration (ms)',
     id: 'dtdurationms',
-    fn: dateTimeFormatters/* toDurationInMilliseconds */.zp
+    fn: dateTimeFormatters.zp
   }, {
     name: 'duration (s)',
     id: 'dtdurations',
-    fn: dateTimeFormatters/* toDurationInSeconds */.Xq
+    fn: dateTimeFormatters.Xq
   }, {
     name: 'duration (hh:mm:ss)',
     id: 'dthms',
-    fn: dateTimeFormatters/* toDurationInHoursMinutesSeconds */.FH
+    fn: dateTimeFormatters.FH
   }, {
     name: 'duration (d hh:mm:ss)',
     id: 'dtdhms',
-    fn: dateTimeFormatters/* toDurationInDaysHoursMinutesSeconds */.DT
+    fn: dateTimeFormatters.DT
   }, {
     name: 'Timeticks (s/100)',
     id: 'timeticks',
-    fn: dateTimeFormatters/* toTimeTicks */.sD
+    fn: dateTimeFormatters.sD
   }, {
     name: 'clock (ms)',
     id: 'clockms',
-    fn: dateTimeFormatters/* toClockMilliseconds */.rd
+    fn: dateTimeFormatters.rd
   }, {
     name: 'clock (s)',
     id: 'clocks',
-    fn: dateTimeFormatters/* toClockSeconds */.gh
+    fn: dateTimeFormatters.gh
   }]
 }, {
   name: 'Throughput',
   formats: [{
     name: 'counts/sec (cps)',
     id: 'cps',
-    fn: (0,valueFormats/* simpleCountUnit */.SR)('c/s')
+    fn: (0,valueFormats.SR)('c/s')
   }, {
     name: 'ops/sec (ops)',
     id: 'ops',
-    fn: (0,valueFormats/* simpleCountUnit */.SR)('ops/s')
+    fn: (0,valueFormats.SR)('ops/s')
   }, {
     name: 'requests/sec (rps)',
     id: 'reqps',
-    fn: (0,valueFormats/* simpleCountUnit */.SR)('req/s')
+    fn: (0,valueFormats.SR)('req/s')
   }, {
     name: 'reads/sec (rps)',
     id: 'rps',
-    fn: (0,valueFormats/* simpleCountUnit */.SR)('rd/s')
+    fn: (0,valueFormats.SR)('rd/s')
   }, {
     name: 'writes/sec (wps)',
     id: 'wps',
-    fn: (0,valueFormats/* simpleCountUnit */.SR)('wr/s')
+    fn: (0,valueFormats.SR)('wr/s')
   }, {
     name: 'I/O ops/sec (iops)',
     id: 'iops',
-    fn: (0,valueFormats/* simpleCountUnit */.SR)('io/s')
+    fn: (0,valueFormats.SR)('io/s')
   }, {
     name: 'counts/min (cpm)',
     id: 'cpm',
-    fn: (0,valueFormats/* simpleCountUnit */.SR)('c/m')
+    fn: (0,valueFormats.SR)('c/m')
   }, {
     name: 'ops/min (opm)',
     id: 'opm',
-    fn: (0,valueFormats/* simpleCountUnit */.SR)('ops/m')
+    fn: (0,valueFormats.SR)('ops/m')
   }, {
     name: 'reads/min (rpm)',
     id: 'rpm',
-    fn: (0,valueFormats/* simpleCountUnit */.SR)('rd/m')
+    fn: (0,valueFormats.SR)('rd/m')
   }, {
     name: 'writes/min (wpm)',
     id: 'wpm',
-    fn: (0,valueFormats/* simpleCountUnit */.SR)('wr/m')
+    fn: (0,valueFormats.SR)('wr/m')
   }]
 }, {
   name: 'Velocity',
   formats: [{
     name: 'meters/second (m/s)',
     id: 'velocityms',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('m/s')
+    fn: (0,valueFormats.q2)('m/s')
   }, {
     name: 'kilometers/hour (km/h)',
     id: 'velocitykmh',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('km/h')
+    fn: (0,valueFormats.q2)('km/h')
   }, {
     name: 'miles/hour (mph)',
     id: 'velocitymph',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('mph')
+    fn: (0,valueFormats.q2)('mph')
   }, {
     name: 'knot (kn)',
     id: 'velocityknot',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('kn')
+    fn: (0,valueFormats.q2)('kn')
   }]
 }, {
   name: 'Volume',
   formats: [{
     name: 'millilitre (mL)',
     id: 'mlitre',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('L', -1)
+    fn: (0,symbolFormatters.i7)('L', -1)
   }, {
     name: 'litre (L)',
     id: 'litre',
-    fn: (0,symbolFormatters/* SIPrefix */.i7)('L')
+    fn: (0,symbolFormatters.i7)('L')
   }, {
     name: 'cubic meter',
     id: 'm3',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('m³')
+    fn: (0,valueFormats.q2)('m³')
   }, {
     name: 'Normal cubic meter',
     id: 'Nm3',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('Nm³')
+    fn: (0,valueFormats.q2)('Nm³')
   }, {
     name: 'cubic decimeter',
     id: 'dm3',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('dm³')
+    fn: (0,valueFormats.q2)('dm³')
   }, {
     name: 'gallons',
     id: 'gallons',
-    fn: (0,valueFormats/* toFixedUnit */.q2)('gal')
+    fn: (0,valueFormats.q2)('gal')
   }]
 }, {
   name: 'Boolean',
   formats: [{
     name: 'True / False',
     id: 'bool',
-    fn: (0,valueFormats/* booleanValueFormatter */.IR)('True', 'False')
+    fn: (0,valueFormats.IR)('True', 'False')
   }, {
     name: 'Yes / No',
     id: 'bool_yes_no',
-    fn: (0,valueFormats/* booleanValueFormatter */.IR)('Yes', 'No')
+    fn: (0,valueFormats.IR)('Yes', 'No')
   }, {
     name: 'On / Off',
     id: 'bool_on_off',
-    fn: (0,valueFormats/* booleanValueFormatter */.IR)('On', 'Off')
+    fn: (0,valueFormats.IR)('On', 'Off')
   }]
 }];
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/valueFormats/dateTimeFormatters.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/valueFormats/dateTimeFormatters.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "DT": () => (/* binding */ toDurationInDaysHoursMinutesSeconds),
-/* harmony export */   "DW": () => (/* binding */ dateTimeAsUS),
-/* harmony export */   "FH": () => (/* binding */ toDurationInHoursMinutesSeconds),
-/* harmony export */   "Gz": () => (/* binding */ toMilliSeconds),
-/* harmony export */   "Hr": () => (/* binding */ dateTimeSystemFormatter),
-/* harmony export */   "QO": () => (/* binding */ dateTimeAsIsoNoDateIfToday),
-/* harmony export */   "Qm": () => (/* binding */ dateTimeAsIso),
-/* harmony export */   "VS": () => (/* binding */ getDateTimeAsLocalFormat),
-/* harmony export */   "Xg": () => (/* binding */ dateTimeFromNow),
-/* harmony export */   "Xq": () => (/* binding */ toDurationInSeconds),
-/* harmony export */   "bT": () => (/* binding */ toHours),
-/* harmony export */   "cN": () => (/* binding */ toDateTimeValueFormatter),
-/* harmony export */   "dJ": () => (/* binding */ toMicroSeconds),
-/* harmony export */   "gh": () => (/* binding */ toClockSeconds),
-/* harmony export */   "my": () => (/* binding */ toSeconds),
-/* harmony export */   "rP": () => (/* binding */ toDays),
-/* harmony export */   "rV": () => (/* binding */ getDateTimeAsLocalFormatNoDateIfToday),
-/* harmony export */   "rd": () => (/* binding */ toClockMilliseconds),
-/* harmony export */   "sD": () => (/* binding */ toTimeTicks),
-/* harmony export */   "wf": () => (/* binding */ toNanoSeconds),
-/* harmony export */   "xM": () => (/* binding */ toMinutes),
-/* harmony export */   "y": () => (/* binding */ dateTimeAsUSNoDateIfToday),
-/* harmony export */   "zp": () => (/* binding */ toDurationInMilliseconds)
-/* harmony export */ });
-/* unused harmony exports Interval, trySubstract, toDuration, toClock */
-/* harmony import */ var _datetime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/datetime/index.ts");
-/* harmony import */ var _datetime_moment_wrapper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/datetime/moment_wrapper.ts");
-/* harmony import */ var _valueFormats__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/valueFormats/valueFormats.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "DT": () => ( toDurationInDaysHoursMinutesSeconds),
+   "DW": () => ( dateTimeAsUS),
+   "FH": () => ( toDurationInHoursMinutesSeconds),
+   "Gz": () => ( toMilliSeconds),
+   "Hr": () => ( dateTimeSystemFormatter),
+   "QO": () => ( dateTimeAsIsoNoDateIfToday),
+   "Qm": () => ( dateTimeAsIso),
+   "VS": () => ( getDateTimeAsLocalFormat),
+   "Xg": () => ( dateTimeFromNow),
+   "Xq": () => ( toDurationInSeconds),
+   "bT": () => ( toHours),
+   "cN": () => ( toDateTimeValueFormatter),
+   "dJ": () => ( toMicroSeconds),
+   "gh": () => ( toClockSeconds),
+   "my": () => ( toSeconds),
+   "rP": () => ( toDays),
+   "rV": () => ( getDateTimeAsLocalFormatNoDateIfToday),
+   "rd": () => ( toClockMilliseconds),
+   "sD": () => ( toTimeTicks),
+   "wf": () => ( toNanoSeconds),
+   "xM": () => ( toMinutes),
+   "y": () => ( dateTimeAsUSNoDateIfToday),
+   "zp": () => ( toDurationInMilliseconds)
+ });
+ var _datetime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/datetime/index.ts");
+ var _datetime_moment_wrapper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/datetime/moment_wrapper.ts");
+ var _valueFormats__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/valueFormats/valueFormats.ts");
 
 
 
@@ -4877,21 +4642,21 @@ function toNanoSeconds(size, decimals) {
 
   if (Math.abs(size) < 1000) {
     return {
-      text: (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixed */ .FH)(size, decimals),
+      text: (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .FH)(size, decimals),
       suffix: ' ns'
     };
   } else if (Math.abs(size) < 1000000) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 1000, decimals, ' µs');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 1000, decimals, ' µs');
   } else if (Math.abs(size) < 1000000000) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 1000000, decimals, ' ms');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 1000000, decimals, ' ms');
   } else if (Math.abs(size) < 60000000000) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 1000000000, decimals, ' s');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 1000000000, decimals, ' s');
   } else if (Math.abs(size) < 3600000000000) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 60000000000, decimals, ' min');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 60000000000, decimals, ' min');
   } else if (Math.abs(size) < 86400000000000) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 3600000000000, decimals, ' hour');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 3600000000000, decimals, ' hour');
   } else {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 86400000000000, decimals, ' day');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 86400000000000, decimals, ' day');
   }
 }
 function toMicroSeconds(size, decimals) {
@@ -4903,13 +4668,13 @@ function toMicroSeconds(size, decimals) {
 
   if (Math.abs(size) < 1000) {
     return {
-      text: (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixed */ .FH)(size, decimals),
+      text: (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .FH)(size, decimals),
       suffix: ' µs'
     };
   } else if (Math.abs(size) < 1000000) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 1000, decimals, ' ms');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 1000, decimals, ' ms');
   } else {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 1000000, decimals, ' s');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 1000000, decimals, ' s');
   }
 }
 function toMilliSeconds(size, decimals, scaledDecimals) {
@@ -4921,24 +4686,20 @@ function toMilliSeconds(size, decimals, scaledDecimals) {
 
   if (Math.abs(size) < 1000) {
     return {
-      text: (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixed */ .FH)(size, decimals),
+      text: (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .FH)(size, decimals),
       suffix: ' ms'
     };
   } else if (Math.abs(size) < 60000) {
-    // Less than 1 min
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 1000, decimals, ' s');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 1000, decimals, ' s');
   } else if (Math.abs(size) < 3600000) {
-    // Less than 1 hour, divide in minutes
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 60000, decimals, ' min');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 60000, decimals, ' min');
   } else if (Math.abs(size) < 86400000) {
-    // Less than one day, divide in hours
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 3600000, decimals, ' hour');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 3600000, decimals, ' hour');
   } else if (Math.abs(size) < 31536000000) {
-    // Less than one year, divide in days
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 86400000, decimals, ' day');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 86400000, decimals, ' day');
   }
 
-  return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 31536000000, decimals, ' year');
+  return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 31536000000, decimals, ' year');
 }
 function trySubstract(value1, value2) {
   if (value1 !== null && value1 !== undefined && value2 !== null && value2 !== undefined) {
@@ -4952,7 +4713,7 @@ function toSeconds(size, decimals) {
     return {
       text: ''
     };
-  } // If 0, use s unit instead of ns
+  } 
 
 
   if (size === 0) {
@@ -4960,43 +4721,39 @@ function toSeconds(size, decimals) {
       text: '0',
       suffix: ' s'
     };
-  } // Less than 1 µs, divide in ns
+  } 
 
 
   if (Math.abs(size) < 0.000001) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size * 1e9, decimals, ' ns');
-  } // Less than 1 ms, divide in µs
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size * 1e9, decimals, ' ns');
+  } 
 
 
   if (Math.abs(size) < 0.001) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size * 1e6, decimals, ' µs');
-  } // Less than 1 second, divide in ms
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size * 1e6, decimals, ' µs');
+  } 
 
 
   if (Math.abs(size) < 1) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size * 1e3, decimals, ' ms');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size * 1e3, decimals, ' ms');
   }
 
   if (Math.abs(size) < 60) {
     return {
-      text: (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixed */ .FH)(size, decimals),
+      text: (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .FH)(size, decimals),
       suffix: ' s'
     };
   } else if (Math.abs(size) < 3600) {
-    // Less than 1 hour, divide in minutes
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 60, decimals, ' min');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 60, decimals, ' min');
   } else if (Math.abs(size) < 86400) {
-    // Less than one day, divide in hours
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 3600, decimals, ' hour');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 3600, decimals, ' hour');
   } else if (Math.abs(size) < 604800) {
-    // Less than one week, divide in days
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 86400, decimals, ' day');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 86400, decimals, ' day');
   } else if (Math.abs(size) < 31536000) {
-    // Less than one year, divide in week
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 604800, decimals, ' week');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 604800, decimals, ' week');
   }
 
-  return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 3.15569e7, decimals, ' year');
+  return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 3.15569e7, decimals, ' year');
 }
 function toMinutes(size, decimals) {
   if (size === null) {
@@ -5007,17 +4764,17 @@ function toMinutes(size, decimals) {
 
   if (Math.abs(size) < 60) {
     return {
-      text: (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixed */ .FH)(size, decimals),
+      text: (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .FH)(size, decimals),
       suffix: ' min'
     };
   } else if (Math.abs(size) < 1440) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 60, decimals, ' hour');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 60, decimals, ' hour');
   } else if (Math.abs(size) < 10080) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 1440, decimals, ' day');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 1440, decimals, ' day');
   } else if (Math.abs(size) < 604800) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 10080, decimals, ' week');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 10080, decimals, ' week');
   } else {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 5.25948e5, decimals, ' year');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 5.25948e5, decimals, ' year');
   }
 }
 function toHours(size, decimals) {
@@ -5029,15 +4786,15 @@ function toHours(size, decimals) {
 
   if (Math.abs(size) < 24) {
     return {
-      text: (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixed */ .FH)(size, decimals),
+      text: (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .FH)(size, decimals),
       suffix: ' hour'
     };
   } else if (Math.abs(size) < 168) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 24, decimals, ' day');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 24, decimals, ' day');
   } else if (Math.abs(size) < 8760) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 168, decimals, ' week');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 168, decimals, ' week');
   } else {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 8760, decimals, ' year');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 8760, decimals, ' year');
   }
 }
 function toDays(size, decimals) {
@@ -5049,13 +4806,13 @@ function toDays(size, decimals) {
 
   if (Math.abs(size) < 7) {
     return {
-      text: (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixed */ .FH)(size, decimals),
+      text: (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .FH)(size, decimals),
       suffix: ' day'
     };
   } else if (Math.abs(size) < 365) {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 7, decimals, ' week');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 7, decimals, ' week');
   } else {
-    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__/* .toFixedScaled */ .bn)(size / 365, decimals, ' year');
+    return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_2__ .bn)(size / 365, decimals, ' year');
   }
 }
 function toDuration(size, decimals, timeScale) {
@@ -5081,12 +4838,11 @@ function toDuration(size, decimals, timeScale) {
 
     v.suffix += ' ago';
     return v;
-  } // convert $size to milliseconds
-  // intervals_in_seconds uses seconds (duh), convert them to milliseconds here to minimize floating point errors
+  } 
 
 
   size *= INTERVALS_IN_SECONDS[timeScale] * 1000;
-  const strings = []; // after first value >= 1 print only $decimals more
+  const strings = []; 
 
   let decrementDecimals = false;
   let decimalsCount = 0;
@@ -5118,14 +4874,14 @@ function toClock(size, decimals) {
     return {
       text: ''
     };
-  } // < 1 second
+  } 
 
 
   if (size < 1000) {
     return {
-      text: (0,_datetime_moment_wrapper__WEBPACK_IMPORTED_MODULE_1__/* .toUtc */ .zh)(size).format('SSS\\m\\s')
+      text: (0,_datetime_moment_wrapper__WEBPACK_IMPORTED_MODULE_1__ .zh)(size).format('SSS\\m\\s')
     };
-  } // < 1 minute
+  } 
 
 
   if (size < 60000) {
@@ -5136,9 +4892,9 @@ function toClock(size, decimals) {
     }
 
     return {
-      text: (0,_datetime_moment_wrapper__WEBPACK_IMPORTED_MODULE_1__/* .toUtc */ .zh)(size).format(format)
+      text: (0,_datetime_moment_wrapper__WEBPACK_IMPORTED_MODULE_1__ .zh)(size).format(format)
     };
-  } // < 1 hour
+  } 
 
 
   if (size < 3600000) {
@@ -5151,7 +4907,7 @@ function toClock(size, decimals) {
     }
 
     return {
-      text: (0,_datetime_moment_wrapper__WEBPACK_IMPORTED_MODULE_1__/* .toUtc */ .zh)(size).format(format)
+      text: (0,_datetime_moment_wrapper__WEBPACK_IMPORTED_MODULE_1__ .zh)(size).format(format)
     };
   }
 
@@ -5236,9 +4992,9 @@ function toClockSeconds(size, decimals) {
 function toDateTimeValueFormatter(pattern, todayPattern) {
   return (value, decimals, scaledDecimals, timeZone) => {
     if (todayPattern) {
-      if ((0,_datetime_moment_wrapper__WEBPACK_IMPORTED_MODULE_1__/* .dateTime */ .CQ)().isSame(value, 'day')) {
+      if ((0,_datetime_moment_wrapper__WEBPACK_IMPORTED_MODULE_1__ .CQ)().isSame(value, 'day')) {
         return {
-          text: (0,_datetime__WEBPACK_IMPORTED_MODULE_0__/* .dateTimeFormat */ .dq)(value, {
+          text: (0,_datetime__WEBPACK_IMPORTED_MODULE_0__ .dq)(value, {
             format: todayPattern,
             timeZone
           })
@@ -5247,7 +5003,7 @@ function toDateTimeValueFormatter(pattern, todayPattern) {
     }
 
     return {
-      text: (0,_datetime__WEBPACK_IMPORTED_MODULE_0__/* .dateTimeFormat */ .dq)(value, {
+      text: (0,_datetime__WEBPACK_IMPORTED_MODULE_0__ .dq)(value, {
         format: pattern,
         timeZone
       })
@@ -5259,7 +5015,7 @@ const dateTimeAsIsoNoDateIfToday = toDateTimeValueFormatter('YYYY-MM-DD HH:mm:ss
 const dateTimeAsUS = toDateTimeValueFormatter('MM/DD/YYYY h:mm:ss a');
 const dateTimeAsUSNoDateIfToday = toDateTimeValueFormatter('MM/DD/YYYY h:mm:ss a', 'h:mm:ss a');
 function getDateTimeAsLocalFormat() {
-  return toDateTimeValueFormatter((0,_datetime__WEBPACK_IMPORTED_MODULE_0__/* .localTimeFormat */ .Ji)({
+  return toDateTimeValueFormatter((0,_datetime__WEBPACK_IMPORTED_MODULE_0__ .Ji)({
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
@@ -5269,14 +5025,14 @@ function getDateTimeAsLocalFormat() {
   }));
 }
 function getDateTimeAsLocalFormatNoDateIfToday() {
-  return toDateTimeValueFormatter((0,_datetime__WEBPACK_IMPORTED_MODULE_0__/* .localTimeFormat */ .Ji)({
+  return toDateTimeValueFormatter((0,_datetime__WEBPACK_IMPORTED_MODULE_0__ .Ji)({
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit'
-  }), (0,_datetime__WEBPACK_IMPORTED_MODULE_0__/* .localTimeFormat */ .Ji)({
+  }), (0,_datetime__WEBPACK_IMPORTED_MODULE_0__ .Ji)({
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit'
@@ -5284,36 +5040,36 @@ function getDateTimeAsLocalFormatNoDateIfToday() {
 }
 function dateTimeSystemFormatter(value, decimals, scaledDecimals, timeZone, showMs) {
   return {
-    text: (0,_datetime__WEBPACK_IMPORTED_MODULE_0__/* .dateTimeFormat */ .dq)(value, {
-      format: showMs ? _datetime__WEBPACK_IMPORTED_MODULE_0__/* .systemDateFormats.fullDateMS */ .U6.fullDateMS : _datetime__WEBPACK_IMPORTED_MODULE_0__/* .systemDateFormats.fullDate */ .U6.fullDate,
+    text: (0,_datetime__WEBPACK_IMPORTED_MODULE_0__ .dq)(value, {
+      format: showMs ? _datetime__WEBPACK_IMPORTED_MODULE_0__ .U6.fullDateMS : _datetime__WEBPACK_IMPORTED_MODULE_0__ .U6.fullDate,
       timeZone
     })
   };
 }
 function dateTimeFromNow(value, decimals, scaledDecimals, timeZone) {
   return {
-    text: (0,_datetime__WEBPACK_IMPORTED_MODULE_0__/* .dateTimeFormatTimeAgo */ .E8)(value, {
+    text: (0,_datetime__WEBPACK_IMPORTED_MODULE_0__ .E8)(value, {
       timeZone
     })
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/valueFormats/symbolFormatters.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/valueFormats/symbolFormatters.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Aq": () => (/* binding */ currency),
-/* harmony export */   "Yh": () => (/* binding */ binaryPrefix),
-/* harmony export */   "dT": () => (/* binding */ getOffsetFromSIPrefix),
-/* harmony export */   "i7": () => (/* binding */ SIPrefix)
-/* harmony export */ });
-/* harmony import */ var _valueFormats__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/valueFormats/valueFormats.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "Aq": () => ( currency),
+   "Yh": () => ( binaryPrefix),
+   "dT": () => ( getOffsetFromSIPrefix),
+   "i7": () => ( SIPrefix)
+ });
+ var _valueFormats__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/valueFormats/valueFormats.ts");
 
 function currency(symbol, asSuffix) {
   const units = ['', 'K', 'M', 'B', 'T'];
-  const scaler = (0,_valueFormats__WEBPACK_IMPORTED_MODULE_0__/* .scaledUnits */ .Qj)(1000, units);
+  const scaler = (0,_valueFormats__WEBPACK_IMPORTED_MODULE_0__ .Qj)(1000, units);
   return (size, decimals, scaledDecimals) => {
     if (size === null) {
       return {
@@ -5343,7 +5099,7 @@ function getOffsetFromSIPrefix(c) {
     case 'n':
       return -3;
 
-    case 'μ': // Two different unicode chars for µ
+    case 'μ': 
 
     case 'µ':
       return -2;
@@ -5387,7 +5143,7 @@ function binaryPrefix(unit) {
   const units = prefixes.map(p => {
     return ' ' + p + unit;
   });
-  return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_0__/* .scaledUnits */ .Qj)(1024, units);
+  return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_0__ .Qj)(1024, units);
 }
 function SIPrefix(unit) {
   let offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
@@ -5396,26 +5152,23 @@ function SIPrefix(unit) {
   const units = prefixes.map(p => {
     return ' ' + p + unit;
   });
-  return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_0__/* .scaledUnits */ .Qj)(1000, units);
+  return (0,_valueFormats__WEBPACK_IMPORTED_MODULE_0__ .Qj)(1000, units);
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/vector/ArrayVector.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/vector/ArrayVector.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "G": () => (/* binding */ ArrayVector)
-/* harmony export */ });
-/* harmony import */ var _FunctionalVector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/vector/FunctionalVector.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "G": () => ( ArrayVector)
+ });
+ var _FunctionalVector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/vector/FunctionalVector.ts");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-/**
- * @public
- */
 
-class ArrayVector extends _FunctionalVector__WEBPACK_IMPORTED_MODULE_0__/* .FunctionalVector */ .G {
+class ArrayVector extends _FunctionalVector__WEBPACK_IMPORTED_MODULE_0__ .G {
   constructor(buffer) {
     super();
 
@@ -5454,23 +5207,18 @@ class ArrayVector extends _FunctionalVector__WEBPACK_IMPORTED_MODULE_0__/* .Func
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/vector/AsNumberVector.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/vector/AsNumberVector.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "s": () => (/* binding */ AsNumberVector)
-/* harmony export */ });
-/* harmony import */ var _FunctionalVector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/vector/FunctionalVector.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "s": () => ( AsNumberVector)
+ });
+ var _FunctionalVector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/vector/FunctionalVector.ts");
 
-/**
- * This will force all values to be numbers
- *
- * @public
- */
 
-class AsNumberVector extends _FunctionalVector__WEBPACK_IMPORTED_MODULE_0__/* .FunctionalVector */ .G {
+class AsNumberVector extends _FunctionalVector__WEBPACK_IMPORTED_MODULE_0__ .G {
   constructor(field) {
     super();
     this.field = field;
@@ -5487,19 +5235,16 @@ class AsNumberVector extends _FunctionalVector__WEBPACK_IMPORTED_MODULE_0__/* .F
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/vector/BinaryOperationVector.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/vector/BinaryOperationVector.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "r": () => (/* binding */ BinaryOperationVector)
-/* harmony export */ });
-/* harmony import */ var _vectorToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/vector/vectorToArray.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "r": () => ( BinaryOperationVector)
+ });
+ var _vectorToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/vector/vectorToArray.ts");
 
-/**
- * @public
- */
 
 class BinaryOperationVector {
   constructor(left, right, operation) {
@@ -5520,26 +5265,23 @@ class BinaryOperationVector {
   }
 
   toArray() {
-    return (0,_vectorToArray__WEBPACK_IMPORTED_MODULE_0__/* .vectorToArray */ .n)(this);
+    return (0,_vectorToArray__WEBPACK_IMPORTED_MODULE_0__ .n)(this);
   }
 
   toJSON() {
-    return (0,_vectorToArray__WEBPACK_IMPORTED_MODULE_0__/* .vectorToArray */ .n)(this);
+    return (0,_vectorToArray__WEBPACK_IMPORTED_MODULE_0__ .n)(this);
   }
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/vector/ConstantVector.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/vector/ConstantVector.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "u": () => (/* binding */ ConstantVector)
-/* harmony export */ });
-/**
- * @public
- */
+ __webpack_require__.d(__webpack_exports__, {
+   "u": () => ( ConstantVector)
+ });
 class ConstantVector {
   constructor(value, len) {
     this.value = value;
@@ -5567,22 +5309,18 @@ class ConstantVector {
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/vector/RowVector.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/vector/RowVector.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "C": () => (/* binding */ RowVector)
-/* harmony export */ });
-/* harmony import */ var _vectorToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/vector/vectorToArray.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "C": () => ( RowVector)
+ });
+ var _vectorToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/vector/vectorToArray.ts");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-/**
- * RowVector makes the row values look like a vector
- * @internal
- */
 
 class RowVector {
   constructor(columns) {
@@ -5602,28 +5340,25 @@ class RowVector {
   }
 
   toArray() {
-    return (0,_vectorToArray__WEBPACK_IMPORTED_MODULE_0__/* .vectorToArray */ .n)(this);
+    return (0,_vectorToArray__WEBPACK_IMPORTED_MODULE_0__ .n)(this);
   }
 
   toJSON() {
-    return (0,_vectorToArray__WEBPACK_IMPORTED_MODULE_0__/* .vectorToArray */ .n)(this);
+    return (0,_vectorToArray__WEBPACK_IMPORTED_MODULE_0__ .n)(this);
   }
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/vector/SortedVector.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/vector/SortedVector.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "o": () => (/* binding */ SortedVector)
-/* harmony export */ });
-/* harmony import */ var _vectorToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/vector/vectorToArray.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "o": () => ( SortedVector)
+ });
+ var _vectorToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/vector/vectorToArray.ts");
 
-/**
- * Values are returned in the order defined by the input parameter
- */
 
 class SortedVector {
   constructor(source, order) {
@@ -5642,23 +5377,23 @@ class SortedVector {
   }
 
   toArray() {
-    return (0,_vectorToArray__WEBPACK_IMPORTED_MODULE_0__/* .vectorToArray */ .n)(this);
+    return (0,_vectorToArray__WEBPACK_IMPORTED_MODULE_0__ .n)(this);
   }
 
   toJSON() {
-    return (0,_vectorToArray__WEBPACK_IMPORTED_MODULE_0__/* .vectorToArray */ .n)(this);
+    return (0,_vectorToArray__WEBPACK_IMPORTED_MODULE_0__ .n)(this);
   }
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-data/src/vector/vectorToArray.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-data/src/vector/vectorToArray.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "n": () => (/* binding */ vectorToArray)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "n": () => ( vectorToArray)
+ });
 function vectorToArray(v) {
   const arr = Array(v.length);
 
@@ -5669,20 +5404,14 @@ function vectorToArray(v) {
   return arr;
 }
 
-/***/ }),
+ }),
 
-/***/ "./packages/grafana-runtime/src/utils/toDataQueryError.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-runtime/src/utils/toDataQueryError.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "P": () => (/* binding */ toDataQueryError)
-/* harmony export */ });
-/**
- * Convert an object into a DataQueryError -- if this is an HTTP response,
- * it will put the correct values in the error field
- *
- * @public
- */
+ __webpack_require__.d(__webpack_exports__, {
+   "P": () => ( toDataQueryError)
+ });
 function toDataQueryError(err) {
   const error = err || {};
 
@@ -5711,43 +5440,30 @@ function toDataQueryError(err) {
   return error;
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/live/centrifuge/service.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/live/centrifuge/service.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "R": () => (/* binding */ CentrifugeService)
+  "R": () => ( CentrifugeService)
 });
 
-// EXTERNAL MODULE: ./.yarn/cache/centrifuge-npm-2.8.4-a3bcc8035d-eb6efe8eb1.zip/node_modules/centrifuge/dist/centrifuge.js
 var centrifuge = __webpack_require__("./.yarn/cache/centrifuge-npm-2.8.4-a3bcc8035d-eb6efe8eb1.zip/node_modules/centrifuge/dist/centrifuge.js");
-var centrifuge_default = /*#__PURE__*/__webpack_require__.n(centrifuge);
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/share.js
+var centrifuge_default = __webpack_require__.n(centrifuge);
 var share = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/share.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/startWith.js
 var startWith = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/startWith.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/BehaviorSubject.js
 var BehaviorSubject = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/BehaviorSubject.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/services/live.ts
 var live = __webpack_require__("./packages/grafana-runtime/src/services/live.ts");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Observable.js
 var Observable = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Observable.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/ReplaySubject.js
 var ReplaySubject = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/ReplaySubject.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/utils/toDataQueryError.ts
 var toDataQueryError = __webpack_require__("./packages/grafana-runtime/src/utils/toDataQueryError.ts");
-// EXTERNAL MODULE: ./public/app/features/live/data/StreamingDataFrame.ts
 var StreamingDataFrame = __webpack_require__("./public/app/features/live/data/StreamingDataFrame.ts");
-// EXTERNAL MODULE: ./public/app/features/live/data/utils.ts
 var utils = __webpack_require__("./public/app/features/live/data/utils.ts");
-;// CONCATENATED MODULE: ./public/app/features/live/centrifuge/LiveDataStream.ts
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -5758,7 +5474,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 const bufferIfNot = canEmitObservable => source => {
-  return new Observable/* Observable */.y(subscriber => {
+  return new Observable.y(subscriber => {
     let buffer = [];
     let canEmit = true;
 
@@ -5844,7 +5560,7 @@ class LiveDataStream {
 
     _defineProperty(this, "liveEventsSubscription", void 0);
 
-    _defineProperty(this, "stream", new ReplaySubject/* ReplaySubject */.t(1));
+    _defineProperty(this, "stream", new ReplaySubject.t(1));
 
     _defineProperty(this, "shutdownTimeoutId", void 0);
 
@@ -5866,7 +5582,7 @@ class LiveDataStream {
       }, this.deps.channelId);
       this.stream.next({
         type: InternalStreamMessageType.Error,
-        error: (0,toDataQueryError/* toDataQueryError */.P)(err)
+        error: (0,toDataQueryError.P)(err)
       });
       this.shutdown();
     });
@@ -5887,7 +5603,7 @@ class LiveDataStream {
       if (liveChannelStatusEvent && evt.error) {
         this.stream.next({
           type: InternalStreamMessageType.Error,
-          error: Object.assign({}, (0,toDataQueryError/* toDataQueryError */.P)(evt.error), {
+          error: Object.assign({}, (0,toDataQueryError.P)(evt.error), {
             message: `Streaming channel error: ${evt.error.message}`
           })
         });
@@ -5922,7 +5638,6 @@ class LiveDataStream {
 
     _defineProperty(this, "prepareInternalStreamForNewSubscription", options => {
       if (!this.frameBuffer.hasAtLeastOnePacket() && options.frame) {
-        // will skip initial frames from subsequent subscribers
         this.process(options.frame);
       }
     });
@@ -5938,10 +5653,10 @@ class LiveDataStream {
       var _options$buffer, _options$filter;
 
       this.clearShutdownTimeout();
-      const buffer = (0,StreamingDataFrame/* getStreamingFrameOptions */._A)(options.buffer);
+      const buffer = (0,StreamingDataFrame._A)(options.buffer);
       this.resizeBuffer(buffer);
       this.prepareInternalStreamForNewSubscription(options);
-      const shouldSendLastPacketOnly = (options === null || options === void 0 ? void 0 : (_options$buffer = options.buffer) === null || _options$buffer === void 0 ? void 0 : _options$buffer.action) === live/* StreamingFrameAction.Replace */.T0.Replace;
+      const shouldSendLastPacketOnly = (options === null || options === void 0 ? void 0 : (_options$buffer = options.buffer) === null || _options$buffer === void 0 ? void 0 : _options$buffer.action) === live.T0.Replace;
       const fieldsNamesFilter = (_options$filter = options.filter) === null || _options$filter === void 0 ? void 0 : _options$filter.fields;
       const dataNeedsFiltering = fieldsNamesFilter === null || fieldsNamesFilter === void 0 ? void 0 : fieldsNamesFilter.length;
       const fieldFilterPredicate = dataNeedsFiltering ? _ref2 => {
@@ -5960,7 +5675,7 @@ class LiveDataStream {
             key: subKey,
             state: error ? src.LoadingState.Error : src.LoadingState.Streaming,
             data: [{
-              type: utils/* StreamingResponseDataType.FullFrame */.g0.FullFrame,
+              type: utils.g0.FullFrame,
               frame: this.frameBuffer.serialize(fieldFilterPredicate, buffer)
             }],
             error
@@ -5968,12 +5683,11 @@ class LiveDataStream {
         }
 
         if (error) {
-          // send empty frame with error
           return {
             key: subKey,
             state: src.LoadingState.Error,
             data: [{
-              type: utils/* StreamingResponseDataType.FullFrame */.g0.FullFrame,
+              type: utils.g0.FullFrame,
               frame: this.frameBuffer.serialize(fieldFilterPredicate, buffer, {
                 maxLength: 0
               })
@@ -5988,13 +5702,13 @@ class LiveDataStream {
               type
             } = _ref3;
             return type;
-          })}`); // send empty frame
+          })}`); 
 
           return {
             key: subKey,
             state: src.LoadingState.Streaming,
             data: [{
-              type: utils/* StreamingResponseDataType.FullFrame */.g0.FullFrame,
+              type: utils.g0.FullFrame,
               frame: this.frameBuffer.serialize(fieldFilterPredicate, buffer, {
                 maxLength: 0
               })
@@ -6007,7 +5721,7 @@ class LiveDataStream {
           key: subKey,
           state: src.LoadingState.Streaming,
           data: [{
-            type: utils/* StreamingResponseDataType.FullFrame */.g0.FullFrame,
+            type: utils.g0.FullFrame,
             frame: this.frameBuffer.serialize(fieldFilterPredicate, buffer, {
               maxLength: this.frameBuffer.packetInfo.length
             })
@@ -6024,14 +5738,14 @@ class LiveDataStream {
           key: subKey,
           state: src.LoadingState.Streaming,
           data: [{
-            type: utils/* StreamingResponseDataType.NewValuesSameSchema */.g0.NewValuesSameSchema,
+            type: utils.g0.NewValuesSameSchema,
             values: filteredValues
           }]
         };
       };
 
       let shouldSendFullFrame = true;
-      const transformedInternalStream = this.stream.pipe(bufferIfNot(this.deps.subscriberReadiness), (0,map/* map */.U)((messages, i) => {
+      const transformedInternalStream = this.stream.pipe(bufferIfNot(this.deps.subscriberReadiness), (0,map.U)((messages, i) => {
         const errors = filterMessages(messages, InternalStreamMessageType.Error);
         const lastError = errors.length ? errors[errors.length - 1].error : undefined;
 
@@ -6041,14 +5755,12 @@ class LiveDataStream {
         }
 
         if (errors.length) {
-          // send the latest frame with the last error, discard everything else
           return getFullFrameResponseData(messages, lastError);
         }
 
         const schemaChanged = messages.some(n => n.type === InternalStreamMessageType.ChangedSchema);
 
         if (schemaChanged) {
-          // send the latest frame, discard intermediate appends
           return getFullFrameResponseData(messages, undefined);
         }
 
@@ -6065,7 +5777,7 @@ class LiveDataStream {
 
         return getNewValuesSameSchemaResponseData(newValueSameSchemaMessages);
       }));
-      return new Observable/* Observable */.y(subscriber => {
+      return new Observable.y(subscriber => {
         const sub = transformedInternalStream.subscribe({
           next: n => {
             subscriber.next(n);
@@ -6078,7 +5790,6 @@ class LiveDataStream {
           }
         });
         return () => {
-          // TODO: potentially resize (downsize) the buffer on unsubscribe
           sub.unsubscribe();
 
           if (!this.stream.observed) {
@@ -6090,7 +5801,7 @@ class LiveDataStream {
     });
 
     this.deps = deps;
-    this.frameBuffer = StreamingDataFrame/* StreamingDataFrame.empty */.Av.empty(deps.defaultStreamingFrameOptions);
+    this.frameBuffer = StreamingDataFrame.Av.empty(deps.defaultStreamingFrameOptions);
     this.liveEventsSubscription = deps.liveEventsObservable.subscribe({
       error: this.onError,
       complete: this.onComplete,
@@ -6099,19 +5810,14 @@ class LiveDataStream {
   }
 
 }
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subject.js
 var Subject = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subject.js");
-;// CONCATENATED MODULE: ./public/app/features/live/centrifuge/channel.ts
+;
 function channel_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
-/**
- * Internal class that maps Centrifuge support to GrafanaLive
- */
 
 class CentrifugeLiveChannel {
-  // Hold on to the last header with schema
   constructor(id, addr) {
     channel_defineProperty(this, "currentStatus", void 0);
 
@@ -6121,7 +5827,7 @@ class CentrifugeLiveChannel {
 
     channel_defineProperty(this, "addr", void 0);
 
-    channel_defineProperty(this, "stream", new Subject/* Subject */.x());
+    channel_defineProperty(this, "stream", new Subject.x());
 
     channel_defineProperty(this, "lastMessageWithSchema", void 0);
 
@@ -6152,7 +5858,7 @@ class CentrifugeLiveChannel {
       this.currentStatus.state = src.LiveChannelConnectionState.Invalid;
       this.currentStatus.error = 'invalid channel address';
     }
-  } // This should only be called when centrifuge is connected
+  } 
 
 
   initalize() {
@@ -6162,7 +5868,6 @@ class CentrifugeLiveChannel {
 
     this.initalized = true;
     const events = {
-      // Called when a message is received from the socket
       publish: ctx => {
         try {
           if (ctx.data) {
@@ -6174,7 +5879,7 @@ class CentrifugeLiveChannel {
               type: src.LiveChannelEventType.Message,
               message: ctx.data
             });
-          } // Clear any error messages
+          } 
 
 
           if (this.currentStatus.error) {
@@ -6241,11 +5946,8 @@ class CentrifugeLiveChannel {
     this.stream.next(copy);
   }
 
-  /**
-   * Get the stream of events and
-   */
   getStream() {
-    return new Observable/* Observable */.y(subscriber => {
+    return new Observable.y(subscriber => {
       var _this$lastMessageWith;
 
       const initialMessage = Object.assign({}, this.currentStatus);
@@ -6253,7 +5955,6 @@ class CentrifugeLiveChannel {
       if ((_this$lastMessageWith = this.lastMessageWithSchema) !== null && _this$lastMessageWith !== void 0 && _this$lastMessageWith.schema) {
         var _this$lastMessageWith2;
 
-        // send just schema instead of schema+data to avoid having data gaps
         initialMessage.message = {
           schema: (_this$lastMessageWith2 = this.lastMessageWithSchema) === null || _this$lastMessageWith2 === void 0 ? void 0 : _this$lastMessageWith2.schema
         };
@@ -6265,7 +5966,7 @@ class CentrifugeLiveChannel {
       const sub = this.stream.subscribe(subscriber);
       return () => {
         sub.unsubscribe();
-        const count = this.stream.observers.length; // Wait 1/4 second to fully disconnect
+        const count = this.stream.observers.length; 
 
         if (count === 0) {
           setTimeout(this.disconnectIfNoListeners, 250);
@@ -6273,9 +5974,6 @@ class CentrifugeLiveChannel {
       };
     });
   }
-  /**
-   * This is configured by the server when the config supports presence
-   */
 
 
   async getPresence() {
@@ -6289,9 +5987,6 @@ class CentrifugeLiveChannel {
       };
     });
   }
-  /**
-   * This will close and terminate all streams for this channel
-   */
 
 
   disconnect() {
@@ -6300,7 +5995,7 @@ class CentrifugeLiveChannel {
 
     if (this.subscription) {
       this.subscription.unsubscribe();
-      this.subscription.removeAllListeners(); // they keep all listeners attached after unsubscribe
+      this.subscription.removeAllListeners(); 
 
       this.subscription = undefined;
     }
@@ -6326,7 +6021,6 @@ function getErrorChannel(msg, id, addr) {
     id,
     opened: Date.now(),
     addr,
-    // return an error
     getStream: () => of({
       type: LiveChannelEventType.Status,
       id,
@@ -6334,11 +6028,10 @@ function getErrorChannel(msg, id, addr) {
       state: LiveChannelConnectionState.Invalid,
       error: msg
     }),
-    // already disconnected
     disconnect: () => {}
   };
 }
-;// CONCATENATED MODULE: ./public/app/features/live/centrifuge/service.ts
+;
 function service_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -6350,7 +6043,7 @@ function service_defineProperty(obj, key, value) { if (key in obj) { Object.defi
 const defaultStreamingFrameOptions = {
   maxLength: 100,
   maxDelta: Infinity,
-  action: live/* StreamingFrameAction.Append */.T0.Append
+  action: live.T0.Append
 };
 const dataStreamShutdownDelayInMs = 5000;
 class CentrifugeService {
@@ -6436,7 +6129,7 @@ class CentrifugeService {
     });
 
     this.deps = deps;
-    this.dataStreamSubscriberReadiness = deps.dataStreamSubscriberReadiness.pipe((0,share/* share */.B)(), (0,startWith/* startWith */.O)(true));
+    this.dataStreamSubscriberReadiness = deps.dataStreamSubscriberReadiness.pipe((0,share.B)(), (0,startWith.O)(true));
     const liveUrl = `${deps.appUrl.replace(/^http/, 'ws')}/api/live/ws`;
     this.centrifuge = new (centrifuge_default())(liveUrl, {
       timeout: 30000
@@ -6444,13 +6137,13 @@ class CentrifugeService {
     this.centrifuge.setConnectData({
       sessionId: deps.sessionId,
       orgId: deps.orgId
-    }); // orgRole is set when logged in *or* anonomus users can use grafana
+    }); 
 
     if (deps.liveEnabled && deps.orgRole !== '') {
-      this.centrifuge.connect(); // do connection
+      this.centrifuge.connect(); 
     }
 
-    this.connectionState = new BehaviorSubject/* BehaviorSubject */.X(this.centrifuge.isConnected());
+    this.connectionState = new BehaviorSubject.X(this.centrifuge.isConnected());
     this.connectionBlocker = new Promise(resolve => {
       if (this.centrifuge.isConnected()) {
         return resolve();
@@ -6462,20 +6155,14 @@ class CentrifugeService {
       };
 
       this.centrifuge.addListener('connect', connectListener);
-    }); // Register global listeners
+    }); 
 
     this.centrifuge.on('connect', this.onConnect);
     this.centrifuge.on('disconnect', this.onDisconnect);
     this.centrifuge.on('publish', this.onServerSideMessage);
-  } //----------------------------------------------------------
-  // Internal functions
-  //----------------------------------------------------------
+  } 
 
 
-  /**
-   * Get a channel.  If the scope, namespace, or path is invalid, a shutdown
-   * channel will be returned with an error state indicated in its status
-   */
   getChannel(addr) {
     const id = `${this.deps.orgId}/${addr.scope}/${addr.namespace}/${addr.path}`;
     let channel = this.open.get(id);
@@ -6491,10 +6178,10 @@ class CentrifugeService {
     }
 
     channel.shutdownCallback = () => {
-      this.open.delete(id); // remove it from the list of open channels
+      this.open.delete(id); 
     };
 
-    this.open.set(id, channel); // Initialize the channel in the background
+    this.open.set(id, channel); 
 
     this.initChannel(channel).catch(err => {
       if (channel) {
@@ -6503,7 +6190,7 @@ class CentrifugeService {
       }
 
       this.open.delete(id);
-    }); // return the not-yet initialized channel
+    }); 
 
     return channel;
   }
@@ -6519,67 +6206,59 @@ class CentrifugeService {
       data: channel.addr.data
     });
     return;
-  } //----------------------------------------------------------
-  // Exported functions
-  //----------------------------------------------------------
-
-  /**
-   * Listen for changes to the connection state
-   */
+  } 
 
 
-} // This is used to give a unique key for each stream.  The actual value does not matter
+
+} 
 
 let streamCounter = 0;
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/live/centrifuge/transferHandlers.ts":
-/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+ "./public/app/features/live/centrifuge/transferHandlers.ts":
+ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-/* harmony import */ var comlink__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/comlink-npm-4.3.1-45efe1dd36-557360a655.zip/node_modules/comlink/dist/esm/comlink.mjs");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subscriber.js");
+ var comlink__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/comlink-npm-4.3.1-45efe1dd36-557360a655.zip/node_modules/comlink/dist/esm/comlink.mjs");
+ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subscriber.js");
 
- // Observers, ie. functions passed to `observable.subscribe(...)`, are converted to a subclass of `Subscriber` before they are sent to the source Observable.
-// The conversion happens internally in the RxJS library - this transfer handler is catches them and wraps them with a proxy
 
 const subscriberTransferHandler = {
   canHandle(value) {
-    return value && value instanceof rxjs__WEBPACK_IMPORTED_MODULE_0__/* .Subscriber */ .Lv;
+    return value && value instanceof rxjs__WEBPACK_IMPORTED_MODULE_0__ .Lv;
   },
 
   serialize(value) {
-    const obj = comlink__WEBPACK_IMPORTED_MODULE_1__/* .proxy */ .sj(value);
+    const obj = comlink__WEBPACK_IMPORTED_MODULE_1__ .sj(value);
     const {
       port1,
       port2
     } = new MessageChannel();
-    comlink__WEBPACK_IMPORTED_MODULE_1__/* .expose */ .Jj(obj, port1);
+    comlink__WEBPACK_IMPORTED_MODULE_1__ .Jj(obj, port1);
     return [port2, [port2]];
   },
 
   deserialize(value) {
     value.start();
-    return comlink__WEBPACK_IMPORTED_MODULE_1__/* .wrap */ .Ud(value);
+    return comlink__WEBPACK_IMPORTED_MODULE_1__ .Ud(value);
   }
 
 };
-comlink__WEBPACK_IMPORTED_MODULE_1__/* .transferHandlers.set */ .Y6.set('SubscriberHandler', subscriberTransferHandler);
+comlink__WEBPACK_IMPORTED_MODULE_1__ .Y6.set('SubscriberHandler', subscriberTransferHandler);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/prometheus/legend.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/prometheus/legend.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "W": () => (/* binding */ renderLegendFormat)
-/* harmony export */ });
-/** replace labels in a string.  Used for loki+prometheus legend formats */
+ __webpack_require__.d(__webpack_exports__, {
+   "W": () => ( renderLegendFormat)
+ });
 function renderLegendFormat(aliasPattern, aliasData) {
   const aliasRegex = /\{\{\s*(.+?)\s*\}\}/g;
   return aliasPattern.replace(aliasRegex, (_, g1) => aliasData[g1] ? aliasData[g1] : g1);
 }
 
-/***/ })
+ })
 
 }]);

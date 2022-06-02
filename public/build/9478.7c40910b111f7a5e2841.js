@@ -1,20 +1,14 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[9478],{
 
-/***/ "./.yarn/cache/monaco-editor-npm-0.31.1-d8d5ee78bb-65be40c557.zip/node_modules/monaco-editor/esm/vs/language/json/jsonMode.js":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./.yarn/cache/monaco-editor-npm-0.31.1-d8d5ee78bb-65be40c557.zip/node_modules/monaco-editor/esm/vs/language/json/jsonMode.js":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "setupMode": () => (/* binding */ setupMode)
-/* harmony export */ });
-/* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/monaco-editor-npm-0.31.1-d8d5ee78bb-65be40c557.zip/node_modules/monaco-editor/esm/vs/editor/editor.api.js");
-/*!-----------------------------------------------------------------------------
- * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.31.1(337587859b1c171314b40503171188b6cea6a32a)
- * Released under the MIT license
- * https://github.com/microsoft/monaco-editor/blob/main/LICENSE.txt
- *-----------------------------------------------------------------------------*/
+ __webpack_require__.d(__webpack_exports__, {
+   "setupMode": () => ( setupMode)
+ });
+ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/monaco-editor-npm-0.31.1-d8d5ee78bb-65be40c557.zip/node_modules/monaco-editor/esm/vs/editor/editor.api.js");
 
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -30,13 +24,11 @@ var __reExport = (target, module, desc) => {
   return target;
 };
 
-// src/fillers/monaco-editor-core.ts
 var monaco_editor_core_exports = {};
 __markAsModule(monaco_editor_core_exports);
 __reExport(monaco_editor_core_exports, _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__);
 
 
-// src/json/workerManager.ts
 var STOP_WHEN_IDLE_FOR = 2 * 60 * 1e3;
 var WorkerManager = class {
   constructor(defaults) {
@@ -96,7 +88,6 @@ var WorkerManager = class {
   }
 };
 
-// node_modules/vscode-languageserver-types/lib/esm/main.js
 "use strict";
 var integer;
 (function(integer2) {
@@ -1354,7 +1345,6 @@ var Is;
   Is2.typedArray = typedArray;
 })(Is || (Is = {}));
 
-// src/common/lspLanguageFeatures.ts
 var DiagnosticsAdapter = class {
   constructor(_languageId, _worker, configChangeEvent) {
     this._languageId = _languageId;
@@ -1832,7 +1822,6 @@ var SelectionRangeAdapter = class {
   }
 };
 
-// node_modules/jsonc-parser/lib/esm/impl/scanner.js
 "use strict";
 function createScanner(text, ignoreTrivia) {
   if (ignoreTrivia === void 0) {
@@ -2182,10 +2171,8 @@ function isDigit(ch) {
   return ch >= 48 && ch <= 57;
 }
 
-// node_modules/jsonc-parser/lib/esm/impl/format.js
 "use strict";
 
-// node_modules/jsonc-parser/lib/esm/impl/parser.js
 "use strict";
 var ParseOptions;
 (function(ParseOptions2) {
@@ -2194,14 +2181,11 @@ var ParseOptions;
   };
 })(ParseOptions || (ParseOptions = {}));
 
-// node_modules/jsonc-parser/lib/esm/impl/edit.js
 "use strict";
 
-// node_modules/jsonc-parser/lib/esm/main.js
 "use strict";
 var createScanner2 = createScanner;
 
-// src/json/tokenization.ts
 function createTokenizationSupport(supportComments) {
   return {
     getInitialState: () => new JSONState(null, null, false, null),
@@ -2416,7 +2400,6 @@ function tokenize(comments, line, state, offsetDelta = 0) {
   return ret;
 }
 
-// src/json/jsonMode.ts
 var JSONDiagnosticsAdapter = class extends DiagnosticsAdapter {
   constructor(languageId, worker, defaults) {
     super(languageId, worker, defaults.onDidChange);
@@ -2514,6 +2497,6 @@ var richEditConfiguration = {
 
 
 
-/***/ })
+ })
 
 }]);

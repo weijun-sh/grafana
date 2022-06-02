@@ -1,17 +1,17 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[7036],{
 
-/***/ "./public/app/core/components/PanelTypeFilter/PanelTypeFilter.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/components/PanelTypeFilter/PanelTypeFilter.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "j": () => (/* binding */ PanelTypeFilter)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var app_features_panel_state_util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/panel/state/util.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "j": () => ( PanelTypeFilter)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var app_features_panel_state_util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/panel/state/util.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _Icon;
 
 
@@ -26,7 +26,7 @@ const PanelTypeFilter = _ref => {
     maxMenuHeight
   } = _ref;
   const plugins = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(() => {
-    return (0,app_features_panel_state_util__WEBPACK_IMPORTED_MODULE_3__/* .getAllPanelPluginMeta */ .x)();
+    return (0,app_features_panel_state_util__WEBPACK_IMPORTED_MODULE_3__ .x)();
   }, []);
   const options = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(() => plugins.map(p => ({
     label: p.name,
@@ -62,9 +62,9 @@ const PanelTypeFilter = _ref => {
     value,
     onChange
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: styles.container,
-    children: [value.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Button, {
+    children: [value.length > 0 && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Button, {
       size: "xs",
       icon: "trash-alt",
       variant: "link",
@@ -72,8 +72,8 @@ const PanelTypeFilter = _ref => {
       onClick: () => onChange([]),
       "aria-label": "Clear types",
       children: "Clear types"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.MultiSelect, Object.assign({}, selectOptions, {
-      prefix: _Icon || (_Icon = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Icon, {
+    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.MultiSelect, Object.assign({}, selectOptions, {
+      prefix: _Icon || (_Icon = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Icon, {
         name: "filter"
       })),
       "aria-label": "Panel Type filter"
@@ -99,47 +99,35 @@ function getStyles(theme) {
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/library-panels/components/LibraryPanelCard/LibraryPanelCard.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/library-panels/components/LibraryPanelCard/LibraryPanelCard.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "p": () => (/* binding */ LibraryPanelCard)
+  "p": () => ( LibraryPanelCard)
 });
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/features/panel/components/PanelPluginError.tsx
 var PanelPluginError = __webpack_require__("./public/app/features/panel/components/PanelPluginError.tsx");
-// EXTERNAL MODULE: ./public/app/features/panel/components/VizTypePicker/PanelTypeCard.tsx
 var PanelTypeCard = __webpack_require__("./public/app/features/panel/components/VizTypePicker/PanelTypeCard.tsx");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var grafana_data_src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./public/app/features/library-panels/styles.ts
 var library_panels_styles = __webpack_require__("./public/app/features/library-panels/styles.ts");
-// EXTERNAL MODULE: ./public/app/features/library-panels/components/LibraryPanelsView/actions.ts
 var actions = __webpack_require__("./public/app/features/library-panels/components/LibraryPanelsView/actions.ts");
-// EXTERNAL MODULE: ./public/app/features/library-panels/state/api.ts
 var api = __webpack_require__("./public/app/features/library-panels/state/api.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/@reduxjs-toolkit-virtual-341575ab98/0/cache/@reduxjs-toolkit-npm-1.8.0-436263eab0-e229571b80.zip/node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js + 2 modules
 var redux_toolkit_esm = __webpack_require__("./.yarn/__virtual__/@reduxjs-toolkit-virtual-341575ab98/0/cache/@reduxjs-toolkit-npm-1.8.0-436263eab0-e229571b80.zip/node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
-;// CONCATENATED MODULE: ./public/app/features/library-panels/components/DeleteLibraryPanelModal/reducer.ts
+;
 
 
 const initialDeleteLibraryPanelModalState = {
   loadingState: grafana_data_src.LoadingState.Loading,
   dashboardTitles: []
 };
-const searchCompleted = (0,redux_toolkit_esm/* createAction */.PH)('libraryPanels/delete/searchCompleted');
+const searchCompleted = (0,redux_toolkit_esm.PH)('libraryPanels/delete/searchCompleted');
 const deleteLibraryPanelModalReducer = function () {
   let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialDeleteLibraryPanelModalState;
   let action = arguments.length > 1 ? arguments[1] : undefined;
@@ -153,20 +141,19 @@ const deleteLibraryPanelModalReducer = function () {
 
   return state;
 };
-;// CONCATENATED MODULE: ./public/app/features/library-panels/components/DeleteLibraryPanelModal/actions.ts
+;
 
 
 function getConnectedDashboards(libraryPanel) {
   return async function (dispatch) {
-    const dashboards = await (0,api/* getConnectedDashboards */.E8)(libraryPanel.uid);
+    const dashboards = await (0,api.E8)(libraryPanel.uid);
     dispatch(searchCompleted({
       dashboards
     }));
   };
 }
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/library-panels/components/DeleteLibraryPanelModal/DeleteLibraryPanelModal.tsx
+;
 var _LoadingIndicator, _Confirm, _span, _thead;
 
 
@@ -184,33 +171,33 @@ const DeleteLibraryPanelModal = _ref => {
     onDismiss,
     onConfirm
   } = _ref;
-  const styles = (0,grafana_ui_src.useStyles)(library_panels_styles/* getModalStyles */.J);
+  const styles = (0,grafana_ui_src.useStyles)(library_panels_styles.J);
   const [{
     dashboardTitles,
     loadingState
   }, dispatch] = (0,react.useReducer)(deleteLibraryPanelModalReducer, initialDeleteLibraryPanelModalState);
-  const asyncDispatch = (0,react.useMemo)(() => (0,actions/* asyncDispatcher */.tb)(dispatch), [dispatch]);
+  const asyncDispatch = (0,react.useMemo)(() => (0,actions.tb)(dispatch), [dispatch]);
   (0,react.useEffect)(() => {
     asyncDispatch(getConnectedDashboards(libraryPanel));
   }, [asyncDispatch, libraryPanel]);
   const connected = Boolean(dashboardTitles.length);
   const done = loadingState === grafana_data_src.LoadingState.Done;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.Modal, {
+  return (0,jsx_runtime.jsxs)(grafana_ui_src.Modal, {
     className: styles.modal,
     title: "Delete library panel",
     icon: "trash-alt",
     onDismiss: onDismiss,
     isOpen: true,
-    children: [!done ? _LoadingIndicator || (_LoadingIndicator = /*#__PURE__*/(0,jsx_runtime.jsx)(LoadingIndicator, {})) : null, done ? /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-      children: [connected ? /*#__PURE__*/(0,jsx_runtime.jsx)(HasConnectedDashboards, {
+    children: [!done ? _LoadingIndicator || (_LoadingIndicator = (0,jsx_runtime.jsx)(LoadingIndicator, {})) : null, done ? (0,jsx_runtime.jsxs)("div", {
+      children: [connected ? (0,jsx_runtime.jsx)(HasConnectedDashboards, {
         dashboardTitles: dashboardTitles
-      }) : null, !connected ? _Confirm || (_Confirm = /*#__PURE__*/(0,jsx_runtime.jsx)(Confirm, {})) : null, /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.Modal.ButtonRow, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      }) : null, !connected ? _Confirm || (_Confirm = (0,jsx_runtime.jsx)(Confirm, {})) : null, (0,jsx_runtime.jsxs)(grafana_ui_src.Modal.ButtonRow, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           variant: "secondary",
           onClick: onDismiss,
           fill: "outline",
           children: "Cancel"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           variant: "destructive",
           onClick: onConfirm,
           disabled: connected,
@@ -221,13 +208,13 @@ const DeleteLibraryPanelModal = _ref => {
   });
 };
 
-const LoadingIndicator = () => _span || (_span = /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+const LoadingIndicator = () => _span || (_span = (0,jsx_runtime.jsx)("span", {
   children: "Loading library panel..."
 }));
 
 const Confirm = () => {
-  const styles = (0,grafana_ui_src.useStyles)(library_panels_styles/* getModalStyles */.J);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  const styles = (0,grafana_ui_src.useStyles)(library_panels_styles.J);
+  return (0,jsx_runtime.jsx)("div", {
     className: styles.modalText,
     children: "Do you want to delete this panel?"
   });
@@ -237,7 +224,7 @@ const HasConnectedDashboards = _ref2 => {
   let {
     dashboardTitles
   } = _ref2;
-  const styles = (0,grafana_ui_src.useStyles)(library_panels_styles/* getModalStyles */.J);
+  const styles = (0,grafana_ui_src.useStyles)(library_panels_styles.J);
   const suffix = dashboardTitles.length === 1 ? 'dashboard.' : 'dashboards.';
   const message = `${dashboardTitles.length} ${suffix}`;
 
@@ -245,23 +232,23 @@ const HasConnectedDashboards = _ref2 => {
     return null;
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("p", {
+  return (0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsxs)("p", {
       className: styles.textInfo,
-      children: ['This library panel can not be deleted because it is connected to ', /*#__PURE__*/(0,jsx_runtime.jsx)("strong", {
+      children: ['This library panel can not be deleted because it is connected to ', (0,jsx_runtime.jsx)("strong", {
         children: message
       }), ' Remove the library panel from the dashboards listed below and retry.']
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)("table", {
+    }), (0,jsx_runtime.jsxs)("table", {
       className: styles.myTable,
-      children: [_thead || (_thead = /*#__PURE__*/(0,jsx_runtime.jsx)("thead", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("tr", {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+      children: [_thead || (_thead = (0,jsx_runtime.jsx)("thead", {
+        children: (0,jsx_runtime.jsx)("tr", {
+          children: (0,jsx_runtime.jsx)("th", {
             children: "Dashboard name"
           })
         })
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)("tbody", {
-        children: dashboardTitles.map((title, i) => /*#__PURE__*/(0,jsx_runtime.jsx)("tr", {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+      })), (0,jsx_runtime.jsx)("tbody", {
+        children: dashboardTitles.map((title, i) => (0,jsx_runtime.jsx)("tr", {
+          children: (0,jsx_runtime.jsx)("td", {
             children: title
           })
         }, `dash-title-${i}`))
@@ -269,7 +256,7 @@ const HasConnectedDashboards = _ref2 => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/library-panels/components/LibraryPanelCard/LibraryPanelCard.tsx
+;
 var _Icon, _Icon2;
 
 
@@ -298,19 +285,19 @@ const LibraryPanelCard = _ref => {
     setShowDeletionModal(false);
   };
 
-  const panelPlugin = (_config$panels$librar = src.config.panels[libraryPanel.model.type]) !== null && _config$panels$librar !== void 0 ? _config$panels$librar : (0,PanelPluginError/* getPanelPluginNotFound */.X)(libraryPanel.model.type).meta;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(PanelTypeCard/* PanelTypeCard */.X, {
+  const panelPlugin = (_config$panels$librar = src.config.panels[libraryPanel.model.type]) !== null && _config$panels$librar !== void 0 ? _config$panels$librar : (0,PanelPluginError.X)(libraryPanel.model.type).meta;
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(PanelTypeCard.X, {
       isCurrent: false,
       title: libraryPanel.name,
       description: libraryPanel.description,
       plugin: panelPlugin,
       onClick: () => onClick === null || onClick === void 0 ? void 0 : onClick(libraryPanel),
       onDelete: showSecondaryActions ? () => setShowDeletionModal(true) : undefined,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(FolderLink, {
+      children: (0,jsx_runtime.jsx)(FolderLink, {
         libraryPanel: libraryPanel
       })
-    }), showDeletionModal && /*#__PURE__*/(0,jsx_runtime.jsx)(DeleteLibraryPanelModal, {
+    }), showDeletionModal && (0,jsx_runtime.jsx)(DeleteLibraryPanelModal, {
       libraryPanel: libraryPanel,
       onConfirm: onDeletePanel,
       onDismiss: () => setShowDeletionModal(false)
@@ -329,25 +316,25 @@ function FolderLink(_ref2) {
   }
 
   if (!libraryPanel.meta.folderUid) {
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("span", {
+    return (0,jsx_runtime.jsxs)("span", {
       className: styles.metaContainer,
-      children: [_Icon || (_Icon = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      children: [_Icon || (_Icon = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: 'folder',
         size: "sm"
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+      })), (0,jsx_runtime.jsx)("span", {
         children: libraryPanel.meta.folderName
       })]
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+  return (0,jsx_runtime.jsx)("span", {
     className: styles.metaContainer,
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.Link, {
+    children: (0,jsx_runtime.jsxs)(grafana_ui_src.Link, {
       href: `/dashboards/f/${libraryPanel.meta.folderUid}`,
-      children: [_Icon2 || (_Icon2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      children: [_Icon2 || (_Icon2 = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: 'folder-upload',
         size: "sm"
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+      })), (0,jsx_runtime.jsx)("span", {
         children: libraryPanel.meta.folderName
       })]
     })
@@ -371,34 +358,26 @@ function getStyles(theme) {
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/library-panels/components/LibraryPanelsSearch/LibraryPanelsSearch.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/library-panels/components/LibraryPanelsSearch/LibraryPanelsSearch.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "N": () => (/* binding */ LibraryPanelsSearch),
-  "e": () => (/* binding */ LibraryPanelsSearchVariant)
+  "N": () => ( LibraryPanelsSearch),
+  "e": () => ( LibraryPanelsSearchVariant)
 });
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/debounce-promise-npm-3.1.2-3c185da0c7-29bac4524c.zip/node_modules/debounce-promise/dist/index.js
 var dist = __webpack_require__("./.yarn/cache/debounce-promise-npm-3.1.2-3c185da0c7-29bac4524c.zip/node_modules/debounce-promise/dist/index.js");
-var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
-// EXTERNAL MODULE: ./public/app/core/services/backend_srv.ts + 4 modules
+var dist_default = __webpack_require__.n(dist);
 var backend_srv = __webpack_require__("./public/app/core/services/backend_srv.ts");
-// EXTERNAL MODULE: ./public/app/types/index.ts + 4 modules
 var types = __webpack_require__("./public/app/types/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/core/components/FolderFilter/FolderFilter.tsx
+;
 var _Icon;
 
 
@@ -440,9 +419,9 @@ function FolderFilter(_ref) {
     value,
     onChange
   };
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: styles.container,
-    children: [value.length > 0 && /*#__PURE__*/(0,jsx_runtime.jsx)(src.Button, {
+    children: [value.length > 0 && (0,jsx_runtime.jsx)(src.Button, {
       size: "xs",
       icon: "trash-alt",
       variant: "link",
@@ -450,10 +429,10 @@ function FolderFilter(_ref) {
       onClick: () => onChange([]),
       "aria-label": "Clear folders",
       children: "Clear folders"
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(src.AsyncMultiSelect, Object.assign({}, selectOptions, {
+    }), (0,jsx_runtime.jsx)(src.AsyncMultiSelect, Object.assign({}, selectOptions, {
       isLoading: loading,
       loadOptions: debouncedLoadOptions,
-      prefix: _Icon || (_Icon = /*#__PURE__*/(0,jsx_runtime.jsx)(src.Icon, {
+      prefix: _Icon || (_Icon = (0,jsx_runtime.jsx)(src.Icon, {
         name: "filter"
       })),
       "aria-label": "Folder filter"
@@ -466,9 +445,9 @@ async function getFoldersAsOptions(searchString, setLoading) {
   const params = {
     query: searchString,
     type: 'dash-folder',
-    permission: types/* PermissionLevelString.View */.bf.View
+    permission: types.bf.View
   };
-  const searchHits = await (0,backend_srv/* getBackendSrv */.i)().search(params);
+  const searchHits = await (0,backend_srv.i)().search(params);
   const options = searchHits.map(d => ({
     label: d.title,
     value: {
@@ -508,17 +487,12 @@ function getStyles(theme) {
     `
   };
 }
-// EXTERNAL MODULE: ./public/app/core/components/PanelTypeFilter/PanelTypeFilter.tsx
 var PanelTypeFilter = __webpack_require__("./public/app/core/components/PanelTypeFilter/PanelTypeFilter.tsx");
-// EXTERNAL MODULE: ./public/app/core/components/Select/SortPicker.tsx
 var SortPicker = __webpack_require__("./public/app/core/components/Select/SortPicker.tsx");
-// EXTERNAL MODULE: ./public/app/core/constants.ts
 var constants = __webpack_require__("./public/app/core/constants.ts");
-// EXTERNAL MODULE: ./public/app/features/library-panels/components/LibraryPanelsView/LibraryPanelsView.tsx
 var LibraryPanelsView = __webpack_require__("./public/app/features/library-panels/components/LibraryPanelsView/LibraryPanelsView.tsx");
-// EXTERNAL MODULE: ./.yarn/__virtual__/@reduxjs-toolkit-virtual-341575ab98/0/cache/@reduxjs-toolkit-npm-1.8.0-436263eab0-e229571b80.zip/node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js + 2 modules
 var redux_toolkit_esm = __webpack_require__("./.yarn/__virtual__/@reduxjs-toolkit-virtual-341575ab98/0/cache/@reduxjs-toolkit-npm-1.8.0-436263eab0-e229571b80.zip/node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
-;// CONCATENATED MODULE: ./public/app/features/library-panels/components/LibraryPanelsSearch/reducer.ts
+;
 
 const initialLibraryPanelsSearchState = {
   searchQuery: '',
@@ -526,10 +500,10 @@ const initialLibraryPanelsSearchState = {
   folderFilter: [],
   sortDirection: undefined
 };
-const searchChanged = (0,redux_toolkit_esm/* createAction */.PH)('libraryPanels/search/searchChanged');
-const sortChanged = (0,redux_toolkit_esm/* createAction */.PH)('libraryPanels/search/sortChanged');
-const panelFilterChanged = (0,redux_toolkit_esm/* createAction */.PH)('libraryPanels/search/panelFilterChanged');
-const folderFilterChanged = (0,redux_toolkit_esm/* createAction */.PH)('libraryPanels/search/folderFilterChanged');
+const searchChanged = (0,redux_toolkit_esm.PH)('libraryPanels/search/searchChanged');
+const sortChanged = (0,redux_toolkit_esm.PH)('libraryPanels/search/sortChanged');
+const panelFilterChanged = (0,redux_toolkit_esm.PH)('libraryPanels/search/panelFilterChanged');
+const folderFilterChanged = (0,redux_toolkit_esm.PH)('libraryPanels/search/folderFilterChanged');
 const libraryPanelsSearchReducer = (state, action) => {
   if (searchChanged.match(action)) {
     return Object.assign({}, state, {
@@ -557,7 +531,7 @@ const libraryPanelsSearchReducer = (state, action) => {
 
   return state;
 };
-;// CONCATENATED MODULE: ./public/app/features/library-panels/components/LibraryPanelsSearch/LibraryPanelsSearch.tsx
+;
 
 
 
@@ -584,7 +558,7 @@ const LibraryPanelsSearch = _ref => {
     variant = LibraryPanelsSearchVariant.Spacious,
     currentPanelId,
     currentFolderId,
-    perPage = constants/* DEFAULT_PER_PAGE_PAGINATION */.gN,
+    perPage = constants.gN,
     showPanelFilter = false,
     showFolderFilter = false,
     showSort = false,
@@ -609,37 +583,37 @@ const LibraryPanelsSearch = _ref => {
   const onPanelFilterChange = plugins => dispatch(panelFilterChanged(plugins));
 
   if (variant === LibraryPanelsSearchVariant.Spacious) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       className: styles.container,
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)(src.VerticalGroup, {
+      children: (0,jsx_runtime.jsxs)(src.VerticalGroup, {
         spacing: "lg",
-        children: [_FilterInput || (_FilterInput = /*#__PURE__*/(0,jsx_runtime.jsx)(src.FilterInput, {
+        children: [_FilterInput || (_FilterInput = (0,jsx_runtime.jsx)(src.FilterInput, {
           value: searchQuery,
           onChange: onFilterChange,
           placeholder: 'Search by name or description',
           width: 0
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        })), (0,jsx_runtime.jsx)("div", {
           className: styles.buttonRow,
-          children: /*#__PURE__*/(0,jsx_runtime.jsxs)(src.HorizontalGroup, {
+          children: (0,jsx_runtime.jsxs)(src.HorizontalGroup, {
             spacing: "sm",
             justify: showSort && showPanelFilter || showFolderFilter ? 'space-between' : 'flex-end',
-            children: [showSort && /*#__PURE__*/(0,jsx_runtime.jsx)(SortPicker/* SortPicker */.P, {
+            children: [showSort && (0,jsx_runtime.jsx)(SortPicker.P, {
               value: sortDirection,
               onChange: onSortChange,
               filter: ['alpha-asc', 'alpha-desc']
-            }), /*#__PURE__*/(0,jsx_runtime.jsxs)(src.HorizontalGroup, {
+            }), (0,jsx_runtime.jsxs)(src.HorizontalGroup, {
               spacing: "sm",
               justify: showFolderFilter && showPanelFilter ? 'space-between' : 'flex-end',
-              children: [showFolderFilter && /*#__PURE__*/(0,jsx_runtime.jsx)(FolderFilter, {
+              children: [showFolderFilter && (0,jsx_runtime.jsx)(FolderFilter, {
                 onChange: onFolderFilterChange
-              }), showPanelFilter && /*#__PURE__*/(0,jsx_runtime.jsx)(PanelTypeFilter/* PanelTypeFilter */.j, {
+              }), showPanelFilter && (0,jsx_runtime.jsx)(PanelTypeFilter.j, {
                 onChange: onPanelFilterChange
               })]
             })]
           })
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        }), (0,jsx_runtime.jsx)("div", {
           className: styles.libraryPanelsView,
-          children: _LibraryPanelsView || (_LibraryPanelsView = /*#__PURE__*/(0,jsx_runtime.jsx)(LibraryPanelsView/* LibraryPanelsView */.u, {
+          children: _LibraryPanelsView || (_LibraryPanelsView = (0,jsx_runtime.jsx)(LibraryPanelsView.u, {
             onClickCard: onClick,
             searchString: searchQuery,
             sortDirection: sortDirection,
@@ -654,36 +628,36 @@ const LibraryPanelsSearch = _ref => {
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: styles.container,
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)(src.VerticalGroup, {
+    children: (0,jsx_runtime.jsxs)(src.VerticalGroup, {
       spacing: "xs",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      children: [(0,jsx_runtime.jsxs)("div", {
         className: styles.tightButtonRow,
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: [(0,jsx_runtime.jsx)("div", {
           className: styles.tightFilter,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(src.FilterInput, {
+          children: (0,jsx_runtime.jsx)(src.FilterInput, {
             value: searchQuery,
             onChange: onFilterChange,
             placeholder: 'Search by name',
             width: 0
           })
-        }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        }), (0,jsx_runtime.jsxs)("div", {
           className: styles.tightSortFilter,
-          children: [showSort && /*#__PURE__*/(0,jsx_runtime.jsx)(SortPicker/* SortPicker */.P, {
+          children: [showSort && (0,jsx_runtime.jsx)(SortPicker.P, {
             value: sortDirection,
             onChange: onSortChange
-          }), showFolderFilter && /*#__PURE__*/(0,jsx_runtime.jsx)(FolderFilter, {
+          }), showFolderFilter && (0,jsx_runtime.jsx)(FolderFilter, {
             onChange: onFolderFilterChange,
             maxMenuHeight: 200
-          }), showPanelFilter && /*#__PURE__*/(0,jsx_runtime.jsx)(PanelTypeFilter/* PanelTypeFilter */.j, {
+          }), showPanelFilter && (0,jsx_runtime.jsx)(PanelTypeFilter.j, {
             onChange: onPanelFilterChange,
             maxMenuHeight: 200
           })]
         })]
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: styles.libraryPanelsView,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(LibraryPanelsView/* LibraryPanelsView */.u, {
+        children: (0,jsx_runtime.jsx)(LibraryPanelsView.u, {
           onClickCard: onClick,
           searchString: searchQuery,
           sortDirection: sortDirection,
@@ -730,23 +704,23 @@ function LibraryPanelsSearch_getStyles(theme) {
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/library-panels/components/LibraryPanelsView/LibraryPanelsView.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/library-panels/components/LibraryPanelsView/LibraryPanelsView.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "u": () => (/* binding */ LibraryPanelsView)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var react_use__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useDebounce.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var _LibraryPanelCard_LibraryPanelCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/library-panels/components/LibraryPanelCard/LibraryPanelCard.tsx");
-/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/library-panels/components/LibraryPanelsView/actions.ts");
-/* harmony import */ var _reducer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/library-panels/components/LibraryPanelsView/reducer.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "u": () => ( LibraryPanelsView)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var react_use__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useDebounce.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var _LibraryPanelCard_LibraryPanelCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/library-panels/components/LibraryPanelCard/LibraryPanelCard.tsx");
+ var _actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/library-panels/components/LibraryPanelsView/actions.ts");
+ var _reducer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/library-panels/components/LibraryPanelsView/reducer.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _p;
 
 
@@ -779,12 +753,12 @@ const LibraryPanelsView = _ref => {
     numberOfPages,
     loadingState,
     currentPanelId
-  }, dispatch] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useReducer)(_reducer__WEBPACK_IMPORTED_MODULE_6__/* .libraryPanelsViewReducer */ ._p, Object.assign({}, _reducer__WEBPACK_IMPORTED_MODULE_6__/* .initialLibraryPanelsViewState */ .p$, {
+  }, dispatch] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useReducer)(_reducer__WEBPACK_IMPORTED_MODULE_6__ ._p, Object.assign({}, _reducer__WEBPACK_IMPORTED_MODULE_6__ .p$, {
     currentPanelId: currentPanel,
     perPage: propsPerPage
   }));
-  const asyncDispatch = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(() => (0,_actions__WEBPACK_IMPORTED_MODULE_5__/* .asyncDispatcher */ .tb)(dispatch), [dispatch]);
-  (0,react_use__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .Z)(() => asyncDispatch((0,_actions__WEBPACK_IMPORTED_MODULE_5__/* .searchForLibraryPanels */ .Xu)({
+  const asyncDispatch = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(() => (0,_actions__WEBPACK_IMPORTED_MODULE_5__ .tb)(dispatch), [dispatch]);
+  (0,react_use__WEBPACK_IMPORTED_MODULE_8__ .Z)(() => asyncDispatch((0,_actions__WEBPACK_IMPORTED_MODULE_5__ .Xu)({
     searchString,
     sortDirection,
     panelFilter,
@@ -798,35 +772,35 @@ const LibraryPanelsView = _ref => {
     let {
       uid
     } = _ref2;
-    return asyncDispatch((0,_actions__WEBPACK_IMPORTED_MODULE_5__/* .deleteLibraryPanel */ .UO)(uid, {
+    return asyncDispatch((0,_actions__WEBPACK_IMPORTED_MODULE_5__ .UO)(uid, {
       searchString,
       page,
       perPage
     }));
   };
 
-  const onPageChange = page => asyncDispatch((0,_reducer__WEBPACK_IMPORTED_MODULE_6__/* .changePage */ .oO)({
+  const onPageChange = page => asyncDispatch((0,_reducer__WEBPACK_IMPORTED_MODULE_6__ .oO)({
     page
   }));
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
     className: (0,_emotion_css__WEBPACK_IMPORTED_MODULE_0__.cx)(styles.container, className),
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
       className: styles.libraryPanelList,
-      children: loadingState === _grafana_data__WEBPACK_IMPORTED_MODULE_2__.LoadingState.Loading ? _p || (_p = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+      children: loadingState === _grafana_data__WEBPACK_IMPORTED_MODULE_2__.LoadingState.Loading ? _p || (_p = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
         children: "Loading library panels..."
-      })) : libraryPanels.length < 1 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+      })) : libraryPanels.length < 1 ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
         className: styles.noPanelsFound,
         children: "No library panels found."
-      }) : libraryPanels === null || libraryPanels === void 0 ? void 0 : libraryPanels.map((item, i) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_LibraryPanelCard_LibraryPanelCard__WEBPACK_IMPORTED_MODULE_4__/* .LibraryPanelCard */ .p, {
+      }) : libraryPanels === null || libraryPanels === void 0 ? void 0 : libraryPanels.map((item, i) => (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_LibraryPanelCard_LibraryPanelCard__WEBPACK_IMPORTED_MODULE_4__ .p, {
         libraryPanel: item,
         onDelete: onDelete,
         onClick: onClickCard,
         showSecondaryActions: showSecondaryActions
       }, `library-panel=${i}`))
-    }), libraryPanels.length ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+    }), libraryPanels.length ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
       className: styles.pagination,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Pagination, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Pagination, {
         currentPage: page,
         numberOfPages: numberOfPages,
         onNavigate: onPageChange,
@@ -866,37 +840,37 @@ const getPanelViewStyles = theme => {
   };
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/library-panels/components/LibraryPanelsView/actions.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/library-panels/components/LibraryPanelsView/actions.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "UO": () => (/* binding */ deleteLibraryPanel),
-/* harmony export */   "Xu": () => (/* binding */ searchForLibraryPanels),
-/* harmony export */   "tb": () => (/* binding */ asyncDispatcher)
-/* harmony export */ });
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subscription.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/from.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/merge.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/timer.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/finalize.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/share.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mapTo.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/takeUntil.js");
-/* harmony import */ var _state_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./public/app/features/library-panels/state/api.ts");
-/* harmony import */ var _reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/library-panels/components/LibraryPanelsView/reducer.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "UO": () => ( deleteLibraryPanel),
+   "Xu": () => ( searchForLibraryPanels),
+   "tb": () => ( asyncDispatcher)
+ });
+ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subscription.js");
+ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/from.js");
+ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
+ var rxjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/merge.js");
+ var rxjs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/timer.js");
+ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js");
+ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js");
+ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/finalize.js");
+ var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/share.js");
+ var rxjs_operators__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mapTo.js");
+ var rxjs_operators__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/takeUntil.js");
+ var _state_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./public/app/features/library-panels/state/api.ts");
+ var _reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/library-panels/components/LibraryPanelsView/reducer.ts");
 
 
 
 
 function searchForLibraryPanels(args) {
   return function (dispatch) {
-    const subscription = new rxjs__WEBPACK_IMPORTED_MODULE_2__/* .Subscription */ .w0();
-    const dataObservable = (0,rxjs__WEBPACK_IMPORTED_MODULE_3__/* .from */ .D)((0,_state_api__WEBPACK_IMPORTED_MODULE_0__/* .getLibraryPanels */ .Pq)({
+    const subscription = new rxjs__WEBPACK_IMPORTED_MODULE_2__ .w0();
+    const dataObservable = (0,rxjs__WEBPACK_IMPORTED_MODULE_3__ .D)((0,_state_api__WEBPACK_IMPORTED_MODULE_0__ .Pq)({
       searchString: args.searchString,
       perPage: args.perPage,
       page: args.page,
@@ -904,37 +878,35 @@ function searchForLibraryPanels(args) {
       sortDirection: args.sortDirection,
       typeFilter: args.panelFilter,
       folderFilter: args.folderFilter
-    })).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__/* .mergeMap */ .z)(_ref => {
+    })).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ .z)(_ref => {
       let {
         perPage,
         elements: libraryPanels,
         page,
         totalCount
       } = _ref;
-      return (0,rxjs__WEBPACK_IMPORTED_MODULE_5__.of)((0,_reducer__WEBPACK_IMPORTED_MODULE_1__/* .searchCompleted */ .zK)({
+      return (0,rxjs__WEBPACK_IMPORTED_MODULE_5__.of)((0,_reducer__WEBPACK_IMPORTED_MODULE_1__ .zK)({
         libraryPanels,
         page,
         perPage,
         totalCount
       }));
-    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_6__/* .catchError */ .K)(err => {
+    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ .K)(err => {
       console.error(err);
-      return (0,rxjs__WEBPACK_IMPORTED_MODULE_5__.of)((0,_reducer__WEBPACK_IMPORTED_MODULE_1__/* .searchCompleted */ .zK)(Object.assign({}, _reducer__WEBPACK_IMPORTED_MODULE_1__/* .initialLibraryPanelsViewState */ .p$, {
+      return (0,rxjs__WEBPACK_IMPORTED_MODULE_5__.of)((0,_reducer__WEBPACK_IMPORTED_MODULE_1__ .zK)(Object.assign({}, _reducer__WEBPACK_IMPORTED_MODULE_1__ .p$, {
         page: args.page,
         perPage: args.perPage
       })));
-    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__/* .finalize */ .x)(() => subscription.unsubscribe()), // make sure we unsubscribe
-    (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_8__/* .share */ .B)());
-    subscription.add( // If 50ms without a response dispatch a loading state
-    // mapTo will translate the timer event into a loading state
-    // takeUntil will cancel the timer emit when first response is received on the dataObservable
-    (0,rxjs__WEBPACK_IMPORTED_MODULE_9__/* .merge */ .T)((0,rxjs__WEBPACK_IMPORTED_MODULE_10__/* .timer */ .H)(50).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__/* .mapTo */ .h)((0,_reducer__WEBPACK_IMPORTED_MODULE_1__/* .initSearch */ .xU)()), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__/* .takeUntil */ .R)(dataObservable)), dataObservable).subscribe(dispatch));
+    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ .x)(() => subscription.unsubscribe()), 
+    (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ .B)());
+    subscription.add( 
+    (0,rxjs__WEBPACK_IMPORTED_MODULE_9__ .T)((0,rxjs__WEBPACK_IMPORTED_MODULE_10__ .H)(50).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__ .h)((0,_reducer__WEBPACK_IMPORTED_MODULE_1__ .xU)()), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__ .R)(dataObservable)), dataObservable).subscribe(dispatch));
   };
 }
 function deleteLibraryPanel(uid, args) {
   return async function (dispatch) {
     try {
-      await (0,_state_api__WEBPACK_IMPORTED_MODULE_0__/* .deleteLibraryPanel */ .UO)(uid);
+      await (0,_state_api__WEBPACK_IMPORTED_MODULE_0__ .UO)(uid);
       searchForLibraryPanels(args)(dispatch);
     } catch (e) {
       console.error(e);
@@ -951,20 +923,20 @@ function asyncDispatcher(dispatch) {
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/library-panels/components/LibraryPanelsView/reducer.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/library-panels/components/LibraryPanelsView/reducer.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "_p": () => (/* binding */ libraryPanelsViewReducer),
-/* harmony export */   "oO": () => (/* binding */ changePage),
-/* harmony export */   "p$": () => (/* binding */ initialLibraryPanelsViewState),
-/* harmony export */   "xU": () => (/* binding */ initSearch),
-/* harmony export */   "zK": () => (/* binding */ searchCompleted)
-/* harmony export */ });
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/@reduxjs-toolkit-virtual-341575ab98/0/cache/@reduxjs-toolkit-npm-1.8.0-436263eab0-e229571b80.zip/node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "_p": () => ( libraryPanelsViewReducer),
+   "oO": () => ( changePage),
+   "p$": () => ( initialLibraryPanelsViewState),
+   "xU": () => ( initSearch),
+   "zK": () => ( searchCompleted)
+ });
+ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/@reduxjs-toolkit-virtual-341575ab98/0/cache/@reduxjs-toolkit-npm-1.8.0-436263eab0-e229571b80.zip/node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
 
 
 const initialLibraryPanelsViewState = {
@@ -976,9 +948,9 @@ const initialLibraryPanelsViewState = {
   numberOfPages: 0,
   currentPanelId: undefined
 };
-const initSearch = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__/* .createAction */ .PH)('libraryPanels/view/initSearch');
-const searchCompleted = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__/* .createAction */ .PH)('libraryPanels/view/searchCompleted');
-const changePage = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__/* .createAction */ .PH)('libraryPanels/view/changePage');
+const initSearch = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__ .PH)('libraryPanels/view/initSearch');
+const searchCompleted = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__ .PH)('libraryPanels/view/searchCompleted');
+const changePage = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__ .PH)('libraryPanels/view/changePage');
 const libraryPanelsViewReducer = (state, action) => {
   if (initSearch.match(action)) {
     return Object.assign({}, state, {
@@ -1013,15 +985,15 @@ const libraryPanelsViewReducer = (state, action) => {
   return state;
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/library-panels/styles.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/library-panels/styles.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "J": () => (/* binding */ getModalStyles)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "J": () => ( getModalStyles)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
 
 function getModalStyles(theme) {
   return {
@@ -1074,21 +1046,21 @@ function getModalStyles(theme) {
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/panel/components/VizTypePicker/PanelTypeCard.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/panel/components/VizTypePicker/PanelTypeCard.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "X": () => (/* binding */ PanelTypeCard)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var app_features_plugins_components_PluginStateInfo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/plugins/components/PluginStateInfo.tsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "X": () => ( PanelTypeCard)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var app_features_plugins_components_PluginStateInfo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/plugins/components/PluginStateInfo.tsx");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 
 
 
@@ -1115,30 +1087,30 @@ const PanelTypeCard = _ref => {
     [styles.disabled]: disabled || plugin.state === _grafana_data__WEBPACK_IMPORTED_MODULE_2__.PluginState.deprecated,
     [styles.current]: isCurrent
   });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
     className: cssClass,
-    "aria-label": _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_3__/* .selectors.components.PluginVisualization.item */ .wl.components.PluginVisualization.item(plugin.name),
+    "aria-label": _grafana_e2e_selectors__WEBPACK_IMPORTED_MODULE_3__ .wl.components.PluginVisualization.item(plugin.name),
     onClick: disabled ? undefined : onClick,
     title: isCurrent ? 'Click again to close this section' : plugin.name,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
       className: styles.img,
       src: plugin.info.logos.small,
       alt: ""
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
       className: styles.itemContent,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         className: styles.name,
         children: title
-      }), description ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+      }), description ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
         className: styles.description,
         children: description
       }) : null, children]
-    }), showBadge && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+    }), showBadge && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
       className: (0,_emotion_css__WEBPACK_IMPORTED_MODULE_0__.cx)(styles.badge, disabled && styles.disabled),
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(PanelPluginBadge, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(PanelPluginBadge, {
         plugin: plugin
       })
-    }), onDelete && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.IconButton, {
+    }), onDelete && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.IconButton, {
       name: "trash-alt",
       onClick: e => {
         e.stopPropagation();
@@ -1229,36 +1201,36 @@ const PanelPluginBadge = _ref2 => {
   } = _ref2;
 
   if ((0,_grafana_data__WEBPACK_IMPORTED_MODULE_2__.isUnsignedPluginSignature)(plugin.signature)) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.PluginSignatureBadge, {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.PluginSignatureBadge, {
       status: plugin.signature
     });
   }
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(app_features_plugins_components_PluginStateInfo__WEBPACK_IMPORTED_MODULE_5__/* .PluginStateInfo */ .u, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(app_features_plugins_components_PluginStateInfo__WEBPACK_IMPORTED_MODULE_5__ .u, {
     state: plugin.state
   });
 };
 
 PanelPluginBadge.displayName = 'PanelPluginBadge';
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/panel/state/util.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/panel/state/util.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "r": () => (/* binding */ filterPluginList),
-/* harmony export */   "x": () => (/* binding */ getAllPanelPluginMeta)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var app_core_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/core/config.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "r": () => ( filterPluginList),
+   "x": () => ( getAllPanelPluginMeta)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var app_core_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/core/config.ts");
 
 
 function getAllPanelPluginMeta() {
-  const allPanels = app_core_config__WEBPACK_IMPORTED_MODULE_1__/* .config.panels */ .vc.panels;
+  const allPanels = app_core_config__WEBPACK_IMPORTED_MODULE_1__ .vc.panels;
   return Object.keys(allPanels).filter(key => allPanels[key]['hideFromList'] === false).map(key => allPanels[key]).sort((a, b) => a.sort - b.sort);
 }
-function filterPluginList(pluginsList, searchQuery, // Note: this will be an escaped regex string as it comes from `FilterInput`
+function filterPluginList(pluginsList, searchQuery, 
 current) {
   if (!searchQuery.length) {
     return pluginsList.filter(p => {
@@ -1295,18 +1267,18 @@ current) {
   return first.concat(match);
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/plugins/components/PluginStateInfo.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/plugins/components/PluginStateInfo.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "u": () => (/* binding */ PluginStateInfo)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "u": () => ( PluginStateInfo)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 
 
 
@@ -1318,7 +1290,7 @@ const PluginStateInfo = props => {
     return null;
   }
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Badge, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Badge, {
     color: display.color,
     title: display.tooltip,
     text: display.text,
@@ -1354,6 +1326,6 @@ function getFeatureStateInfo(state) {
   }
 }
 
-/***/ })
+ })
 
 }]);

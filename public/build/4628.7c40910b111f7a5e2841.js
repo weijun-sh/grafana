@@ -1,8 +1,8 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[4628],{
 
-/***/ "./.yarn/__virtual__/react-resizable-virtual-13412137cd/0/cache/react-resizable-npm-3.0.4-aa39f9db2b-cbf86ad04b.zip/node_modules/react-resizable/build/Resizable.js":
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+ "./.yarn/__virtual__/react-resizable-virtual-13412137cd/0/cache/react-resizable-npm-3.0.4-aa39f9db2b-cbf86ad04b.zip/node_modules/react-resizable/build/Resizable.js":
+ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
@@ -37,9 +37,7 @@ function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.crea
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-// The base <Resizable> component.
-// This component does not have state and relies on the parent to set its props based on callback data.
-var Resizable = /*#__PURE__*/function (_React$Component) {
+var Resizable = function (_React$Component) {
   _inheritsLoose(Resizable, _React$Component);
 
   function Resizable() {
@@ -64,24 +62,21 @@ var Resizable = /*#__PURE__*/function (_React$Component) {
 
   _proto.resetData = function resetData() {
     this.lastHandleRect = this.slack = null;
-  } // Clamp width and height within provided constraints
+  } 
   ;
 
   _proto.runConstraints = function runConstraints(width, height) {
     var _this$props = this.props,
         minConstraints = _this$props.minConstraints,
         maxConstraints = _this$props.maxConstraints,
-        lockAspectRatio = _this$props.lockAspectRatio; // short circuit
+        lockAspectRatio = _this$props.lockAspectRatio; 
 
-    if (!minConstraints && !maxConstraints && !lockAspectRatio) return [width, height]; // If constraining to min and max, we need to also fit width and height to aspect ratio.
+    if (!minConstraints && !maxConstraints && !lockAspectRatio) return [width, height]; 
 
     if (lockAspectRatio) {
       var ratio = this.props.width / this.props.height;
       var deltaW = width - this.props.width;
-      var deltaH = height - this.props.height; // Find which coordinate was greater and should push the other toward it.
-      // E.g.:
-      // ratio = 1, deltaW = 10, deltaH = 5, deltaH should become 10.
-      // ratio = 2, deltaW = 10, deltaH = 6, deltaW should become 12.
+      var deltaH = height - this.props.height; 
 
       if (Math.abs(deltaW) > Math.abs(deltaH * ratio)) {
         height = width / ratio;
@@ -91,9 +86,7 @@ var Resizable = /*#__PURE__*/function (_React$Component) {
     }
 
     var oldW = width,
-        oldH = height; // Add slack to the values used to calculate bound position. This will ensure that if
-    // we start removing slack, the element won't react to it right away until it's been
-    // completely removed.
+        oldH = height; 
 
     var _ref = this.slack || [0, 0],
         slackW = _ref[0],
@@ -110,18 +103,12 @@ var Resizable = /*#__PURE__*/function (_React$Component) {
     if (maxConstraints) {
       width = Math.min(maxConstraints[0], width);
       height = Math.min(maxConstraints[1], height);
-    } // If the width or height changed, we must have introduced some slack. Record it for the next iteration.
+    } 
 
 
     this.slack = [slackW + (oldW - width), slackH + (oldH - height)];
     return [width, height];
   }
-  /**
-   * Wrapper around drag events to provide more useful data.
-   *
-   * @param  {String} handlerName Handler name to wrap.
-   * @return {Function}           Handler function.
-   */
   ;
 
   _proto.resizeHandler = function resizeHandler(handlerName, axis) {
@@ -131,26 +118,19 @@ var Resizable = /*#__PURE__*/function (_React$Component) {
       var node = _ref2.node,
           deltaX = _ref2.deltaX,
           deltaY = _ref2.deltaY;
-      // Reset data in case it was left over somehow (should not be possible)
-      if (handlerName === 'onResizeStart') _this2.resetData(); // Axis restrictions
+      if (handlerName === 'onResizeStart') _this2.resetData(); 
 
       var canDragX = (_this2.props.axis === 'both' || _this2.props.axis === 'x') && axis !== 'n' && axis !== 's';
-      var canDragY = (_this2.props.axis === 'both' || _this2.props.axis === 'y') && axis !== 'e' && axis !== 'w'; // No dragging possible.
+      var canDragY = (_this2.props.axis === 'both' || _this2.props.axis === 'y') && axis !== 'e' && axis !== 'w'; 
 
-      if (!canDragX && !canDragY) return; // Decompose axis for later use
+      if (!canDragX && !canDragY) return; 
 
       var axisV = axis[0];
-      var axisH = axis[axis.length - 1]; // intentionally not axis[1], so that this catches axis === 'w' for example
-      // Track the element being dragged to account for changes in position.
-      // If a handle's position is changed between callbacks, we need to factor this in to the next callback.
-      // Failure to do so will cause the element to "skip" when resized upwards or leftwards.
+      var axisH = axis[axis.length - 1]; 
 
       var handleRect = node.getBoundingClientRect();
 
       if (_this2.lastHandleRect != null) {
-        // If the handle has repositioned on either axis since last render,
-        // we need to increase our callback values by this much.
-        // Only checking 'n', 'w' since resizing by 's', 'w' won't affect the overall position on page,
         if (axisH === 'w') {
           var deltaLeftSinceLast = handleRect.left - _this2.lastHandleRect.left;
           deltaX += deltaLeftSinceLast;
@@ -160,24 +140,24 @@ var Resizable = /*#__PURE__*/function (_React$Component) {
           var deltaTopSinceLast = handleRect.top - _this2.lastHandleRect.top;
           deltaY += deltaTopSinceLast;
         }
-      } // Storage of last rect so we know how much it has really moved.
+      } 
 
 
-      _this2.lastHandleRect = handleRect; // Reverse delta if using top or left drag handles.
+      _this2.lastHandleRect = handleRect; 
 
       if (axisH === 'w') deltaX = -deltaX;
-      if (axisV === 'n') deltaY = -deltaY; // Update w/h by the deltas. Also factor in transformScale.
+      if (axisV === 'n') deltaY = -deltaY; 
 
       var width = _this2.props.width + (canDragX ? deltaX / _this2.props.transformScale : 0);
-      var height = _this2.props.height + (canDragY ? deltaY / _this2.props.transformScale : 0); // Run user-provided constraints.
+      var height = _this2.props.height + (canDragY ? deltaY / _this2.props.transformScale : 0); 
 
       var _this2$runConstraints = _this2.runConstraints(width, height);
 
       width = _this2$runConstraints[0];
       height = _this2$runConstraints[1];
-      var dimensionsChanged = width !== _this2.props.width || height !== _this2.props.height; // Call user-supplied callback if present.
+      var dimensionsChanged = width !== _this2.props.width || height !== _this2.props.height; 
 
-      var cb = typeof _this2.props[handlerName] === 'function' ? _this2.props[handlerName] : null; // Don't call 'onResize' if dimensions haven't changed.
+      var cb = typeof _this2.props[handlerName] === 'function' ? _this2.props[handlerName] : null; 
 
       var shouldSkipCb = handlerName === 'onResize' && !dimensionsChanged;
 
@@ -191,30 +171,28 @@ var Resizable = /*#__PURE__*/function (_React$Component) {
           },
           handle: axis
         });
-      } // Reset internal data
+      } 
 
 
       if (handlerName === 'onResizeStop') _this2.resetData();
     };
-  } // Render a resize handle given an axis & DOM ref. Ref *must* be attached for
-  // the underlying draggable library to work properly.
+  } 
   ;
 
   _proto.renderResizeHandle = function renderResizeHandle(handleAxis, ref) {
-    var handle = this.props.handle; // No handle provided, make the default
+    var handle = this.props.handle; 
 
     if (!handle) {
-      return /*#__PURE__*/React.createElement("span", {
+      return React.createElement("span", {
         className: "react-resizable-handle react-resizable-handle-" + handleAxis,
         ref: ref
       });
-    } // Handle is a function, such as:
-    // `handle={(handleAxis) => <span className={...} />}`
+    } 
 
 
     if (typeof handle === 'function') {
       return handle(handleAxis, ref);
-    } // Handle is a React component (composite or DOM).
+    } 
 
 
     var isDOMElement = typeof handle.type === 'string';
@@ -225,14 +203,12 @@ var Resizable = /*#__PURE__*/function (_React$Component) {
       handleAxis: handleAxis
     });
 
-    return /*#__PURE__*/React.cloneElement(handle, props);
+    return React.cloneElement(handle, props);
   };
 
   _proto.render = function render() {
     var _this3 = this;
 
-    // Pass along only props not meant for the `<Resizable>`.`
-    // eslint-disable-next-line no-unused-vars
     var _this$props2 = this.props,
         children = _this$props2.children,
         className = _this$props2.className,
@@ -250,10 +226,7 @@ var Resizable = /*#__PURE__*/function (_React$Component) {
         onResizeStart = _this$props2.onResizeStart,
         resizeHandles = _this$props2.resizeHandles,
         transformScale = _this$props2.transformScale,
-        p = _objectWithoutPropertiesLoose(_this$props2, _excluded); // What we're doing here is getting the child of this element, and cloning it with this element's props.
-    // We are then defining its children as:
-    // 1. Its original children (resizable's child's children), and
-    // 2. One or more draggable handles.
+        p = _objectWithoutPropertiesLoose(_this$props2, _excluded); 
 
 
     return (0, _utils.cloneElement)(children, _objectSpread(_objectSpread({}, p), {}, {
@@ -261,9 +234,8 @@ var Resizable = /*#__PURE__*/function (_React$Component) {
       children: [].concat(children.props.children, resizeHandles.map(function (handleAxis) {
         var _this3$handleRefs$han;
 
-        // Create a ref to the handle so that `<DraggableCore>` doesn't have to use ReactDOM.findDOMNode().
-        var ref = (_this3$handleRefs$han = _this3.handleRefs[handleAxis]) != null ? _this3$handleRefs$han : _this3.handleRefs[handleAxis] = /*#__PURE__*/React.createRef();
-        return /*#__PURE__*/React.createElement(_reactDraggable.DraggableCore, _extends({}, draggableOpts, {
+        var ref = (_this3$handleRefs$han = _this3.handleRefs[handleAxis]) != null ? _this3$handleRefs$han : _this3.handleRefs[handleAxis] = React.createRef();
+        return React.createElement(_reactDraggable.DraggableCore, _extends({}, draggableOpts, {
           nodeRef: ref,
           key: "resizableHandle-" + handleAxis,
           onStop: _this3.resizeHandler('onResizeStop', handleAxis),
@@ -289,10 +261,10 @@ Resizable.defaultProps = {
   transformScale: 1
 };
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/__virtual__/react-resizable-virtual-13412137cd/0/cache/react-resizable-npm-3.0.4-aa39f9db2b-cbf86ad04b.zip/node_modules/react-resizable/build/ResizableBox.js":
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+ "./.yarn/__virtual__/react-resizable-virtual-13412137cd/0/cache/react-resizable-npm-3.0.4-aa39f9db2b-cbf86ad04b.zip/node_modules/react-resizable/build/ResizableBox.js":
+ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 var __webpack_unused_export__;
 
@@ -330,7 +302,7 @@ function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.crea
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var ResizableBox = /*#__PURE__*/function (_React$Component) {
+var ResizableBox = function (_React$Component) {
   _inheritsLoose(ResizableBox, _React$Component);
 
   function ResizableBox() {
@@ -366,7 +338,6 @@ var ResizableBox = /*#__PURE__*/function (_React$Component) {
   }
 
   ResizableBox.getDerivedStateFromProps = function getDerivedStateFromProps(props, state) {
-    // If parent changes height/width, set that in our state.
     if (state.propsWidth !== props.width || state.propsHeight !== props.height) {
       return {
         width: props.width,
@@ -382,9 +353,6 @@ var ResizableBox = /*#__PURE__*/function (_React$Component) {
   var _proto = ResizableBox.prototype;
 
   _proto.render = function render() {
-    // Basic wrapper around a Resizable instance.
-    // If you use Resizable directly, you are responsible for updating the child component
-    // with a new width and height.
     var _this$props = this.props,
         handle = _this$props.handle,
         handleSize = _this$props.handleSize,
@@ -403,7 +371,7 @@ var ResizableBox = /*#__PURE__*/function (_React$Component) {
         transformScale = _this$props.transformScale,
         props = _objectWithoutPropertiesLoose(_this$props, _excluded);
 
-    return /*#__PURE__*/React.createElement(_Resizable.default, {
+    return React.createElement(_Resizable.default, {
       axis: axis,
       draggableOpts: draggableOpts,
       handle: handle,
@@ -418,7 +386,7 @@ var ResizableBox = /*#__PURE__*/function (_React$Component) {
       resizeHandles: resizeHandles,
       transformScale: transformScale,
       width: this.state.width
-    }, /*#__PURE__*/React.createElement("div", _extends({}, props, {
+    }, React.createElement("div", _extends({}, props, {
       style: _objectSpread(_objectSpread({}, style), {}, {
         width: this.state.width + 'px',
         height: this.state.height + 'px'
@@ -434,10 +402,10 @@ ResizableBox.propTypes = _objectSpread(_objectSpread({}, _propTypes2.resizablePr
   children: _propTypes.default.element
 });
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/__virtual__/react-resizable-virtual-13412137cd/0/cache/react-resizable-npm-3.0.4-aa39f9db2b-cbf86ad04b.zip/node_modules/react-resizable/build/propTypes.js":
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+ "./.yarn/__virtual__/react-resizable-virtual-13412137cd/0/cache/react-resizable-npm-3.0.4-aa39f9db2b-cbf86ad04b.zip/node_modules/react-resizable/build/propTypes.js":
+ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
@@ -451,24 +419,11 @@ var _reactDraggable = __webpack_require__("./.yarn/__virtual__/react-draggable-v
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var resizableProps = {
-  /*
-  * Restricts resizing to a particular axis (default: 'both')
-  * 'both' - allows resizing by width or height
-  * 'x' - only allows the width to be changed
-  * 'y' - only allows the height to be changed
-  * 'none' - disables resizing altogether
-  * */
   axis: _propTypes.default.oneOf(['both', 'x', 'y', 'none']),
   className: _propTypes.default.string,
 
-  /*
-  * Require that one and only one child be present.
-  * */
   children: _propTypes.default.element.isRequired,
 
-  /*
-  * These will be passed wholesale to react-draggable's DraggableCore
-  * */
   draggableOpts: _propTypes.default.shape({
     allowAnyClick: _propTypes.default.bool,
     cancel: _propTypes.default.string,
@@ -486,76 +441,35 @@ var resizableProps = {
     scale: _propTypes.default.number
   }),
 
-  /*
-  * Initial height
-  * */
   height: _propTypes.default.number.isRequired,
 
-  /*
-  * Customize cursor resize handle
-  * */
   handle: _propTypes.default.oneOfType([_propTypes.default.node, _propTypes.default.func]),
 
-  /*
-  * If you change this, be sure to update your css
-  * */
   handleSize: _propTypes.default.arrayOf(_propTypes.default.number),
   lockAspectRatio: _propTypes.default.bool,
 
-  /*
-  * Max X & Y measure
-  * */
   maxConstraints: _propTypes.default.arrayOf(_propTypes.default.number),
 
-  /*
-  * Min X & Y measure
-  * */
   minConstraints: _propTypes.default.arrayOf(_propTypes.default.number),
 
-  /*
-  * Called on stop resize event
-  * */
   onResizeStop: _propTypes.default.func,
 
-  /*
-  * Called on start resize event
-  * */
   onResizeStart: _propTypes.default.func,
 
-  /*
-  * Called on resize event
-  * */
   onResize: _propTypes.default.func,
 
-  /*
-  * Defines which resize handles should be rendered (default: 'se')
-  * 's' - South handle (bottom-center)
-  * 'w' - West handle (left-center)
-  * 'e' - East handle (right-center)
-  * 'n' - North handle (top-center)
-  * 'sw' - Southwest handle (bottom-left)
-  * 'nw' - Northwest handle (top-left)
-  * 'se' - Southeast handle (bottom-right)
-  * 'ne' - Northeast handle (top-center)
-  * */
   resizeHandles: _propTypes.default.arrayOf(_propTypes.default.oneOf(['s', 'w', 'e', 'n', 'sw', 'nw', 'se', 'ne'])),
 
-  /*
-  * If `transform: scale(n)` is set on the parent, this should be set to `n`.
-  * */
   transformScale: _propTypes.default.number,
 
-  /*
-   * Initial width
-   */
   width: _propTypes.default.number.isRequired
 };
 exports.resizableProps = resizableProps;
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/__virtual__/react-resizable-virtual-13412137cd/0/cache/react-resizable-npm-3.0.4-aa39f9db2b-cbf86ad04b.zip/node_modules/react-resizable/build/utils.js":
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+ "./.yarn/__virtual__/react-resizable-virtual-13412137cd/0/cache/react-resizable-npm-3.0.4-aa39f9db2b-cbf86ad04b.zip/node_modules/react-resizable/build/utils.js":
+ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
@@ -572,7 +486,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-// React.addons.cloneWithProps look-alike that merges style & className.
 function cloneElement(element, props) {
   if (props.style && element.props.style) {
     props.style = _objectSpread(_objectSpread({}, element.props.style), props.style);
@@ -582,13 +495,13 @@ function cloneElement(element, props) {
     props.className = element.props.className + " " + props.className;
   }
 
-  return /*#__PURE__*/_react.default.cloneElement(element, props);
+  return _react.default.cloneElement(element, props);
 }
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/__virtual__/react-resizable-virtual-13412137cd/0/cache/react-resizable-npm-3.0.4-aa39f9db2b-cbf86ad04b.zip/node_modules/react-resizable/index.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/__virtual__/react-resizable-virtual-13412137cd/0/cache/react-resizable-npm-3.0.4-aa39f9db2b-cbf86ad04b.zip/node_modules/react-resizable/index.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 
 module.exports = function() {
@@ -599,6 +512,6 @@ module.exports.Resizable = __webpack_require__("./.yarn/__virtual__/react-resiza
 module.exports.ResizableBox = __webpack_require__("./.yarn/__virtual__/react-resizable-virtual-13412137cd/0/cache/react-resizable-npm-3.0.4-aa39f9db2b-cbf86ad04b.zip/node_modules/react-resizable/build/ResizableBox.js")["default"];
 
 
-/***/ })
+ })
 
 }]);

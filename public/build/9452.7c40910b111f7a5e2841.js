@@ -1,18 +1,17 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[9452],{
 
-/***/ "./public/app/plugins/datasource/loki/syntax.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/loki/syntax.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Rd": () => (/* binding */ PIPE_OPERATORS),
-/* harmony export */   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "r8": () => (/* binding */ FUNCTIONS),
-/* harmony export */   "uR": () => (/* binding */ PIPE_PARSERS),
-/* harmony export */   "xY": () => (/* binding */ lokiGrammar),
-/* harmony export */   "zy": () => (/* binding */ LOKI_KEYWORDS)
-/* harmony export */ });
-/* unused harmony export RANGE_VEC_FUNCTIONS */
+ __webpack_require__.d(__webpack_exports__, {
+   "Rd": () => ( PIPE_OPERATORS),
+   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__),
+   "r8": () => ( FUNCTIONS),
+   "uR": () => ( PIPE_PARSERS),
+   "xY": () => ( lokiGrammar),
+   "zy": () => ( LOKI_KEYWORDS)
+ });
 const AGGREGATION_OPERATORS = [{
   label: 'sum',
   insertText: 'sum',
@@ -151,7 +150,6 @@ const lokiGrammar = {
   },
   'context-aggregation': {
     pattern: /((without|by)\s*)\([^)]*\)/,
-    // by ()
     lookbehind: true,
     inside: {
       'label-key': {
@@ -197,7 +195,6 @@ const lokiGrammar = {
   function: new RegExp(`\\b(?:${FUNCTIONS.map(f => f.label).join('|')})(?=\\s*\\()`, 'i'),
   'context-range': [{
     pattern: /\[[^\]]*(?=\])/,
-    // [1m]
     inside: {
       'range-duration': {
         pattern: /\b\d+[smhdwy]\b/i,
@@ -206,7 +203,6 @@ const lokiGrammar = {
     }
   }, {
     pattern: /(offset\s+)\w+/,
-    // offset 1m
     lookbehind: true,
     inside: {
       'range-duration': {
@@ -229,24 +225,22 @@ const lokiGrammar = {
   operator: /\s?(\|[=~]?|!=?|<(?:=>?|<|>)?|>[>=]?)\s?/i,
   punctuation: /[{}(),.]/
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (lokiGrammar);
+ const __WEBPACK_DEFAULT_EXPORT__ = (lokiGrammar);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/prometheus/promql.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/prometheus/promql.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Fe": () => (/* binding */ promqlGrammar),
-/* harmony export */   "Os": () => (/* binding */ LOGICAL_OPERATORS),
-/* harmony export */   "Ty": () => (/* binding */ RATE_RANGES),
-/* harmony export */   "YO": () => (/* binding */ PROM_KEYWORDS),
-/* harmony export */   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "fP": () => (/* binding */ OPERATORS),
-/* harmony export */   "r8": () => (/* binding */ FUNCTIONS)
-/* harmony export */ });
-// When changing RATE_RANGES, check if Loki/LogQL ranges should be changed too
-// @see public/app/plugins/datasource/loki/language_provider.ts
+ __webpack_require__.d(__webpack_exports__, {
+   "Fe": () => ( promqlGrammar),
+   "Os": () => ( LOGICAL_OPERATORS),
+   "Ty": () => ( RATE_RANGES),
+   "YO": () => ( PROM_KEYWORDS),
+   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__),
+   "fP": () => ( OPERATORS),
+   "r8": () => ( FUNCTIONS)
+ });
 const RATE_RANGES = [{
   label: '$__interval',
   sortValue: '$__interval'
@@ -670,7 +664,6 @@ const promqlGrammar = {
   },
   'context-aggregation': {
     pattern: /((by|without)\s*)\([^)]*\)/,
-    // by ()
     lookbehind: true,
     inside: {
       'label-key': {
@@ -703,7 +696,6 @@ const promqlGrammar = {
   function: new RegExp(`\\b(?:${FUNCTIONS.map(f => f.label).join('|')})(?=\\s*\\()`, 'i'),
   'context-range': [{
     pattern: /\[[^\]]*(?=])/,
-    // [1m]
     inside: {
       'range-duration': {
         pattern: /\b\d+[smhdwy]\b/i,
@@ -712,7 +704,6 @@ const promqlGrammar = {
     }
   }, {
     pattern: /(offset\s+)\w+/,
-    // offset 1m
     lookbehind: true,
     inside: {
       'range-duration': {
@@ -729,8 +720,8 @@ const promqlGrammar = {
   operator: new RegExp(`/[-+*/=%^~]|&&?|\\|?\\||!=?|<(?:=>?|<|>)?|>[>=]?|\\b(?:${OPERATORS.join('|')})\\b`, 'i'),
   punctuation: /[{};()`,.]/
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (promqlGrammar);
+ const __WEBPACK_DEFAULT_EXPORT__ = (promqlGrammar);
 
-/***/ })
+ })
 
 }]);

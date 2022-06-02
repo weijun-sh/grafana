@@ -1,14 +1,14 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[9101],{
 
-/***/ "./public/app/angular/panel/query_ctrl.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/panel/query_ctrl.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "G": () => (/* binding */ QueryCtrl)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ __webpack_require__.d(__webpack_exports__, {
+   "G": () => ( QueryCtrl)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -48,44 +48,32 @@ class QueryCtrl {
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/panel/heatmap/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/panel/heatmap/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "PanelCtrl": () => (/* reexport */ HeatmapCtrl)
+  "PanelCtrl": () => ( HeatmapCtrl)
 });
 
-// EXTERNAL MODULE: ./.yarn/cache/d3-npm-5.15.0-0c7696026f-7342d82e55.zip/node_modules/d3/index.js + 412 modules
 var d3 = __webpack_require__("./.yarn/cache/d3-npm-5.15.0-0c7696026f-7342d82e55.zip/node_modules/d3/index.js");
-// EXTERNAL MODULE: ./.yarn/cache/jquery-npm-3.6.0-ca7872bdbb-8fd5fef4aa.zip/node_modules/jquery/dist/jquery-exposed.js
 var jquery_exposed = __webpack_require__("./.yarn/cache/jquery-npm-3.6.0-ca7872bdbb-8fd5fef4aa.zip/node_modules/jquery/dist/jquery-exposed.js");
-var jquery_exposed_default = /*#__PURE__*/__webpack_require__.n(jquery_exposed);
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
+var jquery_exposed_default = __webpack_require__.n(jquery_exposed);
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./public/app/angular/core_module.ts
 var core_module = __webpack_require__("./public/app/angular/core_module.ts");
-// EXTERNAL MODULE: ./public/app/core/config.ts
 var config = __webpack_require__("./public/app/core/config.ts");
-// EXTERNAL MODULE: ./public/app/core/core.ts
 var core = __webpack_require__("./public/app/core/core.ts");
-// EXTERNAL MODULE: ./public/app/core/utils/ticks.ts
 var utils_ticks = __webpack_require__("./public/app/core/utils/ticks.ts");
-// EXTERNAL MODULE: ./.yarn/cache/d3-scale-chromatic-npm-1.5.0-4dfce2812a-3bff7717f6.zip/node_modules/d3-scale-chromatic/src/index.js + 45 modules
 var d3_scale_chromatic_src = __webpack_require__("./.yarn/cache/d3-scale-chromatic-npm-1.5.0-4dfce2812a-3bff7717f6.zip/node_modules/d3-scale-chromatic/src/index.js");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/heatmap/color_scale.ts
+;
 
 
 function getColorScale(colorScheme, lightTheme, maxValue) {
   let minValue = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
-  //@ts-ignore
   const colorInterpolator = d3_scale_chromatic_src[colorScheme.value];
   const colorScaleInverted = colorScheme.invert === 'always' || colorScheme.invert === (lightTheme ? 'light' : 'dark');
   const start = colorScaleInverted ? maxValue : minValue;
@@ -104,7 +92,7 @@ function getOpacityScale(options, maxValue) {
 
   return legendOpacityScale;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/heatmap/color_legend.ts
+;
 
 
 
@@ -120,11 +108,8 @@ const LEGEND_TICK_SIZE = 0;
 const LEGEND_VALUE_MARGIN = 0;
 const LEGEND_PADDING_LEFT = 10;
 const LEGEND_SEGMENT_WIDTH = 10;
-/**
- * Color legend for heatmap editor.
- */
 
-core_module/* default.directive */.ZP.directive('colorLegend', () => {
+core_module.ZP.directive('colorLegend', () => {
   return {
     restrict: 'E',
     template: '<div class="heatmap-color-legend"><svg width="16.5rem" height="24px"></svg></div>',
@@ -146,7 +131,7 @@ core_module/* default.directive */.ZP.directive('colorLegend', () => {
           const colorScheme = (0,lodash.find)(ctrl.colorSchemes, {
             value: panel.color.colorScheme
           });
-          const colorScale = getColorScale(colorScheme, core/* contextSrv.user.lightTheme */.Vt.user.lightTheme, legendWidth);
+          const colorScale = getColorScale(colorScheme, core.Vt.user.lightTheme, legendWidth);
           drawSimpleColorLegend(elem, colorScale);
         } else if (panel.color.mode === 'opacity') {
           const colorOptions = panel.color;
@@ -156,11 +141,8 @@ core_module/* default.directive */.ZP.directive('colorLegend', () => {
     }
   };
 });
-/**
- * Heatmap legend with scale values.
- */
 
-core_module/* default.directive */.ZP.directive('heatmapLegend', () => {
+core_module.ZP.directive('heatmapLegend', () => {
   return {
     restrict: 'E',
     template: `<div class="heatmap-color-legend"><svg width="${LEGEND_WIDTH_PX}px" height="${LEGEND_HEIGHT_PX}px"></svg></div>`,
@@ -211,8 +193,8 @@ function drawColorLegend(elem, colorScheme, rangeFrom, rangeTo, maxValue, minVal
     const rangeStep = (rangeTo - rangeFrom) / legendWidth * LEGEND_SEGMENT_WIDTH;
     const widthFactor = legendWidth / (rangeTo - rangeFrom);
     const valuesRange = d3.range(rangeFrom, rangeTo, rangeStep);
-    const colorScale = getColorScale(colorScheme, core/* contextSrv.user.lightTheme */.Vt.user.lightTheme, rangeTo, rangeFrom);
-    legend.append('g').attr('class', 'legend-color-bar').attr('transform', 'translate(' + LEGEND_PADDING_LEFT + ',0)').selectAll('.heatmap-color-legend-rect').data(valuesRange).enter().append('rect').attr('x', d => Math.round((d - rangeFrom) * widthFactor)).attr('y', 0).attr('width', Math.round(rangeStep * widthFactor + 1)) // Overlap rectangles to prevent gaps
+    const colorScale = getColorScale(colorScheme, core.Vt.user.lightTheme, rangeTo, rangeFrom);
+    legend.append('g').attr('class', 'legend-color-bar').attr('transform', 'translate(' + LEGEND_PADDING_LEFT + ',0)').selectAll('.heatmap-color-legend-rect').data(valuesRange).enter().append('rect').attr('x', d => Math.round((d - rangeFrom) * widthFactor)).attr('y', 0).attr('width', Math.round(rangeStep * widthFactor + 1)) 
     .attr('height', legendHeight).attr('stroke-width', 0).attr('fill', d => colorScale(d));
     drawLegendValues(elem, rangeFrom, rangeTo, maxValue, minValue, legendWidth, valuesRange);
   }
@@ -277,7 +259,7 @@ function drawSimpleColorLegend(elem, colorScale) {
     if (legendDomElement) {
       const legend = d3.select(legendDomElement);
       const legendRects = legend.selectAll('.heatmap-color-legend-rect').data(valuesRange);
-      legendRects.enter().append('rect').attr('x', d => d).attr('y', 0).attr('width', rangeStep + 1) // Overlap rectangles to prevent gaps
+      legendRects.enter().append('rect').attr('x', d => d).attr('y', 0).attr('width', rangeStep + 1) 
       .attr('height', legendHeight).attr('stroke-width', 0).attr('fill', d => colorScale(d));
     }
   }
@@ -307,7 +289,7 @@ function drawSimpleOpacityLegend(elem, options) {
       const rangeStep = 10;
       const valuesRange = d3.range(0, legendWidth, rangeStep);
       const legendRects = legend.selectAll('.heatmap-opacity-legend-rect').data(valuesRange);
-      legendRects.enter().append('rect').attr('x', d => d).attr('y', 0).attr('width', rangeStep).attr('height', legendHeight).attr('stroke-width', 0).attr('fill', (0,src.getColorForTheme)(options.cardColor, config/* config.theme */.vc.theme)).style('opacity', d => legendOpacityScale(d));
+      legendRects.enter().append('rect').attr('x', d => d).attr('y', 0).attr('width', rangeStep).attr('height', legendHeight).attr('stroke-width', 0).attr('fill', (0,src.getColorForTheme)(options.cardColor, config.vc.theme)).style('opacity', d => legendOpacityScale(d));
     }
   }
 }
@@ -345,7 +327,7 @@ function buildLegendTicks(rangeFrom, rangeTo, maxValue, minValue) {
   let ticks = [];
 
   for (let i = 0; i < ticksNum; i++) {
-    const current = firstTick + tickStepSize * i; // Add user-defined min and max if it had been set
+    const current = firstTick + tickStepSize * i; 
 
     if (isValueCloseTo(minValue, current, tickStepSize)) {
       ticks.push(minValue);
@@ -385,23 +367,16 @@ function getFirstCloseTick(minValue, step) {
 
   return 0;
 }
-// EXTERNAL MODULE: ./public/app/core/app_events.ts
 var app_events = __webpack_require__("./public/app/core/app_events.ts");
-// EXTERNAL MODULE: ./public/app/core/utils/kbn.ts
 var kbn = __webpack_require__("./public/app/core/utils/kbn.ts");
-// EXTERNAL MODULE: ./public/app/features/query/state/runRequest.ts + 1 modules
 var runRequest = __webpack_require__("./public/app/features/query/state/runRequest.ts");
-// EXTERNAL MODULE: ./public/app/plugins/sdk.ts
 var sdk = __webpack_require__("./public/app/plugins/sdk.ts");
-// EXTERNAL MODULE: ./public/app/types/events.ts
 var events = __webpack_require__("./public/app/types/events.ts");
-// EXTERNAL MODULE: ./public/app/plugins/panel/graph/data_processor.ts
 var data_processor = __webpack_require__("./public/app/plugins/panel/graph/data_processor.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/heatmap/axes_editor.ts
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 class AxesEditorCtrl {
-  /** @ngInject */
   constructor($scope, uiSegmentSrv) {
     _defineProperty(this, "panel", void 0);
 
@@ -443,7 +418,6 @@ class AxesEditorCtrl {
 }
 AxesEditorCtrl.$inject = ["$scope", "uiSegmentSrv"];
 
-/** @ngInject */
 function axesEditor() {
   'use strict';
 
@@ -454,11 +428,10 @@ function axesEditor() {
     controller: AxesEditorCtrl
   };
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/heatmap/display_editor.ts
+;
 function display_editor_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 class HeatmapDisplayEditorCtrl {
-  /** @ngInject */
   constructor($scope) {
     display_editor_defineProperty(this, "panel", void 0);
 
@@ -472,7 +445,6 @@ class HeatmapDisplayEditorCtrl {
 }
 HeatmapDisplayEditorCtrl.$inject = ["$scope"];
 
-/** @ngInject */
 function heatmapDisplayEditor() {
   'use strict';
 
@@ -483,14 +455,10 @@ function heatmapDisplayEditor() {
     controller: HeatmapDisplayEditorCtrl
   };
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/heatmap/heatmap_data_converter.ts
+;
 
 const VALUE_INDEX = 0;
 const TIME_INDEX = 1;
-/**
- * Convert histogram represented by the list of series to heatmap object.
- * @param seriesList List of time series
- */
 
 function histogramToHeatmap(seriesList) {
   const heatmap = {};
@@ -535,16 +503,12 @@ function histogramToHeatmap(seriesList) {
 
   return heatmap;
 }
-/**
- * Sort series representing histogram by label value.
- */
 
 
 function sortSeriesByLabel(s1, s2) {
   let label1, label2;
 
   try {
-    // fail if not integer. might happen with bad queries
     label1 = parseHistogramLabel(s1.label);
     label2 = parseHistogramLabel(s2.label);
   } catch (err) {
@@ -576,11 +540,6 @@ function parseHistogramLabel(label) {
 
   return value;
 }
-/**
- * Convert buckets into linear array of "cards" - objects, represented heatmap elements.
- * @param  {Object} buckets
- * @returns {Object}          Array of "card" objects and stats
- */
 
 
 function convertToCards(buckets) {
@@ -620,23 +579,6 @@ function convertToCards(buckets) {
     cardStats
   };
 }
-/**
- * Special method for log scales. When series converted into buckets with log scale,
- * for simplification, 0 values are converted into 0, not into -Infinity. On the other hand, we mean
- * that all values less than series minimum, is 0 values, and we create special "minimum" bucket for
- * that values (actually, there're no values less than minimum, so this bucket is empty).
- *  8-16|    | ** |    |  * |  **|
- *   4-8|  * |*  *|*   |** *| *  |
- *   2-4| * *|    | ***|    |*   |
- *   1-2|*   |    |    |    |    | This bucket contains minimum series value
- * 0.5-1|____|____|____|____|____| This bucket should be displayed as 0 on graph
- *     0|____|____|____|____|____| This bucket is for 0 values (should actually be -Infinity)
- * So we should merge two bottom buckets into one (0-value bucket).
- *
- * @param  {Object} buckets  Heatmap buckets
- * @param  {Number} minValue Minimum series value
- * @returns {Object}          Transformed buckets
- */
 
 
 function mergeZeroBuckets(buckets, minValue) {
@@ -676,35 +618,6 @@ function mergeZeroBuckets(buckets, minValue) {
   });
   return buckets;
 }
-/**
- * Convert set of time series into heatmap buckets
- * @returns {Object}    Heatmap object:
- * {
- *   xBucketBound_1: {
- *     x: xBucketBound_1,
- *     buckets: {
- *       yBucketBound_1: {
- *         y: yBucketBound_1,
- *         bounds: {bottom, top}
- *         values: [val_1, val_2, ..., val_K],
- *         points: [[val_Y, val_X, series_name], ..., [...]],
- *         seriesStat: {seriesName_1: val_1, seriesName_2: val_2}
- *       },
- *       ...
- *       yBucketBound_M: {}
- *     },
- *     values: [val_1, val_2, ..., val_K],
- *     points: [
- *       [val_Y, val_X, series_name], (point_1)
- *       ...
- *       [...] (point_K)
- *     ]
- *   },
- *   xBucketBound_2: {},
- *   ...
- *   xBucketBound_N: {}
- * }
- */
 
 
 function convertToHeatMap(seriesList, yBucketSize, xBucketSize) {
@@ -713,23 +626,13 @@ function convertToHeatMap(seriesList, yBucketSize, xBucketSize) {
 
   for (const series of seriesList) {
     const datapoints = series.datapoints;
-    const seriesName = series.label; // Slice series into X axis buckets
-    // |    | ** |    |  * |  **|
-    // |  * |*  *|*   |** *| *  |
-    // |** *|    | ***|    |*   |
-    // |____|____|____|____|____|_
-    //
+    const seriesName = series.label; 
 
     (0,lodash.forEach)(datapoints, point => {
       const bucketBound = getBucketBound(point[TIME_INDEX], xBucketSize);
       pushToXBuckets(heatmap, point, bucketBound, seriesName);
     });
-  } // Slice X axis buckets into Y (value) buckets
-  // |  **|     |2|,
-  // | *  | --\ |1|,
-  // |*   | --/ |1|,
-  // |____|     |0|
-  //
+  } 
 
 
   (0,lodash.forEach)(heatmap, xBucket => {
@@ -747,7 +650,7 @@ function pushToXBuckets(buckets, point, bucketNum, seriesName) {
 
   if (value === null || value === undefined || isNaN(value)) {
     return;
-  } // Add series name to point for future identification
+  } 
 
 
   const pointExt = (0,lodash.concat)(point, seriesName);
@@ -765,7 +668,7 @@ function pushToXBuckets(buckets, point, bucketNum, seriesName) {
 }
 
 function pushToYBuckets(buckets, bucketNum, value, point, bounds) {
-  let count = 1; // Use the 3rd argument as scale/count
+  let count = 1; 
 
   if (point.length > 3) {
     count = parseInt(point[2], 10);
@@ -795,9 +698,6 @@ function getValueBucketBound(value, yBucketSize, logBase) {
     return getLogScaleBucketBound(value, yBucketSize, logBase);
   }
 }
-/**
- * Find bucket for given value (for linear scale)
- */
 
 
 function getBucketBounds(value, bucketSize) {
@@ -826,9 +726,6 @@ function convertToValueBuckets(xBucket, bucketSize) {
   });
   return buckets;
 }
-/**
- * Find bucket for given value (for log scales)
- */
 
 
 function getLogScaleBucketBounds(value, yBucketSplitFactor, logBase) {
@@ -879,21 +776,11 @@ function convertToLogScaleValueBuckets(xBucket, yBucketSplitFactor, logBase) {
   });
   return buckets;
 }
-/**
- * Logarithm for custom base
- * @param value
- * @param base logarithm base
- */
 
 
 function logp(value, base) {
   return Math.log(value) / Math.log(base);
 }
-/**
- * Calculate size of Y bucket from given buckets bounds.
- * @param bounds Array of Y buckets bounds
- * @param logBase Logarithm base
- */
 
 
 function calculateBucketSize(bounds) {
@@ -915,31 +802,18 @@ function calculateBucketSize(bounds) {
 
   return bucketSize;
 }
-/**
- * Calculate distance between two numbers in given scale (linear or logarithmic).
- * @param a
- * @param b
- * @param logBase
- */
 
 
 function getDistance(a, b) {
   let logBase = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
 
   if (logBase === 1) {
-    // Linear distance
     return Math.abs(b - a);
   } else {
-    // logarithmic distance
     const ratio = Math.max(a, b) / Math.min(a, b);
     return logp(ratio, logBase);
   }
 }
-/**
- * Compare two heatmap data objects
- * @param objA
- * @param objB
- */
 
 
 function isHeatmapDataEqual(objA, objB) {
@@ -989,9 +863,8 @@ function emptyXOR(foo, bar) {
 }
 
 
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/heatmap/heatmap_tooltip.ts
+;
 function heatmap_tooltip_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1058,7 +931,7 @@ class HeatmapTooltip {
   show(pos, data) {
     if (!this.panel.tooltip.show || !data) {
       return;
-    } // shared tooltip mode
+    } 
 
 
     if (pos.panelRelY) {
@@ -1080,13 +953,13 @@ class HeatmapTooltip {
     }
 
     let boundBottom, boundTop, valuesNumber;
-    const xData = data.buckets[xBucketIndex]; // Search in special 'zero' bucket also
+    const xData = data.buckets[xBucketIndex]; 
 
     const yData = (0,lodash.find)(xData.buckets, (bucket, bucketIndex) => {
       return bucket.bounds.bottom === yBucketIndex || bucketIndex === yBucketIndex.toString();
     });
     const tooltipTimeFormat = 'YYYY-MM-DD HH:mm:ss';
-    const time = this.dashboard.formatDate(xData.x, tooltipTimeFormat); // Decimals override. Code from panel/graph/graph.ts
+    const time = this.dashboard.formatDate(xData.x, tooltipTimeFormat); 
 
     let countValueFormatter, bucketBoundFormatter;
 
@@ -1094,9 +967,6 @@ class HeatmapTooltip {
       countValueFormatter = this.countValueFormatter(this.panel.tooltipDecimals, null);
       bucketBoundFormatter = this.panelCtrl.tickValueFormatter(this.panelCtrl.decimals, null);
     } else {
-      // auto decimals
-      // legend and tooltip gets one more decimal precision
-      // than graph legend ticks
       const decimals = (this.panelCtrl.decimals || -1) + 1;
       countValueFormatter = this.countValueFormatter(decimals, this.panelCtrl.scaledDecimals + 2);
       bucketBoundFormatter = this.panelCtrl.tickValueFormatter(decimals, this.panelCtrl.scaledDecimals + 2);
@@ -1108,7 +978,6 @@ class HeatmapTooltip {
     if (yData) {
       if (yData.bounds) {
         if (data.tsBuckets) {
-          // Use Y-axis labels
           const tickFormatter = valIndex => {
             return data.tsBucketsFormatted ? data.tsBucketsFormatted[valIndex] : data.tsBuckets[valIndex];
           };
@@ -1119,7 +988,6 @@ class HeatmapTooltip {
             boundTop = yBucketIndex < data.tsBuckets.length - 1 ? tickFormatter(yBucketIndex + 1) : '';
           }
         } else {
-          // Display 0 if bucket is a special 'zero' bucket
           const bottom = yData.y ? yData.bounds.bottom : 0;
           boundBottom = bucketBoundFormatter(bottom);
           boundTop = bucketBoundFormatter(yData.bounds.top);
@@ -1132,7 +1000,6 @@ class HeatmapTooltip {
           count: <b>${valuesNumber}</b> <br>
         </div>`;
       } else {
-        // currently no bounds for pre bucketed data
         tooltipHtml += `<div>count: <b>${yData.count}</b><br></div>`;
       }
     } else {
@@ -1165,8 +1032,6 @@ class HeatmapTooltip {
   }
 
   getXBucketIndex(x, data) {
-    // First try to find X bucket by checking x pos is in the
-    // [bucket.x, bucket.x + xBucketSize] interval
     const xBucket = (0,lodash.find)(data.buckets, bucket => {
       return x > bucket.x && x - bucket.x <= data.xBucketSize;
     });
@@ -1183,7 +1048,6 @@ class HeatmapTooltip {
   }
 
   getSharedTooltipPos(pos) {
-    // get pageX from position on x axis and pageY from relative position in original panel
     pos.pageX = this.heatmapPanel.offset().left + this.scope.xScale(pos.x);
     pos.pageY = this.heatmapPanel.offset().top + this.scope.chartHeight * pos.panelRelY;
     return pos;
@@ -1222,7 +1086,7 @@ class HeatmapTooltip {
       barWidth = Math.floor(HISTOGRAM_WIDTH / ticks / barNumberFactor * 0.9);
     }
 
-    barWidth = Math.max(barWidth, 1); // Normalize histogram Y axis
+    barWidth = Math.max(barWidth, 1); 
 
     const histogramDomain = (0,lodash.reduce)((0,lodash.map)(histogramData, d => d[1]), (sum, val) => sum + val, 0);
     const histYScale = d3.scaleLinear().domain([0, histogramDomain]).range([0, HISTOGRAM_HEIGHT]);
@@ -1267,7 +1131,7 @@ class HeatmapTooltip {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/heatmap/rendering.ts
+;
 function rendering_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1358,7 +1222,6 @@ class HeatmapRenderer {
     this.scope = scope;
     this.elem = elem;
     this.ctrl = ctrl;
-    // $heatmap is JQuery object, but heatmap is D3
     this.$heatmap = this.elem.find('.heatmap-panel');
     this.tooltip = new HeatmapTooltip(this.$heatmap, this.scope);
     this.selection = {
@@ -1380,13 +1243,10 @@ class HeatmapRenderer {
     };
     this.dataRangeWidingFactor = DATA_RANGE_WIDING_FACTOR;
     this.ctrl.events.on(src.PanelEvents.render, this.onRender.bind(this));
-    this.ctrl.tickValueFormatter = this.tickValueFormatter.bind(this); /////////////////////////////
-    // Selection and crosshair //
-    /////////////////////////////
-    // Shared crosshair and tooltip
+    this.ctrl.tickValueFormatter = this.tickValueFormatter.bind(this); 
 
     this.ctrl.dashboard.events.on(src.LegacyGraphHoverEvent.type, this.onGraphHover.bind(this), this.scope);
-    this.ctrl.dashboard.events.on(src.LegacyGraphHoverClearEvent.type, this.onGraphHoverClear.bind(this), this.scope); // Register selection listeners
+    this.ctrl.dashboard.events.on(src.LegacyGraphHoverClearEvent.type, this.onGraphHoverClear.bind(this), this.scope); 
 
     this.$heatmap.on('mousedown', this.onMouseDown.bind(this));
     this.$heatmap.on('mousemove', this.onMouseMove.bind(this));
@@ -1419,12 +1279,11 @@ class HeatmapRenderer {
         height = parseInt(height.replace('px', ''), 10);
       }
 
-      height -= this.panel.legend.show ? 28 : 11; // bottom padding and space for legend
+      height -= this.panel.legend.show ? 28 : 11; 
 
       this.$heatmap.css('height', height + 'px');
       return true;
     } catch (e) {
-      // IE throws errors sometimes
       return false;
     }
   }
@@ -1438,7 +1297,6 @@ class HeatmapRenderer {
 
     const axisText = elem.selectAll('.axis-y text').nodes();
     const maxTextWidth = (0,lodash.max)((0,lodash.map)(axisText, text => {
-      // Use SVG getBBox method
       return text.getBBox().width;
     }));
     return maxTextWidth;
@@ -1452,7 +1310,6 @@ class HeatmapRenderer {
       const canvasWidth = parseFloat(elem.attr('height'));
       return canvasWidth - axisLinePosition;
     } else {
-      // Default height
       return 30;
     }
   }
@@ -1471,7 +1328,7 @@ class HeatmapRenderer {
     const xAxis = d3.axisBottom(this.xScale).ticks(ticks).tickFormat(formatter).tickPadding(X_AXIS_TICK_PADDING).tickSize(this.chartHeight);
     const posY = this.margin.top;
     const posX = this.yAxisWidth;
-    this.heatmap.append('g').attr('class', 'axis axis-x').attr('transform', 'translate(' + posX + ',' + posY + ')').call(xAxis); // Remove horizontal line in the top of axis labels (called domain in d3)
+    this.heatmap.append('g').attr('class', 'axis axis-x').attr('transform', 'translate(' + posX + ',' + posY + ')').call(xAxis); 
 
     this.heatmap.select('.axis-x').select('.domain').remove();
   }
@@ -1482,20 +1339,20 @@ class HeatmapRenderer {
     let {
       yMin,
       yMax
-    } = this.wideYAxisRange(this.data.heatmapStats.min, this.data.heatmapStats.max, tickInterval); // Rewrite min and max if it have been set explicitly
+    } = this.wideYAxisRange(this.data.heatmapStats.min, this.data.heatmapStats.max, tickInterval); 
 
     yMin = this.panel.yAxis.min !== null ? this.panel.yAxis.min : yMin;
-    yMax = this.panel.yAxis.max !== null ? this.panel.yAxis.max : yMax; // Adjust ticks after Y range widening
+    yMax = this.panel.yAxis.max !== null ? this.panel.yAxis.max : yMax; 
 
     tickInterval = utils_ticks.tickStep(yMin, yMax, ticks);
     ticks = Math.ceil((yMax - yMin) / tickInterval);
     const decimalsAuto = utils_ticks.getPrecision(tickInterval);
-    let decimals = this.panel.yAxis.decimals === null ? decimalsAuto : this.panel.yAxis.decimals; // Calculate scaledDecimals for log scales using tick size (as in jquery.flot.js)
+    let decimals = this.panel.yAxis.decimals === null ? decimalsAuto : this.panel.yAxis.decimals; 
 
     const flotTickSize = utils_ticks.getFlotTickSize(yMin, yMax, ticks, decimalsAuto);
     const scaledDecimals = utils_ticks.getScaledDecimals(decimals, flotTickSize);
     this.ctrl.decimals = decimals;
-    this.ctrl.scaledDecimals = scaledDecimals; // Set default Y min and max if no data
+    this.ctrl.scaledDecimals = scaledDecimals; 
 
     if ((0,lodash.isEmpty)(this.data.buckets)) {
       yMax = 1;
@@ -1511,14 +1368,14 @@ class HeatmapRenderer {
     };
     this.scope.yScale = this.yScale = d3.scaleLinear().domain([yMin, yMax]).range([this.chartHeight, 0]);
     const yAxis = d3.axisLeft(this.yScale).ticks(ticks).tickFormat(this.tickValueFormatter(decimals, scaledDecimals)).tickSizeInner(0 - this.width).tickSizeOuter(0).tickPadding(Y_AXIS_TICK_PADDING);
-    this.heatmap.append('g').attr('class', 'axis axis-y').call(yAxis); // Calculate Y axis width first, then move axis into visible area
+    this.heatmap.append('g').attr('class', 'axis axis-y').call(yAxis); 
 
     const posY = this.margin.top;
     const posX = this.getYAxisWidth(this.heatmap) + Y_AXIS_TICK_PADDING;
-    this.heatmap.select('.axis-y').attr('transform', 'translate(' + posX + ',' + posY + ')'); // Remove vertical line in the right of axis labels (called domain in d3)
+    this.heatmap.select('.axis-y').attr('transform', 'translate(' + posX + ',' + posY + ')'); 
 
     this.heatmap.select('.axis-y').select('.domain').remove();
-  } // Wide Y values range and anjust to bucket size
+  } 
 
 
   wideYAxisRange(min, max, tickInterval) {
@@ -1531,7 +1388,7 @@ class HeatmapRenderer {
     } else {
       yMax = Math.ceil((max + yWiding) / tickInterval) * tickInterval;
       yMin = Math.floor((min - yWiding) / tickInterval) * tickInterval;
-    } // Don't wide axis below 0 if all values are positive
+    } 
 
 
     if (min >= 0 && yMin < 0) {
@@ -1551,7 +1408,7 @@ class HeatmapRenderer {
       yMax
     } = this.adjustLogRange(this.data.heatmapStats.minLog, this.data.heatmapStats.max, logBase);
     yMin = this.panel.yAxis.min && this.panel.yAxis.min !== '0' ? this.adjustLogMin(this.panel.yAxis.min, logBase) : yMin;
-    yMax = this.panel.yAxis.max !== null ? this.adjustLogMax(this.panel.yAxis.max, logBase) : yMax; // Set default Y min and max if no data
+    yMax = this.panel.yAxis.max !== null ? this.adjustLogMax(this.panel.yAxis.max, logBase) : yMax; 
 
     if ((0,lodash.isEmpty)(this.data.buckets)) {
       yMax = Math.pow(logBase, 2);
@@ -1562,7 +1419,7 @@ class HeatmapRenderer {
     const domain = this.yScale.domain();
     const tickValues = this.logScaleTickValues(domain, logBase);
     const decimalsAuto = utils_ticks.getPrecision(yMin);
-    const decimals = this.panel.yAxis.decimals || decimalsAuto; // Calculate scaledDecimals for log scales using tick size (as in jquery.flot.js)
+    const decimals = this.panel.yAxis.decimals || decimalsAuto; 
 
     const flotTickSize = utils_ticks.getFlotTickSize(yMin, yMax, tickValues.length, decimalsAuto);
     const scaledDecimals = utils_ticks.getScaledDecimals(decimals, flotTickSize);
@@ -1574,15 +1431,15 @@ class HeatmapRenderer {
       ticks: tickValues.length
     };
     const yAxis = d3.axisLeft(this.yScale).tickValues(tickValues).tickFormat(this.tickValueFormatter(decimals, scaledDecimals)).tickSizeInner(0 - this.width).tickSizeOuter(0).tickPadding(Y_AXIS_TICK_PADDING);
-    this.heatmap.append('g').attr('class', 'axis axis-y').call(yAxis); // Calculate Y axis width first, then move axis into visible area
+    this.heatmap.append('g').attr('class', 'axis axis-y').call(yAxis); 
 
     const posY = this.margin.top;
     const posX = this.getYAxisWidth(this.heatmap) + Y_AXIS_TICK_PADDING;
-    this.heatmap.select('.axis-y').attr('transform', 'translate(' + posX + ',' + posY + ')'); // Set first tick as pseudo 0
+    this.heatmap.select('.axis-y').attr('transform', 'translate(' + posX + ',' + posY + ')'); 
 
     if (yMin < 1) {
       this.heatmap.select('.axis-y').select('.tick text').text('0');
-    } // Remove vertical line in the right of axis labels (called domain in d3)
+    } 
 
 
     this.heatmap.select('.axis-y').select('.domain').remove();
@@ -1603,11 +1460,10 @@ class HeatmapRenderer {
         let valueFormatted = tsBuckets[valIndex.valueOf()];
 
         if (!(0,lodash.isNaN)((0,lodash.toNumber)(valueFormatted)) && valueFormatted !== '') {
-          // Try to format numeric tick labels
           valueFormatted = tickValueFormatter(decimals)((0,lodash.toNumber)(valueFormatted));
         } else if (valueFormatted && typeof valueFormatted === 'string' && valueFormatted !== '') {
           if (yAxisWidth) {
-            const scale = 0.15; // how to have a better calculation for this
+            const scale = 0.15; 
 
             const trimmed = valueFormatted.substring(0, Math.floor(yAxisWidth * scale));
             const postfix = trimmed.length < valueFormatted.length ? '...' : '';
@@ -1629,21 +1485,20 @@ class HeatmapRenderer {
       yAxis.ticks(ticks);
     }
 
-    this.heatmap.append('g').attr('class', 'axis axis-y').call(yAxis); // Calculate Y axis width first, then move axis into visible area
+    this.heatmap.append('g').attr('class', 'axis axis-y').call(yAxis); 
 
     const posY = this.margin.top;
     const posX = this.getYAxisWidth(this.heatmap) + Y_AXIS_TICK_PADDING;
     this.heatmap.select('.axis-y').attr('transform', 'translate(' + posX + ',' + posY + ')');
 
     if (this.panel.yBucketBound === 'middle' && tickValues && tickValues.length) {
-      // Shift Y axis labels to the middle of bucket
       const tickShift = 0 - this.chartHeight / (tickValues.length - 1) / 2;
       this.heatmap.selectAll('.axis-y text').attr('transform', 'translate(' + 0 + ',' + tickShift + ')');
-    } // Remove vertical line in the right of axis labels (called domain in d3)
+    } 
 
 
     this.heatmap.select('.axis-y').select('.domain').remove();
-  } // Adjust data range to log base
+  } 
 
 
   adjustLogRange(min, max, logBase) {
@@ -1653,7 +1508,7 @@ class HeatmapRenderer {
       yMin = 1;
     } else {
       yMin = this.adjustLogMin(this.data.heatmapStats.minLog, logBase);
-    } // Adjust max Y value to log base
+    } 
 
 
     const yMax = this.adjustLogMax(this.data.heatmapStats.max, logBase);
@@ -1780,7 +1635,7 @@ class HeatmapRenderer {
     const colorScheme = (0,lodash.find)(this.ctrl.colorSchemes, {
       value: this.panel.color.colorScheme
     });
-    this.colorScale = getColorScale(colorScheme, core/* contextSrv.user.lightTheme */.Vt.user.lightTheme, maxValue, minValue);
+    this.colorScale = getColorScale(colorScheme, core.Vt.user.lightTheme, maxValue, minValue);
     this.opacityScale = getOpacityScale(this.panel.color, maxValue, minValue);
     this.setCardSize();
     let cards = this.heatmap.selectAll('.heatmap-card').data(cardsData);
@@ -1828,7 +1683,6 @@ class HeatmapRenderer {
     let x;
 
     if (this.xScale(d.x) < 0) {
-      // Cut card left to prevent overlay
       x = this.yAxisWidth + this.cardPadding;
     } else {
       x = this.xScale(d.x) + this.yAxisWidth + this.cardPadding;
@@ -1841,12 +1695,10 @@ class HeatmapRenderer {
     let w = this.cardWidth;
 
     if (this.xScale(d.x) < 0) {
-      // Cut card left to prevent overlay
       w = this.xScale(d.x) + this.cardWidth;
     } else if (this.xScale(d.x) + this.cardWidth > this.chartWidth) {
-      // Cut card right to prevent overlay
       w = this.chartWidth - this.xScale(d.x) - this.cardPadding;
-    } // Card width should be MIN_CARD_SIZE at least, but cut cards shouldn't be displayed
+    } 
 
 
     w = w > 0 ? Math.max(w, MIN_CARD_SIZE) : 0;
@@ -1873,7 +1725,7 @@ class HeatmapRenderer {
 
     if (this.panel.yAxis.logBase !== 1 && d.y === 0) {
       return this.cardHeight;
-    } // Cut card height to prevent overlay
+    } 
 
 
     if (y < this.chartTop) {
@@ -1882,10 +1734,10 @@ class HeatmapRenderer {
       h = this.chartBottom - y;
     } else if (y + this.cardHeight > this.chartBottom) {
       h = this.chartBottom - y;
-    } // Height can't be more than chart height
+    } 
 
 
-    h = Math.min(h, this.chartHeight); // Card height should be MIN_CARD_SIZE at least
+    h = Math.min(h, this.chartHeight); 
 
     h = Math.max(h, MIN_CARD_SIZE);
     return h;
@@ -1893,7 +1745,7 @@ class HeatmapRenderer {
 
   getCardColor(d) {
     if (this.panel.color.mode === 'opacity') {
-      return (0,src.getColorForTheme)(this.panel.color.cardColor, config/* config.theme */.vc.theme);
+      return (0,src.getColorForTheme)(this.panel.color.cardColor, config.vc.theme);
     } else {
       return this.colorScale(d.count);
     }
@@ -1960,7 +1812,6 @@ class HeatmapRenderer {
     const offset = this.getEventOffset(event);
 
     if (this.selection.active) {
-      // Clear crosshair and tooltip
       this.clearCrosshair();
       this.tooltip.destroy();
       this.selection.x2 = this.limitSelection(offset.x);
@@ -1990,8 +1841,7 @@ class HeatmapRenderer {
   }
 
   emitGraphHoverEvent(pos) {
-    // Set minimum offset to prevent showing legend from another panel
-    pos.panelRelY = Math.max(pos.offset.y / this.height, 0.001); // broadcast to other graph panels that we are hovering
+    pos.panelRelY = Math.max(pos.offset.y / this.height, 0.001); 
 
     this.hoverEvent.payload.pos = pos;
     this.hoverEvent.payload.panel = this.panel;
@@ -2056,7 +1906,7 @@ class HeatmapRenderer {
 
     if (!this.setElementHeight() || !this.data) {
       return;
-    } // Draw default axes and return if no data
+    } 
 
 
     if ((0,lodash.isEmpty)(this.data.buckets)) {
@@ -2082,7 +1932,7 @@ class HeatmapRenderer {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/heatmap/heatmap_ctrl.ts
+;
 function heatmap_ctrl_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -2142,10 +1992,9 @@ const panelDefaults = {
   hideZeroBuckets: false
 };
 const colorModes = ['opacity', 'spectrum'];
-const opacityScales = ['linear', 'sqrt']; // Schemes from d3-scale-chromatic
-// https://github.com/d3/d3-scale-chromatic
+const opacityScales = ['linear', 'sqrt']; 
 
-const colorSchemes = [// Diverging
+const colorSchemes = [
 {
   name: 'Spectral',
   value: 'interpolateSpectral',
@@ -2154,7 +2003,7 @@ const colorSchemes = [// Diverging
   name: 'RdYlGn',
   value: 'interpolateRdYlGn',
   invert: 'always'
-}, // Sequential (Single Hue)
+}, 
 {
   name: 'Blues',
   value: 'interpolateBlues',
@@ -2179,7 +2028,7 @@ const colorSchemes = [// Diverging
   name: 'Reds',
   value: 'interpolateReds',
   invert: 'dark'
-}, // Sequential (Multi-Hue)
+}, 
 {
   name: 'Turbo',
   value: 'interpolateTurbo',
@@ -2267,9 +2116,7 @@ const colorSchemes = [// Diverging
 }];
 const dsSupportHistogramSort = ['elasticsearch'];
 class HeatmapCtrl extends sdk.MetricsPanelCtrl {
-  // Shared with graph panel
 
-  /** @ngInject */
   constructor($scope, $injector, templateSrv, timeSrv) {
     super($scope, $injector);
 
@@ -2299,17 +2146,16 @@ class HeatmapCtrl extends sdk.MetricsPanelCtrl {
     (0,lodash.defaultsDeep)(this.panel, panelDefaults);
     this.opacityScales = opacityScales;
     this.colorModes = colorModes;
-    this.colorSchemes = colorSchemes; // Use DataFrames
+    this.colorSchemes = colorSchemes; 
 
     this.useDataFrames = true;
-    this.processor = new data_processor/* DataProcessor */.$({
+    this.processor = new data_processor.$({
       xaxis: {
         mode: 'custom'
       },
-      // NOT: 'histogram' :)
-      aliasColors: {} // avoids null reference
+      aliasColors: {} 
 
-    }); // Bind grafana panel events
+    }); 
 
     this.events.on(src.PanelEvents.render, this.onRender.bind(this));
     this.events.on(src.PanelEvents.dataFramesReceived, this.onDataFramesReceived.bind(this));
@@ -2321,11 +2167,11 @@ class HeatmapCtrl extends sdk.MetricsPanelCtrl {
   onInitEditMode() {
     this.addEditorTab('Axes', axesEditor, 2);
     this.addEditorTab('Display', heatmapDisplayEditor, 3);
-    this.unitFormats = kbn/* default.getUnitFormats */.Z.getUnitFormats();
+    this.unitFormats = kbn.Z.getUnitFormats();
   }
 
   zoomOut(evt) {
-    app_events/* default.publish */.Z.publish(new events/* ZoomOutEvent */.p8({
+    app_events.Z.publish(new events.p8({
       scale: 2
     }));
   }
@@ -2346,9 +2192,9 @@ class HeatmapCtrl extends sdk.MetricsPanelCtrl {
     let xBucketSize, yBucketSize, bucketsData, heatmapStats;
     const logBase = this.panel.yAxis.logBase;
     const xBucketNumber = this.panel.xBucketNumber || X_BUCKET_NUMBER_DEFAULT;
-    const xBucketSizeByNumber = Math.floor((this.range.to.valueOf() - this.range.from.valueOf()) / xBucketNumber); // Parse X bucket size (number or interval)
+    const xBucketSizeByNumber = Math.floor((this.range.to.valueOf() - this.range.from.valueOf()) / xBucketNumber); 
 
-    const isIntervalString = kbn/* default.intervalRegex.test */.Z.intervalRegex.test(this.panel.xBucketSize);
+    const isIntervalString = kbn.Z.intervalRegex.test(this.panel.xBucketSize);
 
     if (isIntervalString) {
       xBucketSize = src.rangeUtil.intervalToMs(this.panel.xBucketSize);
@@ -2356,7 +2202,7 @@ class HeatmapCtrl extends sdk.MetricsPanelCtrl {
       xBucketSize = xBucketSizeByNumber;
     } else {
       xBucketSize = Number(this.panel.xBucketSize);
-    } // Calculate Y bucket size
+    } 
 
 
     heatmapStats = this.parseSeries(this.series);
@@ -2378,7 +2224,7 @@ class HeatmapCtrl extends sdk.MetricsPanelCtrl {
       yBucketSize = this.panel.yBucketSize || yBucketSize;
     }
 
-    bucketsData = convertToHeatMap(this.series, yBucketSize, xBucketSize, logBase); // Set default Y range if no data
+    bucketsData = convertToHeatMap(this.series, yBucketSize, xBucketSize, logBase); 
 
     if (!heatmapStats.min && !heatmapStats.max) {
       heatmapStats = {
@@ -2409,7 +2255,7 @@ class HeatmapCtrl extends sdk.MetricsPanelCtrl {
     }
 
     const panelDatasource = this.getPanelDataSourceType();
-    let xBucketSize, yBucketSize, bucketsData, tsBuckets; // Try to sort series by bucket bound, if datasource doesn't do it.
+    let xBucketSize, yBucketSize, bucketsData, tsBuckets; 
 
     if (!(0,lodash.includes)(dsSupportHistogramSort, panelDatasource)) {
       this.series.sort(sortSeriesByLabel);
@@ -2417,8 +2263,7 @@ class HeatmapCtrl extends sdk.MetricsPanelCtrl {
 
     if (this.panel.reverseYBuckets) {
       this.series.reverse();
-    } // Convert histogram to heatmap. Each histogram bucket represented by the series which name is
-    // a top (or bottom, depends of datasource) bucket bound. Further, these values will be used as Y axis labels.
+    } 
 
 
     bucketsData = histogramToHeatmap(this.series);
@@ -2426,17 +2271,14 @@ class HeatmapCtrl extends sdk.MetricsPanelCtrl {
     const yBucketBound = this.panel.yBucketBound;
 
     if (panelDatasource === 'prometheus' && yBucketBound !== 'lower' && yBucketBound !== 'middle' || yBucketBound === 'upper') {
-      // Prometheus labels are upper inclusive bounds, so add empty bottom bucket label.
       tsBuckets = [''].concat(tsBuckets);
     } else {
-      // Elasticsearch uses labels as lower bucket bounds, so add empty top bucket label.
-      // Use this as a default mode as well.
       tsBuckets.push('');
-    } // Calculate bucket size based on heatmap data
+    } 
 
 
     const xBucketBoundSet = (0,lodash.map)((0,lodash.keys)(bucketsData), key => Number(key));
-    xBucketSize = calculateBucketSize(xBucketBoundSet); // Always let yBucketSize=1 in 'tsbuckets' mode
+    xBucketSize = calculateBucketSize(xBucketBoundSet); 
 
     yBucketSize = 1;
     const {
@@ -2459,12 +2301,12 @@ class HeatmapCtrl extends sdk.MetricsPanelCtrl {
     } else {
       return 'unknown';
     }
-  } // This should only be called from the snapshot callback
+  } 
 
 
   onSnapshotLoad(dataList) {
-    this.onDataFramesReceived((0,runRequest/* getProcessedDataFrames */.F9)(dataList));
-  } // Directly support DataFrame
+    this.onDataFramesReceived((0,runRequest.F9)(dataList));
+  } 
 
 
   onDataFramesReceived(data) {
@@ -2472,7 +2314,7 @@ class HeatmapCtrl extends sdk.MetricsPanelCtrl {
       dataList: data,
       range: this.range
     }).map(ts => {
-      ts.color = undefined; // remove whatever the processor set
+      ts.color = undefined; 
 
       ts.flotpairs = ts.getFlotPairs(this.panel.nullPointMode);
       return ts;
@@ -2550,38 +2392,38 @@ class HeatmapCtrl extends sdk.MetricsPanelCtrl {
 HeatmapCtrl.$inject = ["$scope", "$injector", "templateSrv", "timeSrv"];
 
 heatmap_ctrl_defineProperty(HeatmapCtrl, "templateUrl", 'module.html');
-;// CONCATENATED MODULE: ./public/app/plugins/panel/heatmap/module.ts
+;
 
 
 
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/sdk.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/sdk.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MetricsPanelCtrl": () => (/* binding */ MetricsPanelCtrl),
-/* harmony export */   "PanelCtrl": () => (/* binding */ PanelCtrl),
-/* harmony export */   "QueryCtrl": () => (/* binding */ QueryCtrl),
-/* harmony export */   "loadPluginCss": () => (/* reexport safe */ _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__.loadPluginCss)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/panel/metrics_panel_ctrl.ts");
-/* harmony import */ var app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/angular/panel/panel_ctrl.ts");
-/* harmony import */ var app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/angular/panel/query_ctrl.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "MetricsPanelCtrl": () => ( MetricsPanelCtrl),
+   "PanelCtrl": () => ( PanelCtrl),
+   "QueryCtrl": () => ( QueryCtrl),
+   "loadPluginCss": () => ( _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__.loadPluginCss)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/panel/metrics_panel_ctrl.ts");
+ var app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/angular/panel/panel_ctrl.ts");
+ var app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/angular/panel/query_ctrl.ts");
 
 
 
 
 
-const PanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__/* .PanelCtrl */ .q);
-const MetricsPanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__/* .MetricsPanelCtrl */ .k);
-const QueryCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__/* .QueryCtrl */ .G);
+const PanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__ .q);
+const MetricsPanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ .k);
+const QueryCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__ .G);
 
 
-/***/ })
+ })
 
 }]);

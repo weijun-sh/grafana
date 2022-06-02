@@ -1,30 +1,24 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[534],{
 
-/***/ "./public/app/plugins/datasource/postgres/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/postgres/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "plugin": () => (/* binding */ module_plugin)
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./public/app/features/datasources/utils/passwordHandlers.ts
 var passwordHandlers = __webpack_require__("./public/app/features/datasources/utils/passwordHandlers.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/postgres/config_ctrl.ts
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 class PostgresConfigCtrl {
-  /** @ngInject */
   constructor($scope, datasourceSrv) {
     _defineProperty(this, "datasourceSrv", void 0);
 
@@ -64,8 +58,8 @@ class PostgresConfigCtrl {
     this.current.jsonData.postgresVersion = this.current.jsonData.postgresVersion || 903;
     this.showTimescaleDBHelp = false;
     this.autoDetectFeatures();
-    this.onPasswordReset = (0,passwordHandlers/* createResetHandler */.Xr)(this, passwordHandlers/* PasswordFieldEnum.Password */.HX.Password);
-    this.onPasswordChange = (0,passwordHandlers/* createChangeHandler */.wP)(this, passwordHandlers/* PasswordFieldEnum.Password */.HX.Password);
+    this.onPasswordReset = (0,passwordHandlers.Xr)(this, passwordHandlers.HX.Password);
+    this.onPasswordChange = (0,passwordHandlers.wP)(this, passwordHandlers.HX.Password);
     this.tlsModeMapping();
   }
 
@@ -76,7 +70,7 @@ class PostgresConfigCtrl {
 
     this.datasourceSrv.loadDatasource(this.current.name).then(ds => {
       return ds.getVersion().then(version => {
-        version = Number(version[0].text); // timescaledb is only available for 9.6+
+        version = Number(version[0].text); 
 
         if (version >= 906) {
           ds.getTimescaleDBVersion().then(version => {
@@ -120,33 +114,25 @@ class PostgresConfigCtrl {
       this.current.jsonData.tlsAuthWithCACert = true;
       this.current.jsonData.tlsSkipVerify = false;
     }
-  } // the value portion is derived from postgres server_version_num/100
+  } 
 
 
 }
 PostgresConfigCtrl.$inject = ["$scope", "datasourceSrv"];
 
 _defineProperty(PostgresConfigCtrl, "templateUrl", 'partials/config.html');
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js
 var lastValueFrom = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js
 var catchError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/utils/queryResponse.ts
 var queryResponse = __webpack_require__("./packages/grafana-runtime/src/utils/queryResponse.ts");
-// EXTERNAL MODULE: ./public/app/features/templating/template_srv.ts + 1 modules
 var template_srv = __webpack_require__("./public/app/features/templating/template_srv.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/postgres/postgres_query_model.ts
+;
 function postgres_query_model_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 class PostgresQueryModel {
-  /** @ngInject */
   constructor(target, templateSrv, scopedVars) {
     postgres_query_model_defineProperty(this, "target", void 0);
 
@@ -169,21 +155,19 @@ class PostgresQueryModel {
     target.select = target.select || [[{
       type: 'column',
       params: ['value']
-    }]]; // handle pre query gui panels gracefully
+    }]]; 
 
     if (!('rawQuery' in this.target)) {
       if ('rawSql' in target) {
-        // pre query gui panel
         target.rawQuery = true;
       } else {
-        // new panel
         target.rawQuery = false;
       }
-    } // give interpolateQueryStr access to this
+    } 
 
 
     this.interpolateQueryStr = this.interpolateQueryStr.bind(this);
-  } // remove identifier quoting from identifier to use in metadata queries
+  } 
 
 
   unquoteIdentifier(value) {
@@ -215,7 +199,6 @@ class PostgresQueryModel {
   }
 
   interpolateQueryStr(value, variable, defaultFormatFn) {
-    // if no multi or include all do not regexEscape
     if (!variable.multi && !variable.includeAll) {
       return this.escapeLiteral(value);
     }
@@ -229,7 +212,7 @@ class PostgresQueryModel {
   }
 
   render(interpolate) {
-    const target = this.target; // new query with no table set yet
+    const target = this.target; 
 
     if (!this.target.rawQuery && !('table' in this.target)) {
       return '';
@@ -466,9 +449,8 @@ class PostgresQueryModel {
 
 }
 PostgresQueryModel.$inject = ["target", "templateSrv", "scopedVars"];
-// EXTERNAL MODULE: ./public/app/features/variables/utils.ts
 var utils = __webpack_require__("./public/app/features/variables/utils.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/postgres/response_parser.ts
+;
 
 class ResponseParser {
   transformMetricFindResponse(raw) {
@@ -542,7 +524,7 @@ class ResponseParser {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/postgres/datasource.ts
+;
 function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -556,7 +538,7 @@ function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.d
 
 class PostgresDatasource extends grafana_runtime_src.DataSourceWithBackend {
   constructor(instanceSettings) {
-    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv/* getTemplateSrv */.J)();
+    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv.J)();
     super(instanceSettings);
     this.templateSrv = templateSrv;
 
@@ -646,7 +628,7 @@ class PostgresDatasource extends grafana_runtime_src.DataSourceWithBackend {
       rawSql: this.templateSrv.replace(options.annotation.rawQuery, options.scopedVars, this.interpolateVariable),
       format: 'table'
     };
-    return (0,lastValueFrom/* lastValueFrom */.n)((0,grafana_runtime_src.getBackendSrv)().fetch({
+    return (0,lastValueFrom.n)((0,grafana_runtime_src.getBackendSrv)().fetch({
       url: '/api/ds/query',
       method: 'POST',
       data: {
@@ -655,7 +637,7 @@ class PostgresDatasource extends grafana_runtime_src.DataSourceWithBackend {
         queries: [query]
       },
       requestId: options.annotation.name
-    }).pipe((0,map/* map */.U)(async res => await this.responseParser.transformAnnotationResponse(options, res.data))));
+    }).pipe((0,map.U)(async res => await this.responseParser.transformAnnotationResponse(options, res.data))));
   }
 
   metricFindQuery(query, optionalOptions) {
@@ -667,7 +649,7 @@ class PostgresDatasource extends grafana_runtime_src.DataSourceWithBackend {
       refId = optionalOptions.variable.name;
     }
 
-    const rawSql = this.templateSrv.replace(query, (0,utils/* getSearchFilterScopedVar */._6)({
+    const rawSql = this.templateSrv.replace(query, (0,utils._6)({
       query,
       wildcardChar: '%',
       options: optionalOptions
@@ -679,7 +661,7 @@ class PostgresDatasource extends grafana_runtime_src.DataSourceWithBackend {
       format: 'table'
     };
     const range = optionalOptions === null || optionalOptions === void 0 ? void 0 : optionalOptions.range;
-    return (0,lastValueFrom/* lastValueFrom */.n)((0,grafana_runtime_src.getBackendSrv)().fetch({
+    return (0,lastValueFrom.n)((0,grafana_runtime_src.getBackendSrv)().fetch({
       url: '/api/ds/query',
       method: 'POST',
       data: {
@@ -688,9 +670,9 @@ class PostgresDatasource extends grafana_runtime_src.DataSourceWithBackend {
         queries: [interpolatedQuery]
       },
       requestId: refId
-    }).pipe((0,map/* map */.U)(rsp => {
+    }).pipe((0,map.U)(rsp => {
       return this.responseParser.transformMetricFindResponse(rsp);
-    }), (0,catchError/* catchError */.K)(err => {
+    }), (0,catchError.K)(err => {
       return (0,of.of)([]);
     })));
   }
@@ -714,21 +696,21 @@ class PostgresDatasource extends grafana_runtime_src.DataSourceWithBackend {
   }
 
   getVersion() {
-    return (0,lastValueFrom/* lastValueFrom */.n)(this._metaRequest("SELECT current_setting('server_version_num')::int/100"));
+    return (0,lastValueFrom.n)(this._metaRequest("SELECT current_setting('server_version_num')::int/100"));
   }
 
   getTimescaleDBVersion() {
-    return (0,lastValueFrom/* lastValueFrom */.n)(this._metaRequest("SELECT extversion FROM pg_extension WHERE extname = 'timescaledb'"));
+    return (0,lastValueFrom.n)(this._metaRequest("SELECT extversion FROM pg_extension WHERE extname = 'timescaledb'"));
   }
 
   testDatasource() {
-    return (0,lastValueFrom/* lastValueFrom */.n)(this._metaRequest('SELECT 1')).then(() => {
+    return (0,lastValueFrom.n)(this._metaRequest('SELECT 1')).then(() => {
       return {
         status: 'success',
         message: 'Database Connection OK'
       };
     }).catch(err => {
-      return (0,queryResponse/* toTestingStatus */.Gw)(err);
+      return (0,queryResponse.Gw)(err);
     });
   }
 
@@ -747,13 +729,10 @@ class PostgresDatasource extends grafana_runtime_src.DataSourceWithBackend {
   }
 
 }
-// EXTERNAL MODULE: ./public/app/core/app_events.ts
 var app_events = __webpack_require__("./public/app/core/app_events.ts");
-// EXTERNAL MODULE: ./public/app/plugins/sdk.ts
 var sdk = __webpack_require__("./public/app/plugins/sdk.ts");
-// EXTERNAL MODULE: ./public/app/types/events.ts
 var events = __webpack_require__("./public/app/types/events.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/postgres/meta_query.ts
+;
 class PostgresMetaQuery {
   constructor(target, queryModel) {
     this.target = target;
@@ -782,7 +761,7 @@ class PostgresMetaQuery {
           return ['=', '!=', '<', '<=', '>', '>=', 'IN', 'NOT IN'];
         }
     }
-  } // quote identifier as literal to use in metadata queries
+  } 
 
 
   quoteIdentAsLiteral(value) {
@@ -790,7 +769,6 @@ class PostgresMetaQuery {
   }
 
   findMetricTable() {
-    // query that returns first table found that has a timestamp(tz) column and a float column
     let query = `
 SELECT
 	quote_ident(table_name) as table_name,
@@ -838,7 +816,6 @@ LIMIT 1
   }
 
   buildSchemaConstraint() {
-    // quote_ident protects hyphenated schemes
     const query = `
 quote_ident(table_schema) IN (
   SELECT
@@ -854,7 +831,7 @@ quote_ident(table_schema) IN (
   }
 
   buildTableConstraint(table) {
-    let query = ''; // check for schema qualified table
+    let query = ''; 
 
     if (table.includes('.')) {
       const parts = table.split('.');
@@ -935,9 +912,8 @@ quote_ident(table_schema) IN (
   }
 
 }
-// EXTERNAL MODULE: ./public/app/angular/components/sql_part/sql_part.ts
 var sql_part = __webpack_require__("./public/app/angular/components/sql_part/sql_part.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/postgres/sql_part.ts
+;
 
 const index = [];
 
@@ -948,11 +924,11 @@ function createPart(part) {
     return null;
   }
 
-  return new sql_part/* SqlPart */.H(part, def);
+  return new sql_part.H(part, def);
 }
 
 function register(options) {
-  index[options.type] = new sql_part/* SqlPartDef */.m(options);
+  index[options.type] = new sql_part.m(options);
 }
 
 register({
@@ -1067,10 +1043,10 @@ register({
   }],
   defaultParams: ['avg', '5']
 });
-/* harmony default export */ const postgres_sql_part = ({
+ const postgres_sql_part = ({
   create: createPart
 });
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/postgres/query_ctrl.ts
+;
 function query_ctrl_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1090,7 +1066,6 @@ WHERE
   $__timeFilter(time_column)
 `;
 class PostgresQueryCtrl extends sdk.QueryCtrl {
-  /** @ngInject */
   constructor($scope, $injector, templateSrv, uiSegmentSrv) {
     super($scope, $injector);
     this.templateSrv = templateSrv;
@@ -1141,7 +1116,6 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
     }];
 
     if (!this.target.rawSql) {
-      // special handling when in table panel
       if (this.panelCtrl.panel.type === 'table') {
         this.target.format = 'table';
         this.target.rawSql = 'SELECT 1';
@@ -1197,7 +1171,7 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
   }
 
   timescaleAggCheck() {
-    const aggIndex = this.findAggregateIndex(this.selectParts[0]); // add or remove TimescaleDB aggregate functions as needed
+    const aggIndex = this.findAggregateIndex(this.selectParts[0]); 
 
     if (aggIndex !== -1) {
       const baseOpts = this.selectParts[0][aggIndex].def.params[0].baseOptions;
@@ -1275,7 +1249,7 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
         text: 'Variance',
         value: 'variance'
       }]
-    }; // first and last aggregate are timescaledb specific
+    }; 
 
     if (this.datasource.jsonData.timescaledb === true) {
       aggregates.submenu.push({
@@ -1288,7 +1262,7 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
       });
     }
 
-    this.selectMenu.push(aggregates); // ordered set aggregates require postgres 9.4+
+    this.selectMenu.push(aggregates); 
 
     if (this.datasource.jsonData.postgresVersion >= 904) {
       const aggregates2 = {
@@ -1339,22 +1313,18 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
 
   toggleEditorMode() {
     if (this.target.rawQuery) {
-      app_events/* default.publish */.Z.publish(new events/* ShowConfirmModalEvent */.VJ({
+      app_events.Z.publish(new events.VJ({
         title: 'Warning',
         text2: 'Switching to query builder may overwrite your raw SQL.',
         icon: 'exclamation-triangle',
         yesText: 'Switch',
         onConfirm: () => {
-          // This could be called from React, so wrap in $evalAsync.
-          // Will then either run as part of the current digest cycle or trigger a new one.
           this.$scope.$evalAsync(() => {
             this.target.rawQuery = !this.target.rawQuery;
           });
         }
       }));
     } else {
-      // This could be called from React, so wrap in $evalAsync.
-      // Will then either run as part of the current digest cycle or trigger a new one.
       this.$scope.$evalAsync(() => {
         this.target.rawQuery = !this.target.rawQuery;
       });
@@ -1383,7 +1353,6 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
     this.metricColumnSegment.value = segment.value;
     this.target.metricColumn = 'none';
     const task1 = this.datasource.metricFindQuery(this.metaBuilder.buildColumnQuery('time')).then(result => {
-      // check if time column is still valid
       if (result.length > 0 && !(0,lodash.find)(result, r => r.text === this.target.timeColumn)) {
         const segment = this.uiSegmentSrv.newSegment(result[0].text);
         this.timeColumnSegment.html = segment.html;
@@ -1435,7 +1404,6 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
         }
 
         if (this.whereParts.length >= 1 && this.whereParts[0].def.type === 'macro') {
-          // replace current macro
           this.whereParts[0] = partModel;
         } else {
           this.whereParts.splice(0, 0, partModel);
@@ -1554,7 +1522,6 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
 
       case 'percentile':
       case 'aggregate':
-        // add group by if no group by yet
         if (this.target.group.length === 0) {
           this.addGroup('time', '$__interval');
         }
@@ -1562,7 +1529,6 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
         const aggIndex = this.findAggregateIndex(selectParts);
 
         if (aggIndex !== -1) {
-          // replace current aggregation
           selectParts[aggIndex] = partModel;
         } else {
           selectParts.splice(1, 0, partModel);
@@ -1579,7 +1545,6 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
         const windowIndex = this.findWindowIndex(selectParts);
 
         if (windowIndex !== -1) {
-          // replace current window function
           selectParts[windowIndex] = partModel;
         } else {
           const aggIndex = this.findAggregateIndex(selectParts);
@@ -1603,7 +1568,6 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
     }
 
     if (addAlias) {
-      // set initial alias name to column name
       partModel = postgres_sql_part.create({
         type: 'alias',
         params: [selectParts[0].params[0].replace(/"/g, '')]
@@ -1622,7 +1586,6 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
 
   removeSelectPart(selectParts, part) {
     if (part.def.type === 'column') {
-      // remove all parts of column unless its last column
       if (this.selectParts.length > 1) {
         const modelsIndex = (0,lodash.indexOf)(this.selectParts, selectParts);
         this.selectParts.splice(modelsIndex, 1);
@@ -1716,11 +1679,10 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
     });
 
     if (partType === 'time') {
-      // put timeGroup at start
       this.groupParts.splice(0, 0, partModel);
     } else {
       this.groupParts.push(partModel);
-    } // add aggregates when adding group by
+    } 
 
 
     for (const selectParts of this.selectParts) {
@@ -1746,7 +1708,6 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
 
   removeGroup(part, index) {
     if (part.def.type === 'time') {
-      // remove aggregations
       this.selectParts = (0,lodash.map)(this.selectParts, s => {
         return (0,lodash.filter)(s, part => {
           if (part.def.type === 'aggregate' || part.def.type === 'percentile') {
@@ -1772,7 +1733,6 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
 
             case 'right':
               if (['int4', 'int8', 'float4', 'float8', 'timestamp', 'timestamptz'].indexOf(part.datatype) > -1) {
-                // don't do value lookups for numerical fields
                 return Promise.resolve([]);
               } else {
                 return this.datasource.metricFindQuery(this.metaBuilder.buildValueQuery(part.params[0])).then(this.transformToSegments({
@@ -1805,7 +1765,6 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
 
       case 'action':
         {
-          // remove element
           whereParts.splice(index, 1);
           this.updatePersistedParts();
           this.updateRawSqlAndRefresh();
@@ -1855,7 +1814,6 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
           });
 
           if (this.whereParts.length >= 1 && this.whereParts[0].def.type === 'macro') {
-            // replace current macro
             this.whereParts[0] = partModel;
           } else {
             this.whereParts.splice(0, 0, partModel);
@@ -1915,7 +1873,7 @@ class PostgresQueryCtrl extends sdk.QueryCtrl {
 PostgresQueryCtrl.$inject = ["$scope", "$injector", "templateSrv", "uiSegmentSrv"];
 
 query_ctrl_defineProperty(PostgresQueryCtrl, "templateUrl", 'partials/query.editor.html');
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/postgres/module.ts
+;
 function module_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1933,7 +1891,6 @@ WHERE
 `;
 
 class PostgresAnnotationsQueryCtrl {
-  /** @ngInject */
   constructor($scope) {
     this.annotation = $scope.ctrl.annotation;
     this.annotation.rawQuery = this.annotation.rawQuery || module_defaultQuery;
@@ -1947,6 +1904,6 @@ module_defineProperty(PostgresAnnotationsQueryCtrl, "templateUrl", 'partials/ann
 
 const module_plugin = new src.DataSourcePlugin(PostgresDatasource).setQueryCtrl(PostgresQueryCtrl).setConfigCtrl(PostgresConfigCtrl).setAnnotationQueryCtrl(PostgresAnnotationsQueryCtrl);
 
-/***/ })
+ })
 
 }]);

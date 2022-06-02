@@ -1,15 +1,15 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[3330],{
 
-/***/ "./public/app/core/components/Layers/AddLayerButton.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/components/Layers/AddLayerButton.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "f": () => (/* binding */ AddLayerButton)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "f": () => ( AddLayerButton)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 
 
 
@@ -19,7 +19,7 @@ const AddLayerButton = _ref => {
     options,
     label
   } = _ref;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.ValuePicker, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.ValuePicker, {
     icon: "plus",
     label: label,
     variant: "secondary",
@@ -29,30 +29,23 @@ const AddLayerButton = _ref => {
   });
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/core/components/Layers/LayerDragDropList.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/components/Layers/LayerDragDropList.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "E": () => (/* binding */ LayerDragDropList)
+  "E": () => ( LayerDragDropList)
 });
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-beautiful-dnd-virtual-27e4b658e7/0/cache/react-beautiful-dnd-npm-13.1.0-fcf5568b1c-12b7e9fbe8.zip/node_modules/react-beautiful-dnd/dist/react-beautiful-dnd.esm.js + 4 modules
 var react_beautiful_dnd_esm = __webpack_require__("./.yarn/__virtual__/react-beautiful-dnd-virtual-27e4b658e7/0/cache/react-beautiful-dnd-npm-13.1.0-fcf5568b1c-12b7e9fbe8.zip/node_modules/react-beautiful-dnd/dist/react-beautiful-dnd.esm.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/core/components/Layers/LayerName.tsx
+;
 
 
 
@@ -118,24 +111,24 @@ const LayerName = _ref => {
     event.target.select();
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+    children: (0,jsx_runtime.jsxs)("div", {
       className: styles.wrapper,
-      children: [!isEditing && /*#__PURE__*/(0,jsx_runtime.jsxs)("button", {
+      children: [!isEditing && (0,jsx_runtime.jsxs)("button", {
         className: styles.layerNameWrapper,
         title: "Edit layer name",
         onClick: onEditLayer,
         "data-testid": "layer-name-div",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+        children: [(0,jsx_runtime.jsx)("span", {
           className: styles.layerName,
           children: name
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
           name: "pen",
           className: styles.layerEditIcon,
           size: "sm"
         })]
-      }), isEditing && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      }), isEditing && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           type: "text",
           defaultValue: name,
           onBlur: onEditLayerBlur,
@@ -146,7 +139,7 @@ const LayerName = _ref => {
           onChange: onInputChange,
           className: styles.layerNameInput,
           "data-testid": "layer-name-input"
-        }), validationError && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.FieldValidationMessage, {
+        }), validationError && (0,jsx_runtime.jsx)(grafana_ui_src.FieldValidationMessage, {
           horizontal: true,
           children: validationError
         })]
@@ -206,7 +199,7 @@ const getStyles = theme => {
     `
   };
 };
-;// CONCATENATED MODULE: ./public/app/core/components/Layers/LayerDragDropList.tsx
+;
 
 
 
@@ -236,14 +229,13 @@ const LayerDragDropList = _ref => {
     return isSelected ? `${style.row} ${style.sel}` : style.row;
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(react_beautiful_dnd_esm/* DragDropContext */.Z5, {
+  return (0,jsx_runtime.jsx)(react_beautiful_dnd_esm.Z5, {
     onDragEnd: onDragEnd,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(react_beautiful_dnd_esm/* Droppable */.bK, {
+    children: (0,jsx_runtime.jsx)(react_beautiful_dnd_esm.bK, {
       droppableId: "droppable",
-      children: (provided, snapshot) => /*#__PURE__*/(0,jsx_runtime.jsxs)("div", Object.assign({}, provided.droppableProps, {
+      children: (provided, snapshot) => (0,jsx_runtime.jsxs)("div", Object.assign({}, provided.droppableProps, {
         ref: provided.innerRef,
         children: [(() => {
-          // reverse order
           const rows = [];
           const lastLayerIndex = excludeBaseLayer ? 1 : 0;
           const shouldRenderDragIconLengthThreshold = excludeBaseLayer ? 2 : 1;
@@ -252,35 +244,35 @@ const LayerDragDropList = _ref => {
             const element = layers[i];
             const uid = element.getName();
             const isSelected = Boolean(selection === null || selection === void 0 ? void 0 : selection.includes(uid));
-            rows.push( /*#__PURE__*/(0,jsx_runtime.jsx)(react_beautiful_dnd_esm/* Draggable */._l, {
+            rows.push( (0,jsx_runtime.jsx)(react_beautiful_dnd_esm._l, {
               draggableId: uid,
               index: rows.length,
-              children: (provided, snapshot) => /*#__PURE__*/(0,jsx_runtime.jsxs)("div", Object.assign({
+              children: (provided, snapshot) => (0,jsx_runtime.jsxs)("div", Object.assign({
                 className: getRowStyle(isSelected),
                 ref: provided.innerRef
               }, provided.draggableProps, provided.dragHandleProps, {
                 onMouseDown: () => onSelect(element),
-                children: [/*#__PURE__*/(0,jsx_runtime.jsx)(LayerName, {
+                children: [(0,jsx_runtime.jsx)(LayerName, {
                   name: uid,
                   onChange: v => onNameChange(element, v),
                   verifyLayerNameUniqueness: verifyLayerNameUniqueness !== null && verifyLayerNameUniqueness !== void 0 ? verifyLayerNameUniqueness : undefined
-                }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+                }), (0,jsx_runtime.jsxs)("div", {
                   className: style.textWrapper,
                   children: ["\xA0 ", getLayerInfo(element)]
-                }), isFrame(element) && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-                  children: [onDuplicate ? /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
+                }), isFrame(element) && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+                  children: [onDuplicate ? (0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
                     name: "copy",
                     title: 'Duplicate',
                     className: style.actionIcon,
                     onClick: () => onDuplicate(element),
                     surface: "header"
-                  }) : null, /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
+                  }) : null, (0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
                     name: "trash-alt",
                     title: 'remove',
                     className: (0,emotion_css_esm.cx)(style.actionIcon, style.dragIcon),
                     onClick: () => onDelete(element),
                     surface: "header"
-                  }), layers.length > shouldRenderDragIconLengthThreshold && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+                  }), layers.length > shouldRenderDragIconLengthThreshold && (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
                     title: "Drag and drop to reorder",
                     name: "draggabledots",
                     size: "lg",
@@ -348,24 +340,23 @@ const styles = (0,grafana_ui_src.stylesFactory)(theme => ({
   `
 }));
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/canvas/runtime/frame.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/canvas/runtime/frame.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "f": () => (/* binding */ FrameState)
-/* harmony export */ });
-/* unused harmony export frameItemDummy */
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var app_features_canvas__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/canvas/index.ts");
-/* harmony import */ var app_features_canvas_elements_notFound__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/canvas/elements/notFound.tsx");
-/* harmony import */ var app_plugins_panel_canvas_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/plugins/panel/canvas/types.ts");
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/canvas/types.ts");
-/* harmony import */ var _element__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/canvas/runtime/element.tsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "f": () => ( FrameState)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var app_features_canvas__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/canvas/index.ts");
+ var app_features_canvas_elements_notFound__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/canvas/elements/notFound.tsx");
+ var app_plugins_panel_canvas_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/plugins/panel/canvas/types.ts");
+ var _types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/canvas/types.ts");
+ var _element__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/features/canvas/runtime/element.tsx");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _div;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -385,14 +376,13 @@ const frameItemDummy = {
   getNewOptions: () => ({
     config: {}
   }),
-  // eslint-disable-next-line react/display-name
   display: () => {
-    return _div || (_div = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+    return _div || (_div = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
       children: "FRAME!"
     }));
   }
 };
-class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState */ .f {
+class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__ .f {
   constructor(options, scene, parent) {
     var _this;
 
@@ -410,7 +400,7 @@ class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState *
       let shiftItemsOnDuplicate = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : true;
 
       switch (action) {
-        case app_plugins_panel_canvas_types__WEBPACK_IMPORTED_MODULE_4__/* .LayerActionID.Delete */ .G.Delete:
+        case app_plugins_panel_canvas_types__WEBPACK_IMPORTED_MODULE_4__ .G.Delete:
           _this.elements = _this.elements.filter(e => e !== element);
 
           _this.scene.byName.delete(element.options.name);
@@ -421,7 +411,7 @@ class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState *
 
           break;
 
-        case app_plugins_panel_canvas_types__WEBPACK_IMPORTED_MODULE_4__/* .LayerActionID.Duplicate */ .G.Duplicate:
+        case app_plugins_panel_canvas_types__WEBPACK_IMPORTED_MODULE_4__ .G.Duplicate:
           if (element.item.id === 'frame') {
             console.log('Can not duplicate frames (yet)', action, element);
             return;
@@ -441,8 +431,8 @@ class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState *
             const placement = oldPlacement !== null && oldPlacement !== void 0 ? oldPlacement : {};
 
             switch (vertical) {
-              case _types__WEBPACK_IMPORTED_MODULE_5__/* .VerticalConstraint.Top */ .fJ.Top:
-              case _types__WEBPACK_IMPORTED_MODULE_5__/* .VerticalConstraint.TopBottom */ .fJ.TopBottom:
+              case _types__WEBPACK_IMPORTED_MODULE_5__ .fJ.Top:
+              case _types__WEBPACK_IMPORTED_MODULE_5__ .fJ.TopBottom:
                 if (placement.top == null) {
                   placement.top = 25;
                 } else {
@@ -451,7 +441,7 @@ class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState *
 
                 break;
 
-              case _types__WEBPACK_IMPORTED_MODULE_5__/* .VerticalConstraint.Bottom */ .fJ.Bottom:
+              case _types__WEBPACK_IMPORTED_MODULE_5__ .fJ.Bottom:
                 if (placement.bottom == null) {
                   placement.bottom = 100;
                 } else {
@@ -462,8 +452,8 @@ class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState *
             }
 
             switch (horizontal) {
-              case _types__WEBPACK_IMPORTED_MODULE_5__/* .HorizontalConstraint.Left */ ._5.Left:
-              case _types__WEBPACK_IMPORTED_MODULE_5__/* .HorizontalConstraint.LeftRight */ ._5.LeftRight:
+              case _types__WEBPACK_IMPORTED_MODULE_5__ ._5.Left:
+              case _types__WEBPACK_IMPORTED_MODULE_5__ ._5.LeftRight:
                 if (placement.left == null) {
                   placement.left = 50;
                 } else {
@@ -472,7 +462,7 @@ class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState *
 
                 break;
 
-              case _types__WEBPACK_IMPORTED_MODULE_5__/* .HorizontalConstraint.Right */ ._5.Right:
+              case _types__WEBPACK_IMPORTED_MODULE_5__ ._5.Right:
                 if (placement.right == null) {
                   placement.right = 50;
                 } else {
@@ -485,7 +475,7 @@ class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState *
             opts.placement = placement;
           }
 
-          const copy = new _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState */ .f(element.item, opts, _this);
+          const copy = new _element__WEBPACK_IMPORTED_MODULE_6__ .f(element.item, opts, _this);
           copy.updateData(_this.scene.context);
 
           if (updateName) {
@@ -510,7 +500,7 @@ class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState *
 
     this.options = options;
     this.parent = parent;
-    this.scene = scene; // mutate options object
+    this.scene = scene; 
 
     let {
       elements
@@ -526,8 +516,8 @@ class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState *
       } else {
         var _canvasElementRegistr;
 
-        const item = (_canvasElementRegistr = app_features_canvas__WEBPACK_IMPORTED_MODULE_2__/* .canvasElementRegistry.getIfExists */ .Jk.getIfExists(c.type)) !== null && _canvasElementRegistr !== void 0 ? _canvasElementRegistr : app_features_canvas_elements_notFound__WEBPACK_IMPORTED_MODULE_3__/* .notFoundItem */ .C;
-        this.elements.push(new _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState */ .f(item, c, this));
+        const item = (_canvasElementRegistr = app_features_canvas__WEBPACK_IMPORTED_MODULE_2__ .Jk.getIfExists(c.type)) !== null && _canvasElementRegistr !== void 0 ? _canvasElementRegistr : app_features_canvas_elements_notFound__WEBPACK_IMPORTED_MODULE_3__ .C;
+        this.elements.push(new _element__WEBPACK_IMPORTED_MODULE_6__ .f(item, c, this));
       }
     }
   }
@@ -542,7 +532,7 @@ class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState *
     for (const elem of this.elements) {
       elem.updateData(ctx);
     }
-  } // used in the layer editor
+  } 
 
 
   reorder(startIndex, endIndex) {
@@ -554,15 +544,13 @@ class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState *
   }
 
   reinitializeMoveable() {
-    // Need to first clear current selection and then re-init moveable with slight delay
     this.scene.clearCurrentSelection();
     setTimeout(() => this.scene.initMoveable(true, this.scene.isEditingEnabled), 100);
-  } // ??? or should this be on the element directly?
-  // are actions scoped to layers?
+  } 
 
 
   render() {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
       ref: this.initElement,
       style: {
         overflow: 'hidden'
@@ -570,7 +558,6 @@ class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState *
       children: this.elements.map(v => v.render())
     }, this.UID);
   }
-  /** Recursively visit all nodes */
 
 
   visit(visitor) {
@@ -589,16 +576,16 @@ class FrameState extends _element__WEBPACK_IMPORTED_MODULE_6__/* .ElementState *
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/panel/canvas/editor/options.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/panel/canvas/editor/options.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "I": () => (/* binding */ optionBuilder)
-/* harmony export */ });
-/* harmony import */ var app_features_canvas__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./public/app/features/canvas/index.ts");
-/* harmony import */ var app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/dimensions/editors/index.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "I": () => ( optionBuilder)
+ });
+ var app_features_canvas__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./public/app/features/canvas/index.ts");
+ var app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/dimensions/editors/index.ts");
 
 
 const optionBuilder = {
@@ -609,10 +596,9 @@ const optionBuilder = {
       id: 'background.color',
       path: 'background.color',
       name: 'Color',
-      editor: app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_1__/* .ColorDimensionEditor */ .Lm,
+      editor: app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_1__ .Lm,
       settings: {},
       defaultValue: {
-        // Configured values
         fixed: ''
       }
     }).addCustomEditor({
@@ -620,7 +606,7 @@ const optionBuilder = {
       id: 'background.image',
       path: 'background.image',
       name: 'Image',
-      editor: app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_1__/* .ResourceDimensionEditor */ .Lv,
+      editor: app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_1__ .Lv,
       settings: {
         resourceType: 'image'
       }
@@ -630,23 +616,23 @@ const optionBuilder = {
       name: 'Image size',
       settings: {
         options: [{
-          value: app_features_canvas__WEBPACK_IMPORTED_MODULE_0__/* .BackgroundImageSize.Original */ .Uy.Original,
+          value: app_features_canvas__WEBPACK_IMPORTED_MODULE_0__ .Uy.Original,
           label: 'Original'
         }, {
-          value: app_features_canvas__WEBPACK_IMPORTED_MODULE_0__/* .BackgroundImageSize.Contain */ .Uy.Contain,
+          value: app_features_canvas__WEBPACK_IMPORTED_MODULE_0__ .Uy.Contain,
           label: 'Contain'
         }, {
-          value: app_features_canvas__WEBPACK_IMPORTED_MODULE_0__/* .BackgroundImageSize.Cover */ .Uy.Cover,
+          value: app_features_canvas__WEBPACK_IMPORTED_MODULE_0__ .Uy.Cover,
           label: 'Cover'
         }, {
-          value: app_features_canvas__WEBPACK_IMPORTED_MODULE_0__/* .BackgroundImageSize.Fill */ .Uy.Fill,
+          value: app_features_canvas__WEBPACK_IMPORTED_MODULE_0__ .Uy.Fill,
           label: 'Fill'
         }, {
-          value: app_features_canvas__WEBPACK_IMPORTED_MODULE_0__/* .BackgroundImageSize.Tile */ .Uy.Tile,
+          value: app_features_canvas__WEBPACK_IMPORTED_MODULE_0__ .Uy.Tile,
           label: 'Tile'
         }]
       },
-      defaultValue: app_features_canvas__WEBPACK_IMPORTED_MODULE_0__/* .BackgroundImageSize.Cover */ .Uy.Cover
+      defaultValue: app_features_canvas__WEBPACK_IMPORTED_MODULE_0__ .Uy.Cover
     });
   },
   addBorder: (builder, context) => {
@@ -670,10 +656,9 @@ const optionBuilder = {
         id: 'border.color',
         path: 'border.color',
         name: 'Color',
-        editor: app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_1__/* .ColorDimensionEditor */ .Lm,
+        editor: app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_1__ .Lm,
         settings: {},
         defaultValue: {
-          // Configured values
           fixed: ''
         }
       });
@@ -681,44 +666,26 @@ const optionBuilder = {
   }
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/panel/canvas/module.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/panel/canvas/module.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "plugin": () => (/* binding */ module_plugin)
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./public/app/features/canvas/runtime/frame.tsx
 var runtime_frame = __webpack_require__("./public/app/features/canvas/runtime/frame.tsx");
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/ReplaySubject.js
 var ReplaySubject = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/ReplaySubject.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subscription.js
 var Subscription = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subscription.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-;// CONCATENATED MODULE: ./.yarn/cache/framework-utils-npm-1.1.0-37a54a069c-01b61ead17.zip/node_modules/framework-utils/dist/utils.esm.js
-/*
-Copyright (c) 2019 Daybrush
-name: framework-utils
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/framework-utils.git
-version: 1.1.0
-*/
+;
 function prefixNames(prefix) {
   var classNames = [];
 
@@ -737,7 +704,6 @@ function prefixCSS(prefix, css) {
     return selector.replace(/\.([^{,\s\d.]+)/g, "." + prefix + "$1") + "{";
   });
 }
-/* react */
 
 function ref(target, name) {
   return function (e) {
@@ -749,7 +715,6 @@ function refs(target, name, i) {
     e && (target[name][i] = e);
   };
 }
-/* Class Decorator */
 
 function Properties(properties, action) {
   return function (component) {
@@ -759,7 +724,6 @@ function Properties(properties, action) {
     });
   };
 }
-/* Property Decorator */
 
 function withMethods(methods, duplicate) {
   if (duplicate === void 0) {
@@ -796,24 +760,9 @@ function withMethods(methods, duplicate) {
 }
 
 
-//# sourceMappingURL=utils.esm.js.map
 
-;// CONCATENATED MODULE: ./.yarn/cache/@egjs-list-differ-npm-1.0.0-f4b91781db-d1827d134d.zip/node_modules/@egjs/list-differ/dist/list-differ.esm.js
-/*
-Copyright (c) 2019-present NAVER Corp.
-name: @egjs/list-differ
-license: MIT
-author: NAVER Corp.
-repository: https://github.com/naver/egjs-list-differ
-version: 1.0.0
-*/
-/*
-egjs-list-differ
-Copyright (c) 2019-present NAVER Corp.
-MIT license
-*/
+;
 var PolyMap =
-/*#__PURE__*/
 function () {
   function PolyMap() {
     this.keys = [];
@@ -838,13 +787,7 @@ function () {
   return PolyMap;
 }();
 
-/*
-egjs-list-differ
-Copyright (c) 2019-present NAVER Corp.
-MIT license
-*/
 var HashMap =
-/*#__PURE__*/
 function () {
   function HashMap() {
     this.object = {};
@@ -863,20 +806,9 @@ function () {
   return HashMap;
 }();
 
-/*
-egjs-list-differ
-Copyright (c) 2019-present NAVER Corp.
-MIT license
-*/
 var SUPPORT_MAP = typeof Map === "function";
 
-/*
-egjs-list-differ
-Copyright (c) 2019-present NAVER Corp.
-MIT license
-*/
 var Link =
-/*#__PURE__*/
 function () {
   function Link() {}
 
@@ -890,7 +822,6 @@ function () {
   };
 
   __proto.disconnect = function () {
-    // In double linked list, diconnect the interconnected relationship.
     var prevLink = this.prev;
     var nextLink = this.next;
     prevLink && (prevLink.next = nextLink);
@@ -912,16 +843,9 @@ function () {
   return Link;
 }();
 
-/*
-egjs-list-differ
-Copyright (c) 2019-present NAVER Corp.
-MIT license
-*/
 
 function orderChanged(changed, fixed) {
-  // It is roughly in the order of these examples.
-  // 4, 6, 0, 2, 1, 3, 5, 7
-  var fromLinks = []; // 0, 1, 2, 3, 4, 5, 6, 7
+  var fromLinks = []; 
 
   var toLinks = [];
   changed.forEach(function (_a) {
@@ -930,7 +854,7 @@ function orderChanged(changed, fixed) {
     var link = new Link();
     fromLinks[from] = link;
     toLinks[to] = link;
-  }); // `fromLinks` are connected to each other by double linked list.
+  }); 
 
   fromLinks.forEach(function (link, i) {
     link.connect(fromLinks[i - 1]);
@@ -947,9 +871,9 @@ function orderChanged(changed, fixed) {
 
     var fromLink = fromLinks[from];
     var toLink = toLinks[to - 1];
-    var fromIndex = fromLink.getIndex(); // Disconnect the link connected to `fromLink`.
+    var fromIndex = fromLink.getIndex(); 
 
-    fromLink.disconnect(); // Connect `fromLink` to the right of `toLink`.
+    fromLink.disconnect(); 
 
     if (!toLink) {
       fromLink.connect(undefined, fromLinks[0]);
@@ -963,7 +887,6 @@ function orderChanged(changed, fixed) {
 }
 
 var Result =
-/*#__PURE__*/
 function () {
   function Result(prevList, list, added, removed, changed, maintained, changedBeforeAdded, fixed) {
     this.prevList = prevList;
@@ -1022,44 +945,6 @@ function () {
   return Result;
 }();
 
-/**
- *
- * @memberof eg.ListDiffer
- * @static
- * @function
- * @param - Previous List <ko> 이전 목록 </ko>
- * @param - List to Update <ko> 업데이트 할 목록 </ko>
- * @param - This callback function returns the key of the item. <ko> 아이템의 키를 반환하는 콜백 함수입니다.</ko>
- * @return - Returns the diff between `prevList` and `list` <ko> `prevList`와 `list`의 다른 점을 반환한다.</ko>
- * @example
- * import { diff } from "@egjs/list-differ";
- * // script => eg.ListDiffer.diff
- * const result = diff([0, 1, 2, 3, 4, 5], [7, 8, 0, 4, 3, 6, 2, 1], e => e);
- * // List before update
- * // [1, 2, 3, 4, 5]
- * console.log(result.prevList);
- * // Updated list
- * // [4, 3, 6, 2, 1]
- * console.log(result.list);
- * // Index array of values added to `list`
- * // [0, 1, 5]
- * console.log(result.added);
- * // Index array of values removed in `prevList`
- * // [5]
- * console.log(result.removed);
- * // An array of index pairs of `prevList` and `list` with different indexes from `prevList` and `list`
- * // [[0, 2], [4, 3], [3, 4], [2, 6], [1, 7]]
- * console.log(result.changed);
- * // The subset of `changed` and an array of index pairs that moved data directly. Indicate an array of absolute index pairs of `ordered`.(Formatted by: Array<[index of prevList, index of list]>)
- * // [[4, 3], [3, 4], [2, 6]]
- * console.log(result.pureChanged);
- * // An array of index pairs to be `ordered` that can synchronize `list` before adding data. (Formatted by: Array<[prevIndex, nextIndex]>)
- * // [[4, 1], [4, 2], [4, 3]]
- * console.log(result.ordered);
- * // An array of index pairs of `prevList` and `list` that have not been added/removed so data is preserved
- * // [[0, 2], [4, 3], [3, 4], [2, 6], [1, 7]]
- * console.log(result.maintained);
- */
 
 function diff(prevList, list, findKeyCallback) {
   var mapClass = SUPPORT_MAP ? Map : findKeyCallback ? HashMap : PolyMap;
@@ -1080,17 +965,17 @@ function diff(prevList, list, findKeyCallback) {
   var removedMap = {};
   var changed = [];
   var addedCount = 0;
-  var removedCount = 0; // Add prevKeys and keys to the hashmap.
+  var removedCount = 0; 
 
   prevKeys.forEach(function (key, prevListIndex) {
     prevKeyMap.set(key, prevListIndex);
   });
   keys.forEach(function (key, listIndex) {
     keyMap.set(key, listIndex);
-  }); // Compare `prevKeys` and `keys` and add them to `removed` if they are not in `keys`.
+  }); 
 
   prevKeys.forEach(function (key, prevListIndex) {
-    var listIndex = keyMap.get(key); // In prevList, but not in list, it is removed.
+    var listIndex = keyMap.get(key); 
 
     if (typeof listIndex === "undefined") {
       ++removedCount;
@@ -1098,10 +983,10 @@ function diff(prevList, list, findKeyCallback) {
     } else {
       removedMap[listIndex] = removedCount;
     }
-  }); // Compare `prevKeys` and `keys` and add them to `added` if they are not in `prevKeys`.
+  }); 
 
   keys.forEach(function (key, listIndex) {
-    var prevListIndex = prevKeyMap.get(key); // In list, but not in prevList, it is added.
+    var prevListIndex = prevKeyMap.get(key); 
 
     if (typeof prevListIndex === "undefined") {
       added.push(listIndex);
@@ -1116,54 +1001,15 @@ function diff(prevList, list, findKeyCallback) {
         changed.push([prevListIndex, listIndex]);
       }
     }
-  }); // Sort by ascending order of 'to(list's index).
+  }); 
 
   removed.reverse();
   return new Result(prevList, list, added, removed, changed, maintained, changedBeforeAdded, fixed);
 }
 
-/**
- * A module that checks diff when values are added, removed, or changed in an array.
- * @ko 배열 또는 오브젝트에서 값이 추가되거나 삭제되거나 순서가 변경사항을 체크하는 모듈입니다.
- * @memberof eg
- */
 
 var ListDiffer =
-/*#__PURE__*/
 function () {
-  /**
-   * @param - Initializing Data Array. <ko> 초기 설정할 데이터 배열.</ko>
-   * @param - This callback function returns the key of the item. <ko> 아이템의 키를 반환하는 콜백 함수입니다.</ko>
-   * @example
-   * import ListDiffer from "@egjs/list-differ";
-   * // script => eg.ListDiffer
-   * const differ = new ListDiffer([0, 1, 2, 3, 4, 5], e => e);
-   * const result = differ.update([7, 8, 0, 4, 3, 6, 2, 1]);
-   * // List before update
-   * // [1, 2, 3, 4, 5]
-   * console.log(result.prevList);
-   * // Updated list
-   * // [4, 3, 6, 2, 1]
-   * console.log(result.list);
-   * // Index array of values added to `list`.
-   * // [0, 1, 5]
-   * console.log(result.added);
-   * // Index array of values removed in `prevList`.
-   * // [5]
-   * console.log(result.removed);
-   * // An array of index pairs of `prevList` and `list` with different indexes from `prevList` and `list`.
-   * // [[0, 2], [4, 3], [3, 4], [2, 6], [1, 7]]
-   * console.log(result.changed);
-   * // The subset of `changed` and an array of index pairs that moved data directly. Indicate an array of absolute index pairs of `ordered`.(Formatted by: Array<[index of prevList, index of list]>)
-   * // [[4, 3], [3, 4], [2, 6]]
-   * console.log(result.pureChanged);
-   * // An array of index pairs to be `ordered` that can synchronize `list` before adding data. (Formatted by: Array<[prevIndex, nextIndex]>)
-   * // [[4, 1], [4, 2], [4, 3]]
-   * console.log(result.ordered);
-   * // An array of index pairs of `prevList` and `list` that have not been added/removed so data is preserved.
-   * // [[0, 2], [4, 3], [3, 4], [2, 6], [1, 7]]
-   * console.log(result.maintained);
-   */
   function ListDiffer(list, findKeyCallback) {
     if (list === void 0) {
       list = [];
@@ -1172,12 +1018,6 @@ function () {
     this.findKeyCallback = findKeyCallback;
     this.list = [].slice.call(list);
   }
-  /**
-   * Update list.
-   * @ko 리스트를 업데이트를 합니다.
-   * @param - List to update <ko> 업데이트할 리스트 </ko>
-   * @return - Returns the results of an update from `prevList` to `list`.<ko> `prevList`에서 `list`로 업데이트한 결과를 반환한다. </ko>
-   */
 
 
   var __proto = ListDiffer.prototype;
@@ -1192,191 +1032,43 @@ function () {
   return ListDiffer;
 }();
 
-/*
-egjs-list-differ
-Copyright (c) 2019-present NAVER Corp.
-MIT license
-*/
 
-/* harmony default export */ const list_differ_esm = (ListDiffer);
+ const list_differ_esm = (ListDiffer);
 
-//# sourceMappingURL=list-differ.esm.js.map
 
-;// CONCATENATED MODULE: ./.yarn/cache/@daybrush-utils-npm-1.6.0-547486bf79-2579bc17e0.zip/node_modules/@daybrush/utils/dist/utils.esm.js
-/*
-Copyright (c) 2018 Daybrush
-@name: @daybrush/utils
-license: MIT
-author: Daybrush
-repository: https://github.com/daybrush/utils
-@version 1.6.0
-*/
-/**
-* @namespace
-* @name Consts
-*/
+;
 
-/**
-* get string "rgb"
-* @memberof Color
-* @example
-import {RGB} from "@daybrush/utils";
-
-console.log(RGB); // "rgb"
-*/
 var RGB = "rgb";
-/**
-* get string "rgba"
-* @memberof Color
-* @example
-import {RGBA} from "@daybrush/utils";
-
-console.log(RGBA); // "rgba"
-*/
 
 var RGBA = "rgba";
-/**
-* get string "hsl"
-* @memberof Color
-* @example
-import {HSL} from "@daybrush/utils";
-
-console.log(HSL); // "hsl"
-*/
 
 var HSL = "hsl";
-/**
-* get string "hsla"
-* @memberof Color
-* @example
-import {HSLA} from "@daybrush/utils";
-
-console.log(HSLA); // "hsla"
-*/
 
 var HSLA = "hsla";
-/**
-* gets an array of color models.
-* @memberof Color
-* @example
-import {COLOR_MODELS} from "@daybrush/utils";
-
-console.log(COLOR_MODELS); // ["rgb", "rgba", "hsl", "hsla"];
-*/
 
 var COLOR_MODELS = [RGB, RGBA, HSL, HSLA];
-/**
-* get string "function"
-* @memberof Consts
-* @example
-import {FUNCTION} from "@daybrush/utils";
-
-console.log(FUNCTION); // "function"
-*/
 
 var FUNCTION = "function";
-/**
-* get string "property"
-* @memberof Consts
-* @example
-import {PROPERTY} from "@daybrush/utils";
-
-console.log(PROPERTY); // "property"
-*/
 
 var PROPERTY = "property";
-/**
-* get string "array"
-* @memberof Consts
-* @example
-import {ARRAY} from "@daybrush/utils";
-
-console.log(ARRAY); // "array"
-*/
 
 var ARRAY = "array";
-/**
-* get string "object"
-* @memberof Consts
-* @example
-import {OBJECT} from "@daybrush/utils";
-
-console.log(OBJECT); // "object"
-*/
 
 var OBJECT = "object";
-/**
-* get string "string"
-* @memberof Consts
-* @example
-import {STRING} from "@daybrush/utils";
-
-console.log(STRING); // "string"
-*/
 
 var STRING = "string";
-/**
-* get string "number"
-* @memberof Consts
-* @example
-import {NUMBER} from "@daybrush/utils";
-
-console.log(NUMBER); // "number"
-*/
 
 var NUMBER = "number";
-/**
-* get string "undefined"
-* @memberof Consts
-* @example
-import {UNDEFINED} from "@daybrush/utils";
-
-console.log(UNDEFINED); // "undefined"
-*/
 
 var UNDEFINED = "undefined";
-/**
-* Check whether the environment is window or node.js.
-* @memberof Consts
-* @example
-import {IS_WINDOW} from "@daybrush/utils";
-
-console.log(IS_WINDOW); // false in node.js
-console.log(IS_WINDOW); // true in browser
-*/
 
 var IS_WINDOW = typeof window !== UNDEFINED;
-/**
-* Check whether the environment is window or node.js.
-* @memberof Consts
-* @name document
-* @example
-import {IS_WINDOW} from "@daybrush/utils";
 
-console.log(IS_WINDOW); // false in node.js
-console.log(IS_WINDOW); // true in browser
-*/
+var doc = typeof document !== UNDEFINED && document; 
+var prefixes = ( null && (["webkit", "ms", "moz", "o"]));
 
-var doc = typeof document !== UNDEFINED && document; // FIXME: this type maybe false
-var prefixes = (/* unused pure expression or super */ null && (["webkit", "ms", "moz", "o"]));
-/**
- * @namespace CrossBrowser
- */
 
-/**
-* Get a CSS property with a vendor prefix that supports cross browser.
-* @function
-* @param {string} property - A CSS property
-* @return {string} CSS property with cross-browser vendor prefix
-* @memberof CrossBrowser
-* @example
-import {getCrossBrowserProperty} from "@daybrush/utils";
-
-console.log(getCrossBrowserProperty("transform")); // "transform", "-ms-transform", "-webkit-transform"
-console.log(getCrossBrowserProperty("filter")); // "filter", "-webkit-filter"
-*/
-
-var getCrossBrowserProperty = /*#__PURE__*/function (property) {
+var getCrossBrowserProperty = function (property) {
   if (!doc) {
     return "";
   }
@@ -1398,46 +1090,14 @@ var getCrossBrowserProperty = /*#__PURE__*/function (property) {
 
   return "";
 };
-/**
-* get string "transfrom" with the vendor prefix.
-* @memberof CrossBrowser
-* @example
-import {TRANSFORM} from "@daybrush/utils";
 
-console.log(TRANSFORM); // "transform", "-ms-transform", "-webkit-transform"
-*/
+var TRANSFORM = ( null && (getCrossBrowserProperty("transform")));
 
-var TRANSFORM = /*#__PURE__*/(/* unused pure expression or super */ null && (getCrossBrowserProperty("transform")));
-/**
-* get string "filter" with the vendor prefix.
-* @memberof CrossBrowser
-* @example
-import {FILTER} from "@daybrush/utils";
+var FILTER = ( null && (getCrossBrowserProperty("filter")));
 
-console.log(FILTER); // "filter", "-ms-filter", "-webkit-filter"
-*/
+var ANIMATION = ( null && (getCrossBrowserProperty("animation")));
 
-var FILTER = /*#__PURE__*/(/* unused pure expression or super */ null && (getCrossBrowserProperty("filter")));
-/**
-* get string "animation" with the vendor prefix.
-* @memberof CrossBrowser
-* @example
-import {ANIMATION} from "@daybrush/utils";
-
-console.log(ANIMATION); // "animation", "-ms-animation", "-webkit-animation"
-*/
-
-var ANIMATION = /*#__PURE__*/(/* unused pure expression or super */ null && (getCrossBrowserProperty("animation")));
-/**
-* get string "keyframes" with the vendor prefix.
-* @memberof CrossBrowser
-* @example
-import {KEYFRAMES} from "@daybrush/utils";
-
-console.log(KEYFRAMES); // "keyframes", "-ms-keyframes", "-webkit-keyframes"
-*/
-
-var KEYFRAMES = /*#__PURE__*/(/* unused pure expression or super */ null && (ANIMATION.replace("animation", "keyframes")));
+var KEYFRAMES = ( null && (ANIMATION.replace("animation", "keyframes")));
 var OPEN_CLOSED_CHARACTERS = [{
   open: "(",
   close: ")"
@@ -1504,93 +1164,23 @@ var DEFAULT_UNIT_PRESETS = {
   }
 };
 
-/**
-* @namespace
-* @name Utils
-*/
 
-/**
- * Returns the inner product of two numbers(`a1`, `a2`) by two criteria(`b1`, `b2`).
- * @memberof Utils
- * @param - The first number
- * @param - The second number
- * @param - The first number to base on the inner product
- * @param - The second number to base on the inner product
- * @return - Returns the inner product
-import { dot } from "@daybrush/utils";
-
-console.log(dot(0, 15, 2, 3)); // 6
-console.log(dot(5, 15, 2, 3)); // 9
-console.log(dot(5, 15, 1, 1)); // 10
- */
 
 function dot(a1, a2, b1, b2) {
   return (a1 * b2 + a2 * b1) / (b1 + b2);
 }
-/**
-* Check the type that the value is undefined.
-* @memberof Utils
-* @param {string} value - Value to check the type
-* @return {boolean} true if the type is correct, false otherwise
-* @example
-import {isUndefined} from "@daybrush/utils";
-
-console.log(isUndefined(undefined)); // true
-console.log(isUndefined("")); // false
-console.log(isUndefined(1)); // false
-console.log(isUndefined(null)); // false
-*/
 
 function isUndefined(value) {
   return typeof value === UNDEFINED;
 }
-/**
-* Check the type that the value is object.
-* @memberof Utils
-* @param {string} value - Value to check the type
-* @return {} true if the type is correct, false otherwise
-* @example
-import {isObject} from "@daybrush/utils";
-
-console.log(isObject({})); // true
-console.log(isObject(undefined)); // false
-console.log(isObject("")); // false
-console.log(isObject(null)); // false
-*/
 
 function isObject(value) {
   return value && typeof value === OBJECT;
 }
-/**
-* Check the type that the value is isArray.
-* @memberof Utils
-* @param {string} value - Value to check the type
-* @return {} true if the type is correct, false otherwise
-* @example
-import {isArray} from "@daybrush/utils";
-
-console.log(isArray([])); // true
-console.log(isArray({})); // false
-console.log(isArray(undefined)); // false
-console.log(isArray(null)); // false
-*/
 
 function isArray(value) {
   return Array.isArray(value);
 }
-/**
-* Check the type that the value is string.
-* @memberof Utils
-* @param {string} value - Value to check the type
-* @return {} true if the type is correct, false otherwise
-* @example
-import {isString} from "@daybrush/utils";
-
-console.log(isString("1234")); // true
-console.log(isString(undefined)); // false
-console.log(isString(1)); // false
-console.log(isString(null)); // false
-*/
 
 function isString(value) {
   return typeof value === STRING;
@@ -1598,20 +1188,6 @@ function isString(value) {
 function isNumber(value) {
   return typeof value === NUMBER;
 }
-/**
-* Check the type that the value is function.
-* @memberof Utils
-* @param {string} value - Value to check the type
-* @return {} true if the type is correct, false otherwise
-* @example
-import {isFunction} from "@daybrush/utils";
-
-console.log(isFunction(function a() {})); // true
-console.log(isFunction(() => {})); // true
-console.log(isFunction("1234")); // false
-console.log(isFunction(1)); // false
-console.log(isFunction(null)); // false
-*/
 
 function isFunction(value) {
   return typeof value === FUNCTION;
@@ -1652,7 +1228,7 @@ function findClose(closeCharacter, texts, index, length, openCloseCharacters) {
       };
     }
 
-    var nextIndex = i; // re open
+    var nextIndex = i; 
 
     var openCharacter = find(openCloseCharacters, function (_a) {
       var open = _a.open;
@@ -1789,56 +1365,14 @@ function splitText(text, splitOptions) {
 
   return values;
 }
-/**
-* divide text by space.
-* @memberof Utils
-* @param {string} text - text to divide
-* @return {Array} divided texts
-* @example
-import {spliceSpace} from "@daybrush/utils";
-
-console.log(splitSpace("a b c d e f g"));
-// ["a", "b", "c", "d", "e", "f", "g"]
-console.log(splitSpace("'a,b' c 'd,e' f g"));
-// ["'a,b'", "c", "'d,e'", "f", "g"]
-*/
 
 function splitSpace(text) {
-  // divide comma(space)
   return splitText(text, "");
 }
-/**
-* divide text by comma.
-* @memberof Utils
-* @param {string} text - text to divide
-* @return {Array} divided texts
-* @example
-import {splitComma} from "@daybrush/utils";
-
-console.log(splitComma("a,b,c,d,e,f,g"));
-// ["a", "b", "c", "d", "e", "f", "g"]
-console.log(splitComma("'a,b',c,'d,e',f,g"));
-// ["'a,b'", "c", "'d,e'", "f", "g"]
-*/
 
 function splitComma(text) {
-  // divide comma(,)
-  // "[^"]*"|'[^']*'
   return splitText(text, ",");
 }
-/**
-* divide text by bracket "(", ")".
-* @memberof Utils
-* @param {string} text - text to divide
-* @return {object} divided texts
-* @example
-import {splitBracket} from "@daybrush/utils";
-
-console.log(splitBracket("a(1, 2)"));
-// {prefix: "a", value: "1, 2", suffix: ""}
-console.log(splitBracket("a(1, 2)b"));
-// {prefix: "a", value: "1, 2", suffix: "b"}
-*/
 
 function splitBracket(text) {
   var matches = /([^(]*)\(([\s\S]*)\)([\s\S]*)/g.exec(text);
@@ -1853,21 +1387,6 @@ function splitBracket(text) {
     };
   }
 }
-/**
-* divide text by number and unit.
-* @memberof Utils
-* @param {string} text - text to divide
-* @return {} divided texts
-* @example
-import {splitUnit} from "@daybrush/utils";
-
-console.log(splitUnit("10px"));
-// {prefix: "", value: 10, unit: "px"}
-console.log(splitUnit("-10px"));
-// {prefix: "", value: -10, unit: "px"}
-console.log(splitUnit("a10%"));
-// {prefix: "a", value: 10, unit: "%"}
-*/
 
 function splitUnit(text) {
   var matches = /^([^\d|e|\-|\+]*)((?:\d|\.|-|e-|e\+)+)(\S*)$/g.exec(text);
@@ -1889,36 +1408,12 @@ function splitUnit(text) {
     value: parseFloat(value)
   };
 }
-/**
-* transform strings to camel-case
-* @memberof Utils
-* @param {String} text - string
-* @return {String} camel-case string
-* @example
-import {camelize} from "@daybrush/utils";
-
-console.log(camelize("transform-origin")); // transformOrigin
-console.log(camelize("abcd_efg")); // abcdEfg
-console.log(camelize("abcd efg")); // abcdEfg
-*/
 
 function camelize(str) {
   return str.replace(/[\s-_]([a-z])/g, function (all, letter) {
     return letter.toUpperCase();
   });
 }
-/**
-* transform a camelized string into a lowercased string.
-* @memberof Utils
-* @param {string} text - a camel-cased string
-* @param {string} [separator="-"] - a separator
-* @return {string}  a lowercased string
-* @example
-import {decamelize} from "@daybrush/utils";
-
-console.log(decamelize("transformOrigin")); // transform-origin
-console.log(decamelize("abcdEfg", "_")); // abcd_efg
-*/
 
 function decamelize(str, separator) {
   if (separator === void 0) {
@@ -1929,46 +1424,14 @@ function decamelize(str, separator) {
     return "" + letter + separator + letter2.toLowerCase();
   });
 }
-/**
-* transforms something in an array into an array.
-* @memberof Utils
-* @param - Array form
-* @return an array
-* @example
-import {toArray} from "@daybrush/utils";
-
-const arr1 = toArray(document.querySelectorAll(".a")); // Element[]
-const arr2 = toArray(document.querySelectorAll<HTMLElement>(".a")); // HTMLElement[]
-*/
 
 function toArray(value) {
   return [].slice.call(value);
 }
-/**
-* Date.now() method
-* @memberof CrossBrowser
-* @return {number} milliseconds
-* @example
-import {now} from "@daybrush/utils";
-
-console.log(now()); // 12121324241(milliseconds)
-*/
 
 function now() {
   return Date.now ? Date.now() : new Date().getTime();
 }
-/**
-* Returns the index of the first element in the array that satisfies the provided testing function.
-* @function
-* @memberof CrossBrowser
-* @param - The array `findIndex` was called upon.
-* @param - A function to execute on each value in the array until the function returns true, indicating that the satisfying element was found.
-* @param - Returns defaultIndex if not found by the function.
-* @example
-import { findIndex } from "@daybrush/utils";
-
-findIndex([{a: 1}, {a: 2}, {a: 3}, {a: 4}], ({ a }) => a === 2); // 1
-*/
 
 function findIndex(arr, callback, defaultIndex) {
   if (defaultIndex === void 0) {
@@ -1985,18 +1448,6 @@ function findIndex(arr, callback, defaultIndex) {
 
   return defaultIndex;
 }
-/**
-* Returns the reverse direction index of the first element in the array that satisfies the provided testing function.
-* @function
-* @memberof CrossBrowser
-* @param - The array `findLastIndex` was called upon.
-* @param - A function to execute on each value in the array until the function returns true, indicating that the satisfying element was found.
-* @param - Returns defaultIndex if not found by the function.
-* @example
-import { findLastIndex } from "@daybrush/utils";
-
-findLastIndex([{a: 1}, {a: 2}, {a: 3}, {a: 4}], ({ a }) => a === 2); // 1
-*/
 
 function findLastIndex(arr, callback, defaultIndex) {
   if (defaultIndex === void 0) {
@@ -2013,55 +1464,18 @@ function findLastIndex(arr, callback, defaultIndex) {
 
   return defaultIndex;
 }
-/**
-* Returns the value of the reverse direction element in the array that satisfies the provided testing function.
-* @function
-* @memberof CrossBrowser
-* @param - The array `findLast` was called upon.
-* @param - A function to execute on each value in the array,
-* @param - Returns defalutValue if not found by the function.
-* @example
-import { find } from "@daybrush/utils";
-
-find([{a: 1}, {a: 2}, {a: 3}, {a: 4}], ({ a }) => a === 2); // {a: 2}
-*/
 
 function findLast(arr, callback, defalutValue) {
   var index = findLastIndex(arr, callback);
   return index > -1 ? arr[index] : defalutValue;
 }
-/**
-* Returns the value of the first element in the array that satisfies the provided testing function.
-* @function
-* @memberof CrossBrowser
-* @param - The array `find` was called upon.
-* @param - A function to execute on each value in the array,
-* @param - Returns defalutValue if not found by the function.
-* @example
-import { find } from "@daybrush/utils";
-
-find([{a: 1}, {a: 2}, {a: 3}, {a: 4}], ({ a }) => a === 2); // {a: 2}
-*/
 
 function find(arr, callback, defalutValue) {
   var index = findIndex(arr, callback);
   return index > -1 ? arr[index] : defalutValue;
 }
-/**
-* window.requestAnimationFrame() method with cross browser.
-* @function
-* @memberof CrossBrowser
-* @param {FrameRequestCallback} callback - The function to call when it's time to update your animation for the next repaint.
-* @return {number} id
-* @example
-import {requestAnimationFrame} from "@daybrush/utils";
 
-requestAnimationFrame((timestamp) => {
-  console.log(timestamp);
-});
-*/
-
-var requestAnimationFrame = /*#__PURE__*/function () {
+var requestAnimationFrame = function () {
   var firstTime = now();
   var raf = IS_WINDOW && (window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame);
   return raf ? raf.bind(window) : function (callback) {
@@ -2072,32 +1486,13 @@ var requestAnimationFrame = /*#__PURE__*/function () {
     return id;
   };
 }();
-/**
-* window.cancelAnimationFrame() method with cross browser.
-* @function
-* @memberof CrossBrowser
-* @param {number} handle - the id obtained through requestAnimationFrame method
-* @return {void}
-* @example
-import { requestAnimationFrame, cancelAnimationFrame } from "@daybrush/utils";
 
-const id = requestAnimationFrame((timestamp) => {
-  console.log(timestamp);
-});
-
-cancelAnimationFrame(id);
-*/
-
-var cancelAnimationFrame = /*#__PURE__*/function () {
+var cancelAnimationFrame = function () {
   var caf = IS_WINDOW && (window.cancelAnimationFrame || window.webkitCancelAnimationFrame || window.mozCancelAnimationFrame || window.msCancelAnimationFrame);
   return caf ? caf.bind(window) : function (handle) {
     clearTimeout(handle);
   };
 }();
-/**
-* @function
-* @memberof Utils
-*/
 
 function getKeys(obj) {
   if (Object.keys) {
@@ -2112,10 +1507,6 @@ function getKeys(obj) {
 
   return keys;
 }
-/**
-* @function
-* @memberof Utils
-*/
 
 function sortOrders(keys, orders) {
   if (orders === void 0) {
@@ -2141,11 +1532,6 @@ function sortOrders(keys, orders) {
     return index1 - index2;
   });
 }
-/**
-* convert unit size to px size
-* @function
-* @memberof Utils
-*/
 
 function convertUnitSize(pos, size) {
   var _a = splitUnit(pos),
@@ -2172,11 +1558,6 @@ function convertUnitSize(pos, size) {
 
   return value;
 }
-/**
-* calculate between min, max
-* @function
-* @memberof Utils
-*/
 
 function between(value, min, max) {
   return Math.max(min, Math.min(value, max));
@@ -2188,11 +1569,6 @@ function checkBoundSize(targetSize, compareSize, isMax) {
     });
   })[0] || targetSize;
 }
-/**
-* calculate bound size
-* @function
-* @memberof Utils
-*/
 
 function calculateBoundSize(size, minSize, maxSize, keepRatio) {
   if (!keepRatio) {
@@ -2202,7 +1578,7 @@ function calculateBoundSize(size, minSize, maxSize, keepRatio) {
   }
 
   var width = size[0],
-      height = size[1]; // width : height = minWidth : minHeight;
+      height = size[1]; 
 
   var _a = checkBoundSize(size, minSize, false),
       minWidth = _a[0],
@@ -2222,11 +1598,6 @@ function calculateBoundSize(size, minSize, maxSize, keepRatio) {
 
   return [width, height];
 }
-/**
-* Add all the numbers.
-* @function
-* @memberof Utils
-*/
 
 function sum(nums) {
   var length = nums.length;
@@ -2238,11 +1609,6 @@ function sum(nums) {
 
   return total;
 }
-/**
-* Average all numbers.
-* @function
-* @memberof Utils
-*/
 
 function utils_esm_average(nums) {
   var length = nums.length;
@@ -2254,11 +1620,6 @@ function utils_esm_average(nums) {
 
   return length ? total / length : 0;
 }
-/**
-* Get the angle of two points. (0 <= rad < 359)
-* @function
-* @memberof Utils
-*/
 
 function getRad(pos1, pos2) {
   var distX = pos2[0] - pos1[0];
@@ -2266,11 +1627,6 @@ function getRad(pos1, pos2) {
   var rad = Math.atan2(distY, distX);
   return rad >= 0 ? rad : rad + Math.PI * 2;
 }
-/**
-* Get the average point of all points.
-* @function
-* @memberof Utils
-*/
 
 function getCenterPoint(points) {
   return [0, 1].map(function (i) {
@@ -2279,11 +1635,6 @@ function getCenterPoint(points) {
     }));
   });
 }
-/**
-* Gets the direction of the shape.
-* @function
-* @memberof Utils
-*/
 
 function getShapeDirection(points) {
   var center = getCenterPoint(points);
@@ -2291,20 +1642,10 @@ function getShapeDirection(points) {
   var pos2Rad = getRad(center, points[1]);
   return pos1Rad < pos2Rad && pos2Rad - pos1Rad < Math.PI || pos1Rad > pos2Rad && pos2Rad - pos1Rad < -Math.PI ? 1 : -1;
 }
-/**
-* Get the distance between two points.
-* @function
-* @memberof Utils
-*/
 
 function getDist(a, b) {
   return Math.sqrt(Math.pow((b ? b[0] : 0) - a[0], 2) + Math.pow((b ? b[1] : 0) - a[1], 2));
 }
-/**
-* throttle number depending on the unit.
-* @function
-* @memberof Utils
-*/
 
 function throttle(num, unit) {
   if (!unit) {
@@ -2313,11 +1654,6 @@ function throttle(num, unit) {
 
   return Math.round(num / unit) * unit;
 }
-/**
-* throttle number array depending on the unit.
-* @function
-* @memberof Utils
-*/
 
 function throttleArray(nums, unit) {
   nums.forEach(function (_, i) {
@@ -2325,10 +1661,6 @@ function throttleArray(nums, unit) {
   });
   return nums;
 }
-/**
-* @function
-* @memberof Utils
-*/
 
 function counter(num) {
   var nums = [];
@@ -2339,10 +1671,6 @@ function counter(num) {
 
   return nums;
 }
-/**
-* @function
-* @memberof Utils
-*/
 
 function replaceOnce(text, fromText, toText) {
   var isOnce = false;
@@ -2362,38 +1690,11 @@ function replaceOnce(text, fromText, toText) {
   });
 }
 
-/**
-* @namespace
-* @name Color
-*/
 
-/**
-* Remove the # from the hex color.
-* @memberof Color
-* @param {} hex - hex color
-* @return {} hex color
-* @example
-import {cutHex} from "@daybrush/utils";
-
-console.log(cutHex("#000000")) // "000000"
-*/
 
 function cutHex(hex) {
   return hex.replace("#", "");
 }
-/**
-* convert hex color to rgb color.
-* @memberof Color
-* @param {} hex - hex color
-* @return {} rgb color
-* @example
-import {hexToRGBA} from "@daybrush/utils";
-
-console.log(hexToRGBA("#00000005"));
-// [0, 0, 0, 1]
-console.log(hexToRGBA("#201045"));
-// [32, 16, 69, 1]
-*/
 
 function hexToRGBA(hex) {
   var h = cutHex(hex);
@@ -2408,17 +1709,6 @@ function hexToRGBA(hex) {
 
   return [r, g, b, a];
 }
-/**
-* convert 3(or 4)-digit hex color to 6(or 8)-digit hex color.
-* @memberof Color
-* @param {} hex - 3(or 4)-digit hex color
-* @return {} 6(or 8)-digit hex color
-* @example
-import {toFullHex} from "@daybrush/utils";
-
-console.log(toFullHex("#123")); // "#112233"
-console.log(toFullHex("#123a")); // "#112233aa"
-*/
 
 function toFullHex(h) {
   var r = h.charAt(1);
@@ -2428,17 +1718,6 @@ function toFullHex(h) {
   var arr = ["#", r, r, g, g, b, b, a, a];
   return arr.join("");
 }
-/**
-* convert hsl color to rgba color.
-* @memberof Color
-* @param {} hsl - hsl color(hue: 0 ~ 360, saturation: 0 ~ 1, lightness: 0 ~ 1, alpha: 0 ~ 1)
-* @return {} rgba color
-* @example
-import {hslToRGBA} from "@daybrush/utils";
-
-console.log(hslToRGBA([150, 0.5, 0.4]));
-// [51, 153, 102, 1]
-*/
 
 function hslToRGBA(hsl) {
   var _a;
@@ -2475,18 +1754,6 @@ function hslToRGBA(hsl) {
 
   return [Math.round((rgb[0] + m) * 255), Math.round((rgb[1] + m) * 255), Math.round((rgb[2] + m) * 255), (_a = hsl[3]) !== null && _a !== void 0 ? _a : 1];
 }
-/**
-* convert string to rgba color.
-* @memberof Color
-* @param {} - 3-hex(#000), 4-hex(#0000) 6-hex(#000000), 8-hex(#00000000) or RGB(A), or HSL(A)
-* @return {} rgba color
-* @example
-import {stringToRGBA} from "@daybrush/utils";
-
-console.log(stringToRGBA("#000000")); // [0, 0, 0, 1]
-console.log(stringToRGBA("rgb(100, 100, 100)")); // [100, 100, 100, 1]
-console.log(stringToRGBA("hsl(150, 0.5, 0.4)")); // [51, 153, 102, 1]
-*/
 
 function stringToRGBA(color) {
   if (color.charAt(0) === "#") {
@@ -2496,7 +1763,6 @@ function stringToRGBA(color) {
       return hexToRGBA(color);
     }
   } else if (color.indexOf("(") !== -1) {
-    // in bracket.
     var _a = splitBracket(color),
         prefix = _a.prefix,
         value = _a.value;
@@ -2526,7 +1792,7 @@ function stringToRGBA(color) {
           } else {
             colorArr[i] = parseFloat(arr[i]);
           }
-        } // hsl, hsla to rgba
+        } 
 
 
         return hslToRGBA(colorArr);
@@ -2536,37 +1802,11 @@ function stringToRGBA(color) {
   return undefined;
 }
 
-/**
- * Returns all element descendants of node that
- * match selectors.
- */
 
-/**
- * Checks if the specified class value exists in the element's class attribute.
- * @memberof DOM
- * @param - A DOMString containing one or more selectors to match
- * @param - If multi is true, a DOMString containing one or more selectors to match against.
- * @example
-import {$} from "@daybrush/utils";
-
-console.log($("div")); // div element
-console.log($("div", true)); // [div, div] elements
-*/
 
 function $(selectors, multi) {
   return multi ? doc.querySelectorAll(selectors) : doc.querySelector(selectors);
 }
-/**
-* Checks if the specified class value exists in the element's class attribute.
-* @memberof DOM
-* @param element - target
-* @param className - the class name to search
-* @return {boolean} return false if the class is not found.
-* @example
-import {hasClass} from "@daybrush/utils";
-
-console.log(hasClass(element, "start")); // true or false
-*/
 
 function hasClass(element, className) {
   if (element.classList) {
@@ -2575,16 +1815,6 @@ function hasClass(element, className) {
 
   return !!element.className.match(new RegExp("(\\s|^)" + className + "(\\s|$)"));
 }
-/**
-* Add the specified class value. If these classe already exist in the element's class attribute they are ignored.
-* @memberof DOM
-* @param element - target
-* @param className - the class name to add
-* @example
-import {addClass} from "@daybrush/utils";
-
-addClass(element, "start");
-*/
 
 function addClass(element, className) {
   if (element.classList) {
@@ -2593,16 +1823,6 @@ function addClass(element, className) {
     element.className += " " + className;
   }
 }
-/**
-* Removes the specified class value.
-* @memberof DOM
-* @param element - target
-* @param className - the class name to remove
-* @example
-import {removeClass} from "@daybrush/utils";
-
-removeClass(element, "start");
-*/
 
 function removeClass(element, className) {
   if (element.classList) {
@@ -2612,17 +1832,6 @@ function removeClass(element, className) {
     element.className = element.className.replace(reg, " ");
   }
 }
-/**
-* Gets the CSS properties from the element.
-* @memberof DOM
-* @param elements - elements
-* @param properites - the CSS properties
-* @return returns CSS properties and values.
-* @example
-import {fromCSS} from "@daybrush/utils";
-
-console.log(fromCSS(element, ["left", "opacity", "top"])); // {"left": "10px", "opacity": 1, "top": "10px"}
-*/
 
 function fromCSS(elements, properties) {
   if (!elements || !properties || !properties.length) {
@@ -2649,75 +1858,22 @@ function fromCSS(elements, properties) {
 
   return cssObject;
 }
-/**
-* Sets up a function that will be called whenever the specified event is delivered to the target
-* @memberof DOM
-* @param - event target
-* @param - A case-sensitive string representing the event type to listen for.
-* @param - The object which receives a notification (an object that implements the Event interface) when an event of the specified type occurs
-* @param - An options object that specifies characteristics about the event listener.
-* @example
-import {addEvent} from "@daybrush/utils";
-
-addEvent(el, "click", e => {
-  console.log(e);
-});
-*/
 
 function addEvent(el, type, listener, options) {
   el.addEventListener(type, listener, options);
 }
-/**
-* removes from the EventTarget an event listener previously registered with EventTarget.addEventListener()
-* @memberof DOM
-* @param - event target
-* @param - A case-sensitive string representing the event type to listen for.
-* @param - The EventListener function of the event handler to remove from the event target.
-* @param - An options object that specifies characteristics about the event listener.
-* @example
-import {addEvent, removeEvent} from "@daybrush/utils";
-const listener = e => {
-  console.log(e);
-};
-addEvent(el, "click", listener);
-removeEvent(el, "click", listener);
-*/
 
 function removeEvent(el, type, listener, options) {
   el.removeEventListener(type, listener, options);
 }
 
 
-//# sourceMappingURL=utils.esm.js.map
 
-;// CONCATENATED MODULE: ./.yarn/cache/react-simple-compat-npm-1.2.1-d35db08ba4-07a47e750f.zip/node_modules/react-simple-compat/dist/compat.esm.js
-/*
-Copyright (c) Daybrush
-name: react-simple-compat
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/react-simple-compat.git
-version: 1.2.1
-*/
+;
 
 
 
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
 
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-
-/* global Reflect, Promise */
 var extendStatics = function (d, b) {
   extendStatics = Object.setPrototypeOf || {
     __proto__: []
@@ -2905,7 +2061,6 @@ function createElement(type, props) {
 }
 
 var Provider =
-/*#__PURE__*/
 function () {
   function Provider(type, key, index, container, ref, props) {
     if (props === void 0) {
@@ -2934,7 +2089,7 @@ function () {
 
     this.original = nextElement;
 
-    this._setState(nextState); // render
+    this._setState(nextState); 
 
 
     var prevProps = this.props;
@@ -3072,7 +2227,6 @@ function splitProps(props) {
 }
 
 var TextProvider =
-/*#__PURE__*/
 function (_super) {
   __extends(TextProvider, _super);
 
@@ -3109,7 +2263,6 @@ function (_super) {
 }(Provider);
 
 var ElementProvider =
-/*#__PURE__*/
 function (_super) {
   __extends(ElementProvider, _super);
 
@@ -3256,7 +2409,6 @@ function findDOMNode(comp) {
 }
 
 var FunctionProvider =
-/*#__PURE__*/
 function (_super) {
   __extends(FunctionProvider, _super);
 
@@ -3282,7 +2434,6 @@ function (_super) {
 }(Provider);
 
 var ContainerProvider =
-/*#__PURE__*/
 function (_super) {
   __extends(ContainerProvider, _super);
 
@@ -3307,7 +2458,6 @@ function (_super) {
 }(Provider);
 
 var ComponentProvider =
-/*#__PURE__*/
 function (_super) {
   __extends(ComponentProvider, _super);
 
@@ -3382,7 +2532,6 @@ function (_super) {
 }(Provider);
 
 var Component =
-/*#__PURE__*/
 function () {
   function Component(props) {
     if (props === void 0) {
@@ -3457,7 +2606,6 @@ function () {
 }();
 
 var PureComponent =
-/*#__PURE__*/
 function (_super) {
   __extends(PureComponent, _super);
 
@@ -3475,7 +2623,6 @@ function (_super) {
 }(Component);
 
 var _Portal =
-/*#__PURE__*/
 function (_super) {
   __extends(_Portal, _super);
 
@@ -3648,17 +2795,8 @@ function createPortal(el, container) {
 var version = "simple-1.1.0";
 
 
-//# sourceMappingURL=compat.esm.js.map
 
-;// CONCATENATED MODULE: ./.yarn/cache/@egjs-agent-npm-2.3.0-e88ca0eec2-2506e8feff.zip/node_modules/@egjs/agent/dist/agent.esm.js
-/*
-Copyright (c) 2015 NAVER Corp.
-name: @egjs/agent
-license: MIT
-author: NAVER Corp.
-repository: git+https://github.com/naver/agent.git
-version: 2.3.0
-*/
+;
 function some(arr, callback) {
   var length = arr.length;
 
@@ -3806,7 +2944,7 @@ var BROWSER_PRESETS = [{
   test: "safari|iphone|ipad|ipod",
   id: "safari",
   versionTest: "version"
-}]; // chromium's engine(blink) is based on applewebkit 537.36.
+}]; 
 
 var CHROMIUM_PRESETS = [{
   test: "(?=.*applewebkit/(53[0-7]|5[0-2]|[0-4]))(?=.*\\schrome)",
@@ -3833,7 +2971,6 @@ var WEBVIEW_PRESETS = [{
   test: "(?=(android|iphone|ipad))(?=.*(naver|daum|; wv))",
   id: "webview"
 }, {
-  // test webview
   test: "webview",
   id: "webview"
 }];
@@ -3997,26 +3134,7 @@ function parseUserAgent(userAgent) {
   };
 }
 
-/**
- * @namespace eg.agent
- */
 
-/**
-* Extracts accuate browser and operating system information from the user agent string or client hints.
-* @ko 유저 에이전트 문자열 또는 client hints에서 정확한 브라우저와 운영체제 정보를 추출한다.
-* @function eg.agent#getAccurateAgent
-* @param - Callback function to get the accuate agent <ko>정확한 에이전트를 가져오기 위한 callback 함수</ko>
-* @return - get the accuate agent promise. If Promise are not supported, null is returned. <ko> 정확한 에이전트 promise를 가져온다. Promise를 지원 하지 않는 경우, null을 반환한다. </ko>
-* @example
-import { getAccurateAgent } from "@egjs/agent";
-// eg.agent.getAccurateAgent()
-getAccurateAgent().then(agent => {
-   const { os, browser, isMobile } = agent;
-});
-getAccurateAgent(agent => {
-    const { os, browser, isMobile } = agent;
-});
-*/
 
 function getAccurateAgent(callback) {
   if (hasUserAgentData()) {
@@ -4035,17 +3153,6 @@ function getAccurateAgent(callback) {
 
   return Promise.resolve(agent());
 }
-/**
- * Extracts browser and operating system information from the user agent string.
- * @ko 유저 에이전트 문자열에서 브라우저와 운영체제 정보를 추출한다.
- * @function eg.agent#agent
- * @param - user agent string to parse <ko>파싱할 유저에이전트 문자열</ko>
- * @return - agent Info <ko> 에이전트 정보 </ko>
- * @example
-import agent from "@egjs/agent";
-// eg.agent();
-const { os, browser, isMobile } = agent();
- */
 
 function agent(userAgent) {
   if (typeof userAgent === "undefined" && hasUserAgentData()) {
@@ -4055,19 +3162,10 @@ function agent(userAgent) {
   }
 }
 
-/* harmony default export */ const agent_esm = (agent);
+ const agent_esm = (agent);
 
-//# sourceMappingURL=agent.esm.js.map
 
-;// CONCATENATED MODULE: ./.yarn/cache/@scena-matrix-npm-1.1.1-da964f6b3a-e96aeab712.zip/node_modules/@scena/matrix/dist/matrix.esm.js
-/*
-Copyright (c) 2020 Daybrush
-name: @scena/matrix
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/matrix
-version: 1.1.1
-*/
+;
 
 
 function add(matrix, inverseMatrix, startIndex, fromIndex, n, k) {
@@ -4099,14 +3197,7 @@ function divide(matrix, inverseMatrix, startIndex, n, k) {
     inverseMatrix[x] /= k;
   }
 }
-/**
- *
- * @namespace Matrix
- */
 
-/**
- * @memberof Matrix
- */
 
 
 function ignoreDimension(matrix, m, n) {
@@ -4124,9 +3215,6 @@ function ignoreDimension(matrix, m, n) {
   newMatrix[(m - 1) * (n + 1)] = 1;
   return newMatrix;
 }
-/**
- * @memberof Matrix
- */
 
 function invert(matrix, n) {
   if (n === void 0) {
@@ -4137,11 +3225,9 @@ function invert(matrix, n) {
   var inverseMatrix = createIdentityMatrix(n);
 
   for (var i = 0; i < n; ++i) {
-    // diagonal
     var identityIndex = n * i + i;
 
     if (!throttle(newMatrix[identityIndex], TINY_NUM)) {
-      // newMatrix[identityIndex] = 0;
       for (var j = i + 1; j < n; ++j) {
         if (newMatrix[n * i + j]) {
           swap(newMatrix, inverseMatrix, i, j, n);
@@ -4151,7 +3237,6 @@ function invert(matrix, n) {
     }
 
     if (!throttle(newMatrix[identityIndex], TINY_NUM)) {
-      // no inverse matrix
       return [];
     }
 
@@ -4172,9 +3257,6 @@ function invert(matrix, n) {
 
   return inverseMatrix;
 }
-/**
- * @memberof Matrix
- */
 
 function transpose(matrix, n) {
   if (n === void 0) {
@@ -4191,9 +3273,6 @@ function transpose(matrix, n) {
 
   return newMatrix;
 }
-/**
- * @memberof Matrix
- */
 
 function getOrigin(matrix, n) {
   if (n === void 0) {
@@ -4210,9 +3289,6 @@ function getOrigin(matrix, n) {
   originMatrix[n - 1] = 0;
   return originMatrix;
 }
-/**
- * @memberof Matrix
- */
 
 function fromTranslation(pos, n) {
   var newMatrix = createIdentityMatrix(n);
@@ -4223,9 +3299,6 @@ function fromTranslation(pos, n) {
 
   return newMatrix;
 }
-/**
- * @memberof Matrix
- */
 
 function convertPositionMatrix(matrix, n) {
   var newMatrix = matrix.slice();
@@ -4237,14 +3310,11 @@ function convertPositionMatrix(matrix, n) {
   newMatrix[n - 1] = 1;
   return newMatrix;
 }
-/**
- * @memberof Matrix
- */
 
 function convertDimension(matrix, n, m) {
   if (n === void 0) {
     n = Math.sqrt(matrix.length);
-  } // n < m
+  } 
 
 
   if (n === m) {
@@ -4266,9 +3336,6 @@ function convertDimension(matrix, n, m) {
   newMatrix[m * m - 1] = matrix[n * n - 1];
   return newMatrix;
 }
-/**
- * @memberof Matrix
- */
 
 function multiplies(n) {
   var matrixes = [];
@@ -4283,20 +3350,13 @@ function multiplies(n) {
   });
   return m;
 }
-/**
- * @memberof Matrix
- */
 
 function multiply(matrix, matrix2, n) {
   if (n === void 0) {
     n = Math.sqrt(matrix.length);
   }
 
-  var newMatrix = []; // 1 y: n
-  // 1 x: m
-  // 2 x: m
-  // 2 y: k
-  // n * m X m * k
+  var newMatrix = []; 
 
   var m = matrix.length / n;
   var k = matrix2.length / m;
@@ -4312,20 +3372,14 @@ function multiply(matrix, matrix2, n) {
       newMatrix[j * n + i] = 0;
 
       for (var l = 0; l < m; ++l) {
-        // m1 x: m(l), y: n(i)
-        // m2 x: k(j):  y: m(l)
-        // nw x: n(i), y: k(j)
         newMatrix[j * n + i] += matrix[l * n + i] * matrix2[j * m + l];
       }
     }
-  } // n * k
+  } 
 
 
   return newMatrix;
 }
-/**
- * @memberof Matrix
- */
 
 function plus(pos1, pos2) {
   var length = Math.min(pos1.length, pos2.length);
@@ -4337,9 +3391,6 @@ function plus(pos1, pos2) {
 
   return nextPos;
 }
-/**
- * @memberof Matrix
- */
 
 function minus(pos1, pos2) {
   var length = Math.min(pos1.length, pos2.length);
@@ -4351,9 +3402,6 @@ function minus(pos1, pos2) {
 
   return nextPos;
 }
-/**
- * @memberof Matrix
- */
 
 function convertCSStoMatrix(a, is2d) {
   if (is2d === void 0) {
@@ -4366,9 +3414,6 @@ function convertCSStoMatrix(a, is2d) {
 
   return a;
 }
-/**
- * @memberof Matrix
- */
 
 function convertMatrixtoCSS(a, is2d) {
   if (is2d === void 0) {
@@ -4381,9 +3426,6 @@ function convertMatrixtoCSS(a, is2d) {
 
   return a;
 }
-/**
- * @memberof Matrix
- */
 
 function calculate(matrix, matrix2, n) {
   if (n === void 0) {
@@ -4396,30 +3438,18 @@ function calculate(matrix, matrix2, n) {
     return v / k;
   });
 }
-/**
- * @memberof Matrix
- */
 
 function rotateX3d(matrix, rad) {
   return multiply(matrix, [1, 0, 0, 0, 0, Math.cos(rad), Math.sin(rad), 0, 0, -Math.sin(rad), Math.cos(rad), 0, 0, 0, 0, 1], 4);
 }
-/**
- * @memberof Matrix
- */
 
 function rotateY3d(matrix, rad) {
   return multiply(matrix, [Math.cos(rad), 0, -Math.sin(rad), 0, 0, 1, 0, 0, Math.sin(rad), 0, Math.cos(rad), 0, 0, 0, 0, 1], 4);
 }
-/**
- * @memberof Matrix
- */
 
 function rotateZ3d(matrix, rad) {
   return multiply(matrix, createRotateMatrix(rad, 4));
 }
-/**
- * @memberof Matrix
- */
 
 function scale3d(matrix, _a) {
   var _b = _a[0],
@@ -4430,16 +3460,10 @@ function scale3d(matrix, _a) {
       sz = _d === void 0 ? 1 : _d;
   return multiply(matrix, [sx, 0, 0, 0, 0, sy, 0, 0, 0, 0, sz, 0, 0, 0, 0, 1], 4);
 }
-/**
- * @memberof Matrix
- */
 
 function rotate(pos, rad) {
   return calculate(createRotateMatrix(rad, 3), convertPositionMatrix(pos, 3));
 }
-/**
- * @memberof Matrix
- */
 
 function translate3d(matrix, _a) {
   var _b = _a[0],
@@ -4450,22 +3474,15 @@ function translate3d(matrix, _a) {
       tz = _d === void 0 ? 0 : _d;
   return multiply(matrix, [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, tx, ty, tz, 1], 4);
 }
-/**
- * @memberof Matrix
- */
 
 function matrix3d(matrix1, matrix2) {
   return multiply(matrix1, matrix2, 4);
 }
-/**
- * @memberof Matrix
- */
 
 function createRotateMatrix(rad, n) {
   var cos = Math.cos(rad);
   var sin = Math.sin(rad);
-  var m = createIdentityMatrix(n); // cos -sin
-  // sin cos
+  var m = createIdentityMatrix(n); 
 
   m[0] = cos;
   m[1] = sin;
@@ -4473,9 +3490,6 @@ function createRotateMatrix(rad, n) {
   m[n + 1] = cos;
   return m;
 }
-/**
- * @memberof Matrix
- */
 
 function createIdentityMatrix(n) {
   var length = n * n;
@@ -4487,9 +3501,6 @@ function createIdentityMatrix(n) {
 
   return matrix;
 }
-/**
- * @memberof Matrix
- */
 
 function createScaleMatrix(scale, n) {
   var m = createIdentityMatrix(n);
@@ -4501,9 +3512,6 @@ function createScaleMatrix(scale, n) {
 
   return m;
 }
-/**
- * @memberof Matrix
- */
 
 function createOriginMatrix(origin, n) {
   var m = createIdentityMatrix(n);
@@ -4515,9 +3523,6 @@ function createOriginMatrix(origin, n) {
 
   return m;
 }
-/**
- * @memberof Matrix
- */
 
 function createWarpMatrix(pos0, pos1, pos2, pos3, nextPos0, nextPos1, nextPos2, nextPos3) {
   var x0 = pos0[0],
@@ -4547,9 +3552,6 @@ function createWarpMatrix(pos0, pos1, pos2, pos3, nextPos0, nextPos1, nextPos2, 
   h[8] = 1;
   return convertDimension(transpose(h), 3, 4);
 }
-/**
- * @memberof Matrix
- */
 
 function getCenter(points) {
   return [0, 1].map(function (i) {
@@ -4560,17 +3562,8 @@ function getCenter(points) {
 }
 
 
-//# sourceMappingURL=matrix.esm.js.map
 
-;// CONCATENATED MODULE: ./.yarn/cache/css-to-mat-npm-1.0.3-8a69ed71de-a3fc98bfad.zip/node_modules/css-to-mat/dist/css-to-mat.esm.js
-/*
-Copyright (c) 2019 Daybrush
-name: css-to-mat
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/css-to-mat.git
-version: 1.0.3
-*/
+;
 
 
 
@@ -4725,35 +3718,11 @@ function parse(transform) {
 }
 
 
-//# sourceMappingURL=css-to-mat.esm.js.map
 
-;// CONCATENATED MODULE: ./.yarn/cache/@egjs-children-differ-npm-1.0.1-37f45ddf97-087f286822.zip/node_modules/@egjs/children-differ/dist/children-differ.esm.js
-/*
-Copyright (c) 2019-present NAVER Corp.
-name: @egjs/children-differ
-license: MIT
-author: NAVER Corp.
-repository: https://github.com/naver/egjs-children-differ
-version: 1.0.1
-*/
+;
 
 
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
 
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-
-/* global Reflect, Promise */
 var children_differ_esm_extendStatics = function (d, b) {
   children_differ_esm_extendStatics = Object.setPrototypeOf || {
     __proto__: []
@@ -4776,11 +3745,6 @@ function children_differ_esm_extends(d, b) {
   d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 }
 
-/*
-egjs-children-differ
-Copyright (c) 2019-present NAVER Corp.
-MIT license
-*/
 var findKeyCallback = typeof Map === "function" ? undefined : function () {
   var childrenCount = 0;
   return function (el) {
@@ -4788,20 +3752,10 @@ var findKeyCallback = typeof Map === "function" ? undefined : function () {
   };
 }();
 
-/**
- * A module that checks diff when child are added, removed, or changed .
- * @ko 자식 노드들에서 자식 노드가 추가되거나 삭제되거나 순서가 변경된 사항을 체크하는 모듈입니다.
- * @memberof eg
- * @extends eg.ListDiffer
- */
 
 var ChildrenDiffer =
-/*#__PURE__*/
 function (_super) {
   children_differ_esm_extends(ChildrenDiffer, _super);
-  /**
-   * @param - Initializing Children <ko> 초기 설정할 자식 노드들</ko>
-   */
 
 
   function ChildrenDiffer(list) {
@@ -4815,88 +3769,18 @@ function (_super) {
   return ChildrenDiffer;
 }(list_differ_esm);
 
-/*
-egjs-children-differ
-Copyright (c) 2019-present NAVER Corp.
-MIT license
-*/
-/**
- *
- * @memberof eg.ChildrenDiffer
- * @static
- * @function
- * @param - Previous List <ko> 이전 목록 </ko>
- * @param - List to Update <ko> 업데이트 할 목록 </ko>
- * @return - Returns the diff between `prevList` and `list` <ko> `prevList`와 `list`의 다른 점을 반환한다.</ko>
- * @example
- * import { diff } from "@egjs/children-differ";
- * // script => eg.ChildrenDiffer.diff
- * const result = diff([0, 1, 2, 3, 4, 5], [7, 8, 0, 4, 3, 6, 2, 1]);
- * // List before update
- * // [1, 2, 3, 4, 5]
- * console.log(result.prevList);
- * // Updated list
- * // [4, 3, 6, 2, 1]
- * console.log(result.list);
- * // Index array of values added to `list`
- * // [0, 1, 5]
- * console.log(result.added);
- * // Index array of values removed in `prevList`
- * // [5]
- * console.log(result.removed);
- * // An array of index pairs of `prevList` and `list` with different indexes from `prevList` and `list`
- * // [[0, 2], [4, 3], [3, 4], [2, 6], [1, 7]]
- * console.log(result.changed);
- * // The subset of `changed` and an array of index pairs that moved data directly. Indicate an array of absolute index pairs of `ordered`.(Formatted by: Array<[index of prevList, index of list]>)
- * // [[4, 3], [3, 4], [2, 6]]
- * console.log(result.pureChanged);
- * // An array of index pairs to be `ordered` that can synchronize `list` before adding data. (Formatted by: Array<[prevIndex, nextIndex]>)
- * // [[4, 1], [4, 2], [4, 3]]
- * console.log(result.ordered);
- * // An array of index pairs of `prevList` and `list` that have not been added/removed so data is preserved
- * // [[0, 2], [4, 3], [3, 4], [2, 6], [1, 7]]
- * console.log(result.maintained);
- */
 
 function children_differ_esm_diff(prevList, list) {
   return diff(prevList, list, findKeyCallback);
 }
 
-/*
-egjs-children-differ
-Copyright (c) 2019-present NAVER Corp.
-MIT license
-*/
 
-/* harmony default export */ const children_differ_esm = (ChildrenDiffer);
-
-//# sourceMappingURL=children-differ.esm.js.map
-
-;// CONCATENATED MODULE: ./.yarn/cache/overlap-area-npm-1.0.0-ece5a4fc6a-37d82ea4ea.zip/node_modules/overlap-area/dist/overlap-area.esm.js
-/*
-Copyright (c) 2020 Daybrush
-name: overlap-area
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/overlap-area.git
-version: 1.0.0
-*/
+ const children_differ_esm = (ChildrenDiffer);
 
 
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
+;
 
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
 
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
 function overlap_area_esm_spreadArrays() {
   for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
 
@@ -4905,14 +3789,7 @@ function overlap_area_esm_spreadArrays() {
   return r;
 }
 
-/**
- * @namespace OverlapArea
- */
 
-/**
- * Gets the size of a shape (polygon) made of points.
- * @memberof OverlapArea
- */
 
 function getAreaSize(points) {
   if (points.length < 3) {
@@ -4924,10 +3801,6 @@ function getAreaSize(points) {
     return point[0] * nextPoint[1] - nextPoint[0] * point[1];
   }))) / 2;
 }
-/**
- * Get points that fit the rect,
- * @memberof OverlapArea
- */
 
 function fitPoints(points, rect) {
   var width = rect.width,
@@ -4947,10 +3820,6 @@ function fitPoints(points, rect) {
     return [left + (point[0] - minX) * ratioX, top + (point[1] - minY) * ratioY];
   });
 }
-/**
- * Get the minimum and maximum points of the points.
- * @memberof OverlapArea
- */
 
 function getMinMaxs(points) {
   var xs = points.map(function (point) {
@@ -4966,13 +3835,6 @@ function getMinMaxs(points) {
     maxY: Math.max.apply(Math, ys)
   };
 }
-/**
- * Whether the point is in shape
- * @param - point pos
- * @param - shape points
- * @param - whether to check except line
- * @memberof OverlapArea
- */
 
 function isInside(pos, points, excludeLine) {
   var x = pos[0],
@@ -5033,43 +3895,27 @@ function isInside(pos, points, excludeLine) {
 
   return false;
 }
-/**
- * Get the coefficient of the linear function. [a, b, c] (ax + by + c = 0)
- * @return [a, b, c]
- * @memberof OverlapArea
- */
 
 function getLinearConstants(point1, point2) {
   var x1 = point1[0],
       y1 = point1[1];
   var x2 = point2[0],
-      y2 = point2[1]; // ax + by + c = 0
+      y2 = point2[1]; 
 
   if (x1 === x2 && y1 === y2) {
     return [0, 0, 0];
   }
 
   if (x1 === x2) {
-    // x = x1
     return [1, 0, -x1];
   } else if (y1 === y2) {
-    // y = y1
     return [0, 1, -y1];
   } else {
-    // x1 + a * y1 + b = 0
-    // x2 + a * y2 + b = 0
-    // (x1 -x2) + (y1 - y2) * a = 0
-    // a = (x2 - x1) / (y1 - y2)
-    // x1 + (x2 - x1) / (y1 - y2)
     var a_1 = (x2 - x1) / (y1 - y2);
     var b_1 = -x1 - a_1 * y1;
     return [1, a_1, b_1];
   }
 }
-/**
- * Get intersection points with linear functions.
- * @memberof OverlapArea
- */
 
 function getIntersectionPointsByConstants(linearConstants1, linearConstants2) {
   var a1 = linearConstants1[0],
@@ -5084,8 +3930,6 @@ function getIntersectionPointsByConstants(linearConstants1, linearConstants2) {
   if (isZeroA && isZeroB) {
     return [];
   } else if (isZeroA) {
-    // b1 * y + c1 = 0
-    // b2 * y + c2 = 0
     var y1 = -c1 / b1;
     var y2 = -c2 / b2;
 
@@ -5095,8 +3939,6 @@ function getIntersectionPointsByConstants(linearConstants1, linearConstants2) {
       return [[-Infinity, y1], [Infinity, y1]];
     }
   } else if (isZeroB) {
-    // a1 * x + c1 = 0
-    // a2 * x + c2 = 0
     var x1 = -c1 / a1;
     var x2 = -c2 / a2;
 
@@ -5106,48 +3948,27 @@ function getIntersectionPointsByConstants(linearConstants1, linearConstants2) {
       return [[x1, -Infinity], [x1, Infinity]];
     }
   } else if (a1 === 0) {
-    // b1 * y + c1 = 0
-    // y = - c1 / b1;
-    // a2 * x + b2 * y + c2 = 0
     var y = -c1 / b1;
     var x = -(b2 * y + c2) / a2;
     return [[x, y]];
   } else if (a2 === 0) {
-    // b2 * y + c2 = 0
-    // y = - c2 / b2;
-    // a1 * x + b1 * y + c1 = 0
     var y = -c2 / b2;
     var x = -(b1 * y + c1) / a1;
     return [[x, y]];
   } else if (b1 === 0) {
-    // a1 * x + c1 = 0
-    // x = - c1 / a1;
-    // a2 * x + b2 * y + c2 = 0
     var x = -c1 / a1;
     var y = -(a2 * x + c2) / b2;
     return [[x, y]];
   } else if (b2 === 0) {
-    // a2 * x + c2 = 0
-    // x = - c2 / a2;
-    // a1 * x + b1 * y + c1 = 0
     var x = -c2 / a2;
     var y = -(a1 * x + c1) / b1;
     return [[x, y]];
   } else {
-    // a1 * x + b1 * y + c1 = 0
-    // a2 * x + b2 * y + c2 = 0
-    // b2 * a1 * x + b2 * b1 * y + b2 * c1 = 0
-    // b1 * a2 * x + b1 * b2 * y + b1 * c2 = 0
-    // (b2 * a1 - b1 * a2)  * x = (b1 * c2 - b2 * c1)
     var x = (b1 * c2 - b2 * c1) / (b2 * a1 - b1 * a2);
     var y = -(a1 * x + c1) / b1;
     return [[x, y]];
   }
 }
-/**
- * Get intersection points to the two lines.
- * @memberof OverlapArea
- */
 
 function getIntersectionPoints(line1, line2, isLimit) {
   var points = getIntersectionPointsByConstants(getLinearConstants(line1[0], line1[1]), getLinearConstants(line2[0], line2[1]));
@@ -5158,10 +3979,6 @@ function getIntersectionPoints(line1, line2, isLimit) {
 
   return points;
 }
-/**
- * Get the points on the lines (between two points).
- * @memberof OverlapArea
- */
 
 function getPointsOnLines(points, lines) {
   var minMaxs = lines.map(function (line) {
@@ -5176,10 +3993,9 @@ function getPointsOnLines(points, lines) {
         y = _a[1];
 
     if (x === points[1][0]) {
-      /// Math.max(minY1, minY2)
       var top = Math.max.apply(Math, minMaxs.map(function (minMax) {
         return minMax[1][0];
-      })); /// Math.min(maxY1, miax2)
+      })); 
 
       var bottom = Math.min.apply(Math, minMaxs.map(function (minMax) {
         return minMax[1][1];
@@ -5191,10 +4007,9 @@ function getPointsOnLines(points, lines) {
 
       return [[x, top], [x, bottom]];
     } else if (y === points[1][1]) {
-      /// Math.max(minY1, minY2)
       var left = Math.max.apply(Math, minMaxs.map(function (minMax) {
         return minMax[0][0];
-      })); /// Math.min(maxY1, miax2)
+      })); 
 
       var right = Math.min.apply(Math, minMaxs.map(function (minMax) {
         return minMax[0][1];
@@ -5214,22 +4029,12 @@ function getPointsOnLines(points, lines) {
     });
   });
 }
-/**
-* Convert two points into lines.
-* @function
-* @memberof OverlapArea
-*/
 
 function convertLines(points) {
   return overlap_area_esm_spreadArrays(points.slice(1), [points[0]]).map(function (point, i) {
     return [points[i], point];
   });
 }
-/**
-* Get the points of the overlapped part of two shapes.
-* @function
-* @memberof OverlapArea
-*/
 
 function getOverlapPoints(points1, points2) {
   var targetPoints1 = points1.slice();
@@ -5330,7 +4135,7 @@ function getOverlapPoints(points1, points2) {
         });
       }
     }
-  }); // console.log(overlapInfos);
+  }); 
 
   var overlapPoints = overlapInfos.map(function (_a) {
     var pos = _a.pos;
@@ -5348,11 +4153,6 @@ function getOverlapPoints(points1, points2) {
     return true;
   });
 }
-/**
-* Gets the size of the overlapped part of two shapes.
-* @function
-* @memberof OverlapArea
-*/
 
 function getOverlapSize(points1, points2) {
   var points = getOverlapPoints(points1, points2);
@@ -5360,33 +4160,10 @@ function getOverlapSize(points1, points2) {
 }
 
 
-//# sourceMappingURL=overlap-area.esm.js.map
 
-;// CONCATENATED MODULE: ./.yarn/cache/@scena-event-emitter-npm-1.0.5-7ebf361d17-400e0f6ab8.zip/node_modules/@scena/event-emitter/dist/event-emitter.esm.js
-/*
-Copyright (c) 2019 Daybrush
-name: @scena/event-emitter
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/gesture.git
-version: 1.0.5
-*/
+;
 
 
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
 var event_emitter_esm_assign = function () {
   event_emitter_esm_assign = Object.assign || function __assign(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -5408,33 +4185,12 @@ function event_emitter_esm_spreadArrays() {
   return r;
 }
 
-/**
- * Implement EventEmitter on object or component.
- */
 
 var EventEmitter =
-/*#__PURE__*/
 function () {
   function EventEmitter() {
     this._events = {};
   }
-  /**
-   * Add a listener to the registered event.
-   * @param - Name of the event to be added
-   * @param - listener function of the event to be added
-   * @example
-   * import EventEmitter from "@scena/event-emitter";
-   * cosnt emitter = new EventEmitter();
-   *
-   * // Add listener in "a" event
-   * emitter.on("a", () => {
-   * });
-   * // Add listeners
-   * emitter.on({
-   *  a: () => {},
-   *  b: () => {},
-   * });
-   */
 
 
   var __proto = EventEmitter.prototype;
@@ -5450,24 +4206,6 @@ function () {
 
     return this;
   };
-  /**
-   * Remove listeners registered in the event target.
-   * @param - Name of the event to be removed
-   * @param - listener function of the event to be removed
-   * @example
-   * import EventEmitter from "@scena/event-emitter";
-   * cosnt emitter = new EventEmitter();
-   *
-   * // Remove all listeners.
-   * emitter.off();
-   *
-   * // Remove all listeners in "A" event.
-   * emitter.off("a");
-   *
-   *
-   * // Remove "listener" listener in "a" event.
-   * emitter.off("a", listener);
-   */
 
 
   __proto.off = function (eventName, listener) {
@@ -5495,22 +4233,6 @@ function () {
 
     return this;
   };
-  /**
-   * Add a disposable listener and Use promise to the registered event.
-   * @param - Name of the event to be added
-   * @param - disposable listener function of the event to be added
-   * @example
-   * import EventEmitter from "@scena/event-emitter";
-   * cosnt emitter = new EventEmitter();
-   *
-   * // Add a disposable listener in "a" event
-   * emitter.once("a", () => {
-   * });
-   *
-   * // Use Promise
-   * emitter.once("a").then(e => {
-   * });
-   */
 
 
   __proto.once = function (eventName, listener) {
@@ -5528,26 +4250,6 @@ function () {
       });
     });
   };
-  /**
-   * Fires an event to call listeners.
-   * @param - Event name
-   * @param - Event parameter
-   * @return If false, stop the event.
-   * @example
-   *
-   * import EventEmitter from "@scena/event-emitter";
-   *
-   *
-   * const emitter = new EventEmitter();
-   *
-   * emitter.on("a", e => {
-   * });
-   *
-   *
-   * emitter.emit("a", {
-   *   a: 1,
-   * });
-   */
 
 
   __proto.emit = function (eventName, param) {
@@ -5582,47 +4284,7 @@ function () {
 
     return !isStop;
   };
-  /**
-   * Fires an event to call listeners.
-   * @param - Event name
-   * @param - Event parameter
-   * @return If false, stop the event.
-   * @example
-   *
-   * import EventEmitter from "@scena/event-emitter";
-   *
-   *
-   * const emitter = new EventEmitter();
-   *
-   * emitter.on("a", e => {
-   * });
-   *
-   *
-   * emitter.emit("a", {
-   *   a: 1,
-   * });
-   */
 
-  /**
-  * Fires an event to call listeners.
-  * @param - Event name
-  * @param - Event parameter
-  * @return If false, stop the event.
-  * @example
-  *
-  * import EventEmitter from "@scena/event-emitter";
-  *
-  *
-  * const emitter = new EventEmitter();
-  *
-  * emitter.on("a", e => {
-  * });
-  *
-  * // emit
-  * emitter.trigger("a", {
-  *   a: 1,
-  * });
-  */
 
 
   __proto.trigger = function (eventName, param) {
@@ -5645,37 +4307,13 @@ function () {
   return EventEmitter;
 }();
 
-/* harmony default export */ const event_emitter_esm = (EventEmitter);
-//# sourceMappingURL=event-emitter.esm.js.map
+ const event_emitter_esm = (EventEmitter);
 
-;// CONCATENATED MODULE: ./.yarn/cache/@scena-dragscroll-npm-1.1.1-8fe60775f9-aacb335870.zip/node_modules/@scena/dragscroll/dist/dragscroll.esm.js
-/*
-Copyright (c) 2019 Daybrush
-name: @scena/dragscroll
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/dragscroll.git
-version: 1.1.1
-*/
+;
 
 
 
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
 
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-
-/* global Reflect, Promise */
 var dragscroll_esm_extendStatics = function (d, b) {
   dragscroll_esm_extendStatics = Object.setPrototypeOf || {
     __proto__: []
@@ -5722,7 +4360,6 @@ function getDefaultScrollPosition(e) {
 }
 
 var DragScroll =
-/*#__PURE__*/
 function (_super) {
   dragscroll_esm_extends(DragScroll, _super);
 
@@ -5918,37 +4555,13 @@ function (_super) {
   return DragScroll;
 }(event_emitter_esm);
 
-/* harmony default export */ const dragscroll_esm = (DragScroll);
-//# sourceMappingURL=dragscroll.esm.js.map
+ const dragscroll_esm = (DragScroll);
 
-;// CONCATENATED MODULE: ./.yarn/cache/gesto-npm-1.7.0-7d5440000b-f2a66bcf0f.zip/node_modules/gesto/dist/gesto.esm.js
-/*
-Copyright (c) 2019 Daybrush
-name: gesto
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/gesto.git
-version: 1.7.0
-*/
+;
 
 
 
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
 
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-
-/* global Reflect, Promise */
 var gesto_esm_extendStatics = function (d, b) {
   gesto_esm_extendStatics = Object.setPrototypeOf || {
     __proto__: []
@@ -6085,7 +4698,6 @@ function getAverageClient(clients, length) {
 }
 
 var ClientStore =
-/*#__PURE__*/
 function () {
   function ClientStore(clients) {
     this.prevClients = [];
@@ -6180,17 +4792,10 @@ function () {
 }();
 
 var INPUT_TAGNAMES = ["textarea", "input"];
-/**
- * You can set up drag, pinch events in any browser.
- */
 
 var Gesto =
-/*#__PURE__*/
 function (_super) {
   gesto_esm_extends(Gesto, _super);
-  /**
-   *
-   */
 
 
   function Gesto(targets, options) {
@@ -6241,9 +4846,8 @@ function (_super) {
 
         if (hasInput || hasContentEditable) {
           if (checkInput || activeElement === target) {
-            // force false or already focused.
             return false;
-          } // no focus
+          } 
 
 
           if (activeElement && hasContentEditable && activeElement.isContentEditable && activeElement.contains(target)) {
@@ -6439,9 +5043,6 @@ function (_super) {
 
     return _this;
   }
-  /**
-   * Stop Gesto's drag events.
-   */
 
 
   var __proto = Gesto.prototype;
@@ -6452,9 +5053,6 @@ function (_super) {
     this.clientStores = [];
     this.datas = {};
   };
-  /**
-   * The total moved distance
-   */
 
 
   __proto.getMovement = function (clients) {
@@ -6462,49 +5060,31 @@ function (_super) {
       return prev + cur.movement;
     }, 0);
   };
-  /**
-   * Whether to drag
-   */
 
 
   __proto.isDragging = function () {
     return this.isDrag;
   };
-  /**
-   * Whether to start drag
-   */
 
 
   __proto.isFlag = function () {
     return this.flag;
   };
-  /**
-   * Whether to start pinch
-   */
 
 
   __proto.isPinchFlag = function () {
     return this.pinchFlag;
   };
-  /**
-  * Whether to start double click
-  */
 
 
   __proto.isDoubleFlag = function () {
     return this.doubleFlag;
   };
-  /**
-   * Whether to pinch
-   */
 
 
   __proto.isPinching = function () {
     return this.isPinch;
   };
-  /**
-   * If a scroll event occurs, it is corrected by the scroll distance.
-   */
 
 
   __proto.scrollBy = function (deltaX, deltaY, e, isCallDrag) {
@@ -6519,9 +5099,6 @@ function (_super) {
     this.clientStores[0].move(deltaX, deltaY);
     isCallDrag && this.onDrag(e, true);
   };
-  /**
-   * Create a virtual drag event.
-   */
 
 
   __proto.move = function (_a, inputEvent) {
@@ -6540,17 +5117,11 @@ function (_super) {
       };
     }), inputEvent, true);
   };
-  /**
-   * The dragStart event is triggered by an external event.
-   */
 
 
   __proto.triggerDragStart = function (e) {
     this.onDragStart(e, false);
   };
-  /**
-   * Set the event data while dragging.
-   */
 
 
   __proto.setEventDatas = function (datas) {
@@ -6562,9 +5133,6 @@ function (_super) {
 
     return this;
   };
-  /**
-   * Get the current event state while dragging.
-   */
 
 
   __proto.getCurrentEvent = function (inputEvent) {
@@ -6578,17 +5146,11 @@ function (_super) {
       inputEvent: inputEvent
     });
   };
-  /**
-   * Get & Set the event data while dragging.
-   */
 
 
   __proto.getEventDatas = function () {
     return this.datas;
   };
-  /**
-   * Unset Gesto
-   */
 
 
   __proto.unset = function () {
@@ -6734,18 +5296,9 @@ function (_super) {
   return Gesto;
 }(event_emitter_esm);
 
-/* harmony default export */ const gesto_esm = (Gesto);
-//# sourceMappingURL=gesto.esm.js.map
+ const gesto_esm = (Gesto);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/css-styled-virtual-9ef8f05de2/0/cache/css-styled-npm-1.0.0-5104a882d5-3f2f995938.zip/node_modules/css-styled/dist/styled.esm.js
-/*
-Copyright (c) 2019 Daybrush
-name: css-styled
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/css-styled.git
-version: 1.0.0
-*/
+;
 
 
 function hash(str) {
@@ -6756,9 +5309,6 @@ function hash(str) {
     hash = (hash * 33) ^ str.charCodeAt(--i);
   }
 
-  /* JavaScript does bitwise operations (like XOR, above) on 32-bit signed
-   * integers. Since we want the results to be always positive, convert the
-   * signed int to an unsigned by doing an unsigned bitshift. */
   return hash >>> 0;
 }
 
@@ -6816,10 +5366,6 @@ function injectStyle(className, css, options, shadowRoot) {
   return style;
 }
 
-/**
- * Create an styled object that can be defined and inserted into the css.
- * @param - css styles
- */
 
 function styled(css) {
   var injectClassName = "rCS" + getHash(css);
@@ -6869,47 +5415,15 @@ function styled(css) {
   };
 }
 
-/* harmony default export */ const styled_esm = (styled);
-//# sourceMappingURL=styled.esm.js.map
+ const styled_esm = (styled);
 
-;// CONCATENATED MODULE: ./.yarn/cache/react-compat-css-styled-npm-1.0.8-52211d26f8-7a8e51849e.zip/node_modules/react-compat-css-styled/dist/styled.esm.js
-/*
-Copyright (c) Daybrush
-name: react-compat-css-styled
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/css-styled.git
-version: 1.0.8
-*/
+;
 
 
 
 
-/*
-Copyright (c) 2019 Daybrush
-name: react-css-styled
-license: MIT
-author: Daybrush
-repository: https://github.com/daybrush/css-styled/tree/master/packages/react-css-styled
-version: 1.0.3
-*/
 
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
 
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-
-/* global Reflect, Promise */
 var styled_esm_extendStatics = function (d, b) {
   styled_esm_extendStatics = Object.setPrototypeOf || {
     __proto__: []
@@ -6956,7 +5470,6 @@ function styled_esm_rest(s, e) {
 }
 
 var StyledElement =
-/*#__PURE__*/
 function (_super) {
   styled_esm_extends(StyledElement, _super);
 
@@ -7016,7 +5529,6 @@ function (_super) {
 function styled_esm_styled(tag, css) {
   var injector = styled_esm(css);
   return (
-    /*#__PURE__*/
     function (_super) {
       styled_esm_extends(Styled, _super);
 
@@ -7033,18 +5545,10 @@ function styled_esm_styled(tag, css) {
   );
 }
 
-/* harmony default export */ const dist_styled_esm = (styled_esm_styled);
+ const dist_styled_esm = (styled_esm_styled);
 
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/react-compat-moveable-virtual-81b7a42abb/0/cache/react-compat-moveable-npm-0.16.0-395b3c92e9-b20bd91698.zip/node_modules/react-compat-moveable/dist/moveable.esm.js
-/*
-Copyright (c) 2019 Daybrush
-name: react-compat-moveable
-license: MIT
-author: Daybrush
-repository: https://github.com/daybrush/moveable/blob/master/packages/react-compat-moveable
-version: 0.16.0
-*/
+;
 
 
 
@@ -7057,31 +5561,8 @@ version: 0.16.0
 
 
 
-/*
-Copyright (c) 2019 Daybrush
-name: react-moveable
-license: MIT
-author: Daybrush
-repository: https://github.com/daybrush/moveable/blob/master/packages/react-moveable
-version: 0.31.0
-*/
 
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
 
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
-
-/* global Reflect, Promise */
 var moveable_esm_extendStatics = function (d, b) {
   moveable_esm_extendStatics = Object.setPrototypeOf || {
     __proto__: []
@@ -7159,7 +5640,7 @@ function getSVGCursor(scale, degree) {
 }
 
 function getCursorCSS(degree) {
-  var x1 = getSVGCursor(1, degree); // const x2 = getSVGCursor(2, degree);
+  var x1 = getSVGCursor(1, degree); 
 
   var degree45 = Math.round(degree / 45) * 45 % 180;
   var defaultCursor = "ns-resize";
@@ -7170,7 +5651,7 @@ function getCursorCSS(degree) {
     defaultCursor = "nesw-resize";
   } else if (degree45 === 90) {
     defaultCursor = "ew-resize";
-  } // tslint:disable-next-line: max-line-length
+  } 
 
 
   return "cursor:" + defaultCursor + ";cursor: url('" + x1 + "') 16 16, " + defaultCursor + ";";
@@ -7311,13 +5792,13 @@ function getOffsetPosInfo(el, container, style, isFixed) {
     var containerClientRect = (container || document.documentElement).getBoundingClientRect();
     offsetLeft -= containerClientRect.left;
     offsetTop -= containerClientRect.top;
-  } // svg
+  } 
 
 
   var isSVG = isUndefined(offsetLeft);
   var hasOffset = !isSVG;
   var origin;
-  var targetOrigin; // inner svg element
+  var targetOrigin; 
 
   if (!hasOffset && tagName !== "svg") {
     origin = IS_WEBKIT605 ? getBeforeTransformOrigin(el) : getTransformOrigin(style).map(function (pos) {
@@ -7395,7 +5876,7 @@ function getMatrixStackInfo(target, container, checkContainer) {
     var style = moveable_esm_getComputedStyle(el);
     var position = style.position;
     var isFixed = position === "fixed";
-    var matrix = convertCSStoMatrix(getTransformMatrix(style.transform)); // convert 3 to 4
+    var matrix = convertCSStoMatrix(getTransformMatrix(style.transform)); 
 
     var length = matrix.length;
 
@@ -7425,7 +5906,6 @@ function getMatrixStackInfo(target, container, checkContainer) {
         offsetTop = offsetPos[1];
 
     if (tagName === "svg" && targetMatrix) {
-      // scale matrix for svg's SVGElements.
       matrixes.push({
         type: "target",
         target: el,
@@ -7456,7 +5936,6 @@ function getMatrixStackInfo(target, container, checkContainer) {
     var parentClientTop = 0;
 
     if (hasOffset && offsetContainer !== offsetParent) {
-      // border
       parentClientLeft = offsetParent.clientLeft;
       parentClientTop = offsetParent.clientTop;
     }
@@ -7480,7 +5959,6 @@ function getMatrixStackInfo(target, container, checkContainer) {
         matrix: createOriginMatrix([offsetLeft - el.scrollLeft + parentClientLeft, offsetTop - el.scrollTop + parentClientTop], n)
       });
     } else {
-      // svg
       matrixes.push({
         type: "offset",
         target: el,
@@ -7568,15 +6046,6 @@ function calculateElementInfo(target, container, rootContainer, isAbsolute3d) {
     width: width,
     height: height,
     rotation: rotation,
-    // rootMatrix: number[];
-    // beforeMatrix: number[];
-    // offsetMatrix: number[];
-    // allMatrix: number[];
-    // targetMatrix: number[];
-    // targetTransform: string;
-    // transformOrigin: number[];
-    // targetOrigin: number[];
-    // is3d: boolean;
     rootMatrix: createIdentityMatrix(n),
     beforeMatrix: createIdentityMatrix(n),
     offsetMatrix: createIdentityMatrix(n),
@@ -7586,16 +6055,6 @@ function calculateElementInfo(target, container, rootContainer, isAbsolute3d) {
     transformOrigin: [0, 0],
     targetOrigin: [0, 0],
     is3d: !!isAbsolute3d,
-    // left: number;
-    // top: number;
-    // right: number;
-    // bottom: number;
-    // origin: number[];
-    // pos1: number[];
-    // pos2: number[];
-    // pos3: number[];
-    // pos4: number[];
-    // direction: 1 | -1;
     left: 0,
     top: 0,
     right: 0,
@@ -7628,23 +6087,18 @@ function calculateMatrixStack(target, container, rootContainer, isAbsolute3d) {
       prevTargetMatrix = _b.targetMatrix,
       transformOrigin = _b.transformOrigin,
       targetOrigin = _b.targetOrigin,
-      offsetContainer = _b.offsetContainer; // prevMatrix
+      offsetContainer = _b.offsetContainer; 
 
 
   var _c = getMatrixStackInfo(offsetContainer, rootContainer, true),
       rootMatrixes = _c.matrixes,
-      isRoot3d = _c.is3d; // prevRootMatrix
-  // if (rootContainer === document.body) {
-  //     console.log(offsetContainer, rootContainer, rootMatrixes);
-  // }
+      isRoot3d = _c.is3d; 
 
 
   var isNext3d = isAbsolute3d || isRoot3d || is3d;
   var n = isNext3d ? 4 : 3;
   var isSVGGraphicElement = target.tagName.toLowerCase() !== "svg" && "ownerSVGElement" in target;
-  var targetMatrix = prevTargetMatrix; // let allMatrix = prevMatrix ? convertDimension(prevMatrix, prevN!, n) : createIdentityMatrix(n);
-  // let rootMatrix = prevRootMatrix ? convertDimension(prevRootMatrix, prevN!, n) : createIdentityMatrix(n);
-  // let beforeMatrix = prevMatrix ? convertDimension(prevMatrix, prevN!, n) : createIdentityMatrix(n);
+  var targetMatrix = prevTargetMatrix; 
 
   var allMatrix = createIdentityMatrix(n);
   var rootMatrix = createIdentityMatrix(n);
@@ -7661,10 +6115,7 @@ function calculateMatrixStack(target, container, rootContainer, isAbsolute3d) {
 
   if (!isRoot3d && isNext3d) {
     convert3DMatrixes(rootMatrixes);
-  } // rootMatrix = (...) -> container -> offset -> absolute -> offset -> absolute(targetMatrix)
-  // rootMatrixBeforeOffset = lastOffsetMatrix -> (...) -> container
-  // beforeMatrix = (... -> container -> offset -> absolute) -> offset -> absolute(targetMatrix)
-  // offsetMatrix = (... -> container -> offset -> absolute -> offset) -> absolute(targetMatrix)
+  } 
 
 
   rootMatrixes.forEach(function (info) {
@@ -7677,14 +6128,12 @@ function calculateMatrixStack(target, container, rootContainer, isAbsolute3d) {
   }, createIdentityMatrix(n));
   matrixes.forEach(function (info, i) {
     if (length - 2 === i) {
-      // length - 3
       beforeMatrix = allMatrix.slice();
     }
 
     if (length - 1 === i) {
-      // length - 2
       offsetMatrix = allMatrix.slice();
-    } // calculate for SVGElement
+    } 
 
 
     if (!info.matrix) {
@@ -7762,9 +6211,9 @@ function getSVGMatrix(el, n) {
 
   var scaleX = clientWidth / viewBoxWidth;
   var scaleY = clientHeight / viewBoxHeight;
-  var preserveAspectRatio = el.preserveAspectRatio.baseVal; // https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/preserveAspectRatio
+  var preserveAspectRatio = el.preserveAspectRatio.baseVal; 
 
-  var align = preserveAspectRatio.align; // 1 : meet 2: slice
+  var align = preserveAspectRatio.align; 
 
   var meetOrSlice = preserveAspectRatio.meetOrSlice;
   var svgOrigin = [0, 0];
@@ -8529,10 +6978,6 @@ function getDragDistByState(state, dist) {
   return calculateMatrixDist(inverseMatrix, dist);
 }
 
-/**
- * @namespace Moveable.Pinchable
- * @description Whether or not target can be pinched with draggable, resizable, scalable, rotatable (default: false)
- */
 
 var Pinchable = makeAble("pinchable", {
   events: {
@@ -8694,139 +7139,12 @@ var Pinchable = makeAble("pinchable", {
     }));
   }
 });
-/**
- * Whether or not target can be pinched with draggable, resizable, scalable, rotatable (default: false)
- * @name Moveable.Pinchable#pinchable
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.pinchable = true;
- */
 
-/**
- * When the pinch starts, the pinchStart event is called with part of scaleStart, rotateStart, resizeStart
- * @memberof Moveable.Pinchable
- * @event pinchStart
- * @param {Moveable.Pinchable.OnPinchStart} - Parameters for the pinchStart event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     rotatable: true,
- *     scalable: true,
- *     pinchable: true, // ["rotatable", "scalable"]
- * });
- * moveable.on("pinchStart", ({ target }) => {
- *     console.log(target);
- * });
- * moveable.on("rotateStart", ({ target }) => {
- *     console.log(target);
- * });
- * moveable.on("scaleStart", ({ target }) => {
- *     console.log(target);
- * });
- */
 
-/**
- * When pinching, the pinch event is called with part of scale, rotate, resize
- * @memberof Moveable.Pinchable
- * @event pinch
- * @param {Moveable.Pinchable.OnPinch} - Parameters for the pinch event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     rotatable: true,
- *     scalable: true,
- *     pinchable: true, // ["rotatable", "scalable"]
- * });
- * moveable.on("pinch", ({ target }) => {
- *     console.log(target);
- * });
- * moveable.on("rotate", ({ target }) => {
- *     console.log(target);
- * });
- * moveable.on("scale", ({ target }) => {
- *     console.log(target);
- * });
- */
 
-/**
- * When the pinch finishes, the pinchEnd event is called.
- * @memberof Moveable.Pinchable
- * @event pinchEnd
- * @param {Moveable.Pinchable.OnPinchEnd} - Parameters for the pinchEnd event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     rotatable: true,
- *     scalable: true,
- *     pinchable: true, // ["rotatable", "scalable"]
- * });
- * moveable.on("pinchEnd", ({ target }) => {
- *     console.log(target);
- * });
- * moveable.on("rotateEnd", ({ target }) => {
- *     console.log(target);
- * });
- * moveable.on("scaleEnd", ({ target }) => {
- *     console.log(target);
- * });
- */
 
-/**
- * When the group pinch starts, the `pinchGroupStart` event is called.
- * @memberof Moveable.Pinchable
- * @event pinchGroupStart
- * @param {Moveable.Pinchable.OnPinchGroupStart} - Parameters for the `pinchGroupStart` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: [].slice.call(document.querySelectorAll(".target")),
- *     pinchable: true
- * });
- * moveable.on("pinchGroupStart", ({ targets }) => {
- *     console.log("onPinchGroupStart", targets);
- * });
- */
 
-/**
- * When the group pinch, the `pinchGroup` event is called.
- * @memberof Moveable.Pinchable
- * @event pinchGroup
- * @param {Moveable.Pinchable.OnPinchGroup} - Parameters for the `pinchGroup` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: [].slice.call(document.querySelectorAll(".target")),
- *     pinchable: true
- * });
- * moveable.on("pinchGroup", ({ targets, events }) => {
- *     console.log("onPinchGroup", targets);
- * });
- */
 
-/**
- * When the group pinch finishes, the `pinchGroupEnd` event is called.
- * @memberof Moveable.Pinchable
- * @event pinchGroupEnd
- * @param {Moveable.Pinchable.OnPinchGroupEnd} - Parameters for the `pinchGroupEnd` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: [].slice.call(document.querySelectorAll(".target")),
- *     pinchable: true
- * });
- * moveable.on("pinchGroupEnd", ({ targets, isDrag }) => {
- *     console.log("onPinchGroupEnd", targets, isDrag);
- * });
- */
 
 function setCustomDrag(e, state, delta, isPinch, isConvert) {
   var result = state.gesto.move(delta, e.inputEvent);
@@ -8842,7 +7160,6 @@ function setCustomDrag(e, state, delta, isPinch, isConvert) {
 }
 
 var CustomGesto =
-/*#__PURE__*/
 function () {
   function CustomGesto() {
     this.prevX = 0;
@@ -9106,8 +7423,7 @@ function getTransformDist(_a) {
     distY: distY
   }),
       bx = _b[0],
-      by = _b[1]; // B * [tx, ty] * A = [bx, by] * targetMatrix;
-  // [tx, ty] = B-1 * [bx, by] * targetMatrix * A-1 * [0, 0];
+      by = _b[1]; 
 
 
   var res = getTransfromMatrix(datas, fromTranslation([bx, by], 4));
@@ -9118,13 +7434,11 @@ function getTransfromMatrix(datas, targetMatrix, isAfter) {
       afterTransform = datas.afterTransform,
       beforeTransform2 = datas.beforeTransform2,
       afterTransform2 = datas.afterTransform2,
-      targetAllTransform = datas.targetAllTransform; // B * afterTargetMatrix * A = (targetMatrix * targetAllTransform)
-  // afterTargetMatrix = B-1 * targetMatrix * targetAllTransform * A-1
-  // nextTargetMatrix = (targetMatrix * targetAllTransform)
+      targetAllTransform = datas.targetAllTransform; 
 
-  var nextTargetMatrix = isAfter ? multiply(targetAllTransform, targetMatrix, 4) : multiply(targetMatrix, targetAllTransform, 4); // res1 = B-1 * nextTargetMatrix
+  var nextTargetMatrix = isAfter ? multiply(targetAllTransform, targetMatrix, 4) : multiply(targetMatrix, targetAllTransform, 4); 
 
-  var res1 = multiply(invert(isAfter ? beforeTransform2 : beforeTransform, 4), nextTargetMatrix, 4); // res3 = res2 * A-1
+  var res1 = multiply(invert(isAfter ? beforeTransform2 : beforeTransform, 4), nextTargetMatrix, 4); 
 
   var afterTargetMatrix = multiply(res1, invert(isAfter ? afterTransform2 : afterTransform, 4), 4);
   return afterTargetMatrix;
@@ -9132,14 +7446,13 @@ function getTransfromMatrix(datas, targetMatrix, isAfter) {
 function getBeforeDragDist(_a) {
   var datas = _a.datas,
       distX = _a.distX,
-      distY = _a.distY; // TT = BT
+      distY = _a.distY; 
 
   var inverseBeforeMatrix = datas.inverseBeforeMatrix,
       is3d = datas.is3d,
       startDragBeforeDist = datas.startDragBeforeDist,
       absoluteOrigin = datas.absoluteOrigin;
-  var n = is3d ? 4 : 3; // ABS_ORIGIN * [distX, distY] = BM * (ORIGIN + [tx, ty])
-  // BM -1 * ABS_ORIGIN * [distX, distY] - ORIGIN = [tx, ty]
+  var n = is3d ? 4 : 3; 
 
   return minus(calculate(inverseBeforeMatrix, plus(absoluteOrigin, [distX, distY]), n), startDragBeforeDist);
 }
@@ -9195,7 +7508,6 @@ function calculateTransformOrigin(transformOrigin, width, height, prevWidth, pre
     var size = i ? height : width;
 
     if (pos === "%" || isNaN(value)) {
-      // no value but %
       var measureRatio = prevSize ? prevOrigin[i] / prevSize : 0;
       return size * measureRatio;
     } else if (unit !== "%") {
@@ -9231,21 +7543,11 @@ function getPosIndexesByDirection(direction) {
   return indexes;
 }
 function getPosesByDirection(poses, direction) {
-  /*
-  [-1, -1](pos1)       [0, -1](pos1,pos2)       [1, -1](pos2)
-  [-1, 0](pos1, pos3)                           [1, 0](pos2, pos4)
-  [-1, 1](pos3)        [0, 1](pos3, pos4)       [1, 1](pos4)
-  */
   return getPosIndexesByDirection(direction).map(function (index) {
     return poses[index];
   });
 }
 function getPosByDirection(poses, direction) {
-  /*
-  [-1, -1](pos1)       [0, -1](pos1,pos2)       [1, -1](pos2)
-  [-1, 0](pos1, pos3)                           [1, 0](pos2, pos4)
-  [-1, 1](pos3)        [0, 1](pos3, pos4)       [1, 1](pos4)
-  */
   var nextPoses = getPosesByDirection(poses, direction);
   return [utils_esm_average(nextPoses.map(function (pos) {
     return pos[0];
@@ -9254,11 +7556,6 @@ function getPosByDirection(poses, direction) {
   }))];
 }
 function getPosByReverseDirection(poses, direction) {
-  /*
-  [-1, -1](pos4)       [0, -1](pos3,pos4)       [1, -1](pos3)
-  [-1, 0](pos2, pos4)                           [1, 0](pos3, pos1)
-  [-1, 1](pos2)        [0, 1](pos1, pos2)       [1, 1](pos1)
-  */
   return getPosByDirection(poses, direction.map(function (dir) {
     return -dir;
   }));
@@ -9500,7 +7797,7 @@ function getGapGuidelines(moveable, targetRect, snapThreshold) {
     var targetEnd = targetRect[mainNames.end];
     var targetCenter = targetRect[mainNames.center];
     var targetStart2 = targetRect[sideNames.start];
-    var targetEnd2 = targetRect[sideNames.end]; // element : moveable
+    var targetEnd2 = targetRect[sideNames.end]; 
 
     function getDist(elementRect) {
       var rect = elementRect.rect;
@@ -9562,7 +7859,6 @@ function getGapGuidelines(moveable, targetRect, snapThreshold) {
       var isEnd = false;
 
       if (rect1End <= targetStart && targetEnd <= rect2Start) {
-        // (l)element1(r) : (l)target(r) : (l)element2(r)
         isCenter = true;
         gap = (rect2Start - rect1End - (targetEnd - targetStart)) / 2;
         pos = rect1End + gap + (targetEnd - targetStart) / 2;
@@ -9571,7 +7867,6 @@ function getGapGuidelines(moveable, targetRect, snapThreshold) {
           return;
         }
       } else if (rect1End < rect2Start && rect2End < targetStart + snapThreshold) {
-        // (l)element1(r) : (l)element2(r) : (l)target
         isStart = true;
         gap = rect2Start - rect1End;
         pos = rect2End + gap;
@@ -9580,7 +7875,6 @@ function getGapGuidelines(moveable, targetRect, snapThreshold) {
           return;
         }
       } else if (rect1End < rect2Start && targetEnd - snapThreshold < rect1Start) {
-        // target(r) : (l)element1(r) : (l)element2(r)
         isEnd = true;
         gap = rect2Start - rect1End;
         pos = rect1Start - gap;
@@ -9985,7 +8279,6 @@ function checkSnapKeepRatio(moveable, startPos, endPos) {
       verticalInfo.offset = endX - verticalPos;
     }
   } else {
-    // y - y1 = a * (x - x1)
     var a = dy / dx;
     var b = endPos[1] - a * endX;
     var y = 0;
@@ -10162,8 +8455,7 @@ function getNearOffsetInfo(offsets, index) {
     var aSign = a.sign[index];
     var bSign = b.sign[index];
     var aOffset = a.offset[index];
-    var bOffset = b.offset[index]; // -1 The positions of a and b do not change.
-    // 1 The positions of a and b are reversed.
+    var bOffset = b.offset[index]; 
 
     if (!aSign) {
       return 1;
@@ -10190,25 +8482,21 @@ function getCheckSnapDirections(direction, keepRatio) {
     directions.push([fixedDirection, [direction[0], -direction[1]]], [fixedDirection, [-direction[0], direction[1]]]);
 
     if (keepRatio) {
-      // pass two direction condition
       directions.push([fixedDirection, direction]);
     }
   } else if (direction[0]) {
-    // vertcal
     if (keepRatio) {
       directions.push([fixedDirection, [fixedDirection[0], -1]], [fixedDirection, [fixedDirection[0], 1]], [fixedDirection, [direction[0], -1]], [fixedDirection, direction], [fixedDirection, [direction[0], 1]]);
     } else {
       directions.push([[fixedDirection[0], -1], [direction[0], -1]], [[fixedDirection[0], 0], [direction[0], 0]], [[fixedDirection[0], 1], [direction[0], 1]]);
     }
   } else if (direction[1]) {
-    // horizontal
     if (keepRatio) {
       directions.push([fixedDirection, [-1, fixedDirection[1]]], [fixedDirection, [1, fixedDirection[1]]], [fixedDirection, [-1, direction[1]]], [fixedDirection, [1, direction[1]]], [fixedDirection, direction]);
     } else {
       directions.push([[-1, fixedDirection[1]], [-1, direction[1]]], [[0, fixedDirection[1]], [0, direction[1]]], [[1, fixedDirection[1]], [1, direction[1]]]);
     }
   } else {
-    // [0, 0] to all direction
     directions.push([fixedDirection, [1, 0]], [fixedDirection, [-1, 0]], [fixedDirection, [0, -1]], [fixedDirection, [0, 1]], [[1, 0], [1, -1]], [[1, 0], [1, 1]], [[0, 1], [1, 1]], [[0, 1], [-1, 1]], [[-1, 0], [-1, -1]], [[-1, 0], [-1, 1]], [[0, -1], [1, -1]], [[0, -1], [-1, -1]]);
   }
 
@@ -10216,8 +8504,6 @@ function getCheckSnapDirections(direction, keepRatio) {
 }
 
 function isStartLine(dot, line) {
-  // l    o     => true
-  // o    l    => false
   var cx = utils_esm_average([line[0][0], line[1][0]]);
   var cy = utils_esm_average([line[0][1], line[1][1]]);
   return {
@@ -10250,7 +8536,7 @@ function hitTestLine(dot, _a) {
     test1 = pos1[1];
     test2 = dot[1];
   } else {
-    var a = dy / dx; // y = a * (x - pos1) + pos1
+    var a = dy / dx; 
 
     test1 = a * (dot[0] - pos1[0]) + pos1[1];
     test2 = dot[1];
@@ -10278,9 +8564,6 @@ function checkInnerBoundDot(pos, start, end, isStart, threshold) {
   }
 
   if (isStart && start - threshold <= pos || !isStart && pos <= end + threshold) {
-    // false 402 565 602 => 37 ([0, 37])
-    // true 400 524.9712603540036 600 => 124 ([124, 0])
-    // true 400 410 600 => 10 ([10, 0])
     return {
       isBound: true,
       offset: isStart ? start - pos : end - pos
@@ -10327,11 +8610,11 @@ function checkInnerBound(moveable, line, center) {
       isHorizontalBound: false,
       offset: [0, 0]
     };
-  } // test vertical
+  } 
 
 
   var topBoundInfo = checkLineBoundCollision(line, topLine, isVerticalStart);
-  var bottomBoundInfo = checkLineBoundCollision(line, bottomLine, isVerticalStart); // test horizontal
+  var bottomBoundInfo = checkLineBoundCollision(line, bottomLine, isVerticalStart); 
 
   var leftBoundInfo = checkLineBoundCollision(line, leftLine, isHorizontalStart);
   var rightBoundInfo = checkLineBoundCollision(line, rightLine, isHorizontalStart);
@@ -10372,19 +8655,16 @@ function checkLineBoundCollision(line, boundLine, isStart, threshold, isRender) 
   var dy1 = getTinyDist(dot2[1] - dot1[1]);
   var dx1 = getTinyDist(dot2[0] - dot1[0]);
   var dy2 = getTinyDist(boundDot2[1] - boundDot1[1]);
-  var dx2 = getTinyDist(boundDot2[0] - boundDot1[0]); // dx2 or dy2 is zero
+  var dx2 = getTinyDist(boundDot2[0] - boundDot1[0]); 
 
   if (!dx2) {
-    // vertical
     if (isRender && !dy1) {
-      // 90deg
       return {
         isBound: false,
         offset: 0
       };
     } else if (dx1) {
-      // const y = dy1 ? dy1 / dx1 * (boundDot1[0] - dot1[0]) + dot1[1] : dot1[1];
-      var y = dy1 / dx1 * (boundDot1[0] - dot1[0]) + dot1[1]; // boundDot1[1] <= y  <= boundDot2[1]
+      var y = dy1 / dx1 * (boundDot1[0] - dot1[0]) + dot1[1]; 
 
       return checkInnerBoundDot(y, boundDot1[1], boundDot2[1], isStart, threshold);
     } else {
@@ -10396,19 +8676,13 @@ function checkLineBoundCollision(line, boundLine, isStart, threshold, isRender) 
       };
     }
   } else if (!dy2) {
-    // horizontal
     if (isRender && !dx1) {
-      // 90deg
       return {
         isBound: false,
         offset: 0
       };
     } else if (dy1) {
-      // y = a * (x - x1) + y1
-      // x = (y - y1) / a + x1
-      // const a = dy1 / dx1;
-      // const x = dx1 ? (boundDot1[1] - dot1[1]) / a + dot1[0] : dot1[0];
-      var x = (boundDot1[1] - dot1[1]) / (dy1 / dx1) + dot1[0]; // boundDot1[0] <= x && x <= boundDot2[0]
+      var x = (boundDot1[1] - dot1[1]) / (dy1 / dx1) + dot1[0]; 
 
       return checkInnerBoundDot(x, boundDot1[0], boundDot2[0], isStart, threshold);
     } else {
@@ -10502,21 +8776,18 @@ function getCheckSnapLineDirections(direction, keepRatio) {
   if (x && y) {
     lineDirections.push([[0, y * 2], direction, [-x, y]], [[x * 2, 0], direction, [x, -y]]);
   } else if (x) {
-    // vertcal
     lineDirections.push([[x * 2, 0], [x, 1], [x, -1]]);
 
     if (keepRatio) {
       lineDirections.push([[0, -1], [x, -1], [-x, -1]], [[0, 1], [x, 1], [-x, 1]]);
     }
   } else if (y) {
-    // horizontal
     lineDirections.push([[0, y * 2], [1, y], [-1, y]]);
 
     if (keepRatio) {
       lineDirections.push([[-1, 0], [-1, y], [-1, -y]], [[1, 0], [1, y], [1, -y]]);
     }
   } else {
-    // [0, 0] to all direction
     lineDirections.push([[-1, 0], [-1, -1], [-1, 1]], [[1, 0], [1, -1], [1, 1]], [[0, -1], [-1, -1], [1, -1]], [[0, 1], [-1, 1], [1, 1]]);
   }
 
@@ -10544,8 +8815,6 @@ function isBoundRotate(relativePoses, boundDots, center, rad) {
 }
 
 function getDistPointLine(_a) {
-  // x = 0, y = 0
-  // d = (ax + by + c) / root(a2 + b2)
   var pos1 = _a[0],
       pos2 = _a[1];
   var dx = pos2[0] - pos1[0];
@@ -10557,8 +8826,7 @@ function getDistPointLine(_a) {
 
   if (!dy) {
     return Math.abs(pos1[1]);
-  } // y - y1 = a(x - x1)
-  // 0 = ax -y + -a * x1 + y1
+  } 
 
 
   var a = dy / dx;
@@ -10579,12 +8847,9 @@ function solveReverseLine(_a) {
     return [0, pos1[1]];
   }
 
-  var a = dy / dx; // y - y1 = a (x  - x1)
-  // y = ax - a * x1 + y1
+  var a = dy / dx; 
 
-  var b = -a * pos1[0] + pos1[1]; // y = ax + b = -1/a x
-  // x = -b / (a + 1 / a)
-  // y = b / (1 + 1 / a^2)
+  var b = -a * pos1[0] + pos1[1]; 
 
   return [-b / (a + 1 / a), b / (a * a + 1)];
 }
@@ -10678,11 +8943,11 @@ function checkInnerBoundPoses(moveable) {
   lines.forEach(function (line) {
     var _a = isStartLine(center, line),
         isHorizontalStart = _a.horizontal,
-        isVerticalStart = _a.vertical; // test vertical
+        isVerticalStart = _a.vertical; 
 
 
     var topBoundInfo = checkLineBoundCollision(line, topLine, isVerticalStart, 1, true);
-    var bottomBoundInfo = checkLineBoundCollision(line, bottomLine, isVerticalStart, 1, true); // test horizontal
+    var bottomBoundInfo = checkLineBoundCollision(line, bottomLine, isVerticalStart, 1, true); 
 
     var leftBoundInfo = checkLineBoundCollision(line, leftLine, isHorizontalStart, 1, true);
     var rightBoundInfo = checkLineBoundCollision(line, rightLine, isHorizontalStart, 1, true);
@@ -10839,7 +9104,6 @@ function checkBoundKeepRatio(moveable, startPos, endPos) {
       }
     }
   } else {
-    // y - y1 = a * (x - x1)
     var a = dy / dx;
     var b = endPos[1] - a * endX;
     var y = 0;
@@ -10891,9 +9155,8 @@ function checkBoundKeepRatio(moveable, startPos, endPos) {
 }
 
 function checkBounds(bounds, poses, isVertical) {
-  // 0   [100 - 200]  300
   var startBoundPos = bounds[isVertical ? "left" : "top"];
-  var endBoundPos = bounds[isVertical ? "right" : "bottom"]; // 450
+  var endBoundPos = bounds[isVertical ? "right" : "bottom"]; 
 
   var minPos = Math.min.apply(Math, poses);
   var maxPos = Math.max.apply(Math, poses);
@@ -11001,7 +9264,7 @@ function renderGuideline(info, React) {
       zoom = info.zoom,
       key = info.key;
   var isHorizontal = direction === "horizontal";
-  var scaleType = isHorizontal ? "Y" : "X"; // const scaleType2 = isHorizontal ? "Y" : "X";
+  var scaleType = isHorizontal ? "Y" : "X"; 
 
   return React.createElement("div", {
     key: key,
@@ -11054,7 +9317,6 @@ function renderGuidelines(moveable, type, guidelines, targetPos, targetRect, Rea
     }
 
     if (isDisplayInnerSnapDigit && elementRect) {
-      // inner
       var rect = elementRect.rect;
 
       if (rect[mainNames.start] <= targetStart && targetEnd <= rect[mainNames.end]) {
@@ -11165,7 +9427,7 @@ function groupByElementGuidelines(type, guidelines, targetRect, isDisplayInnerSn
           pos: nextPos2,
           size: 0,
           elementRect: elementRect2
-        }); // inner.push(guideline);
+        }); 
       }
     });
     start.sort(function (a, b) {
@@ -11312,8 +9574,6 @@ function solveEquation(pos1, pos2, snapOffset, isVertical) {
   }
 
   if (!dx) {
-    // y = 0 * x + b
-    // only horizontal
     if (!isVertical) {
       return [0, snapOffset];
     }
@@ -11322,24 +9582,21 @@ function solveEquation(pos1, pos2, snapOffset, isVertical) {
   }
 
   if (!dy) {
-    // only vertical
     if (isVertical) {
       return [snapOffset, 0];
     }
 
     return [0, 0];
-  } // y = ax + b
+  } 
 
 
   var a = dy / dx;
   var b = pos1[1] - a * pos1[0];
 
   if (isVertical) {
-    // y = a * x + b
     var y = a * (pos2[0] + snapOffset) + b;
     return [snapOffset, y - pos2[1]];
   } else {
-    // x = (y - b) / a
     var x = (pos2[1] + snapOffset - b) / a;
     return [x - pos2[0], snapOffset];
   }
@@ -11570,10 +9827,7 @@ function checkMoveableSnapBounds(moveable, isRequest, poses, boundPoses) {
 function checkSnapBounds(guideines, bounds, posesX, posesY, snapThreshold) {
   var _a = checkBoundPoses(bounds, posesX, posesY),
       horizontalBoundInfos = _a.horizontal,
-      verticalBoundInfos = _a.vertical; // options.isRequest ? {
-  //     horizontal: { isSnap: false, index: -1 } as SnapInfo,
-  //     vertical: { isSnap: false, index: -1 } as SnapInfo,
-  // } :
+      verticalBoundInfos = _a.vertical; 
 
 
   var _b = checkSnapPoses(guideines, posesX, posesY, snapThreshold),
@@ -11644,12 +9898,10 @@ function getSnapBoundInfo(moveable, poses, directions, keepRatio, isRequest, dat
       horizontal: [otherEndPos[1]]
     });
     var _b = snapBoundInfo.horizontal,
-        // dist: otherHorizontalDist,
     otherHorizontalOffset = _b.offset,
         isOtherHorizontalBound = _b.isBound,
         isOtherHorizontalSnap = _b.isSnap,
         _c = snapBoundInfo.vertical,
-        // dist: otherVerticalDist,
     otherVerticalOffset = _c.offset,
         isOtherVerticalBound = _c.isBound,
         isOtherVerticalSnap = _c.isSnap;
@@ -11923,10 +10175,8 @@ function checkSizeDist(moveable, getNextPoses, width, height, direction, fixedPo
       var isGetWidthOffset = isWidthBound && isHeightBound ? widthDist < heightDist : isHeightBound || !isWidthBound && widthDist < heightDist;
 
       if (isGetWidthOffset) {
-        // width : height = ? : heightOffset
         nextWidthOffset = width * nextHeightOffset / height;
       } else {
-        // width : height = widthOffset : ?
         nextHeightOffset = height * nextWidthOffset / width;
       }
     }
@@ -12085,11 +10335,6 @@ function addBoundGuidelines(moveable, verticalPoses, horizontalPoses, verticalSn
     });
   });
 }
-/**
- * @namespace Moveable.Snappable
- * @description Whether or not target can be snapped to the guideline. (default: false)
- * @sort 2
- */
 
 
 var Snappable = {
@@ -12307,247 +10552,24 @@ var Snappable = {
     state.elementRects = [];
   }
 };
-/**
- * Whether or not target can be snapped to the guideline. (default: false)
- * @name Moveable.Snappable#snappable
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.snappable = true;
- */
 
-/**
- *  A snap container that is the basis for snap, bounds, and innerBounds. (default: null = container)
- * @name Moveable.Snappable#snapContainer
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.querySelector(".container"));
- *
- * moveable.snapContainer = document.body;
- */
 
-/**
- * You can specify the directions to snap to the target. (default: { left: true, top: true, right: true, bottom: true })
- * @name Moveable.Snappable#snapDirections
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *   snappable: true,
- *   snapDirections: true,
- * });
- * // snap center
- * moveable.snapDirections = { left: true, top: true, right: true, bottom: true, center: true, middle: true };
- */
 
-/**
- * You can specify the snap directions of elements. (default: { left: true, top: true, right: true, bottom: true })
- * @name Moveable.Snappable#elementSnapDirections
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *   snappable: true,
- *   elementSnapDirections: true,
- * });
- * // snap center
- * moveable.elementSnapDirections = { left: true, top: true, right: true, bottom: true, center: true, middle: true };
- */
 
-/**
- * When you drag, make the gap snap in the element guidelines. (default: true)
- * @name Moveable.Snappable#snapGap
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *   snappable: true,
- *   snapVertical: true,
- *   snapHorizontal: true,
- *   snapElement: true,
- *   snapGap: true,
- * });
- *
- * moveable.snapGap = false;
- */
 
-/**
- * Distance value that can snap to guidelines. (default: 5)
- * @name Moveable.Snappable#snapThreshold
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.snapThreshold = 5;
- */
 
-/**
- * Add guidelines in the horizontal direction. (default: [])
- * @name Moveable.Snappable#horizontalGuidelines
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.horizontalGuidelines = [100, 200, 500];
- */
 
-/**
- * Add guidelines in the vertical direction. (default: [])
- * @name Moveable.Snappable#verticalGuidelines
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.verticalGuidelines = [100, 200, 500];
- */
 
-/**
- * Add guidelines for the element. (default: [])
- * @name Moveable.Snappable#elementGuidelines
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.elementGuidelines = [
- *   document.querySelector(".element"),
- * ];
- */
 
-/**
- * You can set up boundaries. (default: null)
- * @name Moveable.Snappable#bounds
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.bounds = { left: 0, right: 1000, top: 0, bottom: 1000};
- */
 
-/**
- * You can set up inner boundaries. (default: null)
- * @name Moveable.Snappable#innerBounds
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.innerBounds = { left: 500, top: 500, width: 100, height: 100};
- */
 
-/**
- * snap distance digits (default: 0)
- * @name Moveable.Snappable#snapDigit
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.snapDigit = 0
- */
 
-/**
- * If width size is greater than 0, you can vertical snap to the grid. (default: 0)
- * @name Moveable.Snappable#snapGridWidth
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.snapGridWidth = 5;
- */
 
-/**
- * If height size is greater than 0, you can horizontal snap to the grid. (default: 0)
- * @name Moveable.Snappable#snapGridHeight
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.snapGridHeight = 5;
- */
 
-/**
- * Whether to show snap distance (default: true)
- * @name Moveable.Snappable#isDisplaySnapDigit
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.isDisplaySnapDigit = true;
- */
 
-/**
- * Whether to show element inner snap distance (default: false)
- * @name Moveable.Snappable#isDisplayInnerSnapDigit
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.isDisplayInnerSnapDigit = true;
- */
 
-/**
- * You can set the text format of the distance shown in the guidelines. (default: self)
- * @name Moveable.Snappable#snapDistFormat
- * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Snappable.html#.SnappableOptions}
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *  snappable: true,
- *  snapDistFormat: v => v,
- * });
- * moveable.snapDistFormat = v => `${v}px`;
- */
 
-/**
- * When you drag or dragControl, the `snap` event is called.
- * @memberof Moveable.Snappable
- * @event snap
- * @param {Moveable.Snappable.OnSnap} - Parameters for the `snap` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     snappable: true
- * });
- * moveable.on("snap", e => {
- *     console.log("onSnap", e);
- * });
- */
 
-/**
- * @namespace Draggable
- * @memberof Moveable
- * @description Draggable refers to the ability to drag and move targets.
- */
 
 var Draggable = {
   name: "draggable",
@@ -12724,11 +10746,9 @@ var Draggable = {
     var beforeDelta = minus(beforeDist, prevBeforeDist);
     datas.prevDist = dist;
     datas.prevBeforeDist = beforeDist;
-    datas.passDelta = delta; //distX - (datas.passDistX || 0);
-    // datas.passDeltaY = distY - (datas.passDistY || 0);
+    datas.passDelta = delta; 
 
-    datas.passDist = dist; //distX;
-    // datas.passDistY = distY;
+    datas.passDist = dist; 
 
     var left = datas.left + beforeDist[0];
     var top = datas.top + beforeDist[1];
@@ -12859,37 +10879,6 @@ var Draggable = {
     return isDrag;
   },
 
-  /**
-   * @method Moveable.Draggable#request
-   * @param {object} [e] - the draggable's request parameter
-   * @param {number} [e.x] - x position
-   * @param {number} [e.y] - y position
-   * @param {number} [e.deltaX] - X number to move
-   * @param {number} [e.deltaY] - Y number to move
-   * @return {Moveable.Requester} Moveable Requester
-   * @example
-    * // Instantly Request (requestStart - request - requestEnd)
-   * // Use Relative Value
-   * moveable.request("draggable", { deltaX: 10, deltaY: 10 }, true);
-   * // Use Absolute Value
-   * moveable.request("draggable", { x: 200, y: 100 }, true);
-   *
-   * // requestStart
-   * const requester = moveable.request("draggable");
-   *
-   * // request
-   * // Use Relative Value
-   * requester.request({ deltaX: 10, deltaY: 10 });
-   * requester.request({ deltaX: 10, deltaY: 10 });
-   * requester.request({ deltaX: 10, deltaY: 10 });
-   * // Use Absolute Value
-   * moveable.request("draggable", { x: 200, y: 100 });
-   * moveable.request("draggable", { x: 220, y: 100 });
-   * moveable.request("draggable", { x: 240, y: 100 });
-   *
-   * // requestEnd
-   * requester.requestEnd();
-   */
   request: function (moveable) {
     var datas = {};
     var rect = moveable.getRect();
@@ -12933,152 +10922,15 @@ var Draggable = {
     moveable.state.dragInfo = null;
   }
 };
-/**
- * Whether or not target can be dragged. (default: false)
- * @name Moveable.Draggable#draggable
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.draggable = true;
- */
 
-/**
- * throttle of x, y when drag.
- * @name Moveable.Draggable#throttleDrag
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.throttleDrag = 1;
- */
 
-/**
-* throttle of angle of x, y when drag.
-* @name Moveable.Draggable#throttleDragRotate
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body);
-*
-* moveable.throttleDragRotate = 45;
-*/
 
-/**
-* start angle of throttleDragRotate of x, y when drag.
-* @name Moveable.Draggable#startDragRotate
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body);
-*
-* // 45, 135, 225, 315
-* moveable.throttleDragRotate = 90;
-* moveable.startDragRotate = 45;
-*/
 
-/**
- * When the drag starts, the dragStart event is called.
- * @memberof Moveable.Draggable
- * @event dragStart
- * @param {Moveable.Draggable.OnDragStart} - Parameters for the dragStart event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, { draggable: true });
- * moveable.on("dragStart", ({ target }) => {
- *     console.log(target);
- * });
- */
 
-/**
- * When dragging, the drag event is called.
- * @memberof Moveable.Draggable
- * @event drag
- * @param {Moveable.Draggable.OnDrag} - Parameters for the drag event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, { draggable: true });
- * moveable.on("drag", ({ target, transform }) => {
- *     target.style.transform = transform;
- * });
- */
 
-/**
- * When the drag finishes, the dragEnd event is called.
- * @memberof Moveable.Draggable
- * @event dragEnd
- * @param {Moveable.Draggable.OnDragEnd} - Parameters for the dragEnd event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, { draggable: true });
- * moveable.on("dragEnd", ({ target, isDrag }) => {
- *     console.log(target, isDrag);
- * });
- */
 
-/**
-* When the group drag starts, the `dragGroupStart` event is called.
-* @memberof Moveable.Draggable
-* @event dragGroupStart
-* @param {Moveable.Draggable.OnDragGroupStart} - Parameters for the `dragGroupStart` event
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     target: [].slice.call(document.querySelectorAll(".target")),
-*     draggable: true
-* });
-* moveable.on("dragGroupStart", ({ targets }) => {
-*     console.log("onDragGroupStart", targets);
-* });
-*/
 
-/**
-* When the group drag, the `dragGroup` event is called.
-* @memberof Moveable.Draggable
-* @event dragGroup
-* @param {Moveable.Draggable.OnDragGroup} - Parameters for the `dragGroup` event
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     target: [].slice.call(document.querySelectorAll(".target")),
-*     draggable: true
-* });
-* moveable.on("dragGroup", ({ targets, events }) => {
-*     console.log("onDragGroup", targets);
-*     events.forEach(ev => {
-*          // drag event
-*          console.log("onDrag left, top", ev.left, ev.top);
-*          // ev.target!.style.left = `${ev.left}px`;
-*          // ev.target!.style.top = `${ev.top}px`;
-*          console.log("onDrag translate", ev.dist);
-*          ev.target!.style.transform = ev.transform;)
-*     });
-* });
-*/
 
-/**
- * When the group drag finishes, the `dragGroupEnd` event is called.
- * @memberof Moveable.Draggable
- * @event dragGroupEnd
- * @param {Moveable.Draggable.OnDragGroupEnd} - Parameters for the `dragGroupEnd` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: [].slice.call(document.querySelectorAll(".target")),
- *     draggable: true
- * });
- * moveable.on("dragGroupEnd", ({ targets, isDrag }) => {
- *     console.log("onDragGroupEnd", targets, isDrag);
- * });
- */
 
 function renderDirectionControls(moveable, defaultDirections, React, additionalClassName) {
   if (additionalClassName === void 0) {
@@ -13149,11 +11001,6 @@ function renderDiagonalDirections(moveable, React) {
   return renderDirectionControls(moveable, ["nw", "ne", "sw", "se"], React);
 }
 
-/**
- * @namespace Rotatable
- * @memberof Moveable
- * @description Rotatable indicates whether the target can be rotated.
- */
 
 function setRotateStartInfo(moveable, datas, clientX, clientY, origin, rect) {
   var n = moveable.state.is3d ? 4 : 3;
@@ -13167,7 +11014,7 @@ function setRotateStartInfo(moveable, datas, clientX, clientY, origin, rect) {
 }
 
 function getParentDeg(moveable, moveableRect, datas, parentDist, direction, startValue) {
-  var prevDeg = datas.prevDeg; // const absoluteDeg = startValue + parentDist;
+  var prevDeg = datas.prevDeg; 
 
   var dist = checkSnapRotate(moveable, moveableRect, datas.origin, parentDist);
   datas.prevDeg = dist;
@@ -13182,10 +11029,8 @@ function getDeg(moveable, moveableRect, datas, deg, direction, startValue, throt
       prevLoop = datas.loop;
 
   if (prevDeg > deg && prevDeg > 270 && deg < 90) {
-    // 360 => 0
     ++datas.loop;
   } else if (prevDeg < deg && prevDeg < 90 && deg > 270) {
-    // 0 => 360
     --datas.loop;
   }
 
@@ -13223,14 +11068,7 @@ function getRotationPositions(rotationPosition, _a, direction) {
       dir1 = _b[0],
       dir2 = _b[1];
 
-  var radPoses = [pos1, pos2]; // if (scale[0] < 0) {
-  //     dir1 = getReversePositionX(dir1);
-  //     dir2 = getReversePositionX(dir2);
-  // }
-  // if (scale[1] < 0) {
-  //     dir1 = getReversePositionY(dir1);
-  //     dir2 = getReversePositionY(dir2);
-  // }
+  var radPoses = [pos1, pos2]; 
 
   if (dir1 === "left") {
     radPoses = [pos3, pos1];
@@ -13319,7 +11157,6 @@ var Rotatable = {
         key: "rotation",
         className: prefix("rotation"),
         style: {
-          // tslint:disable-next-line: max-line-length
           transform: "translate(-50%) translate(" + pos[0] + "px, " + pos[1] + "px) rotate(" + rad + "rad)"
         }
       }, React.createElement("div", {
@@ -13613,33 +11450,6 @@ var Rotatable = {
     return isDrag;
   },
 
-  /**
-   * @method Moveable.Rotatable#request
-   * @param {object} [e] - the Resizable's request parameter
-   * @param {number} [e.deltaRotate=0] -  delta number of rotation
-   * @param {number} [e.rotate=0] - absolute number of moveable's rotation
-   * @return {Moveable.Requester} Moveable Requester
-   * @example
-    * // Instantly Request (requestStart - request - requestEnd)
-   * moveable.request("rotatable", { deltaRotate: 10 }, true);
-   *
-   * * moveable.request("rotatable", { rotate: 10 }, true);
-   *
-   * // requestStart
-   * const requester = moveable.request("rotatable");
-   *
-   * // request
-   * requester.request({ deltaRotate: 10 });
-   * requester.request({ deltaRotate: 10 });
-   * requester.request({ deltaRotate: 10 });
-   *
-   * requester.request({ rotate: 10 });
-   * requester.request({ rotate: 20 });
-   * requester.request({ rotate: 30 });
-   *
-   * // requestEnd
-   * requester.requestEnd();
-   */
   request: function (moveable) {
     var datas = {};
     var distRotate = 0;
@@ -13672,146 +11482,15 @@ var Rotatable = {
     };
   }
 };
-/**
- * Whether or not target can be rotated. (default: false)
- * @name Moveable.Rotatable#rotatable
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.rotatable = true;
- */
 
-/**
- * You can specify the position of the rotation. (default: "top")
- * @name Moveable.Rotatable#rotationPosition
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *   rotationPosition: "top",
- * });
- *
- * moveable.rotationPosition = "bottom"
- */
 
-/**
- * throttle of angle(degree) when rotate.
- * @name Moveable.Rotatable#throttleRotate
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.throttleRotate = 1;
- */
 
-/**
- * When the rotate starts, the rotateStart event is called.
- * @memberof Moveable.Rotatable
- * @event rotateStart
- * @param {Moveable.Rotatable.OnRotateStart} - Parameters for the rotateStart event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, { rotatable: true });
- * moveable.on("rotateStart", ({ target }) => {
- *     console.log(target);
- * });
- */
 
-/**
-* When rotating, the rotate event is called.
-* @memberof Moveable.Rotatable
-* @event rotate
-* @param {Moveable.Rotatable.OnRotate} - Parameters for the rotate event
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, { rotatable: true });
-* moveable.on("rotate", ({ target, transform, dist }) => {
-*     target.style.transform = transform;
-* });
-*/
 
-/**
- * When the rotate finishes, the rotateEnd event is called.
- * @memberof Moveable.Rotatable
- * @event rotateEnd
- * @param {Moveable.Rotatable.OnRotateEnd} - Parameters for the rotateEnd event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, { rotatable: true });
- * moveable.on("rotateEnd", ({ target, isDrag }) => {
- *     console.log(target, isDrag);
- * });
- */
 
-/**
- * When the group rotate starts, the `rotateGroupStart` event is called.
- * @memberof Moveable.Rotatable
- * @event rotateGroupStart
- * @param {Moveable.Rotatable.OnRotateGroupStart} - Parameters for the `rotateGroupStart` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: [].slice.call(document.querySelectorAll(".target")),
- *     rotatable: true
- * });
- * moveable.on("rotateGroupStart", ({ targets }) => {
- *     console.log("onRotateGroupStart", targets);
- * });
- */
 
-/**
-* When the group rotate, the `rotateGroup` event is called.
-* @memberof Moveable.Rotatable
-* @event rotateGroup
-* @param {Moveable.Rotatable.OnRotateGroup} - Parameters for the `rotateGroup` event
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     target: [].slice.call(document.querySelectorAll(".target")),
-*     rotatable: true
-* });
-* moveable.on("rotateGroup", ({ targets, events }) => {
-*     console.log("onRotateGroup", targets);
-*     events.forEach(ev => {
-*         const target = ev.target;
-*         // ev.drag is a drag event that occurs when the group rotate.
-*         const left = ev.drag.beforeDist[0];
-*         const top = ev.drag.beforeDist[1];
-*         const deg = ev.beforeDist;
-*     });
-* });
-*/
 
-/**
- * When the group rotate finishes, the `rotateGroupEnd` event is called.
- * @memberof Moveable.Rotatable
- * @event rotateGroupEnd
- * @param {Moveable.Rotatable.OnRotateGroupEnd} - Parameters for the `rotateGroupEnd` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: [].slice.call(document.querySelectorAll(".target")),
- *     rotatable: true
- * });
- * moveable.on("rotateGroupEnd", ({ targets, isDrag }) => {
- *     console.log("onRotateGroupEnd", targets, isDrag);
- * });
- */
 
-/**
- * @namespace Resizable
- * @memberof Moveable
- * @description Resizable indicates whether the target's width and height can be increased or decreased.
- */
 
 var Resizable = {
   name: "resizable",
@@ -14043,15 +11722,12 @@ var Resizable = {
         var signSize = Math.cos(rad - standardRad) * size;
 
         if (!sizeDirection[0]) {
-          // top, bottom
           distHeight = signSize;
           distWidth = distHeight / ratio;
         } else if (!sizeDirection[1]) {
-          // left, right
           distWidth = signSize;
           distHeight = distWidth * ratio;
         } else {
-          // two-way
           var startWidthSize = sizeDirection[0] * 2 * startOffsetWidth;
           var startHeightSize = sizeDirection[1] * 2 * startOffsetHeight;
           var distSize = getDistSize([startWidthSize + dist[0], startHeightSize + dist[1]]) - getDistSize([startWidthSize, startHeightSize]);
@@ -14089,7 +11765,6 @@ var Resizable = {
     var nextHeight = sizeDirection[1] || keepRatio ? Math.max(startOffsetHeight + distHeight, moveable_esm_TINY_NUM) : startOffsetHeight;
 
     if (keepRatio && startOffsetWidth && startOffsetHeight) {
-      // startOffsetWidth : startOffsetHeight = nextWidth : nextHeight
       if (isWidth) {
         nextHeight = nextWidth / ratio;
       } else {
@@ -14338,41 +12013,6 @@ var Resizable = {
     return isDrag;
   },
 
-  /**
-   * @method Moveable.Resizable#request
-   * @param {object} [e] - the Resizable's request parameter
-   * @param {number} [e.direction=[1, 1]] - Direction to resize
-   * @param {number} [e.deltaWidth] - delta number of width
-   * @param {number} [e.deltaHeight] - delta number of height
-   * @param {number} [e.offsetWidth] - offset number of width
-   * @param {number} [e.offsetHeight] - offset number of height
-   * @param {number} [e.isInstant] - Whether to execute the request instantly
-   * @return {Moveable.Requester} Moveable Requester
-   * @example
-    * // Instantly Request (requestStart - request - requestEnd)
-   * // Use Relative Value
-   * moveable.request("resizable", { deltaWidth: 10, deltaHeight: 10 }, true);
-   *
-   * // Use Absolute Value
-   * moveable.request("resizable", { offsetWidth: 100, offsetHeight: 100 }, true);
-   *
-   * // requestStart
-   * const requester = moveable.request("resizable");
-   *
-   * // request
-   * // Use Relative Value
-   * requester.request({ deltaWidth: 10, deltaHeight: 10 });
-   * requester.request({ deltaWidth: 10, deltaHeight: 10 });
-   * requester.request({ deltaWidth: 10, deltaHeight: 10 });
-   *
-   * // Use Absolute Value
-   * moveable.request("resizable", { offsetWidth: 100, offsetHeight: 100 });
-   * moveable.request("resizable", { offsetWidth: 110, offsetHeight: 100 });
-   * moveable.request("resizable", { offsetWidth: 120, offsetHeight: 100 });
-   *
-   * // requestEnd
-   * requester.requestEnd();
-   */
   request: function (moveable) {
     var datas = {};
     var distWidth = 0;
@@ -14413,170 +12053,16 @@ var Resizable = {
     };
   }
 };
-/**
- * Whether or not target can be resized. (default: false)
- * @name Moveable.Resizable#resizable
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     resizable: false,
- * });
- *
- * moveable.resizable = true;
- */
 
-/**
- * throttle of width, height when resize.
- * @name Moveable.Resizable#throttleResize
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *   resizable: true,
- *   throttleResize: 0,
- * });
- *
- * moveable.throttleResize = 1;
- */
 
-/**
- * When resize or scale, keeps a ratio of the width, height. (default: false)
- * @name Moveable.Resizable#keepRatio
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *   resizable: true,
- * });
- *
- * moveable.keepRatio = true;
- */
 
-/**
- * Set directions to show the control box. (default: ["n", "nw", "ne", "s", "se", "sw", "e", "w"])
- * @name Moveable.Resizable#renderDirections
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *   resizable: true,
- *   renderDirections: ["n", "nw", "ne", "s", "se", "sw", "e", "w"],
- * });
- *
- * moveable.renderDirections = ["nw", "ne", "sw", "se"];
- */
 
-/**
- * When the resize starts, the resizeStart event is called.
- * @memberof Moveable.Resizable
- * @event resizeStart
- * @param {Moveable.Resizable.OnResizeStart} - Parameters for the resizeStart event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, { resizable: true });
- * moveable.on("resizeStart", ({ target }) => {
- *     console.log(target);
- * });
- */
 
-/**
- * When resizing, the resize event is called.
- * @memberof Moveable.Resizable
- * @event resize
- * @param {Moveable.Resizable.OnResize} - Parameters for the resize event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, { resizable: true });
- * moveable.on("resize", ({ target, width, height }) => {
- *     target.style.width = `${e.width}px`;
- *     target.style.height = `${e.height}px`;
- * });
- */
 
-/**
- * When the resize finishes, the resizeEnd event is called.
- * @memberof Moveable.Resizable
- * @event resizeEnd
- * @param {Moveable.Resizable.OnResizeEnd} - Parameters for the resizeEnd event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, { resizable: true });
- * moveable.on("resizeEnd", ({ target, isDrag }) => {
- *     console.log(target, isDrag);
- * });
- */
 
-/**
-* When the group resize starts, the `resizeGroupStart` event is called.
-* @memberof Moveable.Resizable
-* @event resizeGroupStart
-* @param {Moveable.Resizable.OnResizeGroupStart} - Parameters for the `resizeGroupStart` event
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     target: [].slice.call(document.querySelectorAll(".target")),
-*     resizable: true
-* });
-* moveable.on("resizeGroupStart", ({ targets }) => {
-*     console.log("onResizeGroupStart", targets);
-* });
-*/
 
-/**
-* When the group resize, the `resizeGroup` event is called.
-* @memberof Moveable.Resizable
-* @event resizeGroup
-* @param {Moveable.Resizable.onResizeGroup} - Parameters for the `resizeGroup` event
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     target: [].slice.call(document.querySelectorAll(".target")),
-*     resizable: true
-* });
-* moveable.on("resizeGroup", ({ targets, events }) => {
-*     console.log("onResizeGroup", targets);
-*     events.forEach(ev => {
-*         const offset = [
-*             direction[0] < 0 ? -ev.delta[0] : 0,
-*             direction[1] < 0 ? -ev.delta[1] : 0,
-*         ];
-*         // ev.drag is a drag event that occurs when the group resize.
-*         const left = offset[0] + ev.drag.beforeDist[0];
-*         const top = offset[1] + ev.drag.beforeDist[1];
-*         const width = ev.width;
-*         const top = ev.top;
-*     });
-* });
-*/
 
-/**
- * When the group resize finishes, the `resizeGroupEnd` event is called.
- * @memberof Moveable.Resizable
- * @event resizeGroupEnd
- * @param {Moveable.Resizable.OnResizeGroupEnd} - Parameters for the `resizeGroupEnd` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: [].slice.call(document.querySelectorAll(".target")),
- *     resizable: true
- * });
- * moveable.on("resizeGroupEnd", ({ targets, isDrag }) => {
- *     console.log("onResizeGroupEnd", targets, isDrag);
- * });
- */
 
-/**
- * @namespace Scalable
- * @memberof Moveable
- * @description Scalable indicates whether the target's x and y can be scale of transform.
- */
 
 var Scalable = {
   name: "scalable",
@@ -14758,15 +12244,11 @@ var Scalable = {
 
       if (keepRatio && width && height) {
         if (!sizeDirection[0]) {
-          // top, bottom
-          // distHeight = signSize;
           distScaleWidth = distScaleHeight * ratio;
         } else if (!sizeDirection[1]) {
-          // left, right
-          // distWidth = signSize;
           distScaleHeight = distScaleWidth / ratio;
         } else {
-          var size = getDistSize([distScaleWidth, distScaleHeight]); // two-way
+          var size = getDistSize([distScaleWidth, distScaleHeight]); 
 
           var dragRad = getRad([0, 0], dragDist);
           var standardRad = getRad([0, 0], sizeDirection);
@@ -14880,9 +12362,6 @@ var Scalable = {
       offsetWidth: width,
       offsetHeight: height,
       direction: direction,
-      // beforeScale,
-      // beforeDist,
-      // beforeDelta,
       scale: scale,
       dist: dist,
       delta: delta,
@@ -15007,28 +12486,6 @@ var Scalable = {
     return isDrag;
   },
 
-  /**
-   * @method Moveable.Scalable#request
-   * @param {object} [e] - the Resizable's request parameter
-   * @param {number} [e.direction=[1, 1]] - Direction to scale
-   * @param {number} [e.deltaWidth] - delta number of width
-   * @param {number} [e.deltaHeight] - delta number of height
-   * @return {Moveable.Requester} Moveable Requester
-   * @example
-    * // Instantly Request (requestStart - request - requestEnd)
-   * moveable.request("scalable", { deltaWidth: 10, deltaHeight: 10 }, true);
-   *
-   * // requestStart
-   * const requester = moveable.request("scalable");
-   *
-   * // request
-   * requester.request({ deltaWidth: 10, deltaHeight: 10 });
-   * requester.request({ deltaWidth: 10, deltaHeight: 10 });
-   * requester.request({ deltaWidth: 10, deltaHeight: 10 });
-   *
-   * // requestEnd
-   * requester.requestEnd();
-   */
   request: function () {
     var datas = {};
     var distWidth = 0;
@@ -15058,155 +12515,15 @@ var Scalable = {
     };
   }
 };
-/**
- * Whether or not target can scaled. (default: false)
- * @name Moveable.Scalable#scalable
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.scalable = true;
- */
 
-/**
- * throttle of scaleX, scaleY when scale.
- * @name Moveable.Scalable#throttleScale
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.throttleScale = 0.1;
- */
 
-/**
- * Set directions to show the control box. (default: ["n", "nw", "ne", "s", "se", "sw", "e", "w"])
- * @name Moveable.Scalable#renderDirections
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     scalable: true,
- *   renderDirections: ["n", "nw", "ne", "s", "se", "sw", "e", "w"],
- * });
- *
- * moveable.renderDirections = ["nw", "ne", "sw", "se"];
- */
 
-/**
- * When resize or scale, keeps a ratio of the width, height. (default: false)
- * @name Moveable.Scalable#keepRatio
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     scalable: true,
- * });
- *
- * moveable.keepRatio = true;
- */
 
-/**
- * When the scale starts, the scaleStart event is called.
- * @memberof Moveable.Scalable
- * @event scaleStart
- * @param {Moveable.Scalable.OnScaleStart} - Parameters for the scaleStart event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, { scalable: true });
- * moveable.on("scaleStart", ({ target }) => {
- *     console.log(target);
- * });
- */
 
-/**
- * When scaling, the scale event is called.
- * @memberof Moveable.Scalable
- * @event scale
- * @param {Moveable.Scalable.OnScale} - Parameters for the scale event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, { scalable: true });
- * moveable.on("scale", ({ target, transform, dist }) => {
- *     target.style.transform = transform;
- * });
- */
 
-/**
- * When the scale finishes, the scaleEnd event is called.
- * @memberof Moveable.Scalable
- * @event scaleEnd
- * @param {Moveable.Scalable.OnScaleEnd} - Parameters for the scaleEnd event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, { scalable: true });
- * moveable.on("scaleEnd", ({ target, isDrag }) => {
- *     console.log(target, isDrag);
- * });
- */
 
-/**
-* When the group scale starts, the `scaleGroupStart` event is called.
-* @memberof Moveable.Scalable
-* @event scaleGroupStart
-* @param {Moveable.Scalable.OnScaleGroupStart} - Parameters for the `scaleGroupStart` event
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     target: [].slice.call(document.querySelectorAll(".target")),
-*     scalable: true
-* });
-* moveable.on("scaleGroupStart", ({ targets }) => {
-*     console.log("onScaleGroupStart", targets);
-* });
-*/
 
-/**
-* When the group scale, the `scaleGroup` event is called.
-* @memberof Moveable.Scalable
-* @event scaleGroup
-* @param {Moveable.Scalable.OnScaleGroup} - Parameters for the `scaleGroup` event
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     target: [].slice.call(document.querySelectorAll(".target")),
-*     scalable: true
-* });
-* moveable.on("scaleGroup", ({ targets, events }) => {
-*     console.log("onScaleGroup", targets);
-*     events.forEach(ev => {
-*         const target = ev.target;
-*         // ev.drag is a drag event that occurs when the group scale.
-*         const left = ev.drag.beforeDist[0];
-*         const top = ev.drag.beforeDist[1];
-*         const scaleX = ev.scale[0];
-*         const scaleY = ev.scale[1];
-*     });
-* });
-*/
 
-/**
- * When the group scale finishes, the `scaleGroupEnd` event is called.
- * @memberof Moveable.Scalable
- * @event scaleGroupEnd
- * @param {Moveable.Scalable.OnScaleGroupEnd} - Parameters for the `scaleGroupEnd` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: [].slice.call(document.querySelectorAll(".target")),
- *     scalable: true
- * });
- * moveable.on("scaleGroupEnd", ({ targets, isDrag }) => {
- *     console.log("onScaleGroupEnd", targets, isDrag);
- * });
- */
 
 function getMiddleLinePos(pos1, pos2) {
   return pos1.map(function (pos, i) {
@@ -15215,7 +12532,6 @@ function getMiddleLinePos(pos1, pos2) {
 }
 
 function getTriangleRad(pos1, pos2, pos3) {
-  // pos1 Rad
   var rad1 = getRad(pos1, pos2);
   var rad2 = getRad(pos1, pos3);
   var rad = rad2 - rad1;
@@ -15233,10 +12549,6 @@ function isValidPos(poses1, poses2) {
 
   return true;
 }
-/**
- * @namespace Moveable.Warpable
- * @description Warpable indicates whether the target can be warped(distorted, bented).
- */
 
 
 var Warpable = {
@@ -15425,10 +12737,10 @@ var Warpable = {
 
     if (!h.length) {
       return false;
-    } // B * A * M
+    } 
 
 
-    var afterMatrix = multiply(targetInverseMatrix, h, 4); // B * M * A
+    var afterMatrix = multiply(targetInverseMatrix, h, 4); 
 
     var matrix = getTransfromMatrix(datas, afterMatrix, true);
     var delta = multiply(invert(prevMatrix, 4), matrix, 4);
@@ -15458,83 +12770,14 @@ var Warpable = {
     return isDrag;
   }
 };
-/**
- * Whether or not target can be warped. (default: false)
- * @name Moveable.Warpable#warpable
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.warpable = true;
- */
 
-/**
-* Set directions to show the control box. (default: ["n", "nw", "ne", "s", "se", "sw", "e", "w"])
-* @name Moveable.Warpable#renderDirections
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     warpable: true,
-*     renderDirections: ["n", "nw", "ne", "s", "se", "sw", "e", "w"],
-* });
-*
-* moveable.renderDirections = ["nw", "ne", "sw", "se"];
-*/
 
-/**
-* When the warp starts, the warpStart event is called.
-* @memberof Moveable.Warpable
-* @event warpStart
-* @param {Moveable.Warpable.OnWarpStart} - Parameters for the warpStart event
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, { warpable: true });
-* moveable.on("warpStart", ({ target }) => {
-*     console.log(target);
-* });
-*/
 
-/**
- * When warping, the warp event is called.
- * @memberof Moveable.Warpable
- * @event warp
- * @param {Moveable.Warpable.OnWarp} - Parameters for the warp event
- * @example
- * import Moveable from "moveable";
- * let matrix = [
- *  1, 0, 0, 0,
- *  0, 1, 0, 0,
- *  0, 0, 1, 0,
- *  0, 0, 0, 1,
- * ];
- * const moveable = new Moveable(document.body, { warpable: true });
- * moveable.on("warp", ({ target, transform, delta, multiply }) => {
- *    // target.style.transform = transform;
- *    matrix = multiply(matrix, delta);
- *    target.style.transform = `matrix3d(${matrix.join(",")})`;
- * });
- */
 
-/**
- * When the warp finishes, the warpEnd event is called.
- * @memberof Moveable.Warpable
- * @event warpEnd
- * @param {Moveable.Warpable.OnWarpEnd} - Parameters for the warpEnd event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, { warpable: true });
- * moveable.on("warpEnd", ({ target, isDrag }) => {
- *     console.log(target, isDrag);
- * });
- */
 
-var AREA_PIECES = /*#__PURE__*/prefix("area-pieces");
-var AREA_PIECE = /*#__PURE__*/prefix("area-piece");
-var AVOID = /*#__PURE__*/prefix("avoid");
+var AREA_PIECES = prefix("area-pieces");
+var AREA_PIECE = prefix("area-piece");
+var AVOID = prefix("avoid");
 
 function restoreStyle(moveable) {
   var el = moveable.areaElement;
@@ -15723,27 +12966,7 @@ var DragArea = {
     }
   }
 };
-/**
- * Add an event to the moveable area instead of the target for stopPropagation. (default: false, true in group)
- * @name Moveable#dragArea
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *  dragArea: false,
- * });
- */
 
-/**
- * Set `pointerEvents: none;` css to pass events in dragArea. (default: false)
- * @name Moveable#passDragArea
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *  dragArea: false,
- * });
- */
 
 var Origin = makeAble("origin", {
   render: function (moveable, React) {
@@ -15758,25 +12981,11 @@ var Origin = makeAble("origin", {
     })];
   }
 });
-/**
- * Whether or not the origin controlbox will be visible or not (default: true)
- * @name Moveable#origin
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- *
- * moveable.origin = true;
- */
 
 function moveable_esm_getDefaultScrollPosition(e) {
   var scrollContainer = e.scrollContainer;
   return [scrollContainer.scrollLeft, scrollContainer.scrollTop];
 }
-/**
- * @namespace Moveable.Scrollable
- * @description Whether or not target can be scrolled to the scroll container (default: false)
- */
 
 
 var Scrollable = {
@@ -15901,98 +13110,11 @@ var Scrollable = {
     }));
   }
 };
-/**
- * Whether or not target can be scrolled to the scroll container (default: false)
- * @name Moveable.Scrollable#scrollable
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *   scrollable: true,
- *   scrollContainer: document.body,
- *   scrollThreshold: 0,
- *   getScrollPosition: ({ scrollContainer }) => ([scrollContainer.scrollLeft, scrollContainer.scrollTop]),
- * });
- *
- * moveable.scrollable = true;
- */
 
-/**
- * The container to which scroll is applied (default: container)
- * @name Moveable.Scrollable#scrollContainer
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *   scrollable: true,
- *   scrollContainer: document.body,
- *   scrollThreshold: 0,
- *   getScrollPosition: ({ scrollContainer }) => ([scrollContainer.scrollLeft, scrollContainer.scrollTop]),
- * });
- */
 
-/**
- * Expand the range of the scroll check area. (default: 0)
- * @name Moveable.Scrollable#scrollThreshold
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *   scrollable: true,
- *   scrollContainer: document.body,
- *   scrollThreshold: 0,
- *   getScrollPosition: ({ scrollContainer }) => ([scrollContainer.scrollLeft, scrollContainer.scrollTop]),
- * });
- */
 
-/**
- * Sets a function to get the scroll position. (default: Function)
- * @name Moveable.Scrollable#getScrollPosition
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *   scrollable: true,
- *   scrollContainer: document.body,
- *   scrollThreshold: 0,
- *   getScrollPosition: ({ scrollContainer }) => ([scrollContainer.scrollLeft, scrollContainer.scrollTop]),
- * });
- *
- */
 
-/**
- * When the drag cursor leaves the scrollContainer, the `scroll` event occur to scroll.
- * @memberof Moveable.Scrollable
- * @event scroll
- * @param {Moveable.Scrollable.OnScroll} - Parameters for the `scroll` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: document.querySelector(".target"),
- * });
- * moveable.on("scroll", ({ scrollContainer, direction }) => {
- *   scrollContainer.scrollLeft += direction[0] * 10;
- *   scrollContainer.scrollTop += direction[1] * 10;
- * });
- */
 
-/**
- * When the drag cursor leaves the scrollContainer, the `scrollGroup` event occur to scroll in group.
- * @memberof Moveable.Scrollable
- * @event scrollGroup
- * @param {Moveable.Scrollable.OnScrollGroup} - Parameters for the `scrollGroup` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: [].slice.call(document.querySelectorAll(".target")),
- * });
- * moveable.on("scroll", ({ scrollContainer, direction }) => {
- *   scrollContainer.scrollLeft += direction[0] * 10;
- *   scrollContainer.scrollTop += direction[1] * 10;
- * });
- */
 
 var Default = {
   name: "",
@@ -16085,19 +13207,6 @@ var Padding = makeAble("padding", {
     });
   }
 });
-/**
- * Add padding around the target to increase the drag area. (default: null)
- * @name Moveable#padding
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *  target: document.querySelector(".target"),
- *  padding: { left: 0, top: 0, right: 0, bottom: 0 },
- * });
- * moveable.padding = { left: 10, top: 10, right: 10, bottom: 10 },
- * moveable.updateRect();
- */
 
 var RADIUS_DIRECTIONS = ["nw", "ne", "se", "sw"];
 
@@ -16158,7 +13267,6 @@ function getRadiusStyles(poses, controlPoses, isRelative, width, height, left, t
   };
 }
 function getRadiusRange(controlPoses) {
-  // [start, length]
   var horizontalRange = [0, 0];
   var verticalRange = [0, 0];
   var length = controlPoses.length;
@@ -16386,8 +13494,7 @@ function splitRadiusPoses(controlPoses, raws) {
 }
 
 var CLIP_DIRECTIONS = [[0, -1, "n"], [1, 0, "e"]];
-var CLIP_RECT_DIRECTIONS = [[-1, -1, "nw"], [0, -1, "n"], [1, -1, "ne"], [1, 0, "e"], [1, 1, "se"], [0, 1, "s"], [-1, 1, "sw"], [-1, 0, "w"]]; // 1 2 5 6 0 3 4 7
-// 0 1 2 3 4 5 6 7
+var CLIP_RECT_DIRECTIONS = [[-1, -1, "nw"], [0, -1, "n"], [1, -1, "ne"], [1, 0, "e"], [1, 1, "se"], [0, 1, "s"], [-1, 1, "sw"], [-1, 0, "w"]]; 
 
 function getClipStyles(moveable, clipPath, poses) {
   var clipRelative = moveable.props.clipRelative;
@@ -16596,7 +13703,6 @@ function getClipPath(target, width, height, defaultClip, customClip) {
       splitter: splitter
     };
   } else if (clipPrefix === "rect") {
-    // top right bottom left
     var values = splitComma(value || "0px, " + width + "px, " + height + "px, 0px");
     splitter = ",";
 
@@ -16710,10 +13816,6 @@ function removeClipPath(moveable, e) {
     distY: 0
   }));
 }
-/**
- * @namespace Moveable.Clippable
- * @description Whether to clip the target.
- */
 
 
 var Clippable = {
@@ -16772,7 +13874,6 @@ var Clippable = {
     var type = clipPath.type;
     var clipPoses = clipPath.poses;
     var poses = clipPoses.map(function (pos) {
-      // return [x, y];
       var calculatedPos = calculatePosition(allMatrix, pos.pos, n);
       return [calculatedPos[0] - left, calculatedPos[1] - top];
     });
@@ -17058,16 +14159,16 @@ var Clippable = {
       var rx = Math.abs(isEllipse ? guideRect.right - guideRect.left : ry);
       var bottom = nextPoses[0][1] + ry;
       var left = nextPoses[0][0] - rx;
-      var right = nextPoses[0][0] + rx; // right
+      var right = nextPoses[0][0] + rx; 
 
       if (isCircle) {
         guidePoses.push([right, guideRect.bottom]);
         dists.push([1, 0]);
-      } // bottom
+      } 
 
 
       guidePoses.push([guideRect.left, bottom]);
-      dists.push([0, 1]); // left
+      dists.push([0, 1]); 
 
       guidePoses.push([left, guideRect.bottom]);
       dists.push([1, 0]);
@@ -17243,7 +14344,6 @@ var Clippable = {
       if (isControl) {
         removeClipPath(moveable, e);
       } else if (isLine) {
-        // add
         addClipPath(moveable, e);
       }
     }
@@ -17255,345 +14355,19 @@ var Clippable = {
     moveable.state.snapBoundInfos = null;
   }
 };
-/**
- * Whether to clip the target. (default: false)
- * @name Moveable.Clippable#clippable
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     clippable: true,
- *     defaultClipPath: "inset",
- *     customClipPath: "",
- *     clipRelative: false,
- *     clipArea: false,
- *     dragWithClip: true,
- * });
- * moveable.on("clipStart", e => {
- *     console.log(e);
- * }).on("clip", e => {
- *     if (e.clipType === "rect") {
- *         e.target.style.clip = e.clipStyle;
- *     } else {
- *         e.target.style.clipPath = e.clipStyle;
- *     }
- * }).on("clipEnd", e => {
- *     console.log(e);
- * });
- */
 
-/**
- *  If clippath is not set, the default value can be set. (defaultClipPath < style < customClipPath < dragging clipPath)
- * @name Moveable.Clippable#defaultClipPath
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     clippable: true,
- *     defaultClipPath: "inset",
- *     customClipPath: "",
- *     clipRelative: false,
- *     clipArea: false,
- *     dragWithClip: true,
- * });
- * moveable.on("clipStart", e => {
- *     console.log(e);
- * }).on("clip", e => {
- *     if (e.clipType === "rect") {
- *         e.target.style.clip = e.clipStyle;
- *     } else {
- *         e.target.style.clipPath = e.clipStyle;
- *     }
- * }).on("clipEnd", e => {
- *     console.log(e);
- * });
- */
 
-/**
- * % Can be used instead of the absolute px (`rect` not possible) (default: false)
- * @name Moveable.Clippable#clipRelative
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     clippable: true,
- *     defaultClipPath: "inset",
- *     customClipPath: "",
- *     clipRelative: false,
- *     clipArea: false,
- *     dragWithClip: true,
- * });
- * moveable.on("clipStart", e => {
- *     console.log(e);
- * }).on("clip", e => {
- *     if (e.clipType === "rect") {
- *         e.target.style.clip = e.clipStyle;
- *     } else {
- *         e.target.style.clipPath = e.clipStyle;
- *     }
- * }).on("clipEnd", e => {
- *     console.log(e);
- * });
- */
 
-/**
- * You can force the custom clipPath. (defaultClipPath < style < customClipPath < dragging clipPath)
- * @name Moveable.Clippable#customClipPath
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     clippable: true,
- *     defaultClipPath: "inset",
- *     customClipPath: "",
- *     clipRelative: false,
- *     clipArea: false,
- *     dragWithClip: true,
- * });
- * moveable.on("clipStart", e => {
- *     console.log(e);
- * }).on("clip", e => {
- *     if (e.clipType === "rect") {
- *         e.target.style.clip = e.clipStyle;
- *     } else {
- *         e.target.style.clipPath = e.clipStyle;
- *     }
- * }).on("clipEnd", e => {
- *     console.log(e);
- * });
- */
 
-/**
- * When dragging the target, the clip also moves. (default: true)
- * @name Moveable.Clippable#dragWithClip
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     clippable: true,
- *     defaultClipPath: "inset",
- *     customClipPath: "",
- *     clipRelative: false,
- *     clipArea: false,
- *     dragWithClip: true,
- * });
- * moveable.on("clipStart", e => {
- *     console.log(e);
- * }).on("clip", e => {
- *     if (e.clipType === "rect") {
- *         e.target.style.clip = e.clipStyle;
- *     } else {
- *         e.target.style.clipPath = e.clipStyle;
- *     }
- * }).on("clipEnd", e => {
- *     console.log(e);
- * });
- */
 
-/**
- * You can drag the clip by setting clipArea. (default: false)
- * @name Moveable.Clippable#clipArea
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     clippable: true,
- *     defaultClipPath: "inset",
- *     customClipPath: "",
- *     clipRelative: false,
- *     clipArea: false,
- *     dragWithClip: true,
- * });
- * moveable.on("clipStart", e => {
- *     console.log(e);
- * }).on("clip", e => {
- *     if (e.clipType === "rect") {
- *         e.target.style.clip = e.clipStyle;
- *     } else {
- *         e.target.style.clipPath = e.clipStyle;
- *     }
- * }).on("clipEnd", e => {
- *     console.log(e);
- * });
- */
 
-/**
-* Whether the clip is bound to the target. (default: false)
-* @name Moveable.Clippable#clipTargetBounds
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     clippable: true,
-*     defaultClipPath: "inset",
-*     customClipPath: "",
-*     clipRelative: false,
-*     clipArea: false,
-*     dragWithClip: true,
-*     clipTargetBounds: true,
-* });
-* moveable.on("clipStart", e => {
-*     console.log(e);
-* }).on("clip", e => {
-*     if (e.clipType === "rect") {
-*         e.target.style.clip = e.clipStyle;
-*     } else {
-*         e.target.style.clipPath = e.clipStyle;
-*     }
-* }).on("clipEnd", e => {
-*     console.log(e);
-* });
-*/
 
-/**
-* Add clip guidelines in the vertical direction. (default: [])
-* @name Moveable.Clippable#clipVerticalGuidelines
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     clippable: true,
-*     defaultClipPath: "inset",
-*     customClipPath: "",
-*     clipRelative: false,
-*     clipArea: false,
-*     dragWithClip: true,
-*     clipVerticalGuidelines: [0, 100, 200],
-*     clipHorizontalGuidelines: [0, 100, 200],
-*     clipSnapThreshold: 5,
-* });
-*/
 
-/**
-* Add clip guidelines in the horizontal direction. (default: [])
-* @name Moveable.Clippable#clipHorizontalGuidelines
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     clippable: true,
-*     defaultClipPath: "inset",
-*     customClipPath: "",
-*     clipRelative: false,
-*     clipArea: false,
-*     dragWithClip: true,
-*     clipVerticalGuidelines: [0, 100, 200],
-*     clipHorizontalGuidelines: [0, 100, 200],
-*     clipSnapThreshold: 5,
-* });
-*/
 
-/**
-* istance value that can snap to clip guidelines. (default: 5)
-* @name Moveable.Clippable#clipSnapThreshold
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     clippable: true,
-*     defaultClipPath: "inset",
-*     customClipPath: "",
-*     clipRelative: false,
-*     clipArea: false,
-*     dragWithClip: true,
-*     clipVerticalGuidelines: [0, 100, 200],
-*     clipHorizontalGuidelines: [0, 100, 200],
-*     clipSnapThreshold: 5,
-* });
-*/
 
-/**
- * When drag start the clip area or controls, the `clipStart` event is called.
- * @memberof Moveable.Clippable
- * @event clipStart
- * @param {Moveable.Clippable.OnClipStart} - Parameters for the `clipStart` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     clippable: true,
- *     defaultClipPath: "inset",
- *     customClipPath: "",
- *     clipRelative: false,
- *     clipArea: false,
- *     dragWithClip: true,
- * });
- * moveable.on("clipStart", e => {
- *     console.log(e);
- * }).on("clip", e => {
- *     if (e.clipType === "rect") {
- *         e.target.style.clip = e.clipStyle;
- *     } else {
- *         e.target.style.clipPath = e.clipStyle;
- *     }
- * }).on("clipEnd", e => {
- *     console.log(e);
- * });
- */
 
-/**
- * When drag the clip area or controls, the `clip` event is called.
- * @memberof Moveable.Clippable
- * @event clip
- * @param {Moveable.Clippable.OnClip} - Parameters for the `clip` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     clippable: true,
- *     defaultClipPath: "inset",
- *     customClipPath: "",
- *     clipRelative: false,
- *     clipArea: false,
- *     dragWithClip: true,
- * });
- * moveable.on("clipStart", e => {
- *     console.log(e);
- * }).on("clip", e => {
- *     if (e.clipType === "rect") {
- *         e.target.style.clip = e.clipStyle;
- *     } else {
- *         e.target.style.clipPath = e.clipStyle;
- *     }
- * }).on("clipEnd", e => {
- *     console.log(e);
- * });
- */
 
-/**
- * When drag end the clip area or controls, the `clipEnd` event is called.
- * @memberof Moveable.Clippable
- * @event clipEnd
- * @param {Moveable.Clippable.OnClipEnd} - Parameters for the `clipEnd` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     clippable: true,
- *     defaultClipPath: "inset",
- *     customClipPath: "",
- *     clipRelative: false,
- *     clipArea: false,
- *     dragWithClip: true,
- * });
- * moveable.on("clipStart", e => {
- *     console.log(e);
- * }).on("clip", e => {
- *     if (e.clipType === "rect") {
- *         e.target.style.clip = e.clipStyle;
- *     } else {
- *         e.target.style.clipPath = e.clipStyle;
- *     }
- * }).on("clipEnd", e => {
- *     console.log(e);
- * });
- */
 
-/**
- * @namespace OriginDraggable
- * @memberof Moveable
- * @description Whether to drag origin (default: false)
- */
 
 var OriginDraggable = {
   name: "originDraggable",
@@ -17719,42 +14493,6 @@ var OriginDraggable = {
     return true;
   },
 
-  /**
-  * @method Moveable.OriginDraggable#request
-  * @param {object} e - the OriginDraggable's request parameter
-  * @param {number} [e.x] - x position
-  * @param {number} [e.y] - y position
-  * @param {number} [e.deltaX] - x number to move
-  * @param {number} [e.deltaY] - y number to move
-  * @param {array} [e.deltaOrigin] - left, top number to move transform-origin
-  * @param {array} [e.origin] - transform-origin position
-  * @param {number} [e.isInstant] - Whether to execute the request instantly
-  * @return {Moveable.Requester} Moveable Requester
-  * @example
-   * // Instantly Request (requestStart - request - requestEnd)
-  * // Use Relative Value
-  * moveable.request("originDraggable", { deltaX: 10, deltaY: 10 }, true);
-  * // Use Absolute Value
-  * moveable.request("originDraggable", { x: 200, y: 100 }, true);
-  * // Use Transform Value
-  * moveable.request("originDraggable", { deltaOrigin: [10, 0] }, true);
-  * moveable.request("originDraggable", { origin: [100, 0] }, true);
-  * // requestStart
-  * const requester = moveable.request("originDraggable");
-  *
-  * // request
-  * // Use Relative Value
-  * requester.request({ deltaX: 10, deltaY: 10 });
-  * requester.request({ deltaX: 10, deltaY: 10 });
-  * requester.request({ deltaX: 10, deltaY: 10 });
-  * // Use Absolute Value
-  * moveable.request("originDraggable", { x: 200, y: 100 });
-  * moveable.request("originDraggable", { x: 220, y: 100 });
-  * moveable.request("originDraggable", { x: 240, y: 100 });
-  *
-  * // requestEnd
-  * requester.requestEnd();
-  */
   request: function (moveable) {
     var datas = {};
     var rect = moveable.getRect();
@@ -17806,112 +14544,10 @@ var OriginDraggable = {
     };
   }
 };
-/**
- * Whether to drag origin (default: false)
- * @name Moveable.OriginDraggable#originDraggable
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     originDraggable: true,
- * });
- * let translate = [0, 0];
- * moveable.on("dragOriginStart", e => {
- *     e.dragStart && e.dragStart.set(translate);
- * }).on("dragOrigin", e => {
- *     translate = e.drag.beforeTranslate;
- *     e.target.style.cssText
- *         = `transform-origin: ${e.transformOrigin};`
- *         + `transform: translate(${translate[0]}px, ${translate[1]}px)`;
- * }).on("dragOriginEnd", e => {
- *     console.log(e);
- * });
- */
 
-/**
- * % Can be used instead of the absolute px (default: true)
- * @name Moveable.OriginDraggable#originRelative
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     originDraggable: true,
- *     originRelative: false,
- * });
- * moveable.originRelative = true;
- */
 
-/**
-* When drag start the origin, the `dragOriginStart` event is called.
-* @memberof Moveable.OriginDraggable
-* @event dragOriginStart
-* @param {Moveable.OriginDraggable.OnDragOriginStart} - Parameters for the `dragOriginStart` event
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     originDraggable: true,
-* });
-* let translate = [0, 0];
-* moveable.on("dragOriginStart", e => {
-*     e.dragStart && e.dragStart.set(translate);
-* }).on("dragOrigin", e => {
-*     translate = e.drag.beforeTranslate;
-*     e.target.style.cssText
-*         = `transform-origin: ${e.transformOrigin};`
-*         + `transform: translate(${translate[0]}px, ${translate[1]}px)`;
-* }).on("dragOriginEnd", e => {
-*     console.log(e);
-* });
-*/
 
-/**
-* When drag the origin, the `dragOrigin` event is called.
-* @memberof Moveable.OriginDraggable
-* @event dragOrigin
-* @param {Moveable.OriginDraggable.OnDragOrigin} - Parameters for the `dragOrigin` event
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     originDraggable: true,
-* });
-* let translate = [0, 0];
-* moveable.on("dragOriginStart", e => {
-*     e.dragStart && e.dragStart.set(translate);
-* }).on("dragOrigin", e => {
-*     translate = e.drag.beforeTranslate;
-*     e.target.style.cssText
-*         = `transform-origin: ${e.transformOrigin};`
-*         + `transform: translate(${translate[0]}px, ${translate[1]}px)`;
-* }).on("dragOriginEnd", e => {
-*     console.log(e);
-* });
-*/
 
-/**
-* When drag end the origin, the `dragOriginEnd` event is called.
-* @memberof Moveable.OriginDraggable
-* @event dragOriginEnd
-* @param {Moveable.OriginDraggable.OnDragOriginEnd} - Parameters for the `dragOriginEnd` event
-* @example
-* import Moveable from "moveable";
-*
-* const moveable = new Moveable(document.body, {
-*     originDraggable: true,
-* });
-* let translate = [0, 0];
-* moveable.on("dragOriginStart", e => {
-*     e.dragStart && e.dragStart.set(translate);
-* }).on("dragOrigin", e => {
-*     translate = e.drag.beforeTranslate;
-*     e.target.style.cssText
-*         = `transform-origin: ${e.transformOrigin};`
-*         + `transform: translate(${translate[0]}px, ${translate[1]}px)`;
-* }).on("dragOriginEnd", e => {
-*     console.log(e);
-* });
-*/
 
 function addBorderRadius(controlPoses, poses, lineIndex, distX, distY, width, height) {
   var _a = splitRadiusPoses(controlPoses),
@@ -17919,19 +14555,7 @@ function addBorderRadius(controlPoses, poses, lineIndex, distX, distY, width, he
       verticals = _a.verticals;
 
   var horizontalsLength = horizontals.length;
-  var verticalsLength = verticals.length; // lineIndex
-  // 0 top
-  // 1 right
-  // 2 left
-  // 3 bottom
-  // 0 top - left
-  // 1 top - right
-  // 2 bottom - right
-  // 3 bottom - left
-  // 0 left - top
-  // 1 right - top
-  // 2 right - bottom
-  // 3 left - bottom
+  var verticalsLength = verticals.length; 
 
   var horizontalIndex = -1;
   var verticalIndex = -1;
@@ -18016,10 +14640,6 @@ function triggerRoundEvent(moveable, e, dist, delta, controlPoses, nextPoses) {
     dist: dist
   }));
 }
-/**
- * @namespace Moveable.Roundable
- * @description Whether to show and drag or double click border-radius
- */
 
 
 var Roundable = {
@@ -18156,11 +14776,7 @@ var Roundable = {
         height = _c.height;
     var selectedControlPose = controlPoses[index];
     var selectedVertical = selectedControlPose.vertical;
-    var selectedHorizontal = selectedControlPose.horizontal; // 0: [0, 1, 2, 3] maxCount === 1
-    // 0: [0, 2] maxCount === 2
-    // 1: [1, 3] maxCount === 2
-    // 0: [0] maxCount === 3
-    // 1: [1, 3] maxCount === 3
+    var selectedHorizontal = selectedControlPose.horizontal; 
 
     var dists = controlPoses.map(function (pose) {
       var horizontal = pose.horizontal,
@@ -18242,148 +14858,13 @@ var Roundable = {
     moveable.state.borderRadiusState = "";
   }
 };
-/**
- * Whether to show and drag or double click border-radius, (default: false)
- * @name Moveable.Roundable#roundable
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     roundable: true,
- *     roundRelative: false,
- * });
- * moveable.on("roundStart", e => {
- *     console.log(e);
- * }).on("round", e => {
- *     e.target.style.borderRadius = e.borderRadius;
- * }).on("roundEnd", e => {
- *     console.log(e);
- * });
- */
 
-/**
- * % Can be used instead of the absolute px
- * @name Moveable.Roundable#roundRelative
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     roundable: true,
- *     roundRelative: false,
- * });
- * moveable.on("roundStart", e => {
- *     console.log(e);
- * }).on("round", e => {
- *     e.target.style.borderRadius = e.borderRadius;
- * }).on("roundEnd", e => {
- *     console.log(e);
- * });
- */
 
-/**
- * Minimum number of round controls. It moves in proportion by control. [horizontal, vertical] (default: [0, 0])
- * @name Moveable.Roundable#minRoundControls
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     roundable: true,
- *     roundRelative: false,
- *     minRoundControls: [0, 0],
- * });
- * moveable.maxRoundControls = [1, 0];
- */
 
-/**
- * Maximum number of round controls. It moves in proportion by control. [horizontal, vertical] (default: [4, 4])
- * @name Moveable.Roundable#maxRoundControls
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     roundable: true,
- *     roundRelative: false,
- *     maxRoundControls: [4, 4],
- * });
- * moveable.maxRoundControls = [1, 0];
- */
 
-/**
- * @property - Whether you can add/delete round controls by double-clicking a line or control. (default: true)
- * @name Moveable.Roundable#roundClickable
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     roundable: true,
- *     roundRelative: false,
- *     roundClickable: true,
- * });
- * moveable.roundClickable = false;
- */
 
-/**
- * When drag start the clip area or controls, the `roundStart` event is called.
- * @memberof Moveable.Roundable
- * @event roundStart
- * @param {Moveable.Roundable.OnRoundStart} - Parameters for the `roundStart` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     roundable: true,
- *     roundRelative: false,
- * });
- * moveable.on("roundStart", e => {
- *     console.log(e);
- * }).on("round", e => {
- *     e.target.style.borderRadius = e.borderRadius;
- * }).on("roundEnd", e => {
- *     console.log(e);
- * });
- */
 
-/**
- * When drag or double click the border area or controls, the `round` event is called.
- * @memberof Moveable.Roundable
- * @event round
- * @param {Moveable.Roundable.OnRound} - Parameters for the `round` event
- * @example
-  * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     roundable: true,
- *     roundRelative: false,
- * });
- * moveable.on("roundStart", e => {
- *     console.log(e);
- * }).on("round", e => {
- *     e.target.style.borderRadius = e.borderRadius;
- * }).on("roundEnd", e => {
- *     console.log(e);
- * });
- */
 
-/**
- * When drag end the border area or controls, the `roundEnd` event is called.
- * @memberof Moveable.Roundable
- * @event roundEnd
- * @param {Moveable.Roundable.onRoundEnd} - Parameters for the `roundEnd` event
- * @example
-  * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     roundable: true,
- *     roundRelative: false,
- * });
- * moveable.on("roundStart", e => {
- *     console.log(e);
- * }).on("round", e => {
- *     e.target.style.borderRadius = e.borderRadius;
- * }).on("roundEnd", e => {
- *     console.log(e);
- * });
- */
 
 function isIdentityMatrix(matrix, is3d) {
   var value = is3d ? "matrix3d(" + createIdentityMatrix(4) : "matrix(" + createIdentityMatrix(3) + ")";
@@ -18621,7 +15102,7 @@ function triggerAble(moveable, ableType, eventOperation, eventAffix, eventType, 
 
   if (!target || isStart && eventAffix.indexOf("Control") > -1 && !isRequest && moveable.areaElement === e.inputEvent.target) {
     return false;
-  } // "drag" "Control" "After"
+  } 
 
 
   var eventName = "" + eventOperation + eventAffix + eventType;
@@ -18636,7 +15117,7 @@ function triggerAble(moveable, ableType, eventOperation, eventAffix, eventType, 
 
   if (eventType === "" && !isRequest) {
     convertDragDist(moveable.state, e);
-  } // const isGroup = eventAffix.indexOf("Group") > -1;
+  } 
 
 
   var ables = __spreadArray([], moveable[ableType]);
@@ -18704,7 +15185,7 @@ function triggerAble(moveable, ableType, eventOperation, eventAffix, eventType, 
     return false;
   });
   var isUpdate = results.length;
-  var isForceEnd = false; // end ables
+  var isForceEnd = false; 
 
   if (isStart && eventAbles.length && !isUpdate) {
     isForceEnd = eventAbles.filter(function (able) {
@@ -18713,14 +15194,13 @@ function triggerAble(moveable, ableType, eventOperation, eventAffix, eventType, 
 
       if (nextDatas.isEventStart) {
         if (able.dragRelation === "strong") {
-          // cancel drag
           nextDatas.isEventStart = false;
           return false;
-        } // start drag
+        } 
 
 
         return true;
-      } // cancel event
+      } 
 
 
       return false;
@@ -18819,7 +15299,6 @@ function getAbleGesto(moveable, target, ableType, eventAffix, conditionFunctions
 }
 
 var EventManager =
-/*#__PURE__*/
 function () {
   function EventManager(target, moveable, eventName) {
     var _this = this;
@@ -18863,7 +15342,6 @@ function () {
 }();
 
 var MoveableManager =
-/*#__PURE__*/
 function (_super) {
   moveable_esm_extends(MoveableManager, _super);
 
@@ -19025,41 +15503,11 @@ function (_super) {
         container = _a.container;
     return container || wrapperMoveable && wrapperMoveable.getContainer() || parentMoveable && parentMoveable.getContainer() || this.controlBox.getElement().parentElement;
   };
-  /**
-   * Check if the target is an element included in the moveable.
-   * @method Moveable#isMoveableElement
-   * @param - the target
-   * @example
-   * import Moveable from "moveable";
-   *
-   * const moveable = new Moveable(document.body);
-   *
-   * window.addEventListener("click", e => {
-   *     if (!moveable.isMoveableElement(e.target)) {
-   *         moveable.target = e.target;
-   *     }
-   * });
-   */
 
 
   __proto.isMoveableElement = function (target) {
     return target && (target.getAttribute("class") || "").indexOf(PREFIX) > -1;
   };
-  /**
-   * You can drag start the Moveable through the external `MouseEvent`or `TouchEvent`. (Angular: ngDragStart)
-   * @method Moveable#dragStart
-   * @param - external `MouseEvent`or `TouchEvent`
-   * @example
-   * import Moveable from "moveable";
-   *
-   * const moveable = new Moveable(document.body);
-   *
-   * document.body.addEventListener("mousedown", e => {
-   *     if (!moveable.isMoveableElement(e.target)) {
-   *          moveable.dragStart(e);
-   *     }
-   * });
-   */
 
 
   __proto.dragStart = function (e) {
@@ -19069,22 +15517,6 @@ function (_super) {
 
     return this;
   };
-  /**
-   * Hit test an element or rect on a moveable target.
-   * @method Moveable#hitTest
-   * @param - element or rect to test
-   * @return - Get hit test rate (rate > 0 is hitted)
-   * @example
-   * import Moveable from "moveable";
-   *
-   * const moveable = new Moveable(document.body);
-   *
-   * document.body.addEventListener("mousedown", e => {
-   *     if (moveable.hitTest(e.target) > 0) {
-   *          console.log("hiited");
-   *     }
-   * });
-   */
 
 
   __proto.hitTest = function (el) {
@@ -19131,23 +15563,6 @@ function (_super) {
 
     return Math.min(100, size / totalSize * 100);
   };
-  /**
-   * Whether the coordinates are inside Moveable
-   * @method Moveable#isInside
-   * @param - x coordinate
-   * @param - y coordinate
-   * @return - True if the coordinate is in moveable or false
-   * @example
-   * import Moveable from "moveable";
-   *
-   * const moveable = new Moveable(document.body);
-   *
-   * document.body.addEventListener("mousedown", e => {
-   *     if (moveable.isInside(e.clientX, e.clientY)) {
-   *          console.log("inside");
-   *     }
-   * });
-   */
 
 
   __proto.isInside = function (clientX, clientY) {
@@ -19165,18 +15580,6 @@ function (_super) {
 
     return isInside([clientX, clientY], fitPoints([pos1, pos2, pos4, pos3], targetClientRect));
   };
-  /**
-   * If the width, height, left, and top of all elements change, update the shape of the moveable.
-   * @method Moveable#updateRect
-   * @example
-   * import Moveable from "moveable";
-   *
-   * const moveable = new Moveable(document.body);
-   *
-   * window.addEventListener("resize", e => {
-   *     moveable.updateRect();
-   * });
-   */
 
 
   __proto.updateRect = function (type, isTarget, isSetState) {
@@ -19192,53 +15595,16 @@ function (_super) {
     var rootContainer = parentMoveable ? parentMoveable.props.rootContainer : props.rootContainer;
     this.updateState(getTargetInfo(this.controlBox && this.controlBox.getElement(), target, container, container, rootContainer || container), parentMoveable ? false : isSetState);
   };
-  /**
-   * Check if the moveable state is being dragged.
-   * @method Moveable#isDragging
-   * @example
-   * import Moveable from "moveable";
-   *
-   * const moveable = new Moveable(document.body);
-   *
-   * // false
-   * console.log(moveable.isDragging());
-   *
-   * moveable.on("drag", () => {
-   *   // true
-   *   console.log(moveable.isDragging());
-   * });
-   */
 
 
   __proto.isDragging = function () {
     return (this.targetGesto ? this.targetGesto.isFlag() : false) || (this.controlGesto ? this.controlGesto.isFlag() : false);
   };
-  /**
-   * If the width, height, left, and top of the only target change, update the shape of the moveable.
-   * @method Moveable#updateTarget
-   * @example
-   * import Moveable from "moveable";
-   *
-   * const moveable = new Moveable(document.body);
-   *
-   * moveable.updateTarget();
-   */
 
 
   __proto.updateTarget = function (type) {
     this.updateRect(type, true);
   };
-  /**
-   * You can get the vertex information, position and offset size information of the target based on the container.
-   * @method Moveable#getRect
-   * @return - The Rect Info
-   * @example
-   * import Moveable from "moveable";
-   *
-   * const moveable = new Moveable(document.body);
-   *
-   * const rectInfo = moveable.getRect();
-   */
 
 
   __proto.getRect = function () {
@@ -19276,17 +15642,6 @@ function (_super) {
       rotation: this.getRotation()
     };
   };
-  /**
-   * Get a manager that manages the moveable's state and props.
-   * @method Moveable#getManager
-   * @return - The Rect Info
-   * @example
-   * import Moveable from "moveable";
-   *
-   * const moveable = new Moveable(document.body);
-   *
-   * const manager = moveable.getManager(); // real moveable class instance
-   */
 
 
   __proto.getManager = function () {
@@ -19300,35 +15655,6 @@ function (_super) {
         direction = _a.direction;
     return getAbsoluteRotation(pos1, pos2, direction);
   };
-  /**
-   * Request able through a method rather than an event.
-   * At the moment of execution, requestStart is executed,
-   * and then request and requestEnd can be executed through Requester.
-   * @method Moveable#request
-   * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Draggable.html#request|Draggable Requester}
-   * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Resizable.html#request|Resizable Requester}
-   * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Scalable.html#request|Scalable Requester}
-   * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.Rotatable.html#request|Rotatable Requester}
-   * @see {@link https://daybrush.com/moveable/release/latest/doc/Moveable.OriginDraggable.html#request|OriginDraggable Requester}
-   * @param - ableName
-   * @param - request to be able params.
-   * @param - If isInstant is true, request and requestEnd are executed immediately.
-   * @return - Able Requester. If there is no request in able, nothing will work.
-   * @example
-   * import Moveable from "moveable";
-   *
-   * const moveable = new Moveable(document.body);
-   *
-   * // Instantly Request (requestStart - request - requestEnd)
-   * moveable.request("draggable", { deltaX: 10, deltaY: 10 }, true);
-   *
-   * // Start move
-   * const requester = moveable.request("draggable");
-   * requester.request({ deltaX: 10, deltaY: 10 });
-   * requester.request({ deltaX: 10, deltaY: 10 });
-   * requester.request({ deltaX: 10, deltaY: 10 });
-   * requester.requestEnd();
-   */
 
 
   __proto.request = function (ableName, param, isInstant) {
@@ -19381,16 +15707,6 @@ function (_super) {
     }), requestInstant);
     return requestInstant ? requester.request(param).requestEnd() : requester;
   };
-  /**
-   * Remove the Moveable object and the events.
-   * @method Moveable#destroy
-   * @example
-   * import Moveable from "moveable";
-   *
-   * const moveable = new Moveable(document.body);
-   *
-   * moveable.destroy();
-   */
 
 
   __proto.destroy = function () {
@@ -19637,7 +15953,7 @@ function (_super) {
     var target = props.dragTarget || props.target;
     var prevTarget = this._prevTarget;
     var prevDragArea = this._prevDragArea;
-    var dragArea = props.dragArea; // check target without dragArea
+    var dragArea = props.dragArea; 
 
     var isTargetChanged = !dragArea && prevTarget !== target;
     var isDragAreaChanged = (useDragArea || dragArea) && prevDragArea !== dragArea;
@@ -19721,169 +16037,17 @@ function (_super) {
   };
   return MoveableManager;
 }(PureComponent);
-/**
- * The target to indicate Moveable Control Box.
- * @name Moveable#target
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- * moveable.target = document.querySelector(".target");
- */
 
-/**
- * Zooms in the elements of a moveable.
- * @name Moveable#zoom
- * @default 1
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- * moveable.zoom = 2;
- */
 
-/**
- * Whether the target size is detected and updated whenever it changes.
- * @name Moveable#zoom
- * @default false
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- * moveable.useResizeObserver = true;
- */
 
-/**
- * Resize, Scale Events at edges
- * @name Moveable#edge
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- * moveable.edge = true;
- */
 
-/**
- * You can specify the className of the moveable controlbox.
- * @name Moveable#className
- * @default ""
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *   className: "",
- * });
- *
- * moveable.className = "moveable1";
- */
 
-/**
- * The target(s) to drag Moveable target(s)
- * @name Moveable#dragTarget
- * @default target
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body);
- * moveable.target = document.querySelector(".target");
- * moveable.dragTarget = document.querySelector(".dragTarget");
- */
 
-/**
- * `renderStart` event occurs at the first start of all events.
- * @memberof Moveable
- * @event renderStart
- * @param {Moveable.OnRenderStart} - Parameters for the `renderStart` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: document.querySelector(".target"),
- * });
- * moveable.on("renderStart", ({ target }) => {
- *     console.log("onRenderStart", target);
- * });
- */
 
-/**
- * `render` event occurs before the target is drawn on the screen.
- * @memberof Moveable
- * @event render
- * @param {Moveable.OnRender} - Parameters for the `render` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: document.querySelector(".target"),
- * });
- * moveable.on("render", ({ target }) => {
- *     console.log("onRender", target);
- * });
- */
 
-/**
- * `renderEnd` event occurs at the end of all events.
- * @memberof Moveable
- * @event renderEnd
- * @param {Moveable.OnRenderEnd} - Parameters for the `renderEnd` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: document.querySelector(".target"),
- * });
- * moveable.on("renderEnd", ({ target }) => {
- *     console.log("onRenderEnd", target);
- * });
- */
 
-/**
- * `renderGroupStart` event occurs at the first start of all events in group.
- * @memberof Moveable
- * @event renderGroupStart
- * @param {Moveable.OnRenderGroupStart} - Parameters for the `renderGroupStart` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: [].slice.call(document.querySelectorAll(".target")),
- * });
- * moveable.on("renderGroupStart", ({ targets }) => {
- *     console.log("onRenderGroupStart", targets);
- * });
- */
 
-/**
- * `renderGroup` event occurs before the target is drawn on the screen in group.
- * @memberof Moveable
- * @event renderGroup
- * @param {Moveable.OnRenderGroup} - Parameters for the `renderGroup` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: [].slice.call(document.querySelectorAll(".target")),
- * });
- * moveable.on("renderGroup", ({ targets }) => {
- *     console.log("onRenderGroup", targets);
- * });
- */
 
-/**
- * `renderGroupEnd` event occurs at the end of all events in group.
- * @memberof Moveable
- * @event renderGroupEnd
- * @param {Moveable.OnRenderGroupEnd} - Parameters for the `renderGroupEnd` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: [].slice.call(document.querySelectorAll(".target")),
- * });
- * moveable.on("renderGroupEnd", ({ targets }) => {
- *     console.log("onRenderGroupEnd", targets);
- * });
- */
 
 var Groupable = {
   name: "groupable",
@@ -19954,7 +16118,7 @@ var Clickable = makeAble("clickable", {
       this.unset(moveable);
     }
 
-    if (!inputEvent || !inputTarget || e.isDrag || moveable.isMoveableElement(inputTarget) || containsElement // External event duplicate target or dragAreaElement
+    if (!inputEvent || !inputTarget || e.isDrag || moveable.isMoveableElement(inputTarget) || containsElement 
     ) {
         return;
       }
@@ -19972,7 +16136,7 @@ var Clickable = makeAble("clickable", {
     var inputEvent = e.inputEvent;
     var inputTarget = e.inputTarget;
 
-    if (!inputEvent || !inputTarget || e.isDrag || moveable.isMoveableElement(inputTarget) // External event duplicate target or dragAreaElement
+    if (!inputEvent || !inputTarget || e.isDrag || moveable.isMoveableElement(inputTarget) 
     || e.datas.inputTarget === inputTarget) {
       return;
     }
@@ -20015,39 +16179,7 @@ var Clickable = makeAble("clickable", {
     removeEvent(window, "click", moveable.onPreventClick, true);
   }
 });
-/**
- * When you click on the element, the `click` event is called.
- * @memberof Moveable
- * @event click
- * @param {Moveable.OnClick} - Parameters for the `click` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: document.querySelector(".target"),
- * });
- * moveable.on("click", ({ hasTarget, containsTarget, targetIndex }) => {
- *     // If you click on an element other than the target and not included in the target, index is -1.
- *     console.log("onClickGroup", target, hasTarget, containsTarget, targetIndex);
- * });
- */
 
-/**
- * When you click on the element inside the group, the `clickGroup` event is called.
- * @memberof Moveable
- * @event clickGroup
- * @param {Moveable.OnClickGroup} - Parameters for the `clickGroup` event
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *     target: [].slice.call(document.querySelectorAll(".target")),
- * });
- * moveable.on("clickGroup", ({ inputTarget, isTarget, containsTarget, targetIndex }) => {
- *     // If you click on an element other than the target and not included in the target, index is -1.
- *     console.log("onClickGroup", inputTarget, isTarget, containsTarget, targetIndex);
- * });
- */
 
 function getDraggableEvent(e) {
   var datas = e.originalDatas.draggable;
@@ -20101,19 +16233,6 @@ var edgeDraggable = makeAble("edgeDraggable", {
     return Draggable.unset(moveable);
   }
 });
-/**
- * Whether to move by dragging the edge line (default: false)
- * @name Moveable.Draggable#edgeDraggable
- * @example
- * import Moveable from "moveable";
- *
- * const moveable = new Moveable(document.body, {
- *  draggable: true,
- *  edgeDraggable: false,
- * });
- *
- * moveable.edgeDraggable = true;
- */
 
 var IndividualGroupable = {
   name: "individualGroupable",
@@ -20123,14 +16242,14 @@ var IndividualGroupable = {
   events: {}
 };
 
-var MOVEABLE_ABLES = /*#__PURE__*/[BeforeRenderable, Default, Snappable, Pinchable, Draggable, edgeDraggable, Rotatable, Resizable, Scalable, Warpable, Scrollable, Padding, Origin, OriginDraggable, Clippable, Roundable, Groupable, IndividualGroupable, Clickable, DragArea, Renderable];
-var MOVEABLE_EVENTS_PROPS_MAP = /*#__PURE__*/MOVEABLE_ABLES.reduce(function (current, able) {
+var MOVEABLE_ABLES = [BeforeRenderable, Default, Snappable, Pinchable, Draggable, edgeDraggable, Rotatable, Resizable, Scalable, Warpable, Scrollable, Padding, Origin, OriginDraggable, Clippable, Roundable, Groupable, IndividualGroupable, Clickable, DragArea, Renderable];
+var MOVEABLE_EVENTS_PROPS_MAP = MOVEABLE_ABLES.reduce(function (current, able) {
   return moveable_esm_assign(moveable_esm_assign({}, current), "events" in able ? able.events : {});
 }, {});
-var MOVEABLE_PROPS_MAP = /*#__PURE__*/MOVEABLE_ABLES.reduce(function (current, able) {
+var MOVEABLE_PROPS_MAP = MOVEABLE_ABLES.reduce(function (current, able) {
   return moveable_esm_assign(moveable_esm_assign({}, current), able.props);
 }, {});
-var MOVEABLE_EVENTS_MAP = /*#__PURE__*/invertObject(MOVEABLE_EVENTS_PROPS_MAP);
+var MOVEABLE_EVENTS_MAP = invertObject(MOVEABLE_EVENTS_PROPS_MAP);
 var MOVEABLE_EVENTS = Object.keys(MOVEABLE_EVENTS_MAP);
 var MOVEABLE_PROPS = Object.keys(MOVEABLE_PROPS_MAP);
 
@@ -20177,8 +16296,6 @@ function getGroupRect(moveables, rotation) {
     var b2MinMax_1 = [MIN_NUM, MAX_NUM];
     moveablePoses.forEach(function (poses) {
       poses.forEach(function (pos) {
-        // ax + b = y
-        // b = y - ax
         var b1 = pos[1] - a1_1 * pos[0];
         var b2 = pos[1] - a2_1 * pos[0];
         b1MinMax_1[0] = Math.max(b1MinMax_1[0], b1);
@@ -20188,9 +16305,7 @@ function getGroupRect(moveables, rotation) {
       });
     });
     b1MinMax_1.forEach(function (b1) {
-      // a1x + b1 = a2x + b2
       b2MinMax_1.forEach(function (b2) {
-        // (a1 - a2)x = b2 - b1
         var x = (b2 - b1) / (a1_1 - a2_1);
         var y = a1_1 * x + b1;
         minX = Math.min(minX, x);
@@ -20221,14 +16336,9 @@ function getGroupRect(moveables, rotation) {
 
   return [minX, minY, groupWidth, groupHeight];
 }
-/**
- * @namespace Moveable.Group
- * @description You can make targets moveable.
- */
 
 
 var MoveableGroup =
-/*#__PURE__*/
 function (_super) {
   moveable_esm_extends(MoveableGroup, _super);
 
@@ -20264,7 +16374,6 @@ function (_super) {
     var target = state.target || props.target;
 
     if (!isTarget || type !== "" && props.updateGroup) {
-      // reset rotataion
       this.rotation = props.defaultGroupRotate;
       this.transformOrigin = props.defaultGroupOrigin || "50% 50%";
       this.scale = [1, 1];
@@ -20277,7 +16386,7 @@ function (_super) {
         left = _a[0],
         top = _a[1],
         width = _a[2],
-        height = _a[3]; // tslint:disable-next-line: max-line-length
+        height = _a[3]; 
 
 
     var transform = "rotate(" + rotation + "deg) scale(" + (scale[0] >= 0 ? 1 : -1) + ", " + (scale[1] >= 0 ? 1 : -1) + ")";
@@ -20292,7 +16401,7 @@ function (_super) {
         pos1 = _b[0],
         pos2 = _b[1],
         pos3 = _b[2],
-        pos4 = _b[3]; // info.left + info.pos(1 ~ 4)
+        pos4 = _b[3]; 
 
 
     var minPos = getMinMaxs([pos1, pos2, pos3, pos4]);
@@ -20305,7 +16414,7 @@ function (_super) {
     info.top = top - info.top + delta[1];
     info.origin = minus(plus(pos, info.origin), delta);
     info.beforeOrigin = minus(plus(pos, info.beforeOrigin), delta);
-    info.originalBeforeOrigin = plus(pos, info.originalBeforeOrigin); // info.transformOrigin = minus(plus(pos, info.transformOrigin!), delta);
+    info.originalBeforeOrigin = plus(pos, info.originalBeforeOrigin); 
 
     var clientRect = info.targetClientRect;
     var direction = scale[0] * scale[1] > 0 ? 1 : -1;
@@ -20391,13 +16500,8 @@ function (_super) {
   return MoveableGroup;
 }(MoveableManager);
 
-/**
- * @namespace Moveable.IndividualGroup
- * @description Create targets individually, not as a group.Create targets individually, not as a group.
- */
 
 var MoveableIndividualGroup =
-/*#__PURE__*/
 function (_super) {
   moveable_esm_extends(MoveableIndividualGroup, _super);
 
@@ -20495,7 +16599,6 @@ function (_super) {
 }(MoveableManager);
 
 var InitialMoveable =
-/*#__PURE__*/
 function (_super) {
   moveable_esm_extends(InitialMoveable, _super);
 
@@ -20644,7 +16747,6 @@ function (_super) {
 }(PureComponent);
 
 var Moveable =
-/*#__PURE__*/
 function (_super) {
   moveable_esm_extends(Moveable, _super);
 
@@ -20660,7 +16762,6 @@ function makeMoveable(ables) {
   var _a;
 
   return _a =
-  /*#__PURE__*/
   function (_super) {
     moveable_esm_extends(Moveable, _super);
 
@@ -20672,38 +16773,15 @@ function makeMoveable(ables) {
   }(InitialMoveable), _a.defaultAbles = ables, _a;
 }
 
-/* harmony default export */ const moveable_esm = (Moveable);
+ const moveable_esm = (Moveable);
 
 
-;// CONCATENATED MODULE: ./.yarn/cache/moveable-npm-0.28.0-32d066096a-1fee85a8c7.zip/node_modules/moveable/dist/moveable.esm.js
-/*
-Copyright (c) 2019 Daybrush
-name: moveable
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/moveable.git
-version: 0.28.0
-*/
+;
 
 
 
 
 
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
-/* global Reflect, Promise */
 
 var dist_moveable_esm_extendStatics = function(d, b) {
     dist_moveable_esm_extendStatics = Object.setPrototypeOf ||
@@ -20737,7 +16815,6 @@ function moveable_esm_decorate(decorators, target, key, desc) {
 }
 
 var InnerMoveable =
-/*#__PURE__*/
 function (_super) {
   dist_moveable_esm_extends(InnerMoveable, _super);
 
@@ -20765,29 +16842,7 @@ var METHODS = MOVEABLE_METHODS;
 var EVENTS = MOVEABLE_EVENTS;
 var PROPS_MAP = MOVEABLE_PROPS_MAP;
 
-/*
-Copyright (c) 2019 Daybrush
-name: @scena/event-emitter
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/gesture.git
-version: 1.0.3
-*/
 
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
 var __assign$1 = function () {
   __assign$1 = Object.assign || function __assign(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -20809,33 +16864,12 @@ function moveable_esm_spreadArrays() {
   return r;
 }
 
-/**
- * Implement EventEmitter on object or component.
- */
 
 var moveable_esm_EventEmitter =
-/*#__PURE__*/
 function () {
   function EventEmitter() {
     this._events = {};
   }
-  /**
-   * Add a listener to the registered event.
-   * @param - Name of the event to be added
-   * @param - listener function of the event to be added
-   * @example
-   * import EventEmitter from "@scena/event-emitter";
-   * cosnt emitter = new EventEmitter();
-   *
-   * // Add listener in "a" event
-   * emitter.on("a", () => {
-   * });
-   * // Add listeners
-   * emitter.on({
-   *  a: () => {},
-   *  b: () => {},
-   * });
-   */
 
 
   var __proto = EventEmitter.prototype;
@@ -20851,24 +16885,6 @@ function () {
 
     return this;
   };
-  /**
-   * Remove listeners registered in the event target.
-   * @param - Name of the event to be removed
-   * @param - listener function of the event to be removed
-   * @example
-   * import EventEmitter from "@scena/event-emitter";
-   * cosnt emitter = new EventEmitter();
-   *
-   * // Remove all listeners.
-   * emitter.off();
-   *
-   * // Remove all listeners in "A" event.
-   * emitter.off("a");
-   *
-   *
-   * // Remove "listener" listener in "a" event.
-   * emitter.off("a", listener);
-   */
 
 
   __proto.off = function (eventName, listener) {
@@ -20896,22 +16912,6 @@ function () {
 
     return this;
   };
-  /**
-   * Add a disposable listener and Use promise to the registered event.
-   * @param - Name of the event to be added
-   * @param - disposable listener function of the event to be added
-   * @example
-   * import EventEmitter from "@scena/event-emitter";
-   * cosnt emitter = new EventEmitter();
-   *
-   * // Add a disposable listener in "a" event
-   * emitter.once("a", () => {
-   * });
-   *
-   * // Use Promise
-   * emitter.once("a").then(e => {
-   * });
-   */
 
 
   __proto.once = function (eventName, listener) {
@@ -20929,26 +16929,6 @@ function () {
       });
     });
   };
-  /**
-   * Fires an event to call listeners.
-   * @param - Event name
-   * @param - Event parameter
-   * @return If false, stop the event.
-   * @example
-   *
-   * import EventEmitter from "@scena/event-emitter";
-   *
-   *
-   * const emitter = new EventEmitter();
-   *
-   * emitter.on("a", e => {
-   * });
-   *
-   *
-   * emitter.emit("a", {
-   *   a: 1,
-   * });
-   */
 
 
   __proto.emit = function (eventName, param) {
@@ -20983,47 +16963,7 @@ function () {
 
     return !isStop;
   };
-  /**
-   * Fires an event to call listeners.
-   * @param - Event name
-   * @param - Event parameter
-   * @return If false, stop the event.
-   * @example
-   *
-   * import EventEmitter from "@scena/event-emitter";
-   *
-   *
-   * const emitter = new EventEmitter();
-   *
-   * emitter.on("a", e => {
-   * });
-   *
-   *
-   * emitter.emit("a", {
-   *   a: 1,
-   * });
-   */
 
-  /**
-  * Fires an event to call listeners.
-  * @param - Event name
-  * @param - Event parameter
-  * @return If false, stop the event.
-  * @example
-  *
-  * import EventEmitter from "@scena/event-emitter";
-  *
-  *
-  * const emitter = new EventEmitter();
-  *
-  * emitter.on("a", e => {
-  * });
-  *
-  * // emit
-  * emitter.trigger("a", {
-  *   a: 1,
-  * });
-  */
 
 
   __proto.trigger = function (eventName, param) {
@@ -21046,20 +16986,10 @@ function () {
   return EventEmitter;
 }();
 
-/**
- * Moveable is Draggable! Resizable! Scalable! Rotatable!
- * @sort 1
- * @alias Moveable
- * @extends EventEmitter
- */
 
 var moveable_esm_MoveableManager =
-/*#__PURE__*/
 function (_super) {
   dist_moveable_esm_extends(MoveableManager, _super);
-  /**
-   *
-   */
 
 
   function MoveableManager(parentElement, options) {
@@ -21147,7 +17077,6 @@ function (_super) {
 }(moveable_esm_EventEmitter);
 
 var moveable_esm_Moveable =
-/*#__PURE__*/
 function (_super) {
   dist_moveable_esm_extends(Moveable, _super);
 
@@ -21165,39 +17094,13 @@ function moveable_esm_makeAble(name, able) {
   return makeAble$1(name, able);
 }
 
-/* harmony default export */ const dist_moveable_esm = (moveable_esm_Moveable);
+ const dist_moveable_esm = (moveable_esm_Moveable);
 
-//# sourceMappingURL=moveable.esm.js.map
 
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subject.js
 var Subject = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subject.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/first.js
 var first = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/first.js");
-;// CONCATENATED MODULE: ./.yarn/cache/keycon-npm-1.1.2-47bb5048df-7be74aaf83.zip/node_modules/keycon/dist/keycon.esm.js
-/*
-Copyright (c) Daybrush
-name: keycon
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/keycon.git
-version: 1.1.2
-*/
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
+;
 
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
-
-/* global Reflect, Promise */
 var keycon_esm_extendStatics = function (d, b) {
   keycon_esm_extendStatics = Object.setPrototypeOf || {
     __proto__: []
@@ -21220,97 +17123,22 @@ function keycon_esm_extends(d, b) {
   d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 }
 
-/*
-Copyright (c) 2018 Daybrush
-@name: @daybrush/utils
-license: MIT
-author: Daybrush
-repository: https://github.com/daybrush/utils
-@version 1.0.0
-*/
-/**
-* get string "object"
-* @memberof Consts
-* @example
-import {OBJECT} from "@daybrush/utils";
-
-console.log(OBJECT); // "object"
-*/
 
 var keycon_esm_OBJECT = "object";
-/**
-* get string "string"
-* @memberof Consts
-* @example
-import {STRING} from "@daybrush/utils";
-
-console.log(STRING); // "string"
-*/
 
 var keycon_esm_STRING = "string";
-/**
-* Check the type that the value is object.
-* @memberof Utils
-* @param {string} value - Value to check the type
-* @return {} true if the type is correct, false otherwise
-* @example
-import {isObject} from "@daybrush/utils";
-
-console.log(isObject({})); // true
-console.log(isObject(undefined)); // false
-console.log(isObject("")); // false
-console.log(isObject(null)); // false
-*/
 
 function keycon_esm_isObject(value) {
   return value && typeof value === keycon_esm_OBJECT;
 }
-/**
-* Check the type that the value is isArray.
-* @memberof Utils
-* @param {string} value - Value to check the type
-* @return {} true if the type is correct, false otherwise
-* @example
-import {isArray} from "@daybrush/utils";
-
-console.log(isArray([])); // true
-console.log(isArray({})); // false
-console.log(isArray(undefined)); // false
-console.log(isArray(null)); // false
-*/
 
 function keycon_esm_isArray(value) {
   return Array.isArray(value);
 }
-/**
-* Check the type that the value is string.
-* @memberof Utils
-* @param {string} value - Value to check the type
-* @return {} true if the type is correct, false otherwise
-* @example
-import {isString} from "@daybrush/utils";
-
-console.log(isString("1234")); // true
-console.log(isString(undefined)); // false
-console.log(isString(1)); // false
-console.log(isString(null)); // false
-*/
 
 function keycon_esm_isString(value) {
   return typeof value === keycon_esm_STRING;
 }
-/**
-* Returns the index of the first element in the array that satisfies the provided testing function.
-* @function
-* @memberof CrossBrowser
-* @param - The array `findIndex` was called upon.
-* @param - A function to execute on each value in the array until the function returns true, indicating that the satisfying element was found.
-* @param - Returns defaultIndex if not found by the function.
-* @example
-import { findIndex } from "@daybrush/utils";
-
-findIndex([{a: 1}, {a: 2}, {a: 3}, {a: 4}], ({ a }) => a === 2); // 1
-*/
 
 function keycon_esm_findIndex(arr, callback, defaultIndex) {
   if (defaultIndex === void 0) {
@@ -21327,66 +17155,16 @@ function keycon_esm_findIndex(arr, callback, defaultIndex) {
 
   return defaultIndex;
 }
-/**
-* Sets up a function that will be called whenever the specified event is delivered to the target
-* @memberof DOM
-* @param - event target
-* @param - A case-sensitive string representing the event type to listen for.
-* @param - The object which receives a notification (an object that implements the Event interface) when an event of the specified type occurs
-* @param - An options object that specifies characteristics about the event listener. The available options are:
-* @example
-import {addEvent} from "@daybrush/utils";
-
-addEvent(el, "click", e => {
-  console.log(e);
-});
-*/
 
 function keycon_esm_addEvent(el, type, listener, options) {
   el.addEventListener(type, listener, options);
 }
-/**
-* removes from the EventTarget an event listener previously registered with EventTarget.addEventListener()
-* @memberof DOM
-* @param - event target
-* @param - A case-sensitive string representing the event type to listen for.
-* @param - The EventListener function of the event handler to remove from the event target.
-* @example
-import {addEvent, removeEvent} from "@daybrush/utils";
-const listener = e => {
-  console.log(e);
-};
-addEvent(el, "click", listener);
-removeEvent(el, "click", listener);
-*/
 
 function keycon_esm_removeEvent(el, type, listener) {
   el.removeEventListener(type, listener);
 }
 
-/*
-Copyright (c) 2019 Daybrush
-name: @scena/event-emitter
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/gesture.git
-version: 1.0.2
-*/
 
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
 var keycon_esm_assign = function () {
   keycon_esm_assign = Object.assign || function __assign(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -21408,33 +17186,12 @@ function keycon_esm_spreadArrays() {
   return r;
 }
 
-/**
- * Implement EventEmitter on object or component.
- */
 
 var keycon_esm_EventEmitter =
-/*#__PURE__*/
 function () {
   function EventEmitter() {
     this._events = {};
   }
-  /**
-   * Add a listener to the registered event.
-   * @param - Name of the event to be added
-   * @param - listener function of the event to be added
-   * @example
-   * import EventEmitter from "@scena/event-emitter";
-   * cosnt emitter = new EventEmitter();
-   *
-   * // Add listener in "a" event
-   * emitter.on("a", () => {
-   * });
-   * // Add listeners
-   * emitter.on({
-   *  a: () => {},
-   *  b: () => {},
-   * });
-   */
 
 
   var __proto = EventEmitter.prototype;
@@ -21450,24 +17207,6 @@ function () {
 
     return this;
   };
-  /**
-   * Remove listeners registered in the event target.
-   * @param - Name of the event to be removed
-   * @param - listener function of the event to be removed
-   * @example
-   * import EventEmitter from "@scena/event-emitter";
-   * cosnt emitter = new EventEmitter();
-   *
-   * // Remove all listeners.
-   * emitter.off();
-   *
-   * // Remove all listeners in "A" event.
-   * emitter.off("a");
-   *
-   *
-   * // Remove "listener" listener in "a" event.
-   * emitter.off("a", listener);
-   */
 
 
   __proto.off = function (eventName, listener) {
@@ -21495,22 +17234,6 @@ function () {
 
     return this;
   };
-  /**
-   * Add a disposable listener and Use promise to the registered event.
-   * @param - Name of the event to be added
-   * @param - disposable listener function of the event to be added
-   * @example
-   * import EventEmitter from "@scena/event-emitter";
-   * cosnt emitter = new EventEmitter();
-   *
-   * // Add a disposable listener in "a" event
-   * emitter.once("a", () => {
-   * });
-   *
-   * // Use Promise
-   * emitter.once("a").then(e => {
-   * });
-   */
 
 
   __proto.once = function (eventName, listener) {
@@ -21528,26 +17251,6 @@ function () {
       });
     });
   };
-  /**
-   * Fires an event to call listeners.
-   * @param - Event name
-   * @param - Event parameter
-   * @return If false, stop the event.
-   * @example
-   *
-   * import EventEmitter from "@scena/event-emitter";
-   *
-   *
-   * const emitter = new EventEmitter();
-   *
-   * emitter.on("a", e => {
-   * });
-   *
-   *
-   * emitter.emit("a", {
-   *   a: 1,
-   * });
-   */
 
 
   __proto.emit = function (eventName, param) {
@@ -21582,47 +17285,7 @@ function () {
 
     return !isStop;
   };
-  /**
-   * Fires an event to call listeners.
-   * @param - Event name
-   * @param - Event parameter
-   * @return If false, stop the event.
-   * @example
-   *
-   * import EventEmitter from "@scena/event-emitter";
-   *
-   *
-   * const emitter = new EventEmitter();
-   *
-   * emitter.on("a", e => {
-   * });
-   *
-   *
-   * emitter.emit("a", {
-   *   a: 1,
-   * });
-   */
 
-  /**
-  * Fires an event to call listeners.
-  * @param - Event name
-  * @param - Event parameter
-  * @return If false, stop the event.
-  * @example
-  *
-  * import EventEmitter from "@scena/event-emitter";
-  *
-  *
-  * const emitter = new EventEmitter();
-  *
-  * emitter.on("a", e => {
-  * });
-  *
-  * // emit
-  * emitter.trigger("a", {
-  *   a: 1,
-  * });
-  */
 
 
   __proto.trigger = function (eventName, param) {
@@ -21652,62 +17315,37 @@ function createCommonjsModule(fn, module) {
 }
 
 var keycode = createCommonjsModule(function (module, exports) {
-// Source: http://jsfiddle.net/vWx8V/
-// http://stackoverflow.com/questions/5603195/full-list-of-javascript-keycodes
 
-/**
- * Conenience method returns corresponding value for given keyName or keyCode.
- *
- * @param {Mixed} keyCode {Number} or keyName {String}
- * @return {Mixed}
- * @api public
- */
 
 function keyCode(searchInput) {
-  // Keyboard Events
   if (searchInput && 'object' === typeof searchInput) {
     var hasKeyCode = searchInput.which || searchInput.keyCode || searchInput.charCode;
     if (hasKeyCode) searchInput = hasKeyCode;
   }
 
-  // Numbers
   if ('number' === typeof searchInput) return names[searchInput]
 
-  // Everything else (cast to string)
   var search = String(searchInput);
 
-  // check codes
   var foundNamedKey = codes[search.toLowerCase()];
   if (foundNamedKey) return foundNamedKey
 
-  // check aliases
   var foundNamedKey = aliases[search.toLowerCase()];
   if (foundNamedKey) return foundNamedKey
 
-  // weird character?
   if (search.length === 1) return search.charCodeAt(0)
 
   return undefined
 }
 
-/**
- * Compares a keyboard event with a given keyCode or keyName.
- *
- * @param {Event} event Keyboard event that should be tested
- * @param {Mixed} keyCode {Number} or keyName {String}
- * @return {Boolean}
- * @api public
- */
 keyCode.isEventKey = function isEventKey(event, nameOrCode) {
   if (event && 'object' === typeof event) {
     var keyCode = event.which || event.keyCode || event.charCode;
     if (keyCode === null || keyCode === undefined) { return false; }
     if (typeof nameOrCode === 'string') {
-      // check codes
       var foundNamedKey = codes[nameOrCode.toLowerCase()];
       if (foundNamedKey) { return foundNamedKey === keyCode; }
-    
-      // check aliases
+
       var foundNamedKey = aliases[nameOrCode.toLowerCase()];
       if (foundNamedKey) { return foundNamedKey === keyCode; }
     } else if (typeof nameOrCode === 'number') {
@@ -21719,11 +17357,6 @@ keyCode.isEventKey = function isEventKey(event, nameOrCode) {
 
 exports = module.exports = keyCode;
 
-/**
- * Get by name
- *
- *   exports.code['enter'] // => 13
- */
 
 var codes = exports.code = exports.codes = {
   'backspace': 8,
@@ -21771,7 +17404,6 @@ var codes = exports.code = exports.codes = {
   "'": 222
 };
 
-// Helper aliases
 
 var aliases = exports.aliases = {
   'windows': 91,
@@ -21796,34 +17428,20 @@ var aliases = exports.aliases = {
   'cmd': 91
 };
 
-/*!
- * Programatically add the following
- */
 
-// lower case chars
 for (i = 97; i < 123; i++) codes[String.fromCharCode(i)] = i - 32;
 
-// numbers
 for (var i = 48; i < 58; i++) codes[i - 48] = i;
 
-// function keys
 for (i = 1; i < 13; i++) codes['f'+i] = i + 111;
 
-// numpad keys
 for (i = 0; i < 10; i++) codes['numpad '+i] = i + 96;
 
-/**
- * Get by code
- *
- *   exports.name[13] // => 'Enter'
- */
 
-var names = exports.names = exports.title = {}; // title for backward compat
+var names = exports.names = exports.title = {}; 
 
-// Create reverse mapping
 for (i in codes) names[codes[i]] = i;
 
-// Add aliases
 for (var alias in aliases) {
   codes[alias] = aliases[alias];
 }
@@ -21845,9 +17463,6 @@ var keysSort = {
   alt: 3,
   meta: 4
 };
-/**
- * @memberof KeyController
- */
 
 function getKey(keyCode) {
   var key = keycode_4[keyCode] || "";
@@ -21858,9 +17473,6 @@ function getKey(keyCode) {
 
   return key.replace(/\s/g, "");
 }
-/**
- * @memberof KeyController
- */
 
 function getCombi(e, key) {
   if (key === void 0) {
@@ -21871,9 +17483,6 @@ function getCombi(e, key) {
   keys.indexOf(key) === -1 && keys.push(key);
   return keys.filter(Boolean);
 }
-/**
- * @memberof KeyController
- */
 
 function getModifierCombi(e) {
   var keys = [e.shiftKey && "shift", e.ctrlKey && "ctrl", e.altKey && "alt", e.metaKey && "meta"];
@@ -21891,16 +17500,10 @@ function getArrangeCombi(keys) {
 }
 
 var globalKeyController;
-/**
- */
 
 var KeyController =
-/*#__PURE__*/
 function (_super) {
   keycon_esm_extends(KeyController, _super);
-  /**
-   *
-   */
 
 
   function KeyController(container) {
@@ -21911,22 +17514,12 @@ function (_super) {
     var _this = _super.call(this) || this;
 
     _this.container = container;
-    /**
-     */
 
     _this.ctrlKey = false;
-    /**
-     */
 
     _this.altKey = false;
-    /**
-     *
-     */
 
     _this.shiftKey = false;
-    /**
-     *
-     */
 
     _this.metaKey = false;
 
@@ -21960,8 +17553,6 @@ function (_super) {
 
   var __proto = KeyController.prototype;
   Object.defineProperty(KeyController, "global", {
-    /**
-     */
     get: function () {
       return globalKeyController || (globalKeyController = new KeyController());
     },
@@ -21972,9 +17563,6 @@ function (_super) {
   KeyController.setGlobal = function () {
     return this.global;
   };
-  /**
-   *
-   */
 
 
   __proto.destroy = function () {
@@ -21985,33 +17573,21 @@ function (_super) {
     keycon_esm_removeEvent(container, "keydown", this.keydownEvent);
     keycon_esm_removeEvent(container, "keyup", this.keyupEvent);
   };
-  /**
-   *
-   */
 
 
   __proto.keydown = function (comb, callback) {
     return this.addEvent("keydown", comb, callback);
   };
-  /**
-   *
-   */
 
 
   __proto.offKeydown = function (comb, callback) {
     return this.removeEvent("keydown", comb, callback);
   };
-  /**
-   *
-   */
 
 
   __proto.offKeyup = function (comb, callback) {
     return this.removeEvent("keyup", comb, callback);
   };
-  /**
-   *
-   */
 
 
   __proto.keyup = function (comb, callback) {
@@ -22068,19 +17644,10 @@ function (_super) {
   return KeyController;
 }(keycon_esm_EventEmitter);
 
-/* harmony default export */ const keycon_esm = (KeyController);
+ const keycon_esm = (KeyController);
 
-//# sourceMappingURL=keycon.esm.js.map
 
-;// CONCATENATED MODULE: ./.yarn/cache/selecto-npm-1.15.0-eb84959df5-ae19513c77.zip/node_modules/selecto/dist/selecto.esm.js
-/*
-Copyright (c) 2020 Daybrush
-name: selecto
-license: MIT
-author: Daybrush
-repository: git+https://github.com/daybrush/selecto.git
-version: 1.15.0
-*/
+;
 
 
 
@@ -22092,22 +17659,7 @@ version: 1.15.0
 
 
 
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
 
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-
-/* global Reflect, Promise */
 var selecto_esm_extendStatics = function (d, b) {
   selecto_esm_extendStatics = Object.setPrototypeOf || {
     __proto__: []
@@ -22317,17 +17869,11 @@ function passTargets(beforeTargets, afterTargets) {
 }
 
 var injector = styled_esm("\n:host {\n    position: fixed;\n    display: none;\n    border: 1px solid #4af;\n    background: rgba(68, 170, 255, 0.5);\n    z-index: 100;\n}\n:host {\n    position: absolute;\n}\n");
-/**
- * @memberof Selecto
- */
 
 var CLASS_NAME = "selecto-selection " + injector.className;
 var selecto_esm_PROPERTIES = ["boundContainer", "selectableTargets", "selectByClick", "selectFromInside", "continueSelect", "toggleContinueSelect", "keyContainer", "hitRate", "scrollOptions", "checkInput", "preventDefault", "ratio", "getElementRect", "preventDragFromInside", "rootContainer", "dragCondition", "clickBySelectEnd"];
-/**
- * @memberof Selecto
- */
 
-var OPTIONS = selecto_esm_spreadArrays([// ignore target, container,
+var OPTIONS = selecto_esm_spreadArrays([
 "dragContainer", "cspNonce"], selecto_esm_PROPERTIES);
 var OPTION_TYPES = {
   boundContainer: null,
@@ -22352,30 +17898,15 @@ var OPTION_TYPES = {
   dragCondition: Function,
   clickBySelectEnd: Boolean
 };
-/**
- * @memberof Selecto
- */
 
-var selecto_esm_EVENTS = (/* unused pure expression or super */ null && (["dragStart", "drag", "dragEnd", "selectStart", "select", "selectEnd", "keydown", "keyup", "scroll"]));
-/**
- * @memberof Selecto
- */
+var selecto_esm_EVENTS = ( null && (["dragStart", "drag", "dragEnd", "selectStart", "select", "selectEnd", "keydown", "keyup", "scroll"]));
 
-var selecto_esm_METHODS = (/* unused pure expression or super */ null && (["clickTarget", "getSelectableElements", "setSelectedTargets", "getElementPoints", "getSelectedTargets", "findSelectableTargets", "triggerDragStart", "checkScroll"]));
+var selecto_esm_METHODS = ( null && (["clickTarget", "getSelectableElements", "setSelectedTargets", "getElementPoints", "getSelectedTargets", "findSelectableTargets", "triggerDragStart", "checkScroll"]));
 
-/**
- * Selecto.js is a component that allows you to select elements in the drag area using the mouse or touch.
- * @sort 1
- * @extends EventEmitter
- */
 
 var Selecto =
-/*#__PURE__*/
 function (_super) {
   selecto_esm_extends(Selecto, _super);
-  /**
-   *
-   */
 
 
   function Selecto(options) {
@@ -22493,7 +18024,7 @@ function (_super) {
       }
 
       var hasInsideTargets = firstPassedTargets.length > 0;
-      var isPreventSelect = !selectFromInside && hasInsideTargets; // prevent drag from inside when selectByClick is false
+      var isPreventSelect = !selectFromInside && hasInsideTargets; 
 
       if (isPreventSelect && !selectByClick) {
         e.stop();
@@ -22502,34 +18033,6 @@ function (_super) {
 
       var type = inputEvent.type;
       var isTrusted = type === "mousedown" || type === "touchstart";
-      /**
-       * When the drag starts (triggers on mousedown or touchstart), the dragStart event is called.
-       * Call the stop () function if you have a specific element or don't want to raise a select
-       * @memberof Selecto
-       * @event dragStart
-       * @param {OnDragStart} - Parameters for the dragStart event
-       * @example
-       * import Selecto from "selecto";
-       *
-       * const selecto = new Selecto({
-       *   container: document.body,
-       *   selectByClick: true,
-       *   selectFromInside: false,
-       * });
-       *
-       * selecto.on("dragStart", e => {
-       *   if (e.inputEvent.target.tagName === "SPAN") {
-       *     e.stop();
-       *   }
-       * }).on("select", e => {
-       *   e.added.forEach(el => {
-       *     el.classList.add("selected");
-       *   });
-       *   e.removed.forEach(el => {
-       *     el.classList.remove("selected");
-       *   });
-       * });
-       */
 
       var result = !e.isClick && isTrusted ? _this.emit("dragStart", selecto_esm_assign({}, e)) : true;
 
@@ -22555,7 +18058,7 @@ function (_super) {
       datas.boundsArea = _this.target.style.cssText += "position: " + (rootContainer ? "absolute" : "fixed") + ";" + "left:0px;top:0px;" + ("transform: translate(" + offsetPos[0] + "px, " + offsetPos[1] + "px)");
 
       if (isPreventSelect && selectByClick && !clickBySelectEnd) {
-        inputEvent.preventDefault(); // prevent drag from inside when selectByClick is true and force call `selectEnd`
+        inputEvent.preventDefault(); 
 
         if (preventDragFromInside) {
           _this.selectEnd(datas.startSelectedTargets, datas.startPassedTargets, hitRect, e);
@@ -22588,7 +18091,7 @@ function (_super) {
       var _a;
 
       if (e.datas.selectFlag) {
-        var scrollOptions = _this.scrollOptions; // If it is a scrolling position, pass drag
+        var scrollOptions = _this.scrollOptions; 
 
         if (((_a = scrollOptions) === null || _a === void 0 ? void 0 : _a.container) && _this.dragScroll.drag(e, scrollOptions)) {
           return;
@@ -22603,12 +18106,6 @@ function (_super) {
           inputEvent = e.inputEvent;
       var rect = selecto_esm_getRect(e, _this.options.ratio);
       var selectFlag = datas.selectFlag;
-      /**
-       * When the drag ends (triggers on mouseup or touchend after drag), the dragEnd event is called.
-       * @memberof Selecto
-       * @event dragEnd
-       * @param {_OnDragEnd} - Parameters for the dragEnd event
-       */
 
       if (inputEvent && !e.isClick) {
         _this.emit("dragEnd", selecto_esm_assign(selecto_esm_assign({
@@ -22628,7 +18125,6 @@ function (_super) {
 
         _this.dragScroll.dragEnd();
       } else if (_this.selectByClick && _this.clickBySelectEnd) {
-        // only clickBySelectEnd
         var pointTarget = _this._findElement(document.elementFromPoint(e.clientX, e.clientY), datas.selectableTargets);
 
         _this.select(_this.selectedTargets, pointTarget ? [pointTarget] : [], rect, inputEvent);
@@ -22645,32 +18141,6 @@ function (_super) {
       }
 
       _this.continueSelect = true;
-      /**
-       * When you keydown the key you specified in toggleContinueSelect, the keydown event is called.
-       * @memberof Selecto
-       * @event keydown
-       * @example
-       * import Selecto from "selecto";
-       *
-       * const selecto = new Selecto({
-       *   container: document.body,
-       *   toggleContinueSelect: "shift";
-       *   keyContainer: window,
-       * });
-       *
-       * selecto.on("keydown", () => {
-       *   document.querySelector(".button").classList.add("selected");
-       * }).on("keyup", () => {
-       *   document.querySelector(".button").classList.remove("selected");
-       * }).on("select", e => {
-       *   e.added.forEach(el => {
-       *     el.classList.add("selected");
-       *   });
-       *   e.removed.forEach(el => {
-       *     el.classList.remove("selected");
-       *   });
-       * });
-       */
 
       _this.emit("keydown", {});
     };
@@ -22681,32 +18151,6 @@ function (_super) {
       }
 
       _this.continueSelect = false;
-      /**
-       * When you keyup the key you specified in toggleContinueSelect, the keyup event is called.
-       * @memberof Selecto
-       * @event keyup
-       * @example
-       * import Selecto from "selecto";
-       *
-       * const selecto = new Selecto({
-       *   container: document.body,
-       *   toggleContinueSelect: "shift";
-       *   keyContainer: window,
-       * });
-       *
-       * selecto.on("keydown", () => {
-       *   document.querySelector(".button").classList.add("selected");
-       * }).on("keyup", () => {
-       *   document.querySelector(".button").classList.remove("selected");
-       * }).on("select", e => {
-       *   e.added.forEach(el => {
-       *     el.classList.add("selected");
-       *   });
-       *   e.removed.forEach(el => {
-       *     el.classList.remove("selected");
-       *   });
-       * });
-       */
 
       _this.emit("keyup", {});
     };
@@ -22774,10 +18218,6 @@ function (_super) {
 
     return _this;
   }
-  /**
-   * You can set the currently selected targets.
-   *
-   */
 
 
   var __proto = Selecto.prototype;
@@ -22786,9 +18226,6 @@ function (_super) {
     this.selectedTargets = selectedTargets;
     return this;
   };
-  /**
-   * You can get the currently selected targets.
-   */
 
 
   __proto.getSelectedTargets = function () {
@@ -22824,27 +18261,12 @@ function (_super) {
   __proto.setCheckInput = function (value) {
     this.gesto.options.checkInput = value;
   };
-  /**
-   * `OnDragStart` is triggered by an external event.
-   * @param - external event
-   * @example
-   * import Selecto from "selecto";
-   *
-   * const selecto = new Selecto();
-   *
-   * window.addEventListener("mousedown", e => {
-   *   selecto.triggerDragStart(e);
-   * });
-   */
 
 
   __proto.triggerDragStart = function (e) {
     this.gesto.triggerDragStart(e);
     return this;
   };
-  /**
-   * Destroy elements, properties, and events.
-   */
 
 
   __proto.destroy = function () {
@@ -22873,9 +18295,6 @@ function (_super) {
 
     return points;
   };
-  /**
-   * Get all elements set in `selectableTargets`.
-   */
 
 
   __proto.getSelectableElements = function () {
@@ -22892,9 +18311,6 @@ function (_super) {
     });
     return selectableElements;
   };
-  /**
-   * If scroll occurs during dragging, you can manually call this method to check the position again.
-   */
 
 
   __proto.checkScroll = function () {
@@ -22904,15 +18320,12 @@ function (_super) {
       return;
     }
 
-    var scrollOptions = this.scrollOptions; // If it is a scrolling position, pass drag
+    var scrollOptions = this.scrollOptions; 
 
     ((_a = scrollOptions) === null || _a === void 0 ? void 0 : _a.container) && this.dragScroll.checkScroll(selecto_esm_assign({
       inputEvent: this.gesto.getCurrentEvent()
     }, scrollOptions));
   };
-  /**
-   * Find for selectableTargets again during drag event
-   */
 
 
   __proto.findSelectableTargets = function (datas) {
@@ -22929,11 +18342,6 @@ function (_super) {
     datas.selectableTargets = selectableTargets;
     datas.selectablePoints = selectablePoints;
   };
-  /**
-   * External click or mouse events can be applied to the selecto.
-   * @params - Extenal click or mouse event
-   * @params - Specify the clicked target directly.
-   */
 
 
   __proto.clickTarget = function (e, clickedTarget) {
@@ -23102,36 +18510,6 @@ function (_super) {
     this.selectedTargets = selectedTargets;
 
     if (isStart) {
-      /**
-       * When the select(drag) starts, the selectStart event is called.
-       * @memberof Selecto
-       * @event selectStart
-       * @param {Selecto.OnSelect} - Parameters for the selectStart event
-       * @example
-       * import Selecto from "selecto";
-       *
-       * const selecto = new Selecto({
-       *   container: document.body,
-       *   selectByClick: true,
-       *   selectFromInside: false,
-       * });
-       *
-       * selecto.on("selectStart", e => {
-       *   e.added.forEach(el => {
-       *     el.classList.add("selected");
-       *   });
-       *   e.removed.forEach(el => {
-       *     el.classList.remove("selected");
-       *   });
-       * }).on("selectEnd", e => {
-       *   e.afterAdded.forEach(el => {
-       *     el.classList.add("selected");
-       *   });
-       *   e.afterRemoved.forEach(el => {
-       *     el.classList.remove("selected");
-       *   });
-       * });
-       */
       this.emit("selectStart", {
         selected: selectedTargets,
         added: added.map(function (index) {
@@ -23146,29 +18524,6 @@ function (_super) {
     }
 
     if (added.length || removed.length) {
-      /**
-       * When the select in real time, the select event is called.
-       * @memberof Selecto
-       * @event select
-       * @param {Selecto.OnSelect} - Parameters for the select event
-       * @example
-       * import Selecto from "selecto";
-       *
-       * const selecto = new Selecto({
-       *   container: document.body,
-       *   selectByClick: true,
-       *   selectFromInside: false,
-       * });
-       *
-       * selecto.on("select", e => {
-       *   e.added.forEach(el => {
-       *     el.classList.add("selected");
-       *   });
-       *   e.removed.forEach(el => {
-       *     el.classList.remove("selected");
-       *   });
-       * });
-       */
       this.emit("select", {
         selected: selectedTargets,
         added: added.map(function (index) {
@@ -23201,36 +18556,6 @@ function (_super) {
 
     var type = inputEvent && inputEvent.type;
     var isDragStart = type === "mousedown" || type === "touchstart";
-    /**
-     * When the select(dragEnd or click) ends, the selectEnd event is called.
-     * @memberof Selecto
-     * @event selectEnd
-     * @param {Selecto.OnSelectEnd} - Parameters for the selectEnd event
-     * @example
-     * import Selecto from "selecto";
-     *
-     * const selecto = new Selecto({
-     *   container: document.body,
-     *   selectByClick: true,
-     *   selectFromInside: false,
-     * });
-     *
-     * selecto.on("selectStart", e => {
-     *   e.added.forEach(el => {
-     *     el.classList.add("selected");
-     *   });
-     *   e.removed.forEach(el => {
-     *     el.classList.remove("selected");
-     *   });
-     * }).on("selectEnd", e => {
-     *   e.afterAdded.forEach(el => {
-     *     el.classList.add("selected");
-     *   });
-     *   e.afterRemoved.forEach(el => {
-     *     el.classList.remove("selected");
-     *   });
-     * });
-     */
 
     this.emit("selectEnd", {
       selected: this.selectedTargets,
@@ -23281,32 +18606,6 @@ function (_super) {
       selectedTargets = passTargets(datas.startPassedTargets, passedTargets);
       this.selectedTargets = selectedTargets;
     }
-    /**
-     * When the drag, the drag event is called.
-     * Call the stop () function if you have a specific element or don't want to raise a select
-     * @memberof Selecto
-     * @event drag
-     * @param {OnDrag} - Parameters for the drag event
-     * @example
-     * import Selecto from "selecto";
-     *
-     * const selecto = new Selecto({
-     *   container: document.body,
-     *   selectByClick: true,
-     *   selectFromInside: false,
-     * });
-     *
-     * selecto.on("drag", e => {
-     *   e.stop();
-     * }).on("select", e => {
-     *   e.added.forEach(el => {
-     *     el.classList.add("selected");
-     *   });
-     *   e.removed.forEach(el => {
-     *     el.classList.remove("selected");
-     *   });
-     * });
-     */
 
 
     var result = this.emit("drag", selecto_esm_assign(selecto_esm_assign({}, e), {
@@ -23386,7 +18685,6 @@ function (_super) {
 }(event_emitter_esm);
 
 var Selecto$1 =
-/*#__PURE__*/
 function (_super) {
   selecto_esm_extends(Selecto, _super);
 
@@ -23397,21 +18695,15 @@ function (_super) {
   return Selecto;
 }(Selecto);
 
-/* harmony default export */ const selecto_esm = (Selecto$1);
+ const selecto_esm = (Selecto$1);
 
-//# sourceMappingURL=selecto.esm.js.map
 
-// EXTERNAL MODULE: ./public/app/core/config.ts
 var config = __webpack_require__("./public/app/core/config.ts");
-// EXTERNAL MODULE: ./public/app/features/canvas/index.ts + 7 modules
 var canvas = __webpack_require__("./public/app/features/canvas/index.ts");
-// EXTERNAL MODULE: ./public/app/features/dimensions/utils.ts
 var utils = __webpack_require__("./public/app/features/dimensions/utils.ts");
-// EXTERNAL MODULE: ./public/app/plugins/panel/canvas/types.ts
 var types = __webpack_require__("./public/app/plugins/panel/canvas/types.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/canvas/runtime/root.tsx
+;
 const _excluded = ["placement", "constraint"];
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -23421,7 +18713,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-class RootElement extends runtime_frame/* FrameState */.f {
+class RootElement extends runtime_frame.f {
   constructor(options, scene, changeCallback) {
     super(options, scene);
     this.options = options;
@@ -23443,7 +18735,7 @@ class RootElement extends runtime_frame/* FrameState */.f {
 
   isRoot() {
     return true;
-  } // root type can not change
+  } 
 
 
   onChange(options) {
@@ -23457,13 +18749,12 @@ class RootElement extends runtime_frame/* FrameState */.f {
           rest = _objectWithoutPropertiesLoose(_this$options, _excluded);
 
     return Object.assign({}, rest, {
-      // everything except placement & constraint
       elements: this.elements.map(v => v.getSaveModel())
     });
   }
 
   render() {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       ref: this.setRootRef,
       style: Object.assign({}, this.sizeStyle, this.dataStyle),
       children: this.elements.map(v => v.render())
@@ -23471,7 +18762,7 @@ class RootElement extends runtime_frame/* FrameState */.f {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/features/canvas/runtime/scene.tsx
+;
 function scene_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -23489,17 +18780,16 @@ function scene_defineProperty(obj, key, value) { if (key in obj) { Object.define
 
 
 class Scene {
-  // called after resize/drag for editor updates
   constructor(cfg, enableEditing, onSave) {
     var _this = this;
 
     this.onSave = onSave;
 
-    scene_defineProperty(this, "styles", getStyles(config/* config.theme2 */.vc.theme2));
+    scene_defineProperty(this, "styles", getStyles(config.vc.theme2));
 
-    scene_defineProperty(this, "selection", new ReplaySubject/* ReplaySubject */.t(1));
+    scene_defineProperty(this, "selection", new ReplaySubject.t(1));
 
-    scene_defineProperty(this, "moved", new Subject/* Subject */.x());
+    scene_defineProperty(this, "moved", new Subject.x());
 
     scene_defineProperty(this, "byName", new Map());
 
@@ -23549,11 +18839,11 @@ class Scene {
     });
 
     scene_defineProperty(this, "context", {
-      getColor: color => (0,utils/* getColorDimensionFromData */.FP)(this.data, color),
-      getScale: scale => (0,utils/* getScaleDimensionFromData */.pb)(this.data, scale),
-      getScalar: scalar => (0,utils/* getScalarDimensionFromData */.z2)(this.data, scalar),
-      getText: text => (0,utils/* getTextDimensionFromData */.WO)(this.data, text),
-      getResource: res => (0,utils/* getResourceDimensionFromData */.Qz)(this.data, res)
+      getColor: color => (0,utils.FP)(this.data, color),
+      getScale: scale => (0,utils.pb)(this.data, scale),
+      getScalar: scalar => (0,utils.z2)(this.data, scalar),
+      getText: text => (0,utils.WO)(this.data, text),
+      getResource: res => (0,utils.Qz)(this.data, res)
     });
 
     scene_defineProperty(this, "generateFrameContainer", elements => {
@@ -23609,7 +18899,6 @@ class Scene {
     });
 
     scene_defineProperty(this, "findElementByTarget", target => {
-      // We will probably want to add memoization to this as we are calling on drag / resize
       const stack = [...this.root.elements];
 
       while (stack.length > 0) {
@@ -23619,7 +18908,7 @@ class Scene {
           return currentElement;
         }
 
-        const nestedElements = currentElement instanceof runtime_frame/* FrameState */.f ? currentElement.elements : [];
+        const nestedElements = currentElement instanceof runtime_frame.f ? currentElement.elements : [];
 
         for (const nestedElement of nestedElements) {
           stack.unshift(nestedElement);
@@ -23667,7 +18956,7 @@ class Scene {
           targetElements.push(currentElement.div);
         }
 
-        const nestedElements = currentElement instanceof runtime_frame/* FrameState */.f ? currentElement.elements : [];
+        const nestedElements = currentElement instanceof runtime_frame.f ? currentElement.elements : [];
 
         for (const nestedElement of nestedElements) {
           stack.unshift(nestedElement);
@@ -23721,7 +19010,7 @@ class Scene {
 
         targetedElement.applyResize(event);
 
-        _this.moved.next(Date.now()); // TODO only on end
+        _this.moved.next(Date.now()); 
 
       }).on('resizeGroup', e => {
         e.events.forEach(event => {
@@ -23730,7 +19019,7 @@ class Scene {
           targetedElement.applyResize(event);
         });
 
-        _this.moved.next(Date.now()); // TODO only on end
+        _this.moved.next(Date.now()); 
 
       }).on('resizeEnd', event => {
         const targetedElement = _this.findElementByTarget(event.target);
@@ -23746,7 +19035,6 @@ class Scene {
         const isTargetMoveableElement = _this.moveable.isMoveableElement(selectedTarget) || targets.some(target => target === selectedTarget || target.contains(selectedTarget));
 
         if (isTargetMoveableElement) {
-          // Prevent drawing selection box when selected target is a moveable element
           event.stop();
         }
       }).on('selectEnd', event => {
@@ -23772,13 +19060,12 @@ class Scene {
   load(cfg, enableEditing) {
     this.root = new RootElement(cfg !== null && cfg !== void 0 ? cfg : {
       type: 'frame',
-      elements: [canvas/* DEFAULT_CANVAS_ELEMENT_CONFIG */.Nm]
-    }, this, this.save // callback when changes are made
+      elements: [canvas.Nm]
+    }, this, this.save 
     );
     this.isEditingEnabled = enableEditing;
     setTimeout(() => {
       if (this.div) {
-        // If editing is enabled, clear selecto instance
         const destroySelecto = enableEditing;
         this.initMoveable(destroySelecto, enableEditing);
         this.currentLayer = this.root;
@@ -23809,11 +19096,11 @@ class Scene {
   }
 
   frameSelection() {
-    this.selection.pipe((0,first/* first */.P)()).subscribe(currentSelectedElements => {
+    this.selection.pipe((0,first.P)()).subscribe(currentSelectedElements => {
       var _currentLayer$div;
 
       const currentLayer = currentSelectedElements[0].parent;
-      const newLayer = new runtime_frame/* FrameState */.f({
+      const newLayer = new runtime_frame.f({
         type: 'frame',
         name: this.getNextElementName(true),
         elements: []
@@ -23825,8 +19112,8 @@ class Scene {
 
         const elementContainer = (_element$div2 = element.div) === null || _element$div2 === void 0 ? void 0 : _element$div2.getBoundingClientRect();
         element.setPlacementFromConstraint(elementContainer, framePlacement);
-        currentLayer.doAction(types/* LayerActionID.Delete */.G.Delete, element);
-        newLayer.doAction(types/* LayerActionID.Duplicate */.G.Duplicate, element, false, false);
+        currentLayer.doAction(types.G.Delete, element);
+        newLayer.doAction(types.G.Duplicate, element, false, false);
       });
       newLayer.setPlacementFromConstraint(framePlacement, (_currentLayer$div = currentLayer.div) === null || _currentLayer$div === void 0 ? void 0 : _currentLayer$div.getBoundingClientRect());
       currentLayer.elements.push(newLayer);
@@ -23851,7 +19138,7 @@ class Scene {
   }
 
   render() {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       className: this.styles.wrap,
       style: this.style,
       ref: this.setRef,
@@ -23871,28 +19158,18 @@ const getStyles = (0,grafana_ui_src.stylesFactory)(theme => ({
     margin: 10px;
   `
 }));
-// EXTERNAL MODULE: ./public/app/types/events.ts
 var events = __webpack_require__("./public/app/types/events.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-draggable-virtual-eb201fa540/0/cache/react-draggable-npm-4.4.4-f0b7a5c546-b8258a5893.zip/node_modules/react-draggable/build/cjs/cjs.js
 var cjs = __webpack_require__("./.yarn/__virtual__/react-draggable-virtual-eb201fa540/0/cache/react-draggable-npm-4.4.4-f0b7a5c546-b8258a5893.zip/node_modules/react-draggable/build/cjs/cjs.js");
-var cjs_default = /*#__PURE__*/__webpack_require__.n(cjs);
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-resizable-virtual-13412137cd/0/cache/react-resizable-npm-3.0.4-aa39f9db2b-cbf86ad04b.zip/node_modules/react-resizable/index.js
+var cjs_default = __webpack_require__.n(cjs);
 var react_resizable = __webpack_require__("./.yarn/__virtual__/react-resizable-virtual-13412137cd/0/cache/react-resizable-npm-3.0.4-aa39f9db2b-cbf86ad04b.zip/node_modules/react-resizable/index.js");
-// EXTERNAL MODULE: ./public/app/core/store.ts
 var store = __webpack_require__("./public/app/core/store.ts");
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useObservable.js
 var useObservable = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useObservable.js");
-// EXTERNAL MODULE: ./public/app/features/dashboard/components/PanelEditor/OptionsPaneCategoryDescriptor.tsx
 var OptionsPaneCategoryDescriptor = __webpack_require__("./public/app/features/dashboard/components/PanelEditor/OptionsPaneCategoryDescriptor.tsx");
-// EXTERNAL MODULE: ./public/app/features/dashboard/components/PanelEditor/getVisualizationOptions.tsx + 1 modules
 var getVisualizationOptions = __webpack_require__("./public/app/features/dashboard/components/PanelEditor/getVisualizationOptions.tsx");
-// EXTERNAL MODULE: ./public/app/features/dashboard/components/PanelEditor/utils.ts
 var PanelEditor_utils = __webpack_require__("./public/app/features/dashboard/components/PanelEditor/utils.ts");
-// EXTERNAL MODULE: ./public/app/features/dimensions/editors/NumberInput.tsx
 var NumberInput = __webpack_require__("./public/app/features/dimensions/editors/NumberInput.tsx");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/canvas/editor/PlacementEditor.tsx
+;
 var _div, _div2, _br;
 
 
@@ -23907,35 +19184,35 @@ var _div, _div2, _br;
 const places = ['top', 'left', 'bottom', 'right', 'width', 'height'];
 const horizontalOptions = [{
   label: 'Left',
-  value: canvas/* HorizontalConstraint.Left */._5.Left
+  value: canvas._5.Left
 }, {
   label: 'Right',
-  value: canvas/* HorizontalConstraint.Right */._5.Right
+  value: canvas._5.Right
 }, {
   label: 'Left and right',
-  value: canvas/* HorizontalConstraint.LeftRight */._5.LeftRight
+  value: canvas._5.LeftRight
 }, {
   label: 'Center',
-  value: canvas/* HorizontalConstraint.Center */._5.Center
+  value: canvas._5.Center
 }, {
   label: 'Scale',
-  value: canvas/* HorizontalConstraint.Scale */._5.Scale
+  value: canvas._5.Scale
 }];
 const verticalOptions = [{
   label: 'Top',
-  value: canvas/* VerticalConstraint.Top */.fJ.Top
+  value: canvas.fJ.Top
 }, {
   label: 'Bottom',
-  value: canvas/* VerticalConstraint.Bottom */.fJ.Bottom
+  value: canvas.fJ.Bottom
 }, {
   label: 'Top and bottom',
-  value: canvas/* VerticalConstraint.TopBottom */.fJ.TopBottom
+  value: canvas.fJ.TopBottom
 }, {
   label: 'Center',
-  value: canvas/* VerticalConstraint.Center */.fJ.Center
+  value: canvas.fJ.Center
 }, {
   label: 'Scale',
-  value: canvas/* VerticalConstraint.Scale */.fJ.Scale
+  value: canvas.fJ.Scale
 }];
 const PlacementEditor = _ref => {
   var _options$constraint;
@@ -23943,12 +19220,12 @@ const PlacementEditor = _ref => {
   let {
     item
   } = _ref;
-  const settings = item.settings; // Will force a rerender whenever the subject changes
+  const settings = item.settings; 
 
-  (0,useObservable/* default */.Z)(settings !== null && settings !== void 0 && settings.scene ? settings.scene.moved : new Subject/* Subject */.x());
+  (0,useObservable.Z)(settings !== null && settings !== void 0 && settings.scene ? settings.scene.moved : new Subject.x());
 
   if (!settings) {
-    return _div || (_div = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return _div || (_div = (0,jsx_runtime.jsx)("div", {
       children: "Loading..."
     }));
   }
@@ -23956,7 +19233,7 @@ const PlacementEditor = _ref => {
   const element = settings.element;
 
   if (!element) {
-    return _div2 || (_div2 = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return _div2 || (_div2 = (0,jsx_runtime.jsx)("div", {
       children: "???"
     }));
   }
@@ -23989,20 +19266,20 @@ const PlacementEditor = _ref => {
     settings.scene.clearCurrentSelection();
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.VerticalGroup, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+  return (0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsxs)(grafana_ui_src.VerticalGroup, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         options: verticalOptions,
         onChange: onVerticalConstraintChange,
         value: layout === null || layout === void 0 ? void 0 : layout.vertical
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         options: horizontalOptions,
         onChange: onHorizontalConstraintChange,
         value: (_options$constraint = options.constraint) === null || _options$constraint === void 0 ? void 0 : _options$constraint.horizontal
       })]
-    }), _br || (_br = /*#__PURE__*/(0,jsx_runtime.jsx)("br", {})), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+    }), _br || (_br = (0,jsx_runtime.jsx)("br", {})), (0,jsx_runtime.jsx)(grafana_ui_src.Field, {
       label: "Position",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+      children: (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
         children: places.map(p => {
           const v = placement[p];
 
@@ -24010,12 +19287,12 @@ const PlacementEditor = _ref => {
             return null;
           }
 
-          return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+          return (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
               label: p,
               labelWidth: 8,
               grow: true,
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)(NumberInput/* NumberInput */.Y, {
+              children: (0,jsx_runtime.jsx)(NumberInput.Y, {
                 value: v,
                 onChange: v => onPositionChange(v, p)
               })
@@ -24026,9 +19303,8 @@ const PlacementEditor = _ref => {
     })]
   });
 };
-// EXTERNAL MODULE: ./public/app/plugins/panel/canvas/editor/options.ts
 var editor_options = __webpack_require__("./public/app/plugins/panel/canvas/editor/options.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/canvas/editor/elementEditor.tsx
+;
 
 
 
@@ -24038,8 +19314,6 @@ function getElementEditor(opts) {
   return {
     category: opts.category,
     path: '--',
-    // not used!
-    // Note that canvas editor writes things to the scene!
     values: parent => ({
       getValue: path => {
         return (0,lodash.get)(opts.element.options, path);
@@ -24048,7 +19322,7 @@ function getElementEditor(opts) {
         let options = opts.element.options;
 
         if (path === 'type' && value) {
-          const layer = canvas/* canvasElementRegistry.getIfExists */.Jk.getIfExists(value);
+          const layer = canvas.Jk.getIfExists(value);
 
           if (!layer) {
             console.warn('layer does not exist', value);
@@ -24059,33 +19333,31 @@ function getElementEditor(opts) {
             type: layer.id
           });
         } else {
-          options = (0,PanelEditor_utils/* setOptionImmutably */.hs)(options, path, value);
+          options = (0,PanelEditor_utils.hs)(options, path, value);
         }
 
         opts.element.onChange(options);
         opts.element.updateData(opts.scene.context);
       }
     }),
-    // Dynamically fill the selected element
     build: (builder, context) => {
       var _options$type;
 
       const {
         options
       } = opts.element;
-      const layerTypes = canvas/* canvasElementRegistry.selectOptions */.Jk.selectOptions(options !== null && options !== void 0 && options.type // the selected value
-      ? [options.type] // as an array
-      : [canvas/* DEFAULT_CANVAS_ELEMENT_CONFIG.type */.Nm.type]);
+      const layerTypes = canvas.Jk.selectOptions(options !== null && options !== void 0 && options.type 
+      ? [options.type] 
+      : [canvas.Nm.type]);
       builder.addSelect({
         path: 'type',
         name: undefined,
-        // required, but hide space
         settings: {
           options: layerTypes.options
         }
-      }); // force clean layer configuration
+      }); 
 
-      const layer = canvas/* canvasElementRegistry.getIfExists */.Jk.getIfExists((_options$type = options === null || options === void 0 ? void 0 : options.type) !== null && _options$type !== void 0 ? _options$type : canvas/* DEFAULT_CANVAS_ELEMENT_CONFIG.type */.Nm.type);
+      const layer = canvas.Jk.getIfExists((_options$type = options === null || options === void 0 ? void 0 : options.type) !== null && _options$type !== void 0 ? _options$type : canvas.Nm.type);
       let currentOptions = options;
 
       if (!currentOptions) {
@@ -24103,13 +19375,12 @@ function getElementEditor(opts) {
         layer.registerOptionsUI(builder, ctx);
       }
 
-      editor_options/* optionBuilder.addBackground */.I.addBackground(builder, ctx);
-      editor_options/* optionBuilder.addBorder */.I.addBorder(builder, ctx);
+      editor_options.I.addBackground(builder, ctx);
+      editor_options.I.addBorder(builder, ctx);
       builder.addCustomEditor({
         category: ['Layout'],
         id: 'content',
         path: '__',
-        // not used
         name: 'Constraints',
         editor: PlacementEditor,
         settings: opts
@@ -24117,17 +19388,12 @@ function getElementEditor(opts) {
     }
   };
 }
-// EXTERNAL MODULE: ./public/app/core/app_events.ts
 var app_events = __webpack_require__("./public/app/core/app_events.ts");
-// EXTERNAL MODULE: ./public/app/core/components/Layers/AddLayerButton.tsx
 var AddLayerButton = __webpack_require__("./public/app/core/components/Layers/AddLayerButton.tsx");
-// EXTERNAL MODULE: ./public/app/core/components/Layers/LayerDragDropList.tsx + 1 modules
 var LayerDragDropList = __webpack_require__("./public/app/core/components/Layers/LayerDragDropList.tsx");
-// EXTERNAL MODULE: ./public/app/features/canvas/elements/notFound.tsx
 var notFound = __webpack_require__("./public/app/features/canvas/elements/notFound.tsx");
-// EXTERNAL MODULE: ./public/app/features/canvas/runtime/element.tsx
 var runtime_element = __webpack_require__("./public/app/features/canvas/runtime/element.tsx");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/canvas/editor/LayerElementListEditor.tsx
+;
 var LayerElementListEditor_div, LayerElementListEditor_div2, LayerElementListEditor_br;
 
 function LayerElementListEditor_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -24177,10 +19443,10 @@ class LayerElementListEditor extends react.PureComponent {
       const {
         layer
       } = settings;
-      const item = (_canvasElementRegistr = canvas/* canvasElementRegistry.getIfExists */.Jk.getIfExists(sel.value)) !== null && _canvasElementRegistr !== void 0 ? _canvasElementRegistr : notFound/* notFoundItem */.C;
+      const item = (_canvasElementRegistr = canvas.Jk.getIfExists(sel.value)) !== null && _canvasElementRegistr !== void 0 ? _canvasElementRegistr : notFound.C;
       const newElementOptions = item.getNewOptions();
       newElementOptions.type = item.id;
-      const newElement = new runtime_element/* ElementState */.f(item, newElementOptions, layer);
+      const newElement = new runtime_element.f(item, newElementOptions, layer);
       newElement.updateData(layer.scene.context);
       layer.elements.push(newElement);
       layer.scene.save();
@@ -24198,19 +19464,19 @@ class LayerElementListEditor extends react.PureComponent {
             targets: []
           };
 
-          if (item instanceof runtime_frame/* FrameState */.f) {
+          if (item instanceof runtime_frame.f) {
             const targetElements = [];
             targetElements.push(item === null || item === void 0 ? void 0 : item.div);
             selection.targets = targetElements;
             selection.frame = item;
             settings.scene.select(selection);
-          } else if (item instanceof runtime_element/* ElementState */.f) {
+          } else if (item instanceof runtime_element.f) {
             const targetElement = [item === null || item === void 0 ? void 0 : item.div];
             selection.targets = targetElement;
             settings.scene.select(selection);
           }
         } catch (error) {
-          app_events/* default.emit */.Z.emit(src.AppEvents.alertError, ['Unable to select element, try selecting element in panel instead']);
+          app_events.Z.emit(src.AppEvents.alertError, ['Unable to select element, try selecting element in panel instead']);
         }
       }
     });
@@ -24285,12 +19551,12 @@ class LayerElementListEditor extends react.PureComponent {
 
         const elementContainer = (_element$div = element.div) === null || _element$div === void 0 ? void 0 : _element$div.getBoundingClientRect();
         element.setPlacementFromConstraint(elementContainer, (_layer$parent = layer.parent) === null || _layer$parent === void 0 ? void 0 : (_layer$parent$div = _layer$parent.div) === null || _layer$parent$div === void 0 ? void 0 : _layer$parent$div.getBoundingClientRect());
-        (_layer$parent2 = layer.parent) === null || _layer$parent2 === void 0 ? void 0 : _layer$parent2.doAction(types/* LayerActionID.Duplicate */.G.Duplicate, element, false, false);
+        (_layer$parent2 = layer.parent) === null || _layer$parent2 === void 0 ? void 0 : _layer$parent2.doAction(types.G.Duplicate, element, false, false);
       });
     });
 
     LayerElementListEditor_defineProperty(this, "onDecoupleFrame", () => {
-      app_events/* default.publish */.Z.publish(new events/* ShowConfirmModalEvent */.VJ({
+      app_events.Z.publish(new events.VJ({
         title: 'Decouple frame',
         text: `Are you sure you want to decouple this frame?`,
         text2: 'This will remove the frame and push nested elements in the next level up.',
@@ -24317,7 +19583,7 @@ class LayerElementListEditor extends react.PureComponent {
       const scene = this.getScene();
       scene === null || scene === void 0 ? void 0 : scene.byName.delete(layer.getName());
       layer.elements.forEach(element => scene === null || scene === void 0 ? void 0 : scene.byName.delete(element.getName()));
-      (_layer$parent3 = layer.parent) === null || _layer$parent3 === void 0 ? void 0 : _layer$parent3.doAction(types/* LayerActionID.Delete */.G.Delete, layer);
+      (_layer$parent3 = layer.parent) === null || _layer$parent3 === void 0 ? void 0 : _layer$parent3.doAction(types.G.Delete, layer);
       this.goUpLayer();
     });
 
@@ -24332,7 +19598,7 @@ class LayerElementListEditor extends react.PureComponent {
     });
 
     LayerElementListEditor_defineProperty(this, "onDeleteFrame", () => {
-      app_events/* default.publish */.Z.publish(new events/* ShowConfirmModalEvent */.VJ({
+      app_events.Z.publish(new events.VJ({
         title: 'Delete frame',
         text: `Are you sure you want to delete this frame?`,
         text2: 'This will delete the frame and all nested elements.',
@@ -24350,7 +19616,7 @@ class LayerElementListEditor extends react.PureComponent {
     const settings = this.props.item.settings;
 
     if (!settings) {
-      return LayerElementListEditor_div || (LayerElementListEditor_div = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      return LayerElementListEditor_div || (LayerElementListEditor_div = (0,jsx_runtime.jsx)("div", {
         children: "No settings"
       }));
     }
@@ -24358,17 +19624,17 @@ class LayerElementListEditor extends react.PureComponent {
     const layer = settings.layer;
 
     if (!layer) {
-      return LayerElementListEditor_div2 || (LayerElementListEditor_div2 = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      return LayerElementListEditor_div2 || (LayerElementListEditor_div2 = (0,jsx_runtime.jsx)("div", {
         children: "Missing layer?"
       }));
     }
 
     const onDelete = element => {
-      layer.doAction(types/* LayerActionID.Delete */.G.Delete, element);
+      layer.doAction(types.G.Delete, element);
     };
 
     const onDuplicate = element => {
-      layer.doAction(types/* LayerActionID.Duplicate */.G.Duplicate, element);
+      layer.doAction(types.G.Duplicate, element);
     };
 
     const getLayerInfo = element => {
@@ -24382,7 +19648,7 @@ class LayerElementListEditor extends react.PureComponent {
     };
 
     const isFrame = element => {
-      return element instanceof runtime_frame/* FrameState */.f;
+      return element instanceof runtime_frame.f;
     };
 
     const verifyLayerNameUniqueness = nameToVerify => {
@@ -24391,31 +19657,31 @@ class LayerElementListEditor extends react.PureComponent {
     };
 
     const selection = settings.selected ? settings.selected.map(v => v.getName()) : [];
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [!layer.isRoot() && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [!layer.isRoot() && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           icon: "angle-up",
           size: "sm",
           variant: "secondary",
           onClick: this.goUpLayer,
           children: "Go up level"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           size: "sm",
           variant: "secondary",
           onClick: () => this.onSelect(layer),
           children: "Select frame"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           size: "sm",
           variant: "secondary",
           onClick: () => this.onDecoupleFrame(),
           children: "Decouple frame"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           size: "sm",
           variant: "secondary",
           onClick: () => this.onDeleteFrame(),
           children: "Delete frame"
         })]
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(LayerDragDropList/* LayerDragDropList */.E, {
+      }), (0,jsx_runtime.jsx)(LayerDragDropList.E, {
         onDragEnd: this.onDragEnd,
         onSelect: this.onSelect,
         onDelete: onDelete,
@@ -24426,17 +19692,17 @@ class LayerElementListEditor extends react.PureComponent {
         isFrame: isFrame,
         layers: layer.elements,
         selection: selection
-      }), LayerElementListEditor_br || (LayerElementListEditor_br = /*#__PURE__*/(0,jsx_runtime.jsx)("br", {})), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(AddLayerButton/* AddLayerButton */.f, {
+      }), LayerElementListEditor_br || (LayerElementListEditor_br = (0,jsx_runtime.jsx)("br", {})), (0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
+        children: [(0,jsx_runtime.jsx)(AddLayerButton.f, {
           onChange: this.onAddItem,
-          options: canvas/* canvasElementRegistry.selectOptions */.Jk.selectOptions().options,
+          options: canvas.Jk.selectOptions().options,
           label: 'Add item'
-        }), selection.length > 0 && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+        }), selection.length > 0 && (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           size: "sm",
           variant: "secondary",
           onClick: this.onClearSelection,
           children: "Clear selection"
-        }), selection.length > 1 && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+        }), selection.length > 1 && (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           size: "sm",
           variant: "secondary",
           onClick: this.onFrameSelection,
@@ -24447,7 +19713,7 @@ class LayerElementListEditor extends react.PureComponent {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/canvas/editor/layerEditor.tsx
+;
 
 
 
@@ -24466,7 +19732,7 @@ function getLayerEditor(opts) {
 
   if (selected) {
     for (const element of selected) {
-      if (element instanceof runtime_frame/* FrameState */.f) {
+      if (element instanceof runtime_frame.f) {
         scene.currentLayer = element;
         break;
       }
@@ -24484,8 +19750,6 @@ function getLayerEditor(opts) {
   return {
     category: ['Layer'],
     path: '--',
-    // not used!
-    // Note that canvas editor writes things to the scene!
     values: parent => ({
       getValue: path => {
         return (0,lodash.get)(options, path);
@@ -24498,16 +19762,15 @@ function getLayerEditor(opts) {
           return;
         }
 
-        const c = (0,PanelEditor_utils/* setOptionImmutably */.hs)(options, path, value);
+        const c = (0,PanelEditor_utils.hs)(options, path, value);
         (_scene$currentLayer = scene.currentLayer) === null || _scene$currentLayer === void 0 ? void 0 : _scene$currentLayer.onChange(c);
         (_scene$currentLayer2 = scene.currentLayer) === null || _scene$currentLayer2 === void 0 ? void 0 : _scene$currentLayer2.updateData(scene.context);
       }
     }),
-    // Dynamically fill the selected element
     build: (builder, context) => {
       const currentLayer = scene.currentLayer;
 
-      if (currentLayer && !currentLayer.isRoot()) {// TODO: the non-root nav option
+      if (currentLayer && !currentLayer.isRoot()) {
       }
 
       builder.addCustomEditor({
@@ -24524,15 +19787,14 @@ function getLayerEditor(opts) {
       const ctx = Object.assign({}, context, {
         options
       });
-      editor_options/* optionBuilder.addBackground */.I.addBackground(builder, ctx);
-      editor_options/* optionBuilder.addBorder */.I.addBorder(builder, ctx);
+      editor_options.I.addBackground(builder, ctx);
+      editor_options.I.addBorder(builder, ctx);
 
       if (currentLayer && !currentLayer.isRoot()) {
         builder.addCustomEditor({
           category: ['Layout'],
           id: 'content',
           path: '__',
-          // not used
           name: 'Constraints',
           editor: PlacementEditor,
           settings: {
@@ -24544,7 +19806,7 @@ function getLayerEditor(opts) {
     }
   };
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/canvas/InlineEditBody.tsx
+;
 
 
 
@@ -24560,13 +19822,13 @@ function getLayerEditor(opts) {
 const InlineEditBody = () => {
   var _activePanel$panel$co;
 
-  const activePanel = (0,useObservable/* default */.Z)(activePanelSubject);
+  const activePanel = (0,useObservable.Z)(activePanelSubject);
   const instanceState = activePanel === null || activePanel === void 0 ? void 0 : (_activePanel$panel$co = activePanel.panel.context) === null || _activePanel$panel$co === void 0 ? void 0 : _activePanel$panel$co.instanceState;
   const pane = (0,react.useMemo)(() => {
     const state = instanceState;
 
     if (!state) {
-      return new OptionsPaneCategoryDescriptor/* OptionsPaneCategoryDescriptor */.j({
+      return new OptionsPaneCategoryDescriptor.j({
         id: 'root',
         title: 'root'
       });
@@ -24579,7 +19841,7 @@ const InlineEditBody = () => {
       if ((selection === null || selection === void 0 ? void 0 : selection.length) === 1) {
         const element = selection[0];
 
-        if (!(element instanceof runtime_frame/* FrameState */.f)) {
+        if (!(element instanceof runtime_frame.f)) {
           builder.addNestedOptions(getElementEditor({
             category: [`Selected element (${element.options.name})`],
             element,
@@ -24591,29 +19853,29 @@ const InlineEditBody = () => {
 
     return getOptionsPaneCategoryDescriptor({}, supplier);
   }, [instanceState]);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsx)("div", {
       children: pane.items.map(v => v.render())
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), (0,jsx_runtime.jsx)("div", {
       children: pane.categories.map(c => {
-        return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h5", {
+        return (0,jsx_runtime.jsxs)("div", {
+          children: [(0,jsx_runtime.jsx)("h5", {
             children: c.props.title
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          }), (0,jsx_runtime.jsx)("div", {
             children: c.items.map(s => s.render())
           })]
         }, c.props.id);
       })
     })]
   });
-}; // 🤮🤮🤮🤮 this oddly does not actually do anything, but structure is required.  I'll try to clean it up...
+}; 
 
 function getOptionsPaneCategoryDescriptor(props, supplier) {
   const context = {
     data: props.input,
     options: props.options
   };
-  const root = new OptionsPaneCategoryDescriptor/* OptionsPaneCategoryDescriptor */.j({
+  const root = new OptionsPaneCategoryDescriptor.j({
     id: 'root',
     title: 'root'
   });
@@ -24624,7 +19886,7 @@ function getOptionsPaneCategoryDescriptor(props, supplier) {
       let sub = root.categories.find(v => v.props.id === key);
 
       if (!sub) {
-        sub = new OptionsPaneCategoryDescriptor/* OptionsPaneCategoryDescriptor */.j({
+        sub = new OptionsPaneCategoryDescriptor.j({
           id: key,
           title: key
         });
@@ -24640,14 +19902,14 @@ function getOptionsPaneCategoryDescriptor(props, supplier) {
   const access = {
     getValue: path => (0,lodash.get)(props.options, path),
     onChange: (path, value) => {
-      props.onChange((0,PanelEditor_utils/* setOptionImmutably */.hs)(props.options, path, value));
+      props.onChange((0,PanelEditor_utils.hs)(props.options, path, value));
     }
-  }; // Use the panel options loader
+  }; 
 
-  (0,getVisualizationOptions/* fillOptionsPaneItems */.HZ)(supplier, access, getOptionsPaneCategory, context);
+  (0,getVisualizationOptions.HZ)(supplier, access, getOptionsPaneCategory, context);
   return root;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/canvas/InlineEdit.tsx
+;
 var InlineEdit_div, _InlineEditBody;
 
 
@@ -24674,7 +19936,7 @@ const InlineEdit = _ref => {
   };
   const defaultX = btnInlineEdit.x + OFFSET_X;
   const defaultY = btnInlineEdit.y - defaultMeasurements.height;
-  const savedPlacement = store/* default.getObject */.Z.getObject(inlineEditKey, {
+  const savedPlacement = store.Z.getObject(inlineEditKey, {
     x: defaultX,
     y: defaultY,
     w: defaultMeasurements.width,
@@ -24711,7 +19973,7 @@ const InlineEdit = _ref => {
   };
 
   const saveToStore = (x, y, width, height) => {
-    store/* default.setObject */.Z.setObject(inlineEditKey, {
+    store.Z.setObject(inlineEditKey, {
       x: x,
       y: y,
       w: width,
@@ -24719,44 +19981,44 @@ const InlineEdit = _ref => {
     });
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Portal, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.Portal, {
+    children: (0,jsx_runtime.jsx)("div", {
       className: styles.draggableWrapper,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)((cjs_default()), {
+      children: (0,jsx_runtime.jsx)((cjs_default()), {
         handle: "strong",
         onStop: onDragStop,
         position: {
           x: placement.x,
           y: placement.y
         },
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(react_resizable.Resizable, {
+        children: (0,jsx_runtime.jsx)(react_resizable.Resizable, {
           height: measurements.height,
           width: measurements.width,
           onResize: onResizeStop,
-          children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+          children: (0,jsx_runtime.jsxs)("div", {
             className: styles.inlineEditorContainer,
             style: {
               height: `${measurements.height}px`,
               width: `${measurements.width}px`
             },
             ref: ref,
-            children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("strong", {
+            children: [(0,jsx_runtime.jsxs)("strong", {
               className: styles.inlineEditorHeader,
-              children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+              children: [(0,jsx_runtime.jsx)("div", {
                 className: styles.placeholder
-              }), InlineEdit_div || (InlineEdit_div = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+              }), InlineEdit_div || (InlineEdit_div = (0,jsx_runtime.jsx)("div", {
                 children: "Canvas Inline Editor"
-              })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
+              })), (0,jsx_runtime.jsx)(grafana_ui_src.IconButton, {
                 name: "times",
                 size: "xl",
                 className: styles.inlineEditorClose,
                 onClick: onClose
               })]
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+            }), (0,jsx_runtime.jsx)("div", {
               className: styles.inlineEditorContentWrapper,
-              children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+              children: (0,jsx_runtime.jsx)("div", {
                 className: styles.inlineEditorContent,
-                children: _InlineEditBody || (_InlineEditBody = /*#__PURE__*/(0,jsx_runtime.jsx)(InlineEditBody, {}))
+                children: _InlineEditBody || (_InlineEditBody = (0,jsx_runtime.jsx)(InlineEditBody, {}))
               })
             })]
           })
@@ -24805,7 +20067,7 @@ const InlineEdit_getStyles = theme => ({
     overflow: scroll;
   `
 });
-;// CONCATENATED MODULE: ./public/app/plugins/panel/canvas/CanvasPanel.tsx
+;
 function CanvasPanel_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -24822,7 +20084,7 @@ function CanvasPanel_defineProperty(obj, key, value) { if (key in obj) { Object.
 let canvasInstances = [];
 let activeCanvasPanel = undefined;
 let isInlineEditOpen = false;
-const activePanelSubject = new ReplaySubject/* ReplaySubject */.t(1);
+const activePanelSubject = new ReplaySubject.t(1);
 class CanvasPanel extends react.Component {
   constructor(props) {
     super(props);
@@ -24831,7 +20093,7 @@ class CanvasPanel extends react.Component {
 
     CanvasPanel_defineProperty(this, "scene", void 0);
 
-    CanvasPanel_defineProperty(this, "subs", new Subscription/* Subscription */.w0());
+    CanvasPanel_defineProperty(this, "subs", new Subscription.w0());
 
     CanvasPanel_defineProperty(this, "needsReload", false);
 
@@ -24849,7 +20111,7 @@ class CanvasPanel extends react.Component {
       }));
       this.setState({
         refresh: this.state.refresh + 1
-      }); // console.log('send changes', root);
+      }); 
     });
 
     CanvasPanel_defineProperty(this, "inlineEditButtonClick", () => {
@@ -24881,7 +20143,7 @@ class CanvasPanel extends react.Component {
     });
 
     CanvasPanel_defineProperty(this, "renderInlineEdit", () => {
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(InlineEdit, {
+      return (0,jsx_runtime.jsx)(InlineEdit, {
         onClose: () => this.inlineEditButtonClose()
       });
     });
@@ -24889,18 +20151,16 @@ class CanvasPanel extends react.Component {
     this.state = {
       refresh: 0,
       openInlineEdit: false
-    }; // Only the initial options are ever used.
-    // later changes are all controlled by the scene
+    }; 
 
     this.scene = new Scene(this.props.options.root, this.props.options.inlineEditing, this.onUpdateScene);
     this.scene.updateSize(props.width, props.height);
     this.scene.updateData(props.data);
-    this.subs.add(this.props.eventBus.subscribe(events/* PanelEditEnteredEvent */.xF, evt => {
-      // Remove current selection when entering edit mode for any panel in dashboard
+    this.subs.add(this.props.eventBus.subscribe(events.xF, evt => {
       this.scene.clearCurrentSelection();
       this.inlineEditButtonClose();
     }));
-    this.subs.add(this.props.eventBus.subscribe(events/* PanelEditExitedEvent */.Yr, evt => {
+    this.subs.add(this.props.eventBus.subscribe(events.Yr, evt => {
       if (this.props.id === evt.payload) {
         this.needsReload = true;
       }
@@ -24950,8 +20210,7 @@ class CanvasPanel extends react.Component {
 
       return ci.props.id !== ((_activeCanvasPanel = activeCanvasPanel) === null || _activeCanvasPanel === void 0 ? void 0 : _activeCanvasPanel.props.id);
     });
-  } // NOTE, all changes to the scene flow through this function
-  // even the editor gets current state from the same scene instance!
+  } 
 
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -24978,7 +20237,7 @@ class CanvasPanel extends react.Component {
 
     if (this.state.openInlineEdit !== nextState.openInlineEdit) {
       changed = true;
-    } // After editing, the options are valid, but the scene was in a different panel or inline editing mode has changed
+    } 
 
 
     const shouldUpdateSceneAndPanel = this.needsReload && this.props.options !== nextProps.options;
@@ -25002,11 +20261,11 @@ class CanvasPanel extends react.Component {
   }
 
   render() {
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [this.scene.render(), this.props.options.inlineEditing && !this.isEditing && /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [this.scene.render(), this.props.options.inlineEditing && !this.isEditing && (0,jsx_runtime.jsxs)("div", {
+        children: [(0,jsx_runtime.jsx)("div", {
           className: this.styles.inlineEditButton,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
             size: "lg",
             variant: "secondary",
             icon: "edit",
@@ -25030,13 +20289,13 @@ const CanvasPanel_getStyles = (0,grafana_ui_src.stylesFactory)(theme => ({
     z-index: 999;
   `
 }));
-;// CONCATENATED MODULE: ./public/app/plugins/panel/canvas/module.tsx
+;
 
 
 
 
 
-const module_plugin = new src.PanelPlugin(CanvasPanel).setNoPadding() // extend to panel edges
+const module_plugin = new src.PanelPlugin(CanvasPanel).setNoPadding() 
 .useFieldConfig().setPanelOptions((builder, context) => {
   const state = context.instanceState;
   builder.addBooleanSwitch({
@@ -25053,7 +20312,7 @@ const module_plugin = new src.PanelPlugin(CanvasPanel).setNoPadding() // extend 
     if ((selection === null || selection === void 0 ? void 0 : selection.length) === 1) {
       const element = selection[0];
 
-      if (!(element instanceof runtime_frame/* FrameState */.f)) {
+      if (!(element instanceof runtime_frame.f)) {
         builder.addNestedOptions(getElementEditor({
           category: [`Selected element (${element.options.name})`],
           element,
@@ -25064,14 +20323,14 @@ const module_plugin = new src.PanelPlugin(CanvasPanel).setNoPadding() // extend 
   }
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/panel/canvas/types.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/panel/canvas/types.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "G": () => (/* binding */ LayerActionID)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "G": () => ( LayerActionID)
+ });
 let LayerActionID;
 
 (function (LayerActionID) {
@@ -25081,29 +20340,29 @@ let LayerActionID;
   LayerActionID["MoveBottom"] = "move-bottom";
 })(LayerActionID || (LayerActionID = {}));
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useObservable.js":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useObservable.js":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useIsomorphicLayoutEffect.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useIsomorphicLayoutEffect.js");
 
 
 function useObservable(observable$, initialValue) {
     var _a = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(initialValue), value = _a[0], update = _a[1];
-    (0,_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z)(function () {
+    (0,_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_1__ .Z)(function () {
         var s = observable$.subscribe(update);
         return function () { return s.unsubscribe(); };
     }, [observable$]);
     return value;
 }
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useObservable);
+ const __WEBPACK_DEFAULT_EXPORT__ = (useObservable);
 
 
-/***/ })
+ })
 
 }]);

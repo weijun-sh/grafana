@@ -1,16 +1,15 @@
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[7385],{
 
-/***/ "./public/app/angular/AngularLocationWrapper.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/AngularLocationWrapper.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "O": () => (/* binding */ AngularLocationWrapper)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "O": () => ( AngularLocationWrapper)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
 
- // Ref: https://github.com/angular/angular.js/blob/ae8e903edf88a83fedd116ae02c0628bf72b150c/src/ng/location.js#L5
 
 const DEFAULT_PORTS = {
   http: 80,
@@ -118,7 +117,6 @@ class AngularLocationWrapper {
       }
 
       for (const key of Object.keys(newQuery)) {
-        // removing params with null | undefined
         if (newQuery[key] === null || newQuery[key] === undefined) {
           delete newQuery[key];
         }
@@ -163,56 +161,47 @@ class AngularLocationWrapper {
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/angular/core_module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/core_module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "hF": () => (/* binding */ coreModule),
-/* harmony export */   "rb": () => (/* binding */ angularModules)
-/* harmony export */ });
-/* harmony import */ var angular__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/angular-npm-1.8.2-307000482b-35ea81a23b.zip/node_modules/angular/index.js");
-/* harmony import */ var angular__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(angular__WEBPACK_IMPORTED_MODULE_0__);
+ __webpack_require__.d(__webpack_exports__, {
+   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__),
+   "hF": () => ( coreModule),
+   "rb": () => ( angularModules)
+ });
+ var angular__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/angular-npm-1.8.2-307000482b-35ea81a23b.zip/node_modules/angular/index.js");
+ var angular__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(angular__WEBPACK_IMPORTED_MODULE_0__);
 
-const coreModule = angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.core', ['ngRoute']); // legacy modules
+const coreModule = angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.core', ['ngRoute']); 
 
 const angularModules = [coreModule, angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.controllers', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.directives', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.factories', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.services', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.filters', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.routes', [])];
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (coreModule);
+ const __WEBPACK_DEFAULT_EXPORT__ = (coreModule);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/angular/index.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/index.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "AngularApp": () => (/* reexport */ AngularApp),
-  "coreModule": () => (/* reexport */ core_module/* coreModule */.hF)
+  "AngularApp": () => ( AngularApp),
+  "coreModule": () => ( core_module.hF)
 });
 
-// EXTERNAL MODULE: ./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/core.js
 var core = __webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/core.js");
-var core_default = /*#__PURE__*/__webpack_require__.n(core);
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subscription.js
+var core_default = __webpack_require__.n(core);
 var Subscription = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/Subscription.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./public/app/angular/core_module.ts
 var core_module = __webpack_require__("./public/app/angular/core_module.ts");
-// EXTERNAL MODULE: ./public/app/types/events.ts
 var events = __webpack_require__("./public/app/types/events.ts");
-;// CONCATENATED MODULE: ./public/app/angular/panel/panel_directive.ts
-// @ts-ignore
+;
 
 
 
@@ -222,7 +211,7 @@ var events = __webpack_require__("./public/app/types/events.ts");
 const panelTemplate = `
   <ng-transclude class="panel-height-helper"></ng-transclude>
 `;
-core_module/* coreModule.directive */.hF.directive('grafanaPanel', ["$rootScope", "$document", "$timeout", ($rootScope, $document, $timeout) => {
+core_module.hF.directive('grafanaPanel', ["$rootScope", "$document", "$timeout", ($rootScope, $document, $timeout) => {
   return {
     restrict: 'E',
     template: panelTemplate,
@@ -233,7 +222,7 @@ core_module/* coreModule.directive */.hF.directive('grafanaPanel', ["$rootScope"
     link: (scope, elem) => {
       const ctrl = scope.ctrl;
       const panel = scope.ctrl.panel;
-      const subs = new Subscription/* Subscription */.w0();
+      const subs = new Subscription.w0();
       let panelScrollbar;
 
       function resizeScrollableContent() {
@@ -272,16 +261,15 @@ core_module/* coreModule.directive */.hF.directive('grafanaPanel', ["$rootScope"
         ctrl.width = scope.$parent.$parent.size.width;
       }
 
-      updateDimensionsFromParentScope(); // Pass PanelModel events down to angular controller event emitter
+      updateDimensionsFromParentScope(); 
 
       subs.add(panel.events.subscribe(grafana_runtime_src.RefreshEvent, () => {
         updateDimensionsFromParentScope();
         ctrl.events.emit('refresh');
       }));
-      subs.add(panel.events.subscribe(events/* RenderEvent */._z, event => {
+      subs.add(panel.events.subscribe(events._z, event => {
         var _event$payload;
 
-        // this event originated from angular so no need to bubble it back
         if ((_event$payload = event.payload) !== null && _event$payload !== void 0 && _event$payload.fromAngular) {
           return;
         }
@@ -292,17 +280,16 @@ core_module/* coreModule.directive */.hF.directive('grafanaPanel', ["$rootScope"
           ctrl.events.emit('render');
         });
       }));
-      subs.add(ctrl.events.subscribe(events/* RenderEvent */._z, event => {
-        // this event originated from angular so bubble it to react so the PanelChromeAngular can update the panel header alert state
+      subs.add(ctrl.events.subscribe(events._z, event => {
         if (event.payload) {
           event.payload.fromAngular = true;
           panel.events.publish(event);
         }
       }));
       scope.$on('$destroy', () => {
-        elem.off(); // Remove PanelModel.event subs
+        elem.off(); 
 
-        subs.unsubscribe(); // Remove Angular controller event subs
+        subs.unsubscribe(); 
 
         ctrl.events.emit(src.PanelEvents.panelTeardown);
         ctrl.events.removeAllListeners();
@@ -311,21 +298,18 @@ core_module/* coreModule.directive */.hF.directive('grafanaPanel', ["$rootScope"
           panelScrollbar.dispose();
         }
       });
-      panel.events.publish(events/* PanelDirectiveReadyEvent */.GT);
+      panel.events.publish(events.GT);
     }
   };
 }]);
-// EXTERNAL MODULE: ./public/app/angular/panel/query_ctrl.ts
 var query_ctrl = __webpack_require__("./public/app/angular/panel/query_ctrl.ts");
-// EXTERNAL MODULE: ./.yarn/cache/angular-npm-1.8.2-307000482b-35ea81a23b.zip/node_modules/angular/index.js
 var angular = __webpack_require__("./.yarn/cache/angular-npm-1.8.2-307000482b-35ea81a23b.zip/node_modules/angular/index.js");
-var angular_default = /*#__PURE__*/__webpack_require__.n(angular);
-;// CONCATENATED MODULE: ./public/app/angular/panel/panel_editor_tab.ts
+var angular_default = __webpack_require__.n(angular);
+;
 panelEditorTab.$inject = ["dynamicDirectiveSrv"];
 
 const directiveModule = angular_default().module('grafana.directives');
 const directiveCache = {};
-/** @ngInject */
 
 function panelEditorTab(dynamicDirectiveSrv) {
   return dynamicDirectiveSrv.create({
@@ -356,7 +340,7 @@ function panelEditorTab(dynamicDirectiveSrv) {
 }
 
 directiveModule.directive('panelEditorTab', panelEditorTab);
-;// CONCATENATED MODULE: ./public/app/angular/panel/query_editor_row.ts
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -379,12 +363,10 @@ class QueryRowCtrl {
     this.panel = this.panelCtrl.panel;
 
     if (this.hasTextEditMode && this.queryCtrl.toggleEditorMode) {
-      // expose this function to react parent component
       this.panelCtrl.toggleEditorMode = this.queryCtrl.toggleEditorMode.bind(this.queryCtrl);
     }
 
     if (this.queryCtrl.getCollapsedText) {
-      // expose this function to react parent component
       this.panelCtrl.getCollapsedText = this.queryCtrl.getCollapsedText.bind(this.queryCtrl);
     }
   }
@@ -392,7 +374,6 @@ class QueryRowCtrl {
 }
 QueryRowCtrl.$inject = [];
 
-/** @ngInject */
 function queryEditorRowDirective() {
   return {
     restrict: 'E',
@@ -409,31 +390,28 @@ function queryEditorRowDirective() {
   };
 }
 
-core_module/* coreModule.directive */.hF.directive('queryEditorRow', queryEditorRowDirective);
-;// CONCATENATED MODULE: ./public/app/angular/panel/all.ts
+core_module.hF.directive('queryEditorRow', queryEditorRowDirective);
+;
 
 
 
 
-// EXTERNAL MODULE: ./public/app/angular/partials.ts
 var partials = __webpack_require__("./public/app/angular/partials.ts");
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-var lodash_default = /*#__PURE__*/__webpack_require__.n(lodash);
-// EXTERNAL MODULE: ./public/app/features/templating/template_srv.ts + 1 modules
+var lodash_default = __webpack_require__.n(lodash);
 var template_srv = __webpack_require__("./public/app/features/templating/template_srv.ts");
-;// CONCATENATED MODULE: ./public/app/angular/filters/filters.ts
+;
 
 
 
 
 
-core_module/* default.filter */.ZP.filter('stringSort', () => {
+core_module.ZP.filter('stringSort', () => {
   return input => {
     return input.sort();
   };
 });
-core_module/* default.filter */.ZP.filter('slice', () => {
+core_module.ZP.filter('slice', () => {
   return (arr, start, end) => {
     if (!(0,lodash.isUndefined)(arr)) {
       return arr.slice(start, end);
@@ -442,7 +420,7 @@ core_module/* default.filter */.ZP.filter('slice', () => {
     return arr;
   };
 });
-core_module/* default.filter */.ZP.filter('stringify', () => {
+core_module.ZP.filter('stringify', () => {
   return arr => {
     if ((0,lodash.isObject)(arr) && !(0,lodash.isArray)(arr)) {
       return angular_default().toJson(arr);
@@ -451,7 +429,7 @@ core_module/* default.filter */.ZP.filter('stringify', () => {
     }
   };
 });
-core_module/* default.filter */.ZP.filter('moment', () => {
+core_module.ZP.filter('moment', () => {
   return (date, mode) => {
     switch (mode) {
       case 'ago':
@@ -463,7 +441,7 @@ core_module/* default.filter */.ZP.filter('moment', () => {
 });
 
 function interpolateTemplateVars() {
-  let templateSrv = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (0,template_srv/* getTemplateSrv */.J)();
+  let templateSrv = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (0,template_srv.J)();
 
   const filterFunc = (text, scope) => {
     let scopedVars;
@@ -481,9 +459,9 @@ function interpolateTemplateVars() {
   return filterFunc;
 }
 
-core_module/* default.filter */.ZP.filter('interpolateTemplateVars', interpolateTemplateVars);
-/* harmony default export */ const filters = ({});
-;// CONCATENATED MODULE: ./public/app/angular/services/alert_srv.ts
+core_module.ZP.filter('interpolateTemplateVars', interpolateTemplateVars);
+ const filters = ({});
+;
 
 class AlertSrv {
   constructor() {}
@@ -494,14 +472,12 @@ class AlertSrv {
 
 }
 AlertSrv.$inject = [];
-// this is just added to not break old plugins that might be using it
-core_module/* default.service */.ZP.service('alertSrv', AlertSrv);
-;// CONCATENATED MODULE: ./public/app/angular/services/dynamic_directive_srv.ts
+core_module.ZP.service('alertSrv', AlertSrv);
+;
 
 
 
 class DynamicDirectiveSrv {
-  /** @ngInject */
   constructor($compile) {
     this.$compile = $compile;
     this.$compile = $compile;
@@ -523,7 +499,7 @@ class DynamicDirectiveSrv {
     }
 
     if (!directiveInfo.fn.registered) {
-      core_module/* default.directive */.ZP.directive(attrs.$normalize(directiveInfo.name), directiveInfo.fn);
+      core_module.ZP.directive(attrs.$normalize(directiveInfo.name), directiveInfo.fn);
       directiveInfo.fn.registered = true;
     }
 
@@ -556,37 +532,23 @@ class DynamicDirectiveSrv {
 }
 
 DynamicDirectiveSrv.$inject = ["$compile"];
-core_module/* default.service */.ZP.service('dynamicDirectiveSrv', DynamicDirectiveSrv);
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
+core_module.ZP.service('dynamicDirectiveSrv', DynamicDirectiveSrv);
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-dom-virtual-93e2c4839c/0/cache/react-dom-npm-17.0.2-f551215af1-1c1eaa3bca.zip/node_modules/react-dom/index.js
 var react_dom = __webpack_require__("./.yarn/__virtual__/react-dom-virtual-93e2c4839c/0/cache/react-dom-npm-17.0.2-f551215af1-1c1eaa3bca.zip/node_modules/react-dom/index.js");
-;// CONCATENATED MODULE: ./public/app/angular/services/ng_react.ts
-//
-// This is using ng-react with this PR applied https://github.com/ngReact/ngReact/pull/199
-//
-// # ngReact
-// ### Use React Components inside of your Angular applications
-//
-// Composed of
-// - reactComponent (generic directive for delegating off to React Components)
-// - reactDirective (factory for creating specific directives that correspond to reactComponent directives)
+;
 
 
 
- // get a react component from name (components can be an angular injectable e.g. value, factory or
-// available on window
 
 function getReactComponent(name, $injector) {
-  // if name is a function assume it is component and return it
   if (angular_default().isFunction(name)) {
     return name;
-  } // a React component name must be specified
+  } 
 
 
   if (!name) {
     throw new Error('ReactComponent name attribute must be specified');
-  } // ensure the specified React component is accessible, and fail fast if it's not
+  } 
 
 
   let reactComponent;
@@ -598,7 +560,6 @@ function getReactComponent(name, $injector) {
   if (!reactComponent) {
     try {
       reactComponent = name.split('.').reduce((current, namePart) => {
-        // @ts-ignore
         return current[namePart];
       }, window);
     } catch (e) {}
@@ -609,13 +570,13 @@ function getReactComponent(name, $injector) {
   }
 
   return reactComponent;
-} // wraps a function with scope.$apply, if already applied just return
+} 
 
 
 function applied(fn, scope) {
   if (fn.wrappedInApply) {
     return fn;
-  } // this had the equivalent of `eslint-disable-next-line prefer-arrow/prefer-arrow-functions`
+  } 
 
 
   const wrapped = function () {
@@ -634,43 +595,17 @@ function applied(fn, scope) {
   wrapped.wrappedInApply = true;
   return wrapped;
 }
-/**
- * wraps functions on obj in scope.$apply
- *
- * keeps backwards compatibility, as if propsConfig is not passed, it will
- * work as before, wrapping all functions and won't wrap only when specified.
- *
- * @version 0.4.1
- * @param obj react component props
- * @param scope current scope
- * @param propsConfig configuration object for all properties
- * @returns {Object} props with the functions wrapped in scope.$apply
- */
 
 
 function applyFunctions(obj, scope, propsConfig) {
   return Object.keys(obj || {}).reduce((prev, key) => {
     const value = obj[key];
     const config = (propsConfig || {})[key] || {};
-    /**
-     * wrap functions in a function that ensures they are scope.$applied
-     * ensures that when function is called from a React component
-     * the Angular digest cycle is run
-     */
-    // @ts-ignore
 
     prev[key] = angular_default().isFunction(value) && config.wrapApply !== false ? applied(value, scope) : value;
     return prev;
   }, {});
 }
-/**
- *
- * @param watchDepth (value of HTML watch-depth attribute)
- * @param scope (angular scope)
- *
- * Uses the watchDepth attribute to determine how to watch props on scope.
- * If watchDepth attribute is NOT reference or collection, watchDepth defaults to deep watching by value
- */
 
 
 function watchProps(watchDepth, scope, watchExpressions, listener) {
@@ -680,7 +615,7 @@ function watchProps(watchDepth, scope, watchExpressions, listener) {
 
   for (const expr of watchExpressions) {
     const actualExpr = getPropExpression(expr);
-    const exprWatchDepth = getPropWatchDepth(watchDepth, expr); // ignore empty expressions & expressions with functions
+    const exprWatchDepth = getPropWatchDepth(watchDepth, expr); 
 
     if (!actualExpr || actualExpr.match(/\(.*\)/) || exprWatchDepth === 'one-time') {
       continue;
@@ -702,68 +637,44 @@ function watchProps(watchDepth, scope, watchExpressions, listener) {
   if (watchGroupExpressions.length) {
     scope.$watchGroup(watchGroupExpressions, listener);
   }
-} // render React component, with scope[attrs.props] being passed in as the component props
+} 
 
 
 function renderComponent(component, props, scope, elem) {
   scope.$evalAsync(() => {
-    react_dom.render( /*#__PURE__*/react.createElement(component, props), elem[0]);
+    react_dom.render( react.createElement(component, props), elem[0]);
   });
-} // get prop name from prop (string or array)
+} 
 
 
 function getPropName(prop) {
   return Array.isArray(prop) ? prop[0] : prop;
-} // get prop name from prop (string or array)
+} 
 
 
 function getPropConfig(prop) {
   return Array.isArray(prop) ? prop[1] : {};
-} // get prop expression from prop (string or array)
+} 
 
 
 function getPropExpression(prop) {
   return Array.isArray(prop) ? prop[0] : prop;
 }
-/**
- * Finds the normalized attribute knowing that React props accept any type of capitalization and it also handles
- * kabab case attributes which can be used in case the attribute would also be a standard html attribute and would be
- * evaluated by the browser as such.
- * @param attrs All attributes of the component.
- * @param propName Name of the prop that react component expects.
- */
 
 
 function findAttribute(attrs, propName) {
   const index = Object.keys(attrs).find(attr => {
     return attr.toLowerCase() === propName.toLowerCase() || (0,lodash.kebabCase)(attr) === (0,lodash.kebabCase)(propName);
-  }); // @ts-ignore
+  }); 
 
   return attrs[index];
-} // get watch depth of prop (string or array)
+} 
 
 
 function getPropWatchDepth(defaultWatch, prop) {
   const customWatchDepth = Array.isArray(prop) && angular_default().isObject(prop[1]) && prop[1].watchDepth;
   return customWatchDepth || defaultWatch;
-} // # reactComponent
-// Directive that allows React components to be used in Angular templates.
-//
-// Usage:
-//     <react-component name="Hello" props="name"/>
-//
-// This requires that there exists an injectable or globally available 'Hello' React component.
-// The 'props' attribute is optional and is passed to the component.
-//
-// The following would would create and register the component:
-//
-//     var module = angular.module('ace.react.components');
-//     module.value('Hello', React.createClass({
-//         render: function() {
-//             return <div>Hello {this.props.name}</div>;
-//         }
-//     }));
-//
+} 
 
 
 const reactComponent = $injector => {
@@ -777,10 +688,10 @@ const reactComponent = $injector => {
         const scopeProps = scope.$eval(attrs.props);
         const props = applyFunctions(scopeProps, scope);
         renderComponent(reactComponent, props, scope, elem);
-      }; // If there are props, re-render when they change
+      }; 
 
 
-      attrs.props ? watchProps(attrs.watchDepth, scope, [attrs.props], renderMyComponent) : renderMyComponent(); // cleanup when scope is destroyed
+      attrs.props ? watchProps(attrs.watchDepth, scope, [attrs.props], renderMyComponent) : renderMyComponent(); 
 
       scope.$on('$destroy', () => {
         if (!attrs.onScopeDestroy) {
@@ -793,32 +704,7 @@ const reactComponent = $injector => {
       });
     }
   };
-}; // # reactDirective
-// Factory function to create directives for React components.
-//
-// With a component like this:
-//
-//     var module = angular.module('ace.react.components');
-//     module.value('Hello', React.createClass({
-//         render: function() {
-//             return <div>Hello {this.props.name}</div>;
-//         }
-//     }));
-//
-// A directive can be created and registered with:
-//
-//     module.directive('hello', function(reactDirective) {
-//         return reactDirective('Hello', ['name']);
-//     });
-//
-// Where the first argument is the injectable or globally accessible name of the React component
-// and the second argument is an array of property names to be watched and passed to the React component
-// as props.
-//
-// This directive can then be used like this:
-//
-//     <hello name="name"/>
-//
+}; 
 
 
 const reactDirective = $injector => {
@@ -827,9 +713,9 @@ const reactDirective = $injector => {
       restrict: 'E',
       replace: true,
       link: function (scope, elem, attrs) {
-        const reactComponent = getReactComponent(reactComponentName, $injector); // if props is not defined, fall back to use the React component's propTypes if present
+        const reactComponent = getReactComponent(reactComponentName, $injector); 
 
-        props = props || Object.keys(reactComponent.propTypes || {}); // for each of the properties, get their scope value and set it to scope.props
+        props = props || Object.keys(reactComponent.propTypes || {}); 
 
         const renderMyComponent = () => {
           let scopeProps = {};
@@ -842,15 +728,14 @@ const reactDirective = $injector => {
           scopeProps = applyFunctions(scopeProps, scope, config);
           scopeProps = angular_default().extend({}, scopeProps, injectableProps);
           renderComponent(reactComponent, scopeProps, scope, elem);
-        }; // watch each property name and trigger an update whenever something changes,
-        // to update scope.props with new values
+        }; 
 
 
         const propExpressions = props.map(prop => {
           return Array.isArray(prop) ? [findAttribute(attrs, prop[0]), getPropConfig(prop)] : findAttribute(attrs, prop);
-        }); // If we don't have any props, then our watch statement won't fire.
+        }); 
 
-        props.length ? watchProps(attrs.watchDepth, scope, propExpressions, renderMyComponent) : renderMyComponent(); // cleanup when scope is destroyed
+        props.length ? watchProps(attrs.watchDepth, scope, propExpressions, renderMyComponent) : renderMyComponent(); 
 
         scope.$on('$destroy', () => {
           if (!attrs.onScopeDestroy) {
@@ -870,14 +755,13 @@ const reactDirective = $injector => {
 const ngModule = angular_default().module('react', []);
 ngModule.directive('reactComponent', ['$injector', reactComponent]);
 ngModule.factory('reactDirective', ['$injector', reactDirective]);
-;// CONCATENATED MODULE: ./public/app/angular/services/segment_srv.ts
+;
 uiSegmentSrv.$inject = ["$sce", "templateSrv"];
 
 function segment_srv_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
-/** @ngInject */
 
 function uiSegmentSrv($sce, templateSrv) {
   const self = this;
@@ -914,7 +798,7 @@ function uiSegmentSrv($sce, templateSrv) {
         this.value = options;
         this.html = $sce.trustAsHtml(templateSrv.highlightVariablesAsHtml(this.value));
         return;
-      } // temp hack to work around legacy inconsistency in segment model
+      } 
 
 
       this.text = options.value;
@@ -1044,17 +928,14 @@ function uiSegmentSrv($sce, templateSrv) {
     });
   };
 }
-core_module/* default.service */.ZP.service('uiSegmentSrv', uiSegmentSrv);
-// EXTERNAL MODULE: ./.yarn/cache/tether-drop-https-3382d2649f-a10a7337d5.zip/node_modules/tether-drop/dist/js/drop.js
+core_module.ZP.service('uiSegmentSrv', uiSegmentSrv);
 var js_drop = __webpack_require__("./.yarn/cache/tether-drop-https-3382d2649f-a10a7337d5.zip/node_modules/tether-drop/dist/js/drop.js");
-var drop_default = /*#__PURE__*/__webpack_require__.n(js_drop);
-;// CONCATENATED MODULE: ./public/app/angular/services/popover_srv.ts
+var drop_default = __webpack_require__.n(js_drop);
+;
 popoverSrv.$inject = ["$compile", "$rootScope", "$timeout"];
- // @ts-ignore
 
 
 
-/** @ngInject */
 
 function popoverSrv($compile, $rootScope, $timeout) {
   let openDrop = null;
@@ -1116,7 +997,7 @@ function popoverSrv($compile, $rootScope, $timeout) {
       });
       openDrop = drop;
       openDrop.open();
-    }, 100); // return close function
+    }, 100); 
 
     return () => {
       if (drop) {
@@ -1126,16 +1007,13 @@ function popoverSrv($compile, $rootScope, $timeout) {
   };
 }
 
-core_module/* default.service */.ZP.service('popoverSrv', popoverSrv);
-;// CONCATENATED MODULE: ./public/app/angular/services/timer.ts
+core_module.ZP.service('popoverSrv', popoverSrv);
+;
 function timer_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
- // This service really just tracks a list of $timeout promises to give us a
-// method for canceling them all when we need to
 
 class Timer {
-  /** @ngInject */
   constructor($timeout) {
     this.$timeout = $timeout;
 
@@ -1163,13 +1041,12 @@ class Timer {
 
 }
 Timer.$inject = ["$timeout"];
-core_module/* default.service */.ZP.service('timer', Timer);
-;// CONCATENATED MODULE: ./public/app/angular/services/AngularLoader.ts
+core_module.ZP.service('timer', Timer);
+;
 
 
 
 class AngularLoader {
-  /** @ngInject */
   constructor($compile, $rootScope) {
     this.$compile = $compile;
     this.$rootScope = $rootScope;
@@ -1201,11 +1078,10 @@ class AngularLoader {
 
 }
 AngularLoader.$inject = ["$compile", "$rootScope"];
-core_module/* default.service */.ZP.service('angularLoader', AngularLoader);
-// EXTERNAL MODULE: ./.yarn/cache/jquery-npm-3.6.0-ca7872bdbb-8fd5fef4aa.zip/node_modules/jquery/dist/jquery-exposed.js
+core_module.ZP.service('angularLoader', AngularLoader);
 var jquery_exposed = __webpack_require__("./.yarn/cache/jquery-npm-3.6.0-ca7872bdbb-8fd5fef4aa.zip/node_modules/jquery/dist/jquery-exposed.js");
-var jquery_exposed_default = /*#__PURE__*/__webpack_require__.n(jquery_exposed);
-;// CONCATENATED MODULE: ./public/app/angular/jquery_extended.ts
+var jquery_exposed_default = __webpack_require__.n(jquery_exposed);
+;
 
 
 
@@ -1243,13 +1119,12 @@ const $win = jquery_exposed_default()(window);
     });
   };
 })();
-;// CONCATENATED MODULE: ./public/app/angular/dropdown_typeahead.ts
+;
 dropdownTypeahead2.$inject = ["$compile"];
 dropdownTypeahead.$inject = ["$compile"];
 
 
 
-/** @ngInject */
 
 function dropdownTypeahead($compile) {
   const inputTemplate = '<input type="text"' + ' class="gf-form-input input-medium tight-form-input"' + ' spellcheck="false" style="display:none"></input>';
@@ -1359,8 +1234,7 @@ function dropdownTypeahead($compile) {
         $input.hide();
         $input.val('');
         $button.show();
-        $button.focus(); // clicking the function dropdown menu won't
-        // work if you remove class at once
+        $button.focus(); 
 
         setTimeout(() => {
           elem.removeClass('open');
@@ -1370,7 +1244,6 @@ function dropdownTypeahead($compile) {
     }
   };
 }
-/** @ngInject */
 
 function dropdownTypeahead2($compile) {
   const inputTemplate = '<input type="text"' + ' class="gf-form-input"' + ' spellcheck="false" style="display:none"></input>';
@@ -1495,12 +1368,11 @@ function dropdownTypeahead2($compile) {
     }
   };
 }
-core_module/* default.directive */.ZP.directive('dropdownTypeahead', dropdownTypeahead);
-core_module/* default.directive */.ZP.directive('dropdownTypeahead2', dropdownTypeahead2);
-;// CONCATENATED MODULE: ./public/app/angular/autofill_event_fix.ts
+core_module.ZP.directive('dropdownTypeahead', dropdownTypeahead);
+core_module.ZP.directive('dropdownTypeahead2', dropdownTypeahead2);
+;
 autofillEventFix.$inject = ["$compile"];
 
-/** @ngInject */
 
 function autofillEventFix($compile) {
   return {
@@ -1526,25 +1398,24 @@ function autofillEventFix($compile) {
         }
 
         return null;
-      }; // const onChange = (evt: Event) => console.log(evt);
+      }; 
 
 
-      input.addEventListener('animationstart', onAnimationStart); // input.addEventListener('change', onChange);
+      input.addEventListener('animationstart', onAnimationStart); 
 
       $scope.$on('$destroy', () => {
-        input.removeEventListener('animationstart', onAnimationStart); // input.removeEventListener('change', onChange);
+        input.removeEventListener('animationstart', onAnimationStart); 
       });
     }
   };
 }
-core_module/* default.directive */.ZP.directive('autofillEventFix', autofillEventFix);
-;// CONCATENATED MODULE: ./public/app/angular/metric_segment.ts
+core_module.ZP.directive('autofillEventFix', autofillEventFix);
+;
 metricSegmentModel.$inject = ["uiSegmentSrv"];
 metricSegment.$inject = ["$compile", "$sce", "templateSrv"];
 
 
 
-/** @ngInject */
 
 function metricSegment($compile, $sce, templateSrv) {
   const inputTemplate = '<input type="text" data-provide="typeahead" ' + ' class="gf-form-input input-medium"' + ' spellcheck="false" style="display:none"></input>';
@@ -1612,8 +1483,6 @@ function metricSegment($compile, $sce, templateSrv) {
       };
 
       $scope.inputBlur = () => {
-        // happens long before the click event on the typeahead options
-        // need to have long delay because the blur
         cancelBlur = setTimeout($scope.switchToLink, 200);
       };
 
@@ -1625,7 +1494,7 @@ function metricSegment($compile, $sce, templateSrv) {
             $scope.altSegments = altSegments;
             options = (0,lodash.map)($scope.altSegments, alt => {
               return (0,lodash.escape)(alt.value);
-            }); // add custom values
+            }); 
 
             if (segment.custom !== 'false') {
               if (!segment.fake && (0,lodash.indexOf)(options, segment.value) === -1) {
@@ -1697,7 +1566,6 @@ function metricSegment($compile, $sce, templateSrv) {
       }
 
       $button.keydown(evt => {
-        // trigger typeahead on down arrow or enter key
         if (evt.keyCode === 40 || evt.keyCode === 13) {
           $button.click();
         }
@@ -1721,7 +1589,6 @@ function metricSegment($compile, $sce, templateSrv) {
     }
   };
 }
-/** @ngInject */
 
 function metricSegmentModel(uiSegmentSrv) {
   return {
@@ -1787,8 +1654,7 @@ function metricSegmentModel(uiSegmentSrv) {
             }
           } else {
             $scope.property = $scope.segment.value;
-          } // needs to call this after digest so
-          // property is synced with outerscope
+          } 
 
 
           $scope.$$postDigest(() => {
@@ -1803,9 +1669,9 @@ function metricSegmentModel(uiSegmentSrv) {
     }
   };
 }
-core_module/* default.directive */.ZP.directive('metricSegment', metricSegment);
-core_module/* default.directive */.ZP.directive('metricSegmentModel', metricSegmentModel);
-;// CONCATENATED MODULE: ./public/app/angular/misc.ts
+core_module.ZP.directive('metricSegment', metricSegment);
+core_module.ZP.directive('metricSegmentModel', metricSegmentModel);
+;
 gfDropdown.$inject = ["$parse", "$compile", "$timeout"];
 editorCheckbox.$inject = ["$compile", "$interpolate"];
 editorOptBool.$inject = ["$compile"];
@@ -1813,22 +1679,18 @@ compile.$inject = ["$compile"];
 tip.$inject = ["$compile"];
 
 
-/** @ngInject */
 
 function tip($compile) {
   return {
     restrict: 'E',
     link: (scope, elem, attrs) => {
-      let _t = '<i class="grafana-tip fa fa-' + (attrs.icon || 'question-circle') + '" bs-tooltip="\'' + // here we double-html-encode any special characters in the source string
-      // this is needed so that the final html contains the encoded entities as they
-      // will be decoded when _t is parsed by angular
+      let _t = '<i class="grafana-tip fa fa-' + (attrs.icon || 'question-circle') + '" bs-tooltip="\'' + 
       elem.text().replace(/[\'\"\\{}<>&]/g, m => '&amp;#' + m.charCodeAt(0) + ';') + '\'"></i>';
 
       elem.replaceWith($compile(angular_default().element(_t))(scope));
     }
   };
 }
-/** @ngInject */
 
 
 function compile($compile) {
@@ -1861,7 +1723,6 @@ function watchChange() {
     }
   };
 }
-/** @ngInject */
 
 
 function editorOptBool($compile) {
@@ -1876,7 +1737,6 @@ function editorOptBool($compile) {
     }
   };
 }
-/** @ngInject */
 
 
 function editorCheckbox($compile, $interpolate) {
@@ -1895,7 +1755,6 @@ function editorCheckbox($compile, $interpolate) {
     }
   };
 }
-/** @ngInject */
 
 
 function gfDropdown($parse, $compile, $timeout) {
@@ -1941,13 +1800,13 @@ function gfDropdown($parse, $compile, $timeout) {
   };
 }
 
-core_module/* default.directive */.ZP.directive('tip', tip);
-core_module/* default.directive */.ZP.directive('compile', compile);
-core_module/* default.directive */.ZP.directive('watchChange', watchChange);
-core_module/* default.directive */.ZP.directive('editorOptBool', editorOptBool);
-core_module/* default.directive */.ZP.directive('editorCheckbox', editorCheckbox);
-core_module/* default.directive */.ZP.directive('gfDropdown', gfDropdown);
-;// CONCATENATED MODULE: ./public/app/angular/ng_model_on_blur.ts
+core_module.ZP.directive('tip', tip);
+core_module.ZP.directive('compile', compile);
+core_module.ZP.directive('watchChange', watchChange);
+core_module.ZP.directive('editorOptBool', editorOptBool);
+core_module.ZP.directive('editorCheckbox', editorCheckbox);
+core_module.ZP.directive('gfDropdown', gfDropdown);
+;
 
 
 
@@ -1997,7 +1856,7 @@ function validTimeSpan() {
         }
 
         if (viewValue.indexOf('$') === 0 || viewValue.indexOf('+$') === 0) {
-          return true; // allow template variable
+          return true; 
         }
 
         const info = src.rangeUtil.describeTextRange(viewValue);
@@ -2007,14 +1866,12 @@ function validTimeSpan() {
   };
 }
 
-core_module/* default.directive */.ZP.directive('ngModelOnblur', ngModelOnBlur);
-core_module/* default.directive */.ZP.directive('emptyToNull', emptyToNull);
-core_module/* default.directive */.ZP.directive('validTimeSpan', validTimeSpan);
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
+core_module.ZP.directive('ngModelOnblur', ngModelOnBlur);
+core_module.ZP.directive('emptyToNull', emptyToNull);
+core_module.ZP.directive('validTimeSpan', validTimeSpan);
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/vendor/tagsinput/bootstrap-tagsinput.js
 var bootstrap_tagsinput = __webpack_require__("./public/vendor/tagsinput/bootstrap-tagsinput.js");
-;// CONCATENATED MODULE: ./public/app/angular/tags.ts
+;
 
 
 
@@ -2126,9 +1983,9 @@ function bootstrapTagsinput() {
   };
 }
 
-core_module/* default.directive */.ZP.directive('tagColorFromName', tagColorFromName);
-core_module/* default.directive */.ZP.directive('bootstrapTagsinput', bootstrapTagsinput);
-;// CONCATENATED MODULE: ./public/app/angular/rebuild_on_change.ts
+core_module.ZP.directive('tagColorFromName', tagColorFromName);
+core_module.ZP.directive('bootstrapTagsinput', bootstrapTagsinput);
+;
 rebuildOnChange.$inject = ["$animate"];
 
 
@@ -2153,7 +2010,6 @@ function getBlockNodes(nodes) {
 
   return blockNodes || nodes;
 }
-/** @ngInject */
 
 
 function rebuildOnChange($animate) {
@@ -2208,10 +2064,10 @@ function rebuildOnChange($animate) {
   };
 }
 
-core_module/* default.directive */.ZP.directive('rebuildOnChange', rebuildOnChange);
-;// CONCATENATED MODULE: ./public/app/angular/give_focus.ts
+core_module.ZP.directive('rebuildOnChange', rebuildOnChange);
+;
 
-core_module/* default.directive */.ZP.directive('giveFocus', () => {
+core_module.ZP.directive('giveFocus', () => {
   return (scope, element, attrs) => {
     element.click(e => {
       e.stopPropagation();
@@ -2233,14 +2089,13 @@ core_module/* default.directive */.ZP.directive('giveFocus', () => {
     }, true);
   };
 });
-/* harmony default export */ const give_focus = ({});
-;// CONCATENATED MODULE: ./public/app/angular/diff-view.ts
+ const give_focus = ({});
+;
 function diff_view_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 class DeltaCtrl {
-  /** @ngInject */
   constructor() {
     diff_view_defineProperty(this, "observer", void 0);
 
@@ -2270,10 +2125,9 @@ function delta() {
     restrict: 'A'
   };
 }
-core_module/* default.directive */.ZP.directive('diffDelta', delta); // Link to JSON line number
+core_module.ZP.directive('diffDelta', delta); 
 
 class LinkJSONCtrl {
-  /** @ngInject */
   constructor($scope, $rootScope, $anchorScroll) {
     this.$scope = $scope;
     this.$rootScope = $rootScope;
@@ -2312,8 +2166,8 @@ function linkJson() {
     template: `<a class="diff-linenum btn btn-inverse btn-small" ng-click="ctrl.goToLine(link)">Line {{ line }}</a>`
   };
 }
-core_module/* default.directive */.ZP.directive('diffLinkJson', linkJson);
-;// CONCATENATED MODULE: ./public/app/angular/array_join.ts
+core_module.ZP.directive('diffLinkJson', linkJson);
+;
 
 
 function arrayJoin() {
@@ -2340,28 +2194,22 @@ function arrayJoin() {
     }
   };
 }
-core_module/* default.directive */.ZP.directive('arrayJoin', arrayJoin);
-// EXTERNAL MODULE: ./public/app/core/utils/ConfigProvider.tsx
+core_module.ZP.directive('arrayJoin', arrayJoin);
 var ConfigProvider = __webpack_require__("./public/app/core/utils/ConfigProvider.tsx");
-;// CONCATENATED MODULE: ./public/app/angular/react2angular.ts
+;
 
 
 function react2AngularDirective(name, component, options) {
-  core_module/* default.directive */.ZP.directive(name, ['reactDirective', reactDirective => {
-    return reactDirective((0,ConfigProvider/* provideTheme */.ER)(component), options);
+  core_module.ZP.directive(name, ['reactDirective', reactDirective => {
+    return reactDirective((0,ConfigProvider.ER)(component), options);
   }]);
 }
-// EXTERNAL MODULE: ./public/app/core/components/Select/FolderPicker.tsx
 var FolderPicker = __webpack_require__("./public/app/core/components/Select/FolderPicker.tsx");
-// EXTERNAL MODULE: ./public/app/features/dashboard/components/DashboardSettings/TimePickerSettings.tsx + 1 modules
 var TimePickerSettings = __webpack_require__("./public/app/features/dashboard/components/DashboardSettings/TimePickerSettings.tsx");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/cloud-monitoring/types.ts
 var types = __webpack_require__("./public/app/plugins/datasource/cloud-monitoring/types.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/cloud-monitoring/components/index.ts + 14 modules
 var components = __webpack_require__("./public/app/plugins/datasource/cloud-monitoring/components/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/cloud-monitoring/components/AnnotationQueryEditor.tsx
+;
 var _AnnotationsHelp;
 
 function AnnotationQueryEditor_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -2378,12 +2226,12 @@ const {
   Input
 } = grafana_ui_src.LegacyForms;
 const DefaultTarget = {
-  editorMode: types/* EditorMode.Visual */.je.Visual,
+  editorMode: types.je.Visual,
   projectName: '',
   projects: [],
   metricType: '',
   filters: [],
-  metricKind: types/* MetricKind.GAUGE */.lH.GAUGE,
+  metricKind: types.lH.GAUGE,
   valueType: '',
   refId: 'annotationQuery',
   title: '',
@@ -2424,8 +2272,6 @@ class AnnotationQueryEditor extends react.Component {
   }
 
   async UNSAFE_componentWillMount() {
-    // Unfortunately, migrations like this need to go UNSAFE_componentWillMount. As soon as there's
-    // migration hook for this module.ts, we can do the migrations there instead.
     const {
       target,
       datasource
@@ -2473,14 +2319,14 @@ class AnnotationQueryEditor extends react.Component {
     const {
       datasource
     } = this.props;
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(components/* Project */.IK, {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(components.IK, {
         refId: this.props.refId,
         templateVariableOptions: variableOptions,
         datasource: datasource,
         projectName: projectName || datasource.getDefaultProject(),
         onChange: value => this.onChange('projectName', value)
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(components/* Metrics */.C3, {
+      }), (0,jsx_runtime.jsx)(components.C3, {
         refId: this.props.refId,
         projectName: projectName,
         metricType: metricType,
@@ -2488,44 +2334,40 @@ class AnnotationQueryEditor extends react.Component {
         datasource: datasource,
         templateVariableOptions: variableOptions,
         onChange: metric => this.onMetricTypeChange(metric),
-        children: metric => /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(components/* LabelFilter */.pj, {
+        children: metric => (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+          children: (0,jsx_runtime.jsx)(components.pj, {
             labels: labels,
             filters: filters,
             onChange: value => this.onChange('filters', value),
             variableOptionGroup: variableOptionGroup
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(components/* QueryEditorRow */.x5, {
+      }), (0,jsx_runtime.jsx)(components.x5, {
         label: "Title",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input, {
+        children: (0,jsx_runtime.jsx)(Input, {
           type: "text",
           className: "gf-form-input width-20",
           value: title,
           onChange: e => this.onChange('title', e.target.value)
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(components/* QueryEditorRow */.x5, {
+      }), (0,jsx_runtime.jsx)(components.x5, {
         label: "Text",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input, {
+        children: (0,jsx_runtime.jsx)(Input, {
           type: "text",
           className: "gf-form-input width-20",
           value: text,
           onChange: e => this.onChange('text', e.target.value)
         })
-      }), _AnnotationsHelp || (_AnnotationsHelp = /*#__PURE__*/(0,jsx_runtime.jsx)(components/* AnnotationsHelp */.zI, {}))]
+      }), _AnnotationsHelp || (_AnnotationsHelp = (0,jsx_runtime.jsx)(components.zI, {}))]
     });
   }
 
 }
-// EXTERNAL MODULE: ./public/app/plugins/datasource/cloud-monitoring/components/QueryEditor.tsx
 var QueryEditor = __webpack_require__("./public/app/plugins/datasource/cloud-monitoring/components/QueryEditor.tsx");
-// EXTERNAL MODULE: ./public/app/core/components/EmptyListCTA/EmptyListCTA.tsx
 var EmptyListCTA = __webpack_require__("./public/app/core/components/EmptyListCTA/EmptyListCTA.tsx");
-// EXTERNAL MODULE: ./public/app/core/components/Footer/Footer.tsx
 var Footer = __webpack_require__("./public/app/core/components/Footer/Footer.tsx");
-// EXTERNAL MODULE: ./public/app/core/components/PageHeader/PageHeader.tsx
 var PageHeader = __webpack_require__("./public/app/core/components/PageHeader/PageHeader.tsx");
-;// CONCATENATED MODULE: ./public/app/core/components/Select/MetricSelect.tsx
+;
 
 
 
@@ -2544,7 +2386,7 @@ const MetricSelect = props => {
   const options = useSelectOptions(props);
   const selected = useSelectedOption(options, value);
   const onChangeValue = (0,react.useCallback)(selectable => onChange(selectable.value), [onChange]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Select, {
+  return (0,jsx_runtime.jsx)(Select, {
     className: className,
     isMulti: false,
     isClearable: false,
@@ -2590,24 +2432,17 @@ const useSelectedOption = (options, value) => {
     return allOptions.find(option => option.value === value);
   }, [options, value]);
 };
-// EXTERNAL MODULE: ./public/app/core/components/TagFilter/TagFilter.tsx + 1 modules
 var TagFilter = __webpack_require__("./public/app/core/components/TagFilter/TagFilter.tsx");
-// EXTERNAL MODULE: ./public/app/core/components/help/HelpModal.tsx
 var HelpModal = __webpack_require__("./public/app/core/components/help/HelpModal.tsx");
-// EXTERNAL MODULE: ./public/app/features/search/index.ts + 4 modules
 var search = __webpack_require__("./public/app/features/search/index.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/loki/components/LokiOptionFields.tsx
 var LokiOptionFields = __webpack_require__("./public/app/plugins/datasource/loki/components/LokiOptionFields.tsx");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/loki/components/LokiQueryField.tsx + 1 modules
 var LokiQueryField = __webpack_require__("./public/app/plugins/datasource/loki/components/LokiQueryField.tsx");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/loki/components/AnnotationsQueryEditor.tsx
-// Libraries
- // Types
+;
 
 
 
 
-const LokiAnnotationsQueryEditor = /*#__PURE__*/(0,react.memo)(function LokiAnnotationQueryEditor(props) {
+const LokiAnnotationsQueryEditor = (0,react.memo)(function LokiAnnotationQueryEditor(props) {
   var _queryWithRefId$maxLi;
 
   const {
@@ -2623,16 +2458,16 @@ const LokiAnnotationsQueryEditor = /*#__PURE__*/(0,react.memo)(function LokiAnno
     maxLines,
     instant
   };
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: "gf-form-group",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(LokiQueryField/* LokiQueryField */.n, {
+    children: (0,jsx_runtime.jsx)(LokiQueryField.n, {
       datasource: datasource,
       query: queryWithRefId,
       onChange: onChange,
       onRunQuery: () => {},
       onBlur: () => {},
       history: [],
-      ExtraFieldElement: /*#__PURE__*/(0,jsx_runtime.jsx)(LokiOptionFields/* LokiOptionFields */.JX, {
+      ExtraFieldElement: (0,jsx_runtime.jsx)(LokiOptionFields.JX, {
         lineLimitValue: (queryWithRefId === null || queryWithRefId === void 0 ? void 0 : (_queryWithRefId$maxLi = queryWithRefId.maxLines) === null || _queryWithRefId$maxLi === void 0 ? void 0 : _queryWithRefId$maxLi.toString()) || '',
         resolution: queryWithRefId.resolution || 1,
         query: queryWithRefId,
@@ -2642,7 +2477,7 @@ const LokiAnnotationsQueryEditor = /*#__PURE__*/(0,react.memo)(function LokiAnno
     })
   });
 });
-;// CONCATENATED MODULE: ./public/app/angular/angular_wrappers.ts
+;
 
 
 
@@ -2661,25 +2496,25 @@ const {
   SecretFormField
 } = grafana_ui_src.LegacyForms;
 function registerAngularDirectives() {
-  react2AngularDirective('footer', Footer/* Footer */.$_, []);
+  react2AngularDirective('footer', Footer.$_, []);
   react2AngularDirective('icon', grafana_ui_src.Icon, ['name', 'size', 'type', ['onClick', {
     watchDepth: 'reference',
     wrapApply: true
   }]]);
   react2AngularDirective('spinner', grafana_ui_src.Spinner, ['inline']);
-  react2AngularDirective('helpModal', HelpModal/* HelpModal */.B, []);
-  react2AngularDirective('pageHeader', PageHeader/* default */.Z, ['model', 'noTabs']);
-  react2AngularDirective('emptyListCta', EmptyListCTA/* default */.Z, ['title', 'buttonIcon', 'buttonLink', 'buttonTitle', ['onClick', {
+  react2AngularDirective('helpModal', HelpModal.B, []);
+  react2AngularDirective('pageHeader', PageHeader.Z, ['model', 'noTabs']);
+  react2AngularDirective('emptyListCta', EmptyListCTA.Z, ['title', 'buttonIcon', 'buttonLink', 'buttonTitle', ['onClick', {
     watchDepth: 'reference',
     wrapApply: true
-  }], 'proTip', 'proTipLink', 'proTipLinkTitle', 'proTipTarget', 'infoBox', 'infoBoxTitle']); //Search
+  }], 'proTip', 'proTipLink', 'proTipLinkTitle', 'proTipTarget', 'infoBox', 'infoBoxTitle']); 
 
-  react2AngularDirective('searchField', search/* SearchField */.Um, ['query', 'autoFocus', ['onChange', {
+  react2AngularDirective('searchField', search.Um, ['query', 'autoFocus', ['onChange', {
     watchDepth: 'reference'
   }], ['onKeyDown', {
     watchDepth: 'reference'
   }]]);
-  react2AngularDirective('searchResults', search/* SearchResults */.sZ, ['results', 'editable', 'selectors', ['onSelectionChanged', {
+  react2AngularDirective('searchResults', search.sZ, ['results', 'editable', 'selectors', ['onSelectionChanged', {
     watchDepth: 'reference'
   }], ['onTagSelected', {
     watchDepth: 'reference'
@@ -2688,7 +2523,7 @@ function registerAngularDirectives() {
   }], ['onToggleSelection', {
     watchDepth: 'reference'
   }]]);
-  react2AngularDirective('searchFilters', search/* SearchResultsFilter */.fC, ['allChecked', 'canMove', 'canDelete', 'tagFilterOptions', 'selectedStarredFilter', 'selectedTagFilter', ['onSelectAllChanged', {
+  react2AngularDirective('searchFilters', search.fC, ['allChecked', 'canMove', 'canDelete', 'tagFilterOptions', 'selectedStarredFilter', 'selectedTagFilter', ['onSelectAllChanged', {
     watchDepth: 'reference'
   }], ['deleteItem', {
     watchDepth: 'reference'
@@ -2699,7 +2534,7 @@ function registerAngularDirectives() {
   }], ['onTagFilterChange', {
     watchDepth: 'reference'
   }]]);
-  react2AngularDirective('tagFilter', TagFilter/* TagFilter */.D, ['tags', ['onChange', {
+  react2AngularDirective('tagFilter', TagFilter.D, ['tags', ['onChange', {
     watchDepth: 'reference'
   }], ['tagOptions', {
     watchDepth: 'reference'
@@ -2716,7 +2551,7 @@ function registerAngularDirectives() {
   react2AngularDirective('metricSelect', MetricSelect, ['options', 'onChange', 'value', 'isSearchable', 'className', 'placeholder', ['variables', {
     watchDepth: 'reference'
   }]]);
-  react2AngularDirective('cloudMonitoringQueryEditor', QueryEditor/* QueryEditor */.W, ['target', 'onQueryChange', 'onExecuteQuery', ['events', {
+  react2AngularDirective('cloudMonitoringQueryEditor', QueryEditor.W, ['target', 'onQueryChange', 'onExecuteQuery', ['events', {
     watchDepth: 'reference'
   }], ['datasource', {
     watchDepth: 'reference'
@@ -2744,8 +2579,7 @@ function registerAngularDirectives() {
   }], ['timeZone', {
     watchDepth: 'reference',
     wrapApply: true
-  }]]); // We keep the drilldown terminology here because of as using data-* directive
-  // being in conflict with HTML data attributes
+  }]]); 
 
   react2AngularDirective('drilldownLinksEditor', grafana_ui_src.DataLinksInlineEditor, ['value', 'links', 'suggestions', ['onChange', {
     watchDepth: 'reference',
@@ -2758,7 +2592,7 @@ function registerAngularDirectives() {
     watchDepth: 'reference',
     wrapApply: true
   }]]);
-  react2AngularDirective('folderPicker', FolderPicker/* FolderPicker */.E, ['labelClass', 'rootName', 'enableCreateNew', 'enableReset', 'initialTitle', 'initialFolderId', 'dashboardId', 'onCreateFolder', ['enterFolderCreation', {
+  react2AngularDirective('folderPicker', FolderPicker.E, ['labelClass', 'rootName', 'enableCreateNew', 'enableReset', 'initialTitle', 'initialFolderId', 'dashboardId', 'onCreateFolder', ['enterFolderCreation', {
     watchDepth: 'reference',
     wrapApply: true
   }], ['exitFolderCreation', {
@@ -2771,7 +2605,7 @@ function registerAngularDirectives() {
     watchDepth: 'reference',
     wrapApply: true
   }]]);
-  react2AngularDirective('timePickerSettings', TimePickerSettings/* TimePickerSettings */.P, ['renderCount', 'refreshIntervals', 'timePickerHidden', 'nowDelay', 'timezone', ['onTimeZoneChange', {
+  react2AngularDirective('timePickerSettings', TimePickerSettings.P, ['renderCount', 'refreshIntervals', 'timePickerHidden', 'nowDelay', 'timezone', ['onTimeZoneChange', {
     watchDepth: 'reference',
     wrapApply: true
   }], ['onRefreshIntervalChange', {
@@ -2789,9 +2623,8 @@ function registerAngularDirectives() {
     wrapApply: true
   }]]);
 }
-// EXTERNAL MODULE: ./public/app/angular/promiseToDigest.ts
 var promiseToDigest = __webpack_require__("./public/app/angular/promiseToDigest.ts");
-;// CONCATENATED MODULE: ./public/app/angular/components/query_part_editor.ts
+;
 queryPartEditorDirective.$inject = ["templateSrv"];
 
 
@@ -2807,7 +2640,6 @@ const template = `
   </li>
 </ul>
 `;
-/** @ngInject */
 
 function queryPartEditorDirective(templateSrv) {
   const paramTemplate = '<input type="text" class="hide input-mini tight-form-func-param"></input>';
@@ -2935,7 +2767,7 @@ function queryPartEditorDirective(templateSrv) {
       }
 
       $scope.showActionsMenu = () => {
-        (0,promiseToDigest/* promiseToDigest */.E)($scope)($scope.handleEvent({
+        (0,promiseToDigest.E)($scope)($scope.handleEvent({
           $event: {
             name: 'get-part-actions'
           }
@@ -2985,8 +2817,8 @@ function queryPartEditorDirective(templateSrv) {
     }
   };
 }
-core_module/* default.directive */.ZP.directive('queryPartEditor', queryPartEditorDirective);
-;// CONCATENATED MODULE: ./public/app/angular/components/form_dropdown/form_dropdown.ts
+core_module.ZP.directive('queryPartEditor', queryPartEditorDirective);
+;
 function form_dropdown_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -3012,7 +2844,6 @@ function typeaheadMatcher(item) {
 }
 
 class FormDropdownCtrl {
-  /** @ngInject */
   constructor($scope, $element, $sce, templateSrv) {
     this.$scope = $scope;
     this.$sce = $sce;
@@ -3065,7 +2896,7 @@ class FormDropdownCtrl {
     this.cancelBlur = null;
     this.labelMode = false;
     this.lookupText = false;
-    this.debounce = false; // listen to model changes
+    this.debounce = false; 
 
     $scope.$watch('ctrl.model', this.modelChanged.bind(this));
   }
@@ -3088,8 +2919,7 @@ class FormDropdownCtrl {
       items: 10000,
       updater: this.typeaheadUpdater.bind(this),
       matcher: typeaheadMatcher
-    }); // modify typeahead lookup
-    // this = typeahead
+    }); 
 
     const typeahead = this.inputElement.data('typeahead');
 
@@ -3105,7 +2935,6 @@ class FormDropdownCtrl {
     }
 
     this.linkElement.keydown(evt => {
-      // trigger typeahead on down arrow or enter key
       if (evt.keyCode === 40 || evt.keyCode === 13) {
         this.linkElement.click();
       }
@@ -3125,7 +2954,7 @@ class FormDropdownCtrl {
   }
 
   getOptionsInternal(query) {
-    return (0,promiseToDigest/* promiseToDigest */.E)(this.$scope)(Promise.resolve(this.getOptions({
+    return (0,promiseToDigest.E)(this.$scope)(Promise.resolve(this.getOptions({
       $query: query
     })));
   }
@@ -3138,7 +2967,6 @@ class FormDropdownCtrl {
     if ((0,lodash.isObject)(this.model)) {
       this.updateDisplay(this.model.text);
     } else {
-      // if we have text use it
       if (this.lookupText) {
         this.getOptionsInternal('').then(options => {
           const item = (0,lodash.find)(options, {
@@ -3154,11 +2982,11 @@ class FormDropdownCtrl {
 
   typeaheadSource(query, callback) {
     this.getOptionsInternal(query).then(options => {
-      this.optionCache = options; // extract texts
+      this.optionCache = options; 
 
       const optionTexts = (0,lodash.map)(options, op => {
         return (0,lodash.escape)(op.text);
-      }); // add custom values
+      }); 
 
       if (this.allowCustom && this.text !== '') {
         if ((0,lodash.indexOf)(optionTexts, this.text) === -1) {
@@ -3196,8 +3024,6 @@ class FormDropdownCtrl {
   }
 
   inputBlur() {
-    // happens long before the click event on the typeahead options
-    // need to have long delay because the blur
     this.cancelBlur = setTimeout(this.switchToLink.bind(this), 200);
   }
 
@@ -3229,8 +3055,7 @@ class FormDropdownCtrl {
         }
 
         this.text = text;
-      } // needs to call this after digest so
-      // property is synced with outerscope
+      } 
 
 
       this.$scope.$$postDigest(() => {
@@ -3299,9 +3124,8 @@ function formDropdownDirective() {
     }
   };
 }
-core_module/* default.directive */.ZP.directive('gfFormDropdown', formDropdownDirective);
-;// CONCATENATED MODULE: ./public/app/angular/components/scroll.ts
-// @ts-ignore
+core_module.ZP.directive('gfFormDropdown', formDropdownDirective);
+;
 
 
 
@@ -3342,11 +3166,11 @@ function geminiScrollbar() {
     }
   };
 }
-core_module/* default.directive */.ZP.directive('grafanaScrollbar', geminiScrollbar);
-;// CONCATENATED MODULE: ./public/app/angular/components/jsontree.ts
+core_module.ZP.directive('grafanaScrollbar', geminiScrollbar);
+;
 
 
-core_module/* default.directive */.ZP.directive('jsonTree', [function jsonTreeDirective() {
+core_module.ZP.directive('jsonTree', [function jsonTreeDirective() {
   return {
     restrict: 'E',
     scope: {
@@ -3374,7 +3198,7 @@ core_module/* default.directive */.ZP.directive('jsonTree', [function jsonTreeDi
     }
   };
 }]);
-;// CONCATENATED MODULE: ./public/app/angular/components/switch.ts
+;
 function switch_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -3407,7 +3231,6 @@ const checkboxTemplate = `
 </label>
 `;
 class SwitchCtrl {
-  /** @ngInject */
   constructor($scope, $timeout) {
     this.$timeout = $timeout;
 
@@ -3468,10 +3291,9 @@ function checkboxDirective() {
     template: checkboxTemplate
   };
 }
-core_module/* default.directive */.ZP.directive('gfFormSwitch', switchDirective);
-core_module/* default.directive */.ZP.directive('gfFormCheckbox', checkboxDirective);
-;// CONCATENATED MODULE: ./public/app/angular/components/info_popover.ts
- // @ts-ignore
+core_module.ZP.directive('gfFormSwitch', switchDirective);
+core_module.ZP.directive('gfFormCheckbox', checkboxDirective);
+;
 
 
 
@@ -3516,7 +3338,7 @@ function infoPopover() {
               pin: true
             }]
           }
-        }; // Create drop in next digest after directive content is rendered.
+        }; 
 
         scope.$applyAsync(() => {
           const drop = new (drop_default())(dropOptions);
@@ -3529,15 +3351,9 @@ function infoPopover() {
     }
   };
 }
-core_module/* default.directive */.ZP.directive('infoPopover', infoPopover);
-;// CONCATENATED MODULE: ./public/app/angular/components/spectrum_picker.ts
-/**
- * Wrapper for the new ngReact <color-picker> directive for backward compatibility.
- * Allows remaining <spectrum-picker> untouched in outdated plugins.
- * Technically, it's just a wrapper for react component with two-way data binding support.
- */
+core_module.ZP.directive('infoPopover', infoPopover);
+;
 
-/** @ngInject */
 
 function spectrumPicker() {
   return {
@@ -3555,39 +3371,9 @@ function spectrumPicker() {
     }
   };
 }
-core_module/* default.directive */.ZP.directive('spectrumPicker', spectrumPicker);
-// EXTERNAL MODULE: ./public/app/core/config.ts
+core_module.ZP.directive('spectrumPicker', spectrumPicker);
 var config = __webpack_require__("./public/app/core/config.ts");
-;// CONCATENATED MODULE: ./public/app/angular/components/code_editor/code_editor.ts
-/**
- * codeEditor directive based on Ace code editor
- * https://github.com/ajaxorg/ace
- *
- * Basic usage:
- * <code-editor content="ctrl.target.query" on-change="ctrl.panelCtrl.refresh()"
- *  data-mode="sql" data-show-gutter>
- * </code-editor>
- *
- * Params:
- * content:      Editor content.
- * onChange:     Function called on content change (invoked on editor blur, ctrl+enter, not on every change).
- * getCompleter: Function returned external completer. Completer is an object implemented getCompletions() method,
- *               see Prometheus Data Source implementation for details.
- *
- * Some Ace editor options available via data-* attributes:
- * data-mode               - Language mode (text, sql, javascript, etc.). Default is 'text'.
- * data-theme              - Editor theme (eg 'solarized_dark').
- * data-max-lines          - Max editor height in lines. Editor grows automatically from 1 to maxLines.
- * data-show-gutter        - Show gutter (contains line numbers and additional info).
- * data-tab-size           - Tab size, default is 2.
- * data-behaviours-enabled - Specifies whether to use behaviors or not. "Behaviors" in this case is the auto-pairing of
- *                           special characters, like quotation marks, parenthesis, or brackets.
- * data-snippets-enabled   - Specifies whether to use snippets or not. "Snippets" are small pieces of code that can be
- *                           inserted via the completion box.
- *
- * Keybindings:
- * Ctrl-Enter (Command-Enter): run onChange() function
- */
+;
 
 
 const DEFAULT_THEME_DARK = 'ace/theme/grafana-dark';
@@ -3600,32 +3386,31 @@ const DEFAULT_SNIPPETS = true;
 const editorTemplate = `<div></div>`;
 
 async function code_editor_link(scope, elem, attrs) {
-  // Options
   const langMode = attrs.mode || DEFAULT_MODE;
   const maxLines = attrs.maxLines || DEFAULT_MAX_LINES;
   const showGutter = attrs.showGutter !== undefined;
   const tabSize = attrs.tabSize || DEFAULT_TAB_SIZE;
   const behavioursEnabled = attrs.behavioursEnabled ? attrs.behavioursEnabled === 'true' : DEFAULT_BEHAVIORS;
-  const snippetsEnabled = attrs.snippetsEnabled ? attrs.snippetsEnabled === 'true' : DEFAULT_SNIPPETS; // Initialize editor
+  const snippetsEnabled = attrs.snippetsEnabled ? attrs.snippetsEnabled === 'true' : DEFAULT_SNIPPETS; 
 
   const aceElem = elem.get(0);
   const {
     default: ace
-  } = await __webpack_require__.e(/* import() | brace */ 5673).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/index.js", 23));
-  await __webpack_require__.e(/* import() */ 557).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/ext/language_tools.js", 23));
-  await __webpack_require__.e(/* import() */ 7946).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/theme/textmate.js", 23));
-  await __webpack_require__.e(/* import() */ 6098).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/mode/text.js", 23));
-  await __webpack_require__.e(/* import() */ 7914).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/snippets/text.js", 23));
-  await __webpack_require__.e(/* import() */ 4934).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/mode/sql.js", 23));
-  await __webpack_require__.e(/* import() */ 5808).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/snippets/sql.js", 23));
-  await __webpack_require__.e(/* import() */ 1669).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/mode/sqlserver.js", 23));
-  await __webpack_require__.e(/* import() */ 8520).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/snippets/sqlserver.js", 23));
-  await __webpack_require__.e(/* import() */ 3154).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/mode/markdown.js", 23));
-  await __webpack_require__.e(/* import() */ 9720).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/snippets/markdown.js", 23));
-  await __webpack_require__.e(/* import() */ 1026).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/mode/json.js", 23));
-  await __webpack_require__.e(/* import() */ 9057).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/snippets/json.js", 23)); // @ts-ignore
+  } = await __webpack_require__.e( 5673).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/index.js", 23));
+  await __webpack_require__.e( 557).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/ext/language_tools.js", 23));
+  await __webpack_require__.e( 7946).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/theme/textmate.js", 23));
+  await __webpack_require__.e( 6098).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/mode/text.js", 23));
+  await __webpack_require__.e( 7914).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/snippets/text.js", 23));
+  await __webpack_require__.e( 4934).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/mode/sql.js", 23));
+  await __webpack_require__.e( 5808).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/snippets/sql.js", 23));
+  await __webpack_require__.e( 1669).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/mode/sqlserver.js", 23));
+  await __webpack_require__.e( 8520).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/snippets/sqlserver.js", 23));
+  await __webpack_require__.e( 3154).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/mode/markdown.js", 23));
+  await __webpack_require__.e( 9720).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/snippets/markdown.js", 23));
+  await __webpack_require__.e( 1026).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/mode/json.js", 23));
+  await __webpack_require__.e( 9057).then(__webpack_require__.t.bind(__webpack_require__, "./.yarn/cache/brace-npm-0.11.1-a66ecae2b2-def78159ab.zip/node_modules/brace/snippets/json.js", 23)); 
 
-  await __webpack_require__.e(/* import() */ 7428).then(__webpack_require__.t.bind(__webpack_require__, "./public/app/angular/components/code_editor/theme-grafana-dark.js", 23));
+  await __webpack_require__.e( 7428).then(__webpack_require__.t.bind(__webpack_require__, "./public/app/angular/components/code_editor/theme-grafana-dark.js", 23));
   const codeEditor = ace.edit(aceElem);
   const editorSession = codeEditor.getSession();
   const editorOptions = {
@@ -3635,23 +3420,23 @@ async function code_editor_link(scope, elem, attrs) {
     behavioursEnabled: behavioursEnabled,
     highlightActiveLine: false,
     showPrintMargin: false,
-    autoScrollEditorIntoView: true // this is needed if editor is inside scrollable page
+    autoScrollEditorIntoView: true 
 
-  }; // Set options
+  }; 
 
-  codeEditor.setOptions(editorOptions); // disable depreacation warning
+  codeEditor.setOptions(editorOptions); 
 
-  codeEditor.$blockScrolling = Infinity; // Padding hacks
+  codeEditor.$blockScrolling = Infinity; 
 
   codeEditor.renderer.setScrollMargin(10, 10);
   codeEditor.renderer.setPadding(10);
   setThemeMode();
   setLangMode(langMode);
-  setEditorContent(scope.content); // Add classes
+  setEditorContent(scope.content); 
 
   elem.addClass('gf-code-editor');
   const textarea = elem.find('textarea');
-  textarea.addClass('gf-form-input'); // All aria-label to be set for accessibility
+  textarea.addClass('gf-form-input'); 
 
   textarea.attr('aria-label', attrs.textareaLabel);
 
@@ -3665,7 +3450,7 @@ async function code_editor_link(scope, elem, attrs) {
         domEl.setSelectionRange(pos, pos);
       }
     }, 100);
-  } // Event handlers
+  } 
 
 
   editorSession.on('change', e => {
@@ -3673,7 +3458,7 @@ async function code_editor_link(scope, elem, attrs) {
       const newValue = codeEditor.getValue();
       scope.content = newValue;
     });
-  }); // Sync with outer scope - update editor content if model has been changed from outside of directive.
+  }); 
 
   scope.$watch('content', (newValue, oldValue) => {
     const editorValue = codeEditor.getValue();
@@ -3689,7 +3474,7 @@ async function code_editor_link(scope, elem, attrs) {
   });
   scope.$on('$destroy', () => {
     codeEditor.destroy();
-  }); // Keybindings
+  }); 
 
   codeEditor.commands.addCommand({
     name: 'executeQuery',
@@ -3711,7 +3496,6 @@ async function code_editor_link(scope, elem, attrs) {
     });
 
     if (scope.getCompleter()) {
-      // make copy of array as ace seems to share completers array between instances
       const anyEditor = codeEditor;
       anyEditor.completers = anyEditor.completers.slice();
       anyEditor.completers.push(scope.getCompleter());
@@ -3724,7 +3508,7 @@ async function code_editor_link(scope, elem, attrs) {
   function setThemeMode() {
     let theme = DEFAULT_THEME_DARK;
 
-    if (config/* default.bootData.user.lightTheme */.ZP.bootData.user.lightTheme) {
+    if (config.ZP.bootData.user.lightTheme) {
       theme = DEFAULT_THEME_LIGHT;
     }
 
@@ -3751,8 +3535,8 @@ function codeEditorDirective() {
     link: code_editor_link
   };
 }
-core_module/* default.directive */.ZP.directive('codeEditor', codeEditorDirective);
-;// CONCATENATED MODULE: ./public/app/angular/components/sql_part/sql_part_editor.ts
+core_module.ZP.directive('codeEditor', codeEditorDirective);
+;
 sqlPartEditorDirective.$inject = ["templateSrv"];
 
 
@@ -3767,7 +3551,6 @@ const sql_part_editor_template = `
   </li>
 </ul>
 `;
-/** @ngInject */
 
 function sqlPartEditorDirective(templateSrv) {
   const paramTemplate = '<input type="text" class="hide input-mini"></input>';
@@ -3867,7 +3650,7 @@ function sqlPartEditorDirective(templateSrv) {
             }).then(result => {
               const dynamicOptions = (0,lodash.map)(result, op => {
                 return (0,lodash.escape)(op.value);
-              }); // add current value to dropdown if it's not in dynamicOptions
+              }); 
 
               if ((0,lodash.indexOf)(dynamicOptions, part.params[paramIndex]) === -1) {
                 dynamicOptions.unshift((0,lodash.escape)(part.params[paramIndex]));
@@ -3961,10 +3744,10 @@ function sqlPartEditorDirective(templateSrv) {
     }
   };
 }
-core_module/* default.directive */.ZP.directive('sqlPartEditor', sqlPartEditorDirective);
-;// CONCATENATED MODULE: ./public/app/angular/components/HttpSettingsCtrl.ts
+core_module.ZP.directive('sqlPartEditor', sqlPartEditorDirective);
+;
 
-core_module/* coreModule.directive */.hF.directive('datasourceHttpSettings', () => {
+core_module.hF.directive('datasourceHttpSettings', () => {
   return {
     scope: {
       current: '=',
@@ -3975,7 +3758,6 @@ core_module/* coreModule.directive */.hF.directive('datasourceHttpSettings', () 
     templateUrl: 'public/app/angular/partials/http_settings_next.html',
     link: {
       pre: $scope => {
-        // do not show access option if direct access is disabled
         $scope.showAccessOption = $scope.noDirectAccess !== 'true';
 
         $scope.onChange = datasourceSetting => {
@@ -3985,9 +3767,9 @@ core_module/* coreModule.directive */.hF.directive('datasourceHttpSettings', () 
     }
   };
 });
-;// CONCATENATED MODULE: ./public/app/angular/components/TlsAuthSettingsCtrl.ts
+;
 
-core_module/* coreModule.directive */.hF.directive('datasourceTlsAuthSettings', () => {
+core_module.hF.directive('datasourceTlsAuthSettings', () => {
   return {
     scope: {
       current: '='
@@ -3995,11 +3777,9 @@ core_module/* coreModule.directive */.hF.directive('datasourceTlsAuthSettings', 
     templateUrl: 'public/app/angular/partials/tls_auth_settings.html'
   };
 });
-// EXTERNAL MODULE: ./public/app/features/plugins/importPanelPlugin.ts
 var importPanelPlugin = __webpack_require__("./public/app/features/plugins/importPanelPlugin.ts");
-// EXTERNAL MODULE: ./public/app/features/plugins/plugin_loader.ts + 147 modules
 var plugin_loader = __webpack_require__("./public/app/features/plugins/plugin_loader.ts");
-;// CONCATENATED MODULE: ./public/app/angular/components/plugin_component.ts
+;
 pluginDirectiveLoader.$inject = ["$compile", "$http", "$templateCache", "$location"];
 
 
@@ -4008,7 +3788,6 @@ pluginDirectiveLoader.$inject = ["$compile", "$http", "$templateCache", "$locati
 
 
 
-/** @ngInject */
 
 function pluginDirectiveLoader($compile, $http, $templateCache, $location) {
   function getTemplate(component) {
@@ -4040,7 +3819,6 @@ function pluginDirectiveLoader($compile, $http, $templateCache, $location) {
   }
 
   function getPluginComponentDirective(options) {
-    // handle relative template urls for plugin templates
     options.Component.templateUrl = relativeTemplateUrlToAbs(options.Component.templateUrl, options.baseUrl);
     return () => {
       return {
@@ -4078,8 +3856,8 @@ function pluginDirectiveLoader($compile, $http, $templateCache, $location) {
         class: 'panel-height-helper'
       }
     };
-    const panelInfo = config/* default.panels */.ZP.panels[scope.panel.type];
-    return (0,importPanelPlugin/* importPanelPlugin */.U)(panelInfo.id).then(panelPlugin => {
+    const panelInfo = config.ZP.panels[scope.panel.type];
+    return (0,importPanelPlugin.U)(panelInfo.id).then(panelPlugin => {
       const PanelCtrl = panelPlugin.angularPanelCtrl;
       componentInfo.Component = PanelCtrl;
 
@@ -4108,7 +3886,6 @@ function pluginDirectiveLoader($compile, $http, $templateCache, $location) {
 
   function getModule(scope, attrs) {
     switch (attrs.type) {
-      // QueryCtrl
       case 'query-ctrl':
         {
           const ds = scope.ctrl.datasource;
@@ -4128,13 +3905,12 @@ function pluginDirectiveLoader($compile, $http, $templateCache, $location) {
             Component: ds.components.QueryCtrl
           });
         }
-      // Annotations
 
       case 'annotations-query-ctrl':
         {
           const baseUrl = scope.ctrl.currentDatasource.meta.baseUrl;
           const pluginId = scope.ctrl.currentDatasource.meta.id;
-          return (0,plugin_loader/* importDataSourcePlugin */.nL)(scope.ctrl.currentDatasource.meta).then(dsPlugin => {
+          return (0,plugin_loader.nL)(scope.ctrl.currentDatasource.meta).then(dsPlugin => {
             return {
               baseUrl,
               name: 'annotations-query-ctrl-' + pluginId,
@@ -4150,19 +3926,13 @@ function pluginDirectiveLoader($compile, $http, $templateCache, $location) {
             };
           });
         }
-      // Datasource ConfigCtrl
 
       case 'datasource-config-ctrl':
         {
           const dsMeta = scope.ctrl.datasourceMeta;
           const angularUrl = $location.url();
-          return (0,plugin_loader/* importDataSourcePlugin */.nL)(dsMeta).then(dsPlugin => {
+          return (0,plugin_loader.nL)(dsMeta).then(dsPlugin => {
             scope.$watch('ctrl.current', () => {
-              // This watcher can trigger when we navigate away due to late digests
-              // This check is to stop onModelChanged from being called when navigating away
-              // as it triggers a redux action which comes before the angular $routeChangeSucces and
-              // This makes the bridgeSrv think location changed from redux before detecting it was actually
-              // changed from angular.
               if (angularUrl === $location.url()) {
                 scope.onModelChanged(scope.ctrl.current);
               }
@@ -4182,12 +3952,11 @@ function pluginDirectiveLoader($compile, $http, $templateCache, $location) {
             };
           });
         }
-      // AppConfigCtrl
 
       case 'app-config-ctrl':
         {
           const model = scope.ctrl.model;
-          return (0,plugin_loader/* importAppPlugin */.Av)(model).then(appPlugin => {
+          return (0,plugin_loader.Av)(model).then(appPlugin => {
             return {
               baseUrl: model.baseUrl,
               name: 'app-config-' + model.id,
@@ -4203,7 +3972,6 @@ function pluginDirectiveLoader($compile, $http, $templateCache, $location) {
             };
           });
         }
-      // Panel
 
       case 'panel':
         {
@@ -4225,7 +3993,7 @@ function pluginDirectiveLoader($compile, $http, $templateCache, $location) {
       child.attr(key, value);
     });
     $compile(child)(scope);
-    elem.empty(); // let a binding digest cycle complete before adding to dom
+    elem.empty(); 
 
     setTimeout(() => {
       scope.$applyAsync(() => {
@@ -4254,7 +4022,7 @@ function pluginDirectiveLoader($compile, $http, $templateCache, $location) {
     if (!componentInfo.Component.registered) {
       const directiveName = attrs.$normalize(componentInfo.name);
       const directiveFn = getPluginComponentDirective(componentInfo);
-      core_module/* default.directive */.ZP.directive(directiveName, directiveFn);
+      core_module.ZP.directive(directiveName, directiveFn);
       componentInfo.Component.registered = true;
     }
 
@@ -4273,16 +4041,12 @@ function pluginDirectiveLoader($compile, $http, $templateCache, $location) {
   };
 }
 
-core_module/* default.directive */.ZP.directive('pluginComponent', pluginDirectiveLoader);
-// EXTERNAL MODULE: ./public/app/core/app_events.ts
+core_module.ZP.directive('pluginComponent', pluginDirectiveLoader);
 var app_events = __webpack_require__("./public/app/core/app_events.ts");
-// EXTERNAL MODULE: ./public/app/features/live/index.ts + 4 modules
 var live = __webpack_require__("./public/app/features/live/index.ts");
-// EXTERNAL MODULE: ./public/app/types/index.ts + 4 modules
 var app_types = __webpack_require__("./public/app/types/index.ts");
-;// CONCATENATED MODULE: ./public/app/angular/GrafanaCtrl.ts
+;
 
- // eslint-disable-line lodash/import-scope
 
 
 
@@ -4292,17 +4056,15 @@ var app_types = __webpack_require__("./public/app/types/index.ts");
 
 
 class GrafanaCtrl {
-  /** @ngInject */
   constructor($scope, utilSrv, $rootScope, contextSrv, angularLoader, $injector) {
-    // make angular loader service available to react components
     (0,grafana_runtime_src.setAngularLoader)(angularLoader);
     (0,grafana_runtime_src.setLegacyAngularInjector)($injector);
-    (0,grafana_runtime_src.setAppEvents)(app_events/* default */.Z);
-    (0,live/* initGrafanaLive */.Bp)();
+    (0,grafana_runtime_src.setAppEvents)(app_events.Z);
+    (0,live.Bp)();
 
     $scope.init = () => {
       $scope.contextSrv = contextSrv;
-      $scope.appSubUrl = config/* default.appSubUrl */.ZP.appSubUrl;
+      $scope.appSubUrl = config.ZP.appSubUrl;
       $scope._ = (lodash_default());
       utilSrv.init();
     };
@@ -4334,10 +4096,10 @@ class GrafanaCtrl {
     $rootScope.appEvent = (event, payload) => {
       if (typeof event === 'string') {
         $rootScope.$emit(event, payload);
-        app_events/* default.emit */.Z.emit(event, payload);
+        app_events.Z.emit(event, payload);
       } else {
         $rootScope.$emit(event.name, payload);
-        app_events/* default.emit */.Z.emit(event, payload);
+        app_events.Z.emit(event, payload);
       }
     };
 
@@ -4347,19 +4109,18 @@ class GrafanaCtrl {
 }
 GrafanaCtrl.$inject = ["$scope", "utilSrv", "$rootScope", "contextSrv", "angularLoader", "$injector"];
 
-/** @ngInject */
 function grafanaAppDirective() {
   return {
     restrict: 'E',
     controller: GrafanaCtrl,
     link: (scope, elem) => {
-      const body = jquery_exposed_default()('body'); // see https://github.com/zenorocha/clipboard.js/issues/155
+      const body = jquery_exposed_default()('body'); 
 
       (jquery_exposed_default()).fn.modal.Constructor.prototype.enforceFocus = () => {};
 
-      app_events/* default.on */.Z.on(app_types/* CoreEvents.toggleSidemenuHidden */.RW.Ai, () => {
+      app_events.Z.on(app_types.RW.Ai, () => {
         body.toggleClass('sidemenu-hidden');
-      }); // handle in active view state class
+      }); 
 
       let lastActivity = new Date().getTime();
       let activeUser = true;
@@ -4368,7 +4129,7 @@ function grafanaAppDirective() {
       function checkForInActiveUser() {
         if (!activeUser) {
           return;
-        } // only go to activity low mode on dashboard page
+        } 
 
 
         if (!body.hasClass('page-dashboard')) {
@@ -4388,31 +4149,30 @@ function grafanaAppDirective() {
           activeUser = true;
           body.removeClass('view-mode--inactive');
         }
-      } // mouse and keyboard is user activity
+      } 
 
 
       body.mousemove(userActivityDetected);
-      body.keydown(userActivityDetected); // set useCapture = true to catch event here
+      body.keydown(userActivityDetected); 
 
       document.addEventListener('wheel', userActivityDetected, {
         capture: true,
         passive: true
-      }); // treat tab change as activity
+      }); 
 
-      document.addEventListener('visibilitychange', userActivityDetected); // check every 2 seconds
+      document.addEventListener('visibilitychange', userActivityDetected); 
 
-      setInterval(checkForInActiveUser, 2000); // handle document clicks that should hide things
+      setInterval(checkForInActiveUser, 2000); 
 
       body.click(evt => {
         const target = jquery_exposed_default()(evt.target);
 
         if (target.parents().length === 0) {
           return;
-        } // ensure dropdown menu doesn't impact on z-index
+        } 
 
 
-        body.find('.dropdown-menu-open').removeClass('dropdown-menu-open'); // for stuff that animates, slides out etc, clicking it needs to
-        // hide it right away
+        body.find('.dropdown-menu-open').removeClass('dropdown-menu-open'); 
 
         const clickAutoHide = target.closest('[data-click-hide]');
 
@@ -4422,7 +4182,7 @@ function grafanaAppDirective() {
           setTimeout(() => {
             clickAutoHideParent.append(clickAutoHide);
           }, 100);
-        } // hide popovers
+        } 
 
 
         const popover = elem.find('.popover');
@@ -4434,43 +4194,30 @@ function grafanaAppDirective() {
     }
   };
 }
-core_module/* default.directive */.ZP.directive('grafanaApp', grafanaAppDirective);
-// EXTERNAL MODULE: ./.yarn/cache/angular-route-npm-1.8.2-11a799fee9-08d84d6a35.zip/node_modules/angular-route/index.js
+core_module.ZP.directive('grafanaApp', grafanaAppDirective);
 var angular_route = __webpack_require__("./.yarn/cache/angular-route-npm-1.8.2-11a799fee9-08d84d6a35.zip/node_modules/angular-route/index.js");
-// EXTERNAL MODULE: ./.yarn/cache/angular-sanitize-npm-1.8.2-378e7cdaed-df06ddee2a.zip/node_modules/angular-sanitize/index.js
 var angular_sanitize = __webpack_require__("./.yarn/cache/angular-sanitize-npm-1.8.2-378e7cdaed-df06ddee2a.zip/node_modules/angular-sanitize/index.js");
-// EXTERNAL MODULE: ./.yarn/cache/angular-bindonce-npm-0.3.1-63597abd34-6a9adeb527.zip/node_modules/angular-bindonce/bindonce.js
 var bindonce = __webpack_require__("./.yarn/cache/angular-bindonce-npm-0.3.1-63597abd34-6a9adeb527.zip/node_modules/angular-bindonce/bindonce.js");
-// EXTERNAL MODULE: ./public/vendor/bootstrap/bootstrap.js
 var bootstrap = __webpack_require__("./public/vendor/bootstrap/bootstrap.js");
-// EXTERNAL MODULE: ./public/vendor/angular-other/angular-strap.js
 var angular_strap = __webpack_require__("./public/vendor/angular-other/angular-strap.js");
-// EXTERNAL MODULE: ./public/app/core/services/context_srv.ts
 var context_srv = __webpack_require__("./public/app/core/services/context_srv.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/services/DashboardLoaderSrv.ts
 var DashboardLoaderSrv = __webpack_require__("./public/app/features/dashboard/services/DashboardLoaderSrv.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/services/TimeSrv.ts + 1 modules
 var TimeSrv = __webpack_require__("./public/app/features/dashboard/services/TimeSrv.ts");
-// EXTERNAL MODULE: ./public/app/plugins/sdk.ts
 var sdk = __webpack_require__("./public/app/plugins/sdk.ts");
-;// CONCATENATED MODULE: ./public/app/core/navigation/patch/RouteParamsProvider.ts
+;
 function RouteParamsProvider_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-// This is empty for now, as I think it's not going to be necessary.
-// This replaces Angular RouteParamsProvider implementation with a dummy one to keep the ball rolling
 
 class RouteParamsProvider {
   constructor() {
-    RouteParamsProvider_defineProperty(this, "$get", () => {// throw new Error('TODO: Refactor $routeParams');
+    RouteParamsProvider_defineProperty(this, "$get", () => {
     });
 
     (0,grafana_runtime_src.navigationLogger)('Patch angular', false, 'RouteParamsProvider');
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/core/navigation/patch/RouteProvider.ts
-// This is empty for now, as I think it's not going to be necessary.
-// This replaces Angular RouteProvider implementation with a dummy one to keep the ball rolling
+;
 
 class RouteProvider {
   constructor() {
@@ -4482,17 +4229,14 @@ class RouteProvider {
   }
 
 }
-// EXTERNAL MODULE: ./public/app/angular/AngularLocationWrapper.ts
 var AngularLocationWrapper = __webpack_require__("./public/app/angular/AngularLocationWrapper.ts");
-;// CONCATENATED MODULE: ./public/app/angular/bridgeReactAngularRouting.ts
+;
 
 
 
- // Neutralizing Angular’s location tampering
-// https://stackoverflow.com/a/19825756
 
 const tamperAngularLocation = () => {
-  core_module/* coreModule.config */.hF.config(['$provide', $provide => {
+  core_module.hF.config(['$provide', $provide => {
     $provide.decorator('$browser', ['$delegate', $delegate => {
       $delegate.onUrlChange = () => {};
 
@@ -4501,25 +4245,25 @@ const tamperAngularLocation = () => {
       return $delegate;
     }]);
   }]);
-}; // Intercepting $location service with implementation based on history
+}; 
 
 
 const interceptAngularLocation = () => {
-  core_module/* coreModule.config */.hF.config(['$provide', $provide => {
+  core_module.hF.config(['$provide', $provide => {
     $provide.decorator('$location', ['$delegate', $delegate => {
-      $delegate = new AngularLocationWrapper/* AngularLocationWrapper */.O();
+      $delegate = new AngularLocationWrapper.O();
       return $delegate;
     }]);
   }]);
-  core_module/* coreModule.provider */.hF.provider('$route', RouteProvider);
-  core_module/* coreModule.provider */.hF.provider('$routeParams', RouteParamsProvider);
+  core_module.hF.provider('$route', RouteProvider);
+  core_module.hF.provider('$routeParams', RouteParamsProvider);
 };
 
 function initAngularRoutingBridge() {
   tamperAngularLocation();
   interceptAngularLocation();
 }
-;// CONCATENATED MODULE: ./public/app/angular/injectorMonkeyPatch.ts
+;
 function monkeyPatchInjectorWithPreAssignedBindings(injector) {
   injector.oldInvoke = injector.invoke;
 
@@ -4531,40 +4275,39 @@ function monkeyPatchInjectorWithPreAssignedBindings(injector) {
     if (parentScope) {
       var _parentScope$ctrl, _parentScope$ctrl2, _parentScope$ctrl3, _parentScope$$parent, _parentScope$$parent$, _parentScope$$parent$2;
 
-      // PanelCtrl
       if (parentScope.panel) {
         self.panel = parentScope.panel;
-      } // Panels & dashboard SettingsCtrl
+      } 
 
 
       if (parentScope.dashboard) {
         self.dashboard = parentScope.dashboard;
-      } // Query editors
+      } 
 
 
       if ((_parentScope$ctrl = parentScope.ctrl) !== null && _parentScope$ctrl !== void 0 && _parentScope$ctrl.target) {
         self.panelCtrl = parentScope.ctrl;
         self.datasource = parentScope.ctrl.datasource;
         self.target = parentScope.ctrl.target;
-      } // Data source ConfigCtrl
+      } 
 
 
       if ((_parentScope$ctrl2 = parentScope.ctrl) !== null && _parentScope$ctrl2 !== void 0 && _parentScope$ctrl2.datasourceMeta) {
         self.meta = parentScope.ctrl.datasourceMeta;
         self.current = parentScope.ctrl.current;
-      } // Data source AnnotationsQueryCtrl
+      } 
 
 
       if ((_parentScope$ctrl3 = parentScope.ctrl) !== null && _parentScope$ctrl3 !== void 0 && _parentScope$ctrl3.currentAnnotation) {
         self.annotation = parentScope.ctrl.currentAnnotation;
         self.datasource = parentScope.ctrl.currentDatasource;
-      } // App config ctrl
+      } 
 
 
       if (parentScope.isAppConfigCtrl) {
         self.appEditCtrl = parentScope.ctrl;
         self.appModel = parentScope.ctrl.model;
-      } // App page ctrl
+      } 
 
 
       if ((_parentScope$$parent = parentScope.$parent) !== null && _parentScope$$parent !== void 0 && (_parentScope$$parent$ = _parentScope$$parent.$parent) !== null && _parentScope$$parent$ !== void 0 && (_parentScope$$parent$2 = _parentScope$$parent$.ctrl) !== null && _parentScope$$parent$2 !== void 0 && _parentScope$$parent$2.appModel) {
@@ -4577,27 +4320,18 @@ function monkeyPatchInjectorWithPreAssignedBindings(injector) {
     return injector.oldInvoke(fn, self, locals, serviceName);
   };
 }
-// EXTERNAL MODULE: ./public/app/core/core.ts
 var core_core = __webpack_require__("./public/app/core/core.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/services/DashboardSrv.ts
 var DashboardSrv = __webpack_require__("./public/app/features/dashboard/services/DashboardSrv.ts");
-// EXTERNAL MODULE: ./public/app/features/manage-dashboards/services/ValidationSrv.ts
 var ValidationSrv = __webpack_require__("./public/app/features/manage-dashboards/services/ValidationSrv.ts");
-// EXTERNAL MODULE: ./public/app/features/panel/panellinks/link_srv.ts
 var link_srv = __webpack_require__("./public/app/features/panel/panellinks/link_srv.ts");
-;// CONCATENATED MODULE: ./public/app/angular/services/UtilSrv.ts
+;
 function UtilSrv_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
-/**
- * Old legacy utilSrv exposed to angular services and handles angular modals.
- * Not used by any core or known external plugin.
- */
 
 class UtilSrv {
-  /** @ngInject */
   constructor($rootScope, $modal) {
     this.$rootScope = $rootScope;
     this.$modal = $modal;
@@ -4609,12 +4343,9 @@ class UtilSrv {
   }
 
   init() {
-    app_events/* appEvents.subscribe */.h.subscribe(events/* ShowModalEvent */.le, e => this.showModal(e.payload));
-    app_events/* appEvents.subscribe */.h.subscribe(events/* HideModalEvent */.OW, this.hideModal.bind(this));
+    app_events.h.subscribe(events.le, e => this.showModal(e.payload));
+    app_events.h.subscribe(events.OW, this.hideModal.bind(this));
   }
-  /**
-   * @deprecated use showModalReact instead that has this capability built in
-   */
 
 
   hideModal() {
@@ -4624,9 +4355,6 @@ class UtilSrv {
       this.modalScope.dismiss();
     }
   }
-  /**
-   * @deprecated use showModalReact instead
-   */
 
 
   showModal(options) {
@@ -4662,26 +4390,16 @@ class UtilSrv {
 
 }
 UtilSrv.$inject = ["$rootScope", "$modal"];
-// EXTERNAL MODULE: ./public/app/features/annotations/api.ts
 var api = __webpack_require__("./public/app/features/annotations/api.ts");
-;// CONCATENATED MODULE: ./public/app/angular/services/annotations_srv.ts
+;
 
 
 
 
-/**
- * @deprecated AnnotationsSrv is deprecated in favor of DashboardQueryRunner
- */
 class AnnotationsSrv {
-  /**
-   * @deprecated clearPromiseCaches is deprecated
-   */
   clearPromiseCaches() {
     (0,src.deprecationWarning)('annotations_srv.ts', 'clearPromiseCaches', 'DashboardQueryRunner');
   }
-  /**
-   * @deprecated getAnnotations is deprecated in favor of DashboardQueryRunner.getResult
-   */
 
 
   getAnnotations(options) {
@@ -4691,59 +4409,40 @@ class AnnotationsSrv {
       alertState: undefined
     });
   }
-  /**
-   * @deprecated getAlertStates is deprecated in favor of DashboardQueryRunner.getResult
-   */
 
 
   getAlertStates(options) {
     (0,src.deprecationWarning)('annotations_srv.ts', 'getAlertStates', 'DashboardQueryRunner.getResult');
     return Promise.resolve(undefined);
   }
-  /**
-   * @deprecated getGlobalAnnotations is deprecated in favor of DashboardQueryRunner.getResult
-   */
 
 
   getGlobalAnnotations(options) {
     (0,src.deprecationWarning)('annotations_srv.ts', 'getGlobalAnnotations', 'DashboardQueryRunner.getResult');
     return Promise.resolve([]);
   }
-  /**
-   * @deprecated saveAnnotationEvent is deprecated
-   */
 
 
   saveAnnotationEvent(annotation) {
     (0,src.deprecationWarning)('annotations_srv.ts', 'saveAnnotationEvent', 'api/saveAnnotation');
-    return (0,api/* saveAnnotation */.xD)(annotation);
+    return (0,api.xD)(annotation);
   }
-  /**
-   * @deprecated updateAnnotationEvent is deprecated
-   */
 
 
   updateAnnotationEvent(annotation) {
     (0,src.deprecationWarning)('annotations_srv.ts', 'updateAnnotationEvent', 'api/updateAnnotation');
-    return (0,api/* updateAnnotation */._E)(annotation);
+    return (0,api._E)(annotation);
   }
-  /**
-   * @deprecated deleteAnnotationEvent is deprecated
-   */
 
 
   deleteAnnotationEvent(annotation) {
     (0,src.deprecationWarning)('annotations_srv.ts', 'deleteAnnotationEvent', 'api/deleteAnnotation');
-    return (0,api/* deleteAnnotation */.Dl)(annotation);
+    return (0,api.Dl)(annotation);
   }
-  /**
-   * @deprecated translateQueryResult is deprecated in favor of DashboardQueryRunner/utils/translateQueryResult
-   */
 
 
   translateQueryResult(annotation, results) {
-    (0,src.deprecationWarning)('annotations_srv.ts', 'translateQueryResult', 'DashboardQueryRunner/utils/translateQueryResult'); // if annotation has snapshotData
-    // make clone and remove it
+    (0,src.deprecationWarning)('annotations_srv.ts', 'translateQueryResult', 'DashboardQueryRunner/utils/translateQueryResult'); 
 
     if (annotation.snapshotData) {
       annotation = (0,lodash.cloneDeep)(annotation);
@@ -4761,7 +4460,7 @@ class AnnotationsSrv {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/angular/registerComponents.ts
+;
 
 
 
@@ -4771,16 +4470,16 @@ class AnnotationsSrv {
 
 
 function registerComponents() {
-  core_module/* default.factory */.ZP.factory('backendSrv', () => (0,grafana_runtime_src.getBackendSrv)());
-  core_module/* default.factory */.ZP.factory('contextSrv', () => core_core/* contextSrv */.Vt);
-  core_module/* default.factory */.ZP.factory('dashboardSrv', () => (0,DashboardSrv/* getDashboardSrv */.h4)());
-  core_module/* default.factory */.ZP.factory('datasourceSrv', () => (0,grafana_runtime_src.getDataSourceSrv)());
-  core_module/* default.factory */.ZP.factory('linkSrv', () => (0,link_srv/* getLinkSrv */.Bq)());
-  core_module/* default.factory */.ZP.factory('validationSrv', () => ValidationSrv/* validationSrv */.t);
-  core_module/* default.service */.ZP.service('annotationsSrv', AnnotationsSrv);
-  core_module/* default.service */.ZP.service('utilSrv', UtilSrv);
+  core_module.ZP.factory('backendSrv', () => (0,grafana_runtime_src.getBackendSrv)());
+  core_module.ZP.factory('contextSrv', () => core_core.Vt);
+  core_module.ZP.factory('dashboardSrv', () => (0,DashboardSrv.h4)());
+  core_module.ZP.factory('datasourceSrv', () => (0,grafana_runtime_src.getDataSourceSrv)());
+  core_module.ZP.factory('linkSrv', () => (0,link_srv.Bq)());
+  core_module.ZP.factory('validationSrv', () => ValidationSrv.t);
+  core_module.ZP.service('annotationsSrv', AnnotationsSrv);
+  core_module.ZP.service('utilSrv', UtilSrv);
 }
-;// CONCATENATED MODULE: ./public/app/angular/AngularApp.ts
+;
 function AngularApp_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -4789,7 +4488,6 @@ function AngularApp_defineProperty(obj, key, value) { if (key in obj) { Object.d
 
 
 
- // eslint-disable-line no-duplicate-imports
 
 
 
@@ -4822,7 +4520,7 @@ class AngularApp {
   init() {
     const app = angular_default().module('grafana', []);
     app.config(["$controllerProvider", "$compileProvider", "$filterProvider", "$httpProvider", "$provide", ($controllerProvider, $compileProvider, $filterProvider, $httpProvider, $provide) => {
-      if (config/* config.buildInfo.env */.vc.buildInfo.env !== 'development') {
+      if (config.vc.buildInfo.env !== 'development') {
         $compileProvider.debugInfoEnabled(false);
       }
 
@@ -4837,7 +4535,6 @@ class AngularApp {
 
         $delegate.get = (url, config) => {
           if (url.match(/\.html$/)) {
-            // some template's already exist in the cache
             if (!$templateCache.get(url)) {
               url += '?v=' + new Date().getTime();
             }
@@ -4849,32 +4546,32 @@ class AngularApp {
         return $delegate;
       }]);
     }]);
-    this.ngModuleDependencies = ['grafana.core', 'ngSanitize', '$strap.directives', 'grafana', 'pasvaz.bindonce', 'react']; // makes it possible to add dynamic stuff
+    this.ngModuleDependencies = ['grafana.core', 'ngSanitize', '$strap.directives', 'grafana', 'pasvaz.bindonce', 'react']; 
 
-    core_module/* angularModules.forEach */.rb.forEach(m => {
+    core_module.rb.forEach(m => {
       this.useModule(m);
-    }); // register react angular wrappers
+    }); 
 
-    angular_default().module('grafana.services').service('dashboardLoaderSrv', DashboardLoaderSrv/* DashboardLoaderSrv */.Bg);
-    core_module/* default.factory */.ZP.factory('timeSrv', () => (0,TimeSrv/* getTimeSrv */.$t)());
-    core_module/* default.factory */.ZP.factory('templateSrv', () => (0,grafana_runtime_src.getTemplateSrv)());
+    angular_default().module('grafana.services').service('dashboardLoaderSrv', DashboardLoaderSrv.Bg);
+    core_module.ZP.factory('timeSrv', () => (0,TimeSrv.$t)());
+    core_module.ZP.factory('templateSrv', () => (0,grafana_runtime_src.getTemplateSrv)());
     registerAngularDirectives();
     registerComponents();
-    initAngularRoutingBridge(); // Angular plugins import this
+    initAngularRoutingBridge(); 
 
-    (0,plugin_loader/* exposeToPlugin */.kY)('angular', (angular_default()));
-    (0,plugin_loader/* exposeToPlugin */.kY)('app/core/utils/promiseToDigest', {
-      promiseToDigest: promiseToDigest/* promiseToDigest */.E,
+    (0,plugin_loader.kY)('angular', (angular_default()));
+    (0,plugin_loader.kY)('app/core/utils/promiseToDigest', {
+      promiseToDigest: promiseToDigest.E,
       __esModule: true
     });
-    (0,plugin_loader/* exposeToPlugin */.kY)('app/plugins/sdk', sdk);
-    (0,plugin_loader/* exposeToPlugin */.kY)('app/core/core_module', core_module/* default */.ZP);
-    (0,plugin_loader/* exposeToPlugin */.kY)('app/core/core', {
-      coreModule: core_module/* default */.ZP,
-      appEvents: app_events/* default */.Z,
-      contextSrv: context_srv/* contextSrv */.Vt,
+    (0,plugin_loader.kY)('app/plugins/sdk', sdk);
+    (0,plugin_loader.kY)('app/core/core_module', core_module.ZP);
+    (0,plugin_loader.kY)('app/core/core', {
+      coreModule: core_module.ZP,
+      appEvents: app_events.Z,
+      contextSrv: context_srv.Vt,
       __esModule: true
-    }); // disable tool tip animation
+    }); 
 
     $.fn.tooltip.defaults.animation = false;
   }
@@ -4896,7 +4593,7 @@ class AngularApp {
     injector.invoke(() => {
       this.preBootModules.forEach(module => {
         (0,lodash.extend)(module, this.registerFunctions);
-      }); // I don't know
+      }); 
 
       return () => {};
     });
@@ -4904,7 +4601,7 @@ class AngularApp {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/angular/index.ts
+;
 
 
 
@@ -4926,7 +4623,6 @@ class AngularApp {
 
 
 
- // components
 
 
 
@@ -4944,20 +4640,20 @@ class AngularApp {
 
 
 
-/***/ }),
+ }),
 
-/***/ "./public/app/angular/panel/metrics_panel_ctrl.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/panel/metrics_panel_ctrl.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "k": () => (/* binding */ MetricsPanelCtrl)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/panel/panel_ctrl.ts");
-/* harmony import */ var app_features_dashboard_utils_panel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/dashboard/utils/panel.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "k": () => ( MetricsPanelCtrl)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/panel/panel_ctrl.ts");
+ var app_features_dashboard_utils_panel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/dashboard/utils/panel.ts");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -4965,7 +4661,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__/* .PanelCtrl */ .q {
+class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ .q {
   constructor($scope, $injector) {
     super($scope, $injector);
 
@@ -5002,7 +4698,7 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
         if (data.state === _grafana_data__WEBPACK_IMPORTED_MODULE_1__.LoadingState.Error) {
           this.loading = false;
           this.processDataError(data.error);
-        } // Ignore data in loading state
+        } 
 
 
         if (data.state === _grafana_data__WEBPACK_IMPORTED_MODULE_1__.LoadingState.Loading) {
@@ -5028,7 +4724,6 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
         if (this.useDataFrames) {
           this.handleDataFrames(data.series);
         } else {
-          // Make the results look as if they came directly from a <6.2 datasource request
           const legacy = data.series.map(v => (0,_grafana_data__WEBPACK_IMPORTED_MODULE_1__.toLegacyResponseData)(v));
           this.handleQueryResult({
             data: legacy
@@ -5065,15 +4760,14 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
   }
 
   onMetricsPanelRefresh() {
-    // ignore fetching data if another panel is in fullscreen
     if (this.otherPanelInFullscreenMode()) {
       return;
-    } // if we have snapshot data use that
+    } 
 
 
     if (this.panel.snapshotData) {
       this.updateTimeRange();
-      let data = this.panel.snapshotData; // backward compatibility
+      let data = this.panel.snapshotData; 
 
       if (!(0,lodash__WEBPACK_IMPORTED_MODULE_0__.isArray)(data)) {
         data = data.data;
@@ -5083,17 +4777,16 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
         state: _grafana_data__WEBPACK_IMPORTED_MODULE_1__.LoadingState.Done,
         series: data,
         timeRange: this.range
-      }; // Defer panel rendering till the next digest cycle.
-      // For some reason snapshot panels don't init at this time, so this helps to avoid rendering issues.
+      }; 
 
       return this.$timeout(() => {
         this.events.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_1__.PanelEvents.dataSnapshotLoad, data);
       });
-    } // clear loading/error state
+    } 
 
 
     delete this.error;
-    this.loading = true; // load datasource service
+    this.loading = true; 
 
     return this.datasourceSrv.get(this.panel.datasource, this.panel.scopedVars).then(this.issueQueries.bind(this)).catch(err => {
       this.processDataError(err);
@@ -5101,7 +4794,6 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
   }
 
   processDataError(err) {
-    // if canceled  keep loading set to true
     if (err.cancelled) {
       console.log('Panel request cancelled', err);
       return;
@@ -5124,13 +4816,13 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
     if (!this.$scope.$root.$$phase) {
       this.$scope.$digest();
     }
-  } // Updates the response with information from the stream
+  } 
 
 
   updateTimeRange(datasource) {
     this.datasource = datasource || this.datasource;
     this.range = this.timeSrv.timeRange();
-    const newTimeData = (0,app_features_dashboard_utils_panel__WEBPACK_IMPORTED_MODULE_3__/* .applyPanelTimeOverrides */ .W1)(this.panel, this.range);
+    const newTimeData = (0,app_features_dashboard_utils_panel__WEBPACK_IMPORTED_MODULE_3__ .W1)(this.panel, this.range);
     this.timeInfo = newTimeData.timeInfo;
     this.range = newTimeData.timeRange;
   }
@@ -5195,21 +4887,21 @@ class MetricsPanelCtrl extends app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MO
 
 
 
-/***/ }),
+ }),
 
-/***/ "./public/app/angular/panel/panel_ctrl.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/panel/panel_ctrl.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "q": () => (/* binding */ PanelCtrl)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var app_angular_AngularLocationWrapper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/AngularLocationWrapper.ts");
-/* harmony import */ var app_core_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/config.ts");
-/* harmony import */ var app_core_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/core.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "q": () => ( PanelCtrl)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var app_angular_AngularLocationWrapper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/AngularLocationWrapper.ts");
+ var app_core_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/config.ts");
+ var app_core_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/core.ts");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -5257,11 +4949,11 @@ class PanelCtrl {
     this.$scope = $scope;
     this.$timeout = $injector.get('$timeout');
     this.editorTabs = [];
-    this.$location = new app_angular_AngularLocationWrapper__WEBPACK_IMPORTED_MODULE_2__/* .AngularLocationWrapper */ .O();
+    this.$location = new app_angular_AngularLocationWrapper__WEBPACK_IMPORTED_MODULE_2__ .O();
     this.events = new _grafana_data__WEBPACK_IMPORTED_MODULE_1__.EventBusSrv();
-    this.timing = {}; // not used but here to not break plugins
+    this.timing = {}; 
 
-    const plugin = app_core_config__WEBPACK_IMPORTED_MODULE_3__/* ["default"].panels */ .ZP.panels[this.panel.type];
+    const plugin = app_core_config__WEBPACK_IMPORTED_MODULE_3__ .ZP.panels[this.panel.type];
 
     if (plugin) {
       this.pluginId = plugin.id;
@@ -5278,7 +4970,7 @@ class PanelCtrl {
   }
 
   renderingCompleted() {
-    app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .profiler.renderingCompleted */ .rv.renderingCompleted();
+    app_core_core__WEBPACK_IMPORTED_MODULE_4__ .rv.renderingCompleted();
   }
 
   refresh() {
@@ -5322,7 +5014,7 @@ class PanelCtrl {
     const menu = [];
     this.events.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_1__.PanelEvents.initPanelActions, menu);
     return menu;
-  } // Override in sub-class to add items before extended menu
+  } 
 
 
   async getAdditionalMenuItems() {
@@ -5335,22 +5027,22 @@ class PanelCtrl {
 
   render(payload) {
     this.events.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_1__.PanelEvents.render, payload);
-  } // overriden from react
+  } 
 
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/angular/panel/query_ctrl.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/panel/query_ctrl.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "G": () => (/* binding */ QueryCtrl)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+ __webpack_require__.d(__webpack_exports__, {
+   "G": () => ( QueryCtrl)
+ });
+ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -5390,10 +5082,10 @@ class QueryCtrl {
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/angular/partials.ts":
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+ "./public/app/angular/partials.ts":
+ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 let templates = __webpack_require__("./public/app sync recursive \\.html$");
 
@@ -5401,48 +5093,46 @@ templates.keys().forEach(key => {
   templates(key);
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/angular/promiseToDigest.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/promiseToDigest.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "E": () => (/* binding */ promiseToDigest)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "E": () => ( promiseToDigest)
+ });
 const promiseToDigest = $scope => promise => promise.finally($scope.$evalAsync);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/loki/components/LokiOptionFields.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/loki/components/LokiOptionFields.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "JX": () => (/* binding */ LokiOptionFields),
-/* harmony export */   "TQ": () => (/* binding */ DEFAULT_RESOLUTION),
-/* harmony export */   "Wz": () => (/* binding */ preprocessMaxLines),
-/* harmony export */   "oZ": () => (/* binding */ RESOLUTION_OPTIONS),
-/* harmony export */   "uG": () => (/* binding */ queryTypeOptions)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/plugins/datasource/loki/types.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "JX": () => ( LokiOptionFields),
+   "TQ": () => ( DEFAULT_RESOLUTION),
+   "Wz": () => ( preprocessMaxLines),
+   "oZ": () => ( RESOLUTION_OPTIONS),
+   "uG": () => ( queryTypeOptions)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_1___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
+ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var _types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/plugins/datasource/loki/types.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _InlineFormLabel;
 
 const _excluded = ["instant", "range"];
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-// Libraries
 
 
- // Types
 
 
 
@@ -5450,18 +5140,18 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 const queryTypeOptions = [{
-  value: _types__WEBPACK_IMPORTED_MODULE_5__/* .LokiQueryType.Range */ .EM.Range,
+  value: _types__WEBPACK_IMPORTED_MODULE_5__ .EM.Range,
   label: 'Range',
   description: 'Run query over a range of time.'
 }, {
-  value: _types__WEBPACK_IMPORTED_MODULE_5__/* .LokiQueryType.Instant */ .EM.Instant,
+  value: _types__WEBPACK_IMPORTED_MODULE_5__ .EM.Instant,
   label: 'Instant',
   description: 'Run query against a single point in time. For this query, the "To" time is used.'
 }];
 
 if (_grafana_runtime__WEBPACK_IMPORTED_MODULE_3__.config.featureToggles.lokiLive) {
   queryTypeOptions.push({
-    value: _types__WEBPACK_IMPORTED_MODULE_5__/* .LokiQueryType.Stream */ .EM.Stream,
+    value: _types__WEBPACK_IMPORTED_MODULE_5__ .EM.Stream,
     label: 'Stream',
     description: 'Run a query and keep sending results on an interval'
   });
@@ -5486,7 +5176,7 @@ function LokiOptionFields(props) {
     onChange
   } = props;
   const query = (_props$query = props.query) !== null && _props$query !== void 0 ? _props$query : {};
-  let queryType = (_query$queryType = query.queryType) !== null && _query$queryType !== void 0 ? _query$queryType : query.instant ? _types__WEBPACK_IMPORTED_MODULE_5__/* .LokiQueryType.Instant */ .EM.Instant : _types__WEBPACK_IMPORTED_MODULE_5__/* .LokiQueryType.Range */ .EM.Range;
+  let queryType = (_query$queryType = query.queryType) !== null && _query$queryType !== void 0 ? _query$queryType : query.instant ? _types__WEBPACK_IMPORTED_MODULE_5__ .EM.Instant : _types__WEBPACK_IMPORTED_MODULE_5__ .EM.Range;
 
   function onChangeQueryLimit(value) {
     const nextQuery = Object.assign({}, query, {
@@ -5522,19 +5212,19 @@ function LokiOptionFields(props) {
     onChange(nextQuery);
   }
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
     "aria-label": "Loki extra field",
     className: "gf-form-inline",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
       "data-testid": "queryTypeField",
       className: (0,_emotion_css__WEBPACK_IMPORTED_MODULE_0__.cx)('gf-form explore-input-margin', _emotion_css__WEBPACK_IMPORTED_MODULE_0__.css`
             flex-wrap: nowrap;
           `),
       "aria-label": "Query type field",
-      children: [_InlineFormLabel || (_InlineFormLabel = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineFormLabel, {
+      children: [_InlineFormLabel || (_InlineFormLabel = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineFormLabel, {
         width: "auto",
         children: "Query type"
-      })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.RadioButtonGroup, {
+      })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.RadioButtonGroup, {
         options: queryTypeOptions,
         value: queryType,
         onChange: type => {
@@ -5545,16 +5235,16 @@ function LokiOptionFields(props) {
           }
         }
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
       "data-testid": "lineLimitField",
       className: (0,_emotion_css__WEBPACK_IMPORTED_MODULE_0__.cx)('gf-form', _emotion_css__WEBPACK_IMPORTED_MODULE_0__.css`
             flex-wrap: nowrap;
           `),
       "aria-label": "Line limit field",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
         label: "Line limit",
         tooltip: 'Upper limit for number of log lines returned by query.',
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Input, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Input, {
           className: "width-4",
           placeholder: "auto",
           type: "number",
@@ -5568,10 +5258,10 @@ function LokiOptionFields(props) {
             }
           }
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
         label: "Resolution",
         tooltip: 'Resolution 1/1 sets step parameter of Loki metrics range queries such that each pixel corresponds to one data point. For better performance, lower resolutions can be picked. 1/2 only retrieves a data point for every other pixel, and 1/10 retrieves one data point per 10 pixels.',
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Select, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Select, {
           isSearchable: false,
           onChange: onResolutionChange,
           options: RESOLUTION_OPTIONS,
@@ -5582,32 +5272,28 @@ function LokiOptionFields(props) {
     })]
   });
 }
-/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/(/* unused pure expression or super */ null && (memo(LokiOptionFields))));
+ var __WEBPACK_DEFAULT_EXPORT__ = (( null && (memo(LokiOptionFields))));
 function preprocessMaxLines(value) {
   if (value.length === 0) {
-    // empty input - falls back to dataSource.maxLines limit
     return NaN;
   } else if (value.length > 0 && (isNaN(+value) || +value < 0)) {
-    // input with at least 1 character and that is either incorrect (value in the input field is not a number) or negative
-    // falls back to the limit of 0 lines
     return 0;
   } else {
-    // default case - correct input
     return +value;
   }
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/loki/types.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/loki/types.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "EM": () => (/* binding */ LokiQueryType),
-/* harmony export */   "ox": () => (/* binding */ LokiResultType),
-/* harmony export */   "sb": () => (/* binding */ LokiQueryDirection)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "EM": () => ( LokiQueryType),
+   "ox": () => ( LokiResultType),
+   "sb": () => ( LokiQueryDirection)
+ });
 let LokiResultType;
 
 (function (LokiResultType) {
@@ -5631,48 +5317,41 @@ let LokiQueryDirection;
   LokiQueryDirection["Forward"] = "forward";
 })(LokiQueryDirection || (LokiQueryDirection = {}));
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/sdk.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/sdk.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MetricsPanelCtrl": () => (/* binding */ MetricsPanelCtrl),
-/* harmony export */   "PanelCtrl": () => (/* binding */ PanelCtrl),
-/* harmony export */   "QueryCtrl": () => (/* binding */ QueryCtrl),
-/* harmony export */   "loadPluginCss": () => (/* reexport safe */ _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__.loadPluginCss)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/panel/metrics_panel_ctrl.ts");
-/* harmony import */ var app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/angular/panel/panel_ctrl.ts");
-/* harmony import */ var app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/angular/panel/query_ctrl.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "MetricsPanelCtrl": () => ( MetricsPanelCtrl),
+   "PanelCtrl": () => ( PanelCtrl),
+   "QueryCtrl": () => ( QueryCtrl),
+   "loadPluginCss": () => ( _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__.loadPluginCss)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/angular/panel/metrics_panel_ctrl.ts");
+ var app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/angular/panel/panel_ctrl.ts");
+ var app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/angular/panel/query_ctrl.ts");
 
 
 
 
 
-const PanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__/* .PanelCtrl */ .q);
-const MetricsPanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__/* .MetricsPanelCtrl */ .k);
-const QueryCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__/* .QueryCtrl */ .G);
+const PanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_panel_ctrl__WEBPACK_IMPORTED_MODULE_3__ .q);
+const MetricsPanelCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_metrics_panel_ctrl__WEBPACK_IMPORTED_MODULE_2__ .k);
+const QueryCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Compatible)(app_angular_panel_query_ctrl__WEBPACK_IMPORTED_MODULE_4__ .G);
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/angular-bindonce-npm-0.3.1-63597abd34-6a9adeb527.zip/node_modules/angular-bindonce/bindonce.js":
-/***/ (() => {
+ "./.yarn/cache/angular-bindonce-npm-0.3.1-63597abd34-6a9adeb527.zip/node_modules/angular-bindonce/bindonce.js":
+ (() => {
 
 (function () {
 	"use strict";
-	/**
-	 * Bindonce - Zero watches binding for AngularJs
-	 * @version v0.3.1
-	 * @link https://github.com/Pasvaz/bindonce
-	 * @author Pasquale Vazzana <pasqualevazzana@gmail.com>
-	 * @license MIT License, http://www.opensource.org/licenses/MIT
-	 */
 
 	var bindonceModule = angular.module('pasvaz.bindonce', []);
 
@@ -5738,9 +5417,6 @@ const QueryCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Comp
 					{
 						this.binders.push(binder);
 
-						// In case of late binding (when using the directive bo-name/bo-parent)
-						// it happens only when you use nested bindonce, if the bo-children
-						// are not dom children the linking can follow another order
 						if (this.ran)
 						{
 							this.runBinders();
@@ -5976,25 +5652,14 @@ const QueryCtrl = (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.makeClassES5Comp
 })();
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/angular-route-npm-1.8.2-11a799fee9-08d84d6a35.zip/node_modules/angular-route/angular-route.js":
-/***/ (() => {
+ "./.yarn/cache/angular-route-npm-1.8.2-11a799fee9-08d84d6a35.zip/node_modules/angular-route/angular-route.js":
+ (() => {
 
-/**
- * @license AngularJS v1.8.2
- * (c) 2010-2020 Google LLC. http://angularjs.org
- * License: MIT
- */
 (function(window, angular) {'use strict';
 
-/* global shallowCopy: true */
 
-/**
- * Creates a shallow copy of an object, an array or a primitive.
- *
- * Assumes that there are no proto properties for objects.
- */
 function shallowCopy(src, dst) {
   if (isArray(src)) {
     dst = dst || [];
@@ -6015,20 +5680,7 @@ function shallowCopy(src, dst) {
   return dst || src;
 }
 
-/* global routeToRegExp: true */
 
-/**
- * @param {string} path - The path to parse. (It is assumed to have query and hash stripped off.)
- * @param {Object} opts - Options.
- * @return {Object} - An object containing an array of path parameter names (`keys`) and a regular
- *     expression (`regexp`) that can be used to identify a matching URL and extract the path
- *     parameter values.
- *
- * @description
- * Parses the given path, extracting path parameter names and a regular expression to match URLs.
- *
- * Originally inspired by `pathRexp` in `visionmedia/express/lib/utils.js`.
- */
 function routeToRegExp(path, opts) {
   var keys = [];
 
@@ -6060,55 +5712,21 @@ function routeToRegExp(path, opts) {
   };
 }
 
-/* global routeToRegExp: false */
-/* global shallowCopy: false */
 
-// `isArray` and `isObject` are necessary for `shallowCopy()` (included via `src/shallowCopy.js`).
-// They are initialized inside the `$RouteProvider`, to ensure `window.angular` is available.
 var isArray;
 var isObject;
 var isDefined;
 var noop;
 
-/**
- * @ngdoc module
- * @name ngRoute
- * @description
- *
- * The `ngRoute` module provides routing and deeplinking services and directives for AngularJS apps.
- *
- * ## Example
- * See {@link ngRoute.$route#examples $route} for an example of configuring and using `ngRoute`.
- *
- */
-/* global -ngRouteModule */
 var ngRouteModule = angular.
   module('ngRoute', []).
   info({ angularVersion: '1.8.2' }).
   provider('$route', $RouteProvider).
-  // Ensure `$route` will be instantiated in time to capture the initial `$locationChangeSuccess`
-  // event (unless explicitly disabled). This is necessary in case `ngView` is included in an
-  // asynchronously loaded template.
   run(instantiateRoute);
 var $routeMinErr = angular.$$minErr('ngRoute');
 var isEagerInstantiationEnabled;
 
 
-/**
- * @ngdoc provider
- * @name $routeProvider
- * @this
- *
- * @description
- *
- * Used for configuring routes.
- *
- * ## Example
- * See {@link ngRoute.$route#examples $route} for an example of configuring and using `ngRoute`.
- *
- * ## Dependencies
- * Requires the {@link ngRoute `ngRoute`} module to be installed.
- */
 function $RouteProvider() {
   isArray = angular.isArray;
   isObject = angular.isObject;
@@ -6121,158 +5739,7 @@ function $RouteProvider() {
 
   var routes = {};
 
-  /**
-   * @ngdoc method
-   * @name $routeProvider#when
-   *
-   * @param {string} path Route path (matched against `$location.path`). If `$location.path`
-   *    contains redundant trailing slash or is missing one, the route will still match and the
-   *    `$location.path` will be updated to add or drop the trailing slash to exactly match the
-   *    route definition.
-   *
-   *    * `path` can contain named groups starting with a colon: e.g. `:name`. All characters up
-   *        to the next slash are matched and stored in `$routeParams` under the given `name`
-   *        when the route matches.
-   *    * `path` can contain named groups starting with a colon and ending with a star:
-   *        e.g.`:name*`. All characters are eagerly stored in `$routeParams` under the given `name`
-   *        when the route matches.
-   *    * `path` can contain optional named groups with a question mark: e.g.`:name?`.
-   *
-   *    For example, routes like `/color/:color/largecode/:largecode*\/edit` will match
-   *    `/color/brown/largecode/code/with/slashes/edit` and extract:
-   *
-   *    * `color: brown`
-   *    * `largecode: code/with/slashes`.
-   *
-   *
-   * @param {Object} route Mapping information to be assigned to `$route.current` on route
-   *    match.
-   *
-   *    Object properties:
-   *
-   *    - `controller` – `{(string|Function)=}` – Controller fn that should be associated with
-   *      newly created scope or the name of a {@link angular.Module#controller registered
-   *      controller} if passed as a string.
-   *    - `controllerAs` – `{string=}` – An identifier name for a reference to the controller.
-   *      If present, the controller will be published to scope under the `controllerAs` name.
-   *    - `template` – `{(string|Function)=}` – html template as a string or a function that
-   *      returns an html template as a string which should be used by {@link
-   *      ngRoute.directive:ngView ngView} or {@link ng.directive:ngInclude ngInclude} directives.
-   *      This property takes precedence over `templateUrl`.
-   *
-   *      If `template` is a function, it will be called with the following parameters:
-   *
-   *      - `{Array.<Object>}` - route parameters extracted from the current
-   *        `$location.path()` by applying the current route
-   *
-   *      One of `template` or `templateUrl` is required.
-   *
-   *    - `templateUrl` – `{(string|Function)=}` – path or function that returns a path to an html
-   *      template that should be used by {@link ngRoute.directive:ngView ngView}.
-   *
-   *      If `templateUrl` is a function, it will be called with the following parameters:
-   *
-   *      - `{Array.<Object>}` - route parameters extracted from the current
-   *        `$location.path()` by applying the current route
-   *
-   *      One of `templateUrl` or `template` is required.
-   *
-   *    - `resolve` - `{Object.<string, Function>=}` - An optional map of dependencies which should
-   *      be injected into the controller. If any of these dependencies are promises, the router
-   *      will wait for them all to be resolved or one to be rejected before the controller is
-   *      instantiated.
-   *      If all the promises are resolved successfully, the values of the resolved promises are
-   *      injected and {@link ngRoute.$route#$routeChangeSuccess $routeChangeSuccess} event is
-   *      fired. If any of the promises are rejected the
-   *      {@link ngRoute.$route#$routeChangeError $routeChangeError} event is fired.
-   *      For easier access to the resolved dependencies from the template, the `resolve` map will
-   *      be available on the scope of the route, under `$resolve` (by default) or a custom name
-   *      specified by the `resolveAs` property (see below). This can be particularly useful, when
-   *      working with {@link angular.Module#component components} as route templates.<br />
-   *      <div class="alert alert-warning">
-   *        **Note:** If your scope already contains a property with this name, it will be hidden
-   *        or overwritten. Make sure, you specify an appropriate name for this property, that
-   *        does not collide with other properties on the scope.
-   *      </div>
-   *      The map object is:
-   *
-   *      - `key` – `{string}`: a name of a dependency to be injected into the controller.
-   *      - `factory` - `{string|Function}`: If `string` then it is an alias for a service.
-   *        Otherwise if function, then it is {@link auto.$injector#invoke injected}
-   *        and the return value is treated as the dependency. If the result is a promise, it is
-   *        resolved before its value is injected into the controller. Be aware that
-   *        `ngRoute.$routeParams` will still refer to the previous route within these resolve
-   *        functions.  Use `$route.current.params` to access the new route parameters, instead.
-   *
-   *    - `resolveAs` - `{string=}` - The name under which the `resolve` map will be available on
-   *      the scope of the route. If omitted, defaults to `$resolve`.
-   *
-   *    - `redirectTo` – `{(string|Function)=}` – value to update
-   *      {@link ng.$location $location} path with and trigger route redirection.
-   *
-   *      If `redirectTo` is a function, it will be called with the following parameters:
-   *
-   *      - `{Object.<string>}` - route parameters extracted from the current
-   *        `$location.path()` by applying the current route templateUrl.
-   *      - `{string}` - current `$location.path()`
-   *      - `{Object}` - current `$location.search()`
-   *
-   *      The custom `redirectTo` function is expected to return a string which will be used
-   *      to update `$location.url()`. If the function throws an error, no further processing will
-   *      take place and the {@link ngRoute.$route#$routeChangeError $routeChangeError} event will
-   *      be fired.
-   *
-   *      Routes that specify `redirectTo` will not have their controllers, template functions
-   *      or resolves called, the `$location` will be changed to the redirect url and route
-   *      processing will stop. The exception to this is if the `redirectTo` is a function that
-   *      returns `undefined`. In this case the route transition occurs as though there was no
-   *      redirection.
-   *
-   *    - `resolveRedirectTo` – `{Function=}` – a function that will (eventually) return the value
-   *      to update {@link ng.$location $location} URL with and trigger route redirection. In
-   *      contrast to `redirectTo`, dependencies can be injected into `resolveRedirectTo` and the
-   *      return value can be either a string or a promise that will be resolved to a string.
-   *
-   *      Similar to `redirectTo`, if the return value is `undefined` (or a promise that gets
-   *      resolved to `undefined`), no redirection takes place and the route transition occurs as
-   *      though there was no redirection.
-   *
-   *      If the function throws an error or the returned promise gets rejected, no further
-   *      processing will take place and the
-   *      {@link ngRoute.$route#$routeChangeError $routeChangeError} event will be fired.
-   *
-   *      `redirectTo` takes precedence over `resolveRedirectTo`, so specifying both on the same
-   *      route definition, will cause the latter to be ignored.
-   *
-   *    - `[reloadOnUrl=true]` - `{boolean=}` - reload route when any part of the URL changes
-   *      (including the path) even if the new URL maps to the same route.
-   *
-   *      If the option is set to `false` and the URL in the browser changes, but the new URL maps
-   *      to the same route, then a `$routeUpdate` event is broadcasted on the root scope (without
-   *      reloading the route).
-   *
-   *    - `[reloadOnSearch=true]` - `{boolean=}` - reload route when only `$location.search()`
-   *      or `$location.hash()` changes.
-   *
-   *      If the option is set to `false` and the URL in the browser changes, then a `$routeUpdate`
-   *      event is broadcasted on the root scope (without reloading the route).
-   *
-   *      <div class="alert alert-warning">
-   *        **Note:** This option has no effect if `reloadOnUrl` is set to `false`.
-   *      </div>
-   *
-   *    - `[caseInsensitiveMatch=false]` - `{boolean=}` - match routes without being case sensitive
-   *
-   *      If the option is set to `true`, then the particular route can be matched without being
-   *      case sensitive
-   *
-   * @returns {Object} self
-   *
-   * @description
-   * Adds a new route definition to the `$route` service.
-   */
   this.when = function(path, route) {
-    //copy original route object to preserve params inherited from proto chain
     var routeCopy = shallowCopy(route);
     if (angular.isUndefined(routeCopy.reloadOnUrl)) {
       routeCopy.reloadOnUrl = true;
@@ -6289,7 +5756,6 @@ function $RouteProvider() {
       path && routeToRegExp(path, routeCopy)
     );
 
-    // create redirection for trailing slashes
     if (path) {
       var redirectPath = (path[path.length - 1] === '/')
             ? path.substr(0, path.length - 1)
@@ -6304,29 +5770,8 @@ function $RouteProvider() {
     return this;
   };
 
-  /**
-   * @ngdoc property
-   * @name $routeProvider#caseInsensitiveMatch
-   * @description
-   *
-   * A boolean property indicating if routes defined
-   * using this provider should be matched using a case insensitive
-   * algorithm. Defaults to `false`.
-   */
   this.caseInsensitiveMatch = false;
 
-  /**
-   * @ngdoc method
-   * @name $routeProvider#otherwise
-   *
-   * @description
-   * Sets route definition that will be used on route change when no other route definition
-   * is matched.
-   *
-   * @param {Object|string} params Mapping information to be assigned to `$route.current`.
-   * If called with a string, the value maps to `redirectTo`.
-   * @returns {Object} self
-   */
   this.otherwise = function(params) {
     if (typeof params === 'string') {
       params = {redirectTo: params};
@@ -6335,37 +5780,6 @@ function $RouteProvider() {
     return this;
   };
 
-  /**
-   * @ngdoc method
-   * @name $routeProvider#eagerInstantiationEnabled
-   * @kind function
-   *
-   * @description
-   * Call this method as a setter to enable/disable eager instantiation of the
-   * {@link ngRoute.$route $route} service upon application bootstrap. You can also call it as a
-   * getter (i.e. without any arguments) to get the current value of the
-   * `eagerInstantiationEnabled` flag.
-   *
-   * Instantiating `$route` early is necessary for capturing the initial
-   * {@link ng.$location#$locationChangeStart $locationChangeStart} event and navigating to the
-   * appropriate route. Usually, `$route` is instantiated in time by the
-   * {@link ngRoute.ngView ngView} directive. Yet, in cases where `ngView` is included in an
-   * asynchronously loaded template (e.g. in another directive's template), the directive factory
-   * might not be called soon enough for `$route` to be instantiated _before_ the initial
-   * `$locationChangeSuccess` event is fired. Eager instantiation ensures that `$route` is always
-   * instantiated in time, regardless of when `ngView` will be loaded.
-   *
-   * The default value is true.
-   *
-   * **Note**:<br />
-   * You may want to disable the default behavior when unit-testing modules that depend on
-   * `ngRoute`, in order to avoid an unexpected request for the default route's template.
-   *
-   * @param {boolean=} enabled - If provided, update the internal `eagerInstantiationEnabled` flag.
-   *
-   * @returns {*} The current value of the `eagerInstantiationEnabled` flag if used as a getter or
-   *     itself (for chaining) if used as a setter.
-   */
   isEagerInstantiationEnabled = true;
   this.eagerInstantiationEnabled = function eagerInstantiationEnabled(enabled) {
     if (isDefined(enabled)) {
@@ -6387,205 +5801,10 @@ function $RouteProvider() {
                '$browser',
       function($rootScope, $location, $routeParams, $q, $injector, $templateRequest, $sce, $browser) {
 
-    /**
-     * @ngdoc service
-     * @name $route
-     * @requires $location
-     * @requires $routeParams
-     *
-     * @property {Object} current Reference to the current route definition.
-     * The route definition contains:
-     *
-     *   - `controller`: The controller constructor as defined in the route definition.
-     *   - `locals`: A map of locals which is used by {@link ng.$controller $controller} service for
-     *     controller instantiation. The `locals` contain
-     *     the resolved values of the `resolve` map. Additionally the `locals` also contain:
-     *
-     *     - `$scope` - The current route scope.
-     *     - `$template` - The current route template HTML.
-     *
-     *     The `locals` will be assigned to the route scope's `$resolve` property. You can override
-     *     the property name, using `resolveAs` in the route definition. See
-     *     {@link ngRoute.$routeProvider $routeProvider} for more info.
-     *
-     * @property {Object} routes Object with all route configuration Objects as its properties.
-     *
-     * @description
-     * `$route` is used for deep-linking URLs to controllers and views (HTML partials).
-     * It watches `$location.url()` and tries to map the path to an existing route definition.
-     *
-     * Requires the {@link ngRoute `ngRoute`} module to be installed.
-     *
-     * You can define routes through {@link ngRoute.$routeProvider $routeProvider}'s API.
-     *
-     * The `$route` service is typically used in conjunction with the
-     * {@link ngRoute.directive:ngView `ngView`} directive and the
-     * {@link ngRoute.$routeParams `$routeParams`} service.
-     *
-     * @example
-     * This example shows how changing the URL hash causes the `$route` to match a route against the
-     * URL, and the `ngView` pulls in the partial.
-     *
-     * <example name="$route-service" module="ngRouteExample"
-     *          deps="angular-route.js" fixBase="true">
-     *   <file name="index.html">
-     *     <div ng-controller="MainController">
-     *       Choose:
-     *       <a href="Book/Moby">Moby</a> |
-     *       <a href="Book/Moby/ch/1">Moby: Ch1</a> |
-     *       <a href="Book/Gatsby">Gatsby</a> |
-     *       <a href="Book/Gatsby/ch/4?key=value">Gatsby: Ch4</a> |
-     *       <a href="Book/Scarlet">Scarlet Letter</a><br/>
-     *
-     *       <div ng-view></div>
-     *
-     *       <hr />
-     *
-     *       <pre>$location.path() = {{$location.path()}}</pre>
-     *       <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
-     *       <pre>$route.current.params = {{$route.current.params}}</pre>
-     *       <pre>$route.current.scope.name = {{$route.current.scope.name}}</pre>
-     *       <pre>$routeParams = {{$routeParams}}</pre>
-     *     </div>
-     *   </file>
-     *
-     *   <file name="book.html">
-     *     controller: {{name}}<br />
-     *     Book Id: {{params.bookId}}<br />
-     *   </file>
-     *
-     *   <file name="chapter.html">
-     *     controller: {{name}}<br />
-     *     Book Id: {{params.bookId}}<br />
-     *     Chapter Id: {{params.chapterId}}
-     *   </file>
-     *
-     *   <file name="script.js">
-     *     angular.module('ngRouteExample', ['ngRoute'])
-     *
-     *      .controller('MainController', function($scope, $route, $routeParams, $location) {
-     *          $scope.$route = $route;
-     *          $scope.$location = $location;
-     *          $scope.$routeParams = $routeParams;
-     *      })
-     *
-     *      .controller('BookController', function($scope, $routeParams) {
-     *          $scope.name = 'BookController';
-     *          $scope.params = $routeParams;
-     *      })
-     *
-     *      .controller('ChapterController', function($scope, $routeParams) {
-     *          $scope.name = 'ChapterController';
-     *          $scope.params = $routeParams;
-     *      })
-     *
-     *     .config(function($routeProvider, $locationProvider) {
-     *       $routeProvider
-     *        .when('/Book/:bookId', {
-     *         templateUrl: 'book.html',
-     *         controller: 'BookController',
-     *         resolve: {
-     *           // I will cause a 1 second delay
-     *           delay: function($q, $timeout) {
-     *             var delay = $q.defer();
-     *             $timeout(delay.resolve, 1000);
-     *             return delay.promise;
-     *           }
-     *         }
-     *       })
-     *       .when('/Book/:bookId/ch/:chapterId', {
-     *         templateUrl: 'chapter.html',
-     *         controller: 'ChapterController'
-     *       });
-     *
-     *       // configure html5 to get links working on jsfiddle
-     *       $locationProvider.html5Mode(true);
-     *     });
-     *
-     *   </file>
-     *
-     *   <file name="protractor.js" type="protractor">
-     *     it('should load and compile correct template', function() {
-     *       element(by.linkText('Moby: Ch1')).click();
-     *       var content = element(by.css('[ng-view]')).getText();
-     *       expect(content).toMatch(/controller: ChapterController/);
-     *       expect(content).toMatch(/Book Id: Moby/);
-     *       expect(content).toMatch(/Chapter Id: 1/);
-     *
-     *       element(by.partialLinkText('Scarlet')).click();
-     *
-     *       content = element(by.css('[ng-view]')).getText();
-     *       expect(content).toMatch(/controller: BookController/);
-     *       expect(content).toMatch(/Book Id: Scarlet/);
-     *     });
-     *   </file>
-     * </example>
-     */
 
-    /**
-     * @ngdoc event
-     * @name $route#$routeChangeStart
-     * @eventType broadcast on root scope
-     * @description
-     * Broadcasted before a route change. At this  point the route services starts
-     * resolving all of the dependencies needed for the route change to occur.
-     * Typically this involves fetching the view template as well as any dependencies
-     * defined in `resolve` route property. Once  all of the dependencies are resolved
-     * `$routeChangeSuccess` is fired.
-     *
-     * The route change (and the `$location` change that triggered it) can be prevented
-     * by calling `preventDefault` method of the event. See {@link ng.$rootScope.Scope#$on}
-     * for more details about event object.
-     *
-     * @param {Object} angularEvent Synthetic event object.
-     * @param {Route} next Future route information.
-     * @param {Route} current Current route information.
-     */
 
-    /**
-     * @ngdoc event
-     * @name $route#$routeChangeSuccess
-     * @eventType broadcast on root scope
-     * @description
-     * Broadcasted after a route change has happened successfully.
-     * The `resolve` dependencies are now available in the `current.locals` property.
-     *
-     * {@link ngRoute.directive:ngView ngView} listens for the directive
-     * to instantiate the controller and render the view.
-     *
-     * @param {Object} angularEvent Synthetic event object.
-     * @param {Route} current Current route information.
-     * @param {Route|Undefined} previous Previous route information, or undefined if current is
-     * first route entered.
-     */
 
-    /**
-     * @ngdoc event
-     * @name $route#$routeChangeError
-     * @eventType broadcast on root scope
-     * @description
-     * Broadcasted if a redirection function fails or any redirection or resolve promises are
-     * rejected.
-     *
-     * @param {Object} angularEvent Synthetic event object
-     * @param {Route} current Current route information.
-     * @param {Route} previous Previous route information.
-     * @param {Route} rejection The thrown error or the rejection reason of the promise. Usually
-     * the rejection reason is the error that caused the promise to get rejected.
-     */
 
-    /**
-     * @ngdoc event
-     * @name $route#$routeUpdate
-     * @eventType broadcast on root scope
-     * @description
-     * Broadcasted if the same instance of a route (including template, controller instance,
-     * resolved dependencies, etc.) is being reused. This can happen if either `reloadOnSearch` or
-     * `reloadOnUrl` has been set to `false`.
-     *
-     * @param {Object} angularEvent Synthetic event object
-     * @param {Route} current Current/previous route information.
-     */
 
     var forceReload = false,
         preparedRoute,
@@ -6593,17 +5812,6 @@ function $RouteProvider() {
         $route = {
           routes: routes,
 
-          /**
-           * @ngdoc method
-           * @name $route#reload
-           *
-           * @description
-           * Causes `$route` service to reload the current route even if
-           * {@link ng.$location $location} hasn't changed.
-           *
-           * As a result of that, {@link ngRoute.directive:ngView ngView}
-           * creates new scope and reinstantiates the controller.
-           */
           reload: function() {
             forceReload = true;
 
@@ -6621,24 +5829,10 @@ function $RouteProvider() {
             });
           },
 
-          /**
-           * @ngdoc method
-           * @name $route#updateParams
-           *
-           * @description
-           * Causes `$route` service to update the current URL, replacing
-           * current route parameters with those specified in `newParams`.
-           * Provided property names that match the route's path segment
-           * definitions will be interpolated into the location's path, while
-           * remaining properties will be treated as query params.
-           *
-           * @param {!Object<string, string>} newParams mapping of URL parameter names to values
-           */
           updateParams: function(newParams) {
             if (this.current && this.current.$$route) {
               newParams = angular.extend({}, this.current.params, newParams);
               $location.path(interpolate(this.current.$$route.originalPath, newParams));
-              // interpolate modifies newParams, only query params are left
               $location.search(newParams);
             } else {
               throw $routeMinErr('norout', 'Tried updating route with no current route');
@@ -6651,19 +5845,7 @@ function $RouteProvider() {
 
     return $route;
 
-    /////////////////////////////////////////////////////
 
-    /**
-     * @param on {string} current url
-     * @param route {Object} route regexp to match the url against
-     * @return {?Object}
-     *
-     * @description
-     * Check if the route matches the current url.
-     *
-     * Inspired by match in
-     * visionmedia/express/lib/router/router.js.
-     */
     function switchRouteMatcher(on, route) {
       var keys = route.keys,
           params = {};
@@ -6723,7 +5905,6 @@ function $RouteProvider() {
             return keepProcessingRoute && nextRoutePromise.
               then(resolveLocals).
               then(function(locals) {
-                // after route change
                 if (nextRoute === $route.current) {
                   if (nextRoute) {
                     nextRoute.locals = locals;
@@ -6737,10 +5918,6 @@ function $RouteProvider() {
               $rootScope.$broadcast('$routeChangeError', nextRoute, lastRoute, error);
             }
           }).finally(function() {
-            // Because `commitRoute()` is called from a `$rootScope.$evalAsync` block (see
-            // `$locationWatch`), this `$$completeOutstandingRequest()` call will not cause
-            // `outstandingRequestCount` to hit zero.  This is important in case we are redirecting
-            // to a new route which also requires some asynchronous work.
 
             $browser.$$completeOutstandingRequest(noop, '$route');
           });
@@ -6808,8 +5985,6 @@ function $RouteProvider() {
         }
 
         if (newUrl !== oldUrl) {
-          // Exit out and don't process current next value,
-          // wait for next location change from redirect
           keepProcessingRoute = false;
         }
       }
@@ -6851,11 +6026,7 @@ function $RouteProvider() {
       return template;
     }
 
-    /**
-     * @returns {Object} the current active route, by matching it against the URL
-     */
     function parseRoute() {
-      // Match a route
       var params, match;
       angular.forEach(routes, function(route, path) {
         if (!match && (params = switchRouteMatcher($location.path(), route))) {
@@ -6865,36 +6036,20 @@ function $RouteProvider() {
           match.$$route = route;
         }
       });
-      // No route matched; fallback to "otherwise" route
       return match || routes[null] && inherit(routes[null], {params: {}, pathParams:{}});
     }
 
-    /**
-     * @param {Object} newRoute - The new route configuration (as returned by `parseRoute()`).
-     * @param {Object} oldRoute - The previous route configuration (as returned by `parseRoute()`).
-     * @returns {boolean} Whether this is an "update-only" navigation, i.e. the URL maps to the same
-     *                    route and it can be reused (based on the config and the type of change).
-     */
     function isNavigationUpdateOnly(newRoute, oldRoute) {
-      // IF this is not a forced reload
       return !forceReload
-          // AND both `newRoute`/`oldRoute` are defined
           && newRoute && oldRoute
-          // AND they map to the same Route Definition Object
           && (newRoute.$$route === oldRoute.$$route)
-          // AND `reloadOnUrl` is disabled
           && (!newRoute.reloadOnUrl
-              // OR `reloadOnSearch` is disabled
               || (!newRoute.reloadOnSearch
-                  // AND both routes have the same path params
                   && angular.equals(newRoute.pathParams, oldRoute.pathParams)
               )
           );
     }
 
-    /**
-     * @returns {string} interpolation of the redirect path with the parameters
-     */
     function interpolate(string, params) {
       var result = [];
       angular.forEach((string || '').split(':'), function(segment, i) {
@@ -6916,7 +6071,6 @@ function $RouteProvider() {
 instantiateRoute.$inject = ['$injector'];
 function instantiateRoute($injector) {
   if (isEagerInstantiationEnabled) {
-    // Instantiate `$route`
     $injector.get('$route');
   }
 }
@@ -6924,40 +6078,6 @@ function instantiateRoute($injector) {
 ngRouteModule.provider('$routeParams', $RouteParamsProvider);
 
 
-/**
- * @ngdoc service
- * @name $routeParams
- * @requires $route
- * @this
- *
- * @description
- * The `$routeParams` service allows you to retrieve the current set of route parameters.
- *
- * Requires the {@link ngRoute `ngRoute`} module to be installed.
- *
- * The route parameters are a combination of {@link ng.$location `$location`}'s
- * {@link ng.$location#search `search()`} and {@link ng.$location#path `path()`}.
- * The `path` parameters are extracted when the {@link ngRoute.$route `$route`} path is matched.
- *
- * In case of parameter name collision, `path` params take precedence over `search` params.
- *
- * The service guarantees that the identity of the `$routeParams` object will remain unchanged
- * (but its properties will likely change) even when a route change occurs.
- *
- * Note that the `$routeParams` are only updated *after* a route change completes successfully.
- * This means that you cannot rely on `$routeParams` being correct in route resolve functions.
- * Instead you can use `$route.current.params` to access the new route's parameters.
- *
- * @example
- * ```js
- *  // Given:
- *  // URL: http://server.com/index.html#/Chapter/1/Section/2?search=moby
- *  // Route: /Chapter/:chapterId/Section/:sectionId
- *  //
- *  // Then
- *  $routeParams ==> {chapterId:'1', sectionId:'2', search:'moby'}
- * ```
- */
 function $RouteParamsProvider() {
   this.$get = function() { return {}; };
 }
@@ -6966,179 +6086,8 @@ ngRouteModule.directive('ngView', ngViewFactory);
 ngRouteModule.directive('ngView', ngViewFillContentFactory);
 
 
-/**
- * @ngdoc directive
- * @name ngView
- * @restrict ECA
- *
- * @description
- * `ngView` is a directive that complements the {@link ngRoute.$route $route} service by
- * including the rendered template of the current route into the main layout (`index.html`) file.
- * Every time the current route changes, the included view changes with it according to the
- * configuration of the `$route` service.
- *
- * Requires the {@link ngRoute `ngRoute`} module to be installed.
- *
- * @animations
- * | Animation                        | Occurs                              |
- * |----------------------------------|-------------------------------------|
- * | {@link ng.$animate#enter enter}  | when the new element is inserted to the DOM |
- * | {@link ng.$animate#leave leave}  | when the old element is removed from to the DOM  |
- *
- * The enter and leave animation occur concurrently.
- *
- * @scope
- * @priority 400
- * @param {string=} onload Expression to evaluate whenever the view updates.
- *
- * @param {string=} autoscroll Whether `ngView` should call {@link ng.$anchorScroll
- *                  $anchorScroll} to scroll the viewport after the view is updated.
- *
- *                  - If the attribute is not set, disable scrolling.
- *                  - If the attribute is set without value, enable scrolling.
- *                  - Otherwise enable scrolling only if the `autoscroll` attribute value evaluated
- *                    as an expression yields a truthy value.
- * @example
-    <example name="ngView-directive" module="ngViewExample"
-             deps="angular-route.js;angular-animate.js"
-             animations="true" fixBase="true">
-      <file name="index.html">
-        <div ng-controller="MainCtrl as main">
-          Choose:
-          <a href="Book/Moby">Moby</a> |
-          <a href="Book/Moby/ch/1">Moby: Ch1</a> |
-          <a href="Book/Gatsby">Gatsby</a> |
-          <a href="Book/Gatsby/ch/4?key=value">Gatsby: Ch4</a> |
-          <a href="Book/Scarlet">Scarlet Letter</a><br/>
-
-          <div class="view-animate-container">
-            <div ng-view class="view-animate"></div>
-          </div>
-          <hr />
-
-          <pre>$location.path() = {{main.$location.path()}}</pre>
-          <pre>$route.current.templateUrl = {{main.$route.current.templateUrl}}</pre>
-          <pre>$route.current.params = {{main.$route.current.params}}</pre>
-          <pre>$routeParams = {{main.$routeParams}}</pre>
-        </div>
-      </file>
-
-      <file name="book.html">
-        <div>
-          controller: {{book.name}}<br />
-          Book Id: {{book.params.bookId}}<br />
-        </div>
-      </file>
-
-      <file name="chapter.html">
-        <div>
-          controller: {{chapter.name}}<br />
-          Book Id: {{chapter.params.bookId}}<br />
-          Chapter Id: {{chapter.params.chapterId}}
-        </div>
-      </file>
-
-      <file name="animations.css">
-        .view-animate-container {
-          position:relative;
-          height:100px!important;
-          background:white;
-          border:1px solid black;
-          height:40px;
-          overflow:hidden;
-        }
-
-        .view-animate {
-          padding:10px;
-        }
-
-        .view-animate.ng-enter, .view-animate.ng-leave {
-          transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-
-          display:block;
-          width:100%;
-          border-left:1px solid black;
-
-          position:absolute;
-          top:0;
-          left:0;
-          right:0;
-          bottom:0;
-          padding:10px;
-        }
-
-        .view-animate.ng-enter {
-          left:100%;
-        }
-        .view-animate.ng-enter.ng-enter-active {
-          left:0;
-        }
-        .view-animate.ng-leave.ng-leave-active {
-          left:-100%;
-        }
-      </file>
-
-      <file name="script.js">
-        angular.module('ngViewExample', ['ngRoute', 'ngAnimate'])
-          .config(['$routeProvider', '$locationProvider',
-            function($routeProvider, $locationProvider) {
-              $routeProvider
-                .when('/Book/:bookId', {
-                  templateUrl: 'book.html',
-                  controller: 'BookCtrl',
-                  controllerAs: 'book'
-                })
-                .when('/Book/:bookId/ch/:chapterId', {
-                  templateUrl: 'chapter.html',
-                  controller: 'ChapterCtrl',
-                  controllerAs: 'chapter'
-                });
-
-              $locationProvider.html5Mode(true);
-          }])
-          .controller('MainCtrl', ['$route', '$routeParams', '$location',
-            function MainCtrl($route, $routeParams, $location) {
-              this.$route = $route;
-              this.$location = $location;
-              this.$routeParams = $routeParams;
-          }])
-          .controller('BookCtrl', ['$routeParams', function BookCtrl($routeParams) {
-            this.name = 'BookCtrl';
-            this.params = $routeParams;
-          }])
-          .controller('ChapterCtrl', ['$routeParams', function ChapterCtrl($routeParams) {
-            this.name = 'ChapterCtrl';
-            this.params = $routeParams;
-          }]);
-
-      </file>
-
-      <file name="protractor.js" type="protractor">
-        it('should load and compile correct template', function() {
-          element(by.linkText('Moby: Ch1')).click();
-          var content = element(by.css('[ng-view]')).getText();
-          expect(content).toMatch(/controller: ChapterCtrl/);
-          expect(content).toMatch(/Book Id: Moby/);
-          expect(content).toMatch(/Chapter Id: 1/);
-
-          element(by.partialLinkText('Scarlet')).click();
-
-          content = element(by.css('[ng-view]')).getText();
-          expect(content).toMatch(/controller: BookCtrl/);
-          expect(content).toMatch(/Book Id: Scarlet/);
-        });
-      </file>
-    </example>
- */
 
 
-/**
- * @ngdoc event
- * @name ngView#$viewContentLoaded
- * @eventType emit on the current ngView scope
- * @description
- * Emitted every time the ngView content is reloaded.
- */
 ngViewFactory.$inject = ['$route', '$anchorScroll', '$animate'];
 function ngViewFactory($route, $anchorScroll, $animate) {
   return {
@@ -7183,12 +6132,6 @@ function ngViewFactory($route, $anchorScroll, $animate) {
             var newScope = scope.$new();
             var current = $route.current;
 
-            // Note: This will also link all children of ng-view that were contained in the original
-            // html. If that content contains controllers, ... they could pollute/change the scope.
-            // However, using ng-view on an element with additional content does not make sense...
-            // Note: We can't remove them in the cloneAttchFn of $transclude as that
-            // function is called before linking the content, which would apply child
-            // directives to non existing elements.
             var clone = $transclude(newScope, function(clone) {
               $animate.enter(clone, null, currentElement || $element).done(function onNgViewEnter(response) {
                 if (response !== false && angular.isDefined(autoScrollExp)
@@ -7211,11 +6154,6 @@ function ngViewFactory($route, $anchorScroll, $animate) {
   };
 }
 
-// This directive is called during the $transclude call of the first `ngView` directive.
-// It will replace and compile the content of the element with the loaded template.
-// We need this directive so that the element content is already filled when
-// the link function of another directive on the same element as ngView
-// is called.
 ngViewFillContentFactory.$inject = ['$compile', '$controller', '$route'];
 function ngViewFillContentFactory($compile, $controller, $route) {
   return {
@@ -7249,37 +6187,22 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 })(window, window.angular);
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/angular-route-npm-1.8.2-11a799fee9-08d84d6a35.zip/node_modules/angular-route/index.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/angular-route-npm-1.8.2-11a799fee9-08d84d6a35.zip/node_modules/angular-route/index.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 __webpack_require__("./.yarn/cache/angular-route-npm-1.8.2-11a799fee9-08d84d6a35.zip/node_modules/angular-route/angular-route.js");
 module.exports = 'ngRoute';
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/angular-sanitize-npm-1.8.2-378e7cdaed-df06ddee2a.zip/node_modules/angular-sanitize/angular-sanitize.js":
-/***/ (() => {
+ "./.yarn/cache/angular-sanitize-npm-1.8.2-378e7cdaed-df06ddee2a.zip/node_modules/angular-sanitize/angular-sanitize.js":
+ (() => {
 
-/**
- * @license AngularJS v1.8.2
- * (c) 2010-2020 Google LLC. http://angularjs.org
- * License: MIT
- */
 (function(window, angular) {'use strict';
 
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- *     Any commits to this file should be reviewed with security in mind.  *
- *   Changes to this file can potentially create security vulnerabilities. *
- *          An approval from 2 Core members with history of modifying      *
- *                         this file is required.                          *
- *                                                                         *
- *  Does the change somehow allow for arbitrary javascript to be executed? *
- *    Or allows for someone to change the prototype of built-in objects?   *
- *     Or gives undesired access to variables likes document or window?    *
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 var $sanitizeMinErr = angular.$$minErr('$sanitize');
 var bind;
@@ -7293,127 +6216,9 @@ var nodeContains;
 var htmlParser;
 var htmlSanitizeWriter;
 
-/**
- * @ngdoc module
- * @name ngSanitize
- * @description
- *
- * The `ngSanitize` module provides functionality to sanitize HTML.
- *
- * See {@link ngSanitize.$sanitize `$sanitize`} for usage.
- */
-
-/**
- * @ngdoc service
- * @name $sanitize
- * @kind function
- *
- * @description
- *   Sanitizes an html string by stripping all potentially dangerous tokens.
- *
- *   The input is sanitized by parsing the HTML into tokens. All safe tokens (from a trusted URI list) are
- *   then serialized back to a properly escaped HTML string. This means that no unsafe input can make
- *   it into the returned string.
- *
- *   The trusted URIs for URL sanitization of attribute values is configured using the functions
- *   `aHrefSanitizationTrustedUrlList` and `imgSrcSanitizationTrustedUrlList` of {@link $compileProvider}.
- *
- *   The input may also contain SVG markup if this is enabled via {@link $sanitizeProvider}.
- *
- * @param {string} html HTML input.
- * @returns {string} Sanitized HTML.
- *
- * @example
-   <example module="sanitizeExample" deps="angular-sanitize.js" name="sanitize-service">
-   <file name="index.html">
-     <script>
-         angular.module('sanitizeExample', ['ngSanitize'])
-           .controller('ExampleController', ['$scope', '$sce', function($scope, $sce) {
-             $scope.snippet =
-               '<p style="color:blue">an html\n' +
-               '<em onmouseover="this.textContent=\'PWN3D!\'">click here</em>\n' +
-               'snippet</p>';
-             $scope.deliberatelyTrustDangerousSnippet = function() {
-               return $sce.trustAsHtml($scope.snippet);
-             };
-           }]);
-     </script>
-     <div ng-controller="ExampleController">
-        Snippet: <textarea ng-model="snippet" cols="60" rows="3"></textarea>
-       <table>
-         <tr>
-           <td>Directive</td>
-           <td>How</td>
-           <td>Source</td>
-           <td>Rendered</td>
-         </tr>
-         <tr id="bind-html-with-sanitize">
-           <td>ng-bind-html</td>
-           <td>Automatically uses $sanitize</td>
-           <td><pre>&lt;div ng-bind-html="snippet"&gt;<br/>&lt;/div&gt;</pre></td>
-           <td><div ng-bind-html="snippet"></div></td>
-         </tr>
-         <tr id="bind-html-with-trust">
-           <td>ng-bind-html</td>
-           <td>Bypass $sanitize by explicitly trusting the dangerous value</td>
-           <td>
-           <pre>&lt;div ng-bind-html="deliberatelyTrustDangerousSnippet()"&gt;
-&lt;/div&gt;</pre>
-           </td>
-           <td><div ng-bind-html="deliberatelyTrustDangerousSnippet()"></div></td>
-         </tr>
-         <tr id="bind-default">
-           <td>ng-bind</td>
-           <td>Automatically escapes</td>
-           <td><pre>&lt;div ng-bind="snippet"&gt;<br/>&lt;/div&gt;</pre></td>
-           <td><div ng-bind="snippet"></div></td>
-         </tr>
-       </table>
-       </div>
-   </file>
-   <file name="protractor.js" type="protractor">
-     it('should sanitize the html snippet by default', function() {
-       expect(element(by.css('#bind-html-with-sanitize div')).getAttribute('innerHTML')).
-         toBe('<p>an html\n<em>click here</em>\nsnippet</p>');
-     });
-
-     it('should inline raw snippet if bound to a trusted value', function() {
-       expect(element(by.css('#bind-html-with-trust div')).getAttribute('innerHTML')).
-         toBe("<p style=\"color:blue\">an html\n" +
-              "<em onmouseover=\"this.textContent='PWN3D!'\">click here</em>\n" +
-              "snippet</p>");
-     });
-
-     it('should escape snippet without any filter', function() {
-       expect(element(by.css('#bind-default div')).getAttribute('innerHTML')).
-         toBe("&lt;p style=\"color:blue\"&gt;an html\n" +
-              "&lt;em onmouseover=\"this.textContent='PWN3D!'\"&gt;click here&lt;/em&gt;\n" +
-              "snippet&lt;/p&gt;");
-     });
-
-     it('should update', function() {
-       element(by.model('snippet')).clear();
-       element(by.model('snippet')).sendKeys('new <b onclick="alert(1)">text</b>');
-       expect(element(by.css('#bind-html-with-sanitize div')).getAttribute('innerHTML')).
-         toBe('new <b>text</b>');
-       expect(element(by.css('#bind-html-with-trust div')).getAttribute('innerHTML')).toBe(
-         'new <b onclick="alert(1)">text</b>');
-       expect(element(by.css('#bind-default div')).getAttribute('innerHTML')).toBe(
-         "new &lt;b onclick=\"alert(1)\"&gt;text&lt;/b&gt;");
-     });
-   </file>
-   </example>
- */
 
 
-/**
- * @ngdoc provider
- * @name $sanitizeProvider
- * @this
- *
- * @description
- * Creates and configures {@link $sanitize} instance.
- */
+
 function $SanitizeProvider() {
   var hasBeenInstantiated = false;
   var svgEnabled = false;
@@ -7433,36 +6238,6 @@ function $SanitizeProvider() {
   }];
 
 
-  /**
-   * @ngdoc method
-   * @name $sanitizeProvider#enableSvg
-   * @kind function
-   *
-   * @description
-   * Enables a subset of svg to be supported by the sanitizer.
-   *
-   * <div class="alert alert-warning">
-   *   <p>By enabling this setting without taking other precautions, you might expose your
-   *   application to click-hijacking attacks. In these attacks, sanitized svg elements could be positioned
-   *   outside of the containing element and be rendered over other elements on the page (e.g. a login
-   *   link). Such behavior can then result in phishing incidents.</p>
-   *
-   *   <p>To protect against these, explicitly setup `overflow: hidden` css rule for all potential svg
-   *   tags within the sanitized content:</p>
-   *
-   *   <br>
-   *
-   *   <pre><code>
-   *   .rootOfTheIncludedContent svg {
-   *     overflow: hidden !important;
-   *   }
-   *   </code></pre>
-   * </div>
-   *
-   * @param {boolean=} flag Enable or disable SVG support in the sanitizer.
-   * @returns {boolean|$sanitizeProvider} Returns the currently configured value if called
-   *    without an argument or self for chaining otherwise.
-   */
   this.enableSvg = function(enableSvg) {
     if (isDefined(enableSvg)) {
       svgEnabled = enableSvg;
@@ -7473,52 +6248,6 @@ function $SanitizeProvider() {
   };
 
 
-  /**
-   * @ngdoc method
-   * @name $sanitizeProvider#addValidElements
-   * @kind function
-   *
-   * @description
-   * Extends the built-in lists of valid HTML/SVG elements, i.e. elements that are considered safe
-   * and are not stripped off during sanitization. You can extend the following lists of elements:
-   *
-   * - `htmlElements`: A list of elements (tag names) to extend the current list of safe HTML
-   *   elements. HTML elements considered safe will not be removed during sanitization. All other
-   *   elements will be stripped off.
-   *
-   * - `htmlVoidElements`: This is similar to `htmlElements`, but marks the elements as
-   *   "void elements" (similar to HTML
-   *   [void elements](https://rawgit.com/w3c/html/html5.1-2/single-page.html#void-elements)). These
-   *   elements have no end tag and cannot have content.
-   *
-   * - `svgElements`: This is similar to `htmlElements`, but for SVG elements. This list is only
-   *   taken into account if SVG is {@link ngSanitize.$sanitizeProvider#enableSvg enabled} for
-   *   `$sanitize`.
-   *
-   * <div class="alert alert-info">
-   *   This method must be called during the {@link angular.Module#config config} phase. Once the
-   *   `$sanitize` service has been instantiated, this method has no effect.
-   * </div>
-   *
-   * <div class="alert alert-warning">
-   *   Keep in mind that extending the built-in lists of elements may expose your app to XSS or
-   *   other vulnerabilities. Be very mindful of the elements you add.
-   * </div>
-   *
-   * @param {Array<String>|Object} elements - A list of valid HTML elements or an object with one or
-   *   more of the following properties:
-   *   - **htmlElements** - `{Array<String>}` - A list of elements to extend the current list of
-   *     HTML elements.
-   *   - **htmlVoidElements** - `{Array<String>}` - A list of elements to extend the current list of
-   *     void HTML elements; i.e. elements that do not have an end tag.
-   *   - **svgElements** - `{Array<String>}` - A list of elements to extend the current list of SVG
-   *     elements. The list of SVG elements is only taken into account if SVG is
-   *     {@link ngSanitize.$sanitizeProvider#enableSvg enabled} for `$sanitize`.
-   *
-   * Passing an array (`[...]`) is equivalent to passing `{htmlElements: [...]}`.
-   *
-   * @return {$sanitizeProvider} Returns self for chaining.
-   */
   this.addValidElements = function(elements) {
     if (!hasBeenInstantiated) {
       if (isArray(elements)) {
@@ -7535,35 +6264,6 @@ function $SanitizeProvider() {
   };
 
 
-  /**
-   * @ngdoc method
-   * @name $sanitizeProvider#addValidAttrs
-   * @kind function
-   *
-   * @description
-   * Extends the built-in list of valid attributes, i.e. attributes that are considered safe and are
-   * not stripped off during sanitization.
-   *
-   * **Note**:
-   * The new attributes will not be treated as URI attributes, which means their values will not be
-   * sanitized as URIs using `$compileProvider`'s
-   * {@link ng.$compileProvider#aHrefSanitizationTrustedUrlList aHrefSanitizationTrustedUrlList} and
-   * {@link ng.$compileProvider#imgSrcSanitizationTrustedUrlList imgSrcSanitizationTrustedUrlList}.
-   *
-   * <div class="alert alert-info">
-   *   This method must be called during the {@link angular.Module#config config} phase. Once the
-   *   `$sanitize` service has been instantiated, this method has no effect.
-   * </div>
-   *
-   * <div class="alert alert-warning">
-   *   Keep in mind that extending the built-in list of attributes may expose your app to XSS or
-   *   other vulnerabilities. Be very mindful of the attributes you add.
-   * </div>
-   *
-   * @param {Array<String>} attrs - A list of valid attributes.
-   *
-   * @returns {$sanitizeProvider} Returns self for chaining.
-   */
   this.addValidAttrs = function(attrs) {
     if (!hasBeenInstantiated) {
       extend(validAttrs, arrayToMap(attrs, true));
@@ -7571,9 +6271,6 @@ function $SanitizeProvider() {
     return this;
   };
 
-  //////////////////////////////////////////////////////////////////////////////////////////////////
-  // Private stuff
-  //////////////////////////////////////////////////////////////////////////////////////////////////
 
   bind = angular.bind;
   extend = angular.extend;
@@ -7586,52 +6283,35 @@ function $SanitizeProvider() {
   htmlParser = htmlParserImpl;
   htmlSanitizeWriter = htmlSanitizeWriterImpl;
 
-  nodeContains = window.Node.prototype.contains || /** @this */ function(arg) {
-    // eslint-disable-next-line no-bitwise
+  nodeContains = window.Node.prototype.contains ||  function(arg) {
     return !!(this.compareDocumentPosition(arg) & 16);
   };
 
-  // Regular Expressions for parsing tags and attributes
   var SURROGATE_PAIR_REGEXP = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g,
-    // Match everything outside of normal chars and " (quote character)
     NON_ALPHANUMERIC_REGEXP = /([^#-~ |!])/g;
 
 
-  // Good source of info about elements and attributes
-  // http://dev.w3.org/html5/spec/Overview.html#semantics
-  // http://simon.html5.org/html-elements
 
-  // Safe Void Elements - HTML5
-  // http://dev.w3.org/html5/spec/Overview.html#void-elements
   var voidElements = stringToMap('area,br,col,hr,img,wbr');
 
-  // Elements that you can, intentionally, leave open (and which close themselves)
-  // http://dev.w3.org/html5/spec/Overview.html#optional-tags
   var optionalEndTagBlockElements = stringToMap('colgroup,dd,dt,li,p,tbody,td,tfoot,th,thead,tr'),
       optionalEndTagInlineElements = stringToMap('rp,rt'),
       optionalEndTagElements = extend({},
                                               optionalEndTagInlineElements,
                                               optionalEndTagBlockElements);
 
-  // Safe Block Elements - HTML5
   var blockElements = extend({}, optionalEndTagBlockElements, stringToMap('address,article,' +
           'aside,blockquote,caption,center,del,dir,div,dl,figure,figcaption,footer,h1,h2,h3,h4,h5,' +
           'h6,header,hgroup,hr,ins,map,menu,nav,ol,pre,section,table,ul'));
 
-  // Inline Elements - HTML5
   var inlineElements = extend({}, optionalEndTagInlineElements, stringToMap('a,abbr,acronym,b,' +
           'bdi,bdo,big,br,cite,code,del,dfn,em,font,i,img,ins,kbd,label,map,mark,q,ruby,rp,rt,s,' +
           'samp,small,span,strike,strong,sub,sup,time,tt,u,var'));
 
-  // SVG Elements
-  // https://wiki.whatwg.org/wiki/Sanitization_rules#svg_Elements
-  // Note: the elements animate,animateColor,animateMotion,animateTransform,set are intentionally omitted.
-  // They can potentially allow for arbitrary javascript to be executed. See #11290
   var svgElements = stringToMap('circle,defs,desc,ellipse,font-face,font-face-name,font-face-src,g,glyph,' +
           'hkern,image,linearGradient,line,marker,metadata,missing-glyph,mpath,path,polygon,polyline,' +
           'radialGradient,rect,stop,svg,switch,text,title,tspan');
 
-  // Blocked Elements (will be stripped)
   var blockedElements = stringToMap('script,style');
 
   var validElements = extend({},
@@ -7640,7 +6320,6 @@ function $SanitizeProvider() {
                                      inlineElements,
                                      optionalEndTagElements);
 
-  //Attributes that have href and hence need to be sanitized
   var uriAttrs = stringToMap('background,cite,href,longdesc,src,xlink:href,xml:base');
 
   var htmlAttrs = stringToMap('abbr,align,alt,axis,bgcolor,border,cellpadding,cellspacing,class,clear,' +
@@ -7649,8 +6328,6 @@ function $SanitizeProvider() {
       'scope,scrolling,shape,size,span,start,summary,tabindex,target,title,type,' +
       'valign,value,vspace,width');
 
-  // SVG attributes (without "id" and "name" attributes)
-  // https://wiki.whatwg.org/wiki/Sanitization_rules#svg_Attributes
   var svgAttrs = stringToMap('accent-height,accumulate,additive,alphabetic,arabic-form,ascent,' +
       'baseProfile,bbox,begin,by,calcMode,cap-height,class,color,color-rendering,content,' +
       'cx,cy,d,dx,dy,descent,display,dur,end,fill,fill-rule,font-family,font-size,font-stretch,' +
@@ -7690,12 +6367,7 @@ function $SanitizeProvider() {
     }
   }
 
-  /**
-   * Create an inert document that contains the dirty HTML that needs sanitizing.
-   * We use the DOMParser API by default and fall back to createHTMLDocument if DOMParser is not
-   * available.
-   */
-  var getInertBodyElement /* function(html: string): HTMLBodyElement */ = (function(window, document) {
+  var getInertBodyElement  = (function(window, document) {
     if (isDOMParserAvailable()) {
       return getInertBodyElement_DOMParser;
     }
@@ -7716,8 +6388,6 @@ function $SanitizeProvider() {
     }
 
     function getInertBodyElement_DOMParser(html) {
-      // We add this dummy element to ensure that the rest of the content is parsed as expected
-      // e.g. leading whitespace is maintained and tags like `<meta>` do not get hoisted to the `<head>` tag.
       html = '<remove></remove>' + html;
       try {
         var body = new window.DOMParser().parseFromString(html, 'text/html').body;
@@ -7731,8 +6401,6 @@ function $SanitizeProvider() {
     function getInertBodyElement_InertDocument(html) {
       inertBodyElement.innerHTML = html;
 
-      // Support: IE 9-11 only
-      // strip custom-namespaced attributes on IE<=11
       if (document.documentMode) {
         stripCustomNsAttrs(inertBodyElement);
       }
@@ -7741,18 +6409,6 @@ function $SanitizeProvider() {
     }
   })(window, window.document);
 
-  /**
-   * @example
-   * htmlParser(htmlString, {
-   *     start: function(tag, attrs) {},
-   *     end: function(tag) {},
-   *     chars: function(text) {},
-   *     comment: function(text) {}
-   * });
-   *
-   * @param {string} html string
-   * @param {object} handler
-   */
   function htmlParserImpl(html, handler) {
     if (html === null || html === undefined) {
       html = '';
@@ -7763,7 +6419,6 @@ function $SanitizeProvider() {
     var inertBodyElement = getInertBodyElement(html);
     if (!inertBodyElement) return '';
 
-    //mXSS protection
     var mXSSAttempts = 5;
     do {
       if (mXSSAttempts === 0) {
@@ -7771,7 +6426,6 @@ function $SanitizeProvider() {
       }
       mXSSAttempts--;
 
-      // trigger mXSS if it is going to happen by reading and writing the innerHTML
       html = inertBodyElement.innerHTML;
       inertBodyElement = getInertBodyElement(html);
     } while (html !== inertBodyElement.innerHTML);
@@ -7779,10 +6433,10 @@ function $SanitizeProvider() {
     var node = inertBodyElement.firstChild;
     while (node) {
       switch (node.nodeType) {
-        case 1: // ELEMENT_NODE
+        case 1: 
           handler.start(node.nodeName.toLowerCase(), attrToMap(node.attributes));
           break;
-        case 3: // TEXT NODE
+        case 3: 
           handler.chars(node.textContent);
           break;
       }
@@ -7822,13 +6476,6 @@ function $SanitizeProvider() {
   }
 
 
-  /**
-   * Escapes all potentially dangerous characters, so that the
-   * resulting string can be safely inserted into attribute or
-   * element text.
-   * @param value
-   * @returns {string} escaped text
-   */
   function encodeEntities(value) {
     return value.
       replace(/&/g, '&amp;').
@@ -7844,16 +6491,6 @@ function $SanitizeProvider() {
       replace(/>/g, '&gt;');
   }
 
-  /**
-   * create an HTML/XML writer which writes to buffer
-   * @param {Array} buf use buf.join('') to get out sanitized html string
-   * @returns {object} in the form of {
-   *     start: function(tag, attrs) {},
-   *     end: function(tag) {},
-   *     chars: function(text) {},
-   *     comment: function(text) {}
-   * }
-   */
   function htmlSanitizeWriterImpl(buf, uriValidator) {
     var ignoreCurrentElement = false;
     var out = bind(buf, buf.push);
@@ -7888,7 +6525,6 @@ function $SanitizeProvider() {
           out(tag);
           out('>');
         }
-        // eslint-disable-next-line eqeqeq
         if (tag == ignoreCurrentElement) {
           ignoreCurrentElement = false;
         }
@@ -7902,13 +6538,6 @@ function $SanitizeProvider() {
   }
 
 
-  /**
-   * When IE9-11 comes across an unknown namespaced attribute e.g. 'xlink:foo' it adds 'xmlns:ns1' attribute to declare
-   * ns1 namespace and prefixes the attribute with 'ns1' (e.g. 'ns1:xlink:foo'). This is undesirable since we don't want
-   * to allow any of these custom attributes. This method strips them all.
-   *
-   * @param node Root element to process
-   */
   function stripCustomNsAttrs(node) {
     while (node) {
       if (node.nodeType === window.Node.ELEMENT_NODE) {
@@ -7934,7 +6563,6 @@ function $SanitizeProvider() {
   }
 
   function getNonDescendant(propName, node) {
-    // An element is clobbered if its `propName` property points to one of its descendants
     var nextNode = node[propName];
     if (nextNode && nodeContains.call(node, nextNode)) {
       throw $sanitizeMinErr('elclob', 'Failed to sanitize html because the element is clobbered: {0}', node.outerHTML || node.outerText);
@@ -7951,138 +6579,10 @@ function sanitizeText(chars) {
 }
 
 
-// define ngSanitize module and register $sanitize service
 angular.module('ngSanitize', [])
   .provider('$sanitize', $SanitizeProvider)
   .info({ angularVersion: '1.8.2' });
 
-/**
- * @ngdoc filter
- * @name linky
- * @kind function
- *
- * @description
- * Finds links in text input and turns them into html links. Supports `http/https/ftp/sftp/mailto` and
- * plain email address links.
- *
- * Requires the {@link ngSanitize `ngSanitize`} module to be installed.
- *
- * @param {string} text Input text.
- * @param {string} [target] Window (`_blank|_self|_parent|_top`) or named frame to open links in.
- * @param {object|function(url)} [attributes] Add custom attributes to the link element.
- *
- *    Can be one of:
- *
- *    - `object`: A map of attributes
- *    - `function`: Takes the url as a parameter and returns a map of attributes
- *
- *    If the map of attributes contains a value for `target`, it overrides the value of
- *    the target parameter.
- *
- *
- * @returns {string} Html-linkified and {@link $sanitize sanitized} text.
- *
- * @usage
-   <span ng-bind-html="linky_expression | linky"></span>
- *
- * @example
-   <example module="linkyExample" deps="angular-sanitize.js" name="linky-filter">
-     <file name="index.html">
-       <div ng-controller="ExampleController">
-       Snippet: <textarea ng-model="snippet" cols="60" rows="3"></textarea>
-       <table>
-         <tr>
-           <th>Filter</th>
-           <th>Source</th>
-           <th>Rendered</th>
-         </tr>
-         <tr id="linky-filter">
-           <td>linky filter</td>
-           <td>
-             <pre>&lt;div ng-bind-html="snippet | linky"&gt;<br>&lt;/div&gt;</pre>
-           </td>
-           <td>
-             <div ng-bind-html="snippet | linky"></div>
-           </td>
-         </tr>
-         <tr id="linky-target">
-          <td>linky target</td>
-          <td>
-            <pre>&lt;div ng-bind-html="snippetWithSingleURL | linky:'_blank'"&gt;<br>&lt;/div&gt;</pre>
-          </td>
-          <td>
-            <div ng-bind-html="snippetWithSingleURL | linky:'_blank'"></div>
-          </td>
-         </tr>
-         <tr id="linky-custom-attributes">
-          <td>linky custom attributes</td>
-          <td>
-            <pre>&lt;div ng-bind-html="snippetWithSingleURL | linky:'_self':{rel: 'nofollow'}"&gt;<br>&lt;/div&gt;</pre>
-          </td>
-          <td>
-            <div ng-bind-html="snippetWithSingleURL | linky:'_self':{rel: 'nofollow'}"></div>
-          </td>
-         </tr>
-         <tr id="escaped-html">
-           <td>no filter</td>
-           <td><pre>&lt;div ng-bind="snippet"&gt;<br>&lt;/div&gt;</pre></td>
-           <td><div ng-bind="snippet"></div></td>
-         </tr>
-       </table>
-     </file>
-     <file name="script.js">
-       angular.module('linkyExample', ['ngSanitize'])
-         .controller('ExampleController', ['$scope', function($scope) {
-           $scope.snippet =
-             'Pretty text with some links:\n' +
-             'http://angularjs.org/,\n' +
-             'mailto:us@somewhere.org,\n' +
-             'another@somewhere.org,\n' +
-             'and one more: ftp://127.0.0.1/.';
-           $scope.snippetWithSingleURL = 'http://angularjs.org/';
-         }]);
-     </file>
-     <file name="protractor.js" type="protractor">
-       it('should linkify the snippet with urls', function() {
-         expect(element(by.id('linky-filter')).element(by.binding('snippet | linky')).getText()).
-             toBe('Pretty text with some links: http://angularjs.org/, us@somewhere.org, ' +
-                  'another@somewhere.org, and one more: ftp://127.0.0.1/.');
-         expect(element.all(by.css('#linky-filter a')).count()).toEqual(4);
-       });
-
-       it('should not linkify snippet without the linky filter', function() {
-         expect(element(by.id('escaped-html')).element(by.binding('snippet')).getText()).
-             toBe('Pretty text with some links: http://angularjs.org/, mailto:us@somewhere.org, ' +
-                  'another@somewhere.org, and one more: ftp://127.0.0.1/.');
-         expect(element.all(by.css('#escaped-html a')).count()).toEqual(0);
-       });
-
-       it('should update', function() {
-         element(by.model('snippet')).clear();
-         element(by.model('snippet')).sendKeys('new http://link.');
-         expect(element(by.id('linky-filter')).element(by.binding('snippet | linky')).getText()).
-             toBe('new http://link.');
-         expect(element.all(by.css('#linky-filter a')).count()).toEqual(1);
-         expect(element(by.id('escaped-html')).element(by.binding('snippet')).getText())
-             .toBe('new http://link.');
-       });
-
-       it('should work with the target property', function() {
-        expect(element(by.id('linky-target')).
-            element(by.binding("snippetWithSingleURL | linky:'_blank'")).getText()).
-            toBe('http://angularjs.org/');
-        expect(element(by.css('#linky-target a')).getAttribute('target')).toEqual('_blank');
-       });
-
-       it('should optionally add custom attributes', function() {
-        expect(element(by.id('linky-custom-attributes')).
-            element(by.binding("snippetWithSingleURL | linky:'_self':{rel: 'nofollow'}")).getText()).
-            toBe('http://angularjs.org/');
-        expect(element(by.css('#linky-custom-attributes a')).getAttribute('rel')).toEqual('nofollow');
-       });
-     </file>
-   </example>
- */
 angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
   var LINKY_URL_REGEXP =
         /((s?ftp|https?):\/\/|(www\.)|(mailto:)?[A-Za-z0-9._%+-]+@)\S*[^\s.;,(){}<>"\u201d\u2019]/i,
@@ -8109,9 +6609,7 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
     var url;
     var i;
     while ((match = raw.match(LINKY_URL_REGEXP))) {
-      // We can not end in these as they are sometimes found at the end of the sentence
       url = match[0];
-      // if we did not match ftp/http/www/mailto then assume mailto
       if (!match[2] && !match[4]) {
         url = (match[3] ? 'http://' : 'mailto:') + url;
       }
@@ -8156,24 +6654,23 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 })(window, window.angular);
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/angular-sanitize-npm-1.8.2-378e7cdaed-df06ddee2a.zip/node_modules/angular-sanitize/index.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/angular-sanitize-npm-1.8.2-378e7cdaed-df06ddee2a.zip/node_modules/angular-sanitize/index.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 __webpack_require__("./.yarn/cache/angular-sanitize-npm-1.8.2-378e7cdaed-df06ddee2a.zip/node_modules/angular-sanitize/angular-sanitize.js");
 module.exports = 'ngSanitize';
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/autoUpdate.js":
-/***/ ((module) => {
+ "./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/autoUpdate.js":
+ ((module) => {
 
 "use strict";
 
 
-/* Autoupdate plugin for baron 0.6+ */
 
 function autoUpdateOne(MutationObserver) {
     var self = this
@@ -8191,7 +6688,6 @@ function autoUpdateOne(MutationObserver) {
         }
     }
 
-    // Set interval timeout for watching when root node will be visible
     function startWatch() {
         if (watcher) return
 
@@ -8200,7 +6696,7 @@ function autoUpdateOne(MutationObserver) {
                 stopWatch()
                 self.update()
             }
-        }, 300) // is it good enought for you?)
+        }, 300) 
     }
 
     function stopWatch() {
@@ -8223,11 +6719,6 @@ function autoUpdateOne(MutationObserver) {
             childList: true,
             subtree: true,
             characterData: true
-            // attributes: true
-            // No reasons to set attributes to true
-            // The case when root/child node with already properly inited baron toggled to hidden and then back to visible,
-            // and the size of parent was changed during that hidden state, is very rare
-            // Other cases are covered by watcher, and you still can do .update by yourself
         })
 
         actualizeWatcher()
@@ -8255,15 +6746,14 @@ module.exports = function autoUpdateCreator(win) {
 }
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/controls.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/controls.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-/* Controls plugin for baron */
 
 var qs = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js").qs)
 
@@ -8289,7 +6779,7 @@ module.exports = function controls(params) {
             type: 'click'
         }
 
-        this._eventHandlers.push(event) // For auto-dispose
+        this._eventHandlers.push(event) 
         this.event(event.element, event.type, event.handler, 'on')
     }
 
@@ -8308,7 +6798,7 @@ module.exports = function controls(params) {
             type: 'click'
         }
 
-        this._eventHandlers.push(event) // For auto-dispose
+        this._eventHandlers.push(event) 
         this.event(event.element, event.type, event.handler, 'on')
     }
 
@@ -8324,7 +6814,6 @@ module.exports = function controls(params) {
                 element: track,
 
                 handler: function(e) {
-                    // https://github.com/Diokuz/baron/issues/121
                     if (e.target != track) return
 
                     var x = e['offset' + self.origin.x],
@@ -8345,17 +6834,17 @@ module.exports = function controls(params) {
                 type: 'mousedown'
             }
 
-            this._eventHandlers.push(event) // For auto-dispose
+            this._eventHandlers.push(event) 
             this.event(event.element, event.type, event.handler, 'on')
         }
     }
 }
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/core.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/core.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -8365,21 +6854,19 @@ var g = (function() {
 }())
 var scopedWindow = g && g.window || g
 
-var event = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js")/* .event */ .B)
-var css = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js")/* .css */ .iv)
-var add = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js")/* .add */ .IH)
-var has = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js")/* .has */ .e$)
+var event = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js") .B)
+var css = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js") .iv)
+var add = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js") .IH)
+var has = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js") .e$)
 var rm = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js").rm)
-var clone = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js")/* .clone */ .d9)
+var clone = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js") .d9)
 var qs = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js").qs)
 
-var _baron = baron // Stored baron value for noConflict usage
-// var Item = {}
+var _baron = baron 
 var pos = ['left', 'top', 'right', 'bottom', 'width', 'height']
-// Global store for all baron instances (to be able to dispose them on html-nodes)
 var instances = []
 var origin = {
-    v: { // Vertical
+    v: { 
         x: 'Y', pos: pos[1], oppos: pos[3], crossPos: pos[0], crossOpPos: pos[2],
         size: pos[5],
         crossSize: pos[4], crossMinSize: 'min-' + pos[4], crossMaxSize: 'max-' + pos[4],
@@ -8388,7 +6875,7 @@ var origin = {
         offset: 'offsetHeight', crossOffset: 'offsetWidth', offsetPos: 'offsetTop',
         scroll: 'scrollTop', scrollSize: 'scrollHeight'
     },
-    h: { // Horizontal
+    h: { 
         x: 'X', pos: pos[0], oppos: pos[2], crossPos: pos[1], crossOpPos: pos[3],
         size: pos[4],
         crossSize: pos[5], crossMinSize: 'min-' + pos[5], crossMaxSize: 'max-' + pos[5],
@@ -8399,9 +6886,7 @@ var origin = {
     }
 }
 
-// Some ugly vars
 var opera12maxScrollbarSize = 17
-// I hate you https://github.com/Diokuz/baron/issues/110
 var macmsxffScrollbarSize = 15
 var macosxffRe = /[\s\S]*Macintosh[\s\S]*\) Gecko[\s\S]*/
 var isMacFF = macosxffRe.test(scopedWindow.navigator && scopedWindow.navigator.userAgent)
@@ -8410,7 +6895,6 @@ var log, liveBarons, shownErrors
 
 if (false) {}
 
-// window.baron and jQuery.fn.baron points to this function
 function baron(user) {
     var withParams = !!user
     var tryNode = (user && user[0]) || user
@@ -8430,16 +6914,14 @@ function baron(user) {
 
     params = params || {}
 
-    // Extending default params by user-defined params
     for (var key in defaultParams) {
-        if (params[key] == null) { // eslint-disable-line
+        if (params[key] == null) { 
             params[key] = defaultParams[key]
         }
     }
 
     if (false) {}
 
-    // `this` could be a jQuery instance
     jQueryMode = this && this instanceof scopedWindow.jQuery
 
     if (params._chain) {
@@ -8453,20 +6935,16 @@ function baron(user) {
     if (false) {}
 
     var attr = manageAttr(rootNode, params.direction)
-    var id = +attr // Could be NaN
+    var id = +attr 
 
     params.index = id
 
-    // baron() can return existing instances,
-    // @TODO update params on-the-fly
-    // https://github.com/Diokuz/baron/issues/124
     if (id == id && attr !== null && instances[id]) {
         if (false) {}
 
         return instances[id]
     }
 
-    // root and scroller can be different nodes
     if (params.root && params.scroller) {
         params.scroller = qs(params.scroller, rootNode)
         if (false) {}
@@ -8497,7 +6975,6 @@ function arrayEach(_obj, iterator) {
     }
 }
 
-// shortcut for getTime
 function getTime() {
     return new Date().getTime()
 }
@@ -8505,10 +6982,8 @@ function getTime() {
 if (false) {}
 
 function manageEvents(item, eventManager, mode) {
-    // Creating new functions for one baron item only one time
     item._eventHandlers = item._eventHandlers || [
         {
-            // onScroll:
             element: item.scroller,
 
             handler: function(e) {
@@ -8517,7 +6992,6 @@ function manageEvents(item, eventManager, mode) {
 
             type: 'scroll'
         }, {
-            // css transitions & animations
             element: item.root,
 
             handler: function() {
@@ -8526,7 +7000,6 @@ function manageEvents(item, eventManager, mode) {
 
             type: 'transitionend animationend'
         }, {
-            // onKeyup (textarea):
             element: item.scroller,
 
             handler: function() {
@@ -8535,13 +7008,12 @@ function manageEvents(item, eventManager, mode) {
 
             type: 'keyup'
         }, {
-            // onMouseDown:
             element: item.bar,
 
             handler: function(e) {
-                e.preventDefault() // Text selection disabling in Opera
-                item.selection() // Disable text selection in ie8
-                item.drag.now = 1 // Save private byte
+                e.preventDefault() 
+                item.selection() 
+                item.drag.now = 1 
                 if (item.draggingCls) {
                     add(item.root, item.draggingCls)
                 }
@@ -8549,11 +7021,10 @@ function manageEvents(item, eventManager, mode) {
 
             type: 'touchstart mousedown'
         }, {
-            // onMouseUp:
             element: document,
 
             handler: function() {
-                item.selection(1) // Enable text selection
+                item.selection(1) 
                 item.drag.now = 0
                 if (item.draggingCls) {
                     rm(item.root, item.draggingCls)
@@ -8562,18 +7033,16 @@ function manageEvents(item, eventManager, mode) {
 
             type: 'mouseup blur touchend'
         }, {
-            // onCoordinateReset:
             element: document,
 
             handler: function(e) {
-                if (e.button != 2) { // Not RM
+                if (e.button != 2) { 
                     item._pos0(e)
                 }
             },
 
             type: 'touchstart mousedown'
         }, {
-            // onMouseMove:
             element: document,
 
             handler: function(e) {
@@ -8584,8 +7053,6 @@ function manageEvents(item, eventManager, mode) {
 
             type: 'mousemove touchmove'
         }, {
-            // @TODO make one global listener
-            // onResize:
             element: scopedWindow,
 
             handler: function() {
@@ -8594,8 +7061,6 @@ function manageEvents(item, eventManager, mode) {
 
             type: 'resize'
         }, {
-            // @todo remove
-            // sizeChange:
             element: item.root,
 
             handler: function() {
@@ -8604,7 +7069,6 @@ function manageEvents(item, eventManager, mode) {
 
             type: 'sizeChange'
         }, {
-            // Clipper onScroll bug https://github.com/Diokuz/baron/issues/116
             element: item.clipper,
 
             handler: function() {
@@ -8617,8 +7081,6 @@ function manageEvents(item, eventManager, mode) {
 
     arrayEach(item._eventHandlers, function(evt) {
         if (evt.element) {
-            // workaround for element-elements in `fix` plugin
-            // @todo dispose `fix` in proper way and remove workaround
             if (evt.element.length && evt.element !== scopedWindow) {
                 for (var i = 0; i < evt.element.length; i++) {
                     eventManager(evt.element[i], evt.type, evt.handler, mode)
@@ -8629,24 +7091,8 @@ function manageEvents(item, eventManager, mode) {
         }
     })
 
-    // if (item.scroller) {
-    //     event(item.scroller, 'scroll', item._eventHandlers.onScroll, mode)
-    // }
-    // if (item.bar) {
-    //     event(item.bar, 'touchstart mousedown', item._eventHandlers.onMouseDown, mode)
-    // }
-    // event(document, 'mouseup blur touchend', item._eventHandlers.onMouseUp, mode)
-    // event(document, 'touchstart mousedown', item._eventHandlers.onCoordinateReset, mode)
-    // event(document, 'mousemove touchmove', item._eventHandlers.onMouseMove, mode)
-    // event(window, 'resize', item._eventHandlers.onResize, mode)
-    // if (item.root) {
-    //     event(item.root, 'sizeChange', item._eventHandlers.onResize, mode)
-    //     // Custon event for alternate baron update mechanism
-    // }
 }
 
-// set, remove or read baron-specific id-attribute
-// @returns {String|null} - id node value, or null, if there is no attr
 function manageAttr(node, direction, mode, id) {
     var attrName = 'data-baron-' + direction + '-id'
 
@@ -8685,15 +7131,10 @@ function fire(eventName) {
 }
 
 baron.prototype = {
-    // underscore.js realization
-    // used in autoUpdate plugin
     _debounce: function(func, wait) {
         var self = this,
             timeout,
-            // args, // right now there is no need for arguments
-            // context, // and for context
             timestamp
-            // result // and for result
 
         var later = function() {
             if (self._disposed) {
@@ -8708,22 +7149,17 @@ baron.prototype = {
                 timeout = setTimeout(later, wait - last)
             } else {
                 timeout = null
-                // result = func.apply(context, args)
                 func()
-                // context = args = null
             }
         }
 
         return function() {
-            // context = this
-            // args = arguments
             timestamp = getTime()
 
             if (!timeout) {
                 timeout = setTimeout(later, wait)
             }
 
-            // return result
         }
     },
 
@@ -8742,8 +7178,7 @@ baron.prototype = {
         this.event = params.event
         this.events = {}
 
-        // DOM elements
-        this.root = params.root // Always html node, not just selector
+        this.root = params.root 
         this.scroller = qs(params.scroller)
         if (false) {}
         this.bar = qs(params.bar, this.root)
@@ -8753,7 +7188,6 @@ baron.prototype = {
         }
         this.clipper = this.scroller.parentNode
 
-        // Parameters
         this.direction = params.direction
         this.rtl = params.rtl
         this.origin = origin[this.direction]
@@ -8766,7 +7200,6 @@ baron.prototype = {
         this.barTopLimit = 0
         this.resizeDebounce = params.resizeDebounce
 
-        // Updating height or width of bar
         function setBarSize(_size) {
             var barMinSize = this.barMinSize || 20
             var size = _size
@@ -8780,7 +7213,6 @@ baron.prototype = {
             }
         }
 
-        // Updating top or left bar position
         function posBar(_pos) {
             if (this.bar) {
                 var was = css(this.bar, this.origin.pos),
@@ -8792,33 +7224,28 @@ baron.prototype = {
             }
         }
 
-        // Free path for bar
         function k() {
             return track[this.origin.client] - this.barTopLimit - this.bar[this.origin.offset]
         }
 
-        // Relative content top position to bar top position
         function relToPos(r) {
             return r * k.call(this) + this.barTopLimit
         }
 
-        // Bar position to relative content position
         function posToRel(t) {
             return (t - this.barTopLimit) / k.call(this)
         }
 
-        // Cursor position in main direction in px // Now with iOs support
         this.cursor = function(e) {
             return e['client' + this.origin.x] ||
                 (((e.originalEvent || e).touches || {})[0] || {})['page' + this.origin.x]
         }
 
-        // Text selection pos preventing
         function dontPosSelect() {
             return false
         }
 
-        this.pos = function(x) { // Absolute scroller position in px
+        this.pos = function(x) { 
             var ie = 'page' + this.origin.x + 'Offset',
                 key = (this.scroller[ie]) ? ie : this.origin.scroll
 
@@ -8827,7 +7254,7 @@ baron.prototype = {
             return this.scroller[key]
         }
 
-        this.rpos = function(r) { // Relative scroller position (0..1)
+        this.rpos = function(r) { 
             var free = this.scroller[this.origin.scrollSize] - this.scroller[this.origin.client],
                 x
 
@@ -8840,7 +7267,6 @@ baron.prototype = {
             return x / (free || 1)
         }
 
-        // Switch on the bar by adding user-defined CSS classname to scroller
         this.barOn = function(dispose) {
             if (this.barOnCls) {
                 var noScroll = this.scroller[this.origin.client] >= this.scroller[this.origin.scrollSize]
@@ -8866,14 +7292,10 @@ baron.prototype = {
             this.scroller[this.origin.scroll] = rel * sub
         }
 
-        // Text selection preventing on drag
         this.selection = function(enable) {
             this.event(document, 'selectpos selectstart', dontPosSelect, enable ? 'off' : 'on')
         }
 
-        // onResize & DOM modified handler
-        // also fires on init
-        // Note: max/min-size didnt sets if size did not really changed (for example, on init in Chrome)
         this.resize = function() {
             var self = this
             var minPeriod = (self.resizeDebounce === undefined) ? 300 : self.resizeDebounce
@@ -8890,35 +7312,27 @@ baron.prototype = {
                 var padding = 0
                 var was, will
 
-                // https://github.com/Diokuz/baron/issues/110
                 if (isMacFF) {
                     padding = macmsxffScrollbarSize
 
-                // Opera 12 bug https://github.com/Diokuz/baron/issues/105
                 } else if (client > 0 && offset === 0) {
-                    // Only Opera 12 in some rare nested flexbox cases goes here
-                    // Sorry guys for magic,
-                    // but I dont want to create temporary html-nodes set
-                    // just for measuring scrollbar size in Opera 12.
-                    // 17px for Windows XP-8.1, 15px for Mac (really rare).
                     offset = client + opera12maxScrollbarSize
                 }
 
-                if (offset) { // if there is no size, css should not be set
+                if (offset) { 
                     self.barOn()
 
-                    if (self.impact == 'scroller') { // scroller
+                    if (self.impact == 'scroller') { 
                         var delta = offset - client + padding
 
-                        // `static` position works only for `scroller` impact
-                        if (self.position == 'static') { // static
+                        if (self.position == 'static') { 
                             was = css(self.scroller, self.origin.crossSize)
                             will = self.clipper[self.origin.crossClient] + delta + 'px'
 
                             if (was != will) {
                                 self._setCrossSizes(self.scroller, will)
                             }
-                        } else { // absolute
+                        } else { 
                             var styles = {}
                             var key = self.rtl ? 'Left' : 'Right'
 
@@ -8929,7 +7343,7 @@ baron.prototype = {
                             styles['padding' + key] = delta + 'px'
                             css(self.scroller, styles)
                         }
-                    } else { // clipper
+                    } else { 
                         was = css(self.clipper, self.origin.crossSize)
                         will = client + 'px'
 
@@ -8938,7 +7352,6 @@ baron.prototype = {
                         }
                     }
                 } else {
-                    // do nothing (display: none, or something)
                 }
 
                 Array.prototype.unshift.call(arguments, 'resize')
@@ -8962,7 +7375,6 @@ baron.prototype = {
                 newBarSize = (track[self.origin.client] - self.barTopLimit) *
                     self.scroller[self.origin.client] / self.scroller[self.origin.scrollSize]
 
-                // Positioning bar
                 if (force || parseInt(oldBarSize, 10) != parseInt(newBarSize, 10)) {
                     setBarSize.call(self, newBarSize)
                     oldBarSize = newBarSize
@@ -8977,7 +7389,6 @@ baron.prototype = {
             fire.apply(self, arguments)
         }
 
-        // onScroll handler
         this.scroll = function() {
             var self = this
 
@@ -8995,12 +7406,8 @@ baron.prototype = {
             }
         }
 
-        // https://github.com/Diokuz/baron/issues/116
         this.clipperOnScroll = function() {
-            // WTF is this line? https://github.com/Diokuz/baron/issues/134
-            // if (this.direction == 'h') return
 
-            // assign `initial scroll position` to `clipper.scrollLeft` (0 for ltr, ~20 for rtl)
             if (!this.rtl) {
                 this.clipper[this.origin.scrollEdge] = 0
             } else {
@@ -9008,9 +7415,6 @@ baron.prototype = {
             }
         }
 
-        // Flexbox `align-items: stretch` (default) requires to set min-width for vertical
-        // and max-height for horizontal scroll. Just set them all.
-        // http://www.w3.org/TR/css-flexbox-1/#valdef-align-items-stretch
         this._setCrossSizes = function(node, size) {
             var styles = {}
 
@@ -9021,7 +7425,6 @@ baron.prototype = {
             css(node, styles)
         }
 
-        // Set common css rules
         this._dumbCss = function(on) {
             if (params.cssGuru) return
 
@@ -9059,13 +7462,11 @@ baron.prototype = {
             css(this.scroller, scrollerCss)
         }
 
-        // onInit actions
         this._dumbCss(true)
 
         if (isMacFF) {
             var padding = 'paddingRight'
             var styles = {}
-            // getComputedStyle is ie9+, but we here only in f ff
             var paddingWas = scopedWindow.getComputedStyle(this.scroller)[[padding]]
 
             if (params.direction == 'h') {
@@ -9084,11 +7485,10 @@ baron.prototype = {
         return this
     },
 
-    // fires on any update and on init
     update: function(params) {
         if (false) {}
 
-        fire.call(this, 'upd', params) // Update all plugins' params
+        fire.call(this, 'upd', params) 
 
         this.resize(1)
         this.updatePositions(1)
@@ -9096,7 +7496,6 @@ baron.prototype = {
         return this
     },
 
-    // One instance
     dispose: function() {
         if (false) {}
 
@@ -9141,12 +7540,10 @@ baron.prototype = {
     }
 }
 
-// baron.fn.constructor.prototype = baron.fn
 baron.prototype.constructor.prototype = baron.prototype
 
-// Use when you need "baron" global var for another purposes
 baron.noConflict = function() {
-    scopedWindow.baron = _baron // Restoring original value of "baron" global var
+    scopedWindow.baron = _baron 
 
     return baron
 }
@@ -9160,25 +7557,24 @@ baron.prototype.controls = __webpack_require__("./.yarn/cache/baron-npm-3.0.3-25
 module.exports = baron
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/fix.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+ "./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/fix.js":
+ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-/* Fixable elements plugin for baron */
 
 var log = __webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/log.js")
-var css = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js")/* .css */ .iv)
-var add = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js")/* .add */ .IH)
+var css = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js") .iv)
+var add = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js") .IH)
 var rm = (__webpack_require__("./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js").rm)
 
 module.exports = function fix(userParams) {
     var elements,
         viewPortSize,
-        params = { // Default params
+        params = { 
             outside: '',
             inside: '',
             before: '',
@@ -9188,31 +7584,27 @@ module.exports = function fix(userParams) {
             radius: 0,
             minView: 0
         },
-        topFixHeights = [], // inline style for element
-        topRealHeights = [], // ? something related to negative margins for fixable elements
-        headerTops = [], // offset positions when not fixed
+        topFixHeights = [], 
+        topRealHeights = [], 
+        headerTops = [], 
         scroller = this.scroller,
         eventManager = this.event,
         self = this
 
     if (false) {}
 
-    // i - number of fixing element, pos - fix-position in px, flag - 1: top, 2: bottom
-    // Invocation only in case when fix-state changed
     function fixElement(i, _pos, flag) {
         var pos = _pos
         var ori = flag == 1 ? 'pos' : 'oppos'
 
-        if (viewPortSize < (params.minView || 0)) { // No headers fixing when no enought space for viewport
+        if (viewPortSize < (params.minView || 0)) { 
             pos = undefined
         }
 
-        // Removing all fixing stuff - we can do this because fixElement triggers only when fixState really changed
         css(elements[i], this.origin.pos, '')
         css(elements[i], this.origin.oppos, '')
         rm(elements[i], params.outside)
 
-        // Fixing if needed
         if (pos !== undefined) {
             pos += 'px'
             css(elements[i], this.origin[ori], pos)
@@ -9222,14 +7614,12 @@ module.exports = function fix(userParams) {
 
     function bubbleWheel(e) {
         try {
-            var i = document.createEvent('WheelEvent') // i - for extra byte
+            var i = document.createEvent('WheelEvent') 
 
-            // evt.initWebKitWheelEvent(deltaX, deltaY, window, screenX, screenY, clientX, clientY, ctrlKey, altKey, shiftKey, metaKey)
             i.initWebKitWheelEvent(e.originalEvent.wheelDeltaX, e.originalEvent.wheelDeltaY)
             scroller.dispatchEvent(i)
             e.preventDefault()
         } catch (ex) {
-            //
         }
     }
 
@@ -9251,7 +7641,6 @@ module.exports = function fix(userParams) {
         if (elements) {
             viewPortSize = this.scroller[this.origin.client]
             for (var i = 0; i < elements.length; i++) {
-                // Variable header heights
                 pos = {}
                 pos[this.origin.size] = elements[i][this.origin.offset] + 'px'
                 if (elements[i].parentNode !== this.scroller) {
@@ -9261,13 +7650,11 @@ module.exports = function fix(userParams) {
                 pos[this.origin.crossSize] = elements[i].parentNode[this.origin.crossClient] + 'px'
                 css(elements[i], pos)
 
-                // Between fixed headers
                 viewPortSize -= elements[i][this.origin.offset]
 
-                headerTops[i] = elements[i].parentNode[this.origin.offsetPos] // No paddings for parentNode
+                headerTops[i] = elements[i].parentNode[this.origin.offsetPos] 
 
-                // Summary elements height above current
-                topFixHeights[i] = (topFixHeights[i - 1] || 0) // Not zero because of negative margins
+                topFixHeights[i] = (topFixHeights[i - 1] || 0) 
                 topRealHeights[i] = (topRealHeights[i - 1] || Math.min(headerTops[i], 0))
 
                 if (elements[i - 1]) {
@@ -9275,13 +7662,13 @@ module.exports = function fix(userParams) {
                     topRealHeights[i] += elements[i - 1][this.origin.offset]
                 }
 
-                if ( !(i == 0 && headerTops[i] == 0)/* && force */) {
+                if ( !(i == 0 && headerTops[i] == 0)) {
                     this.event(elements[i], 'mousewheel', bubbleWheel, 'off')
                     this.event(elements[i], 'mousewheel', bubbleWheel)
                 }
             }
 
-            if (params.limiter && elements[0]) { // Bottom edge of first header as top limit for track
+            if (params.limiter && elements[0]) { 
                 if (this.track && this.track != this.scroller) {
                     pos = {}
                     pos[this.origin.pos] = elements[0].parentNode[this.origin.offset] + 'px'
@@ -9289,11 +7676,10 @@ module.exports = function fix(userParams) {
                 } else {
                     this.barTopLimit = elements[0].parentNode[this.origin.offset]
                 }
-                // this.barTopLimit = elements[0].parentNode[this.origin.offset]
                 this.scroll()
             }
 
-            if (params.limiter === false) { // undefined (in second fix instance) should have no influence on bar limit
+            if (params.limiter === false) { 
                 this.barTopLimit = 0
             }
         }
@@ -9306,14 +7692,13 @@ module.exports = function fix(userParams) {
                     top = parent.offsetTop,
                     num
 
-                // finding num -> elements[num] === this
                 for (var j = 0; j < elements.length; j++ ) {
                     if (elements[j] === this) num = j
                 }
 
                 var locPos = top - topFixHeights[num]
 
-                if (params.scroll) { // User defined callback
+                if (params.scroll) { 
                     params.scroll({
                         x1: self.scroller.scrollTop,
                         x2: locPos
@@ -9327,8 +7712,7 @@ module.exports = function fix(userParams) {
         }
 
         if (params.clickable) {
-            this._eventHandlers.push(event) // For auto-dispose
-            // eventManager(event.element, event.type, event.handler, 'off')
+            this._eventHandlers.push(event) 
             for (var j = 0; j < event.element.length; j++) {
                 eventManager(event.element[j], event.type, event.handler, 'on')
             }
@@ -9337,7 +7721,7 @@ module.exports = function fix(userParams) {
 
     this.on('init', init, userParams)
 
-    var fixFlag = [], // 1 - past, 2 - future, 3 - current (not fixed)
+    var fixFlag = [], 
         gradFlag = []
 
     this.on('init scroll', function() {
@@ -9347,22 +7731,15 @@ module.exports = function fix(userParams) {
         if (elements) {
             var change
 
-            // fixFlag update
             for (i = 0; i < elements.length; i++) {
                 fixState = 0
                 if (headerTops[i] - this.pos() < topRealHeights[i] + params.radius) {
-                    // Header trying to go up
                     fixState = 1
                     hTop = topFixHeights[i]
                 } else if (headerTops[i] - this.pos() > topRealHeights[i] + viewPortSize - params.radius) {
-                    // Header trying to go down
                     fixState = 2
-                    // console.log('topFixHeights[i] + viewPortSize + topRealHeights[i]', topFixHeights[i], this.scroller[this.origin.client], topRealHeights[i])
                     hTop = this.scroller[this.origin.client] - elements[i][this.origin.offset] - topFixHeights[i] - viewPortSize
-                    // console.log('hTop', hTop, viewPortSize, elements[this.origin.offset], topFixHeights[i])
-                    // (topFixHeights[i] + viewPortSize + elements[this.origin.offset]) - this.scroller[this.origin.client]
                 } else {
-                    // Header in viewport
                     fixState = 3
                     hTop = undefined
                 }
@@ -9380,8 +7757,7 @@ module.exports = function fix(userParams) {
                 }
             }
 
-            // Adding positioning classes (on last top and first bottom header)
-            if (change) { // At leats one change in elements flag structure occured
+            if (change) { 
                 for (i = 0; i < elements.length; i++) {
                     if (fixFlag[i] == 1 && params.past) {
                         add(elements[i], params.past)
@@ -9401,10 +7777,10 @@ module.exports = function fix(userParams) {
 
                     if (fixFlag[i] != fixFlag[i + 1] && fixFlag[i] == 1) {
                         add(elements[i], params.before)
-                        rm(elements[i], params.after) // Last top fixed header
+                        rm(elements[i], params.after) 
                     } else if (fixFlag[i] != fixFlag[i - 1] && fixFlag[i] == 2) {
                         add(elements[i], params.after)
-                        rm(elements[i], params.before) // First bottom fixed header
+                        rm(elements[i], params.before) 
                     } else {
                         rm(elements[i], params.before)
                         rm(elements[i], params.after)
@@ -9430,10 +7806,10 @@ module.exports = function fix(userParams) {
 }
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/log.js":
-/***/ ((module) => {
+ "./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/log.js":
+ ((module) => {
 
 module.exports = function log(level, msg, more) {
     var func = console[level] || console.log
@@ -9446,17 +7822,15 @@ module.exports = function log(level, msg, more) {
 }
 
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js":
-/***/ ((module) => {
+ "./.yarn/cache/baron-npm-3.0.3-255b365962-5fd57232e2.zip/node_modules/baron/src/utils.js":
+ ((module) => {
 
 "use strict";
 var __webpack_unused_export__;
 
 
-// Test via a getter in the options object to see if the passive property is accessed
-// https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection
 var supportsPassive = false
 
 try {
@@ -9468,7 +7842,6 @@ try {
 
     window.addEventListener('test', null, opts)
 } catch (e) {
-    // pass
 }
 
 module.exports.B = function event(elem, _eventNames, handler, mode) {
@@ -9498,7 +7871,6 @@ module.exports.iv = function css(node, key, value) {
     var styles
 
     if (value === undefined) {
-        // Getter mode
         if (typeof key == 'string') {
             return node.style[key]
         }
@@ -9562,18 +7934,11 @@ module.exports.qs = function qs(selector, _ctx) {
 __webpack_unused_export__ = each
 
 
-/***/ }),
+ }),
 
-/***/ "./public/vendor/angular-other/angular-strap.js":
-/***/ (() => {
+ "./public/vendor/angular-other/angular-strap.js":
+ (() => {
 
-/**
- * AngularStrap - Twitter Bootstrap directives for AngularJS
- * @version v0.7.5 - 2013-07-21
- * @link http://mgcrea.github.com/angular-strap
- * @author Olivier Louvignes <olivier@mg-crea.com>
- * @license MIT License, http://www.opensource.org/licenses/MIT
- */
 angular.module('$strap.config', []).value('$strapConfig', {});
 angular.module('$strap.filters', ['$strap.config']);
 angular.module('$strap.directives', ['$strap.config']);
@@ -9604,7 +7969,6 @@ angular.module('$strap.directives').factory('$modal', [
           if (templateUrl) {
             id += templateUrl.replace('.html', '').replace(/[\/|\.|:]/g, '-');
           }
-          // grafana change, removed fade
           var $modal = $('<div class="modal hide" tabindex="-1"></div>').attr('id', id).html(template);
           if (options.modalClass)
             $modal.addClass(options.modalClass);
@@ -9669,7 +8033,6 @@ angular.module('$strap.directives').directive('bsTooltip', [
             value = newValue;
           }
         });
-        // Grafana change, always hide other tooltips
         if (true) {
           element.on('show', function (ev) {
             $('.tooltip.in').each(function () {
@@ -9685,7 +8048,7 @@ angular.module('$strap.directives').directive('bsTooltip', [
             return angular.isFunction(value) ? value.apply(null, arguments) : value;
           },
           html: true,
-          container: 'body', // Grafana change
+          container: 'body', 
         });
         var tooltip = element.data('tooltip');
         tooltip.show = function () {
@@ -9767,38 +8130,18 @@ angular.module('$strap.directives').directive('bsTypeahead', [
 ]);
 
 
-/***/ }),
+ }),
 
-/***/ "./public/vendor/bootstrap/bootstrap.js":
-/***/ (() => {
+ "./public/vendor/bootstrap/bootstrap.js":
+ (() => {
 
-/* ===================================================
- * bootstrap-transition.js v2.3.2
- * http://getbootstrap.com/2.3.2/javascript.html#transitions
- * ===================================================
- * Copyright 2013 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================== */
 
 
 !function ($) {
 
-  "use strict"; // jshint ;_;
+  "use strict"; 
 
 
-  /* CSS TRANSITION SUPPORT (http://www.modernizr.com/)
-   * ======================================================= */
 
   $(function () {
 
@@ -9831,52 +8174,15 @@ angular.module('$strap.directives').directive('bsTypeahead', [
 
   })
 
-}(window.jQuery);/* ==========================================================
- * bootstrap-alert.js v2.3.2
- * http://getbootstrap.com/2.3.2/javascript.html#alerts
- * ==========================================================
- * Copyright 2013 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================== */
+}(window.jQuery);
 
 
 !function ($) {
 
-  "use strict"; // jshint ;_;
-
-/* ============================================================
- * bootstrap-dropdown.js v2.3.2
- * http://getbootstrap.com/2.3.2/javascript.html#dropdowns
- * ============================================================
- * Copyright 2013 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ============================================================ */
+  "use strict"; 
 
 
- /* DROPDOWN CLASS DEFINITION
-  * ========================= */
+
 
   var toggle = '[data-toggle=dropdown]'
     , Dropdown = function (element) {
@@ -9905,7 +8211,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
 
       if (!isActive) {
         if ('ontouchstart' in document.documentElement) {
-          // if mobile we we use a backdrop because click events don't delegate
           $('<div class="dropdown-backdrop"/>').insertBefore($(this)).on('click', clearMenus)
         }
         $parent.toggleClass('open')
@@ -9948,8 +8253,8 @@ angular.module('$strap.directives').directive('bsTypeahead', [
 
       index = $items.index($items.filter(':focus'))
 
-      if (e.keyCode == 38 && index > 0) index--                                        // up
-      if (e.keyCode == 40 && index < $items.length - 1) index++                        // down
+      if (e.keyCode == 38 && index > 0) index--                                        
+      if (e.keyCode == 40 && index < $items.length - 1) index++                        
       if (!~index) index = 0
 
       $items
@@ -9972,8 +8277,7 @@ angular.module('$strap.directives').directive('bsTypeahead', [
 
     if (!selector) {
       selector = $this.attr('href')
-      // grafana backport fix from bootstrap 3
-      selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
+      selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') 
     }
 
     $parent = selector && $(selector)
@@ -9984,8 +8288,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   }
 
 
-  /* DROPDOWN PLUGIN DEFINITION
-   * ========================== */
 
   var old = $.fn.dropdown
 
@@ -10001,8 +8303,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   $.fn.dropdown.Constructor = Dropdown
 
 
- /* DROPDOWN NO CONFLICT
-  * ==================== */
 
   $.fn.dropdown.noConflict = function () {
     $.fn.dropdown = old
@@ -10010,8 +8310,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   }
 
 
-  /* APPLY TO STANDARD DROPDOWN ELEMENTS
-   * =================================== */
 
   $(document)
     .on('click.dropdown.data-api', clearMenus)
@@ -10020,33 +8318,13 @@ angular.module('$strap.directives').directive('bsTypeahead', [
     .on('keydown.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
 
 }(window.jQuery);
-/* =========================================================
- * bootstrap-modal.js v2.3.2
- * http://getbootstrap.com/2.3.2/javascript.html#modals
- * =========================================================
- * Copyright 2013 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================= */
 
 
 !function ($) {
 
-  "use strict"; // jshint ;_;
+  "use strict"; 
 
 
- /* MODAL CLASS DEFINITION
-  * ====================== */
 
   var Modal = function (element, options) {
     this.options = options
@@ -10079,13 +8357,13 @@ angular.module('$strap.directives').directive('bsTypeahead', [
           var transition = $.support.transition && that.$element.hasClass('fade')
 
           if (!that.$element.parent().length) {
-            that.$element.appendTo(document.body) //don't move modals dom position
+            that.$element.appendTo(document.body) 
           }
 
           that.$element.show()
 
           if (transition) {
-            that.$element[0].offsetWidth // force reflow
+            that.$element[0].offsetWidth 
           }
 
           that.$element
@@ -10190,7 +8468,7 @@ angular.module('$strap.directives').directive('bsTypeahead', [
             : $.proxy(this.hide, this)
           )
 
-          if (doAnimate) this.$backdrop[0].offsetWidth // force reflow
+          if (doAnimate) this.$backdrop[0].offsetWidth 
 
           this.$backdrop.addClass('in')
 
@@ -10214,8 +8492,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   }
 
 
- /* MODAL PLUGIN DEFINITION
-  * ======================= */
 
   var old = $.fn.modal
 
@@ -10239,8 +8515,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   $.fn.modal.Constructor = Modal
 
 
- /* MODAL NO CONFLICT
-  * ================= */
 
   $.fn.modal.noConflict = function () {
     $.fn.modal = old
@@ -10248,13 +8522,11 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   }
 
 
- /* MODAL DATA-API
-  * ============== */
 
   $(document).on('click.modal.data-api', '[data-toggle="modal"]', function (e) {
     var $this = $(this)
       , href = $this.attr('href')
-      , $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) //strip for ie7
+      , $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) 
       , option = $target.data('modal') ? 'toggle' : $.extend({ remote:!/#/.test(href) && href }, $target.data(), $this.data())
 
     e.preventDefault()
@@ -10267,34 +8539,13 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   })
 
 }(window.jQuery);
-/* ===========================================================
- * bootstrap-tooltip.js v2.3.2
- * http://getbootstrap.com/2.3.2/javascript.html#tooltips
- * Inspired by the original jQuery.tipsy by Jason Frame
- * ===========================================================
- * Copyright 2013 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================== */
 
 
 !function ($) {
 
-  "use strict"; // jshint ;_;
+  "use strict"; 
 
 
- /* TOOLTIP PUBLIC CLASS DEFINITION
-  * =============================== */
 
   var Tooltip = function (element, options) {
     this.init('tooltip', element, options)
@@ -10428,7 +8679,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
             tp = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width}
             break
 
-          // extend placements (top)
           case 'topLeft':
             tp = {top: pos.top - actualHeight,  left: pos.left + pos.width / 2 - (actualWidth * .10)};
             break;
@@ -10436,7 +8686,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
             tp = {top: pos.top - actualHeight, left: pos.left + pos.width / 2 - (actualWidth * .90)};
             break;
 
-          // extend placements (right)
           case 'rightTop':
             tp = {top: pos.top + pos.height / 2 - (actualHeight *.10), left: pos.left + pos.width};
             break;
@@ -10444,7 +8693,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
             tp = {top: pos.top + pos.height / 2 - (actualHeight * .90), left: pos.left + pos.width};
             break;
 
-          // extend placements (bottom)
           case 'bottomLeft':
             tp = {top: pos.top + pos.height, left: pos.left + pos.width / 2 - (actualWidth * .10)};
             break;
@@ -10452,7 +8700,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
             tp = {top: pos.top + pos.height, left: pos.left + pos.width / 2 - (actualWidth * .90)};
             break;
 
-          // extend placements (left)
           case 'leftTop':
             tp = {top: pos.top + pos.height / 2 - (actualHeight *.10), left: pos.left - actualWidth};
             break;
@@ -10623,8 +8870,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   }
 
 
- /* TOOLTIP PLUGIN DEFINITION
-  * ========================= */
 
   var old = $.fn.tooltip
 
@@ -10653,8 +8898,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   }
 
 
- /* TOOLTIP NO CONFLICT
-  * =================== */
 
   $.fn.tooltip.noConflict = function () {
     $.fn.tooltip = old
@@ -10663,33 +8906,13 @@ angular.module('$strap.directives').directive('bsTypeahead', [
 
 }(window.jQuery);
 
-/* ========================================================
- * bootstrap-tab.js v2.3.2
- * http://getbootstrap.com/2.3.2/javascript.html#tabs
- * ========================================================
- * Copyright 2013 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================== */
 
 
 !function ($) {
 
-  "use strict"; // jshint ;_;
+  "use strict"; 
 
 
- /* TAB CLASS DEFINITION
-  * ==================== */
 
   var Tab = function (element) {
     this.element = $(element)
@@ -10709,7 +8932,7 @@ angular.module('$strap.directives').directive('bsTypeahead', [
 
       if (!selector) {
         selector = $this.attr('href')
-        selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
+        selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') 
       }
 
       if ( $this.parent('li').hasClass('active') ) return
@@ -10750,7 +8973,7 @@ angular.module('$strap.directives').directive('bsTypeahead', [
         element.addClass('active')
 
         if (transition) {
-          element[0].offsetWidth // reflow for transition
+          element[0].offsetWidth 
           element.addClass('in')
         } else {
           element.removeClass('fade')
@@ -10772,8 +8995,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   }
 
 
- /* TAB PLUGIN DEFINITION
-  * ===================== */
 
   var old = $.fn.tab
 
@@ -10789,8 +9010,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   $.fn.tab.Constructor = Tab
 
 
- /* TAB NO CONFLICT
-  * =============== */
 
   $.fn.tab.noConflict = function () {
     $.fn.tab = old
@@ -10798,41 +9017,20 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   }
 
 
- /* TAB DATA-API
-  * ============ */
 
   $(document).on('click.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (e) {
     e.preventDefault()
     $(this).tab('show')
   })
 
-}(window.jQuery);/* =============================================================
- * bootstrap-typeahead.js v2.3.2
- * http://getbootstrap.com/2.3.2/javascript.html#typeahead
- * =============================================================
- * Copyright 2013 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ============================================================ */
+}(window.jQuery);
 
 
 !function($){
 
-  "use strict"; // jshint ;_;
+  "use strict"; 
 
 
- /* TYPEAHEAD PUBLIC CLASS DEFINITION
-  * ================================= */
 
   var Typeahead = function (element, options) {
     this.$element = $(element)
@@ -10852,7 +9050,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
     constructor: Typeahead
 
   , select: function () {
-    // CHANGE (rashidkpc) If nothing is selected, use existing value
       var val = this.$menu.find('.active').attr('data-value') || this.$element.val();
       this.$element
         .val(this.updater(val))
@@ -10955,8 +9152,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
         return i[0]
       })
 
-      // CHANGE (rashidpc) Do not select first element by default
-      // items.first().addClass('active')
       this.$menu.html(items)
       return this
     }
@@ -11017,24 +9212,23 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   , move: function (e) {
       if (!this.shown) return
 
-      // grafana change, shift+left parenthesis
       if (e.shiftKey && e.keyCode === 40) {
         return;
       }
 
       switch(e.keyCode) {
-        case 9: // tab
-        case 13: // enter
-        case 27: // escape
+        case 9: 
+        case 13: 
+        case 27: 
           e.preventDefault()
           break
 
-        case 38: // up arrow
+        case 38: 
           e.preventDefault()
           this.prev()
           break
 
-        case 40: // down arrow
+        case 40: 
           e.preventDefault()
           this.next()
           break
@@ -11055,20 +9249,20 @@ angular.module('$strap.directives').directive('bsTypeahead', [
 
   , keyup: function (e) {
       switch(e.keyCode) {
-        case 40: // down arrow
-        case 38: // up arrow
-        case 16: // shift
-        case 17: // ctrl
-        case 18: // alt
+        case 40: 
+        case 38: 
+        case 16: 
+        case 17: 
+        case 18: 
           break
 
-        case 9: // tab
-        case 13: // enter
+        case 9: 
+        case 13: 
           if (!this.shown) return
           this.select()
           break
 
-        case 27: // escape
+        case 27: 
           if (!this.shown) return
           this.hide()
           break
@@ -11078,7 +9272,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
       }
 
       if(e.keyCode === 13 && typeof this.$menu.find('.active').attr('data-value') === 'undefined') {
-        // CHANGE (rashidkpc). Enter was hit, nothing was selected from typeahead, submit form
         this.$element.submit();
       } else {
         e.stopPropagation()
@@ -11117,8 +9310,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   }
 
 
-  /* TYPEAHEAD PLUGIN DEFINITION
-   * =========================== */
 
   var old = $.fn.typeahead
 
@@ -11143,8 +9334,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   $.fn.typeahead.Constructor = Typeahead
 
 
- /* TYPEAHEAD NO CONFLICT
-  * =================== */
 
   $.fn.typeahead.noConflict = function () {
     $.fn.typeahead = old
@@ -11152,8 +9341,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   }
 
 
- /* TYPEAHEAD DATA-API
-  * ================== */
 
   $(document).on('focus.typeahead.data-api', '[data-provide="typeahead"]', function (e) {
     var $this = $(this)
@@ -11162,33 +9349,13 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   })
 
 }(window.jQuery);
-/* ==========================================================
- * bootstrap-affix.js v2.3.2
- * http://getbootstrap.com/2.3.2/javascript.html#affix
- * ==========================================================
- * Copyright 2013 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================== */
 
 
 !function ($) {
 
-  "use strict"; // jshint ;_;
+  "use strict"; 
 
 
- /* AFFIX CLASS DEFINITION
-  * ====================== */
 
   var Affix = function (element, options) {
     this.options = $.extend({}, $.fn.affix.defaults, options)
@@ -11229,8 +9396,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   }
 
 
- /* AFFIX PLUGIN DEFINITION
-  * ======================= */
 
   var old = $.fn.affix
 
@@ -11251,8 +9416,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   }
 
 
- /* AFFIX NO CONFLICT
-  * ================= */
 
   $.fn.affix.noConflict = function () {
     $.fn.affix = old
@@ -11260,8 +9423,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   }
 
 
- /* AFFIX DATA-API
-  * ============== */
 
   $(window).on('load', function () {
     $('[data-spy="affix"]').each(function () {
@@ -11281,10 +9442,10 @@ angular.module('$strap.directives').directive('bsTypeahead', [
 }(window.jQuery);
 
 
-/***/ }),
+ }),
 
-/***/ "./public/vendor/tagsinput/bootstrap-tagsinput.js":
-/***/ (() => {
+ "./public/vendor/tagsinput/bootstrap-tagsinput.js":
+ (() => {
 
 (function ($) {
   "use strict";
@@ -11307,9 +9468,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
     }
   };
 
-  /**
-   * Constructor function
-   */
   function TagsInput(element, options) {
     this.itemsArray = [];
 
@@ -11333,29 +9491,21 @@ angular.module('$strap.directives').directive('bsTypeahead', [
   TagsInput.prototype = {
     constructor: TagsInput,
 
-    /**
-     * Adds the given item as a new tag. Pass true to dontPushVal to prevent
-     * updating the elements val()
-     */
     add: function(item, dontPushVal) {
       var self = this;
 
       if (self.options.maxTags && self.itemsArray.length >= self.options.maxTags)
         return;
 
-      // Ignore falsey values, except false
       if (item !== false && !item)
         return;
 
-      // Throw an error when trying to add an object while the itemValue option was not set
       if (typeof item === "object" && !self.objectItems)
         throw("Can't add objects when itemValue option is not set");
 
-      // Ignore strings only containg whitespace
       if (item.toString().match(/^\s*$/))
         return;
 
-      // If SELECT but not multiple, remove current tag
       if (self.isSelect && !self.multiple && self.itemsArray.length > 0)
         self.remove(self.itemsArray[0]);
 
@@ -11376,10 +9526,8 @@ angular.module('$strap.directives').directive('bsTypeahead', [
           itemText = self.options.itemText(item),
           tagClass = self.options.tagClass(item);
 
-      // Ignore items already added
       var existing = $.grep(self.itemsArray, function(item) { return self.options.itemValue(item) === itemValue; } )[0];
       if (existing) {
-        // Invoke onTagExists
         if (self.options.onTagExists) {
           var $existingTag = $(".tag", self.$container).filter(function() { return $(this).data("item") === existing; });
           self.options.onTagExists(item, $existingTag);
@@ -11387,16 +9535,13 @@ angular.module('$strap.directives').directive('bsTypeahead', [
         return;
       }
 
-      // register item in internal array and map
       self.itemsArray.push(item);
 
-      // add a tag element
       var $tag = $('<span class="tag ' + htmlEncode(tagClass) + '">' + htmlEncode(itemText) + '<span data-role="remove"></span></span>');
       $tag.data('item', item);
       self.findInputWrapper().before($tag);
       $tag.after(' ');
 
-      // add <option /> if item represents a value not present in one of the <select />'s options
       if (self.isSelect && !$('option[value="' + escape(itemValue) + '"]',self.$element)[0]) {
         var $option = $('<option selected>' + htmlEncode(itemText) + '</option>');
         $option.data('item', item);
@@ -11407,17 +9552,12 @@ angular.module('$strap.directives').directive('bsTypeahead', [
       if (!dontPushVal)
         self.pushVal();
 
-      // Add class when reached maxTags
       if (self.options.maxTags === self.itemsArray.length)
         self.$container.addClass('bootstrap-tagsinput-max');
 
       self.$element.trigger($.Event('itemAdded', { item: item }));
     },
 
-    /**
-     * Removes the given item. Pass true to dontPushVal to prevent updating the
-     * elements val()
-     */
     remove: function(item, dontPushVal) {
       var self = this;
 
@@ -11437,16 +9577,12 @@ angular.module('$strap.directives').directive('bsTypeahead', [
       if (!dontPushVal)
         self.pushVal();
 
-      // Remove class when reached maxTags
       if (self.options.maxTags > self.itemsArray.length)
         self.$container.removeClass('bootstrap-tagsinput-max');
 
       self.$element.trigger($.Event('itemRemoved',  { item: item }));
     },
 
-    /**
-     * Removes all items
-     */
     removeAll: function() {
       var self = this;
 
@@ -11462,10 +9598,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
         this.enable();
     },
 
-    /**
-     * Refreshes the tags so they match the text/value of their corresponding
-     * item.
-     */
     refresh: function() {
       var self = this;
       $('.tag', self.$container).each(function() {
@@ -11475,7 +9607,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
             itemText = self.options.itemText(item),
             tagClass = self.options.tagClass(item);
 
-          // Update tag's class and inner text
           $tag.attr('class', null);
           $tag.addClass('tag ' + htmlEncode(tagClass));
           $tag.contents().filter(function() {
@@ -11489,17 +9620,10 @@ angular.module('$strap.directives').directive('bsTypeahead', [
       });
     },
 
-    /**
-     * Returns the items added as tags
-     */
     items: function() {
       return this.itemsArray;
     },
 
-    /**
-     * Assembly value by retrieving the value of each item, and set it on the
-     * element.
-     */
     pushVal: function() {
       var self = this,
           val = $.map(self.items(), function(item) {
@@ -11509,16 +9633,12 @@ angular.module('$strap.directives').directive('bsTypeahead', [
       self.$element.val(val, true).trigger('change');
     },
 
-    /**
-     * Initializes the tags input behaviour on the element
-     */
     build: function(options) {
       var self = this;
 
       self.options = $.extend({}, defaultOptions, options);
       var typeahead = self.options.typeahead || {};
 
-      // When itemValue is set, freeInput should always be false
       if (self.objectItems)
         self.options.freeInput = false;
 
@@ -11526,7 +9646,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
       makeOptionItemFunction(self.options, 'itemText');
       makeOptionItemFunction(self.options, 'tagClass');
 
-      // for backwards compatibility, self.options.source is deprecated
       if (self.options.source)
         typeahead.source = self.options.source;
 
@@ -11551,10 +9670,8 @@ angular.module('$strap.directives').directive('bsTypeahead', [
                 data = typeahead.source(query);
 
             if ($.isFunction(data.success)) {
-              // support for Angular promises
               data.success(processItems);
             } else {
-              // support for functions and jquery promises
               $.when(data)
                .then(processItems);
             }
@@ -11591,7 +9708,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
             $inputWrapper = self.findInputWrapper();
 
         switch (event.which) {
-          // BACKSPACE
           case 8:
             if (doGetCaretPosition($input[0]) === 0) {
               var prev = $inputWrapper.prev();
@@ -11601,7 +9717,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
             }
             break;
 
-          // DELETE
           case 46:
             if (doGetCaretPosition($input[0]) === 0) {
               var next = $inputWrapper.next();
@@ -11611,18 +9726,14 @@ angular.module('$strap.directives').directive('bsTypeahead', [
             }
             break;
 
-          // LEFT ARROW
           case 37:
-            // Try to move the input before the previous tag
             var $prevTag = $inputWrapper.prev();
             if ($input.val().length === 0 && $prevTag[0]) {
               $prevTag.before($inputWrapper);
               $input.focus();
             }
             break;
-          // RIGHT ARROW
           case 39:
-            // Try to move the input after the next tag
             var $nextTag = $inputWrapper.next();
             if ($input.val().length === 0 && $nextTag[0]) {
               $nextTag.after($inputWrapper);
@@ -11630,8 +9741,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
             }
             break;
          default:
-            // When key corresponds one of the confirmKeys, add current input
-            // as a new tag
             if (self.options.freeInput && $.inArray(event.which, self.options.confirmKeys) >= 0) {
               self.add($input.val());
               $input.val('');
@@ -11639,18 +9748,14 @@ angular.module('$strap.directives').directive('bsTypeahead', [
             }
         }
 
-        // Reset internal input's size
         $input.attr('size', Math.max(this.inputSize, $input.val().length));
       }, self));
 
-      // Remove icon clicked
       self.$container.on('click', '[data-role=remove]', $.proxy(function(event) {
         self.remove($(event.target).closest('.tag').data('item'));
-        // Grafana mod, if tags input used in popover the click event will bubble up and hide popover
         event.stopPropagation();
       }, self));
 
-      // Only add existing value as tags when using strings as tags
       if (self.options.itemValue === defaultOptions.itemValue) {
         if (self.$element[0].tagName === 'INPUT') {
             self.add(self.$element.val());
@@ -11662,13 +9767,9 @@ angular.module('$strap.directives').directive('bsTypeahead', [
       }
     },
 
-    /**
-     * Removes all tagsinput behaviour and unregsiter all event handlers
-     */
     destroy: function() {
       var self = this;
 
-      // Unbind events
       self.$container.off('keypress', 'input');
       self.$container.off('click', '[role=remove]');
 
@@ -11677,24 +9778,14 @@ angular.module('$strap.directives').directive('bsTypeahead', [
       self.$element.show();
     },
 
-    /**
-     * Sets focus on the tagsinput
-     */
     focus: function() {
       this.$input.focus();
     },
 
-    /**
-     * Returns the internal input element
-     */
     input: function() {
       return this.$input;
     },
 
-    /**
-     * Returns the element which is wrapped around the internal input. This
-     * is normally the $container, but typeahead.js moves the $input element.
-     */
     findInputWrapper: function() {
       var elt = this.$input[0],
           container = this.$container[0];
@@ -11705,16 +9796,12 @@ angular.module('$strap.directives').directive('bsTypeahead', [
     }
   };
 
-  /**
-   * Register JQuery plugin
-   */
   $.fn.tagsinput = function(arg1, arg2) {
     var results = [];
 
     this.each(function() {
       var tagsinput = $(this).data('tagsinput');
 
-      // Initialize a new tags input
       if (!tagsinput) {
         tagsinput = new TagsInput(this, arg1);
         $(this).data('tagsinput', tagsinput);
@@ -11724,10 +9811,8 @@ angular.module('$strap.directives').directive('bsTypeahead', [
           $('option', $(this)).attr('selected', 'selected');
         }
 
-        // Init tags from $(this).val()
         $(this).val($(this).val());
       } else {
-        // Invoke function on existing tags input
         var retVal = tagsinput[arg1](arg2);
         if (retVal !== undefined)
           results.push(retVal);
@@ -11735,7 +9820,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
     });
 
     if ( typeof arg1 == 'string') {
-      // Return the results from the invoked function calls
       return results.length > 1 ? results : results[0];
     } else {
       return results;
@@ -11744,11 +9828,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
 
   $.fn.tagsinput.Constructor = TagsInput;
 
-  /**
-   * Most options support both a string or number as well as a function as
-   * option value. This function makes sure that the option with the given
-   * key in the given options is wrapped in a function
-   */
   function makeOptionItemFunction(options, key) {
     if (typeof options[key] !== 'function') {
       var propertyName = options[key];
@@ -11761,9 +9840,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
       options[key] = function() { return value; };
     }
   }
-  /**
-   * HtmlEncodes the given value
-   */
   var htmlEncodeContainer = $('<div />');
   function htmlEncode(value) {
     if (value) {
@@ -11773,10 +9849,6 @@ angular.module('$strap.directives').directive('bsTypeahead', [
     }
   }
 
-  /**
-   * Returns the position of the caret in the given input field
-   * http://flightschool.acylt.com/devnotes/caret-position-woes/
-   */
   function doGetCaretPosition(oField) {
     var iCaretPos = 0;
     if (document.selection) {
@@ -11790,16 +9862,12 @@ angular.module('$strap.directives').directive('bsTypeahead', [
     return (iCaretPos);
   }
 
-  /**
-   * Initialize tagsinput behaviour on inputs and selects which have
-   * data-role=tagsinput
-   */
   $(function() {
     $("input[data-role=tagsinput], select[multiple][data-role=tagsinput]").tagsinput();
   });
 })(window.jQuery);
 
 
-/***/ })
+ })
 
 }]);

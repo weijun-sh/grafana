@@ -1,22 +1,22 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[9687],{
 
-/***/ "./public/app/core/components/Signup/SignupPage.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/components/Signup/SignupPage.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SignupPage": () => (/* binding */ SignupPage),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var app_core_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/config.ts");
-/* harmony import */ var app_core_copy_appNotification__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/copy/appNotification.ts");
-/* harmony import */ var _Login_LoginLayout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/core/components/Login/LoginLayout.tsx");
-/* harmony import */ var _PasswordField_PasswordField__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/core/components/PasswordField/PasswordField.tsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "SignupPage": () => ( SignupPage),
+   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var app_core_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/core/config.ts");
+ var app_core_copy_appNotification__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/copy/appNotification.ts");
+ var _Login_LoginLayout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/core/components/Login/LoginLayout.tsx");
+ var _PasswordField_PasswordField__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./public/app/core/components/PasswordField/PasswordField.tsx");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _Button;
 
 
@@ -30,7 +30,7 @@ var _Button;
 
 
 const SignupPage = props => {
-  const notifyApp = (0,app_core_copy_appNotification__WEBPACK_IMPORTED_MODULE_4__/* .useAppNotification */ .iG)();
+  const notifyApp = (0,app_core_copy_appNotification__WEBPACK_IMPORTED_MODULE_4__ .iG)();
 
   const onSubmit = async formData => {
     if (formData.name === '') {
@@ -53,19 +53,19 @@ const SignupPage = props => {
     });
 
     if (response.code === 'redirect-to-select-org') {
-      window.location.assign((0,app_core_config__WEBPACK_IMPORTED_MODULE_3__/* .getConfig */ .iE)().appSubUrl + '/profile/select-org?signup=1');
+      window.location.assign((0,app_core_config__WEBPACK_IMPORTED_MODULE_3__ .iE)().appSubUrl + '/profile/select-org?signup=1');
     }
 
-    window.location.assign((0,app_core_config__WEBPACK_IMPORTED_MODULE_3__/* .getConfig */ .iE)().appSubUrl + '/');
+    window.location.assign((0,app_core_config__WEBPACK_IMPORTED_MODULE_3__ .iE)().appSubUrl + '/');
   };
 
   const defaultValues = {
     email: props.queryParams.email,
     code: props.queryParams.code
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Login_LoginLayout__WEBPACK_IMPORTED_MODULE_5__/* .LoginLayout */ .dd, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Login_LoginLayout__WEBPACK_IMPORTED_MODULE_5__/* .InnerBox */ .$s, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Form, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Login_LoginLayout__WEBPACK_IMPORTED_MODULE_5__ .dd, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Login_LoginLayout__WEBPACK_IMPORTED_MODULE_5__ .$s, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Form, {
         defaultValues: defaultValues,
         onSubmit: onSubmit,
         children: _ref => {
@@ -76,19 +76,19 @@ const SignupPage = props => {
             register,
             getValues
           } = _ref;
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Field, {
+          return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Field, {
               label: "Your name",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Input, Object.assign({
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Input, Object.assign({
                 id: "user-name"
               }, register('name'), {
                 placeholder: "(optional)"
               }))
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Field, {
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Field, {
               label: "Email",
               invalid: !!errors.email,
               error: (_errors$email = errors.email) === null || _errors$email === void 0 ? void 0 : _errors$email.message,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Input, Object.assign({
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Input, Object.assign({
                 id: "email"
               }, register('email', {
                 required: 'Email is required',
@@ -100,49 +100,49 @@ const SignupPage = props => {
                 type: "email",
                 placeholder: "Email"
               }))
-            }), !(0,app_core_config__WEBPACK_IMPORTED_MODULE_3__/* .getConfig */ .iE)().autoAssignOrg && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Field, {
+            }), !(0,app_core_config__WEBPACK_IMPORTED_MODULE_3__ .iE)().autoAssignOrg && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Field, {
               label: "Org. name",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Input, Object.assign({
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Input, Object.assign({
                 id: "org-name"
               }, register('orgName'), {
                 placeholder: "Org. name"
               }))
-            }), (0,app_core_config__WEBPACK_IMPORTED_MODULE_3__/* .getConfig */ .iE)().verifyEmailEnabled && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Field, {
+            }), (0,app_core_config__WEBPACK_IMPORTED_MODULE_3__ .iE)().verifyEmailEnabled && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Field, {
               label: "Email verification code (sent to your email)",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Input, Object.assign({
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Input, Object.assign({
                 id: "verification-code"
               }, register('code'), {
                 placeholder: "Code"
               }))
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Field, {
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Field, {
               label: "Password",
               invalid: !!errors.password,
               error: errors === null || errors === void 0 ? void 0 : (_errors$password = errors.password) === null || _errors$password === void 0 ? void 0 : _errors$password.message,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_PasswordField_PasswordField__WEBPACK_IMPORTED_MODULE_6__/* .PasswordField */ .Z, Object.assign({
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_PasswordField_PasswordField__WEBPACK_IMPORTED_MODULE_6__ .Z, Object.assign({
                 id: "new-password",
                 autoFocus: true,
                 autoComplete: "new-password"
               }, register('password', {
                 required: 'Password is required'
               })))
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Field, {
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Field, {
               label: "Confirm password",
               invalid: !!errors.confirm,
               error: errors === null || errors === void 0 ? void 0 : (_errors$confirm = errors.confirm) === null || _errors$confirm === void 0 ? void 0 : _errors$confirm.message,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_PasswordField_PasswordField__WEBPACK_IMPORTED_MODULE_6__/* .PasswordField */ .Z, Object.assign({
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_PasswordField_PasswordField__WEBPACK_IMPORTED_MODULE_6__ .Z, Object.assign({
                 id: "confirm-new-password",
                 autoComplete: "new-password"
               }, register('confirm', {
                 required: 'Confirmed password is required',
                 validate: v => v === getValues().password || 'Passwords must match!'
               })))
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.HorizontalGroup, {
-              children: [_Button || (_Button = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Button, {
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.HorizontalGroup, {
+              children: [_Button || (_Button = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.Button, {
                 type: "submit",
                 children: "Submit"
-              })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.LinkButton, {
+              })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_2__.LinkButton, {
                 fill: "text",
-                href: (0,app_core_config__WEBPACK_IMPORTED_MODULE_3__/* .getConfig */ .iE)().appSubUrl + '/login',
+                href: (0,app_core_config__WEBPACK_IMPORTED_MODULE_3__ .iE)().appSubUrl + '/login',
                 children: "Back to login"
               })]
             })]
@@ -152,8 +152,8 @@ const SignupPage = props => {
     })
   });
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SignupPage);
+ const __WEBPACK_DEFAULT_EXPORT__ = (SignupPage);
 
-/***/ })
+ })
 
 }]);

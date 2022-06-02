@@ -1,35 +1,28 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[5783],{
 
-/***/ "./public/app/plugins/datasource/influxdb/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/influxdb/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "plugin": () => (/* binding */ module_plugin)
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/types.ts
+;
 let InfluxVersion;
 
 (function (InfluxVersion) {
   InfluxVersion["InfluxQL"] = "InfluxQL";
   InfluxVersion["Flux"] = "Flux";
 })(InfluxVersion || (InfluxVersion = {}));
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/ConfigEditor.tsx
+;
 var _InlineFormLabel, _InlineFormLabel2, _InfoBox, _InlineFormLabel3, _h, _InfoBox2, _Alert, _div;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -96,7 +89,7 @@ class ConfigEditor extends react.PureComponent {
       if (selected.value === InfluxVersion.Flux) {
         copy.access = 'proxy';
         copy.basicAuth = true;
-        copy.jsonData.httpMode = 'POST'; // Remove old 1x configs
+        copy.jsonData.httpMode = 'POST'; 
 
         delete copy.user;
         delete copy.database;
@@ -107,7 +100,7 @@ class ConfigEditor extends react.PureComponent {
 
     this.state.maxSeries = ((_props$options$jsonDa = props.options.jsonData.maxSeries) === null || _props$options$jsonDa === void 0 ? void 0 : _props$options$jsonDa.toString()) || '';
     this.htmlPrefix = (0,lodash.uniqueId)('influxdb-config');
-  } // 1x
+  } 
 
 
   renderInflux2x() {
@@ -121,18 +114,18 @@ class ConfigEditor extends react.PureComponent {
     const {
       htmlPrefix
     } = this;
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             htmlFor: `${htmlPrefix}-org`,
             className: "width-10",
             children: "Organization"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          }), (0,jsx_runtime.jsx)("div", {
             className: "width-10",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input, {
+            children: (0,jsx_runtime.jsx)(Input, {
               id: `${htmlPrefix}-org`,
               className: "width-20",
               value: options.jsonData.organization || '',
@@ -140,11 +133,11 @@ class ConfigEditor extends react.PureComponent {
             })
           })]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsx)("div", {
           className: "gf-form",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(SecretFormField, {
+          children: (0,jsx_runtime.jsx)(SecretFormField, {
             isConfigured: secureJsonFields && secureJsonFields.token,
             value: secureJsonData.token || '',
             label: "Token",
@@ -155,16 +148,16 @@ class ConfigEditor extends react.PureComponent {
             onChange: (0,src.onUpdateDatasourceSecureJsonDataOption)(this.props, 'token')
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_InlineFormLabel || (_InlineFormLabel = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [_InlineFormLabel || (_InlineFormLabel = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             className: "width-10",
             children: "Default Bucket"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          })), (0,jsx_runtime.jsx)("div", {
             className: "width-10",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input, {
+            children: (0,jsx_runtime.jsx)(Input, {
               className: "width-20",
               placeholder: "default bucket",
               value: options.jsonData.defaultBucket || '',
@@ -172,17 +165,17 @@ class ConfigEditor extends react.PureComponent {
             })
           })]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_InlineFormLabel2 || (_InlineFormLabel2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [_InlineFormLabel2 || (_InlineFormLabel2 = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             className: "width-10",
             tooltip: "A lower limit for the auto group by time interval. Recommended to be set to write frequency, for example 1m if your data is written every minute.",
             children: "Min time interval"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          })), (0,jsx_runtime.jsx)("div", {
             className: "width-10",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input, {
+            children: (0,jsx_runtime.jsx)(Input, {
               className: "width-10",
               placeholder: "10s",
               value: options.jsonData.timeInterval || '',
@@ -205,28 +198,28 @@ class ConfigEditor extends react.PureComponent {
     const {
       htmlPrefix
     } = this;
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [_InfoBox || (_InfoBox = /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InfoBox, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h5", {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [_InfoBox || (_InfoBox = (0,jsx_runtime.jsxs)(grafana_ui_src.InfoBox, {
+        children: [(0,jsx_runtime.jsx)("h5", {
           children: "Database Access"
-        }), /*#__PURE__*/(0,jsx_runtime.jsxs)("p", {
-          children: ["Setting the database for this datasource does not deny access to other databases. The InfluxDB query syntax allows switching the database in the query. For example:", /*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+        }), (0,jsx_runtime.jsxs)("p", {
+          children: ["Setting the database for this datasource does not deny access to other databases. The InfluxDB query syntax allows switching the database in the query. For example:", (0,jsx_runtime.jsx)("code", {
             children: "SHOW MEASUREMENTS ON _internal"
-          }), " or", /*#__PURE__*/(0,jsx_runtime.jsx)("code", {
+          }), " or", (0,jsx_runtime.jsx)("code", {
             children: "SELECT * FROM \"_internal\"..\"database\" LIMIT 10"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("br", {}), /*#__PURE__*/(0,jsx_runtime.jsx)("br", {}), "To support data isolation and security, make sure appropriate permissions are configured in InfluxDB."]
+          }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)("br", {}), "To support data isolation and security, make sure appropriate permissions are configured in InfluxDB."]
         })]
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      })), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             htmlFor: `${htmlPrefix}-db`,
             className: "width-10",
             children: "Database"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          }), (0,jsx_runtime.jsx)("div", {
             className: "width-20",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input, {
+            children: (0,jsx_runtime.jsx)(Input, {
               id: `${htmlPrefix}-db`,
               className: "width-20",
               value: options.database || '',
@@ -234,17 +227,17 @@ class ConfigEditor extends react.PureComponent {
             })
           })]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             htmlFor: `${htmlPrefix}-user`,
             className: "width-10",
             children: "User"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          }), (0,jsx_runtime.jsx)("div", {
             className: "width-10",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input, {
+            children: (0,jsx_runtime.jsx)(Input, {
               id: `${htmlPrefix}-user`,
               className: "width-20",
               value: options.user || '',
@@ -252,11 +245,11 @@ class ConfigEditor extends react.PureComponent {
             })
           })]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsx)("div", {
           className: "gf-form",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(SecretFormField, {
+          children: (0,jsx_runtime.jsx)(SecretFormField, {
             isConfigured: secureJsonFields && secureJsonFields.password,
             value: secureJsonData.password || '',
             label: "Password",
@@ -267,16 +260,16 @@ class ConfigEditor extends react.PureComponent {
             onChange: (0,src.onUpdateDatasourceSecureJsonDataOption)(this.props, 'password')
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             htmlFor: `${htmlPrefix}-http-method`,
             className: "width-10",
             tooltip: "You can use either GET or POST HTTP method to query your InfluxDB database. The POST method allows you to perform heavy requests (with a lots of WHERE clause) while the GET method will restrict you and return an error if the query is too large.",
             children: "HTTP Method"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+          }), (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
             inputId: `${htmlPrefix}-http-method`,
             className: "width-10",
             value: httpModes.find(httpMode => httpMode.value === options.jsonData.httpMode),
@@ -285,17 +278,17 @@ class ConfigEditor extends react.PureComponent {
             onChange: (0,src.onUpdateDatasourceJsonDataOptionSelect)(this.props, 'httpMode')
           })]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        children: (0,jsx_runtime.jsxs)("div", {
           className: "gf-form",
-          children: [_InlineFormLabel3 || (_InlineFormLabel3 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+          children: [_InlineFormLabel3 || (_InlineFormLabel3 = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
             className: "width-10",
             tooltip: "A lower limit for the auto group by time interval. Recommended to be set to write frequency, for example 1m if your data is written every minute.",
             children: "Min time interval"
-          })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          })), (0,jsx_runtime.jsx)("div", {
             className: "width-10",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input, {
+            children: (0,jsx_runtime.jsx)(Input, {
               className: "width-10",
               placeholder: "10s",
               value: options.jsonData.timeInterval || '',
@@ -312,17 +305,17 @@ class ConfigEditor extends react.PureComponent {
       options,
       onOptionsChange
     } = this.props;
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [_h || (_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [_h || (_h = (0,jsx_runtime.jsx)("h3", {
         className: "page-heading",
         children: "Query Language"
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      })), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-group",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: (0,jsx_runtime.jsx)("div", {
           className: "gf-form-inline",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          children: (0,jsx_runtime.jsx)("div", {
             className: "gf-form",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+            children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
               "aria-label": "Query language",
               className: "width-30",
               value: options.jsonData.version === InfluxVersion.Flux ? versions[1] : versions[0],
@@ -332,45 +325,43 @@ class ConfigEditor extends react.PureComponent {
             })
           })
         })
-      }), options.jsonData.version === InfluxVersion.Flux && (_InfoBox2 || (_InfoBox2 = /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InfoBox, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h5", {
+      }), options.jsonData.version === InfluxVersion.Flux && (_InfoBox2 || (_InfoBox2 = (0,jsx_runtime.jsxs)(grafana_ui_src.InfoBox, {
+        children: [(0,jsx_runtime.jsx)("h5", {
           children: "Support for Flux in Grafana is currently in beta"
-        }), /*#__PURE__*/(0,jsx_runtime.jsxs)("p", {
-          children: ["Please report any issues to: ", /*#__PURE__*/(0,jsx_runtime.jsx)("br", {}), /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+        }), (0,jsx_runtime.jsxs)("p", {
+          children: ["Please report any issues to: ", (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)("a", {
             href: "https://github.com/grafana/grafana/issues/new/choose",
             children: "https://github.com/grafana/grafana/issues"
           })]
         })]
-      }))), options.access === 'direct' && (_Alert || (_Alert = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+      }))), options.access === 'direct' && (_Alert || (_Alert = (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
         title: "Deprecation Notice",
         severity: "warning",
         children: "Browser access mode in the InfluxDB datasource is deprecated and will be removed in a future release."
-      }))), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.DataSourceHttpSettings, {
+      }))), (0,jsx_runtime.jsx)(grafana_ui_src.DataSourceHttpSettings, {
         showAccessOptions: true,
         dataSourceConfig: options,
         defaultUrl: "http://localhost:8086",
         onChange: onOptionsChange
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), (0,jsx_runtime.jsxs)("div", {
         className: "gf-form-group",
-        children: [_div || (_div = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+        children: [_div || (_div = (0,jsx_runtime.jsx)("div", {
+          children: (0,jsx_runtime.jsx)("h3", {
             className: "page-heading",
             children: "InfluxDB Details"
           })
-        })), options.jsonData.version === InfluxVersion.Flux ? this.renderInflux2x() : this.renderInflux1x(), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        })), options.jsonData.version === InfluxVersion.Flux ? this.renderInflux2x() : this.renderInflux1x(), (0,jsx_runtime.jsx)("div", {
           className: "gf-form-inline",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
             labelWidth: 20,
             label: "Max series",
             tooltip: "Limit the number of series/tables that Grafana will process. Lower this number to prevent abuse, and increase it if you have lots of small time series and not all are shown. Defaults to 1000.",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(Input, {
+            children: (0,jsx_runtime.jsx)(Input, {
               placeholder: "1000",
               type: "number",
               className: "width-10",
               value: this.state.maxSeries,
               onChange: event => {
-                // We duplicate this state so that we allow to write freely inside the input. We don't have
-                // any influence over saving so this seems to be only way to do this.
                 this.setState({
                   maxSeries: event.currentTarget.value
                 });
@@ -385,8 +376,8 @@ class ConfigEditor extends react.PureComponent {
   }
 
 }
-/* harmony default export */ const components_ConfigEditor = (ConfigEditor);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/InfluxCheatSheet.tsx
+ const components_ConfigEditor = (ConfigEditor);
+;
 var InfluxCheatSheet_h;
 
 
@@ -397,41 +388,38 @@ const CHEAT_SHEET_ITEMS = [{
   label: 'Start by selecting a measurement and field from the dropdown above. You can then use the tag selector to further narrow your search.'
 }];
 
-const InfluxCheatSheet = props => /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-  children: [InfluxCheatSheet_h || (InfluxCheatSheet_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h2", {
+const InfluxCheatSheet = props => (0,jsx_runtime.jsxs)("div", {
+  children: [InfluxCheatSheet_h || (InfluxCheatSheet_h = (0,jsx_runtime.jsx)("h2", {
     children: "InfluxDB Cheat Sheet"
-  })), CHEAT_SHEET_ITEMS.map(item => /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  })), CHEAT_SHEET_ITEMS.map(item => (0,jsx_runtime.jsxs)("div", {
     className: "cheat-sheet-item",
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    children: [(0,jsx_runtime.jsx)("div", {
       className: "cheat-sheet-item__title",
       children: item.title
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), (0,jsx_runtime.jsx)("div", {
       className: "cheat-sheet-item__label",
       children: item.label
     })]
   }, item.title))]
 });
 
-/* harmony default export */ const components_InfluxCheatSheet = (InfluxCheatSheet);
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/InfluxStartPage.tsx
+ const components_InfluxCheatSheet = (InfluxCheatSheet);
+;
 
 
 
 class InfluxStartPage extends react.PureComponent {
   render() {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(components_InfluxCheatSheet, {
+    return (0,jsx_runtime.jsx)(components_InfluxCheatSheet, {
       onClickExample: this.props.onClickExample
     });
   }
 
 }
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./public/app/core/utils/kbn.ts
 var kbn = __webpack_require__("./public/app/core/utils/kbn.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/state/query_part.ts
 var query_part = __webpack_require__("./public/app/features/alerting/state/query_part.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/query_part.ts
+;
 
 
 const index = [];
@@ -454,11 +442,11 @@ function createPart(part) {
     };
   }
 
-  return new query_part/* QueryPart */.XN(part, def);
+  return new query_part.XN(part, def);
 }
 
 function register(options) {
-  index[options.type] = new query_part/* QueryPartDef */.zU(options);
+  index[options.type] = new query_part.zU(options);
   options.category.push(index[options.type]);
 }
 
@@ -477,19 +465,18 @@ function fieldRenderer(part, innerExpr) {
 }
 
 function replaceAggregationAddStrategy(selectParts, partModel) {
-  // look for existing aggregation
   for (let i = 0; i < selectParts.length; i++) {
     const part = selectParts[i];
 
     if (part.def.category === categories.Aggregations) {
       if (part.def.type === partModel.def.type) {
         return;
-      } // count distinct is allowed
+      } 
 
 
       if (part.def.type === 'count' && partModel.def.type === 'distinct') {
         break;
-      } // remove next aggregation if distinct was replaced
+      } 
 
 
       if (part.def.type === 'distinct') {
@@ -524,7 +511,7 @@ function replaceAggregationAddStrategy(selectParts, partModel) {
 }
 
 function addTransformationStrategy(selectParts, partModel) {
-  let i; // look for index to add transformation
+  let i; 
 
   for (i = 0; i < selectParts.length; i++) {
     const part = selectParts[i];
@@ -541,18 +528,16 @@ function addMathStrategy(selectParts, partModel) {
   const partCount = selectParts.length;
 
   if (partCount > 0) {
-    // if last is math, replace it
     if (selectParts[partCount - 1].def.type === 'math') {
       selectParts[partCount - 1] = partModel;
       return;
-    } // if next to last is math, replace it
+    } 
 
 
     if (partCount > 1 && selectParts[partCount - 2].def.type === 'math') {
       selectParts[partCount - 2] = partModel;
       return;
     } else if (selectParts[partCount - 1].def.type === 'alias') {
-      // if last is alias add it before
       selectParts.splice(partCount - 1, 0, partModel);
       return;
     }
@@ -565,7 +550,6 @@ function addAliasStrategy(selectParts, partModel) {
   const partCount = selectParts.length;
 
   if (partCount > 0) {
-    // if last is alias, replace it
     if (selectParts[partCount - 1].def.type === 'alias') {
       selectParts[partCount - 1] = partModel;
       return;
@@ -576,7 +560,6 @@ function addAliasStrategy(selectParts, partModel) {
 }
 
 function addFieldStrategy(selectParts, partModel, query) {
-  // copy all parts
   const parts = (0,lodash.map)(selectParts, part => {
     return createPart({
       type: part.def.type,
@@ -596,7 +579,7 @@ register({
   }],
   defaultParams: ['value'],
   renderer: fieldRenderer
-}); // Aggregations
+}); 
 
 register({
   type: 'count',
@@ -604,7 +587,7 @@ register({
   category: categories.Aggregations,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'distinct',
@@ -612,7 +595,7 @@ register({
   category: categories.Aggregations,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'integral',
@@ -620,7 +603,7 @@ register({
   category: categories.Aggregations,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'mean',
@@ -628,7 +611,7 @@ register({
   category: categories.Aggregations,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'median',
@@ -636,7 +619,7 @@ register({
   category: categories.Aggregations,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'mode',
@@ -644,7 +627,7 @@ register({
   category: categories.Aggregations,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'sum',
@@ -652,8 +635,8 @@ register({
   category: categories.Aggregations,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
-}); // transformations
+  renderer: query_part.D
+}); 
 
 register({
   type: 'derivative',
@@ -665,7 +648,7 @@ register({
     options: ['1s', '10s', '1m', '5m', '10m', '15m', '1h']
   }],
   defaultParams: ['10s'],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'spread',
@@ -673,7 +656,7 @@ register({
   category: categories.Transformations,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'non_negative_derivative',
@@ -685,7 +668,7 @@ register({
     options: ['1s', '10s', '1m', '5m', '10m', '15m', '1h']
   }],
   defaultParams: ['10s'],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'difference',
@@ -693,7 +676,7 @@ register({
   category: categories.Transformations,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'non_negative_difference',
@@ -701,7 +684,7 @@ register({
   category: categories.Transformations,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'moving_average',
@@ -713,7 +696,7 @@ register({
     options: [5, 10, 20, 30, 40]
   }],
   defaultParams: [10],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'cumulative_sum',
@@ -721,7 +704,7 @@ register({
   category: categories.Transformations,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'stddev',
@@ -729,7 +712,7 @@ register({
   category: categories.Transformations,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'time',
@@ -740,7 +723,7 @@ register({
     options: ['$__interval', '1s', '10s', '1m', '5m', '10m', '15m', '1h']
   }],
   defaultParams: ['$__interval'],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'fill',
@@ -751,7 +734,7 @@ register({
     options: ['none', 'null', '0', 'previous', 'linear']
   }],
   defaultParams: ['null'],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'elapsed',
@@ -763,8 +746,8 @@ register({
     options: ['1s', '10s', '1m', '5m', '10m', '15m', '1h']
   }],
   defaultParams: ['10s'],
-  renderer: query_part/* functionRenderer */.D
-}); // predictions
+  renderer: query_part.D
+}); 
 
 register({
   type: 'holt_winters',
@@ -780,7 +763,7 @@ register({
     options: [0, 1, 2, 5, 10]
   }],
   defaultParams: [10, 2],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'holt_winters_with_fit',
@@ -796,8 +779,8 @@ register({
     options: [0, 1, 2, 5, 10]
   }],
   defaultParams: [10, 2],
-  renderer: query_part/* functionRenderer */.D
-}); // Selectors
+  renderer: query_part.D
+}); 
 
 register({
   type: 'bottom',
@@ -808,7 +791,7 @@ register({
     type: 'int'
   }],
   defaultParams: [3],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'first',
@@ -816,7 +799,7 @@ register({
   category: categories.Selectors,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'last',
@@ -824,7 +807,7 @@ register({
   category: categories.Selectors,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'max',
@@ -832,7 +815,7 @@ register({
   category: categories.Selectors,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'min',
@@ -840,7 +823,7 @@ register({
   category: categories.Selectors,
   params: [],
   defaultParams: [],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'percentile',
@@ -851,7 +834,7 @@ register({
     type: 'int'
   }],
   defaultParams: [95],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'top',
@@ -862,7 +845,7 @@ register({
     type: 'int'
   }],
   defaultParams: [3],
-  renderer: query_part/* functionRenderer */.D
+  renderer: query_part.D
 });
 register({
   type: 'tag',
@@ -884,7 +867,7 @@ register({
     type: 'string'
   }],
   defaultParams: [' / 100'],
-  renderer: query_part/* suffixRenderer */.C7
+  renderer: query_part.C7
 });
 register({
   type: 'alias',
@@ -899,21 +882,20 @@ register({
   renderMode: 'suffix',
   renderer: aliasRenderer
 });
-/* harmony default export */ const influxdb_query_part = ({
+ const influxdb_query_part = ({
   create: createPart,
   getCategories: () => {
     return categories;
   },
   replaceAggregationAdd: replaceAggregationAddStrategy
 });
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/influx_query_model.ts
+;
 function influx_query_model_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
 class InfluxQueryModel {
-  /** @ngInject */
   constructor(target, templateSrv, scopedVars) {
     influx_query_model_defineProperty(this, "target", void 0);
 
@@ -1015,8 +997,7 @@ class InfluxQueryModel {
     const categories = influxdb_query_part.getCategories();
 
     if (part.def.type === 'time') {
-      // remove fill
-      this.target.groupBy = (0,lodash.filter)(this.target.groupBy, g => g.type !== 'fill'); // remove aggregations
+      this.target.groupBy = (0,lodash.filter)(this.target.groupBy, g => g.type !== 'fill'); 
 
       this.target.select = (0,lodash.map)(this.target.select, s => {
         return (0,lodash.filter)(s, part => {
@@ -1045,7 +1026,6 @@ class InfluxQueryModel {
   }
 
   removeSelectPart(selectParts, part) {
-    // if we remove the field remove the whole statement
     if (part.def.type === 'field') {
       if (this.selectModels.length > 1) {
         const modelsIndex = (0,lodash.indexOf)(this.selectModels, selectParts);
@@ -1068,7 +1048,6 @@ class InfluxQueryModel {
   }
 
   renderTagCondition(tag, index, interpolate) {
-    // FIXME: merge this function with query_builder/renderTagCondition
     let str = '';
     let operator = tag.operator;
     let value = tag.value;
@@ -1083,7 +1062,7 @@ class InfluxQueryModel {
       } else {
         operator = '=';
       }
-    } // quote value unless regex
+    } 
 
 
     if (operator !== '=~' && operator !== '!~') {
@@ -1121,16 +1100,15 @@ class InfluxQueryModel {
   }
 
   interpolateQueryStr(value, variable, defaultFormatFn) {
-    // if no multi or include all do not regexEscape
     if (!variable.multi && !variable.includeAll) {
       return value;
     }
 
     if (typeof value === 'string') {
-      return kbn/* default.regexEscape */.Z.regexEscape(value);
+      return kbn.Z.regexEscape(value);
     }
 
-    const escapedValues = (0,lodash.map)(value, kbn/* default.regexEscape */.Z.regexEscape);
+    const escapedValues = (0,lodash.map)(value, kbn.Z.regexEscape);
     return '(' + escapedValues.join('|') + ')';
   }
 
@@ -1180,7 +1158,6 @@ class InfluxQueryModel {
       const part = this.groupByParts[i];
 
       if (i > 0) {
-        // for some reason fill has no separator
         groupBySection += part.def.type === 'fill' ? ' ' : ', ';
       }
 
@@ -1223,42 +1200,34 @@ class InfluxQueryModel {
 
 }
 InfluxQueryModel.$inject = ["target", "templateSrv", "scopedVars"];
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/queryUtils.ts
+;
 
 
-// FIXME: these functions are a beginning of a refactoring of influx_query_model.ts
-// into a simpler approach with full typescript types.
-// later we should be able to migrate the unit-tests
-// that relate to these functions here, and then perhaps even move the implementation
-// to this place
 function buildRawQuery(query) {
-  const queryCopy = (0,lodash.cloneDeep)(query); // the query-model mutates the query
+  const queryCopy = (0,lodash.cloneDeep)(query); 
 
   const model = new InfluxQueryModel(queryCopy);
   return model.render(false);
 }
 function normalizeQuery(query) {
-  // we return the original query if there is no need to update it
   if (query.policy !== undefined && query.resultFormat !== undefined && query.orderByTime !== undefined && query.tags !== undefined && query.groupBy !== undefined && query.select !== undefined) {
     return query;
-  } // FIXME: we should move the whole normalizeQuery logic here,
-  // and then have influxQueryModel call this function,
-  // to concentrate the whole logic here
+  } 
 
 
-  const queryCopy = (0,lodash.cloneDeep)(query); // the query-model mutates the query
+  const queryCopy = (0,lodash.cloneDeep)(query); 
 
   return new InfluxQueryModel(queryCopy).target;
 }
 function addNewSelectPart(query, type, index) {
-  const queryCopy = (0,lodash.cloneDeep)(query); // the query-model mutates the query
+  const queryCopy = (0,lodash.cloneDeep)(query); 
 
   const model = new InfluxQueryModel(queryCopy);
   model.addSelectPart(model.selectModels[index], type);
   return model.target;
 }
 function removeSelectPart(query, partIndex, index) {
-  const queryCopy = (0,lodash.cloneDeep)(query); // the query-model mutates the query
+  const queryCopy = (0,lodash.cloneDeep)(query); 
 
   const model = new InfluxQueryModel(queryCopy);
   const selectModel = model.selectModels[index];
@@ -1268,7 +1237,6 @@ function removeSelectPart(query, partIndex, index) {
 function changeSelectPart(query, listIndex, partIndex, newParams) {
   var _query$select;
 
-  // we need to make shallow copy of `query.select` down to `query.select[listIndex][partIndex]`
   const newSel = [...((_query$select = query.select) !== null && _query$select !== void 0 ? _query$select : [])];
   newSel[listIndex] = [...newSel[listIndex]];
   newSel[listIndex][partIndex] = Object.assign({}, newSel[listIndex][partIndex], {
@@ -1279,14 +1247,14 @@ function changeSelectPart(query, listIndex, partIndex, newParams) {
   });
 }
 function addNewGroupByPart(query, type) {
-  const queryCopy = (0,lodash.cloneDeep)(query); // the query-model mutates the query
+  const queryCopy = (0,lodash.cloneDeep)(query); 
 
   const model = new InfluxQueryModel(queryCopy);
   model.addGroupBy(type);
   return model.target;
 }
 function removeGroupByPart(query, partIndex) {
-  const queryCopy = (0,lodash.cloneDeep)(query); // the query-model mutates the query
+  const queryCopy = (0,lodash.cloneDeep)(query); 
 
   const model = new InfluxQueryModel(queryCopy);
   model.removeGroupByPart(model.groupByParts[partIndex], partIndex);
@@ -1295,7 +1263,6 @@ function removeGroupByPart(query, partIndex) {
 function changeGroupByPart(query, partIndex, newParams) {
   var _query$groupBy;
 
-  // we need to make shallow copy of `query.groupBy` down to `query.groupBy[partIndex]`
   const newGroupBy = [...((_query$groupBy = query.groupBy) !== null && _query$groupBy !== void 0 ? _query$groupBy : [])];
   newGroupBy[partIndex] = Object.assign({}, newGroupBy[partIndex], {
     params: newParams
@@ -1304,9 +1271,8 @@ function changeGroupByPart(query, partIndex, newParams) {
     groupBy: newGroupBy
   });
 }
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/FluxQueryEditor.tsx
+;
 var FluxQueryEditor_div, _LinkButton, _div2;
 
 function FluxQueryEditor_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1392,7 +1358,7 @@ class FluxQueryEditor extends react.PureComponent {
     FluxQueryEditor_defineProperty(this, "onSampleChange", val => {
       this.props.onChange(Object.assign({}, this.props.query, {
         query: val.value
-      })); // Angular HACK: Since the target does not actually change!
+      })); 
 
       this.forceUpdate();
       this.props.onRunQuery();
@@ -1448,14 +1414,14 @@ class FluxQueryEditor extends react.PureComponent {
       query
     } = this.props;
 
-    const helpTooltip = FluxQueryEditor_div || (FluxQueryEditor_div = /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-      children: ["Type: ", /*#__PURE__*/(0,jsx_runtime.jsx)("i", {
+    const helpTooltip = FluxQueryEditor_div || (FluxQueryEditor_div = (0,jsx_runtime.jsxs)("div", {
+      children: ["Type: ", (0,jsx_runtime.jsx)("i", {
         children: "ctrl+space"
-      }), " to show template variable suggestions ", /*#__PURE__*/(0,jsx_runtime.jsx)("br", {}), "Many queries can be copied from Chronograf"]
+      }), " to show template variable suggestions ", (0,jsx_runtime.jsx)("br", {}), "Many queries can be copied from Chronograf"]
     }));
 
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
         height: '200px',
         language: "sql",
         value: query.query || '',
@@ -1465,26 +1431,26 @@ class FluxQueryEditor extends react.PureComponent {
         showLineNumbers: true,
         getSuggestions: this.getSuggestions,
         onEditorDidMount: this.editorDidMountCallbackHack
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), (0,jsx_runtime.jsxs)("div", {
         className: (0,emotion_css_esm.cx)('gf-form-inline', emotion_css_esm.css`
               margin-top: 6px;
             `),
-        children: [_LinkButton || (_LinkButton = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+        children: [_LinkButton || (_LinkButton = (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
           icon: "external-link-alt",
           variant: "secondary",
           target: "blank",
           href: "https://docs.influxdata.com/influxdb/latest/query-data/get-started/",
           children: "Flux language syntax"
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Segment, {
+        })), (0,jsx_runtime.jsx)(grafana_ui_src.Segment, {
           options: samples,
           value: "Sample Query",
           onChange: this.onSampleChange
-        }), _div2 || (_div2 = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        }), _div2 || (_div2 = (0,jsx_runtime.jsx)("div", {
           className: "gf-form gf-form--grow",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+          children: (0,jsx_runtime.jsx)("div", {
             className: "gf-form-label gf-form-label--grow"
           })
-        })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+        })), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
           width: 5,
           tooltip: helpTooltip,
           children: "Help"
@@ -1494,7 +1460,7 @@ class FluxQueryEditor extends react.PureComponent {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/QueryEditorModeSwitcher.tsx
+;
 
 
 
@@ -1507,22 +1473,20 @@ const QueryEditorModeSwitcher = _ref => {
   } = _ref;
   const [isModalOpen, setModalOpen] = (0,react.useState)(false);
   (0,react.useEffect)(() => {
-    // if the isRaw changes, we hide the modal
     setModalOpen(false);
   }, [isRaw]);
 
   if (isRaw) {
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
         "aria-label": "Switch to visual editor",
         icon: "pen",
         variant: "secondary",
         type: "button",
         onClick: () => {
-          // we show the are-you-sure modal
           setModalOpen(true);
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.ConfirmModal, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.ConfirmModal, {
         isOpen: isModalOpen,
         title: "Switch to visual editor mode",
         body: "Are you sure to switch to visual editor mode? You will lose the changes done in raw query mode.",
@@ -1537,7 +1501,7 @@ const QueryEditorModeSwitcher = _ref => {
       })]
     });
   } else {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+    return (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
       "aria-label": "Switch to text editor",
       icon: "pen",
       variant: "secondary",
@@ -1548,7 +1512,7 @@ const QueryEditorModeSwitcher = _ref => {
     });
   }
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/constants.ts
+;
 const RESULT_FORMATS = [{
   label: 'Time series',
   value: 'time_series'
@@ -1560,17 +1524,15 @@ const RESULT_FORMATS = [{
   value: 'logs'
 }];
 const DEFAULT_RESULT_FORMAT = 'time_series';
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/usePrevious.js
 var usePrevious = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/usePrevious.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/useShadowedState.ts
+;
 
 
 function useShadowedState(outsideVal) {
   const [currentVal, setCurrentVal] = (0,react.useState)(outsideVal);
-  const prevOutsideVal = (0,usePrevious/* default */.Z)(outsideVal);
+  const prevOutsideVal = (0,usePrevious.Z)(outsideVal);
   (0,react.useEffect)(() => {
-    const isOutsideValChanged = prevOutsideVal !== outsideVal; // if the value changes from the outside, we accept it into the state
-    // (we only set it if it is different from the current value)
+    const isOutsideValChanged = prevOutsideVal !== outsideVal; 
 
     if (isOutsideValChanged && currentVal !== outsideVal) {
       setCurrentVal(outsideVal);
@@ -1578,9 +1540,8 @@ function useShadowedState(outsideVal) {
   }, [outsideVal, currentVal, prevOutsideVal]);
   return [currentVal, setCurrentVal];
 }
-// EXTERNAL MODULE: ./public/app/plugins/datasource/influxdb/components/useUniqueId.ts
 var useUniqueId = __webpack_require__("./public/app/plugins/datasource/influxdb/components/useUniqueId.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/RawInfluxQLEditor.tsx
+;
 
 
 
@@ -1588,9 +1549,6 @@ var useUniqueId = __webpack_require__("./public/app/plugins/datasource/influxdb/
 
 
 
-// we handle 3 fields: "query", "alias", "resultFormat"
-// "resultFormat" changes are applied immediately
-// "query" and "alias" changes only happen on onblur
 const RawInfluxQLEditor = _ref => {
   var _query$resultFormat;
 
@@ -1601,8 +1559,8 @@ const RawInfluxQLEditor = _ref => {
   } = _ref;
   const [currentQuery, setCurrentQuery] = useShadowedState(query.query);
   const [currentAlias, setCurrentAlias] = useShadowedState(query.alias);
-  const aliasElementId = (0,useUniqueId/* useUniqueId */.L)();
-  const selectElementId = (0,useUniqueId/* useUniqueId */.L)();
+  const aliasElementId = (0,useUniqueId.L)();
+  const selectElementId = (0,useUniqueId.L)();
   const resultFormat = (_query$resultFormat = query.resultFormat) !== null && _query$resultFormat !== void 0 ? _query$resultFormat : DEFAULT_RESULT_FORMAT;
 
   const applyDelayedChangesAndRunQuery = () => {
@@ -1614,8 +1572,8 @@ const RawInfluxQLEditor = _ref => {
     onRunQuery();
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.TextArea, {
+  return (0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.TextArea, {
       "aria-label": "query",
       rows: 3,
       spellCheck: false,
@@ -1625,11 +1583,11 @@ const RawInfluxQLEditor = _ref => {
         setCurrentQuery(e.currentTarget.value);
       },
       value: currentQuery !== null && currentQuery !== void 0 ? currentQuery : ''
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+    }), (0,jsx_runtime.jsxs)(grafana_ui_src.HorizontalGroup, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
         htmlFor: selectElementId,
         children: "Format as"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         inputId: selectElementId,
         onChange: v => {
           onChange(Object.assign({}, query, {
@@ -1639,10 +1597,10 @@ const RawInfluxQLEditor = _ref => {
         },
         value: resultFormat,
         options: RESULT_FORMATS
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
         htmlFor: aliasElementId,
         children: "Alias by"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
         id: aliasElementId,
         type: "text",
         spellCheck: false,
@@ -1656,12 +1614,11 @@ const RawInfluxQLEditor = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/query_builder.ts
+;
 
 
 
 function renderTagCondition(tag, index) {
-  // FIXME: merge this function with influx_query_model/renderTagCondition
   let str = '';
   let operator = tag.operator;
   let value = tag.value;
@@ -1676,7 +1633,7 @@ function renderTagCondition(tag, index) {
     } else {
       operator = '=';
     }
-  } // quote value unless regex or number, or if empty-string
+  } 
 
 
   if (value === '' || operator !== '=~' && operator !== '!~' && isNaN(+value)) {
@@ -1711,8 +1668,7 @@ class InfluxQueryBuilder {
       query = 'SHOW MEASUREMENTS';
 
       if (withMeasurementFilter) {
-        // we do a case-insensitive regex-based lookup
-        query += ' WITH MEASUREMENT =~ /(?i)' + kbn/* default.regexEscape */.Z.regexEscape(withMeasurementFilter) + '/';
+        query += ' WITH MEASUREMENT =~ /(?i)' + kbn.Z.regexEscape(withMeasurementFilter) + '/';
       }
     } else if (type === 'FIELDS') {
       measurement = this.target.measurement;
@@ -1752,10 +1708,9 @@ class InfluxQueryBuilder {
 
     if (this.target.tags && this.target.tags.length > 0) {
       const whereConditions = (0,lodash.reduce)(this.target.tags, (memo, tag) => {
-        // do not add a condition for the key we want to explore for
         if (tag.key === withKey) {
           return memo;
-        } // value operators not supported in these types of queries
+        } 
 
 
         if (tag.operator === '>' || tag.operator === '<') {
@@ -1772,16 +1727,14 @@ class InfluxQueryBuilder {
     }
 
     if (type === 'MEASUREMENTS') {
-      query += ' LIMIT 100'; //Solve issue #2524 by limiting the number of measurements returned
-      //LIMIT must be after WITH MEASUREMENT and WHERE clauses
-      //This also could be used for TAG KEYS and TAG VALUES, if desired
+      query += ' LIMIT 100'; 
     }
 
     return query;
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/influxQLMetadataQuery.ts
+;
 
 
 const runExploreQuery = (type, withKey, withMeasurementFilter, target, datasource) => {
@@ -1835,12 +1788,12 @@ async function getFieldKeysForMeasurement(measurement, policy, datasource) {
   const data = await runExploreQuery('FIELDS', undefined, undefined, target, datasource);
   return data.map(item => item.text);
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VisualInfluxQLEditor/styles.ts
+;
 
 const paddingRightClass = (0,emotion_css_esm.css)({
   paddingRight: '4px'
 });
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VisualInfluxQLEditor/unwrap.ts
+;
 function unwrap(value) {
   if (value == null) {
     throw new Error('value must not be nullish');
@@ -1848,7 +1801,7 @@ function unwrap(value) {
 
   return value;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VisualInfluxQLEditor/FormatAsSection.tsx
+;
 
 
 
@@ -1863,7 +1816,7 @@ const FormatAsSection = _ref => {
     inputId,
     onChange
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
     inputId: inputId,
     className: className,
     onChange: v => {
@@ -1873,34 +1826,21 @@ const FormatAsSection = _ref => {
     options: RESULT_FORMATS
   });
 };
-// EXTERNAL MODULE: ./.yarn/cache/debounce-promise-npm-3.1.2-3c185da0c7-29bac4524c.zip/node_modules/debounce-promise/dist/index.js
 var dist = __webpack_require__("./.yarn/cache/debounce-promise-npm-3.1.2-3c185da0c7-29bac4524c.zip/node_modules/debounce-promise/dist/index.js");
-var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useAsyncFn.js
+var dist_default = __webpack_require__.n(dist);
 var useAsyncFn = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/useAsyncFn.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VisualInfluxQLEditor/Seg.tsx
+;
 
 
 
 
 
- // this file is a simpler version of `grafana-ui / SegmentAsync.tsx`
-// with some changes:
-// 1. click-outside does not select the value. i think it's better to be explicit here.
-// 2. we set a min-width on the select-element to handle cases where the `value`
-//    is very short, like "x", and then you click on it and the select opens,
-//    and it tries to be as short as "x" and it does not work well.
-// NOTE: maybe these changes could be migrated into the SegmentAsync later
 
 
 const selectClass = (0,emotion_css_esm.css)({
   minWidth: '160px'
 });
 
-// when a custom value is written into a select-box,
-// by default the new value is prefixed with "Create:",
-// and that sounds confusing because here we do not create
-// anything. we change this to just be the entered string.
 const formatCreateLabel = v => v;
 
 const SelReload = _ref => {
@@ -1910,19 +1850,12 @@ const SelReload = _ref => {
     onChange,
     onClose
   } = _ref;
-  // here we rely on the fact that writing text into the <AsyncSelect/>
-  // does not cause a re-render of the current react component.
-  // this way there is only a single render-call,
-  // so there is only a single `debouncedLoadOptions`.
-  // if we want ot make this "re-render safe,
-  // we will have to put the debounced call into an useRef,
-  // and probably have an useEffect
   const debouncedLoadOptions = dist_default()(loadOptions, 1000, {
     leading: true
   });
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: selectClass,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.AsyncSelect, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.AsyncSelect, {
       formatCreateLabel: formatCreateLabel,
       defaultOptions: true,
       autoFocus: true,
@@ -1944,13 +1877,13 @@ const SelSingleLoad = _ref2 => {
     onChange,
     onClose
   } = _ref2;
-  const [loadState, doLoad] = (0,useAsyncFn/* default */.Z)(loadOptions, [loadOptions]);
+  const [loadState, doLoad] = (0,useAsyncFn.Z)(loadOptions, [loadOptions]);
   (0,react.useEffect)(() => {
     doLoad('');
   }, [doLoad, loadOptions]);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: selectClass,
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       isLoading: loadState.loading,
       formatCreateLabel: formatCreateLabel,
       autoFocus: true,
@@ -1971,14 +1904,12 @@ const Sel = _ref3 => {
     onChange,
     onClose
   } = _ref3;
-  // unfortunately <Segment/> and <SegmentAsync/> have somewhat different behavior,
-  // so the simplest approach was to just create two separate wrapper-components
-  return filterByLoadOptions ? /*#__PURE__*/(0,jsx_runtime.jsx)(SelReload, {
+  return filterByLoadOptions ? (0,jsx_runtime.jsx)(SelReload, {
     loadOptions: loadOptions,
     allowCustomValue: allowCustomValue,
     onChange: onChange,
     onClose: onClose
-  }) : /*#__PURE__*/(0,jsx_runtime.jsx)(SelSingleLoad, {
+  }) : (0,jsx_runtime.jsx)(SelSingleLoad, {
     loadOptions: loadOptions,
     allowCustomValue: allowCustomValue,
     onChange: onChange,
@@ -1993,7 +1924,7 @@ const Inp = _ref4 => {
     onClose
   } = _ref4;
   const [currentValue, setCurrentValue] = useShadowedState(initialValue);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
     autoFocus: true,
     type: "text",
     spellCheck: false,
@@ -2027,7 +1958,7 @@ const Seg = _ref5 => {
 
   if (!isOpen) {
     const className = (0,emotion_css_esm.cx)(defaultButtonClass, buttonClassName);
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
+    return (0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
       as: "button",
       className: className,
       onClick: () => {
@@ -2037,7 +1968,7 @@ const Seg = _ref5 => {
     });
   } else {
     if (loadOptions !== undefined) {
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(Sel, {
+      return (0,jsx_runtime.jsx)(Sel, {
         loadOptions: loadOptions,
         filterByLoadOptions: filterByLoadOptions !== null && filterByLoadOptions !== void 0 ? filterByLoadOptions : false,
         allowCustomValue: allowCustomValue,
@@ -2050,7 +1981,7 @@ const Seg = _ref5 => {
         }
       });
     } else {
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(Inp, {
+      return (0,jsx_runtime.jsx)(Inp, {
         initialValue: value,
         onClose: () => {
           setOpen(false);
@@ -2066,30 +1997,21 @@ const Seg = _ref5 => {
     }
   }
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VisualInfluxQLEditor/toSelectableValue.ts
+;
 function toSelectableValue(t) {
   return {
     label: t,
     value: t
   };
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VisualInfluxQLEditor/FromSection.tsx
+;
 
 
 
 
 
 
-const DEFAULT_POLICY = 'default'; // we use the value "default" as a magic-value, it means
-// we use the default retention-policy.
-// unfortunately, IF the user has a retention-policy named "default",
-// and it is not the default-retention-policy in influxdb,
-// bad things will happen.
-// https://github.com/grafana/grafana/issues/4347 :-(
-// FIXME: we could maybe at least detect here that problem-is-happening,
-// and show an error message or something.
-// unfortunately, currently the ResponseParser does not return the
-// is-default info for the retention-policies, so that should change first.
+const DEFAULT_POLICY = 'default'; 
 
 const FromSection = _ref => {
   let {
@@ -2101,7 +2023,7 @@ const FromSection = _ref => {
   } = _ref;
 
   const handlePolicyLoadOptions = async () => {
-    const allPolicies = await getPolicyOptions(); // if `default` does not exist in the list of policies, we add it
+    const allPolicies = await getPolicyOptions(); 
 
     const allPoliciesWithDefault = allPolicies.some(p => p === 'default') ? allPolicies : [DEFAULT_POLICY, ...allPolicies];
     return allPoliciesWithDefault.map(toSelectableValue);
@@ -2112,15 +2034,15 @@ const FromSection = _ref => {
     return allMeasurements.map(toSelectableValue);
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(Seg, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(Seg, {
       allowCustomValue: true,
       value: policy !== null && policy !== void 0 ? policy : 'using default policy',
       loadOptions: handlePolicyLoadOptions,
       onChange: v => {
         onChange(v.value, measurement);
       }
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(Seg, {
+    }), (0,jsx_runtime.jsx)(Seg, {
       allowCustomValue: true,
       value: measurement !== null && measurement !== void 0 ? measurement : 'select measurement',
       loadOptions: handleMeasurementLoadOptions,
@@ -2131,7 +2053,7 @@ const FromSection = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VisualInfluxQLEditor/InputSection.tsx
+;
 
 
 
@@ -2149,13 +2071,12 @@ const InputSection = _ref => {
   const [currentValue, setCurrentValue] = useShadowedState(value);
 
   const onBlur = () => {
-    // we send empty-string as undefined
     const newValue = currentValue === '' ? undefined : currentValue;
     onChange(newValue);
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
       placeholder: placeholder,
       className: (0,emotion_css_esm.cx)((isWide !== null && isWide !== void 0 ? isWide : false) ? 'width-14' : 'width-8', paddingRightClass),
       type: "text",
@@ -2168,7 +2089,7 @@ const InputSection = _ref => {
     })
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VisualInfluxQLEditor/OrderByTimeSection.tsx
+;
 
 
 
@@ -2190,8 +2111,8 @@ const OrderByTimeSection = _ref => {
     onChange,
     inputId
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+  return (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
       inputId: inputId,
       className: OrderByTimeSection_className,
       onChange: v => {
@@ -2202,7 +2123,7 @@ const OrderByTimeSection = _ref => {
     })
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VisualInfluxQLEditor/AddButton.tsx
+;
 
 
 
@@ -2213,7 +2134,7 @@ const AddButton = _ref => {
     allowCustomValue,
     onAdd
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Seg, {
+  return (0,jsx_runtime.jsx)(Seg, {
     value: "+",
     loadOptions: loadOptions,
     allowCustomValue: allowCustomValue,
@@ -2222,7 +2143,7 @@ const AddButton = _ref => {
     }
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VisualInfluxQLEditor/PartListSection.tsx
+;
 
 
 
@@ -2235,9 +2156,9 @@ const AddButton = _ref => {
 
 
 const renderRemovableNameMenuItems = onClick => {
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.MenuGroup, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.MenuGroup, {
     label: "",
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.MenuItem, {
+    children: (0,jsx_runtime.jsx)(grafana_ui_src.MenuItem, {
       label: "remove",
       onClick: onClick
     })
@@ -2254,13 +2175,13 @@ const RemovableName = _ref => {
     name,
     onRemove
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.WithContextMenu, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.WithContextMenu, {
     renderMenuItems: () => renderRemovableNameMenuItems(onRemove),
     children: _ref2 => {
       let {
         openMenu
       } = _ref2;
-      return /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+      return (0,jsx_runtime.jsx)("button", {
         className: (0,emotion_css_esm.cx)('gf-form-label', noRightMarginPaddingClass),
         onClick: openMenu,
         children: name
@@ -2279,8 +2200,6 @@ const noHorizMarginPaddingClass = (0,emotion_css_esm.css)({
 const getPartClass = theme => {
   return (0,emotion_css_esm.cx)('gf-form-label', (0,emotion_css_esm.css)({
     paddingLeft: '0',
-    // gf-form-label class makes certain css attributes incorrect
-    // for the selectbox-dropdown, so we have to "reset" them back
     lineHeight: theme.typography.body.lineHeight,
     fontSize: theme.typography.body.fontSize
   }));
@@ -2302,9 +2221,9 @@ const Part = _ref3 => {
     onChange(newParams);
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: partClass,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(RemovableName, {
+    children: [(0,jsx_runtime.jsx)(RemovableName, {
       name: name,
       onRemove: onRemove
     }), "(", params.map((p, i) => {
@@ -2314,8 +2233,8 @@ const Part = _ref3 => {
       } = p;
       const isLast = i === params.length - 1;
       const loadOptions = options !== null ? () => options().then(items => items.map(toSelectableValue)) : undefined;
-      return /*#__PURE__*/(0,jsx_runtime.jsxs)(react.Fragment, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(Seg, {
+      return (0,jsx_runtime.jsxs)(react.Fragment, {
+        children: [(0,jsx_runtime.jsx)(Seg, {
           allowCustomValue: true,
           value: value,
           buttonClassName: noHorizMarginPaddingClass,
@@ -2337,8 +2256,8 @@ const PartListSection = _ref4 => {
     onRemovePart,
     onChange
   } = _ref4;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [parts.map((part, index) => /*#__PURE__*/(0,jsx_runtime.jsx)(Part, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [parts.map((part, index) => (0,jsx_runtime.jsx)(Part, {
       name: part.name,
       params: part.params,
       onRemove: () => {
@@ -2347,25 +2266,23 @@ const PartListSection = _ref4 => {
       onChange: pars => {
         onChange(index, pars);
       }
-    }, index)), /*#__PURE__*/(0,jsx_runtime.jsx)(AddButton, {
+    }, index)), (0,jsx_runtime.jsx)(AddButton, {
       loadOptions: getNewPartOptions,
       onAdd: onAddNewPart
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VisualInfluxQLEditor/tagUtils.ts
+;
 function isRegex(text) {
   return /^\/.*\/$/.test(text);
-} // FIXME: sync these to the query-string-generation-code
-// probably it's in influx_query_model.ts
+} 
 
 
 function getOperator(tag) {
   var _tag$operator;
 
   return (_tag$operator = tag.operator) !== null && _tag$operator !== void 0 ? _tag$operator : isRegex(tag.value) ? '=~' : '=';
-} // FIXME: sync these to the query-string-generation-code
-// probably it's in influx_query_model.ts
+} 
 
 function getCondition(tag, isFirst) {
   var _tag$condition;
@@ -2382,7 +2299,7 @@ function adjustOperatorIfNeeded(currentOperator, newTagValue) {
     return isCurrentOperatorRegex ? '=' : currentOperator;
   }
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VisualInfluxQLEditor/TagsSection.tsx
+;
 
 
 
@@ -2414,14 +2331,6 @@ const Tag = _ref => {
 
   const getTagKeySegmentOptions = () => {
     return getTagKeyOptions().catch(err => {
-      // in this UI element we add a special item to the list of options,
-      // that is used to remove the element.
-      // this causes a problem: if `getTagKeyOptions` fails with an error,
-      // the remove-filter option is never added to the list,
-      // and the UI element can not be removed.
-      // to avoid it, we catch any potential errors coming from `getTagKeyOptions`,
-      // log the error, and pretend that the list of options is an empty list.
-      // this way the remove-item option can always be added to the list.
       console.error(err);
       return [];
     }).then(tags => [{
@@ -2434,9 +2343,9 @@ const Tag = _ref => {
     return getTagValueOptions(tag.key).then(tags => tags.map(toSelectableValue));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: "gf-form",
-    children: [condition != null && /*#__PURE__*/(0,jsx_runtime.jsx)(Seg, {
+    children: [condition != null && (0,jsx_runtime.jsx)(Seg, {
       value: condition,
       loadOptions: loadConditionOptions,
       onChange: v => {
@@ -2444,7 +2353,7 @@ const Tag = _ref => {
           condition: v.value
         }));
       }
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(Seg, {
+    }), (0,jsx_runtime.jsx)(Seg, {
       allowCustomValue: true,
       value: tag.key,
       loadOptions: getTagKeySegmentOptions,
@@ -2461,7 +2370,7 @@ const Tag = _ref => {
           }));
         }
       }
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(Seg, {
+    }), (0,jsx_runtime.jsx)(Seg, {
       value: operator,
       loadOptions: loadOperatorOptions,
       onChange: op => {
@@ -2469,7 +2378,7 @@ const Tag = _ref => {
           operator: op.value
         }));
       }
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(Seg, {
+    }), (0,jsx_runtime.jsx)(Seg, {
       allowCustomValue: true,
       value: tag.value,
       loadOptions: getTagValueSegmentOptions,
@@ -2524,8 +2433,8 @@ const TagsSection = _ref2 => {
     onChange([...tags, newTag]);
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [tags.map((t, i) => /*#__PURE__*/(0,jsx_runtime.jsx)(Tag, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [tags.map((t, i) => (0,jsx_runtime.jsx)(Tag, {
       tag: t,
       isFirst: i === 0,
       onChange: newT => {
@@ -2536,7 +2445,7 @@ const TagsSection = _ref2 => {
       },
       getTagKeyOptions: getTagKeyOptions,
       getTagValueOptions: getTagValueOptions
-    }, i)), /*#__PURE__*/(0,jsx_runtime.jsx)(AddButton, {
+    }, i)), (0,jsx_runtime.jsx)(AddButton, {
       allowCustomValue: true,
       loadOptions: getTagKeySegmentOptions,
       onAdd: v => {
@@ -2545,7 +2454,7 @@ const TagsSection = _ref2 => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VisualInfluxQLEditor/partListUtils.tsx
+;
 
 
 
@@ -2565,7 +2474,7 @@ function getNewSelectPartOptions() {
 }
 async function getNewGroupByPartOptions(query, getTagKeys) {
   const tagKeys = await getTagKeys();
-  const queryCopy = Object.assign({}, query); // the query-model mutates the query
+  const queryCopy = Object.assign({}, query); 
 
   const model = new InfluxQueryModel(queryCopy);
   const options = [];
@@ -2587,12 +2496,7 @@ async function getNewGroupByPartOptions(query, getTagKeys) {
 function getPartParams(part, dynamicParamOptions) {
   var _part$params;
 
-  // NOTE: the way the system is constructed,
-  // there always can only be one possible dynamic-lookup
-  // field. in case of select it is the field,
-  // in case of group-by it is the tag
-  const def = influxdb_query_part.create(part).def; // we switch the numbers to strings, it will work that way too,
-  // and it makes the code simpler
+  const def = influxdb_query_part.create(part).def; 
 
   const paramValues = ((_part$params = part.params) !== null && _part$params !== void 0 ? _part$params : []).map(p => p.toString());
 
@@ -2632,7 +2536,7 @@ function makePartList(queryParts, dynamicParamOptions) {
     };
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VisualInfluxQLEditor/Editor.tsx
+;
 
 
 
@@ -2653,16 +2557,14 @@ function makePartList(queryParts, dynamicParamOptions) {
 
 
 function getTemplateVariableOptions() {
-  return (0,grafana_runtime_src.getTemplateSrv)().getVariables() // we make them regex-params, i'm not 100% sure why.
-  // probably because this way multi-value variables work ok too.
+  return (0,grafana_runtime_src.getTemplateSrv)().getVariables() 
   .map(v => `/^$${v.name}$/`);
-} // helper function to make it easy to call this from the widget-render-code
+} 
 
 
 function withTemplateVariableOptions(optionsPromise) {
   return optionsPromise.then(options => [...getTemplateVariableOptions(), ...options]);
-} // it is possible to add fields into the `InfluxQueryTag` structures, and they do work,
-// but in some cases, when we do metadata queries, we have to remove them from the queries.
+} 
 
 
 function filterTags(parts, allTagKeys) {
@@ -2672,7 +2574,7 @@ function filterTags(parts, allTagKeys) {
 const Editor = props => {
   var _query$tags3, _query$limit, _query$slimit, _query$resultFormat;
 
-  const uniqueId = (0,useUniqueId/* useUniqueId */.L)();
+  const uniqueId = (0,useUniqueId.L)();
   const formatAsId = `influxdb-qe-format-as-${uniqueId}`;
   const orderByTimeId = `influxdb-qe-order-by${uniqueId}`;
   const styles = (0,grafana_ui_src.useStyles2)(getStyles);
@@ -2696,8 +2598,7 @@ const Editor = props => {
       return measurement !== undefined ? getFieldKeysForMeasurement(measurement, policy, datasource) : Promise.resolve([]);
     }]]);
     return ((_query$select = query.select) !== null && _query$select !== void 0 ? _query$select : []).map(sel => makePartList(sel, dynamicSelectPartOptions));
-  }, [measurement, policy, query.select, datasource]); // the following function is not complicated enough to memoize, but it's result
-  // is used in both memoized and un-memoized parts, so we have no choice
+  }, [measurement, policy, query.select, datasource]); 
 
   const getTagKeys = (0,react.useMemo)(() => {
     return () => allTagKeys.then(keys => {
@@ -2726,17 +2627,16 @@ const Editor = props => {
   };
 
   const handleTagsSectionChange = tags => {
-    // we set empty-arrays to undefined
     onAppliedChange(Object.assign({}, query, {
       tags: tags.length === 0 ? undefined : tags
     }));
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.SegmentSection, {
+  return (0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsxs)(grafana_ui_src.SegmentSection, {
       label: "FROM",
       fill: true,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(FromSection, {
+      children: [(0,jsx_runtime.jsx)(FromSection, {
         policy: policy,
         measurement: measurement,
         getPolicyOptions: () => getAllPolicies(datasource),
@@ -2746,11 +2646,11 @@ const Editor = props => {
           return getAllMeasurementsForTags(filter === '' ? undefined : filter, filterTags((_query$tags2 = query.tags) !== null && _query$tags2 !== void 0 ? _query$tags2 : [], keys), datasource);
         })),
         onChange: handleFromSectionChange
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
         width: "auto",
         className: styles.inlineLabel,
         children: "WHERE"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(TagsSection, {
+      }), (0,jsx_runtime.jsx)(TagsSection, {
         tags: (_query$tags3 = query.tags) !== null && _query$tags3 !== void 0 ? _query$tags3 : [],
         onChange: handleTagsSectionChange,
         getTagKeyOptions: getTagKeys,
@@ -2760,10 +2660,10 @@ const Editor = props => {
           return getTagValues(key, measurement, policy, filterTags((_query$tags4 = query.tags) !== null && _query$tags4 !== void 0 ? _query$tags4 : [], keys), datasource);
         }))
       })]
-    }), selectLists.map((sel, index) => /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.SegmentSection, {
+    }), selectLists.map((sel, index) => (0,jsx_runtime.jsx)(grafana_ui_src.SegmentSection, {
       label: index === 0 ? 'SELECT' : '',
       fill: true,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(PartListSection, {
+      children: (0,jsx_runtime.jsx)(PartListSection, {
         parts: sel,
         getNewPartOptions: () => Promise.resolve(getNewSelectPartOptions()),
         onChange: (partIndex, newParams) => {
@@ -2777,10 +2677,10 @@ const Editor = props => {
           onAppliedChange(removeSelectPart(query, partIndex, index));
         }
       })
-    }, index)), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.SegmentSection, {
+    }, index)), (0,jsx_runtime.jsx)(grafana_ui_src.SegmentSection, {
       label: "GROUP BY",
       fill: true,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(PartListSection, {
+      children: (0,jsx_runtime.jsx)(PartListSection, {
         parts: groupByList,
         getNewPartOptions: () => getNewGroupByPartOptions(query, getTagKeys),
         onChange: (partIndex, newParams) => {
@@ -2794,10 +2694,10 @@ const Editor = props => {
           onAppliedChange(removeGroupByPart(query, partIndex));
         }
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.SegmentSection, {
+    }), (0,jsx_runtime.jsxs)(grafana_ui_src.SegmentSection, {
       label: "TIMEZONE",
       fill: true,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(InputSection, {
+      children: [(0,jsx_runtime.jsx)(InputSection, {
         placeholder: "(optional)",
         value: query.tz,
         onChange: tz => {
@@ -2805,15 +2705,14 @@ const Editor = props => {
             tz
           }));
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
         htmlFor: orderByTimeId,
         width: "auto",
         className: styles.inlineLabel,
         children: "ORDER BY TIME"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(OrderByTimeSection, {
+      }), (0,jsx_runtime.jsx)(OrderByTimeSection, {
         inputId: orderByTimeId,
         value: query.orderByTime === 'DESC' ? 'DESC' : 'ASC'
-        /* FIXME: make this shared with influx_query_model */
         ,
         onChange: v => {
           onAppliedChange(Object.assign({}, query, {
@@ -2821,10 +2720,10 @@ const Editor = props => {
           }));
         }
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.SegmentSection, {
+    }), (0,jsx_runtime.jsxs)(grafana_ui_src.SegmentSection, {
       label: "LIMIT",
       fill: true,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(InputSection, {
+      children: [(0,jsx_runtime.jsx)(InputSection, {
         placeholder: "(optional)",
         value: (_query$limit = query.limit) === null || _query$limit === void 0 ? void 0 : _query$limit.toString(),
         onChange: limit => {
@@ -2832,11 +2731,11 @@ const Editor = props => {
             limit
           }));
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
         width: "auto",
         className: styles.inlineLabel,
         children: "SLIMIT"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(InputSection, {
+      }), (0,jsx_runtime.jsx)(InputSection, {
         placeholder: "(optional)",
         value: (_query$slimit = query.slimit) === null || _query$slimit === void 0 ? void 0 : _query$slimit.toString(),
         onChange: slimit => {
@@ -2845,11 +2744,11 @@ const Editor = props => {
           }));
         }
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.SegmentSection, {
+    }), (0,jsx_runtime.jsxs)(grafana_ui_src.SegmentSection, {
       htmlFor: formatAsId,
       label: "FORMAT AS",
       fill: true,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(FormatAsSection, {
+      children: [(0,jsx_runtime.jsx)(FormatAsSection, {
         inputId: formatAsId,
         format: (_query$resultFormat = query.resultFormat) !== null && _query$resultFormat !== void 0 ? _query$resultFormat : DEFAULT_RESULT_FORMAT,
         onChange: format => {
@@ -2857,12 +2756,12 @@ const Editor = props => {
             resultFormat: format
           }));
         }
-      }), query.resultFormat !== 'table' && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
+      }), query.resultFormat !== 'table' && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
           width: "auto",
           className: styles.inlineLabel,
           children: "ALIAS"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(InputSection, {
+        }), (0,jsx_runtime.jsx)(InputSection, {
           isWide: true,
           placeholder: "Naming pattern",
           value: query.alias,
@@ -2884,7 +2783,7 @@ function getStyles(theme) {
     `
   };
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/QueryEditor.tsx
+;
 
 
 
@@ -2907,9 +2806,9 @@ const QueryEditor = _ref => {
   } = _ref;
 
   if (datasource.isFlux) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       className: "gf-form-query-content",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(FluxQueryEditor, {
+      children: (0,jsx_runtime.jsx)(FluxQueryEditor, {
         query: query,
         onChange: onChange,
         onRunQuery: onRunQuery,
@@ -2918,25 +2817,25 @@ const QueryEditor = _ref => {
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: (0,emotion_css_esm.css)({
       display: 'flex'
     }),
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    children: [(0,jsx_runtime.jsx)("div", {
       className: (0,emotion_css_esm.css)({
         flexGrow: 1
       }),
-      children: query.rawQuery ? /*#__PURE__*/(0,jsx_runtime.jsx)(RawInfluxQLEditor, {
+      children: query.rawQuery ? (0,jsx_runtime.jsx)(RawInfluxQLEditor, {
         query: query,
         onChange: onChange,
         onRunQuery: onRunQuery
-      }) : /*#__PURE__*/(0,jsx_runtime.jsx)(Editor, {
+      }) : (0,jsx_runtime.jsx)(Editor, {
         query: query,
         onChange: onChange,
         onRunQuery: onRunQuery,
         datasource: datasource
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(QueryEditorModeSwitcher, {
+    }), (0,jsx_runtime.jsx)(QueryEditorModeSwitcher, {
       isRaw: (_query$rawQuery = query.rawQuery) !== null && _query$rawQuery !== void 0 ? _query$rawQuery : false,
       onChange: value => {
         onChange(Object.assign({}, query, {
@@ -2948,7 +2847,7 @@ const QueryEditor = _ref => {
     })]
   });
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/components/VariableQueryEditor.tsx
+;
 var VariableQueryEditor_InlineFormLabel;
 
 function VariableQueryEditor_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -2962,7 +2861,7 @@ class VariableQueryEditor extends react.PureComponent {
   constructor() {
     super(...arguments);
 
-    VariableQueryEditor_defineProperty(this, "onRefresh", () => {// noop
+    VariableQueryEditor_defineProperty(this, "onRefresh", () => {
     });
   }
 
@@ -2974,7 +2873,7 @@ class VariableQueryEditor extends react.PureComponent {
     } = this.props;
 
     if (datasource.isFlux) {
-      return /*#__PURE__*/(0,jsx_runtime.jsx)(FluxQueryEditor, {
+      return (0,jsx_runtime.jsx)(FluxQueryEditor, {
         datasource: datasource,
         query: {
           refId: 'A',
@@ -2985,14 +2884,14 @@ class VariableQueryEditor extends react.PureComponent {
       });
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    return (0,jsx_runtime.jsxs)("div", {
       className: "gf-form-inline",
-      children: [VariableQueryEditor_InlineFormLabel || (VariableQueryEditor_InlineFormLabel = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
+      children: [VariableQueryEditor_InlineFormLabel || (VariableQueryEditor_InlineFormLabel = (0,jsx_runtime.jsx)(grafana_ui_src.InlineFormLabel, {
         width: 10,
         children: "Query"
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      })), (0,jsx_runtime.jsx)("div", {
         className: "gf-form-inline gf-form--grow",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.TextArea, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.TextArea, {
           defaultValue: query || '',
           placeholder: "metric name or tags query",
           rows: 1,
@@ -3004,25 +2903,16 @@ class VariableQueryEditor extends react.PureComponent {
   }
 
 }
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js
 var lastValueFrom = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/throwError.js
 var throwError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/throwError.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js
 var catchError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js");
-// EXTERNAL MODULE: ./.yarn/cache/uuid-npm-8.3.2-eca0baba53-5575a8a75c.zip/node_modules/uuid/dist/esm-browser/v4.js + 1 modules
 var v4 = __webpack_require__("./.yarn/cache/uuid-npm-8.3.2-eca0baba53-5575a8a75c.zip/node_modules/uuid/dist/esm-browser/v4.js");
-// EXTERNAL MODULE: ./public/app/core/config.ts
 var config = __webpack_require__("./public/app/core/config.ts");
-// EXTERNAL MODULE: ./public/app/features/templating/template_srv.ts + 1 modules
 var template_srv = __webpack_require__("./public/app/features/templating/template_srv.ts");
-// EXTERNAL MODULE: ./public/app/core/table_model.ts
 var table_model = __webpack_require__("./public/app/core/table_model.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/influx_series.ts
+;
 function influx_series_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -3167,7 +3057,7 @@ class InfluxSeries {
         if (column === this.annotation.timeEndColumn) {
           timeEndCol = index;
           return;
-        } // legacy case
+        } 
 
 
         if (!titleCol && textCol !== index) {
@@ -3180,7 +3070,6 @@ class InfluxSeries {
           time: +new Date(value[timeCol]),
           title: value[titleCol],
           timeEnd: value[timeEndCol],
-          // Remove empty values, then split in different tags for comma separated values
           tags: (0,lodash.flatten)(tagsCol.filter(t => {
             return value[t];
           }).map(t => {
@@ -3195,25 +3084,19 @@ class InfluxSeries {
   }
 
   getTable() {
-    const table = new table_model/* default */.Z();
+    const table = new table_model.Z();
     let i, j;
     table.refId = this.refId;
     table.meta = this.meta;
 
     if (this.series.length === 0) {
       return table;
-    } // the order is:
-    // - first the first item from the value-array (this is often (always?) the timestamp)
-    // - then all the tag-values
-    // - then the rest of the value-array
-    //
-    // we have to keep this order both in table.columns and table.rows
+    } 
 
 
     (0,lodash.each)(this.series, (series, seriesIndex) => {
       if (seriesIndex === 0) {
-        const firstCol = series.columns[0]; // Check the first column's name, if it is `time`, we
-        // mark it as having the type time
+        const firstCol = series.columns[0]; 
 
         const firstTableCol = firstCol === 'time' ? {
           text: 'Time',
@@ -3260,7 +3143,7 @@ class InfluxSeries {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/response_parser.ts
+;
 
 
 
@@ -3283,17 +3166,6 @@ class ResponseParser {
     (0,lodash.each)(influxResults.series, serie => {
       (0,lodash.each)(serie.values, value => {
         if ((0,lodash.isArray)(value)) {
-          // In general, there are 2 possible shapes for the returned value.
-          // The first one is a two-element array,
-          // where the first element is somewhat a metadata value:
-          // the tag name for SHOW TAG VALUES queries,
-          // the time field for SELECT queries, etc.
-          // The second shape is an one-element array,
-          // that is containing an immediate value.
-          // For example, SHOW FIELD KEYS queries return such shape.
-          // Note, pre-0.11 versions return
-          // the second shape for SHOW TAG VALUES queries
-          // (while the newer versions—first).
           if (isValueFirst) {
             addUnique(res, value[0]);
           } else if (value[1] !== undefined) {
@@ -3305,10 +3177,7 @@ class ResponseParser {
           addUnique(res, value);
         }
       });
-    }); // NOTE: it is important to keep the order of items in the parsed output
-    // the same as it was in the influxdb-response.
-    // we use a `Set` to collect the unique-results, and `Set` iteration
-    // order is insertion-order, so this should be ok.
+    }); 
 
     return Array.from(res).map(v => ({
       text: v
@@ -3316,7 +3185,7 @@ class ResponseParser {
   }
 
   getTable(dfs, target, meta) {
-    let table = new table_model/* default */.Z();
+    let table = new table_model.Z();
 
     if (dfs.length > 0) {
       var _dfs$0$meta;
@@ -3325,7 +3194,7 @@ class ResponseParser {
         executedQueryString: (_dfs$0$meta = dfs[0].meta) === null || _dfs$0$meta === void 0 ? void 0 : _dfs$0$meta.executedQueryString
       });
       table.refId = target.refId;
-      table = getTableCols(dfs, table, target); // if group by tag(s) added
+      table = getTableCols(dfs, table, target); 
 
       if (dfs[0].fields[1] && dfs[0].fields[1].labels) {
         let dfsByLabels = (0,lodash.groupBy)(dfs, df => df.fields[1].labels ? Object.values(df.fields[1].labels) : null);
@@ -3378,7 +3247,7 @@ class ResponseParser {
         if (column.text === options.annotation.timeEndColumn) {
           timeEndCol = index;
           return;
-        } // legacy case
+        } 
 
 
         if (!titleCol && textCol !== index) {
@@ -3391,7 +3260,6 @@ class ResponseParser {
           time: +new Date(value[timeCol]),
           title: value[titleCol],
           timeEnd: value[timeEndCol],
-          // Remove empty values, then split in different tags for comma separated values
           tags: (0,lodash.flatten)(tagsCol.filter(t => {
             return value[t];
           }).map(t => {
@@ -3424,13 +3292,12 @@ function colContainsTag(colText, tagsColumn) {
 function getTableCols(dfs, table, target) {
   const selectedParams = getSelectedParams(target);
   dfs[0].fields.forEach(field => {
-    // Time col
     if (field.name === 'time') {
       table.columns.push({
         text: 'Time',
         type: src.FieldType.time
       });
-    } // Group by (label) column(s)
+    } 
     else if (field.name === 'value') {
       if (field.labels) {
         Object.keys(field.labels).forEach(key => {
@@ -3440,7 +3307,7 @@ function getTableCols(dfs, table, target) {
         });
       }
     }
-  }); // Get cols for annotationQuery
+  }); 
 
   if (dfs[0].refId === 'metricFindQuery') {
     dfs.forEach(field => {
@@ -3450,7 +3317,7 @@ function getTableCols(dfs, table, target) {
         });
       }
     });
-  } // Select (metric) column(s)
+  } 
 
 
   for (let i = 0; i < selectedParams.length; i++) {
@@ -3513,7 +3380,7 @@ function incrementName(name, nameIncremenet, params, index) {
 function addUnique(s, value) {
   s.add(value.toString());
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/datasource.ts
+;
 const _excluded = ["__interval", "__interval_ms"];
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -3534,15 +3401,11 @@ function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.d
 
 
 
- // we detect the field type based on the value-array
 
 function getFieldType(values) {
-  // the values-array may contain a lot of nulls.
-  // we need the first not-null item
   const firstNotNull = values.find(v => v !== null);
 
   if (firstNotNull === undefined) {
-    // we could not find any not-null values
     return src.FieldType.number;
   }
 
@@ -3559,19 +3422,14 @@ function getFieldType(values) {
       return src.FieldType.number;
 
     default:
-      // this should never happen, influxql values
-      // can only be numbers, strings and booleans.
       throw new Error(`InfluxQL: invalid value type ${valueType}`);
   }
-} // this conversion function is specialized to work with the timeseries
-// data returned by InfluxDatasource.getTimeSeries()
+} 
 
 
 function timeSeriesToDataFrame(timeSeries) {
   const times = [];
-  const values = []; // the data we process here is not correctly typed.
-  // the typescript types say every data-point is number|null,
-  // but in fact it can be string or boolean too.
+  const values = []; 
 
   const points = timeSeries.datapoints;
 
@@ -3609,7 +3467,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
   constructor(instanceSettings) {
     var _instanceSettings$url, _instanceSettings$use, _instanceSettings$pas;
 
-    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv/* getTemplateSrv */.J)();
+    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv.J)();
     super(instanceSettings);
     this.templateSrv = templateSrv;
 
@@ -3658,7 +3516,6 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
     this.isFlux = settingsData.version === InfluxVersion.Flux;
 
     if (this.isFlux) {
-      // When flux, use an annotation processor rather than the `annotationQuery` lifecycle
       this.annotations = {
         QueryEditor: FluxQueryEditor
       };
@@ -3666,9 +3523,6 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
   }
 
   query(request) {
-    // for not-flux queries we call `this.classicQuery`, and that
-    // handles the is-hidden situation.
-    // for the flux-case, we do the filtering here
     const filteredRequest = Object.assign({}, request, {
       targets: request.targets.filter(t => t.hide !== true)
     });
@@ -3678,7 +3532,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
     }
 
     if (this.isMigrationToggleOnAndIsAccessProxy()) {
-      return super.query(filteredRequest).pipe((0,map/* map */.U)(res => {
+      return super.query(filteredRequest).pipe((0,map.U)(res => {
         if (res.error) {
           throw {
             message: 'InfluxDB Error: ' + res.error.message,
@@ -3719,7 +3573,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
           data: seriesList
         };
       }));
-    } // Fallback to classic query support
+    } 
 
 
     return this.classicQuery(request);
@@ -3732,9 +3586,6 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
 
     return new InfluxQueryModel(query).render(false);
   }
-  /**
-   * Returns false if the query should be skipped
-   */
 
 
   filterQuery(query) {
@@ -3746,27 +3597,23 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
   }
 
   applyTemplateVariables(query, scopedVars) {
-    // We want to interpolate these variables on backend
     const rest = _objectWithoutPropertiesLoose(scopedVars, _excluded);
 
     if (this.isFlux) {
       var _query$query;
 
       return Object.assign({}, query, {
-        query: this.templateSrv.replace((_query$query = query.query) !== null && _query$query !== void 0 ? _query$query : '', rest) // The raw query text
+        query: this.templateSrv.replace((_query$query = query.query) !== null && _query$query !== void 0 ? _query$query : '', rest) 
 
       });
     }
 
-    if (config/* default.featureToggles.influxdbBackendMigration */.ZP.featureToggles.influxdbBackendMigration && this.access === 'proxy') {
+    if (config.ZP.featureToggles.influxdbBackendMigration && this.access === 'proxy') {
       query = this.applyVariables(query, scopedVars, rest);
     }
 
     return query;
   }
-  /**
-   * The unchanged pre 7.1 query implementation
-   */
 
 
   classicQuery(options) {
@@ -3781,7 +3628,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
         return '';
       }
 
-      queryTargets.push(target); // backward compatibility
+      queryTargets.push(target); 
 
       scopedVars.interval = scopedVars.__interval;
       return new InfluxQueryModel(target, this.templateSrv, scopedVars).render(true);
@@ -3797,7 +3644,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
       return (0,of.of)({
         data: []
       });
-    } // add global adhoc filters to timeFilter
+    } 
 
 
     const adhocFilters = this.templateSrv.getAdhocFilters(this.name);
@@ -3807,15 +3654,15 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
         refId: 'A'
       }, this.templateSrv, scopedVars);
       timeFilter += ' AND ' + tmpQuery.renderAdhocFilters(adhocFilters);
-    } // replace grafana variables
+    } 
 
 
     scopedVars.timeFilter = {
       value: timeFilter
-    }; // replace templated variables
+    }; 
 
     allQueries = this.templateSrv.replace(allQueries, scopedVars);
-    return this._seriesQuery(allQueries, options).pipe((0,map/* map */.U)(data => {
+    return this._seriesQuery(allQueries, options).pipe((0,map.U)(data => {
       if (!data || !data.results) {
         return {
           data: []
@@ -3882,7 +3729,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
       return Promise.reject({
         message: 'Flux requires the standard annotation query'
       });
-    } // InfluxQL puts a query string on the annotation
+    } 
 
 
     if (!options.annotation.query) {
@@ -3891,17 +3738,16 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
       });
     }
 
-    if (config/* default.featureToggles.influxdbBackendMigration */.ZP.featureToggles.influxdbBackendMigration && this.access === 'proxy') {
+    if (config.ZP.featureToggles.influxdbBackendMigration && this.access === 'proxy') {
       var _options$annotation$q;
 
-      // We want to send our query to the backend as a raw query
       const target = {
         refId: 'metricFindQuery',
         datasource: this.getRef(),
         query: this.templateSrv.replace((_options$annotation$q = options.annotation.query) !== null && _options$annotation$q !== void 0 ? _options$annotation$q : ''),
         rawQuery: true
       };
-      return (0,lastValueFrom/* lastValueFrom */.n)((0,grafana_runtime_src.getBackendSrv)().fetch({
+      return (0,lastValueFrom.n)((0,grafana_runtime_src.getBackendSrv)().fetch({
         url: '/api/ds/query',
         method: 'POST',
         data: {
@@ -3910,7 +3756,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
           queries: [target]
         },
         requestId: options.annotation.name
-      }).pipe((0,map/* map */.U)(async res => await this.responseParser.transformAnnotationResponse(options, res, target))));
+      }).pipe((0,map.U)(async res => await this.responseParser.transformAnnotationResponse(options, res, target))));
     }
 
     const timeFilter = this.getTimeFilter({
@@ -3919,7 +3765,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
     });
     let query = options.annotation.query.replace('$timeFilter', timeFilter);
     query = this.templateSrv.replace(query, undefined, 'regex');
-    return (0,lastValueFrom/* lastValueFrom */.n)(this._seriesQuery(query, options)).then(data => {
+    return (0,lastValueFrom.n)(this._seriesQuery(query, options)).then(data => {
       if (!data || !data.results || !data.results[0]) {
         throw {
           message: 'No results in response from InfluxDB'
@@ -3934,8 +3780,6 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
   }
 
   targetContainsTemplate(target) {
-    // for flux-mode we just take target.query,
-    // for influxql-mode we use InfluxQueryModel to create the text-representation
     const queryText = this.isFlux ? target.query : buildRawQuery(target);
     return this.templateSrv.containsTemplate(queryText);
   }
@@ -3951,7 +3795,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
 
         return Object.assign({}, query, {
           datasource: this.getRef(),
-          query: this.templateSrv.replace((_query$query2 = query.query) !== null && _query$query2 !== void 0 ? _query$query2 : '', scopedVars) // The raw query text
+          query: this.templateSrv.replace((_query$query2 = query.query) !== null && _query$query2 !== void 0 ? _query$query2 : '', scopedVars) 
 
         });
       }
@@ -4003,7 +3847,6 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
 
     return Object.assign({}, expandedQuery, {
       query: this.templateSrv.replace((_query$query3 = query.query) !== null && _query$query3 !== void 0 ? _query$query3 : '', rest),
-      // The raw query text
       alias: this.templateSrv.replace((_query$alias = query.alias) !== null && _query$alias !== void 0 ? _query$alias : '', scopedVars),
       limit: this.templateSrv.replace((_query$limit$toString = (_query$limit = query.limit) === null || _query$limit === void 0 ? void 0 : _query$limit.toString()) !== null && _query$limit$toString !== void 0 ? _query$limit$toString : '', scopedVars, 'regex'),
       measurement: this.templateSrv.replace((_query$measurement = query.measurement) !== null && _query$measurement !== void 0 ? _query$measurement : '', scopedVars, 'regex'),
@@ -4020,8 +3863,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
         query,
         rawQuery: true
       };
-      return (0,lastValueFrom/* lastValueFrom */.n)(super.query(Object.assign({}, options, {
-        // includes 'range'
+      return (0,lastValueFrom.n)(super.query(Object.assign({}, options, {
         targets: [target]
       }))).then(rsp => {
         var _rsp$data;
@@ -4035,7 +3877,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
     }
 
     const interpolated = this.templateSrv.replace(query, undefined, 'regex');
-    return (0,lastValueFrom/* lastValueFrom */.n)(this._seriesQuery(interpolated, options)).then(resp => {
+    return (0,lastValueFrom.n)(this._seriesQuery(interpolated, options)).then(resp => {
       return this.responseParser.parse(query, resp);
     });
   }
@@ -4098,7 +3940,6 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
 
   testDatasource() {
     if (this.isFlux) {
-      // TODO: eventually use the real /health endpoint
       const request = {
         targets: [{
           refId: 'test',
@@ -4115,7 +3956,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
           to: (0,src.dateTime)(2000)
         }
       };
-      return (0,lastValueFrom/* lastValueFrom */.n)(super.query(request)).then(res => {
+      return (0,lastValueFrom.n)(super.query(request)).then(res => {
         if (!res || !res.data || res.state !== src.LoadingState.Done) {
           console.error('InfluxDB Error', res);
           return {
@@ -4153,7 +3994,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
         query: 'SHOW TAG KEYS',
         rawQuery: true
       };
-      return (0,lastValueFrom/* lastValueFrom */.n)(super.query({
+      return (0,lastValueFrom.n)(super.query({
         targets: [target]
       })).then(res => {
         var _res$data;
@@ -4189,7 +4030,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
       tags: []
     }, this.database);
     const query = queryBuilder.buildExploreQuery('RETENTION POLICIES');
-    return (0,lastValueFrom/* lastValueFrom */.n)(this._seriesQuery(query)).then(res => {
+    return (0,lastValueFrom.n)(this._seriesQuery(query)).then(res => {
       const error = (0,lodash.get)(res, 'results[0].error');
 
       if (error) {
@@ -4232,11 +4073,9 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
     } = data;
 
     if (method === 'POST' && (0,lodash.has)(data, 'q')) {
-      // verb is POST and 'q' param is defined
       (0,lodash.extend)(params, (0,lodash.omit)(data, ['q']));
       data = this.serializeParams((0,lodash.pick)(data, ['q']));
     } else if (method === 'GET' || method === 'POST') {
-      // verb is GET, or POST without 'q' param
       (0,lodash.extend)(params, data);
       data = null;
     }
@@ -4266,7 +4105,7 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
       req.headers['Content-type'] = 'application/x-www-form-urlencoded';
     }
 
-    return (0,grafana_runtime_src.getBackendSrv)().fetch(req).pipe((0,map/* map */.U)(result => {
+    return (0,grafana_runtime_src.getBackendSrv)().fetch(req).pipe((0,map.U)(result => {
       const {
         data
       } = result;
@@ -4287,12 +4126,12 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
       }
 
       return data;
-    }), (0,catchError/* catchError */.K)(err => {
+    }), (0,catchError.K)(err => {
       if (err.cancelled) {
         return (0,of.of)(err);
       }
 
-      return (0,throwError/* throwError */._)(this.handleErrors(err));
+      return (0,throwError._)(this.handleErrors(err));
     }));
   }
 
@@ -4304,12 +4143,12 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
     if (Number.isInteger(err.status) && err.status !== 0 || err.status >= 300) {
       if (err.data && err.data.error) {
         error.message = 'InfluxDB Error: ' + err.data.error;
-        error.data = err.data; // @ts-ignore
+        error.data = err.data; 
 
         error.config = err.config;
       } else {
         error.message = 'Network Error: ' + err.statusText + '(' + err.status + ')';
-        error.data = err.data; // @ts-ignore
+        error.data = err.data; 
 
         error.config = err.config;
       }
@@ -4345,11 +4184,11 @@ class InfluxDatasource extends grafana_runtime_src.DataSourceWithBackend {
   }
 
   isMigrationToggleOnAndIsAccessProxy() {
-    return config/* default.featureToggles.influxdbBackendMigration */.ZP.featureToggles.influxdbBackendMigration && this.access === 'proxy';
+    return config.ZP.featureToggles.influxdbBackendMigration && this.access === 'proxy';
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/influxdb/module.ts
+;
 function module_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -4365,15 +4204,15 @@ module_defineProperty(InfluxAnnotationsQueryCtrl, "templateUrl", 'partials/annot
 
 const module_plugin = new src.DataSourcePlugin(InfluxDatasource).setConfigEditor(components_ConfigEditor).setQueryEditor(QueryEditor).setAnnotationQueryCtrl(InfluxAnnotationsQueryCtrl).setVariableQueryEditor(VariableQueryEditor).setQueryEditorHelp(InfluxStartPage);
 
-/***/ }),
+ }),
 
-/***/ "./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/usePrevious.js":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/esm/usePrevious.js":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (/* binding */ usePrevious)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "Z": () => ( usePrevious)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
 
 function usePrevious(state) {
     var ref = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
@@ -4384,6 +4223,6 @@ function usePrevious(state) {
 }
 
 
-/***/ })
+ })
 
 }]);

@@ -1,10 +1,9 @@
-/******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
+ (() => { 
+ 	"use strict";
 var __webpack_exports__ = {};
 
-// UNUSED EXPORTS: layout
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-dispatch-npm-2.0.0-1417ab6cc8-cf473676ae.zip/node_modules/d3-dispatch/src/dispatch.js
+;
 var noop = {value: () => {}};
 
 function dispatch() {
@@ -37,14 +36,11 @@ Dispatch.prototype = dispatch.prototype = {
         i = -1,
         n = T.length;
 
-    // If no callback was specified, return the callback of the given type and name.
     if (arguments.length < 2) {
       while (++i < n) if ((t = (typename = T[i]).type) && (t = get(_[t], typename.name))) return t;
       return;
     }
 
-    // If a type was specified, set the callback for the given type and name.
-    // Otherwise, if a null callback was specified, remove callbacks of the given name.
     if (callback != null && typeof callback !== "function") throw new Error("invalid callback: " + callback);
     while (++i < n) {
       if (t = (typename = T[i]).type) _[t] = set(_[t], typename.name, callback);
@@ -88,13 +84,13 @@ function set(type, name, callback) {
   return type;
 }
 
-/* harmony default export */ const src_dispatch = (dispatch);
+ const src_dispatch = (dispatch);
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-timer-npm-2.0.0-590adf27a0-70733c3baf.zip/node_modules/d3-timer/src/timer.js
-var timer_frame = 0, // is an animation frame pending?
-    timeout = 0, // is a timeout pending?
-    interval = 0, // are any timers active?
-    pokeDelay = 1000, // how frequently we check for clock skew
+;
+var timer_frame = 0, 
+    timeout = 0, 
+    interval = 0, 
+    pokeDelay = 1000, 
     taskHead,
     taskTail,
     clockLast = 0,
@@ -147,8 +143,8 @@ function timer(callback, delay, time) {
 }
 
 function timerFlush() {
-  now(); // Get the current time, if not already set.
-  ++timer_frame; // Pretend we’ve set an alarm, if we haven’t already.
+  now(); 
+  ++timer_frame; 
   var t = taskHead, e;
   while (t) {
     if ((e = clockNow - t._time) >= 0) t._call.call(null, e);
@@ -190,9 +186,9 @@ function nap() {
 }
 
 function sleep(time) {
-  if (timer_frame) return; // Soonest alarm already set, or will be.
+  if (timer_frame) return; 
   if (timeout) timeout = clearTimeout(timeout);
-  var delay = time - clockNow; // Strictly less than if we recomputed clockNow.
+  var delay = time - clockNow; 
   if (delay > 24) {
     if (time < Infinity) timeout = setTimeout(wake, time - clock.now() - clockSkew);
     if (interval) interval = clearInterval(interval);
@@ -202,18 +198,17 @@ function sleep(time) {
   }
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-force-npm-2.1.1-a14e5190d5-aaee5b86d7.zip/node_modules/d3-force/src/lcg.js
-// https://en.wikipedia.org/wiki/Linear_congruential_generator#Parameters_in_common_use
+;
 const a = 1664525;
 const c = 1013904223;
-const m = 4294967296; // 2^32
+const m = 4294967296; 
 
-/* harmony default export */ function lcg() {
+ function lcg() {
   let s = 1;
   return () => (s = (a * s + c) % m) / m;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-force-npm-2.1.1-a14e5190d5-aaee5b86d7.zip/node_modules/d3-force/src/simulation.js
+;
 
 
 
@@ -229,7 +224,7 @@ function y(d) {
 var initialRadius = 10,
     initialAngle = Math.PI * (3 - Math.sqrt(5));
 
-/* harmony default export */ function src_simulation(nodes) {
+ function src_simulation(nodes) {
   var simulation,
       alpha = 1,
       alphaMin = 0.001,
@@ -371,19 +366,19 @@ var initialRadius = 10,
   };
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-force-npm-2.1.1-a14e5190d5-aaee5b86d7.zip/node_modules/d3-force/src/constant.js
-/* harmony default export */ function constant(x) {
+;
+ function constant(x) {
   return function() {
     return x;
   };
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-force-npm-2.1.1-a14e5190d5-aaee5b86d7.zip/node_modules/d3-force/src/jiggle.js
-/* harmony default export */ function jiggle(random) {
+;
+ function jiggle(random) {
   return (random() - 0.5) * 1e-6;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-force-npm-2.1.1-a14e5190d5-aaee5b86d7.zip/node_modules/d3-force/src/link.js
+;
 
 
 
@@ -397,7 +392,7 @@ function find(nodeById, nodeId) {
   return node;
 }
 
-/* harmony default export */ function src_link(links) {
+ function src_link(links) {
   var id = index,
       strength = defaultStrength,
       strengths,
@@ -502,10 +497,10 @@ function find(nodeById, nodeId) {
   return force;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-force-npm-2.1.1-a14e5190d5-aaee5b86d7.zip/node_modules/d3-force/src/x.js
+;
 
 
-/* harmony default export */ function src_x(x) {
+ function src_x(x) {
   var strength = constant(0.1),
       nodes,
       strengths,
@@ -545,15 +540,15 @@ function find(nodeById, nodeId) {
   return force;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-quadtree-npm-2.0.0-93642d6b98-e5f9cee19a.zip/node_modules/d3-quadtree/src/add.js
-/* harmony default export */ function add(d) {
+;
+ function add(d) {
   const x = +this._x.call(null, d),
       y = +this._y.call(null, d);
   return add_add(this.cover(x, y), x, y, d);
 }
 
 function add_add(tree, x, y, d) {
-  if (isNaN(x) || isNaN(y)) return tree; // ignore invalid points
+  if (isNaN(x) || isNaN(y)) return tree; 
 
   var parent,
       node = tree._root,
@@ -571,22 +566,18 @@ function add_add(tree, x, y, d) {
       i,
       j;
 
-  // If the tree is empty, initialize the root as a leaf.
   if (!node) return tree._root = leaf, tree;
 
-  // Find the existing leaf for the new point, or add it.
   while (node.length) {
     if (right = x >= (xm = (x0 + x1) / 2)) x0 = xm; else x1 = xm;
     if (bottom = y >= (ym = (y0 + y1) / 2)) y0 = ym; else y1 = ym;
     if (parent = node, !(node = node[i = bottom << 1 | right])) return parent[i] = leaf, tree;
   }
 
-  // Is the new point is exactly coincident with the existing point?
   xp = +tree._x.call(null, node.data);
   yp = +tree._y.call(null, node.data);
   if (x === xp && y === yp) return leaf.next = node, parent ? parent[i] = leaf : tree._root = leaf, tree;
 
-  // Otherwise, split the leaf node until the old and new point are separated.
   do {
     parent = parent ? parent[i] = new Array(4) : tree._root = new Array(4);
     if (right = x >= (xm = (x0 + x1) / 2)) x0 = xm; else x1 = xm;
@@ -606,7 +597,6 @@ function addAll(data) {
       x1 = -Infinity,
       y1 = -Infinity;
 
-  // Compute the points and their extent.
   for (i = 0; i < n; ++i) {
     if (isNaN(x = +this._x.call(null, d = data[i])) || isNaN(y = +this._y.call(null, d))) continue;
     xz[i] = x;
@@ -617,13 +607,10 @@ function addAll(data) {
     if (y > y1) y1 = y;
   }
 
-  // If there were no (valid) points, abort.
   if (x0 > x1 || y0 > y1) return this;
 
-  // Expand the tree to cover the new points.
   this.cover(x0, y0).cover(x1, y1);
 
-  // Add the new points.
   for (i = 0; i < n; ++i) {
     add_add(this, xz[i], yz[i], data[i]);
   }
@@ -631,24 +618,20 @@ function addAll(data) {
   return this;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-quadtree-npm-2.0.0-93642d6b98-e5f9cee19a.zip/node_modules/d3-quadtree/src/cover.js
-/* harmony default export */ function cover(x, y) {
-  if (isNaN(x = +x) || isNaN(y = +y)) return this; // ignore invalid points
+;
+ function cover(x, y) {
+  if (isNaN(x = +x) || isNaN(y = +y)) return this; 
 
   var x0 = this._x0,
       y0 = this._y0,
       x1 = this._x1,
       y1 = this._y1;
 
-  // If the quadtree has no extent, initialize them.
-  // Integer extent are necessary so that if we later double the extent,
-  // the existing quadrant boundaries don’t change due to floating point error!
   if (isNaN(x0)) {
     x1 = (x0 = Math.floor(x)) + 1;
     y1 = (y0 = Math.floor(y)) + 1;
   }
 
-  // Otherwise, double repeatedly to cover.
   else {
     var z = x1 - x0 || 1,
         node = this._root,
@@ -676,8 +659,8 @@ function addAll(data) {
   return this;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-quadtree-npm-2.0.0-93642d6b98-e5f9cee19a.zip/node_modules/d3-quadtree/src/data.js
-/* harmony default export */ function data() {
+;
+ function data() {
   var data = [];
   this.visit(function(node) {
     if (!node.length) do data.push(node.data); while (node = node.next)
@@ -685,15 +668,15 @@ function addAll(data) {
   return data;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-quadtree-npm-2.0.0-93642d6b98-e5f9cee19a.zip/node_modules/d3-quadtree/src/extent.js
-/* harmony default export */ function extent(_) {
+;
+ function extent(_) {
   return arguments.length
       ? this.cover(+_[0][0], +_[0][1]).cover(+_[1][0], +_[1][1])
       : isNaN(this._x0) ? undefined : [[this._x0, this._y0], [this._x1, this._y1]];
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-quadtree-npm-2.0.0-93642d6b98-e5f9cee19a.zip/node_modules/d3-quadtree/src/quad.js
-/* harmony default export */ function quad(node, x0, y0, x1, y1) {
+;
+ function quad(node, x0, y0, x1, y1) {
   this.node = node;
   this.x0 = x0;
   this.y0 = y0;
@@ -701,10 +684,10 @@ function addAll(data) {
   this.y1 = y1;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-quadtree-npm-2.0.0-93642d6b98-e5f9cee19a.zip/node_modules/d3-quadtree/src/find.js
+;
 
 
-/* harmony default export */ function src_find(x, y, radius) {
+ function src_find(x, y, radius) {
   var data,
       x0 = this._x0,
       y0 = this._y0,
@@ -729,14 +712,12 @@ function addAll(data) {
 
   while (q = quads.pop()) {
 
-    // Stop searching if this quadrant can’t contain a closer node.
     if (!(node = q.node)
         || (x1 = q.x0) > x3
         || (y1 = q.y0) > y3
         || (x2 = q.x1) < x0
         || (y2 = q.y1) < y0) continue;
 
-    // Bisect the current quadrant.
     if (node.length) {
       var xm = (x1 + x2) / 2,
           ym = (y1 + y2) / 2;
@@ -748,7 +729,6 @@ function addAll(data) {
         new quad(node[0], x1, y1, xm, ym)
       );
 
-      // Visit the closest quadrant first.
       if (i = (y >= ym) << 1 | (x >= xm)) {
         q = quads[quads.length - 1];
         quads[quads.length - 1] = quads[quads.length - 1 - i];
@@ -756,7 +736,6 @@ function addAll(data) {
       }
     }
 
-    // Visit this point. (Visiting coincident points isn’t necessary!)
     else {
       var dx = x - +this._x.call(null, node.data),
           dy = y - +this._y.call(null, node.data),
@@ -773,9 +752,9 @@ function addAll(data) {
   return data;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-quadtree-npm-2.0.0-93642d6b98-e5f9cee19a.zip/node_modules/d3-quadtree/src/remove.js
-/* harmony default export */ function remove(d) {
-  if (isNaN(x = +this._x.call(null, d)) || isNaN(y = +this._y.call(null, d))) return this; // ignore invalid points
+;
+ function remove(d) {
+  if (isNaN(x = +this._x.call(null, d)) || isNaN(y = +this._y.call(null, d))) return this; 
 
   var parent,
       node = this._root,
@@ -795,11 +774,8 @@ function addAll(data) {
       i,
       j;
 
-  // If the tree is empty, initialize the root as a leaf.
   if (!node) return this;
 
-  // Find the leaf node for the point.
-  // While descending, also retain the deepest parent with a non-removed sibling.
   if (node.length) while (true) {
     if (right = x >= (xm = (x0 + x1) / 2)) x0 = xm; else x1 = xm;
     if (bottom = y >= (ym = (y0 + y1) / 2)) y0 = ym; else y1 = ym;
@@ -808,20 +784,15 @@ function addAll(data) {
     if (parent[(i + 1) & 3] || parent[(i + 2) & 3] || parent[(i + 3) & 3]) retainer = parent, j = i;
   }
 
-  // Find the point to remove.
   while (node.data !== d) if (!(previous = node, node = node.next)) return this;
   if (next = node.next) delete node.next;
 
-  // If there are multiple coincident points, remove just the point.
   if (previous) return (next ? previous.next = next : delete previous.next), this;
 
-  // If this is the root point, remove it.
   if (!parent) return this._root = next, this;
 
-  // Remove this leaf.
   next ? parent[i] = next : delete parent[i];
 
-  // If the parent now contains exactly one leaf, collapse superfluous parents.
   if ((node = parent[0] || parent[1] || parent[2] || parent[3])
       && node === (parent[3] || parent[2] || parent[1] || parent[0])
       && !node.length) {
@@ -837,13 +808,13 @@ function removeAll(data) {
   return this;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-quadtree-npm-2.0.0-93642d6b98-e5f9cee19a.zip/node_modules/d3-quadtree/src/root.js
-/* harmony default export */ function root() {
+;
+ function root() {
   return this._root;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-quadtree-npm-2.0.0-93642d6b98-e5f9cee19a.zip/node_modules/d3-quadtree/src/size.js
-/* harmony default export */ function size() {
+;
+ function size() {
   var size = 0;
   this.visit(function(node) {
     if (!node.length) do ++size; while (node = node.next)
@@ -851,10 +822,10 @@ function removeAll(data) {
   return size;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-quadtree-npm-2.0.0-93642d6b98-e5f9cee19a.zip/node_modules/d3-quadtree/src/visit.js
+;
 
 
-/* harmony default export */ function visit(callback) {
+ function visit(callback) {
   var quads = [], q, node = this._root, child, x0, y0, x1, y1;
   if (node) quads.push(new quad(node, this._x0, this._y0, this._x1, this._y1));
   while (q = quads.pop()) {
@@ -869,10 +840,10 @@ function removeAll(data) {
   return this;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-quadtree-npm-2.0.0-93642d6b98-e5f9cee19a.zip/node_modules/d3-quadtree/src/visitAfter.js
+;
 
 
-/* harmony default export */ function visitAfter(callback) {
+ function visitAfter(callback) {
   var quads = [], next = [], q;
   if (this._root) quads.push(new quad(this._root, this._x0, this._y0, this._x1, this._y1));
   while (q = quads.pop()) {
@@ -892,25 +863,25 @@ function removeAll(data) {
   return this;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-quadtree-npm-2.0.0-93642d6b98-e5f9cee19a.zip/node_modules/d3-quadtree/src/x.js
+;
 function defaultX(d) {
   return d[0];
 }
 
-/* harmony default export */ function d3_quadtree_src_x(_) {
+ function d3_quadtree_src_x(_) {
   return arguments.length ? (this._x = _, this) : this._x;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-quadtree-npm-2.0.0-93642d6b98-e5f9cee19a.zip/node_modules/d3-quadtree/src/y.js
+;
 function defaultY(d) {
   return d[1];
 }
 
-/* harmony default export */ function src_y(_) {
+ function src_y(_) {
   return arguments.length ? (this._y = _, this) : this._y;
 }
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-quadtree-npm-2.0.0-93642d6b98-e5f9cee19a.zip/node_modules/d3-quadtree/src/quadtree.js
+;
 
 
 
@@ -985,7 +956,7 @@ treeProto.visitAfter = visitAfter;
 treeProto.x = d3_quadtree_src_x;
 treeProto.y = src_y;
 
-;// CONCATENATED MODULE: ./.yarn/cache/d3-force-npm-2.1.1-a14e5190d5-aaee5b86d7.zip/node_modules/d3-force/src/collide.js
+;
 
 
 
@@ -998,7 +969,7 @@ function collide_y(d) {
   return d.y + d.vy;
 }
 
-/* harmony default export */ function collide(radius) {
+ function collide(radius) {
   var nodes,
       radii,
       random,
@@ -1087,7 +1058,7 @@ function collide_y(d) {
   return force;
 }
 
-;// CONCATENATED MODULE: ./public/app/plugins/panel/nodeGraph/layout.worker.js
+;
 
 
 addEventListener('message', (event) => {
@@ -1096,16 +1067,9 @@ addEventListener('message', (event) => {
   postMessage({ nodes, edges });
 });
 
-/**
- * Use d3 force layout to lay the nodes in a sensible way. This function modifies the nodes adding the x,y positions
- * and also fills in node references in edges instead of node ids.
- */
 function layout(nodes, edges, config) {
-  // Start with some hardcoded positions so it starts laid out from left to right
   let { roots, secondLevelRoots } = initializePositions(nodes, edges);
 
-  // There always seems to be one or more root nodes each with single edge and we want to have them static on the
-  // left neatly in something like grid layout
   [...roots, ...secondLevelRoots].forEach((n, index) => {
     n.fx = n.x;
   });
@@ -1118,39 +1082,16 @@ function layout(nodes, edges, config) {
         .distance(config.linkDistance)
         .strength(config.linkStrength)
     )
-    // to keep the left to right layout we add force that pulls all nodes to right but because roots are fixed it will
-    // apply only to non root nodes
     .force('x', src_x(config.forceX).strength(config.forceXStrength))
-    // Make sure nodes don't overlap
     .force('collide', collide(config.forceCollide));
 
-  // 300 ticks for the simulation are recommended but less would probably work too, most movement is done in first
-  // few iterations and then all the forces gets smaller https://github.com/d3/d3-force#simulation_alphaDecay
   simulation.tick(config.tick);
   simulation.stop();
 
-  // We do centering here instead of using centering force to keep this more stable
   centerNodes(nodes);
 }
 
-/**
- * This initializes positions of the graph by going from the root to it's children and laying it out in a grid from left
- * to right. This works only so, so because service map graphs can have cycles and children levels are not ordered in a
- * way to minimize the edge lengths. Nevertheless this seems to make the graph easier to nudge with the forces later on
- * than with the d3 default initial positioning. Also we can fix the root positions later on for a bit more neat
- * organisation.
- *
- * This function directly modifies the nodes given and only returns references to root nodes so they do not have to be
- * found again later on.
- *
- * How the spacing could look like approximately:
- * 0 - 0 - 0 - 0
- *  \- 0 - 0   |
- *      \- 0 -/
- * 0 - 0 -/
- */
 function initializePositions(nodes, edges) {
-  // To prevent going in cycles
   const alreadyPositioned = {};
 
   const nodesMap = nodes.reduce((acc, node) => {
@@ -1165,8 +1106,6 @@ function initializePositions(nodes, edges) {
 
   let roots = nodes.filter((n) => n.incoming === 0);
 
-  // For things like service maps we assume there is some root (client) node but if there is none then selecting
-  // any node as a starting point should work the same.
   if (!roots.length) {
     roots = [nodes[0]];
   }
@@ -1191,12 +1130,10 @@ function initializePositions(nodes, edges) {
         if (alreadyPositioned[node.id]) {
           continue;
         }
-        // Initialize positions based on the spacing in the grid
         node.x = x;
         node.y = y;
         alreadyPositioned[node.id] = true;
 
-        // Move to next Y position for next node
         y += nodeYSpacing;
         if (edgesMap[node.id]) {
           nextGraphLevel.push(...edgesMap[node.id].map((edge) => nodesMap[edge.target]));
@@ -1204,9 +1141,7 @@ function initializePositions(nodes, edges) {
       }
 
       graphLevel = nextGraphLevel;
-      // Move to next X position for next level
       x += nodeXSpacing;
-      // Reset Y back to baseline for this root
       y = rootY;
     }
     rootY += rootYSpacing;
@@ -1214,10 +1149,6 @@ function initializePositions(nodes, edges) {
   return { roots, secondLevelRoots };
 }
 
-/**
- * Makes sure that the center of the graph based on it's bound is in 0, 0 coordinates.
- * Modifies the nodes directly.
- */
 function centerNodes(nodes) {
   const bounds = graphBounds(nodes);
   for (let node of nodes) {
@@ -1226,9 +1157,6 @@ function centerNodes(nodes) {
   }
 }
 
-/**
- * Get bounds of the graph meaning the extent of the nodes in all directions.
- */
 function graphBounds(nodes) {
   if (nodes.length === 0) {
     return { top: 0, right: 0, bottom: 0, left: 0, center: { x: 0, y: 0 } };
@@ -1265,5 +1193,5 @@ function graphBounds(nodes) {
   };
 }
 
-/******/ })()
+ })()
 ;

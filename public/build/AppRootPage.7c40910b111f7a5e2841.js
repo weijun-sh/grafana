@@ -1,42 +1,38 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[295],{
 
-/***/ "./public/app/angular/core_module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/angular/core_module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "hF": () => (/* binding */ coreModule),
-/* harmony export */   "rb": () => (/* binding */ angularModules)
-/* harmony export */ });
-/* harmony import */ var angular__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/angular-npm-1.8.2-307000482b-35ea81a23b.zip/node_modules/angular/index.js");
-/* harmony import */ var angular__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(angular__WEBPACK_IMPORTED_MODULE_0__);
+ __webpack_require__.d(__webpack_exports__, {
+   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__),
+   "hF": () => ( coreModule),
+   "rb": () => ( angularModules)
+ });
+ var angular__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/angular-npm-1.8.2-307000482b-35ea81a23b.zip/node_modules/angular/index.js");
+ var angular__WEBPACK_IMPORTED_MODULE_0___default = __webpack_require__.n(angular__WEBPACK_IMPORTED_MODULE_0__);
 
-const coreModule = angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.core', ['ngRoute']); // legacy modules
+const coreModule = angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.core', ['ngRoute']); 
 
 const angularModules = [coreModule, angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.controllers', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.directives', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.factories', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.services', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.filters', []), angular__WEBPACK_IMPORTED_MODULE_0___default().module('grafana.routes', [])];
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (coreModule);
+ const __WEBPACK_DEFAULT_EXPORT__ = (coreModule);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/plugins/components/AppRootPage.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/plugins/components/AppRootPage.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ components_AppRootPage),
-  "getAppPluginPageError": () => (/* binding */ getAppPluginPageError)
+  "default": () => ( components_AppRootPage),
+  "getAppPluginPageError": () => ( getAppPluginPageError)
 });
 
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-dom-virtual-93e2c4839c/0/cache/react-dom-npm-17.0.2-f551215af1-1c1eaa3bca.zip/node_modules/react-dom/index.js
 var react_dom = __webpack_require__("./.yarn/__virtual__/react-dom-virtual-93e2c4839c/0/cache/react-dom-npm-17.0.2-f551215af1-1c1eaa3bca.zip/node_modules/react-dom/index.js");
-;// CONCATENATED MODULE: ./.yarn/__virtual__/react-reverse-portal-virtual-c5abbb1959/0/cache/react-reverse-portal-npm-2.1.0-efa56de168-ecc93ea67c.zip/node_modules/react-reverse-portal/dist/web/index.js
+;
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -52,11 +48,8 @@ var __extends = (undefined && undefined.__extends) || (function () {
 })();
 
 
-// Internally, the portalNode must be for either HTML or SVG elements
 var ELEMENT_TYPE_HTML = 'html';
 var ELEMENT_TYPE_SVG = 'svg';
-// ReactDOM can handle several different namespaces, but they're not exported publicly
-// https://github.com/facebook/react/blob/b87aabdfe1b7461e7331abb3601d9e6bb27544bc/packages/react-dom/src/shared/DOMNamespaces.js#L8-L10
 var SVG_NAMESPACE = 'http://www.w3.org/2000/svg';
 var validateElementType = function (domElement, elementType) {
     if (elementType === ELEMENT_TYPE_HTML) {
@@ -67,7 +60,6 @@ var validateElementType = function (domElement, elementType) {
     }
     throw new Error("Unrecognized element type \"" + elementType + "\" for validateElementType.");
 };
-// This is the internal implementation: the public entry points set elementType to an appropriate value
 var createPortalNode = function (elementType, options) {
     var initialProps = {};
     var parent;
@@ -99,12 +91,9 @@ var createPortalNode = function (elementType, options) {
         },
         mount: function (newParent, newPlaceholder) {
             if (newPlaceholder === lastPlaceholder) {
-                // Already mounted - noop.
                 return;
             }
             portalNode.unmount();
-            // To support SVG and other non-html elements, the portalNode's elementType needs to match
-            // the elementType it's being rendered into
             if (newParent !== parent) {
                 if (!validateElementType(newParent, elementType)) {
                     throw new Error("Invalid element type for portal: \"" + elementType + "\" portalNodes must be used with " + elementType + " elements, but OutPortal is within <" + newParent.tagName + ">.");
@@ -116,8 +105,6 @@ var createPortalNode = function (elementType, options) {
         },
         unmount: function (expectedPlaceholder) {
             if (expectedPlaceholder && expectedPlaceholder !== lastPlaceholder) {
-                // Skip unmounts for placeholders that aren't currently mounted
-                // They will have been automatically unmounted already by a subsequent mount()
                 return;
             }
             if (parent && lastPlaceholder) {
@@ -129,14 +116,13 @@ var createPortalNode = function (elementType, options) {
     };
     return portalNode;
 };
-var InPortal = /** @class */ (function (_super) {
+var InPortal =  (function (_super) {
     __extends(InPortal, _super);
     function InPortal(props) {
         var _this = _super.call(this, props) || this;
         _this.addPropsChannel = function () {
             Object.assign(_this.props.node, {
                 setPortalProps: function (props) {
-                    // Rerender the child node here if/when the out portal props change
                     _this.setState({ nodeProps: props });
                 }
             });
@@ -163,7 +149,7 @@ var InPortal = /** @class */ (function (_super) {
     };
     return InPortal;
 }(react.PureComponent));
-var OutPortal = /** @class */ (function (_super) {
+var OutPortal =  (function (_super) {
     __extends(OutPortal, _super);
     function OutPortal(props) {
         var _this = _super.call(this, props) || this;
@@ -184,10 +170,7 @@ var OutPortal = /** @class */ (function (_super) {
         this.passPropsThroughPortal();
     };
     OutPortal.prototype.componentDidUpdate = function () {
-        // We re-mount on update, just in case we were unmounted (e.g. by
-        // a second OutPortal, which has now been removed)
         var node = this.props.node;
-        // If we're switching portal nodes, we need to clean up the current one first.
         if (this.currentPortalNode && node !== this.currentPortalNode) {
             this.currentPortalNode.unmount(this.placeholderNode.current);
             this.currentPortalNode = node;
@@ -202,9 +185,6 @@ var OutPortal = /** @class */ (function (_super) {
         node.unmount(this.placeholderNode.current);
     };
     OutPortal.prototype.render = function () {
-        // Render a placeholder to the DOM, so we can get a reference into
-        // our location in the DOM, and swap it out for the portaled node.
-        // A <div> placeholder works fine even for SVG.
         return react.createElement("div", { ref: this.placeholderNode });
     };
     return OutPortal;
@@ -212,14 +192,10 @@ var OutPortal = /** @class */ (function (_super) {
 var createHtmlPortalNode = createPortalNode.bind(null, ELEMENT_TYPE_HTML);
 var createSvgPortalNode = createPortalNode.bind(null, ELEMENT_TYPE_SVG);
 
-//# sourceMappingURL=index.js.map
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./public/app/angular/core_module.ts
 var core_module = __webpack_require__("./public/app/angular/core_module.ts");
-// EXTERNAL MODULE: ./public/app/core/config.ts
 var config = __webpack_require__("./public/app/core/config.ts");
-;// CONCATENATED MODULE: ./public/app/angular/services/nav_model_srv.ts
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -228,7 +204,7 @@ class NavModelSrv {
   constructor() {
     _defineProperty(this, "navItems", void 0);
 
-    this.navItems = config/* default.bootData.navTree */.ZP.bootData.navTree;
+    this.navItems = config.ZP.bootData.navTree;
   }
 
   getCfgNode() {
@@ -248,7 +224,6 @@ class NavModelSrv {
     }
 
     for (const id of args) {
-      // if its a number then it's the index to use for main
       if (typeof id === 'number') {
         nav.main = nav.breadcrumbs[id];
         break;
@@ -278,7 +253,7 @@ class NavModelSrv {
   }
 
   getNotFoundNav() {
-    return getNotFoundNav(); // the exported function
+    return getNotFoundNav(); 
   }
 
 }
@@ -302,25 +277,18 @@ function getWarningNav(text, subTitle) {
     main: node
   };
 }
-core_module/* default.service */.ZP.service('navModelSrv', NavModelSrv);
-// EXTERNAL MODULE: ./public/app/core/components/Page/Page.tsx + 1 modules
+core_module.ZP.service('navModelSrv', NavModelSrv);
 var Page = __webpack_require__("./public/app/core/components/Page/Page.tsx");
-// EXTERNAL MODULE: ./public/app/core/components/PageLoader/PageLoader.tsx
 var PageLoader = __webpack_require__("./public/app/core/components/PageLoader/PageLoader.tsx");
-// EXTERNAL MODULE: ./public/app/core/core.ts
 var core = __webpack_require__("./public/app/core/core.ts");
-// EXTERNAL MODULE: ./public/app/features/plugins/pluginSettings.ts
 var pluginSettings = __webpack_require__("./public/app/features/plugins/pluginSettings.ts");
-// EXTERNAL MODULE: ./public/app/features/plugins/plugin_loader.ts + 147 modules
 var plugin_loader = __webpack_require__("./public/app/features/plugins/plugin_loader.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/plugins/components/AppRootPage.tsx
+;
 var _div, _PageLoader;
 
 function AppRootPage_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-// Libraries
 
 
 
@@ -375,18 +343,18 @@ class AppRootPage extends react.Component {
     } = this.props.match;
 
     try {
-      const app = await (0,pluginSettings/* getPluginSettings */.a)(params.pluginId).then(info => {
+      const app = await (0,pluginSettings.a)(params.pluginId).then(info => {
         const error = getAppPluginPageError(info);
 
         if (error) {
-          core/* appEvents.emit */.h$.emit(src.AppEvents.alertError, [error]);
+          core.h$.emit(src.AppEvents.alertError, [error]);
           this.setState({
             nav: getWarningNav(error)
           });
           return null;
         }
 
-        return (0,plugin_loader/* importAppPlugin */.Av)(info);
+        return (0,plugin_loader.Av)(info);
       });
       this.setState({
         plugin: app,
@@ -428,42 +396,41 @@ class AppRootPage extends react.Component {
     } = this.state;
 
     if (plugin && !plugin.root) {
-      // TODO? redirect to plugin page?
-      return _div || (_div = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      return _div || (_div = (0,jsx_runtime.jsx)("div", {
         children: "No Root App"
       }));
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(InPortal, {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(InPortal, {
         node: portalNode,
-        children: plugin && plugin.root && /*#__PURE__*/(0,jsx_runtime.jsx)(plugin.root, {
+        children: plugin && plugin.root && (0,jsx_runtime.jsx)(plugin.root, {
           meta: plugin.meta,
           basename: this.props.match.url,
           onNavChanged: this.onNavChanged,
           query: this.props.queryParams,
           path: this.props.location.pathname
         })
-      }), nav ? /*#__PURE__*/(0,jsx_runtime.jsx)(Page/* default */.Z, {
+      }), nav ? (0,jsx_runtime.jsx)(Page.Z, {
         navModel: nav,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(Page/* default.Contents */.Z.Contents, {
+        children: (0,jsx_runtime.jsx)(Page.Z.Contents, {
           isLoading: loading,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(OutPortal, {
+          children: (0,jsx_runtime.jsx)(OutPortal, {
             node: portalNode
           })
         })
-      }) : /*#__PURE__*/(0,jsx_runtime.jsxs)(Page/* default */.Z, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(OutPortal, {
+      }) : (0,jsx_runtime.jsxs)(Page.Z, {
+        children: [(0,jsx_runtime.jsx)(OutPortal, {
           node: portalNode
-        }), loading && (_PageLoader || (_PageLoader = /*#__PURE__*/(0,jsx_runtime.jsx)(PageLoader/* default */.Z, {})))]
+        }), loading && (_PageLoader || (_PageLoader = (0,jsx_runtime.jsx)(PageLoader.Z, {})))]
       })]
     });
   }
 
 }
 
-/* harmony default export */ const components_AppRootPage = (AppRootPage);
+ const components_AppRootPage = (AppRootPage);
 
-/***/ })
+ })
 
 }]);

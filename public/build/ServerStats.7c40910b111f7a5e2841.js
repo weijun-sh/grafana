@@ -1,36 +1,25 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[7641],{
 
-/***/ "./public/app/features/admin/ServerStats.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/admin/ServerStats.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "ServerStats": () => (/* binding */ ServerStats)
+  "ServerStats": () => ( ServerStats)
 });
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/types/index.ts + 4 modules
 var types = __webpack_require__("./public/app/types/index.ts");
-// EXTERNAL MODULE: ./public/app/core/services/context_srv.ts
 var context_srv = __webpack_require__("./public/app/core/services/context_srv.ts");
-// EXTERNAL MODULE: ./public/app/features/plugins/admin/components/Loader.tsx
 var Loader = __webpack_require__("./public/app/features/plugins/admin/components/Loader.tsx");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var grafana_data_src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/admin/CrawlerStartButton.tsx
+;
 
 
 
@@ -57,14 +46,14 @@ const CrawlerStartButton = () => {
     });
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.Modal, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)(grafana_ui_src.Modal, {
       title: 'Start crawler',
       isOpen: open,
       onDismiss: onDismiss,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      children: [(0,jsx_runtime.jsx)("div", {
         className: styles.wrap,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
           height: 200,
           value: (_JSON$stringify = JSON.stringify(body, null, 2)) !== null && _JSON$stringify !== void 0 ? _JSON$stringify : '',
           showLineNumbers: false,
@@ -72,21 +61,21 @@ const CrawlerStartButton = () => {
           language: "json",
           showMiniMap: false,
           onBlur: text => {
-            setBody(JSON.parse(text)); // force JSON?
+            setBody(JSON.parse(text)); 
           }
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.Modal.ButtonRow, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      }), (0,jsx_runtime.jsxs)(grafana_ui_src.Modal.ButtonRow, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           type: "submit",
           onClick: doStart,
           children: "Start"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           variant: "secondary",
           onClick: onDismiss,
           children: "Cancel"
         })]
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
       onClick: () => setOpen(true),
       variant: "primary",
       children: "Start"
@@ -101,7 +90,7 @@ const getStyles = theme => {
     `
   };
 };
-;// CONCATENATED MODULE: ./public/app/features/admin/CrawlerStatus.tsx
+;
 var _br, _CrawlerStartButton, _CrawlerStartButton2;
 
 
@@ -135,17 +124,17 @@ const CrawlerStatus = () => {
   }, []);
 
   if (!status) {
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    return (0,jsx_runtime.jsxs)("div", {
       className: styles.wrap,
-      children: ["No status (never run)", _br || (_br = /*#__PURE__*/(0,jsx_runtime.jsx)("br", {})), _CrawlerStartButton || (_CrawlerStartButton = /*#__PURE__*/(0,jsx_runtime.jsx)(CrawlerStartButton, {}))]
+      children: ["No status (never run)", _br || (_br = (0,jsx_runtime.jsx)("br", {})), _CrawlerStartButton || (_CrawlerStartButton = (0,jsx_runtime.jsx)(CrawlerStartButton, {}))]
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: styles.wrap,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("pre", {
+    children: [(0,jsx_runtime.jsx)("pre", {
       children: JSON.stringify(status, null, 2)
-    }), status.state !== 'running' && (_CrawlerStartButton2 || (_CrawlerStartButton2 = /*#__PURE__*/(0,jsx_runtime.jsx)(CrawlerStartButton, {}))), status.state !== 'stopped' && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+    }), status.state !== 'running' && (_CrawlerStartButton2 || (_CrawlerStartButton2 = (0,jsx_runtime.jsx)(CrawlerStartButton, {}))), status.state !== 'stopped' && (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
       variant: "secondary",
       onClick: () => {
         (0,src.getBackendSrv)().post('/api/admin/crawler/stop');
@@ -165,7 +154,7 @@ const CrawlerStatus_getStyles = theme => {
     `
   };
 };
-;// CONCATENATED MODULE: ./public/app/features/admin/ExportStartButton.tsx
+;
 
 
 
@@ -192,14 +181,14 @@ const ExportStartButton = () => {
     });
   };
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.Modal, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)(grafana_ui_src.Modal, {
       title: 'Export grafana instance',
       isOpen: open,
       onDismiss: onDismiss,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      children: [(0,jsx_runtime.jsx)("div", {
         className: styles.wrap,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
           height: 200,
           value: (_JSON$stringify = JSON.stringify(body, null, 2)) !== null && _JSON$stringify !== void 0 ? _JSON$stringify : '',
           showLineNumbers: false,
@@ -207,20 +196,20 @@ const ExportStartButton = () => {
           language: "json",
           showMiniMap: false,
           onBlur: text => {
-            setBody(JSON.parse(text)); // force JSON?
+            setBody(JSON.parse(text)); 
           }
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.Modal.ButtonRow, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      }), (0,jsx_runtime.jsxs)(grafana_ui_src.Modal.ButtonRow, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           onClick: doStart,
           children: "Start"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
           variant: "secondary",
           onClick: onDismiss,
           children: "Cancel"
         })]
       })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
       onClick: () => setOpen(true),
       variant: "primary",
       children: "Export"
@@ -235,7 +224,7 @@ const ExportStartButton_getStyles = theme => {
     `
   };
 };
-;// CONCATENATED MODULE: ./public/app/features/admin/ExportStatus.tsx
+;
 var _ExportStartButton, _ExportStartButton2;
 
 
@@ -269,17 +258,17 @@ const ExportStatus = () => {
   }, []);
 
   if (!status) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       className: styles.wrap,
-      children: _ExportStartButton || (_ExportStartButton = /*#__PURE__*/(0,jsx_runtime.jsx)(ExportStartButton, {}))
+      children: _ExportStartButton || (_ExportStartButton = (0,jsx_runtime.jsx)(ExportStartButton, {}))
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: styles.wrap,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("pre", {
+    children: [(0,jsx_runtime.jsx)("pre", {
       children: JSON.stringify(status, null, 2)
-    }), Boolean(!status.running) && (_ExportStartButton2 || (_ExportStartButton2 = /*#__PURE__*/(0,jsx_runtime.jsx)(ExportStartButton, {}))), Boolean(status.running) && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+    }), Boolean(!status.running) && (_ExportStartButton2 || (_ExportStartButton2 = (0,jsx_runtime.jsx)(ExportStartButton, {}))), Boolean(status.running) && (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
       variant: "secondary",
       onClick: () => {
         (0,src.getBackendSrv)().post('/api/admin/export/stop');
@@ -299,7 +288,7 @@ const ExportStatus_getStyles = theme => {
     `
   };
 };
-;// CONCATENATED MODULE: ./public/app/features/admin/state/apis.tsx
+;
 
 const getServerStats = async () => {
   return (0,src.getBackendSrv)().get('api/admin/stats').catch(err => {
@@ -307,7 +296,7 @@ const getServerStats = async () => {
     return null;
   });
 };
-;// CONCATENATED MODULE: ./public/app/features/admin/ServerStats.tsx
+;
 var _Loader, _LinkButton, _LinkButton2, _LinkButton3, _LinkButton4, _CrawlerStatus, _ExportStatus;
 
 
@@ -327,10 +316,10 @@ const ServerStats = () => {
   const [stats, setStats] = (0,react.useState)(null);
   const [isLoading, setIsLoading] = (0,react.useState)(false);
   const styles = (0,grafana_ui_src.useStyles2)(ServerStats_getStyles);
-  const hasAccessToDataSources = context_srv/* contextSrv.hasAccess */.Vt.hasAccess(types/* AccessControlAction.DataSourcesRead */.bW.DataSourcesRead, context_srv/* contextSrv.isGrafanaAdmin */.Vt.isGrafanaAdmin);
-  const hasAccessToAdminUsers = context_srv/* contextSrv.hasAccess */.Vt.hasAccess(types/* AccessControlAction.UsersRead */.bW.UsersRead, context_srv/* contextSrv.isGrafanaAdmin */.Vt.isGrafanaAdmin);
+  const hasAccessToDataSources = context_srv.Vt.hasAccess(types.bW.DataSourcesRead, context_srv.Vt.isGrafanaAdmin);
+  const hasAccessToAdminUsers = context_srv.Vt.hasAccess(types.bW.UsersRead, context_srv.Vt.isGrafanaAdmin);
   (0,react.useEffect)(() => {
-    if (context_srv/* contextSrv.hasAccess */.Vt.hasAccess(types/* AccessControlAction.ActionServerStatsRead */.bW.ActionServerStatsRead, context_srv/* contextSrv.isGrafanaAdmin */.Vt.isGrafanaAdmin)) {
+    if (context_srv.Vt.hasAccess(types.bW.ActionServerStatsRead, context_srv.Vt.isGrafanaAdmin)) {
       setIsLoading(true);
       getServerStats().then(stats => {
         setStats(stats);
@@ -339,22 +328,22 @@ const ServerStats = () => {
     }
   }, []);
 
-  if (!context_srv/* contextSrv.hasAccess */.Vt.hasAccess(types/* AccessControlAction.ActionServerStatsRead */.bW.ActionServerStatsRead, context_srv/* contextSrv.isGrafanaAdmin */.Vt.isGrafanaAdmin)) {
+  if (!context_srv.Vt.hasAccess(types.bW.ActionServerStatsRead, context_srv.Vt.isGrafanaAdmin)) {
     return null;
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h2", {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)("h2", {
       className: styles.title,
       children: "Instance statistics"
-    }), isLoading ? /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), isLoading ? (0,jsx_runtime.jsx)("div", {
       className: styles.loader,
-      children: _Loader || (_Loader = /*#__PURE__*/(0,jsx_runtime.jsx)(Loader/* Loader */.a, {
+      children: _Loader || (_Loader = (0,jsx_runtime.jsx)(Loader.a, {
         text: 'Loading instance stats...'
       }))
-    }) : stats ? /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    }) : stats ? (0,jsx_runtime.jsxs)("div", {
       className: styles.row,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(StatCard, {
+      children: [(0,jsx_runtime.jsx)(StatCard, {
         content: [{
           name: 'Dashboards (starred)',
           value: `${stats.dashboards} (${stats.stars})`
@@ -368,35 +357,35 @@ const ServerStats = () => {
           name: 'Snapshots',
           value: stats.snapshots
         }],
-        footer: _LinkButton || (_LinkButton = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+        footer: _LinkButton || (_LinkButton = (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
           href: '/dashboards',
           variant: 'secondary',
           children: "Manage dashboards"
         }))
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), (0,jsx_runtime.jsxs)("div", {
         className: styles.doubleRow,
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(StatCard, {
+        children: [(0,jsx_runtime.jsx)(StatCard, {
           content: [{
             name: 'Data sources',
             value: stats.datasources
           }],
-          footer: hasAccessToDataSources && (_LinkButton2 || (_LinkButton2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+          footer: hasAccessToDataSources && (_LinkButton2 || (_LinkButton2 = (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
             href: '/datasources',
             variant: 'secondary',
             children: "Manage data sources"
           })))
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(StatCard, {
+        }), (0,jsx_runtime.jsx)(StatCard, {
           content: [{
             name: 'Alerts',
             value: stats.alerts
           }],
-          footer: _LinkButton3 || (_LinkButton3 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+          footer: _LinkButton3 || (_LinkButton3 = (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
             href: '/alerting/list',
             variant: 'secondary',
             children: "Alerts"
           }))
         })]
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(StatCard, {
+      }), (0,jsx_runtime.jsx)(StatCard, {
         content: [{
           name: 'Organisations',
           value: stats.orgs
@@ -410,16 +399,16 @@ const ServerStats = () => {
           name: 'Active sessions',
           value: stats.activeSessions
         }],
-        footer: hasAccessToAdminUsers && (_LinkButton4 || (_LinkButton4 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
+        footer: hasAccessToAdminUsers && (_LinkButton4 || (_LinkButton4 = (0,jsx_runtime.jsx)(grafana_ui_src.LinkButton, {
           href: '/admin/users',
           variant: 'secondary',
           children: "Manage users"
         })))
       })]
-    }) : /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+    }) : (0,jsx_runtime.jsx)("p", {
       className: styles.notFound,
       children: "No stats found."
-    }), src.config.featureToggles.dashboardPreviews && src.config.featureToggles.dashboardPreviewsAdmin && (_CrawlerStatus || (_CrawlerStatus = /*#__PURE__*/(0,jsx_runtime.jsx)(CrawlerStatus, {}))), src.config.featureToggles["export"] && (_ExportStatus || (_ExportStatus = /*#__PURE__*/(0,jsx_runtime.jsx)(ExportStatus, {})))]
+    }), src.config.featureToggles.dashboardPreviews && src.config.featureToggles.dashboardPreviewsAdmin && (_CrawlerStatus || (_CrawlerStatus = (0,jsx_runtime.jsx)(CrawlerStatus, {}))), src.config.featureToggles["export"] && (_ExportStatus || (_ExportStatus = (0,jsx_runtime.jsx)(ExportStatus, {})))]
   });
 };
 
@@ -466,24 +455,24 @@ const StatCard = _ref => {
     footer
   } = _ref;
   const styles = (0,grafana_ui_src.useStyles2)(getCardStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CardContainer, {
+  return (0,jsx_runtime.jsx)(grafana_ui_src.CardContainer, {
     className: styles.container,
     disableHover: true,
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    children: (0,jsx_runtime.jsxs)("div", {
       className: styles.inner,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      children: [(0,jsx_runtime.jsx)("div", {
         className: styles.content,
         children: content.map(item => {
-          return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+          return (0,jsx_runtime.jsxs)("div", {
             className: styles.row,
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+            children: [(0,jsx_runtime.jsx)("span", {
               children: item.name
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+            }), (0,jsx_runtime.jsx)("span", {
               children: item.value
             })]
           }, item.name);
         })
-      }), footer && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), footer && (0,jsx_runtime.jsx)("div", {
         children: footer
       })]
     })
@@ -513,17 +502,17 @@ const getCardStyles = theme => {
   };
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/plugins/admin/components/Loader.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/plugins/admin/components/Loader.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "a": () => (/* binding */ Loader)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "a": () => ( Loader)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 
 
 
@@ -531,14 +520,14 @@ const Loader = _ref => {
   let {
     text = 'Loading...'
   } = _ref;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "page-loader-wrapper",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.LoadingPlaceholder, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__.LoadingPlaceholder, {
       text: text
     })
   });
 };
 
-/***/ })
+ })
 
 }]);

@@ -1,17 +1,17 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[4156],{
 
-/***/ "./public/app/core/components/NodeGraphSettings.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/components/NodeGraphSettings.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "n": () => (/* binding */ NodeGraphSettings)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "n": () => ( NodeGraphSettings)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _h;
 
 
@@ -28,18 +28,18 @@ function NodeGraphSettings(_ref) {
     onOptionsChange
   } = _ref;
   const styles = (0,_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.useStyles)(getStyles);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: styles.container,
-    children: [_h || (_h = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
+    children: [_h || (_h = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
       className: "page-heading",
       children: "Node Graph"
-    })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineFieldRow, {
+    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineFieldRow, {
       className: styles.row,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineField, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineField, {
         tooltip: "Enables the Node Graph visualization in the trace viewer.",
         label: "Enable Node Graph",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineSwitch, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineSwitch, {
           id: "enableNodeGraph",
           value: (_options$jsonData$nod = options.jsonData.nodeGraph) === null || _options$jsonData$nod === void 0 ? void 0 : _options$jsonData$nod.enabled,
           onChange: event => (0,_grafana_data__WEBPACK_IMPORTED_MODULE_2__.updateDatasourcePluginJsonDataOption)({
@@ -65,30 +65,23 @@ const getStyles = theme => ({
   `
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ TraceToLogsSettings)
+  "Z": () => ( TraceToLogsSettings)
 });
 
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/core/components/TraceToLogs/KeyValueInput.tsx
+;
 var _Icon, _Icon2, _Icon3;
 
 
@@ -96,7 +89,7 @@ var _Icon, _Icon2, _Icon3;
 
 
 
-const EQ_WIDTH = 3; // = 24px in inline label
+const EQ_WIDTH = 3; 
 
 const KeyValueInput = _ref => {
   let {
@@ -107,11 +100,11 @@ const KeyValueInput = _ref => {
     valuePlaceholder = 'Value (optional)'
   } = _ref;
   const styles = (0,grafana_ui_src.useStyles)(getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: styles.wrapper,
-    children: values.length ? values.map((value, idx) => /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+    children: values.length ? values.map((value, idx) => (0,jsx_runtime.jsxs)("div", {
       className: styles.pair,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.SegmentInput, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.SegmentInput, {
         id: `${id}-key-${idx}`,
         placeholder: keyPlaceholder,
         value: value.key,
@@ -124,12 +117,12 @@ const KeyValueInput = _ref => {
             return v;
           }));
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineLabel, {
         "aria-label": "equals",
         className: styles.operator,
         width: EQ_WIDTH,
         children: "="
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.SegmentInput, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.SegmentInput, {
         id: `${id}-value-${idx}`,
         placeholder: valuePlaceholder,
         value: value.value,
@@ -142,39 +135,39 @@ const KeyValueInput = _ref => {
             return v;
           }));
         }
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+      }), (0,jsx_runtime.jsx)("button", {
         onClick: () => onChange([...values.slice(0, idx), ...values.slice(idx + 1)]),
         className: "gf-form-label query-part",
         "aria-label": "Remove tag",
-        children: _Icon || (_Icon = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+        children: _Icon || (_Icon = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
           name: "times"
         }))
-      }), idx === values.length - 1 ? /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+      }), idx === values.length - 1 ? (0,jsx_runtime.jsx)("button", {
         onClick: () => onChange([...values, {
           key: '',
           value: ''
         }]),
         className: "gf-form-label query-part",
         "aria-label": "Add tag",
-        children: _Icon2 || (_Icon2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+        children: _Icon2 || (_Icon2 = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
           name: "plus"
         }))
       }) : null]
-    }, idx)) : /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+    }, idx)) : (0,jsx_runtime.jsx)("button", {
       onClick: () => onChange([...values, {
         key: '',
         value: ''
       }]),
       className: "gf-form-label query-part",
       "aria-label": "Add tag",
-      children: _Icon3 || (_Icon3 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      children: _Icon3 || (_Icon3 = (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: "plus"
       }))
     })
   });
 };
 
-/* harmony default export */ const TraceToLogs_KeyValueInput = (KeyValueInput);
+ const TraceToLogs_KeyValueInput = (KeyValueInput);
 
 const getStyles = theme => ({
   wrapper: emotion_css_esm.css`
@@ -191,7 +184,7 @@ const getStyles = theme => ({
     color: ${theme.palette.orange};
   `
 });
-;// CONCATENATED MODULE: ./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx
+;
 var _h;
 
 
@@ -210,25 +203,24 @@ function TraceToLogsSettings(_ref) {
     onOptionsChange
   } = _ref;
   const styles = (0,grafana_ui_src.useStyles)(TraceToLogsSettings_getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: (0,emotion_css_esm.css)({
       width: '100%'
     }),
-    children: [_h || (_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+    children: [_h || (_h = (0,jsx_runtime.jsx)("h3", {
       className: "page-heading",
       children: "Trace to logs"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    })), (0,jsx_runtime.jsx)("div", {
       className: styles.infoText,
       children: "Trace to logs lets you navigate from a trace span to the selected data source's logs."
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         tooltip: "The data source the trace is going to navigate to",
         label: "Data source",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
+        children: (0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
           inputId: "trace-to-logs-data-source-picker",
           filter: ds => {
-            // Trace to logs only supports loki and splunk at the moment
             return ds.type === 'loki' || ds.type === 'grafana-splunk-datasource';
           },
           current: (_options$jsonData$tra = options.jsonData.tracesToLogs) === null || _options$jsonData$tra === void 0 ? void 0 : _options$jsonData$tra.datasourceUid,
@@ -247,12 +239,12 @@ function TraceToLogsSettings(_ref) {
           }
         })
       })
-    }), (_options$jsonData$tra3 = options.jsonData.tracesToLogs) !== null && _options$jsonData$tra3 !== void 0 && _options$jsonData$tra3.mapTagNamesEnabled ? /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (_options$jsonData$tra3 = options.jsonData.tracesToLogs) !== null && _options$jsonData$tra3 !== void 0 && _options$jsonData$tra3.mapTagNamesEnabled ? (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         tooltip: "Tags that will be used in the Loki query. Default tags: 'cluster', 'hostname', 'namespace', 'pod'",
         label: "Tags",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(TraceToLogs_KeyValueInput, {
+        children: (0,jsx_runtime.jsx)(TraceToLogs_KeyValueInput, {
           keyPlaceholder: "Tag",
           values: (_ref2 = (_options$jsonData$tra4 = (_options$jsonData$tra5 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra5 === void 0 ? void 0 : _options$jsonData$tra5.mappedTags) !== null && _options$jsonData$tra4 !== void 0 ? _options$jsonData$tra4 : (_options$jsonData$tra6 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra6 === void 0 ? void 0 : (_options$jsonData$tra7 = _options$jsonData$tra6.tags) === null || _options$jsonData$tra7 === void 0 ? void 0 : _options$jsonData$tra7.map(tag => ({
             key: tag
@@ -265,12 +257,12 @@ function TraceToLogsSettings(_ref) {
           }))
         })
       })
-    }) : /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }) : (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         tooltip: "Tags that will be used in the Loki query. Default tags: 'cluster', 'hostname', 'namespace', 'pod'",
         label: "Tags",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.TagsInput, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.TagsInput, {
           tags: (_options$jsonData$tra8 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra8 === void 0 ? void 0 : _options$jsonData$tra8.tags,
           width: 40,
           onChange: tags => (0,src.updateDatasourcePluginJsonDataOption)({
@@ -281,13 +273,13 @@ function TraceToLogsSettings(_ref) {
           }))
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Map tag names",
         labelWidth: 26,
         grow: true,
         tooltip: "Map trace tag names to log label names. Ex: k8s.pod.name -> pod",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           id: "mapTagNames",
           value: (_options$jsonData$tra9 = (_options$jsonData$tra10 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra10 === void 0 ? void 0 : _options$jsonData$tra10.mapTagNamesEnabled) !== null && _options$jsonData$tra9 !== void 0 ? _options$jsonData$tra9 : false,
           onChange: event => (0,src.updateDatasourcePluginJsonDataOption)({
@@ -298,13 +290,13 @@ function TraceToLogsSettings(_ref) {
           }))
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Span start time shift",
         labelWidth: 26,
         grow: true,
         tooltip: "Shifts the start time of the span. Default 0 (Time units can be used here, for example: 5s, 1m, 3h)",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           type: "text",
           placeholder: "1h",
           width: 40,
@@ -317,13 +309,13 @@ function TraceToLogsSettings(_ref) {
           value: ((_options$jsonData$tra11 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra11 === void 0 ? void 0 : _options$jsonData$tra11.spanStartTimeShift) || ''
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Span end time shift",
         labelWidth: 26,
         grow: true,
         tooltip: "Shifts the end time of the span. Default 0 Time units can be used here, for example: 5s, 1m, 3h",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
           type: "text",
           placeholder: "1h",
           width: 40,
@@ -336,13 +328,13 @@ function TraceToLogsSettings(_ref) {
           value: ((_options$jsonData$tra12 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra12 === void 0 ? void 0 : _options$jsonData$tra12.spanEndTimeShift) || ''
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Filter by Trace ID",
         labelWidth: 26,
         grow: true,
         tooltip: "Filters logs by Trace ID. Appends '|=<trace id>' to the query.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           id: "filterByTraceID",
           value: (_options$jsonData$tra13 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra13 === void 0 ? void 0 : _options$jsonData$tra13.filterByTraceID,
           onChange: event => (0,src.updateDatasourcePluginJsonDataOption)({
@@ -353,13 +345,13 @@ function TraceToLogsSettings(_ref) {
           }))
         })
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Filter by Span ID",
         labelWidth: 26,
         grow: true,
         tooltip: "Filters logs by Span ID. Appends '|=<span id>' to the query.",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           id: "filterBySpanID",
           value: (_options$jsonData$tra14 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra14 === void 0 ? void 0 : _options$jsonData$tra14.filterBySpanID,
           onChange: event => (0,src.updateDatasourcePluginJsonDataOption)({
@@ -381,20 +373,20 @@ const TraceToLogsSettings_getStyles = theme => ({
   `
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/core/components/TraceToMetrics/TraceToMetricsSettings.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/core/components/TraceToMetrics/TraceToMetricsSettings.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "F": () => (/* binding */ TraceToMetricsSettings)
-/* harmony export */ });
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "F": () => ( TraceToMetricsSettings)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _h;
 
 
@@ -412,23 +404,23 @@ function TraceToMetricsSettings(_ref) {
     onOptionsChange
   } = _ref;
   const styles = (0,_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.useStyles)(getStyles);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: (0,_emotion_css__WEBPACK_IMPORTED_MODULE_0__.css)({
       width: '100%'
     }),
-    children: [_h || (_h = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
+    children: [_h || (_h = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
       className: "page-heading",
       children: "Trace to metrics"
-    })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
       className: styles.infoText,
       children: "Trace to metrics lets you navigate from a trace span to the selected data source."
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineFieldRow, {
+    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineFieldRow, {
       className: styles.row,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
         tooltip: "The data source the trace is going to navigate to",
         label: "Data source",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_runtime__WEBPACK_IMPORTED_MODULE_3__.DataSourcePicker, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_runtime__WEBPACK_IMPORTED_MODULE_3__.DataSourcePicker, {
           inputId: "trace-to-metrics-data-source-picker",
           pluginId: "prometheus",
           current: (_options$jsonData$tra = options.jsonData.tracesToMetrics) === null || _options$jsonData$tra === void 0 ? void 0 : _options$jsonData$tra.datasourceUid,
@@ -441,7 +433,7 @@ function TraceToMetricsSettings(_ref) {
             datasourceUid: ds.uid
           }))
         })
-      }), (_options$jsonData$tra2 = options.jsonData.tracesToMetrics) !== null && _options$jsonData$tra2 !== void 0 && _options$jsonData$tra2.datasourceUid ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Button, {
+      }), (_options$jsonData$tra2 = options.jsonData.tracesToMetrics) !== null && _options$jsonData$tra2 !== void 0 && _options$jsonData$tra2.datasourceUid ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Button, {
         type: "button",
         variant: "secondary",
         size: "sm",
@@ -456,13 +448,13 @@ function TraceToMetricsSettings(_ref) {
         },
         children: "Clear"
       }) : null]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineFieldRow, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
+    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineFieldRow, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.InlineField, {
         label: "Query",
         labelWidth: 26,
         tooltip: "The Prometheus query that will run when navigating from a trace to metrics",
         grow: true,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Input, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_4__.Input, {
           label: "Query",
           type: "text",
           allowFullScreen: true,
@@ -492,40 +484,35 @@ const getStyles = theme => ({
   `
 });
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/tempo/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/tempo/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "plugin": () => (/* binding */ module_plugin)
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/tempo/CheatSheet.tsx
+;
 var _div;
 
 
 
 
 function CheatSheet() {
-  return _div || (_div = /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h2", {
+  return _div || (_div = (0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsx)("h2", {
       id: "tempo-cheat-sheet",
       children: "Tempo Cheat Sheet"
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+    }), (0,jsx_runtime.jsx)("p", {
       children: "Tempo is a trace id lookup store. Enter a trace id in the above field and hit \u201CRun Query\u201D to retrieve your trace. Tempo is generally paired with other datasources such as Loki or Prometheus to find traces."
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)("p", {
-      children: ["Here are some", ' ', /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+    }), (0,jsx_runtime.jsxs)("p", {
+      children: ["Here are some", ' ', (0,jsx_runtime.jsx)("a", {
         href: "https://grafana.com/docs/tempo/latest/guides/instrumentation/",
         target: "blank",
         children: "instrumentation examples"
@@ -533,28 +520,18 @@ function CheatSheet() {
     })]
   }));
 }
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/lib/useAsync.js
 var useAsync = __webpack_require__("./.yarn/__virtual__/react-use-virtual-00326e70ba/0/cache/react-use-npm-17.3.2-a032cbeb01-7379460f51.zip/node_modules/react-use/lib/useAsync.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/loki/components/LokiQueryField.tsx + 1 modules
 var LokiQueryField = __webpack_require__("./public/app/plugins/datasource/loki/components/LokiQueryField.tsx");
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./.yarn/cache/prismjs-npm-1.27.0-ca4e1667c6-85c7f4a3e9.zip/node_modules/prismjs/prism.js
 var prism = __webpack_require__("./.yarn/cache/prismjs-npm-1.27.0-ca4e1667c6-85c7f4a3e9.zip/node_modules/prismjs/prism.js");
-var prism_default = /*#__PURE__*/__webpack_require__.n(prism);
-// EXTERNAL MODULE: ./public/app/core/actions/index.ts
+var prism_default = __webpack_require__.n(prism);
 var actions = __webpack_require__("./public/app/core/actions/index.ts");
-// EXTERNAL MODULE: ./public/app/core/copy/appNotification.ts
 var appNotification = __webpack_require__("./public/app/core/copy/appNotification.ts");
-// EXTERNAL MODULE: ./public/app/store/store.ts
 var store = __webpack_require__("./public/app/store/store.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/tempo/language_provider.ts
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -676,7 +653,7 @@ class TempoLanguageProvider extends src.LanguageProvider {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/tempo/syntax.ts
+;
 const tokenizer = {
   key: {
     pattern: /[^\s]+(?==)/,
@@ -689,7 +666,7 @@ const tokenizer = {
     pattern: /[^\s]+/
   }]
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/tempo/QueryEditor/NativeSearch.tsx
+;
 
 
 
@@ -753,7 +730,7 @@ const NativeSearch = _ref => {
           [name]: false
         }));
       } else {
-        (0,store/* dispatch */.WI)((0,actions/* notifyApp */.$l)((0,appNotification/* createErrorNotification */.t_)('Error', error)));
+        (0,store.WI)((0,actions.$l)((0,appNotification.t_)('Error', error)));
         setIsLoading(prevValue => Object.assign({}, prevValue, {
           [name]: false
         }));
@@ -806,11 +783,10 @@ const NativeSearch = _ref => {
         fetchOptionsCallback('name', languageProvider);
         setHasSyntaxLoaded(true);
       } catch (error) {
-        // Display message if Tempo is connected but search 404's
         if ((error === null || error === void 0 ? void 0 : error.status) === 404) {
           setError(error);
         } else {
-          (0,store/* dispatch */.WI)((0,actions/* notifyApp */.$l)((0,appNotification/* createErrorNotification */.t_)('Error', error)));
+          (0,store.WI)((0,actions.$l)((0,appNotification.t_)('Error', error)));
         }
 
         setHasSyntaxLoaded(true);
@@ -841,15 +817,15 @@ const NativeSearch = _ref => {
   };
 
   const templateSrv = (0,grafana_runtime_src.getTemplateSrv)();
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsxs)("div", {
       className: styles.container,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Service Name",
           labelWidth: 14,
           grow: true,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.AsyncSelect, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.AsyncSelect, {
             inputId: "service",
             cacheOptions: false,
             loadOptions: serviceNameSearch,
@@ -871,12 +847,12 @@ const NativeSearch = _ref => {
             "aria-label": 'select-service-name'
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Span Name",
           labelWidth: 14,
           grow: true,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.AsyncSelect, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.AsyncSelect, {
             inputId: "spanName",
             cacheOptions: false,
             loadOptions: spanNameSearch,
@@ -898,13 +874,13 @@ const NativeSearch = _ref => {
             "aria-label": 'select-span-name'
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Tags",
           labelWidth: 14,
           grow: true,
           tooltip: "Values should be in the logfmt format.",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.QueryField, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.QueryField, {
             additionalPlugins: plugins,
             query: query.search,
             onTypeahead: onTypeahead,
@@ -921,13 +897,13 @@ const NativeSearch = _ref => {
             portalOrigin: "tempo"
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Min Duration",
           invalid: !!inputErrors.minDuration,
           labelWidth: 14,
           grow: true,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
             id: "minDuration",
             value: query.minDuration || '',
             placeholder: durationPlaceholder,
@@ -952,13 +928,13 @@ const NativeSearch = _ref => {
             onKeyDown: onKeyDown
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Max Duration",
           invalid: !!inputErrors.maxDuration,
           labelWidth: 14,
           grow: true,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
             id: "maxDuration",
             value: query.maxDuration || '',
             placeholder: durationPlaceholder,
@@ -983,14 +959,14 @@ const NativeSearch = _ref => {
             onKeyDown: onKeyDown
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Limit",
           invalid: !!inputErrors.limit,
           labelWidth: 14,
           grow: true,
           tooltip: "Maximum numbers of returned results",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
             id: "limit",
             value: query.limit || '',
             type: "number",
@@ -1015,11 +991,11 @@ const NativeSearch = _ref => {
           })
         })
       })]
-    }), error ? /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.Alert, {
+    }), error ? (0,jsx_runtime.jsxs)(grafana_ui_src.Alert, {
       title: "Unable to connect to Tempo search",
       severity: "info",
       className: styles.alert,
-      children: ["Please ensure that Tempo is configured with search enabled. If you would like to hide this tab, you can configure it in the ", /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+      children: ["Please ensure that Tempo is configured with search enabled. If you would like to hide this tab, you can configure it in the ", (0,jsx_runtime.jsx)("a", {
         href: `/datasources/edit/${datasource.uid}`,
         children: "datasource settings"
       }), "."]
@@ -1027,7 +1003,7 @@ const NativeSearch = _ref => {
   });
 };
 
-/* harmony default export */ const QueryEditor_NativeSearch = (NativeSearch);
+ const QueryEditor_NativeSearch = (NativeSearch);
 
 const getStyles = theme => ({
   container: emotion_css_esm.css`
@@ -1038,9 +1014,8 @@ const getStyles = theme => ({
     margin-top: ${theme.spacing(2)};
   `
 });
-// EXTERNAL MODULE: ./public/app/features/variables/adhoc/picker/AdHocFilter.tsx + 6 modules
 var AdHocFilter = __webpack_require__("./public/app/features/variables/adhoc/picker/AdHocFilter.tsx");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/tempo/QueryEditor/utils.ts
+;
 
 async function getDS(uid) {
   if (!uid) {
@@ -1056,7 +1031,7 @@ async function getDS(uid) {
     return undefined;
   }
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/tempo/QueryEditor/ServiceGraphSection.tsx
+;
 var ServiceGraphSection_div, _div2, _a;
 
 
@@ -1074,7 +1049,7 @@ function ServiceGraphSection(_ref) {
     onChange
   } = _ref;
   const styles = (0,grafana_ui_src.useStyles2)(ServiceGraphSection_getStyles);
-  const dsState = (0,useAsync/* default */.Z)(() => getDS(graphDatasourceUid), [graphDatasourceUid]); // Check if service graph metrics are being collected. If not, displays a warning
+  const dsState = (0,useAsync.Z)(() => getDS(graphDatasourceUid), [graphDatasourceUid]); 
 
   const [hasKeys, setHasKeys] = (0,react.useState)(undefined);
   (0,react.useEffect)(() => {
@@ -1097,27 +1072,27 @@ function ServiceGraphSection(_ref) {
   const ds = dsState.value;
 
   if (!graphDatasourceUid) {
-    return ServiceGraphSection_div || (ServiceGraphSection_div = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return ServiceGraphSection_div || (ServiceGraphSection_div = (0,jsx_runtime.jsx)("div", {
       className: "text-warning",
       children: "Please set up a service graph datasource in the datasource settings."
     }));
   }
 
   if (graphDatasourceUid && !ds) {
-    return _div2 || (_div2 = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return _div2 || (_div2 = (0,jsx_runtime.jsx)("div", {
       className: "text-warning",
       children: "Service graph datasource is configured but the data source no longer exists. Please configure existing data source to use the service graph functionality."
     }));
   }
 
   const filters = queryToFilter(query.serviceMapQuery || '');
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+  return (0,jsx_runtime.jsxs)("div", {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Filter",
         labelWidth: 14,
         grow: true,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(AdHocFilter/* AdHocFilter */.F, {
+        children: (0,jsx_runtime.jsx)(AdHocFilter.F, {
           datasource: {
             uid: graphDatasourceUid
           },
@@ -1146,11 +1121,11 @@ function ServiceGraphSection(_ref) {
           }
         })
       })
-    }), hasKeys === false ? /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.Alert, {
+    }), hasKeys === false ? (0,jsx_runtime.jsxs)(grafana_ui_src.Alert, {
       title: "No service graph data found",
       severity: "info",
       className: styles.alert,
-      children: ["Please ensure that service graph metrics are set up correctly according to the", ' ', _a || (_a = /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+      children: ["Please ensure that service graph metrics are set up correctly according to the", ' ', _a || (_a = (0,jsx_runtime.jsx)("a", {
         target: "_blank",
         rel: "noreferrer noopener",
         href: "https://grafana.com/docs/tempo/next/grafana-agent/service-graphs/",
@@ -1187,7 +1162,7 @@ const ServiceGraphSection_getStyles = theme => ({
     margin-top: ${theme.spacing(2)};
   `
 });
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/tempo/QueryEditor/QueryField.tsx
+;
 var _Badge, QueryField_div, QueryField_div2;
 
 function QueryField_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1227,7 +1202,6 @@ class TempoQueryFieldComponent extends react.PureComponent {
     });
 
     QueryField_defineProperty(this, "onClearResults", () => {
-      // Run clear query to clear results
       const {
         onChange,
         query,
@@ -1241,7 +1215,6 @@ class TempoQueryFieldComponent extends react.PureComponent {
   }
 
   async componentDidMount() {
-    // Set initial query type to ensure traceID field appears
     if (!this.props.query.queryType) {
       this.props.onChange(Object.assign({}, this.props.query, {
         queryType: DEFAULT_QUERY_TYPE
@@ -1283,13 +1256,11 @@ class TempoQueryFieldComponent extends react.PureComponent {
 
     if (logsDatasourceUid) {
       if (!grafana_runtime_src.config.featureToggles.tempoSearch) {
-        // Place at beginning as Search if no native search
         queryTypeOptions.unshift({
           value: 'search',
           label: 'Search'
         });
       } else {
-        // Place at end as Loki Search if native search is enabled
         queryTypeOptions.push({
           value: 'search',
           label: 'Loki Search'
@@ -1297,11 +1268,11 @@ class TempoQueryFieldComponent extends react.PureComponent {
       }
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Query type",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.RadioButtonGroup, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.RadioButtonGroup, {
             options: queryTypeOptions,
             value: query.queryType,
             onChange: v => {
@@ -1313,35 +1284,35 @@ class TempoQueryFieldComponent extends react.PureComponent {
             size: "md"
           })
         })
-      }), query.queryType === 'nativeSearch' && /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), query.queryType === 'nativeSearch' && (0,jsx_runtime.jsxs)("div", {
         style: {
           maxWidth: '65ch'
         },
-        children: [_Badge || (_Badge = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Badge, {
+        children: [_Badge || (_Badge = (0,jsx_runtime.jsx)(grafana_ui_src.Badge, {
           icon: "rocket",
           text: "Beta",
           color: "blue"
-        })), grafana_runtime_src.config.featureToggles.tempoBackendSearch ? /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+        })), grafana_runtime_src.config.featureToggles.tempoBackendSearch ? (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
           children: "\xA0Tempo search is currently in beta."
-        }) : /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+        }) : (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
           children: "\xA0Tempo search is currently in beta and is designed to return recent traces only. It ignores the time range picker. We are actively working on full backend search. Look for improvements in the near future!"
         })]
-      }), query.queryType === 'search' && /*#__PURE__*/(0,jsx_runtime.jsx)(SearchSection, {
+      }), query.queryType === 'search' && (0,jsx_runtime.jsx)(SearchSection, {
         logsDatasourceUid: logsDatasourceUid,
         query: query,
         onRunQuery: this.onRunLinkedQuery,
         onChange: this.onChangeLinkedQuery
-      }), query.queryType === 'nativeSearch' && /*#__PURE__*/(0,jsx_runtime.jsx)(QueryEditor_NativeSearch, {
+      }), query.queryType === 'nativeSearch' && (0,jsx_runtime.jsx)(QueryEditor_NativeSearch, {
         datasource: this.props.datasource,
         query: query,
         onChange: onChange,
         onBlur: this.props.onBlur,
         onRunQuery: this.props.onRunQuery
-      }), query.queryType === 'upload' && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+      }), query.queryType === 'upload' && (0,jsx_runtime.jsx)("div", {
         className: (0,emotion_css_esm.css)({
           padding: this.props.theme.spacing(2)
         }),
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.FileDropzone, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.FileDropzone, {
           options: {
             multiple: false
           },
@@ -1350,12 +1321,12 @@ class TempoQueryFieldComponent extends react.PureComponent {
             this.props.onRunQuery();
           }
         })
-      }), query.queryType === 'traceId' && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      }), query.queryType === 'traceId' && (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Trace ID",
           labelWidth: 14,
           grow: true,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.QueryField, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.QueryField, {
             query: query.query,
             onChange: val => {
               onChange(Object.assign({}, query, {
@@ -1370,7 +1341,7 @@ class TempoQueryFieldComponent extends react.PureComponent {
             portalOrigin: "tempo"
           })
         })
-      }), query.queryType === 'serviceMap' && /*#__PURE__*/(0,jsx_runtime.jsx)(ServiceGraphSection, {
+      }), query.queryType === 'serviceMap' && (0,jsx_runtime.jsx)(ServiceGraphSection, {
         graphDatasourceUid: graphDatasourceUid,
         query: query,
         onChange: onChange
@@ -1387,7 +1358,7 @@ function SearchSection(_ref) {
     onRunQuery,
     query
   } = _ref;
-  const dsState = (0,useAsync/* default */.Z)(() => getDS(logsDatasourceUid), [logsDatasourceUid]);
+  const dsState = (0,useAsync.Z)(() => getDS(logsDatasourceUid), [logsDatasourceUid]);
 
   if (dsState.loading) {
     return null;
@@ -1398,10 +1369,10 @@ function SearchSection(_ref) {
   if (ds) {
     var _query$linkedQuery;
 
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineLabel, {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsxs)(grafana_ui_src.InlineLabel, {
         children: ["Tempo uses ", ds.name, " to find traces."]
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(LokiQueryField/* LokiQueryField */.n, {
+      }), (0,jsx_runtime.jsx)(LokiQueryField.n, {
         datasource: ds,
         onChange: onChange,
         onRunQuery: onRunQuery,
@@ -1414,14 +1385,14 @@ function SearchSection(_ref) {
   }
 
   if (!logsDatasourceUid) {
-    return QueryField_div || (QueryField_div = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return QueryField_div || (QueryField_div = (0,jsx_runtime.jsx)("div", {
       className: "text-warning",
       children: "Please set up a Loki search datasource in the datasource settings."
     }));
   }
 
   if (logsDatasourceUid && !ds) {
-    return QueryField_div2 || (QueryField_div2 = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return QueryField_div2 || (QueryField_div2 = (0,jsx_runtime.jsx)("div", {
       className: "text-warning",
       children: "Loki search datasource is configured but the data source no longer exists. Please configure existing data source to use the search."
     }));
@@ -1431,13 +1402,10 @@ function SearchSection(_ref) {
 }
 
 const TempoQueryField = (0,grafana_ui_src.withTheme2)(TempoQueryFieldComponent);
-// EXTERNAL MODULE: ./public/app/core/components/NodeGraphSettings.tsx
 var NodeGraphSettings = __webpack_require__("./public/app/core/components/NodeGraphSettings.tsx");
-// EXTERNAL MODULE: ./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx + 1 modules
 var TraceToLogsSettings = __webpack_require__("./public/app/core/components/TraceToLogs/TraceToLogsSettings.tsx");
-// EXTERNAL MODULE: ./public/app/core/components/TraceToMetrics/TraceToMetricsSettings.tsx
 var TraceToMetricsSettings = __webpack_require__("./public/app/core/components/TraceToMetrics/TraceToMetricsSettings.tsx");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/tempo/configuration/LokiSearchSettings.tsx
+;
 var _h;
 
 
@@ -1454,8 +1422,7 @@ function LokiSearchSettings(_ref) {
     options,
     onOptionsChange
   } = _ref;
-  const styles = (0,grafana_ui_src.useStyles)(LokiSearchSettings_getStyles); // Default to the trace to logs datasource if configured and loki search was enabled
-  // but only if jsonData.lokiSearch hasn't been set
+  const styles = (0,grafana_ui_src.useStyles)(LokiSearchSettings_getStyles); 
 
   const legacyDatasource = ((_options$jsonData$tra = options.jsonData.tracesToLogs) === null || _options$jsonData$tra === void 0 ? void 0 : _options$jsonData$tra.lokiSearch) !== false ? (_options$jsonData$tra2 = options.jsonData.tracesToLogs) === null || _options$jsonData$tra2 === void 0 ? void 0 : _options$jsonData$tra2.datasourceUid : undefined;
 
@@ -1468,23 +1435,23 @@ function LokiSearchSettings(_ref) {
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: (0,emotion_css_esm.css)({
       width: '100%'
     }),
-    children: [_h || (_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+    children: [_h || (_h = (0,jsx_runtime.jsx)("h3", {
       className: "page-heading",
       children: "Loki Search"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    })), (0,jsx_runtime.jsx)("div", {
       className: styles.infoText,
       children: "Select a Loki datasource to search for traces. Derived fields must be configured in the Loki data source."
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+    }), (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
       className: styles.row,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         tooltip: "The Loki data source with the service graph data",
         label: "Data source",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
+        children: (0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
           inputId: "loki-search-data-source-picker",
           pluginId: "loki",
           current: (_options$jsonData$lok = options.jsonData.lokiSearch) === null || _options$jsonData$lok === void 0 ? void 0 : _options$jsonData$lok.datasourceUid,
@@ -1497,7 +1464,7 @@ function LokiSearchSettings(_ref) {
             datasourceUid: ds.uid
           })
         })
-      }), (_options$jsonData$lok2 = options.jsonData.lokiSearch) !== null && _options$jsonData$lok2 !== void 0 && _options$jsonData$lok2.datasourceUid ? /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      }), (_options$jsonData$lok2 = options.jsonData.lokiSearch) !== null && _options$jsonData$lok2 !== void 0 && _options$jsonData$lok2.datasourceUid ? (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
         type: 'button',
         variant: 'secondary',
         size: 'sm',
@@ -1527,7 +1494,7 @@ const LokiSearchSettings_getStyles = theme => ({
     align-items: baseline;
   `
 });
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/tempo/configuration/SearchSettings.tsx
+;
 var SearchSettings_h;
 
 
@@ -1544,18 +1511,18 @@ function SearchSettings(_ref) {
     onOptionsChange
   } = _ref;
   const styles = (0,grafana_ui_src.useStyles)(SearchSettings_getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: styles.container,
-    children: [SearchSettings_h || (SearchSettings_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+    children: [SearchSettings_h || (SearchSettings_h = (0,jsx_runtime.jsx)("h3", {
       className: "page-heading",
       children: "Search"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+    })), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
       className: styles.row,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         tooltip: "Removes the Search tab from the Tempo query editor.",
         label: "Hide search",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineSwitch, {
           id: "hideSearch",
           value: (_options$jsonData$sea = options.jsonData.search) === null || _options$jsonData$sea === void 0 ? void 0 : _options$jsonData$sea.hide,
           onChange: event => (0,src.updateDatasourcePluginJsonDataOption)({
@@ -1580,7 +1547,7 @@ const SearchSettings_getStyles = theme => ({
     align-items: baseline;
   `
 });
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/tempo/configuration/ServiceGraphSettings.tsx
+;
 var ServiceGraphSettings_h;
 
 
@@ -1598,23 +1565,23 @@ function ServiceGraphSettings(_ref) {
     onOptionsChange
   } = _ref;
   const styles = (0,grafana_ui_src.useStyles)(ServiceGraphSettings_getStyles);
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+  return (0,jsx_runtime.jsxs)("div", {
     className: (0,emotion_css_esm.css)({
       width: '100%'
     }),
-    children: [ServiceGraphSettings_h || (ServiceGraphSettings_h = /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+    children: [ServiceGraphSettings_h || (ServiceGraphSettings_h = (0,jsx_runtime.jsx)("h3", {
       className: "page-heading",
       children: "Service Graph"
-    })), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    })), (0,jsx_runtime.jsx)("div", {
       className: styles.infoText,
       children: "To allow querying service graph data you have to select a Prometheus instance where the data is stored."
-    }), /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
+    }), (0,jsx_runtime.jsxs)(grafana_ui_src.InlineFieldRow, {
       className: styles.row,
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         tooltip: "The Prometheus data source with the service graph data",
         label: "Data source",
         labelWidth: 26,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
+        children: (0,jsx_runtime.jsx)(grafana_runtime_src.DataSourcePicker, {
           inputId: "service-graph-data-source-picker",
           pluginId: "prometheus",
           current: (_options$jsonData$ser = options.jsonData.serviceMap) === null || _options$jsonData$ser === void 0 ? void 0 : _options$jsonData$ser.datasourceUid,
@@ -1627,7 +1594,7 @@ function ServiceGraphSettings(_ref) {
             datasourceUid: ds.uid
           })
         })
-      }), (_options$jsonData$ser2 = options.jsonData.serviceMap) !== null && _options$jsonData$ser2 !== void 0 && _options$jsonData$ser2.datasourceUid ? /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+      }), (_options$jsonData$ser2 = options.jsonData.serviceMap) !== null && _options$jsonData$ser2 !== void 0 && _options$jsonData$ser2.datasourceUid ? (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
         type: 'button',
         variant: 'secondary',
         size: 'sm',
@@ -1657,7 +1624,7 @@ const ServiceGraphSettings_getStyles = theme => ({
     align-items: baseline;
   `
 });
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/tempo/configuration/ConfigEditor.tsx
+;
 
 
 
@@ -1675,78 +1642,65 @@ const ConfigEditor = _ref => {
     options,
     onOptionsChange
   } = _ref;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.DataSourceHttpSettings, {
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.DataSourceHttpSettings, {
       defaultUrl: "http://tempo",
       dataSourceConfig: options,
       showAccessOptions: false,
       onChange: onOptionsChange
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(TraceToLogsSettings/* TraceToLogsSettings */.Z, {
+      children: (0,jsx_runtime.jsx)(TraceToLogsSettings.Z, {
         options: options,
         onOptionsChange: onOptionsChange
       })
-    }), grafana_runtime_src.config.featureToggles.traceToMetrics ? /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), grafana_runtime_src.config.featureToggles.traceToMetrics ? (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(TraceToMetricsSettings/* TraceToMetricsSettings */.F, {
+      children: (0,jsx_runtime.jsx)(TraceToMetricsSettings.F, {
         options: options,
         onOptionsChange: onOptionsChange
       })
-    }) : null, grafana_runtime_src.config.featureToggles.tempoServiceGraph && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }) : null, grafana_runtime_src.config.featureToggles.tempoServiceGraph && (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(ServiceGraphSettings, {
+      children: (0,jsx_runtime.jsx)(ServiceGraphSettings, {
         options: options,
         onOptionsChange: onOptionsChange
       })
-    }), grafana_runtime_src.config.featureToggles.tempoSearch && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), grafana_runtime_src.config.featureToggles.tempoSearch && (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(SearchSettings, {
+      children: (0,jsx_runtime.jsx)(SearchSettings, {
         options: options,
         onOptionsChange: onOptionsChange
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(NodeGraphSettings/* NodeGraphSettings */.n, {
+      children: (0,jsx_runtime.jsx)(NodeGraphSettings.n, {
         options: options,
         onOptionsChange: onOptionsChange
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    }), (0,jsx_runtime.jsx)("div", {
       className: "gf-form-group",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(LokiSearchSettings, {
+      children: (0,jsx_runtime.jsx)(LokiSearchSettings, {
         options: options,
         onOptionsChange: onOptionsChange
       })
     })]
   });
 };
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/from.js
 var from = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/from.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/throwError.js
 var throwError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/throwError.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/merge.js
 var merge = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/merge.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/empty.js
 var empty = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/empty.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js
 var mergeMap = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js
 var catchError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/toArray.js
 var toArray = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/toArray.js");
-// EXTERNAL MODULE: ./public/app/core/utils/fetch.ts
 var fetch = __webpack_require__("./public/app/core/utils/fetch.ts");
-// EXTERNAL MODULE: ./public/app/features/plugins/datasource_srv.ts
 var datasource_srv = __webpack_require__("./public/app/features/plugins/datasource_srv.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/tempo/graphTransform.ts
 var graphTransform = __webpack_require__("./public/app/plugins/datasource/tempo/graphTransform.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/tempo/resultTransformer.ts + 43 modules
 var resultTransformer = __webpack_require__("./public/app/plugins/datasource/tempo/resultTransformer.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/tempo/datasource.ts
+;
 function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1757,7 +1711,6 @@ function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.d
 
 
 
- // search = Loki search, nativeSearch = Tempo search for backwards compatibility
 
 const DEFAULT_LIMIT = 20;
 class TempoDatasource extends grafana_runtime_src.DataSourceWithBackend {
@@ -1809,25 +1762,24 @@ class TempoDatasource extends grafana_runtime_src.DataSourceWithBackend {
       });
     }
 
-    const logsDatasourceUid = this.getLokiSearchDS(); // Run search queries on linked datasource
+    const logsDatasourceUid = this.getLokiSearchDS(); 
 
     if (logsDatasourceUid && ((_targets$search = targets.search) === null || _targets$search === void 0 ? void 0 : _targets$search.length) > 0) {
-      const dsSrv = (0,datasource_srv/* getDatasourceSrv */.ak)();
-      subQueries.push((0,from/* from */.D)(dsSrv.get(logsDatasourceUid)).pipe((0,mergeMap/* mergeMap */.z)(linkedDatasource => {
+      const dsSrv = (0,datasource_srv.ak)();
+      subQueries.push((0,from.D)(dsSrv.get(logsDatasourceUid)).pipe((0,mergeMap.z)(linkedDatasource => {
         var _settings$jsonData$de;
 
-        // Wrap linked query into a data request based on original request
         const linkedRequest = Object.assign({}, options, {
           targets: targets.search.map(t => t.linkedQuery)
-        }); // Find trace matchers in derived fields of the linked datasource that's identical to this datasource
+        }); 
 
         const settings = linkedDatasource.instanceSettings;
         const traceLinkMatcher = ((_settings$jsonData$de = settings.jsonData.derivedFields) === null || _settings$jsonData$de === void 0 ? void 0 : _settings$jsonData$de.filter(field => field.datasourceUid === this.uid && field.matcherRegex).map(field => field.matcherRegex)) || [];
 
         if (!traceLinkMatcher || traceLinkMatcher.length === 0) {
-          return (0,throwError/* throwError */._)(() => new Error('No Loki datasource configured for search. Set up Derived Fields for traces in a Loki datasource settings and link it to this Tempo datasource.'));
+          return (0,throwError._)(() => new Error('No Loki datasource configured for search. Set up Derived Fields for traces in a Loki datasource settings and link it to this Tempo datasource.'));
         } else {
-          return linkedDatasource.query(linkedRequest).pipe((0,map/* map */.U)(response => response.error ? response : (0,resultTransformer/* transformTraceList */.RY)(response, this.uid, this.name, traceLinkMatcher)));
+          return linkedDatasource.query(linkedRequest).pipe((0,map.U)(response => response.error ? response : (0,resultTransformer.RY)(response, this.uid, this.name, traceLinkMatcher)));
         }
       })));
     }
@@ -1840,11 +1792,11 @@ class TempoDatasource extends grafana_runtime_src.DataSourceWithBackend {
         } : undefined;
         const query = this.applyVariables(targets.nativeSearch[0], options.scopedVars);
         const searchQuery = this.buildSearchQuery(query, timeRange);
-        subQueries.push(this._request('/api/search', searchQuery).pipe((0,map/* map */.U)(response => {
+        subQueries.push(this._request('/api/search', searchQuery).pipe((0,map.U)(response => {
           return {
-            data: [(0,resultTransformer/* createTableFrameFromSearch */.n4)(response.data.traces, this.instanceSettings)]
+            data: [(0,resultTransformer.n4)(response.data.traces, this.instanceSettings)]
           };
-        }), (0,catchError/* catchError */.K)(error => {
+        }), (0,catchError.K)(error => {
           return (0,of.of)({
             error: {
               message: error.data.message
@@ -1876,7 +1828,7 @@ class TempoDatasource extends grafana_runtime_src.DataSourceWithBackend {
         } else {
           var _this$nodeGraph;
 
-          subQueries.push((0,of.of)((0,resultTransformer/* transformFromOTLP */.IM)(otelTraceData.batches, (_this$nodeGraph = this.nodeGraph) === null || _this$nodeGraph === void 0 ? void 0 : _this$nodeGraph.enabled)));
+          subQueries.push((0,of.of)((0,resultTransformer.IM)(otelTraceData.batches, (_this$nodeGraph = this.nodeGraph) === null || _this$nodeGraph === void 0 ? void 0 : _this$nodeGraph.enabled)));
         }
       } else {
         subQueries.push((0,of.of)({
@@ -1894,7 +1846,7 @@ class TempoDatasource extends grafana_runtime_src.DataSourceWithBackend {
       subQueries.push(this.handleTraceIdQuery(options, targets.traceId));
     }
 
-    return (0,merge/* merge */.T)(...subQueries);
+    return (0,merge.T)(...subQueries);
   }
 
   applyTemplateVariables(query, scopedVars) {
@@ -1933,32 +1885,26 @@ class TempoDatasource extends grafana_runtime_src.DataSourceWithBackend {
       maxDuration: this.templateSrv.replace((_query$maxDuration = query.maxDuration) !== null && _query$maxDuration !== void 0 ? _query$maxDuration : '', scopedVars)
     });
   }
-  /**
-   * Handles the simplest of the queries where we have just a trace id and return trace data for it.
-   * @param options
-   * @param targets
-   * @private
-   */
 
 
   handleTraceIdQuery(options, targets) {
     const validTargets = targets.filter(t => t.query);
 
     if (!validTargets.length) {
-      return empty/* EMPTY */.E;
+      return empty.E;
     }
 
     const traceRequest = Object.assign({}, options, {
       targets: validTargets
     });
-    return super.query(traceRequest).pipe((0,map/* map */.U)(response => {
+    return super.query(traceRequest).pipe((0,map.U)(response => {
       var _this$nodeGraph2;
 
       if (response.error) {
         return response;
       }
 
-      return (0,resultTransformer/* transformTrace */.Jk)(response, (_this$nodeGraph2 = this.nodeGraph) === null || _this$nodeGraph2 === void 0 ? void 0 : _this$nodeGraph2.enabled);
+      return (0,resultTransformer.Jk)(response, (_this$nodeGraph2 = this.nodeGraph) === null || _this$nodeGraph2 === void 0 ? void 0 : _this$nodeGraph2.enabled);
     }));
   }
 
@@ -1971,7 +1917,7 @@ class TempoDatasource extends grafana_runtime_src.DataSourceWithBackend {
   }
 
   _request(apiUrl, data, options) {
-    const params = data ? (0,fetch/* serializeParams */.tW)(data) : '';
+    const params = data ? (0,fetch.tW)(data) : '';
     const url = `${this.instanceSettings.url}${apiUrl}${params.length ? `?${params}` : ''}`;
     const req = Object.assign({}, options, {
       url
@@ -2015,7 +1961,7 @@ class TempoDatasource extends grafana_runtime_src.DataSourceWithBackend {
     var _query$search2;
 
     let tags = (_query$search2 = query.search) !== null && _query$search2 !== void 0 ? _query$search2 : '';
-    let tempoQuery = (0,lodash.pick)(query, ['minDuration', 'maxDuration', 'limit']); // Remove empty properties
+    let tempoQuery = (0,lodash.pick)(query, ['minDuration', 'maxDuration', 'limit']); 
 
     tempoQuery = (0,lodash.pickBy)(tempoQuery, lodash.identity);
 
@@ -2025,12 +1971,12 @@ class TempoDatasource extends grafana_runtime_src.DataSourceWithBackend {
 
     if (query.spanName) {
       tags += ` name="${query.spanName}"`;
-    } // Set default limit
+    } 
 
 
     if (!tempoQuery.limit) {
       tempoQuery.limit = DEFAULT_LIMIT;
-    } // Validate query inputs and remove spaces if valid
+    } 
 
 
     if (tempoQuery.minDuration) {
@@ -2074,29 +2020,29 @@ class TempoDatasource extends grafana_runtime_src.DataSourceWithBackend {
   }
 
   async getServiceGraphLabels() {
-    const ds = await (0,datasource_srv/* getDatasourceSrv */.ak)().get(this.serviceMap.datasourceUid);
+    const ds = await (0,datasource_srv.ak)().get(this.serviceMap.datasourceUid);
     return ds.getTagKeys();
   }
 
   async getServiceGraphLabelValues(key) {
-    const ds = await (0,datasource_srv/* getDatasourceSrv */.ak)().get(this.serviceMap.datasourceUid);
+    const ds = await (0,datasource_srv.ak)().get(this.serviceMap.datasourceUid);
     return ds.getTagValues({
       key
     });
-  } // Get linked loki search datasource. Fall back to legacy loki search/trace to logs config
+  } 
 
 
 }
 
 function queryServiceMapPrometheus(request, datasourceUid) {
-  return (0,from/* from */.D)((0,datasource_srv/* getDatasourceSrv */.ak)().get(datasourceUid)).pipe((0,mergeMap/* mergeMap */.z)(ds => {
+  return (0,from.D)((0,datasource_srv.ak)().get(datasourceUid)).pipe((0,mergeMap.z)(ds => {
     return ds.query(request);
   }));
 }
 
 function serviceMapQuery(request, datasourceUid) {
-  return queryServiceMapPrometheus(makePromServiceMapRequest(request), datasourceUid).pipe( // Just collect all the responses first before processing into node graph data
-  (0,toArray/* toArray */.q)(), (0,map/* map */.U)(responses => {
+  return queryServiceMapPrometheus(makePromServiceMapRequest(request), datasourceUid).pipe( 
+  (0,toArray.q)(), (0,map.U)(responses => {
     const errorRes = responses.find(res => !!res.error);
 
     if (errorRes) {
@@ -2106,7 +2052,7 @@ function serviceMapQuery(request, datasourceUid) {
     const {
       nodes,
       edges
-    } = (0,graphTransform/* mapPromMetricsToServiceMap */.BC)(responses, request.range);
+    } = (0,graphTransform.BC)(responses, request.range);
     nodes.fields[0].config = {
       links: [makePromLink('Request rate', `rate(${graphTransform/* totalsMetric */.Yt}{server="\${__data.fields.id}"}[$__rate_interval])`, datasourceUid), makePromLink('Request histogram', `histogram_quantile(0.9, sum(rate(${graphTransform/* histogramMetric */.NZ}{server="\${__data.fields.id}"}[$__rate_interval])) by (le, client, server))`, datasourceUid), makePromLink('Failed request rate', `rate(${graphTransform/* failedMetric */.yf}{server="\${__data.fields.id}"}[$__rate_interval])`, datasourceUid)]
     };
@@ -2133,18 +2079,16 @@ function makePromLink(title, metric, datasourceUid) {
 
 function makePromServiceMapRequest(options) {
   return Object.assign({}, options, {
-    targets: graphTransform/* serviceMapMetrics.map */.t3.map(metric => {
+    targets: graphTransform.t3.map(metric => {
       return {
         refId: metric,
-        // options.targets[0] is not correct here, but not sure what should happen if you have multiple queries for
-        // service map at the same time anyway
         expr: `delta(${metric}${options.targets[0].serviceMapQuery || ''}[$__range])`,
         instant: true
       };
     })
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/tempo/module.ts
+;
 
 
 
@@ -2152,6 +2096,6 @@ function makePromServiceMapRequest(options) {
 
 const module_plugin = new src.DataSourcePlugin(TempoDatasource).setQueryEditor(TempoQueryField).setConfigEditor(ConfigEditor).setQueryEditorHelp(CheatSheet);
 
-/***/ })
+ })
 
 }]);

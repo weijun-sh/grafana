@@ -1,20 +1,19 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[1260],{
 
-/***/ "./public/app/features/alerting/state/ThresholdMapper.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/alerting/state/ThresholdMapper.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "X": () => (/* binding */ ThresholdMapper)
-/* harmony export */ });
-/* unused harmony export hiddenReducerTypes */
-/* harmony import */ var app_core_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./public/app/core/config.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "X": () => ( ThresholdMapper)
+ });
+ var app_core_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./public/app/core/config.ts");
 
 const hiddenReducerTypes = ['percent_diff', 'percent_diff_abs'];
 class ThresholdMapper {
   static alertToGraphThresholds(panel) {
-    if (!panel.alert || app_core_config__WEBPACK_IMPORTED_MODULE_0__/* .config.unifiedAlertingEnabled */ .vc.unifiedAlertingEnabled) {
-      return false; // no update when no alerts
+    if (!panel.alert || app_core_config__WEBPACK_IMPORTED_MODULE_0__ .vc.unifiedAlertingEnabled) {
+      return false; 
     }
 
     for (let i = 0; i < panel.alert.conditions.length; i++) {
@@ -133,20 +132,20 @@ class ThresholdMapper {
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/dashboard/utils/loadSnapshotData.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/dashboard/utils/loadSnapshotData.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "y": () => (/* binding */ loadSnapshotData)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var app_core_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/core/config.ts");
-/* harmony import */ var _query_state_DashboardQueryRunner_SnapshotWorker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/query/state/DashboardQueryRunner/SnapshotWorker.ts");
-/* harmony import */ var _query_state_runRequest__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/query/state/runRequest.ts");
-/* harmony import */ var _services_TimeSrv__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/dashboard/services/TimeSrv.ts");
-/* harmony import */ var _panel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/dashboard/utils/panel.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "y": () => ( loadSnapshotData)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var app_core_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/core/config.ts");
+ var _query_state_DashboardQueryRunner_SnapshotWorker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/query/state/DashboardQueryRunner/SnapshotWorker.ts");
+ var _query_state_runRequest__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/query/state/runRequest.ts");
+ var _services_TimeSrv__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/dashboard/services/TimeSrv.ts");
+ var _panel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/features/dashboard/utils/panel.ts");
 
 
 
@@ -154,15 +153,15 @@ class ThresholdMapper {
 
 
 function loadSnapshotData(panel, dashboard) {
-  const data = (0,_query_state_runRequest__WEBPACK_IMPORTED_MODULE_3__/* .getProcessedDataFrames */ .F9)(panel.snapshotData);
-  const worker = new _query_state_DashboardQueryRunner_SnapshotWorker__WEBPACK_IMPORTED_MODULE_2__/* .SnapshotWorker */ .g();
+  const data = (0,_query_state_runRequest__WEBPACK_IMPORTED_MODULE_3__ .F9)(panel.snapshotData);
+  const worker = new _query_state_DashboardQueryRunner_SnapshotWorker__WEBPACK_IMPORTED_MODULE_2__ .g();
   const options = {
     dashboard,
     range: (0,_grafana_data__WEBPACK_IMPORTED_MODULE_0__.getDefaultTimeRange)()
   };
   const annotationEvents = worker.canWork(options) ? worker.getAnnotationsInSnapshot(dashboard, panel.id) : [];
   const annotations = [new _grafana_data__WEBPACK_IMPORTED_MODULE_0__.ArrayDataFrame(annotationEvents)];
-  const timeData = (0,_panel__WEBPACK_IMPORTED_MODULE_5__/* .applyPanelTimeOverrides */ .W1)(panel, (0,_services_TimeSrv__WEBPACK_IMPORTED_MODULE_4__/* .getTimeSrv */ .$t)().timeRange());
+  const timeData = (0,_panel__WEBPACK_IMPORTED_MODULE_5__ .W1)(panel, (0,_services_TimeSrv__WEBPACK_IMPORTED_MODULE_4__ .$t)().timeRange());
   return {
     timeRange: timeData.timeRange,
     state: _grafana_data__WEBPACK_IMPORTED_MODULE_0__.LoadingState.Done,
@@ -174,30 +173,27 @@ function loadSnapshotData(panel, dashboard) {
       },
       replaceVariables: panel.replaceVariables,
       fieldConfigRegistry: panel.plugin.fieldConfigRegistry,
-      theme: app_core_config__WEBPACK_IMPORTED_MODULE_1__/* .config.theme2 */ .vc.theme2,
+      theme: app_core_config__WEBPACK_IMPORTED_MODULE_1__ .vc.theme2,
       timeZone: dashboard.getTimezone()
     }),
     annotations
   };
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/panel/panellinks/linkSuppliers.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/panel/panellinks/linkSuppliers.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "H": () => (/* binding */ getPanelLinksSupplier),
-/* harmony export */   "n": () => (/* binding */ getFieldLinksSupplier)
-/* harmony export */ });
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _link_srv__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/panel/panellinks/link_srv.ts");
+ __webpack_require__.d(__webpack_exports__, {
+   "H": () => ( getPanelLinksSupplier),
+   "n": () => ( getFieldLinksSupplier)
+ });
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _link_srv__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/panel/panellinks/link_srv.ts");
 
 
 
-/**
- * Link suppliers creates link models based on a link origin
- */
 const getFieldLinksSupplier = value => {
   const links = value.field.links;
 
@@ -244,7 +240,7 @@ const getFieldLinksSupplier = value => {
               },
               text: 'Value'
             };
-          } // Expose other values on the row
+          } 
 
 
           if (value.view) {
@@ -261,7 +257,6 @@ const getFieldLinksSupplier = value => {
             };
           }
         } else {
-          // calculation
           scopedVars['__value'] = {
             value: {
               raw: value.display.numeric,
@@ -282,7 +277,7 @@ const getFieldLinksSupplier = value => {
       };
 
       return links.map(link => {
-        return (0,_link_srv__WEBPACK_IMPORTED_MODULE_1__/* .getLinkSrv */ .Bq)().getDataLinkUIModel(link, replace, value);
+        return (0,_link_srv__WEBPACK_IMPORTED_MODULE_1__ .Bq)().getDataLinkUIModel(link, replace, value);
       });
     }
   };
@@ -297,63 +292,47 @@ const getPanelLinksSupplier = panel => {
   return {
     getLinks: () => {
       return links.map(link => {
-        return (0,_link_srv__WEBPACK_IMPORTED_MODULE_1__/* .getLinkSrv */ .Bq)().getDataLinkUIModel(link, panel.replaceVariables, panel);
+        return (0,_link_srv__WEBPACK_IMPORTED_MODULE_1__ .Bq)().getDataLinkUIModel(link, panel.replaceVariables, panel);
       });
     }
   };
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/panel/graph/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/panel/graph/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "GraphCtrl": () => (/* binding */ GraphCtrl),
-  "plugin": () => (/* binding */ module_plugin)
+  "GraphCtrl": () => ( GraphCtrl),
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./public/vendor/flot/jquery.flot.js
 var jquery_flot = __webpack_require__("./public/vendor/flot/jquery.flot.js");
-// EXTERNAL MODULE: ./public/vendor/flot/jquery.flot.selection.js
 var jquery_flot_selection = __webpack_require__("./public/vendor/flot/jquery.flot.selection.js");
-// EXTERNAL MODULE: ./public/vendor/flot/jquery.flot.time.js
 var jquery_flot_time = __webpack_require__("./public/vendor/flot/jquery.flot.time.js");
-// EXTERNAL MODULE: ./public/vendor/flot/jquery.flot.stack.js
 var jquery_flot_stack = __webpack_require__("./public/vendor/flot/jquery.flot.stack.js");
-// EXTERNAL MODULE: ./public/vendor/flot/jquery.flot.stackpercent.js
 var jquery_flot_stackpercent = __webpack_require__("./public/vendor/flot/jquery.flot.stackpercent.js");
-// EXTERNAL MODULE: ./public/vendor/flot/jquery.flot.fillbelow.js
 var jquery_flot_fillbelow = __webpack_require__("./public/vendor/flot/jquery.flot.fillbelow.js");
-// EXTERNAL MODULE: ./public/vendor/flot/jquery.flot.crosshair.js
 var jquery_flot_crosshair = __webpack_require__("./public/vendor/flot/jquery.flot.crosshair.js");
-// EXTERNAL MODULE: ./public/vendor/flot/jquery.flot.dashes.js
 var jquery_flot_dashes = __webpack_require__("./public/vendor/flot/jquery.flot.dashes.js");
-// EXTERNAL MODULE: ./.yarn/cache/jquery-npm-3.6.0-ca7872bdbb-8fd5fef4aa.zip/node_modules/jquery/dist/jquery-exposed.js
 var jquery_exposed = __webpack_require__("./.yarn/cache/jquery-npm-3.6.0-ca7872bdbb-8fd5fef4aa.zip/node_modules/jquery/dist/jquery-exposed.js");
-var jquery_exposed_default = /*#__PURE__*/__webpack_require__.n(jquery_exposed);
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
+var jquery_exposed_default = __webpack_require__.n(jquery_exposed);
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./.yarn/cache/tether-drop-https-3382d2649f-a10a7337d5.zip/node_modules/tether-drop/dist/js/drop.js
 var js_drop = __webpack_require__("./.yarn/cache/tether-drop-https-3382d2649f-a10a7337d5.zip/node_modules/tether-drop/dist/js/drop.js");
-var drop_default = /*#__PURE__*/__webpack_require__.n(js_drop);
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
+var drop_default = __webpack_require__.n(js_drop);
 var src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/jquery.flot.events.ts
+;
 init.$inject = ["plot"];
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
- //@ts-ignore
 
 
 
-/** @ngInject */
 
 const createAnnotationToolip = (element, event, plot) => {
   const injector = (0,src.getLegacyAngularInjector)();
@@ -397,22 +376,19 @@ const createAnnotationToolip = (element, event, plot) => {
 
 createAnnotationToolip.$inject = ["element", "event", "plot"];
 let markerElementToAttachTo = null;
-/** @ngInject */
 
 const createEditPopover = (element, event, plot) => {
   const eventManager = plot.getOptions().events.manager;
 
   if (eventManager.editorOpen) {
-    // update marker element to attach to (needed in case of legend on the right
-    // when there is a double render pass and the initial marker element is removed)
     markerElementToAttachTo = element;
     return;
-  } // mark as openend
+  } 
 
 
-  eventManager.editorOpened(); // set marker elment to attache to
+  eventManager.editorOpened(); 
 
-  markerElementToAttachTo = element; // wait for element to be attached and positioned
+  markerElementToAttachTo = element; 
 
   setTimeout(() => {
     const injector = (0,src.getLegacyAngularInjector)();
@@ -447,7 +423,6 @@ const createEditPopover = (element, event, plot) => {
       drop.open();
       eventManager.editorOpened();
       drop.on('close', () => {
-        // need timeout here in order call drop.destroy
         setTimeout(() => {
           eventManager.editorClosed();
           scope.$destroy();
@@ -460,27 +435,9 @@ const createEditPopover = (element, event, plot) => {
 
 createEditPopover.$inject = ["element", "event", "plot"];
 
-/*
- * jquery.flot.events
- *
- * description: Flot plugin for adding events/markers to the plot
- * version: 0.2.5
- * authors:
- *    Alexander Wunschik <alex@wunschik.net>
- *    Joel Oughton <joeloughton@gmail.com>
- *    Nicolas Joseph <www.nicolasjoseph.com>
- *
- * website: https://github.com/mojoaxel/flot-events
- *
- * released under MIT License and GPLv2+
- */
 
-/**
- * A class that allows for the drawing an remove of some object
- */
 
 class DrawableEvent {
-  /** @ngInject */
   constructor(object, drawFunc, clearFunc, moveFunc, left, top, width, height) {
     _defineProperty(this, "_object", void 0);
 
@@ -541,11 +498,7 @@ class DrawableEvent {
 }
 DrawableEvent.$inject = ["object", "drawFunc", "clearFunc", "moveFunc", "left", "top", "width", "height"];
 
-/**
- * Event class that stores options (eventType, min, max, title, description) and the object to draw.
- */
 class VisualEvent {
-  /** @ngInject */
   constructor(options, drawableEvent) {
     _defineProperty(this, "_parent", void 0);
 
@@ -587,11 +540,7 @@ class VisualEvent {
 }
 VisualEvent.$inject = ["options", "drawableEvent"];
 
-/**
- * A Class that handles the event-markers inside the given plot
- */
 class EventMarkers {
-  /** @ngInject */
   constructor(plot) {
     _defineProperty(this, "_events", void 0);
 
@@ -614,9 +563,6 @@ class EventMarkers {
   setTypes(types) {
     return this._types = types;
   }
-  /**
-   * create internal objects for the given events
-   */
 
 
   setupEvents(events) {
@@ -649,19 +595,15 @@ class EventMarkers {
       return 0;
     });
   }
-  /**
-   * draw the events to the plot
-   */
 
 
   drawEvents() {
-    // var o = this._plot.getPlotOffset();
     jquery_exposed_default().each(this._events, (index, event) => {
       const options = event.getOptions();
 
       const insidePlot = this._insidePlot(options.min) || this._insidePlot(options.timeEnd);
 
-      const overlapPlot = this._overlapPlot(options.min, options.timeEnd); // check event is inside the graph range
+      const overlapPlot = this._overlapPlot(options.min, options.timeEnd); 
 
 
       if ((insidePlot || overlapPlot) && !event.isHidden()) {
@@ -671,9 +613,6 @@ class EventMarkers {
       }
     });
   }
-  /**
-   * update the position of the event-markers (e.g. after scrolling or zooming)
-   */
 
 
   updateEvents() {
@@ -693,9 +632,6 @@ class EventMarkers {
       });
     });
   }
-  /**
-   * remove all events from the plot
-   */
 
 
   _clearEvents() {
@@ -704,9 +640,6 @@ class EventMarkers {
     });
     this._events = [];
   }
-  /**
-   * create a DOM element for the given event
-   */
 
 
   _buildDiv(event) {
@@ -721,7 +654,7 @@ class EventMarkers {
     const xaxis = this._plot.getXAxes()[this._plot.getOptions().events.xaxis - 1];
 
     let top, left, color, markerSize, markerShow, lineStyle, lineWidth;
-    let markerTooltip; // map the eventType to a types object
+    let markerTooltip; 
 
     const eventTypeId = event.eventType;
 
@@ -732,7 +665,7 @@ class EventMarkers {
     }
 
     if (this._types === null || !this._types[eventTypeId] || !this._types[eventTypeId].markerSize) {
-      markerSize = 8; //default marker size
+      markerSize = 8; 
     } else {
       markerSize = this._types[eventTypeId].markerSize;
     }
@@ -750,13 +683,13 @@ class EventMarkers {
     }
 
     if (this._types == null || !this._types[eventTypeId] || !this._types[eventTypeId].lineStyle) {
-      lineStyle = 'dashed'; //default line style
+      lineStyle = 'dashed'; 
     } else {
       lineStyle = this._types[eventTypeId].lineStyle.toLowerCase();
     }
 
     if (this._types == null || !this._types[eventTypeId] || this._types[eventTypeId].lineWidth === undefined) {
-      lineWidth = 1; //default line width
+      lineWidth = 1; 
     } else {
       lineWidth = this._types[eventTypeId].lineWidth;
     }
@@ -841,9 +774,6 @@ class EventMarkers {
     }, left, top, (_line$width = line.width()) !== null && _line$width !== void 0 ? _line$width : 1, (_line$height = line.height()) !== null && _line$height !== void 0 ? _line$height : 1);
     return drawableEvent;
   }
-  /**
-   * create a DOM element for the given region
-   */
 
 
   _buildRegDiv(event) {
@@ -857,7 +787,7 @@ class EventMarkers {
 
     const xaxis = this._plot.getXAxes()[this._plot.getOptions().events.xaxis - 1];
 
-    let top, left, lineWidth, regionWidth, lineStyle, color, markerTooltip; // map the eventType to a types object
+    let top, left, lineWidth, regionWidth, lineStyle, color, markerTooltip; 
 
     const eventTypeId = event.eventType;
 
@@ -874,13 +804,13 @@ class EventMarkers {
     }
 
     if (this._types == null || !this._types[eventTypeId] || this._types[eventTypeId].lineWidth === undefined) {
-      lineWidth = 1; //default line width
+      lineWidth = 1; 
     } else {
       lineWidth = this._types[eventTypeId].lineWidth;
     }
 
     if (this._types == null || !this._types[eventTypeId] || !this._types[eventTypeId].lineStyle) {
-      lineStyle = 'dashed'; //default line style
+      lineStyle = 'dashed'; 
     } else {
       lineStyle = this._types[eventTypeId].lineStyle.toLowerCase();
     }
@@ -894,11 +824,10 @@ class EventMarkers {
     const [xmin, xmax] = [o.left, o.left + this._plot.width()];
     const regionStart = Math.max(left, xmin);
     const regionEnd = Math.min(right, xmax);
-    const regionOffset = right > xmax ? 0 : lineWidth; // only include lineWidth when right line is visible
+    const regionOffset = right > xmax ? 0 : lineWidth; 
 
     regionWidth = regionEnd - regionStart + regionOffset;
     (0,lodash.each)([left, right], position => {
-      // only draw visible region lines
       if (xmin <= position && position < xmax) {
         const line = jquery_exposed_default()('<div class="events_line flot-temp-elem"></div>').css({
           position: 'absolute',
@@ -962,9 +891,6 @@ class EventMarkers {
     }, left, top, (_region$width = region.width()) !== null && _region$width !== void 0 ? _region$width : 1, (_region$height = region.height()) !== null && _region$height !== void 0 ? _region$height : 1);
     return drawableEvent;
   }
-  /**
-   * check if the event is inside visible range
-   */
 
 
   _insidePlot(x) {
@@ -973,9 +899,6 @@ class EventMarkers {
     const xc = xaxis.p2c(x);
     return xc > 0 && xc < xaxis.p2c(xaxis.max);
   }
-  /**
-   * check if the event overlaps the visible range
-   */
 
 
   _overlapPlot(point0, point1) {
@@ -989,11 +912,7 @@ class EventMarkers {
 }
 EventMarkers.$inject = ["plot"];
 
-/**
- * initialize the plugin for the given plot
- */
 
-/** @ngInject */
 function init(plot) {
   const that = this;
   const eventMarkers = new EventMarkers(plot);
@@ -1014,7 +933,7 @@ function init(plot) {
       event.hide();
     });
     that.eventMarkers.drawEvents();
-  }; // change events on an existing plot
+  }; 
 
 
   plot.setEvents = events => {
@@ -1024,7 +943,6 @@ function init(plot) {
   };
 
   plot.hooks.processOptions.push((plot, options) => {
-    // enable the plugin
     if (options.events.data != null) {
       eventMarkers.eventsEnabled = true;
     }
@@ -1033,7 +951,6 @@ function init(plot) {
     const options = plot.getOptions();
 
     if (eventMarkers.eventsEnabled) {
-      // check for first run
       if (eventMarkers.getEvents().length < 1) {
         eventMarkers.setTypes(options.events.types);
         eventMarkers.setupEvents(options.events.data);
@@ -1059,34 +976,21 @@ jquery_exposed_default().plot.plugins.push({
   name: 'events',
   version: '0.2.5'
 });
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/__virtual__/react-dom-virtual-93e2c4839c/0/cache/react-dom-npm-17.0.2-f551215af1-1c1eaa3bca.zip/node_modules/react-dom/index.js
 var react_dom = __webpack_require__("./.yarn/__virtual__/react-dom-virtual-93e2c4839c/0/cache/react-dom-npm-17.0.2-f551215af1-1c1eaa3bca.zip/node_modules/react-dom/index.js");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var grafana_data_src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/angular/core_module.ts
 var core_module = __webpack_require__("./public/app/angular/core_module.ts");
-// EXTERNAL MODULE: ./public/app/core/config.ts
 var config = __webpack_require__("./public/app/core/config.ts");
-// EXTERNAL MODULE: ./public/app/core/core.ts
 var core = __webpack_require__("./public/app/core/core.ts");
-// EXTERNAL MODULE: ./public/app/core/utils/ConfigProvider.tsx
 var ConfigProvider = __webpack_require__("./public/app/core/utils/ConfigProvider.tsx");
-// EXTERNAL MODULE: ./public/app/core/utils/ticks.ts
 var utils_ticks = __webpack_require__("./public/app/core/utils/ticks.ts");
-// EXTERNAL MODULE: ./public/app/features/panel/panellinks/linkSuppliers.ts
 var linkSuppliers = __webpack_require__("./public/app/features/panel/panellinks/linkSuppliers.ts");
-// EXTERNAL MODULE: ./.yarn/cache/classnames-npm-2.3.1-f2ae0a8d3c-14db8889d5.zip/node_modules/classnames/index.js
 var classnames = __webpack_require__("./.yarn/cache/classnames-npm-2.3.1-f2ae0a8d3c-14db8889d5.zip/node_modules/classnames/index.js");
-var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
-// EXTERNAL MODULE: ./packages/grafana-e2e-selectors/src/index.ts + 3 modules
+var classnames_default = __webpack_require__.n(classnames);
 var grafana_e2e_selectors_src = __webpack_require__("./packages/grafana-e2e-selectors/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/Legend/LegendSeriesItem.tsx
+;
 function LegendSeriesItem_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1115,9 +1019,7 @@ class LegendItem extends react.PureComponent {
     });
 
     LegendSeriesItem_defineProperty(this, "onColorChange", color => {
-      this.props.onColorChange(this.props.series, color); // Because of PureComponent nature it makes only shallow props comparison and changing of series.color doesn't run
-      // component re-render. In this case we can't rely on color, selected by user, because it may be overwritten
-      // by series overrides. So we need to use forceUpdate() to make sure we have proper series color.
+      this.props.onColorChange(this.props.series, color); 
 
       this.forceUpdate();
     });
@@ -1135,10 +1037,9 @@ class LegendItem extends react.PureComponent {
     const legendValueItems = [];
 
     for (const valueName of LEGEND_STATS) {
-      // @ts-ignore
       if (this.props[valueName]) {
         const valueFormatted = series.formatValue(series.stats[valueName]);
-        legendValueItems.push( /*#__PURE__*/(0,jsx_runtime.jsx)(LegendValue, {
+        legendValueItems.push( (0,jsx_runtime.jsx)(LegendValue, {
           valueName: valueName,
           value: valueFormatted,
           asTable: asTable,
@@ -1165,7 +1066,7 @@ class LegendItem extends react.PureComponent {
     });
     const valueItems = values ? this.renderLegendValues() : [];
 
-    const seriesLabel = /*#__PURE__*/(0,jsx_runtime.jsx)(LegendSeriesLabel, {
+    const seriesLabel = (0,jsx_runtime.jsx)(LegendSeriesLabel, {
       label: series.alias,
       color: series.color,
       yaxis: this.state.yaxis,
@@ -1175,17 +1076,17 @@ class LegendItem extends react.PureComponent {
     });
 
     if (asTable) {
-      return /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
+      return (0,jsx_runtime.jsxs)("tr", {
         className: `graph-legend-series ${seriesOptionClasses}`,
-        children: [_td || (_td = /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        children: [_td || (_td = (0,jsx_runtime.jsx)("td", {
+          children: (0,jsx_runtime.jsx)("div", {
             className: "graph-legend-series__table-name",
             children: seriesLabel
           })
         })), valueItems]
       });
     } else {
-      return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      return (0,jsx_runtime.jsxs)("div", {
         className: `graph-legend-series ${seriesOptionClasses}`,
         children: [seriesLabel, valueItems]
       });
@@ -1214,16 +1115,16 @@ class LegendSeriesLabel extends react.PureComponent {
       onToggleAxis
     } = this.props;
     const onLabelClick = this.props.onLabelClick ? this.props.onLabelClick : () => {};
-    return [/*#__PURE__*/(0,jsx_runtime.jsx)(LegendSeriesIcon, {
+    return [(0,jsx_runtime.jsx)(LegendSeriesIcon, {
       color: color,
       yaxis: yaxis,
       onColorChange: onColorChange,
       onToggleAxis: onToggleAxis
-    }, "icon"), /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
+    }, "icon"), (0,jsx_runtime.jsx)("a", {
       className: "graph-legend-alias pointer",
       title: label,
       onClick: onLabelClick,
-      "aria-label": grafana_e2e_selectors_src/* selectors.components.Panels.Visualization.Graph.Legend.legendItemAlias */.wl.components.Panels.Visualization.Graph.Legend.legendItemAlias(label),
+      "aria-label": grafana_e2e_selectors_src.wl.components.Panels.Visualization.Graph.Legend.legendItemAlias(label),
       children: label
     }, "label")];
   }
@@ -1251,7 +1152,7 @@ class LegendSeriesIcon extends react.PureComponent {
   }
 
   render() {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.SeriesColorPicker, {
+    return (0,jsx_runtime.jsx)(grafana_ui_src.SeriesColorPicker, {
       yaxis: this.props.yaxis,
       color: this.props.color,
       onChange: this.onColorChange,
@@ -1263,7 +1164,7 @@ class LegendSeriesIcon extends react.PureComponent {
           showColorPicker,
           hideColorPicker
         } = _ref;
-        return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.SeriesIcon, {
+        return (0,jsx_runtime.jsx)(grafana_ui_src.SeriesIcon, {
           color: this.props.color,
           ref: ref,
           onClick: showColorPicker,
@@ -1291,20 +1192,20 @@ function LegendValue(_ref2) {
   } = _ref2;
 
   if (asTable) {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("td", {
+    return (0,jsx_runtime.jsx)("td", {
       className: `graph-legend-value ${valueName}`,
       onClick: onValueClick,
       children: value
     });
   }
 
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+  return (0,jsx_runtime.jsx)("div", {
     className: `graph-legend-value ${valueName}`,
     onClick: onValueClick,
     children: value
   });
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/Legend/Legend.tsx
+;
 function Legend_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1373,7 +1274,7 @@ class GraphLegend extends react.PureComponent {
 
     if (hiddenSeries[series.alias]) {
       delete hiddenSeries[series.alias];
-    } // check if every other series is hidden
+    } 
 
 
     const alreadyExclusive = this.props.seriesList.every(value => {
@@ -1385,12 +1286,10 @@ class GraphLegend extends react.PureComponent {
     });
 
     if (alreadyExclusive) {
-      // remove all hidden series
       this.props.seriesList.forEach(value => {
         delete hiddenSeries[value.alias];
       });
     } else {
-      // hide all but this serie
       this.props.seriesList.forEach(value => {
         if (value.alias === series.alias) {
           return;
@@ -1437,8 +1336,7 @@ class GraphLegend extends react.PureComponent {
       sortDesc
     };
     const seriesList = this.sortLegend().filter(series => !series.hideFromLegend(seriesHideProps));
-    const legendClass = `${this.props.alignAsTable ? 'graph-legend-table' : ''} ${optionalClass}`; // Set min-width if side style and there is a value, otherwise remove the CSS property
-    // Set width so it works with IE11
+    const legendClass = `${this.props.alignAsTable ? 'graph-legend-table' : ''} ${optionalClass}`; 
 
     const width = rightSide && sideWidth ? sideWidth : undefined;
     const ieWidth = rightSide && sideWidth ? sideWidth - 1 : undefined;
@@ -1454,10 +1352,10 @@ class GraphLegend extends react.PureComponent {
       onToggleSort: this.props.onToggleSort,
       onColorChange: this.props.onColorChange
     }, seriesValuesProps, sortProps);
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsx)("div", {
       className: `graph-legend-content ${legendClass}`,
       style: legendStyle,
-      children: this.props.alignAsTable ? /*#__PURE__*/(0,jsx_runtime.jsx)(LegendTable, Object.assign({}, legendProps)) : /*#__PURE__*/(0,jsx_runtime.jsx)(LegendSeriesList, Object.assign({}, legendProps))
+      children: this.props.alignAsTable ? (0,jsx_runtime.jsx)(LegendTable, Object.assign({}, legendProps)) : (0,jsx_runtime.jsx)(LegendSeriesList, Object.assign({}, legendProps))
     });
   }
 
@@ -1501,8 +1399,7 @@ class LegendSeriesList extends react.PureComponent {
       current,
       total
     };
-    return seriesList.map((series, i) => /*#__PURE__*/(0,jsx_runtime.jsx)(LegendItem // This trick required because TimeSeries.id is not unique (it's just TimeSeries.alias).
-    // In future would be good to make id unique across the series list.
+    return seriesList.map((series, i) => (0,jsx_runtime.jsx)(LegendItem 
     , Object.assign({
       series: series,
       hidden: hiddenSeries[series.alias]
@@ -1529,7 +1426,7 @@ class LegendTable extends react.PureComponent {
 
       if (stat !== sortBy) {
         sortDesc = undefined;
-      } // if already sort ascending, disable sorting
+      } 
 
 
       if (sortDesc === false) {
@@ -1570,28 +1467,28 @@ class LegendTable extends react.PureComponent {
       return null;
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("table", {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("colgroup", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("col", {
+    return (0,jsx_runtime.jsxs)("table", {
+      children: [(0,jsx_runtime.jsx)("colgroup", {
+        children: (0,jsx_runtime.jsx)("col", {
           style: {
             width: '100%'
           }
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("thead", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("tr", {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("th", {
+      }), (0,jsx_runtime.jsx)("thead", {
+        children: (0,jsx_runtime.jsxs)("tr", {
+          children: [(0,jsx_runtime.jsx)("th", {
             style: {
               textAlign: 'left'
             }
-          }), LEGEND_STATS.map(statName => seriesValuesProps[statName] && /*#__PURE__*/(0,jsx_runtime.jsx)(LegendTableHeaderItem, {
+          }), LEGEND_STATS.map(statName => seriesValuesProps[statName] && (0,jsx_runtime.jsx)(LegendTableHeaderItem, {
             statName: statName,
             sort: sort,
             sortDesc: sortDesc,
             onClick: this.onToggleSort
           }, statName))]
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("tbody", {
-        children: seriesList && seriesList.map((series, i) => /*#__PURE__*/(0,jsx_runtime.jsx)(LegendItem, Object.assign({
+      }), (0,jsx_runtime.jsx)("tbody", {
+        children: seriesList && seriesList.map((series, i) => (0,jsx_runtime.jsx)(LegendItem, Object.assign({
           asTable: true,
           series: series,
           hidden: hiddenSeries[series.alias],
@@ -1622,10 +1519,10 @@ class LegendTableHeaderItem extends react.PureComponent {
       sort,
       sortDesc
     } = this.props;
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)("th", {
+    return (0,jsx_runtime.jsxs)("th", {
       className: "pointer",
       onClick: this.onClick,
-      children: [statName, sort === statName && /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
+      children: [statName, sort === statName && (0,jsx_runtime.jsx)(grafana_ui_src.Icon, {
         name: sortDesc ? 'angle-down' : 'angle-up'
       })]
     });
@@ -1635,20 +1532,15 @@ class LegendTableHeaderItem extends react.PureComponent {
 
 class Legend extends react.PureComponent {
   render() {
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CustomScrollbar, {
+    return (0,jsx_runtime.jsx)(grafana_ui_src.CustomScrollbar, {
       hideHorizontalTrack: true,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(GraphLegend, Object.assign({}, this.props))
+      children: (0,jsx_runtime.jsx)(GraphLegend, Object.assign({}, this.props))
     });
   }
 
 }
-/* harmony default export */ const Legend_Legend = ((/* unused pure expression or super */ null && (Legend)));
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/align_yaxes.ts
-/**
- * To align two Y axes by Y level
- * @param yAxes data [{min: min_y1, min: max_y1}, {min: min_y2, max: max_y2}]
- * @param level Y level
- */
+ const Legend_Legend = (( null && (Legend)));
+;
 function alignYLevel(yAxes, level) {
   if (isNaN(level) || !checkCorrectAxis(yAxes)) {
     return;
@@ -1656,7 +1548,7 @@ function alignYLevel(yAxes, level) {
 
   const [yLeft, yRight] = yAxes;
   moveLevelToZero(yLeft, yRight, level);
-  expandStuckValues(yLeft, yRight); // one of graphs on zero
+  expandStuckValues(yLeft, yRight); 
 
   const zero = yLeft.min === 0 || yRight.min === 0 || yLeft.max === 0 || yRight.max === 0;
   const oneSide = checkOneSide(yLeft, yRight);
@@ -1679,7 +1571,6 @@ function alignYLevel(yAxes, level) {
       const rate = getRate(yLeft, yRight);
 
       if (oneSide) {
-        // all graphs above the Y level
         if (yLeft.min > 0) {
           yLeft.min = yLeft.max / rate;
           yRight.min = yRight.max / rate;
@@ -1707,7 +1598,6 @@ function alignYLevel(yAxes, level) {
 }
 
 function expandStuckValues(yLeft, yRight) {
-  // wide Y min and max using increased wideFactor
   const wideFactor = 0.25;
 
   if (yLeft.max === yLeft.min) {
@@ -1748,17 +1638,14 @@ function checkCorrectAxes(axes) {
 }
 
 function checkOneSide(yLeft, yRight) {
-  // on the one hand with respect to zero
   return yLeft.min >= 0 && yRight.min >= 0 || yLeft.max <= 0 && yRight.max <= 0;
 }
 
 function checkTwoCross(yLeft, yRight) {
-  // both across zero
   return yLeft.min <= 0 && yLeft.max >= 0 && yRight.min <= 0 && yRight.max >= 0;
 }
 
 function checkOppositeSides(yLeft, yRight) {
-  // on the opposite sides with respect to zero
   return yLeft.min >= 0 && yRight.max <= 0 || yLeft.max <= 0 && yRight.min >= 0;
 }
 
@@ -1789,10 +1676,9 @@ function getRate(yLeft, yRight) {
     return yLeft.min / yRight.min;
   }
 }
-// EXTERNAL MODULE: ./.yarn/cache/tinycolor2-npm-1.4.2-462ba30c26-57ed262e08.zip/node_modules/tinycolor2/tinycolor.js
 var tinycolor = __webpack_require__("./.yarn/cache/tinycolor2-npm-1.4.2-462ba30c26-57ed262e08.zip/node_modules/tinycolor2/tinycolor.js");
-var tinycolor_default = /*#__PURE__*/__webpack_require__.n(tinycolor);
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/event_manager.ts
+var tinycolor_default = __webpack_require__.n(tinycolor);
+;
 function event_manager_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1824,7 +1710,7 @@ class EventManager {
       this.event = {};
       this.event.dashboardId = this.panelCtrl.dashboard.id;
       this.event.panelId = this.panelCtrl.panel.id;
-    } // update time
+    } 
 
 
     this.event.time = range.from;
@@ -1895,9 +1781,8 @@ class EventManager {
         }];
       }
     } else {
-      // annotations from query
       for (let i = 0; i < annotations.length; i++) {
-        const item = annotations[i]; // add properties used by jquery flot events
+        const item = annotations[i]; 
 
         item.min = item.time;
         item.max = item.time;
@@ -1970,9 +1855,8 @@ function addAlphaToRGB(colorString, alpha) {
     return colorString;
   }
 }
-// EXTERNAL MODULE: ./public/app/types/index.ts + 4 modules
 var types = __webpack_require__("./public/app/types/index.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/graph_tooltip.ts
+;
 
 
 
@@ -1999,8 +1883,7 @@ function GraphTooltip(elem, dashboard, scope, getSeriesFn) {
     let j;
 
     for (j = initial; j < len; j += ps) {
-      // Special case of a non stepped line, highlight the very last point just before a null point
-      if (!series.lines.steps && series.datapoints.points[initial] != null && series.datapoints.points[j] == null || //normal case
+      if (!series.lines.steps && series.datapoints.points[initial] != null && series.datapoints.points[j] == null || 
       series.datapoints.points[j] > posX) {
         return Math.max(j - ps, 0) / ps;
       }
@@ -2042,11 +1925,11 @@ function GraphTooltip(elem, dashboard, scope, getSeriesFn) {
   };
 
   this.getMultiSeriesPlotHoverInfo = function (seriesList, pos) {
-    let value, i, series, hoverIndex, hoverDistance, pointTime, yaxis; // 3 sub-arrays, 1st for hidden series, 2nd for left yaxis, 3rd for right yaxis.
+    let value, i, series, hoverIndex, hoverDistance, pointTime, yaxis; 
 
-    let results = [[], [], []]; //now we know the current X (j) position for X and Y values
+    let results = [[], [], []]; 
 
-    let lastValue = 0; //needed for stacked values
+    let lastValue = 0; 
 
     let minDistance, minTime;
 
@@ -2054,7 +1937,6 @@ function GraphTooltip(elem, dashboard, scope, getSeriesFn) {
       series = seriesList[i];
 
       if (!series.data.length || panel.legend.hideEmpty && series.allIsNull) {
-        // Init value so that it does not brake series sorting
         results[0].push({
           hidden: true,
           value: 0
@@ -2063,7 +1945,6 @@ function GraphTooltip(elem, dashboard, scope, getSeriesFn) {
       }
 
       if (!series.data.length || panel.legend.hideZero && series.allIsZero) {
-        // Init value so that it does not brake series sorting
         results[0].push({
           hidden: true,
           value: 0
@@ -2081,7 +1962,7 @@ function GraphTooltip(elem, dashboard, scope, getSeriesFn) {
 
       hoverIndex = this.findHoverIndexFromData(pos.x, series);
       hoverDistance = pos.x - series.data[hoverIndex][0];
-      pointTime = series.data[hoverIndex][0]; // Take the closest point before the cursor, or if it does not exist, the closest after
+      pointTime = series.data[hoverIndex][0]; 
 
       if (!minDistance || hoverDistance >= 0 && (hoverDistance < minDistance || minDistance < 0) || hoverDistance < 0 && hoverDistance > minDistance) {
         minDistance = hoverDistance;
@@ -2093,15 +1974,12 @@ function GraphTooltip(elem, dashboard, scope, getSeriesFn) {
       if (series.stack && value !== null && panel.tooltip.value_type !== 'individual') {
         lastValue += value;
         value = lastValue;
-      } // Highlighting multiple Points depending on the plot type
+      } 
 
 
       if (series.lines.steps || series.stack) {
-        // stacked and steppedLine plots can have series with different length.
-        // Stacked series can increase its length on each new stacked serie if null points found,
-        // to speed the index search we begin always on the last found hoverIndex.
         hoverIndex = this.findHoverIndexFromDataPoints(pos.x, series, hoverIndex);
-      } // Be sure we have a yaxis so that it does not brake series sorting
+      } 
 
 
       yaxis = 0;
@@ -2119,10 +1997,10 @@ function GraphTooltip(elem, dashboard, scope, getSeriesFn) {
         distance: hoverDistance,
         index: i
       });
-    } // Contat the 3 sub-arrays
+    } 
 
 
-    results = results[0].concat(results[1], results[2]); // Time of the point closer to pointer
+    results = results[0].concat(results[1], results[2]); 
 
     results.time = minTime;
     return results;
@@ -2144,7 +2022,7 @@ function GraphTooltip(elem, dashboard, scope, getSeriesFn) {
     dashboard.events.publish(new grafana_data_src.DataHoverClearEvent());
   });
   elem.bind('plothover', (event, pos, item) => {
-    self.show(pos, item); // broadcast to other graph panels that we are hovering!
+    self.show(pos, item); 
 
     if (!dashboard.panelInEdit) {
       pos.panelRelY = (pos.pageY - elem.offset().top) / elem.height();
@@ -2155,7 +2033,7 @@ function GraphTooltip(elem, dashboard, scope, getSeriesFn) {
     }
   });
   elem.bind('plotclick', (event, pos, item) => {
-    core/* appEvents.emit */.h$.emit(types/* CoreEvents.graphClicked */.RW.xt, {
+    core.h$.emit(types.RW.xt, {
       pos: pos,
       panel: panel,
       item: item
@@ -2187,8 +2065,7 @@ function GraphTooltip(elem, dashboard, scope, getSeriesFn) {
     const xMode = xAxes[0].options.mode;
     const seriesList = getSeriesFn();
     let allSeriesMode = panel.tooltip.shared;
-    let group, value, absoluteTime, hoverInfo, i, series, seriesHtml, tooltipFormat; // if panelRelY is defined another panel wants us to show a tooltip
-    // get pageX from position on x axis and pageY from relative position in original panel
+    let group, value, absoluteTime, hoverInfo, i, series, seriesHtml, tooltipFormat; 
 
     if (pos.panelRelY) {
       var _$$scrollTop;
@@ -2216,7 +2093,6 @@ function GraphTooltip(elem, dashboard, scope, getSeriesFn) {
       allSeriesMode = true;
 
       if (dashboard.sharedCrosshairModeOnly()) {
-        // if only crosshair mode we are done
         return;
       }
     }
@@ -2235,8 +2111,7 @@ function GraphTooltip(elem, dashboard, scope, getSeriesFn) {
       plot.unhighlight();
       const seriesHoverInfo = self.getMultiSeriesPlotHoverInfo(plotData, pos);
       seriesHtml = '';
-      absoluteTime = dashboard.formatDate(seriesHoverInfo.time, tooltipFormat); // Dynamically reorder the hovercard for the current time point if the
-      // option is enabled.
+      absoluteTime = dashboard.formatDate(seriesHoverInfo.time, tooltipFormat); 
 
       if (panel.tooltip.sort === 2) {
         seriesHoverInfo.sort((a, b) => {
@@ -2273,7 +2148,6 @@ function GraphTooltip(elem, dashboard, scope, getSeriesFn) {
 
       self.renderAndShow(absoluteTime, seriesHtml, pos, xMode);
     } else if (item) {
-      // single series tooltip
       const color = grafana_data_src.textUtil.sanitize(item.series.color);
       series = seriesList[item.seriesIndex];
       group = '<div class="graph-tooltip-list-item"><div class="graph-tooltip-series-name">';
@@ -2290,23 +2164,17 @@ function GraphTooltip(elem, dashboard, scope, getSeriesFn) {
       group += '<div class="graph-tooltip-value">' + value + '</div>';
       self.renderAndShow(absoluteTime, group, pos, xMode);
     } else {
-      // no hit
       $tooltip.detach();
     }
   };
 }
-// EXTERNAL MODULE: ./.yarn/cache/d3-npm-5.15.0-0c7696026f-7342d82e55.zip/node_modules/d3/index.js + 412 modules
 var d3 = __webpack_require__("./.yarn/cache/d3-npm-5.15.0-0c7696026f-7342d82e55.zip/node_modules/d3/index.js");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/histogram.ts
+;
 
 
-/**
- * Convert series into array of series values.
- * @param data Array of series
- */
 function getSeriesValues(dataList) {
   const VALUE_INDEX = 0;
-  const values = []; // Count histogam stats
+  const values = []; 
 
   for (let i = 0; i < dataList.length; i++) {
     const series = dataList[i];
@@ -2321,12 +2189,6 @@ function getSeriesValues(dataList) {
 
   return values;
 }
-/**
- * Convert array of values into timeseries-like histogram:
- * [[val_1, count_1], [val_2, count_2], ..., [val_n, count_n]]
- * @param values
- * @param bucketSize
- */
 
 function convertValuesToHistogram(values, bucketSize, min, max) {
   const minBound = getBucketBound(min, bucketSize);
@@ -2336,11 +2198,6 @@ function convertValuesToHistogram(values, bucketSize, min, max) {
     return [bin.x0, bin.length];
   });
 }
-/**
- * Convert series into array of histogram data.
- * @param data Array of series
- * @param bucketSize
- */
 
 function convertToHistogramData(data, bucketSize, hiddenSeries, min, max) {
   return data.map(series => {
@@ -2361,7 +2218,7 @@ function convertToHistogramData(data, bucketSize, hiddenSeries, min, max) {
 function getBucketBound(value, bucketSize) {
   return Math.floor(value / bucketSize) * bucketSize;
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/threshold_manager.ts
+;
 function threshold_manager_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -2430,7 +2287,6 @@ class ThresholdManager {
     }
 
     function stopped() {
-      // calculate graph level
       let graphValue = plot.c2p({
         left: 0,
         top: posTop
@@ -2438,11 +2294,11 @@ class ThresholdManager {
       graphValue = parseInt(graphValue.toFixed(0), 10);
       model.value = graphValue;
       handleElem.off('mousemove', dragging);
-      document.removeEventListener('mouseup', stopped); // trigger digest and render
+      document.removeEventListener('mouseup', stopped); 
 
       panelCtrl.$scope.$apply(() => {
         panelCtrl.render();
-        panelCtrl.events.emit(types/* CoreEvents.thresholdChanged */.RW.GL, {
+        panelCtrl.events.emit(types.RW.GL, {
           threshold: model,
           handleIndex: handleIndex
         });
@@ -2461,7 +2317,7 @@ class ThresholdManager {
   }
 
   renderHandle(handleIndex, defaultHandleTopPos) {
-    const model = this.thresholds[handleIndex]; // alerting defines
+    const model = this.thresholds[handleIndex]; 
 
     if (!model.visible && this.panelCtrl.alert) {
       return;
@@ -2469,7 +2325,7 @@ class ThresholdManager {
 
     const value = model.value;
     let valueStr = value;
-    let handleTopPos = 0; // handle no value
+    let handleTopPos = 0; 
 
     if (!(0,lodash.isNumber)(value)) {
       valueStr = '';
@@ -2491,7 +2347,6 @@ class ThresholdManager {
   }
 
   shouldDrawHandles() {
-    // @ts-ignore
     return !this.hasSecondYAxis && this.panelCtrl.editingThresholds && this.panelCtrl.panel.thresholds.length > 0;
   }
 
@@ -2562,7 +2417,7 @@ class ThresholdManager {
       switch (threshold.op) {
         case 'gt':
           {
-            limit = gtLimit; // if next threshold is less then op and greater value, then use that as limit
+            limit = gtLimit; 
 
             if (panel.thresholds.length > i + 1) {
               other = panel.thresholds[i + 1];
@@ -2578,7 +2433,7 @@ class ThresholdManager {
 
         case 'lt':
           {
-            limit = ltLimit; // if next threshold is less then op and greater value, then use that as limit
+            limit = ltLimit; 
 
             if (panel.thresholds.length > i + 1) {
               other = panel.thresholds[i + 1];
@@ -2623,7 +2478,7 @@ class ThresholdManager {
             lineColor = threshold.lineColor;
             break;
           }
-      } // fill
+      } 
 
 
       if (threshold.fill) {
@@ -2633,7 +2488,7 @@ class ThresholdManager {
               from: threshold.value,
               to: limit
             },
-            color: (0,grafana_data_src.getColorForTheme)(fillColor, config/* config.theme */.vc.theme)
+            color: (0,grafana_data_src.getColorForTheme)(fillColor, config.vc.theme)
           });
         } else {
           options.grid.markings.push({
@@ -2641,7 +2496,7 @@ class ThresholdManager {
               from: threshold.value,
               to: limit
             },
-            color: (0,grafana_data_src.getColorForTheme)(fillColor, config/* config.theme */.vc.theme)
+            color: (0,grafana_data_src.getColorForTheme)(fillColor, config.vc.theme)
           });
         }
       }
@@ -2653,7 +2508,7 @@ class ThresholdManager {
               from: threshold.value,
               to: threshold.value
             },
-            color: (0,grafana_data_src.getColorForTheme)(lineColor, config/* config.theme */.vc.theme)
+            color: (0,grafana_data_src.getColorForTheme)(lineColor, config.vc.theme)
           });
         } else {
           options.grid.markings.push({
@@ -2661,7 +2516,7 @@ class ThresholdManager {
               from: threshold.value,
               to: threshold.value
             },
-            color: (0,grafana_data_src.getColorForTheme)(lineColor, config/* config.theme */.vc.theme)
+            color: (0,grafana_data_src.getColorForTheme)(lineColor, config.vc.theme)
           });
         }
       }
@@ -2669,7 +2524,7 @@ class ThresholdManager {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/time_region_manager.ts
+;
 function time_region_manager_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -2889,7 +2744,7 @@ class TimeRegionManager {
         fromStart.add(24, 'hours');
       }
 
-      timeRegionColor = getColor(timeRegion, config/* config.theme */.vc.theme);
+      timeRegionColor = getColor(timeRegion, config.vc.theme);
 
       for (let j = 0; j < regions.length; j++) {
         const r = regions[j];
@@ -2957,11 +2812,8 @@ class TimeRegionManager {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/utils.ts
+;
 
-/**
- * Find the min and max time that covers all data
- */
 
 function getDataTimeRange(frames) {
   const range = {
@@ -2986,12 +2838,12 @@ function getDataTimeRange(frames) {
   }
 
   return found ? range : undefined;
-} // Check wether event is LegacyGraphHoverEvent
+} 
 
 function isLegacyGraphHoverEvent(event) {
   return event.hasOwnProperty('pos');
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/graph.ts
+;
 graphDirective.$inject = ["timeSrv", "popoverSrv", "contextSrv"];
 
 function graph_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -3025,7 +2877,7 @@ function graph_defineProperty(obj, key, value) { if (key in obj) { Object.define
 
 
 
-const LegendWithThemeProvider = (0,ConfigProvider/* provideTheme */.ER)(Legend);
+const LegendWithThemeProvider = (0,ConfigProvider.ER)(Legend);
 
 class GraphElement {
   constructor(scope, elem, timeSrv) {
@@ -3061,7 +2913,6 @@ class GraphElement {
 
     graph_defineProperty(this, "getContextMenuItemsSupplier", (flotPosition, linksSupplier) => {
       return () => {
-        // Fixed context menu items
         const items = this.dashboard.canAddAnnotations() ? [{
           items: [{
             label: 'Add annotation',
@@ -3105,23 +2956,22 @@ class GraphElement {
     this.panelWidth = 0;
     this.eventManager = new EventManager(this.ctrl);
     this.thresholdManager = new ThresholdManager(this.ctrl);
-    this.timeRegionManager = new TimeRegionManager(this.ctrl); // @ts-ignore
+    this.timeRegionManager = new TimeRegionManager(this.ctrl); 
 
     this.tooltip = new GraphTooltip(this.elem, this.ctrl.dashboard, this.scope, () => {
       return this.sortedSeries;
-    }); // panel events
+    }); 
 
     this.ctrl.events.on(grafana_data_src.PanelEvents.panelTeardown, this.onPanelTeardown.bind(this));
-    this.ctrl.events.on(grafana_data_src.PanelEvents.render, this.onRender.bind(this)); // global events
-    // Using old way here to use the scope unsubscribe model as the new $on function does not take scope
+    this.ctrl.events.on(grafana_data_src.PanelEvents.render, this.onRender.bind(this)); 
 
     this.ctrl.dashboard.events.on(grafana_data_src.LegacyGraphHoverEvent.type, this.onGraphHover.bind(this), this.scope);
     this.ctrl.dashboard.events.on(grafana_data_src.LegacyGraphHoverClearEvent.type, this.onGraphHoverClear.bind(this), this.scope);
     this.ctrl.dashboard.events.on(grafana_data_src.DataHoverEvent.type, this.onGraphHover.bind(this), this.scope);
-    this.ctrl.dashboard.events.on(grafana_data_src.DataHoverClearEvent.type, this.onGraphHoverClear.bind(this), this.scope); // plot events
+    this.ctrl.dashboard.events.on(grafana_data_src.DataHoverClearEvent.type, this.onGraphHoverClear.bind(this), this.scope); 
 
     this.elem.bind('plotselected', this.onPlotSelected.bind(this));
-    this.elem.bind('plotclick', this.onPlotClick.bind(this)); // get graph legend element
+    this.elem.bind('plotclick', this.onPlotClick.bind(this)); 
 
     if (this.elem && this.elem.parent) {
       this.legendElem = this.elem.parent().find('.graph-legend')[0];
@@ -3138,7 +2988,7 @@ class GraphElement {
     this.annotations = this.ctrl.annotations || [];
     this.buildFlotPairs(this.data);
     const graphHeight = this.ctrl.height;
-    (0,core/* updateLegendValues */.Wz)(this.data, this.panel, graphHeight);
+    (0,core.Wz)(this.data, this.panel, graphHeight);
 
     if (!this.panel.legend.show) {
       if (this.legendElem.hasChildNodes()) {
@@ -3192,14 +3042,13 @@ class GraphElement {
       onColorChange: this.ctrl.onColorChange,
       onToggleAxis: this.ctrl.onToggleAxis
     });
-    const legendReactElem = /*#__PURE__*/react.createElement(LegendWithThemeProvider, legendProps);
+    const legendReactElem = react.createElement(LegendWithThemeProvider, legendProps);
     react_dom.render(legendReactElem, this.legendElem, () => this.renderPanel());
   }
 
   onGraphHover(evt) {
     var _evt$point, _evt$point$panelRelY;
 
-    // ignore other graph hover events if shared tooltip is disabled
     if (!this.dashboard.sharedTooltipModeEnabled()) {
       return;
     }
@@ -3207,13 +3056,12 @@ class GraphElement {
     if (isLegacyGraphHoverEvent(evt)) {
       var _evt$panel;
 
-      // ignore if we are the emitter
       if (!this.plot || ((_evt$panel = evt.panel) === null || _evt$panel === void 0 ? void 0 : _evt$panel.id) === this.panel.id || this.ctrl.otherPanelInFullscreenMode()) {
         return;
       }
 
       this.tooltip.show(evt.pos);
-    } // DataHoverEvent can come from multiple panels that doesn't include x position
+    } 
 
 
     if (!((_evt$point = evt.point) !== null && _evt$point !== void 0 && _evt$point.time)) {
@@ -3246,13 +3094,11 @@ class GraphElement {
 
   onPlotSelected(event, ranges) {
     if (this.panel.xaxis.mode !== 'time') {
-      // Skip if panel in histogram or series mode
       this.plot.clearSelection();
       return;
     }
 
     if ((ranges.ctrlKey || ranges.metaKey) && this.dashboard.canAddAnnotations()) {
-      // Add annotation
       setTimeout(() => {
         this.eventManager.updateTime(ranges.xaxis);
       }, 100);
@@ -3271,15 +3117,13 @@ class GraphElement {
     const contextMenuSourceItem = item;
 
     if (this.panel.xaxis.mode !== 'time') {
-      // Skip if panel in histogram or series mode
       return;
     }
 
     if (pos.ctrlKey || pos.metaKey) {
-      // Skip if range selected (added in "plotselected" event handler)
       if (pos.x !== pos.x1) {
         return;
-      } // skip if dashboard is not saved yet (exists in db) or user cannot edit
+      } 
 
 
       if (!this.dashboard.id || !this.dashboard.canAddAnnotations()) {
@@ -3298,7 +3142,6 @@ class GraphElement {
       let linksSupplier;
 
       if (item) {
-        // pickup y-axis index to know which field's config to apply
         const yAxisConfig = this.panel.yaxes[item.series.yaxis.n === 2 ? 1 : 0];
         const dataFrame = this.ctrl.dataList[item.series.dataFrameIndex];
         const field = dataFrame.fields[item.series.fieldIndex];
@@ -3307,7 +3150,6 @@ class GraphElement {
         const hasLinksValue = (0,grafana_data_src.hasLinks)(field);
 
         if (hasLinksValue) {
-          // Append the configured links to the panel datalinks
           links = [...links, ...field.config.links];
         }
 
@@ -3320,10 +3162,10 @@ class GraphElement {
             config: fieldConfig,
             type: grafana_data_src.FieldType.number
           },
-          theme: config/* default.theme2 */.ZP.theme2,
+          theme: config.ZP.theme2,
           timeZone: this.dashboard.getTimezone()
         })(field.values.get(dataIndex));
-        linksSupplier = links.length ? (0,linkSuppliers/* getFieldLinksSupplier */.n)({
+        linksSupplier = links.length ? (0,linkSuppliers.n)({
           display: fieldDisplay,
           name: field.name,
           view: new grafana_data_src.DataFrameView(dataFrame),
@@ -3335,7 +3177,6 @@ class GraphElement {
       }
 
       this.scope.$apply(() => {
-        // Setting nearest CustomScrollbar element as a scroll context for graph context menu
         this.contextMenu.setScrollContextElement(scrollContextElement);
         this.contextMenu.setSource(contextMenuSourceItem);
         this.contextMenu.setMenuItemsSupplier(this.getContextMenuItemsSupplier(pos, linksSupplier));
@@ -3345,12 +3186,6 @@ class GraphElement {
   }
 
   getDataIndexWithNullValuesCorrection(item, dataFrame) {
-    /** This is one added to handle the scenario where we have null values in
-     *  the time series data and the: "visualization options -> null value"
-     *  set to "connected". In this scenario we will get the wrong dataIndex.
-     *
-     *  https://github.com/grafana/grafana/issues/22651
-     */
     const {
       datapoint,
       dataIndex
@@ -3392,10 +3227,9 @@ class GraphElement {
   }
 
   drawHook(plot) {
-    // add left axis labels
     if (this.panel.yaxes[0].label && this.panel.yaxes[0].show) {
       jquery_exposed_default()("<div class='axisLabel left-yaxis-label flot-temp-elem'></div>").text(this.panel.yaxes[0].label).appendTo(this.elem);
-    } // add right axis labels
+    } 
 
 
     if (this.panel.yaxes[1].label && this.panel.yaxes[1].show) {
@@ -3430,7 +3264,7 @@ class GraphElement {
 
     if (right.show && right.label) {
       gridMargin.right = 20;
-    } // apply y-axis min/max options
+    } 
 
 
     const yaxis = plot.getYAxes();
@@ -3451,9 +3285,7 @@ class GraphElement {
       const level = this.panel.yaxis.alignLevel || 0;
       alignYLevel(yAxes, parseFloat(level));
     }
-  } // Series could have different timeSteps,
-  // let's find the smallest one so that bars are correctly rendered.
-  // In addition, only take series which are rendered as bars for this.
+  } 
 
 
   getMinTimeStepOfSeries(data) {
@@ -3480,7 +3312,7 @@ class GraphElement {
     }
 
     return min;
-  } // Function for rendering panel
+  } 
 
 
   renderPanel() {
@@ -3490,12 +3322,12 @@ class GraphElement {
 
     if (this.shouldAbortRender()) {
       return;
-    } // give space to alert editing
+    } 
 
 
-    this.thresholdManager.prepare(this.elem, this.data); // un-check dashes if lines are unchecked
+    this.thresholdManager.prepare(this.elem, this.data); 
 
-    this.panel.dashes = this.panel.lines ? this.panel.dashes : false; // Populate element
+    this.panel.dashes = this.panel.lines ? this.panel.dashes : false; 
 
     const options = this.buildFlotOptions(this.panel);
     this.prepareXAxis(options, this.panel);
@@ -3514,7 +3346,7 @@ class GraphElement {
 
       if (series.transform === 'constant') {
         series.data = (0,grafana_data_src.getFlotPairsConstant)(series.data, this.ctrl.range);
-      } // if hidden remove points and disable stack
+      } 
 
 
       if (this.ctrl.hiddenSeries[series.alias]) {
@@ -3610,7 +3442,7 @@ class GraphElement {
   buildFlotOptions(panel) {
     let gridColor = '#c8c8c8';
 
-    if (config/* default.bootData.user.lightTheme */.ZP.bootData.user.lightTheme === true) {
+    if (config.ZP.bootData.user.lightTheme === true) {
       gridColor = '#a1a1a1';
     }
 
@@ -3769,7 +3601,7 @@ class GraphElement {
 
       ticks = Object.keys(tickValues).map(v => Number(v));
       min = (0,lodash.min)(ticks);
-      max = (0,lodash.max)(ticks); // Adjust tick step
+      max = (0,lodash.max)(ticks); 
 
       let tickStep = bucketSize;
       let ticksNum = Math.floor((max - min) / tickStep);
@@ -3777,10 +3609,10 @@ class GraphElement {
       while (ticksNum > defaultTicks) {
         tickStep = tickStep * 2;
         ticksNum = Math.ceil((max - min) / tickStep);
-      } // Expand ticks for pretty view
+      } 
 
 
-      min = Math.floor(min / tickStep) * tickStep; // 1.01 is 101% - ensure we have enough space for last bar
+      min = Math.floor(min / tickStep) * tickStep; 
 
       max = Math.ceil(max * 1.01 / tickStep) * tickStep;
       ticks = [];
@@ -3789,7 +3621,6 @@ class GraphElement {
         ticks.push(i);
       }
     } else {
-      // Set defaults if no data
       ticks = defaultTicks / 2;
       min = 0;
       max = 1;
@@ -3803,7 +3634,7 @@ class GraphElement {
       max: max,
       label: 'Histogram',
       ticks: ticks
-    }; // Use 'short' format for histogram values
+    }; 
 
     this.configureAxisMode(options.xaxis, 'short', null);
   }
@@ -3814,7 +3645,7 @@ class GraphElement {
         const tickIndex = seriesIndex * series.datapoints.length + pointIndex;
         return [tickIndex + 1, point[1]];
       });
-    }); // @ts-ignore, potential bug? is this flattenDeep?
+    }); 
 
     ticks = (0,lodash.flatten)(ticks, true);
     options.xaxis = {
@@ -3992,7 +3823,6 @@ class GraphElement {
   }
 
 }
-/** @ngInject */
 
 
 function graphDirective(timeSrv, popoverSrv, contextSrv) {
@@ -4005,14 +3835,13 @@ function graphDirective(timeSrv, popoverSrv, contextSrv) {
   };
 }
 
-core_module/* coreModule.directive */.hF.directive('grafanaGraph', graphDirective);
+core_module.hF.directive('grafanaGraph', graphDirective);
 
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/series_overrides_ctrl.ts
+;
 SeriesOverridesCtrl.$inject = ["$scope", "$element", "popoverSrv"];
 
 
 
-/** @ngInject */
 
 function SeriesOverridesCtrl($scope, $element, popoverSrv) {
   $scope.overrideMenu = [];
@@ -4037,14 +3866,12 @@ function SeriesOverridesCtrl($scope, $element, popoverSrv) {
   };
 
   $scope.setOverride = (item, subItem) => {
-    // handle color overrides
     if (item.propertyName === 'color') {
       $scope.openColorSelector($scope.override['color']);
       return;
     }
 
-    $scope.override[item.propertyName] = subItem.value; // automatically disable lines for this series and the fill below to series
-    // can be removed by the user if they still want lines
+    $scope.override[item.propertyName] = subItem.value; 
 
     if (item.propertyName === 'fillBelowTo') {
       $scope.override['lines'] = false;
@@ -4061,7 +3888,7 @@ function SeriesOverridesCtrl($scope, $element, popoverSrv) {
   $scope.colorSelected = color => {
     $scope.override['color'] = color;
     $scope.updateCurrentOverrides();
-    $scope.ctrl.render(); // update picker model so that the picker UI will also update
+    $scope.ctrl.render(); 
 
     $scope.colorPickerModel.series.color = color;
   };
@@ -4139,15 +3966,14 @@ function SeriesOverridesCtrl($scope, $element, popoverSrv) {
   $scope.addOverrideOption('Hide in tooltip', 'hideTooltip', [true, false]);
   $scope.updateCurrentOverrides();
 }
-core_module/* default.controller */.ZP.controller('SeriesOverridesCtrl', SeriesOverridesCtrl);
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/thresholds_form.ts
+core_module.ZP.controller('SeriesOverridesCtrl', SeriesOverridesCtrl);
+;
 function thresholds_form_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
 class ThresholdFormCtrl {
-  /** @ngInject */
   constructor($scope) {
     this.$scope = $scope;
 
@@ -4163,7 +3989,7 @@ class ThresholdFormCtrl {
   $onInit() {
     this.panel = this.panelCtrl.panel;
 
-    if (this.panel.alert && !config/* default.unifiedAlertingEnabled */.ZP.unifiedAlertingEnabled) {
+    if (this.panel.alert && !config.ZP.unifiedAlertingEnabled) {
       this.disabled = true;
     }
 
@@ -4211,10 +4037,9 @@ class ThresholdFormCtrl {
   }
 
   onThresholdTypeChange(index) {
-    // Because of the ng-model binding, threshold's color mode is already set here
     if (this.panel.thresholds[index].colorMode === 'custom') {
-      this.panel.thresholds[index].fillColor = tinycolor_default()(config/* default.theme.palette.blue85 */.ZP.theme.palette.blue85).setAlpha(0.2).toRgbString();
-      this.panel.thresholds[index].lineColor = tinycolor_default()(config/* default.theme.palette.blue77 */.ZP.theme.palette.blue77).setAlpha(0.6).toRgbString();
+      this.panel.thresholds[index].fillColor = tinycolor_default()(config.ZP.theme.palette.blue85).setAlpha(0.2).toRgbString();
+      this.panel.thresholds[index].lineColor = tinycolor_default()(config.ZP.theme.palette.blue77).setAlpha(0.6).toRgbString();
     }
 
     this.panelCtrl.render();
@@ -4222,7 +4047,7 @@ class ThresholdFormCtrl {
 
 }
 ThresholdFormCtrl.$inject = ["$scope"];
-core_module/* default.directive */.ZP.directive('graphThresholdForm', () => {
+core_module.ZP.directive('graphThresholdForm', () => {
   return {
     restrict: 'E',
     templateUrl: 'public/app/plugins/panel/graph/thresholds_form.html',
@@ -4234,13 +4059,12 @@ core_module/* default.directive */.ZP.directive('graphThresholdForm', () => {
     }
   };
 });
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/time_regions_form.ts
+;
 function time_regions_form_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 class TimeRegionFormCtrl {
-  /** @ngInject */
   constructor($scope) {
     this.$scope = $scope;
 
@@ -4280,7 +4104,6 @@ class TimeRegionFormCtrl {
       colorMode: 'background6',
       fill: true,
       line: false,
-      // Default colors for new
       fillColor: 'rgba(234, 112, 112, 0.12)',
       lineColor: 'rgba(237, 46, 24, 0.60)'
     });
@@ -4308,7 +4131,7 @@ class TimeRegionFormCtrl {
 
 }
 TimeRegionFormCtrl.$inject = ["$scope"];
-core_module/* default.directive */.ZP.directive('graphTimeRegionForm', () => {
+core_module.ZP.directive('graphTimeRegionForm', () => {
   return {
     restrict: 'E',
     templateUrl: 'public/app/plugins/panel/graph/time_regions_form.html',
@@ -4320,16 +4143,14 @@ core_module/* default.directive */.ZP.directive('graphTimeRegionForm', () => {
     }
   };
 });
-// EXTERNAL MODULE: ./public/app/features/alerting/state/alertDef.ts
 var alertDef = __webpack_require__("./public/app/features/alerting/state/alertDef.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/annotation_tooltip.ts
+;
 annotationTooltipDirective.$inject = ["$sanitize", "dashboardSrv", "contextSrv", "$compile"];
 
 
 
 
 
-/** @ngInject */
 function annotationTooltipDirective($sanitize, dashboardSrv, contextSrv, $compile) {
   function sanitizeString(str) {
     try {
@@ -4355,10 +4176,10 @@ function annotationTooltipDirective($sanitize, dashboardSrv, contextSrv, $compil
       let titleStateClass = '';
 
       if (event.alertId !== undefined && event.newState) {
-        const stateModel = alertDef/* default.getStateDisplayModel */.Z.getStateDisplayModel(event.newState);
+        const stateModel = alertDef.Z.getStateDisplayModel(event.newState);
         titleStateClass = stateModel.stateClass;
         title = `<i class="${stateModel.iconClass}"></i> ${stateModel.text}`;
-        text = alertDef/* default.getAlertAnnotationInfo */.Z.getAlertAnnotationInfo(event);
+        text = alertDef.Z.getAlertAnnotationInfo(event);
 
         if (event.text) {
           text = text + '<br />' + event.text;
@@ -4377,7 +4198,7 @@ function annotationTooltipDirective($sanitize, dashboardSrv, contextSrv, $compil
       header += `
           <span class="graph-annotation__title ${titleStateClass}">${sanitizeString(title)}</span>
           <span class="graph-annotation__time">${dashboard === null || dashboard === void 0 ? void 0 : dashboard.formatDate(event.min)}</span>
-      `; // Show edit icon only for users with at least Editor role
+      `; 
 
       if (event.id && dashboard !== null && dashboard !== void 0 && dashboard.canEditAnnotations(event.dashboardId)) {
         header += `
@@ -4410,14 +4231,11 @@ function annotationTooltipDirective($sanitize, dashboardSrv, contextSrv, $compil
     }
   };
 }
-core_module/* default.directive */.ZP.directive('annotationTooltip', annotationTooltipDirective);
-// EXTERNAL MODULE: ./public/app/core/services/context_srv.ts
+core_module.ZP.directive('annotationTooltip', annotationTooltipDirective);
 var context_srv = __webpack_require__("./public/app/core/services/context_srv.ts");
-// EXTERNAL MODULE: ./public/app/features/annotations/api.ts
 var api = __webpack_require__("./public/app/features/annotations/api.ts");
-// EXTERNAL MODULE: ./public/app/features/query/state/DashboardQueryRunner/DashboardQueryRunner.ts + 6 modules
 var DashboardQueryRunner = __webpack_require__("./public/app/features/query/state/DashboardQueryRunner/DashboardQueryRunner.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/event_editor.ts
+;
 function event_editor_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -4427,10 +4245,7 @@ function event_editor_defineProperty(obj, key, value) { if (key in obj) { Object
 
 
 class EventEditorCtrl {
-  // @ts-ignore initialized through Angular not constructor
-  // @ts-ignore initialized through Angular not constructor
 
-  /** @ngInject */
   constructor() {
     event_editor_defineProperty(this, "panelCtrl", void 0);
 
@@ -4446,9 +4261,9 @@ class EventEditorCtrl {
   }
 
   $onInit() {
-    this.event.panelId = this.panelCtrl.panel.id; // set correct id if in panel edit
+    this.event.panelId = this.panelCtrl.panel.id; 
 
-    this.event.dashboardId = this.panelCtrl.dashboard.id; // Annotations query returns time as Unix timestamp in milliseconds
+    this.event.dashboardId = this.panelCtrl.dashboard.id; 
 
     this.event.time = tryEpochToMoment(this.event.time);
 
@@ -4460,7 +4275,7 @@ class EventEditorCtrl {
   }
 
   canDelete() {
-    if (context_srv/* contextSrv.accessControlEnabled */.Vt.accessControlEnabled()) {
+    if (context_srv.Vt.accessControlEnabled()) {
       var _this$panelCtrl$dashb2;
 
       if (this.event.source.type === 'dashboard') {
@@ -4493,10 +4308,10 @@ class EventEditorCtrl {
       }
     }
 
-    let crudFunction = api/* saveAnnotation */.xD;
+    let crudFunction = api.xD;
 
     if (saveModel.id) {
-      crudFunction = api/* updateAnnotation */._E;
+      crudFunction = api._E;
     }
 
     try {
@@ -4505,7 +4320,7 @@ class EventEditorCtrl {
       console.log(err);
     } finally {
       this.close();
-      (0,DashboardQueryRunner/* getDashboardQueryRunner */.kt)().run({
+      (0,DashboardQueryRunner.kt)().run({
         dashboard: this.panelCtrl.dashboard,
         range: this.panelCtrl.range
       });
@@ -4514,12 +4329,12 @@ class EventEditorCtrl {
 
   async delete() {
     try {
-      await (0,api/* deleteAnnotation */.Dl)(this.event);
+      await (0,api.Dl)(this.event);
     } catch (err) {
       console.log(err);
     } finally {
       this.close();
-      (0,DashboardQueryRunner/* getDashboardQueryRunner */.kt)().run({
+      (0,DashboardQueryRunner.kt)().run({
         dashboard: this.panelCtrl.dashboard,
         range: this.panelCtrl.range
       });
@@ -4552,22 +4367,15 @@ function eventEditor() {
     }
   };
 }
-core_module/* coreModule.directive */.hF.directive('eventEditor', eventEditor);
-// EXTERNAL MODULE: ./public/app/angular/panel/metrics_panel_ctrl.ts
+core_module.hF.directive('eventEditor', eventEditor);
 var metrics_panel_ctrl = __webpack_require__("./public/app/angular/panel/metrics_panel_ctrl.ts");
-// EXTERNAL MODULE: ./public/app/features/alerting/state/ThresholdMapper.ts
 var ThresholdMapper = __webpack_require__("./public/app/features/alerting/state/ThresholdMapper.ts");
-// EXTERNAL MODULE: ./public/app/features/panel/state/actions.ts
 var actions = __webpack_require__("./public/app/features/panel/state/actions.ts");
-// EXTERNAL MODULE: ./public/app/store/store.ts
 var store = __webpack_require__("./public/app/store/store.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/utils/loadSnapshotData.ts
 var loadSnapshotData = __webpack_require__("./public/app/features/dashboard/utils/loadSnapshotData.ts");
-// EXTERNAL MODULE: ./public/app/features/query/state/DashboardQueryRunner/utils.ts
 var utils = __webpack_require__("./public/app/features/query/state/DashboardQueryRunner/utils.ts");
-// EXTERNAL MODULE: ./public/app/types/events.ts
 var events = __webpack_require__("./public/app/types/events.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/GraphContextMenuCtrl.ts
+;
 function GraphContextMenuCtrl_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 class GraphContextMenuCtrl {
@@ -4638,10 +4446,7 @@ class GraphContextMenuCtrl {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/GraphMigrations.ts
-/**
- * Called when upgrading from a previously saved versoin
- */
+;
 const graphPanelMigrationHandler = panel => {
   var _panel$fieldConfig;
 
@@ -4649,24 +4454,23 @@ const graphPanelMigrationHandler = panel => {
     defaults: {},
     overrides: []
   };
-  const options = panel.options || {}; // Move <7.1 dataLinks to the field section
+  const options = panel.options || {}; 
 
   if (options.dataLinks) {
     fieldConfig.defaults.links = options.dataLinks;
     delete options.dataLinks;
-  } // Mutate the original panel state (only necessary because it is angular)
+  } 
 
 
   panel.options = options;
   panel.fieldConfig = fieldConfig;
   return options;
 };
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/axes_editor.ts
+;
 function axes_editor_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 class AxesEditorCtrl {
-  /** @ngInject */
   constructor($scope) {
     this.$scope = $scope;
 
@@ -4698,7 +4502,7 @@ class AxesEditorCtrl {
     this.xAxisModes = {
       Time: 'time',
       Series: 'series',
-      Histogram: 'histogram' // 'Data field': 'field',
+      Histogram: 'histogram' 
 
     };
     this.xAxisStatOptions = [{
@@ -4727,12 +4531,12 @@ class AxesEditorCtrl {
       }
     }
 
-    this.selectors = grafana_e2e_selectors_src/* selectors.components.Panels.Visualization.Graph.VisualizationTab */.wl.components.Panels.Visualization.Graph.VisualizationTab;
+    this.selectors = grafana_e2e_selectors_src.wl.components.Panels.Visualization.Graph.VisualizationTab;
   }
 
   setUnitFormat(axis) {
     return unit => {
-      axis.format = unit; // if already set via field config we clear that
+      axis.format = unit; 
 
       if (this.panel.fieldConfig.defaults.unit) {
         this.panel.fieldConfig.defaults.unit = undefined;
@@ -4759,7 +4563,6 @@ class AxesEditorCtrl {
 }
 AxesEditorCtrl.$inject = ["$scope"];
 
-/** @ngInject */
 function axesEditorComponent() {
   'use strict';
 
@@ -4770,9 +4573,8 @@ function axesEditorComponent() {
     controller: AxesEditorCtrl
   };
 }
-// EXTERNAL MODULE: ./public/app/plugins/panel/graph/data_processor.ts
 var data_processor = __webpack_require__("./public/app/plugins/panel/graph/data_processor.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/template.ts
+;
 const template = `
 <div class="graph-panel" ng-class="{'graph-panel--legend-right': ctrl.panel.legend.rightSide}">
   <div class="graph-panel__chart" grafana-graph ng-dblclick="ctrl.zoomOut()">
@@ -4793,8 +4595,8 @@ const template = `
   </div>
 </div>
 `;
-/* harmony default export */ const graph_template = (template);
-;// CONCATENATED MODULE: ./public/app/plugins/panel/graph/module.ts
+ const graph_template = (template);
+;
 function module_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -4821,8 +4623,7 @@ function module_defineProperty(obj, key, value) { if (key in obj) { Object.defin
 
 
 
-class GraphCtrl extends metrics_panel_ctrl/* MetricsPanelCtrl */.k {
-  /** @ngInject */
+class GraphCtrl extends metrics_panel_ctrl.k {
   constructor($scope, $injector) {
     super($scope, $injector);
 
@@ -4851,9 +4652,7 @@ class GraphCtrl extends metrics_panel_ctrl/* MetricsPanelCtrl */.k {
     module_defineProperty(this, "contextMenuCtrl", void 0);
 
     module_defineProperty(this, "panelDefaults", {
-      // datasource name, null = default datasource
       datasource: null,
-      // sets client side (flot) or native graphite png renderer (png)
       renderer: 'flot',
       yaxes: [{
         label: null,
@@ -4881,73 +4680,49 @@ class GraphCtrl extends metrics_panel_ctrl/* MetricsPanelCtrl */.k {
         align: false,
         alignLevel: null
       },
-      // show/hide lines
       lines: true,
-      // fill factor
       fill: 1,
-      // fill gradient
       fillGradient: 0,
-      // line width in pixels
       linewidth: 1,
-      // show/hide dashed line
       dashes: false,
-      // show/hide line
       hiddenSeries: false,
-      // length of a dash
       dashLength: 10,
-      // length of space between two dashes
       spaceLength: 10,
-      // show hide points
       points: false,
-      // point radius in pixels
       pointradius: 2,
-      // show hide bars
       bars: false,
-      // enable/disable stacking
       stack: false,
-      // stack percentage mode
       percentage: false,
-      // legend options
       legend: {
         show: true,
-        // disable/enable legend
         values: false,
-        // disable/enable legend values
         min: false,
         max: false,
         current: false,
         total: false,
         avg: false
       },
-      // how null points should be handled
       nullPointMode: 'null',
-      // staircase line mode
       steppedLine: false,
-      // tooltip options
       tooltip: {
         value_type: 'individual',
         shared: true,
         sort: 0
       },
-      // time overrides
       timeFrom: null,
       timeShift: null,
-      // metric queries
       targets: [{}],
-      // series color overrides
       aliasColors: {},
-      // other style overrides
       seriesOverrides: [],
       thresholds: [],
       timeRegions: [],
       options: {
-        // show/hide alert threshold lines and fill
         alertThreshold: true
       }
     });
 
     module_defineProperty(this, "onColorChange", (series, color) => {
-      series.setColor((0,grafana_data_src.getColorForTheme)(color, config/* default.theme */.ZP.theme));
+      series.setColor((0,grafana_data_src.getColorForTheme)(color, config.ZP.theme));
       this.panel.aliasColors[series.alias] = color;
       this.render();
     });
@@ -4996,13 +4771,13 @@ class GraphCtrl extends metrics_panel_ctrl/* MetricsPanelCtrl */.k {
     (0,lodash.defaults)(this.panel.xaxis, this.panelDefaults.xaxis);
     (0,lodash.defaults)(this.panel.options, this.panelDefaults.options);
     this.useDataFrames = true;
-    this.processor = new data_processor/* DataProcessor */.$(this.panel);
+    this.processor = new data_processor.$(this.panel);
     this.contextMenuCtrl = new GraphContextMenuCtrl($scope);
     this.events.on(grafana_data_src.PanelEvents.render, this.onRender.bind(this));
     this.events.on(grafana_data_src.PanelEvents.dataFramesReceived, this.onDataFramesReceived.bind(this));
     this.events.on(grafana_data_src.PanelEvents.dataSnapshotLoad, this.onDataSnapshotLoad.bind(this));
     this.events.on(grafana_data_src.PanelEvents.editModeInitialized, this.onInitEditMode.bind(this));
-    this.events.on(grafana_data_src.PanelEvents.initPanelActions, this.onInitPanelActions.bind(this)); // set axes format from field config
+    this.events.on(grafana_data_src.PanelEvents.initPanelActions, this.onInitPanelActions.bind(this)); 
 
     const fieldConfigUnit = this.panel.fieldConfig.defaults.unit;
 
@@ -5031,7 +4806,7 @@ class GraphCtrl extends metrics_panel_ctrl/* MetricsPanelCtrl */.k {
   }
 
   zoomOut(evt) {
-    core/* appEvents.publish */.h$.publish(new events/* ZoomOutEvent */.p8({
+    core.h$.publish(new events.p8({
       scale: 2
     }));
   }
@@ -5040,7 +4815,7 @@ class GraphCtrl extends metrics_panel_ctrl/* MetricsPanelCtrl */.k {
     const {
       series,
       annotations
-    } = (0,loadSnapshotData/* loadSnapshotData */.y)(this.panel, this.dashboard);
+    } = (0,loadSnapshotData.y)(this.panel, this.dashboard);
     this.panelData.annotations = annotations;
     this.onDataFramesReceived(series);
   }
@@ -5065,7 +4840,7 @@ class GraphCtrl extends metrics_panel_ctrl/* MetricsPanelCtrl */.k {
     this.annotations = [];
 
     if ((_annotations = this.panelData.annotations) !== null && _annotations !== void 0 && _annotations.length) {
-      this.annotations = (0,utils/* annotationsFromDataFrames */.em)(this.panelData.annotations);
+      this.annotations = (0,utils.em)(this.panelData.annotations);
     }
 
     this.loading = false;
@@ -5088,7 +4863,7 @@ class GraphCtrl extends metrics_panel_ctrl/* MetricsPanelCtrl */.k {
               tip: 'Data exists, but is not timeseries',
               actionText: 'Switch to table view',
               action: () => {
-                (0,store/* dispatch */.WI)((0,actions/* changePanelPlugin */.Kc)({
+                (0,store.WI)((0,actions.Kc)({
                   panel: this.panel,
                   pluginId: 'table'
                 }));
@@ -5102,14 +4877,14 @@ class GraphCtrl extends metrics_panel_ctrl/* MetricsPanelCtrl */.k {
         title: 'No data',
         tip: 'No data returned from query'
       };
-    } // If any data is in range, do not return an error
+    } 
 
 
     for (const series of this.seriesList) {
       if (!series.isOutsideRange) {
         return undefined;
       }
-    } // All data is outside the time range
+    } 
 
 
     const dataWarning = {
@@ -5137,10 +4912,10 @@ class GraphCtrl extends metrics_panel_ctrl/* MetricsPanelCtrl */.k {
       return;
     }
 
-    ThresholdMapper/* ThresholdMapper.alertToGraphThresholds */.X.alertToGraphThresholds(this.panel);
+    ThresholdMapper.X.alertToGraphThresholds(this.panel);
 
     for (const series of this.seriesList) {
-      series.applySeriesOverrides(this.panel.seriesOverrides); // Always use the configured field unit
+      series.applySeriesOverrides(this.panel.seriesOverrides); 
 
       if (series.unit) {
         this.panel.yaxes[series.yaxis - 1].format = series.unit;
@@ -5173,7 +4948,7 @@ class GraphCtrl extends metrics_panel_ctrl/* MetricsPanelCtrl */.k {
   }
 
   migrateToReact() {
-    this.onPluginTypeChange(config/* default.panels.timeseries */.ZP.panels.timeseries);
+    this.onPluginTypeChange(config.ZP.panels.timeseries);
   }
 
 }
@@ -5181,16 +4956,15 @@ GraphCtrl.$inject = ["$scope", "$injector"];
 
 module_defineProperty(GraphCtrl, "template", graph_template);
 
-// Use new react style configuration
 const module_plugin = new grafana_data_src.PanelPlugin(null).useFieldConfig({
   disableStandardOptions: [grafana_data_src.FieldConfigProperty.NoValue, grafana_data_src.FieldConfigProperty.Thresholds, grafana_data_src.FieldConfigProperty.Max, grafana_data_src.FieldConfigProperty.Min, grafana_data_src.FieldConfigProperty.Decimals, grafana_data_src.FieldConfigProperty.Color, grafana_data_src.FieldConfigProperty.Mappings]
 }).setDataSupport({
   annotations: true,
   alertStates: true
-}).setMigrationHandler(graphPanelMigrationHandler); // Use the angular ctrt rather than a react one
+}).setMigrationHandler(graphPanelMigrationHandler); 
 
 module_plugin.angularPanelCtrl = GraphCtrl;
 
-/***/ })
+ })
 
 }]);

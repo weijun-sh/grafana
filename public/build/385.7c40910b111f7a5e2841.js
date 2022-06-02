@@ -1,23 +1,21 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[385],{
 
-/***/ "./public/app/features/canvas/elements/icon.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/canvas/elements/icon.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "e": () => (/* binding */ iconItem)
-/* harmony export */ });
-/* unused harmony export IconDisplay */
-/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var react_inlinesvg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/__virtual__/react-inlinesvg-virtual-f6307798ef/0/cache/react-inlinesvg-npm-2.3.0-9b0402e461-ea43f6ec06.zip/node_modules/react-inlinesvg/esm/index.js");
-/* harmony import */ var app_features_dimensions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/dimensions/index.ts");
-/* harmony import */ var app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/dimensions/editors/index.ts");
-/* harmony import */ var app_plugins_panel_canvas_editor_APIEditor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/plugins/panel/canvas/editor/APIEditor.tsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-
+ __webpack_require__.d(__webpack_exports__, {
+   "e": () => ( iconItem)
+ });
+ var _emotion_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
+ var lodash__WEBPACK_IMPORTED_MODULE_1___default = __webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
+ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var react_inlinesvg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./.yarn/__virtual__/react-inlinesvg-virtual-f6307798ef/0/cache/react-inlinesvg-npm-2.3.0-9b0402e461-ea43f6ec06.zip/node_modules/react-inlinesvg/esm/index.js");
+ var app_features_dimensions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/dimensions/index.ts");
+ var app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/features/dimensions/editors/index.ts");
+ var app_plugins_panel_canvas_editor_APIEditor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./public/app/plugins/panel/canvas/editor/APIEditor.tsx");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 
 
 
@@ -25,7 +23,7 @@
 
 
 
-// When a stoke is defined, we want the path to be in page units
+
 const svgStrokePathClass = _emotion_css__WEBPACK_IMPORTED_MODULE_0__.css`
   path {
     vector-effect: non-scaling-stroke;
@@ -42,7 +40,7 @@ function IconDisplay(props) {
 
   const onClick = () => {
     if (data !== null && data !== void 0 && data.api) {
-      (0,app_plugins_panel_canvas_editor_APIEditor__WEBPACK_IMPORTED_MODULE_5__/* .callApi */ .t)(data.api);
+      (0,app_plugins_panel_canvas_editor_APIEditor__WEBPACK_IMPORTED_MODULE_5__ .t)(data.api);
     }
   };
 
@@ -51,7 +49,7 @@ function IconDisplay(props) {
     stroke: data === null || data === void 0 ? void 0 : data.strokeColor,
     strokeWidth: data === null || data === void 0 ? void 0 : data.stroke
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_inlinesvg__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_inlinesvg__WEBPACK_IMPORTED_MODULE_7__ .Z, {
     onClick: onClick,
     src: data.path,
     style: svgStyle,
@@ -73,7 +71,7 @@ const iconItem = {
   }, options, {
     config: {
       path: {
-        mode: app_features_dimensions__WEBPACK_IMPORTED_MODULE_3__/* .ResourceDimensionMode.Fixed */ .Q8.Fixed,
+        mode: app_features_dimensions__WEBPACK_IMPORTED_MODULE_3__ .Q8.Fixed,
         fixed: 'img/icons/unicons/question-circle.svg'
       },
       fill: {
@@ -81,7 +79,6 @@ const iconItem = {
       }
     }
   }),
-  // Called when data changes
   prepareData: (ctx, cfg) => {
     var _cfg$api, _cfg$stroke;
 
@@ -92,7 +89,7 @@ const iconItem = {
     }
 
     if (!path || !(0,lodash__WEBPACK_IMPORTED_MODULE_1__.isString)(path)) {
-      path = (0,app_features_dimensions__WEBPACK_IMPORTED_MODULE_3__/* .getPublicOrAbsoluteUrl */ .t7)('img/icons/unicons/question-circle.svg');
+      path = (0,app_features_dimensions__WEBPACK_IMPORTED_MODULE_3__ .t7)('img/icons/unicons/question-circle.svg');
     }
 
     const data = {
@@ -112,7 +109,6 @@ const iconItem = {
 
     return data;
   },
-  // Heatmap overlay options
   registerOptionsUI: builder => {
     const category = ['Icon'];
     builder.addCustomEditor({
@@ -120,7 +116,7 @@ const iconItem = {
       id: 'iconSelector',
       path: 'config.path',
       name: 'SVG Path',
-      editor: app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_4__/* .ResourceDimensionEditor */ .Lv,
+      editor: app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_4__ .Lv,
       settings: {
         resourceType: 'icon'
       }
@@ -129,10 +125,9 @@ const iconItem = {
       id: 'config.fill',
       path: 'config.fill',
       name: 'Fill color',
-      editor: app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_4__/* .ColorDimensionEditor */ .Lm,
+      editor: app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_4__ .Lm,
       settings: {},
       defaultValue: {
-        // Configured values
         fixed: 'grey'
       }
     }).addSliderInput({
@@ -149,10 +144,9 @@ const iconItem = {
       id: 'config.stroke.color',
       path: 'config.stroke.color',
       name: 'Stroke color',
-      editor: app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_4__/* .ColorDimensionEditor */ .Lm,
+      editor: app_features_dimensions_editors__WEBPACK_IMPORTED_MODULE_4__ .Lm,
       settings: {},
       defaultValue: {
-        // Configured values
         fixed: 'grey'
       },
       showIf: cfg => {
@@ -165,21 +159,21 @@ const iconItem = {
       id: 'apiSelector',
       path: 'config.api',
       name: 'API',
-      editor: app_plugins_panel_canvas_editor_APIEditor__WEBPACK_IMPORTED_MODULE_5__/* .APIEditor */ .U
+      editor: app_plugins_panel_canvas_editor_APIEditor__WEBPACK_IMPORTED_MODULE_5__ .U
     });
   }
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/canvas/elements/notFound.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/canvas/elements/notFound.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "C": () => (/* binding */ notFoundItem)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "C": () => ( notFoundItem)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _h;
 
 
@@ -191,10 +185,10 @@ class NotFoundDisplay extends react__WEBPACK_IMPORTED_MODULE_0__.PureComponent {
     const {
       config
     } = this.props;
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      children: [_h || (_h = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      children: [_h || (_h = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
         children: "NOT FOUND:"
-      })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("pre", {
+      })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("pre", {
         children: JSON.stringify(config, null, 2)
       })]
     });
@@ -216,38 +210,29 @@ const notFoundItem = {
   })
 };
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/canvas/index.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/canvas/index.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Uy": () => (/* reexport */ types/* BackgroundImageSize */.Uy),
-  "Nm": () => (/* reexport */ DEFAULT_CANVAS_ELEMENT_CONFIG),
-  "_5": () => (/* reexport */ types/* HorizontalConstraint */._5),
-  "fJ": () => (/* reexport */ types/* VerticalConstraint */.fJ),
-  "Jk": () => (/* reexport */ canvasElementRegistry)
+  "Uy": () => ( types.Uy),
+  "Nm": () => ( DEFAULT_CANVAS_ELEMENT_CONFIG),
+  "_5": () => ( types._5),
+  "fJ": () => ( types.fJ),
+  "Jk": () => ( canvasElementRegistry)
 });
 
-// UNUSED EXPORTS: CanvasFrameOptions
 
-// EXTERNAL MODULE: ./public/app/features/canvas/types.ts
 var types = __webpack_require__("./public/app/features/canvas/types.ts");
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/features/dimensions/editors/TextDimensionEditor.tsx
 var TextDimensionEditor = __webpack_require__("./public/app/features/dimensions/editors/TextDimensionEditor.tsx");
-// EXTERNAL MODULE: ./public/app/plugins/panel/canvas/editor/APIEditor.tsx
 var APIEditor = __webpack_require__("./public/app/plugins/panel/canvas/editor/APIEditor.tsx");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/features/canvas/elements/button.tsx
+;
 
 
 
@@ -262,11 +247,11 @@ class ButtonDisplay extends react.PureComponent {
 
     const onClick = () => {
       if (data !== null && data !== void 0 && data.api) {
-        (0,APIEditor/* callApi */.t)(data.api);
+        (0,APIEditor.t)(data.api);
       }
     };
 
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Button, {
+    return (0,jsx_runtime.jsx)(grafana_ui_src.Button, {
       type: "submit",
       onClick: onClick,
       children: data === null || data === void 0 ? void 0 : data.text
@@ -285,7 +270,6 @@ const buttonItem = {
     height: 50
   },
   getNewOptions: options => Object.assign({}, options),
-  // Called when data changes
   prepareData: (ctx, cfg) => {
     var _cfg$api;
 
@@ -295,7 +279,6 @@ const buttonItem = {
     };
     return data;
   },
-  // Heatmap overlay options
   registerOptionsUI: builder => {
     const category = ['Button'];
     builder.addCustomEditor({
@@ -303,21 +286,19 @@ const buttonItem = {
       id: 'textSelector',
       path: 'config.text',
       name: 'Text',
-      editor: TextDimensionEditor/* TextDimensionEditor */.$
+      editor: TextDimensionEditor.$
     }).addCustomEditor({
       category,
       id: 'apiSelector',
       path: 'config.api',
       name: 'API',
-      editor: APIEditor/* APIEditor */.U
+      editor: APIEditor.U
     });
   }
 };
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./public/app/features/dimensions/editors/index.ts + 4 modules
 var editors = __webpack_require__("./public/app/features/dimensions/editors/index.ts");
-;// CONCATENATED MODULE: ./public/app/features/canvas/elements/droneFront.tsx
+;
 var _g, _g2, _g3, _g4;
 
 
@@ -333,7 +314,7 @@ const DroneFrontDisplay = props => {
     data
   } = props;
   const droneFrontTransformStyle = `rotate(${data !== null && data !== void 0 && data.rollAngle ? data.rollAngle : 0}deg)`;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("svg", {
+  return (0,jsx_runtime.jsxs)("svg", {
     className: styles.droneFront,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -341,64 +322,64 @@ const DroneFrontDisplay = props => {
     style: {
       transform: droneFrontTransformStyle
     },
-    children: [_g || (_g = /*#__PURE__*/(0,jsx_runtime.jsxs)("g", {
+    children: [_g || (_g = (0,jsx_runtime.jsxs)("g", {
       className: "arms",
       stroke: "black",
       strokeWidth: "28px",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("line", {
+      children: [(0,jsx_runtime.jsx)("line", {
         x1: "510",
         x2: "320",
         y1: "100",
         y2: "150"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("line", {
+      }), (0,jsx_runtime.jsx)("line", {
         x1: "510",
         x2: "320",
         y1: "190",
         y2: "210"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("line", {
+      }), (0,jsx_runtime.jsx)("line", {
         x1: "790",
         x2: "980",
         y1: "190",
         y2: "210"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("line", {
+      }), (0,jsx_runtime.jsx)("line", {
         x1: "790",
         x2: "980",
         y1: "100",
         y2: "150"
       })]
-    })), _g2 || (_g2 = /*#__PURE__*/(0,jsx_runtime.jsxs)("g", {
+    })), _g2 || (_g2 = (0,jsx_runtime.jsxs)("g", {
       className: "body",
       stroke: "black",
       strokeWidth: "28px",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      children: [(0,jsx_runtime.jsx)("path", {
         fill: "none",
         d: " M 510 130 C 510 124 510 110 510 100 C 510 90 530 71 540 70 C 640 61 670 60 760 70 C 770 71 790 90 790 100 Q 790 120 790 130 L 790 130 Q 790 177 790 196 C 790 207 770 225 760 226 C 670 236 640 236 540 226 C 530 226 510 206 510 196 Q 510 177 510 130 Q 510 133 510 130 Z "
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("circle", {
+      }), (0,jsx_runtime.jsx)("circle", {
         cx: "650",
         cy: "160",
         r: "40",
         fill: "none"
       })]
-    })), _g3 || (_g3 = /*#__PURE__*/(0,jsx_runtime.jsxs)("g", {
+    })), _g3 || (_g3 = (0,jsx_runtime.jsxs)("g", {
       className: "motors",
       stroke: "black",
       strokeWidth: "28px",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      children: [(0,jsx_runtime.jsx)("path", {
         className: "motor",
         fill: "none",
         d: " M 320 60 L 250 60 L 250 230 L 260 290 L 310 290 L 320 230 L 320 60 Z "
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      }), (0,jsx_runtime.jsx)("path", {
         className: "motor",
         fill: "none",
         d: " M 1050 60 L 980 60 L 980 230 L 990 290 L 1040 290 L 1050 230 L 1050 60 Z "
       })]
-    })), _g4 || (_g4 = /*#__PURE__*/(0,jsx_runtime.jsxs)("g", {
+    })), _g4 || (_g4 = (0,jsx_runtime.jsxs)("g", {
       className: "propellers",
       fill: "black",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      children: [(0,jsx_runtime.jsx)("path", {
         className: "prop",
         d: " M 270 60 L 300 60 L 300 20 Q 311 30 330 30 Q 349 30 570 10 L 300 10 Q 300 0 290 0 C 286 0 284 0 280 0 Q 270 0 270 10 L 0 10 Q 220 30 240 30 Q 260 30 270 20 L 270 60 Z "
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      }), (0,jsx_runtime.jsx)("path", {
         className: "prop",
         d: " M 1000 60 L 1030 60 L 1030 20 Q 1041 30 1060 30 Q 1079 30 1300 10 L 1030 10 Q 1030 0 1020 0 C 1016 0 1014 0 1010 0 Q 1000 0 1000 10 L 730 10 Q 950 30 970 30 Q 990 30 1000 20 L 1000 60 Z "
       })]
@@ -416,7 +397,6 @@ const droneFrontItem = {
     height: 100
   },
   getNewOptions: options => Object.assign({}, options),
-  // Called when data changes
   prepareData: (ctx, cfg) => {
     const data = {
       rollAngle: cfg !== null && cfg !== void 0 && cfg.rollAngle ? ctx.getScalar(cfg.rollAngle).value() : 0
@@ -430,7 +410,7 @@ const droneFrontItem = {
       id: 'rollAngle',
       path: 'config.rollAngle',
       name: 'Roll Angle',
-      editor: editors/* ScalarDimensionEditor */.k9
+      editor: editors.k9
     });
   }
 };
@@ -440,7 +420,7 @@ const getStyles = theme => ({
     transition: transform 0.4s;
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/canvas/elements/droneSide.tsx
+;
 var droneSide_g, droneSide_g2, droneSide_g3, droneSide_g4;
 
 
@@ -456,7 +436,7 @@ const DroneSideDisplay = props => {
     data
   } = props;
   const droneSidePitchTransformStyle = `rotate(${data !== null && data !== void 0 && data.pitchAngle ? data.pitchAngle : 0}deg)`;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("svg", {
+  return (0,jsx_runtime.jsxs)("svg", {
     className: styles.droneSide,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -464,59 +444,59 @@ const DroneSideDisplay = props => {
     style: {
       transform: droneSidePitchTransformStyle
     },
-    children: [droneSide_g || (droneSide_g = /*#__PURE__*/(0,jsx_runtime.jsxs)("g", {
+    children: [droneSide_g || (droneSide_g = (0,jsx_runtime.jsxs)("g", {
       className: "arms",
       stroke: "black",
       strokeWidth: "28px",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("line", {
+      children: [(0,jsx_runtime.jsx)("line", {
         x1: "510",
         x2: "320",
         y1: "100",
         y2: "150"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("line", {
+      }), (0,jsx_runtime.jsx)("line", {
         x1: "510",
         x2: "320",
         y1: "190",
         y2: "210"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("line", {
+      }), (0,jsx_runtime.jsx)("line", {
         x1: "790",
         x2: "980",
         y1: "190",
         y2: "210"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("line", {
+      }), (0,jsx_runtime.jsx)("line", {
         x1: "790",
         x2: "980",
         y1: "100",
         y2: "150"
       })]
-    })), droneSide_g2 || (droneSide_g2 = /*#__PURE__*/(0,jsx_runtime.jsx)("g", {
+    })), droneSide_g2 || (droneSide_g2 = (0,jsx_runtime.jsx)("g", {
       className: "body",
       stroke: "black",
       strokeWidth: "28px",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      children: (0,jsx_runtime.jsx)("path", {
         fill: "none",
         d: " M 510 130 C 510 124 510 110 510 100 C 510 90 530 71 540 70 C 640 61 670 60 760 70 C 770 71 790 90 790 100 Q 790 120 790 130 L 790 130 Q 790 177 790 196 C 790 207 770 225 760 226 C 670 236 640 236 540 226 C 530 226 510 206 510 196 Q 510 177 510 130 Q 510 133 510 130 Z "
       })
-    })), droneSide_g3 || (droneSide_g3 = /*#__PURE__*/(0,jsx_runtime.jsxs)("g", {
+    })), droneSide_g3 || (droneSide_g3 = (0,jsx_runtime.jsxs)("g", {
       className: "motors",
       stroke: "black",
       strokeWidth: "28px",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      children: [(0,jsx_runtime.jsx)("path", {
         className: "motor",
         fill: "none",
         d: " M 320 60 L 250 60 L 250 230 L 260 290 L 310 290 L 320 230 L 320 60 Z "
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      }), (0,jsx_runtime.jsx)("path", {
         className: "motor",
         fill: "none",
         d: " M 1050 60 L 980 60 L 980 230 L 990 290 L 1040 290 L 1050 230 L 1050 60 Z "
       })]
-    })), droneSide_g4 || (droneSide_g4 = /*#__PURE__*/(0,jsx_runtime.jsxs)("g", {
+    })), droneSide_g4 || (droneSide_g4 = (0,jsx_runtime.jsxs)("g", {
       className: "propellers",
       fill: "black",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      children: [(0,jsx_runtime.jsx)("path", {
         className: "prop",
         d: " M 270 60 L 300 60 L 300 20 Q 311 30 330 30 Q 349 30 570 10 L 300 10 Q 300 0 290 0 C 286 0 284 0 280 0 Q 270 0 270 10 L 0 10 Q 220 30 240 30 Q 260 30 270 20 L 270 60 Z "
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      }), (0,jsx_runtime.jsx)("path", {
         className: "prop",
         d: " M 1000 60 L 1030 60 L 1030 20 Q 1041 30 1060 30 Q 1079 30 1300 10 L 1030 10 Q 1030 0 1020 0 C 1016 0 1014 0 1010 0 Q 1000 0 1000 10 L 730 10 Q 950 30 970 30 Q 990 30 1000 20 L 1000 60 Z "
       })]
@@ -534,7 +514,6 @@ const droneSideItem = {
     height: 100
   },
   getNewOptions: options => Object.assign({}, options),
-  // Called when data changes
   prepareData: (ctx, cfg) => {
     const data = {
       pitchAngle: cfg !== null && cfg !== void 0 && cfg.pitchAngle ? ctx.getScalar(cfg.pitchAngle).value() : 0
@@ -548,7 +527,7 @@ const droneSideItem = {
       id: 'pitchAngle',
       path: 'config.pitchAngle',
       name: 'Pitch Angle',
-      editor: editors/* ScalarDimensionEditor */.k9
+      editor: editors.k9
     });
   }
 };
@@ -558,7 +537,7 @@ const droneSide_getStyles = theme => ({
     transition: transform 0.4s;
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/canvas/elements/droneTop.tsx
+;
 var _path, _path2;
 
 
@@ -578,7 +557,7 @@ const DroneTopDisplay = props => {
   const bRightRotorAnimation = `spin ${data !== null && data !== void 0 && data.bRightRotorRPM ? 60 / Math.abs(data.bRightRotorRPM) : 0}s linear infinite`;
   const bLeftRotorAnimation = `spin ${data !== null && data !== void 0 && data.bLeftRotorRPM ? 60 / Math.abs(data.bLeftRotorRPM) : 0}s linear infinite`;
   const droneTopTransformStyle = `rotate(${data !== null && data !== void 0 && data.yawAngle ? data.yawAngle : 0}deg)`;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("svg", {
+  return (0,jsx_runtime.jsxs)("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink",
     viewBox: "-43 -43 640 640",
@@ -586,33 +565,33 @@ const DroneTopDisplay = props => {
     style: {
       transform: droneTopTransformStyle
     },
-    children: [_path || (_path = /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+    children: [_path || (_path = (0,jsx_runtime.jsx)("path", {
       fillRule: "evenodd",
       d: " M 137.95 127.967 C 137.14 127.157 136.189 126.58 135.178 126.218 C 138.173 121.545 139.967 116.036 140.125 110.123 L 217.64 151.862 C 214.049 157.411 211.8 163.922 211.386 170.95 L 209.694 199.712 L 137.95 127.967 L 137.95 127.967 L 137.95 127.967 L 137.95 127.967 L 137.95 127.967 L 137.95 127.967 L 137.95 127.967 L 137.95 127.967 L 137.95 127.967 Z  M 134.268 426.981 C 130.211 421.314 124.328 417.045 117.482 415.041 L 201.999 330.523 L 201.385 340.955 C 200.67 353.107 202.829 364.914 207.563 375.673 L 134.268 426.981 L 134.268 426.981 L 134.268 426.981 L 134.268 426.981 L 134.268 426.981 L 134.268 426.981 L 134.268 426.981 L 134.268 426.981 Z  M 324.765 373.673 L 228.527 373.673 Q 215.374 358.611 216.361 341.835 L 226.361 171.832 C 226.825 163.94 231.012 157.096 237.146 152.957 L 316.146 152.957 C 322.28 157.096 326.466 163.94 326.931 171.832 L 336.931 341.835 Q 337.918 358.611 324.765 373.673 L 324.765 373.673 L 324.765 373.673 L 324.765 373.673 L 324.765 373.673 L 324.765 373.673 L 324.765 373.673 Z  M 435.81 415.041 C 428.964 417.045 423.081 421.314 419.024 426.981 L 345.727 375.673 C 350.461 364.914 352.62 353.107 351.905 340.955 L 351.291 330.523 L 435.81 415.041 L 435.81 415.041 L 435.81 415.041 L 435.81 415.041 L 435.81 415.041 L 435.81 415.041 Z  M 343.596 199.713 L 341.904 170.951 C 341.49 163.923 339.242 157.411 335.651 151.863 L 413.167 110.124 C 413.325 116.037 415.119 121.546 418.114 126.219 C 417.103 126.581 416.152 127.158 415.342 127.968 L 343.596 199.713 L 343.596 199.713 L 343.596 199.713 L 343.596 199.713 L 343.596 199.713 Z  M 444.646 92.771 C 453.744 92.771 461.146 100.172 461.146 109.271 C 461.146 118.369 453.744 125.771 444.646 125.771 C 435.548 125.771 428.146 118.369 428.146 109.271 C 428.146 100.172 435.548 92.771 444.646 92.771 L 444.646 92.771 L 444.646 92.771 L 444.646 92.771 Z  M 108.647 92.771 C 117.745 92.771 125.147 100.172 125.147 109.271 C 125.147 118.369 117.745 125.771 108.647 125.771 C 99.549 125.771 92.147 118.369 92.147 109.271 C 92.147 100.172 99.549 92.771 108.647 92.771 L 108.647 92.771 L 108.647 92.771 Z  M 108.647 461.771 C 99.549 461.771 92.147 454.369 92.147 445.271 C 92.147 436.172 99.549 428.771 108.647 428.771 C 117.745 428.771 125.147 436.172 125.147 445.271 C 125.147 454.369 117.745 461.771 108.647 461.771 L 108.647 461.771 Z  M 92.322 136.202 C 97.086 139.1 102.675 140.771 108.647 140.771 C 114.883 140.771 120.697 138.941 125.594 135.802 C 125.956 136.813 126.534 137.764 127.343 138.573 L 207.342 218.573 C 207.711 218.942 208.109 219.264 208.528 219.54 L 203.212 309.908 C 201.794 310.182 200.44 310.869 199.342 311.967 L 95.343 415.967 C 94.954 416.356 94.62 416.779 94.335 417.224 C 93.651 417.575 92.976 417.942 92.322 418.34 Q 84.615 424.182 81.716 428.946 C 78.817 433.71 77.147 439.299 77.147 445.271 C 77.147 462.64 91.278 476.771 108.647 476.771 C 114.619 476.771 120.208 475.1 124.972 472.202 C 129.736 469.304 132.678 466.36 135.577 461.596 C 138.476 456.832 140.147 451.243 140.147 445.271 C 140.147 443.943 140.055 442.637 139.895 441.352 L 214.997 388.78 C 217.05 391.677 336.242 391.678 338.295 388.78 L 413.398 441.352 C 413.238 442.637 413.146 443.943 413.146 445.271 C 413.146 451.243 414.817 456.832 417.715 461.596 C 420.613 466.36 423.557 469.304 428.321 472.202 C 433.085 475.1 438.674 476.771 444.646 476.771 C 462.015 476.771 476.146 462.64 476.146 445.271 C 476.146 439.299 474.475 433.71 471.577 428.946 C 468.679 424.182 459.642 417.575 458.958 417.224 C 458.672 416.779 458.339 416.356 457.95 415.967 L 353.95 311.967 C 352.852 310.869 351.498 310.182 350.08 309.908 L 344.764 219.54 C 345.183 219.264 345.581 218.942 345.95 218.573 L 425.95 138.573 C 426.76 137.763 427.337 136.812 427.699 135.802 C 432.596 138.941 438.409 140.771 444.646 140.771 C 450.618 140.771 456.207 139.1 460.971 136.202 C 465.735 133.304 468.679 130.36 471.577 125.596 C 474.475 120.832 476.146 115.243 476.146 109.271 C 476.146 91.903 462.015 77.772 444.646 77.772 C 438.674 77.772 433.085 79.442 428.321 82.34 L 416.215 91.446 L 324.765 140.688 C 318.402 136.324 310.718 133.771 302.473 133.771 L 250.819 133.771 C 242.574 133.771 234.89 136.324 228.527 140.688 L 137.078 91.446 L 124.972 82.34 C 120.208 79.442 114.619 77.772 108.647 77.772 C 91.278 77.772 77.147 91.903 77.147 109.271 C 77.147 115.243 78.818 120.832 81.716 125.595 C 84.614 130.358 87.558 133.304 92.322 136.202 L 92.322 136.202 L 92.322 136.202 L 92.322 136.202 L 92.322 136.202 L 92.322 136.202 L 92.322 136.202 L 92.322 136.202 L 92.322 136.202 Z  M 444.646 461.771 C 435.548 461.771 428.146 454.369 428.146 445.271 C 428.146 436.172 435.548 428.771 444.646 428.771 C 453.744 428.771 461.146 436.172 461.146 445.271 C 461.146 454.369 453.744 461.771 444.646 461.771 Z "
-    })), _path2 || (_path2 = /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+    })), _path2 || (_path2 = (0,jsx_runtime.jsx)("path", {
       fillRule: "evenodd",
       d: " M 259.458 334.235 L 259.458 337.211 L 254.514 337.211 L 254.514 350.795 L 250.842 350.795 L 250.842 337.211 L 245.898 337.211 L 245.898 334.235 L 259.458 334.235 Z  M 266.226 347.939 L 272.586 347.939 L 272.754 350.627 L 272.754 350.627 Q 270.498 350.867 265.074 350.867 L 265.074 350.867 L 265.074 350.867 Q 263.418 350.867 262.434 349.967 L 262.434 349.967 L 262.434 349.967 Q 261.45 349.067 261.426 347.531 L 261.426 347.531 L 261.426 337.499 L 261.426 337.499 Q 261.45 335.963 262.434 335.063 L 262.434 335.063 L 262.434 335.063 Q 263.418 334.163 265.074 334.163 L 265.074 334.163 L 265.074 334.163 Q 270.498 334.163 272.754 334.403 L 272.754 334.403 L 272.586 337.115 L 266.226 337.115 L 266.226 337.115 Q 265.626 337.115 265.362 337.403 L 265.362 337.403 L 265.362 337.403 Q 265.098 337.691 265.098 338.339 L 265.098 338.339 L 265.098 340.859 L 271.698 340.859 L 271.698 343.499 L 265.098 343.499 L 265.098 346.691 L 265.098 346.691 Q 265.098 347.363 265.362 347.651 L 265.362 347.651 L 265.362 347.651 Q 265.626 347.939 266.226 347.939 L 266.226 347.939 Z  M 275.202 333.995 L 278.73 333.995 L 278.73 346.931 L 278.73 346.931 Q 278.73 348.131 280.074 348.131 L 280.074 348.131 L 281.034 348.131 L 281.442 350.603 L 281.442 350.603 Q 280.53 351.083 278.61 351.083 L 278.61 351.083 L 278.61 351.083 Q 277.026 351.083 276.114 350.231 L 276.114 350.231 L 276.114 350.231 Q 275.202 349.379 275.202 347.819 L 275.202 347.819 L 275.202 333.995 Z  M 283.05 333.995 L 286.578 333.995 L 286.578 346.931 L 286.578 346.931 Q 286.578 348.131 287.922 348.131 L 287.922 348.131 L 288.882 348.131 L 289.29 350.603 L 289.29 350.603 Q 288.378 351.083 286.458 351.083 L 286.458 351.083 L 286.458 351.083 Q 284.874 351.083 283.962 350.231 L 283.962 350.231 L 283.962 350.231 Q 283.05 349.379 283.05 347.819 L 283.05 347.819 L 283.05 333.995 Z  M 292.086 335.759 L 292.086 335.759 L 292.086 335.759 Q 293.634 333.923 297.618 333.923 L 297.618 333.923 L 297.618 333.923 Q 301.602 333.923 303.162 335.759 L 303.162 335.759 L 303.162 335.759 Q 304.722 337.595 304.722 342.515 L 304.722 342.515 L 304.722 342.515 Q 304.722 347.435 303.162 349.271 L 303.162 349.271 L 303.162 349.271 Q 301.602 351.107 297.618 351.107 L 297.618 351.107 L 297.618 351.107 Q 293.634 351.107 292.086 349.271 L 292.086 349.271 L 292.086 349.271 Q 290.538 347.435 290.538 342.515 L 290.538 342.515 L 290.538 342.515 Q 290.538 337.595 292.086 335.759 Z  M 300.174 338.051 L 300.174 338.051 L 300.174 338.051 Q 299.49 336.875 297.618 336.875 L 297.618 336.875 L 297.618 336.875 Q 295.746 336.875 295.062 338.051 L 295.062 338.051 L 295.062 338.051 Q 294.378 339.227 294.378 342.515 L 294.378 342.515 L 294.378 342.515 Q 294.378 345.803 295.062 346.979 L 295.062 346.979 L 295.062 346.979 Q 295.746 348.155 297.618 348.155 L 297.618 348.155 L 297.618 348.155 Q 299.49 348.155 300.174 346.979 L 300.174 346.979 L 300.174 346.979 Q 300.858 345.803 300.858 342.515 L 300.858 342.515 L 300.858 342.515 Q 300.858 339.227 300.174 338.051 Z "
-    })), /*#__PURE__*/(0,jsx_runtime.jsxs)("g", {
+    })), (0,jsx_runtime.jsxs)("g", {
       className: "propeller-group",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      children: [(0,jsx_runtime.jsx)("path", {
         className: `${styles.propeller} ${styles.propellerCW}`,
         style: {
           animation: bRightRotorAnimation
         },
         d: " M 461.563 418.77 L 463.992 416.34 Q 465.495 407.116 466.461 400.395 C 467.426 393.675 469.363 388.087 474.731 383.284 Q 533.862 341.514 538.196 338.859 C 542.529 336.203 548.345 334.299 551.492 338.29 C 554.639 342.282 553.481 346.02 549.419 350.082 L 471.147 428.354 L 461.563 418.77 Z  M 427.729 471.772 L 425.299 474.202 Q 423.797 483.426 422.831 490.146 C 421.866 496.867 419.929 502.454 414.561 507.257 Q 355.43 549.028 351.096 551.683 C 346.763 554.338 340.947 556.243 337.8 552.251 C 334.653 548.26 335.811 544.522 339.873 540.46 L 418.145 462.187 L 427.729 471.772 Z "
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      }), (0,jsx_runtime.jsx)("path", {
         className: `${styles.propeller} ${styles.propellerCCW}`,
         style: {
           animation: fRightRotorAnimation
         },
         d: " M 461.563 135.773 L 463.992 138.203 Q 465.495 147.426 466.461 154.147 C 467.426 160.868 469.363 166.455 474.731 171.258 Q 533.862 213.028 538.196 215.684 C 542.529 218.339 548.345 220.244 551.492 216.252 C 554.639 212.26 553.481 208.523 549.419 204.46 L 471.147 126.188 L 461.563 135.773 Z  M 427.729 82.77 L 425.299 80.34 Q 423.797 71.117 422.831 64.396 C 421.866 57.675 419.929 52.088 414.561 47.285 Q 355.43 5.515 351.096 2.859 C 346.763 0.204 340.947 -1.701 337.8 2.291 C 334.653 6.282 335.811 10.02 339.873 14.082 L 418.145 92.355 L 427.729 82.77 Z "
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      }), (0,jsx_runtime.jsx)("path", {
         className: `${styles.propeller} ${styles.propellerCCW}`,
         style: {
           animation: bLeftRotorAnimation
         },
         d: " M 125.563 471.772 L 127.993 474.202 Q 129.496 483.426 130.461 490.146 C 131.427 496.867 133.363 502.454 138.731 507.257 Q 197.863 549.028 202.196 551.683 C 206.53 554.338 212.345 556.243 215.492 552.251 C 218.639 548.26 217.482 544.522 213.419 540.46 L 135.148 462.187 L 125.563 471.772 Z  M 91.73 418.77 L 89.3 416.34 Q 87.797 407.116 86.832 400.395 C 85.866 393.675 83.93 388.087 78.562 383.284 Q 19.431 341.514 15.097 338.859 C 10.763 336.203 4.948 334.299 1.801 338.29 C -1.346 342.282 -0.189 346.02 3.874 350.082 L 82.146 428.354 L 91.73 418.77 Z "
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      }), (0,jsx_runtime.jsx)("path", {
         className: `${styles.propeller} ${styles.propellerCW}`,
         style: {
           animation: fLeftRotorAnimation
@@ -633,7 +612,6 @@ const droneTopItem = {
     height: 100
   },
   getNewOptions: options => Object.assign({}, options),
-  // Called when data changes
   prepareData: (ctx, cfg) => {
     const data = {
       bRightRotorRPM: cfg !== null && cfg !== void 0 && cfg.bRightRotorRPM ? ctx.getScalar(cfg.bRightRotorRPM).value() : 0,
@@ -651,31 +629,31 @@ const droneTopItem = {
       id: 'yawAngle',
       path: 'config.yawAngle',
       name: 'Yaw Angle',
-      editor: editors/* ScalarDimensionEditor */.k9
+      editor: editors.k9
     }).addCustomEditor({
       category,
       id: 'fRightRotorRPM',
       path: 'config.fRightRotorRPM',
       name: 'Front Right Rotor RPM',
-      editor: editors/* ScalarDimensionEditor */.k9
+      editor: editors.k9
     }).addCustomEditor({
       category,
       id: 'fLeftRotorRPM',
       path: 'config.fLeftRotorRPM',
       name: 'Front Left Rotor RPM',
-      editor: editors/* ScalarDimensionEditor */.k9
+      editor: editors.k9
     }).addCustomEditor({
       category,
       id: 'bRightRotorRPM',
       path: 'config.bRightRotorRPM',
       name: 'Back Right Rotor RPM',
-      editor: editors/* ScalarDimensionEditor */.k9
+      editor: editors.k9
     }).addCustomEditor({
       category,
       id: 'bLeftRotorRPM',
       path: 'config.bLeftRotorRPM',
       name: 'Back Left Rotor RPM',
-      editor: editors/* ScalarDimensionEditor */.k9
+      editor: editors.k9
     });
   }
 };
@@ -701,13 +679,10 @@ const droneTop_getStyles = theme => ({
     animation-direction: reverse;
   `
 });
-// EXTERNAL MODULE: ./public/app/features/canvas/elements/icon.tsx
 var icon = __webpack_require__("./public/app/features/canvas/elements/icon.tsx");
-// EXTERNAL MODULE: ./public/app/core/config.ts
 var config = __webpack_require__("./public/app/core/config.ts");
-// EXTERNAL MODULE: ./public/app/features/dimensions/editors/ColorDimensionEditor.tsx
 var ColorDimensionEditor = __webpack_require__("./public/app/features/dimensions/editors/ColorDimensionEditor.tsx");
-;// CONCATENATED MODULE: ./public/app/features/canvas/elements/textBox.tsx
+;
 
 
 
@@ -736,10 +711,10 @@ class TextBoxDisplay extends react.PureComponent {
     const {
       data
     } = this.props;
-    const styles = textBox_getStyles(config/* config.theme2 */.vc.theme2, data);
-    return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    const styles = textBox_getStyles(config.vc.theme2, data);
+    return (0,jsx_runtime.jsx)("div", {
       className: styles.container,
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+      children: (0,jsx_runtime.jsx)("span", {
         className: styles.span,
         children: data === null || data === void 0 ? void 0 : data.text
       })
@@ -784,7 +759,6 @@ const textBoxItem = {
       valign: VAlign.Middle
     }
   }),
-  // Called when data changes
   prepareData: (ctx, cfg) => {
     var _cfg$align, _cfg$valign;
 
@@ -801,7 +775,6 @@ const textBoxItem = {
 
     return data;
   },
-  // Heatmap overlay options
   registerOptionsUI: builder => {
     const category = ['Text box'];
     builder.addCustomEditor({
@@ -809,13 +782,13 @@ const textBoxItem = {
       id: 'textSelector',
       path: 'config.text',
       name: 'Text',
-      editor: TextDimensionEditor/* TextDimensionEditor */.$
+      editor: TextDimensionEditor.$
     }).addCustomEditor({
       category,
       id: 'config.color',
       path: 'config.color',
       name: 'Text color',
-      editor: ColorDimensionEditor/* ColorDimensionEditor */.L,
+      editor: ColorDimensionEditor.L,
       settings: {},
       defaultValue: {}
     }).addRadio({
@@ -862,7 +835,7 @@ const textBoxItem = {
     });
   }
 };
-;// CONCATENATED MODULE: ./public/app/features/canvas/elements/windTurbine.tsx
+;
 var _symbol, windTurbine_g, _use, _use2, _use3;
 
 
@@ -878,45 +851,45 @@ const WindTurbineDisplay = props => {
     data
   } = props;
   const windTurbineAnimation = `spin ${data !== null && data !== void 0 && data.rpm ? 60 / Math.abs(data.rpm) : 0}s linear infinite`;
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("svg", {
+  return (0,jsx_runtime.jsxs)("svg", {
     viewBox: "0 0 189.326 283.989",
     preserveAspectRatio: "xMidYMid meet",
-    children: [_symbol || (_symbol = /*#__PURE__*/(0,jsx_runtime.jsxs)("symbol", {
+    children: [_symbol || (_symbol = (0,jsx_runtime.jsxs)("symbol", {
       id: "blade",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      children: [(0,jsx_runtime.jsx)("path", {
         fill: "#e6e6e6",
         id: "blade-front",
         d: "M14.6491879,1.85011601 C14.2684455,-0.0535962877 10.7150812,-0.815081206 9.06473318,3.37308585 L0.434338747,70.7658933 L8.93805104,91.9607889 L15.4106729,90.437819 L17.5684455,78.3807425 L14.5218097,1.97679814 L14.6491879,1.85011601 Z"
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+      }), (0,jsx_runtime.jsx)("path", {
         fill: "#d0d6d7",
         id: "blade-side",
         d: "M11.0951276,0.581206497 C10.3336427,0.961948956 9.57215777,1.85011601 8.93735499,3.24640371 L0.306960557,70.6392111 L8.81067285,91.8341067 L3.35359629,70.0044084 L11.0951276,0.581206497 Z"
       })]
-    })), /*#__PURE__*/(0,jsx_runtime.jsxs)("g", {
-      children: [windTurbine_g || (windTurbine_g = /*#__PURE__*/(0,jsx_runtime.jsxs)("g", {
+    })), (0,jsx_runtime.jsxs)("g", {
+      children: [windTurbine_g || (windTurbine_g = (0,jsx_runtime.jsxs)("g", {
         id: "structure",
         transform: "translate(58.123, 82.664)",
         fillRule: "nonzero",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("polygon", {
+        children: [(0,jsx_runtime.jsx)("polygon", {
           id: "tower",
           fill: "#e6e6e6",
           points: "33.111,10.984 39.965,10.984 44.28,196.176 28.796,196.176"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+        }), (0,jsx_runtime.jsx)("path", {
           id: "yaw",
           fill: "rgba(0,0,0,0.25)",
           d: "M40.3454756,23.2948956 L40.7262181,34.8445476 C38.8225058,35.0986079 35.7765661,35.0986079 32.349884,34.337123 L32.7306265,23.2955916 L40.3454756,23.2955916 L40.3454756,23.2948956 Z"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+        }), (0,jsx_runtime.jsx)("path", {
           id: "base",
           fill: "#d0d6d7",
           transform: "translate(0 42)",
           d: "M26.3846868,150.591647 L46.5640371,150.591647 C48.8484919,150.591647 50.7522042,152.49536 50.7522042,154.779814 L50.7522042,158.967981 L22.0691415,158.967981 L22.0691415,154.779814 C22.0691415,152.49536 23.9728538,150.591647 26.2573086,150.591647 L26.3846868,150.591647 Z"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)("circle", {
+        }), (0,jsx_runtime.jsx)("circle", {
           id: "nacelle",
           fill: "#e6e6e6",
           cx: "36.54",
           cy: "12",
           r: "11.93"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)("circle", {
+        }), (0,jsx_runtime.jsx)("circle", {
           id: "gearbox",
           fill: "none",
           stroke: "#d0d6d7",
@@ -925,23 +898,23 @@ const WindTurbineDisplay = props => {
           cy: "11.999",
           r: "5.8"
         })]
-      })), /*#__PURE__*/(0,jsx_runtime.jsxs)("g", {
+      })), (0,jsx_runtime.jsxs)("g", {
         className: styles.blade,
         style: {
           animation: windTurbineAnimation
         },
-        children: [_use || (_use = /*#__PURE__*/(0,jsx_runtime.jsx)("use", {
+        children: [_use || (_use = (0,jsx_runtime.jsx)("use", {
           id: "blade1",
           href: "#blade",
           x: "83.24",
           y: "0"
-        })), _use2 || (_use2 = /*#__PURE__*/(0,jsx_runtime.jsx)("use", {
+        })), _use2 || (_use2 = (0,jsx_runtime.jsx)("use", {
           id: "blade2",
           href: "#blade",
           x: "83.24",
           y: "0",
           transform: "rotate(120 94.663 94.663)"
-        })), _use3 || (_use3 = /*#__PURE__*/(0,jsx_runtime.jsx)("use", {
+        })), _use3 || (_use3 = (0,jsx_runtime.jsx)("use", {
           id: "blade3",
           href: "#blade",
           x: "83.24",
@@ -963,7 +936,6 @@ const windTurbineItem = {
     height: 100
   },
   getNewOptions: options => Object.assign({}, options),
-  // Called when data changes
   prepareData: (ctx, cfg) => {
     const data = {
       rpm: cfg !== null && cfg !== void 0 && cfg.rpm ? ctx.getScalar(cfg.rpm).value() : 0
@@ -977,7 +949,7 @@ const windTurbineItem = {
       id: 'rpm',
       path: 'config.rpm',
       name: 'RPM',
-      editor: editors/* ScalarDimensionEditor */.k9
+      editor: editors.k9
     });
   }
 };
@@ -997,7 +969,7 @@ const windTurbine_getStyles = theme => ({
     transform: rotate(15deg);
   `
 });
-;// CONCATENATED MODULE: ./public/app/features/canvas/registry.ts
+;
 
 
 
@@ -1006,31 +978,31 @@ const windTurbine_getStyles = theme => ({
 
 
 
-const DEFAULT_CANVAS_ELEMENT_CONFIG = Object.assign({}, icon/* iconItem.getNewOptions */.e.getNewOptions(), {
-  type: icon/* iconItem.id */.e.id,
+const DEFAULT_CANVAS_ELEMENT_CONFIG = Object.assign({}, icon.e.getNewOptions(), {
+  type: icon.e.id,
   name: `Element 1`
 });
-const canvasElementRegistry = new src.Registry(() => [icon/* iconItem */.e, // default for now
+const canvasElementRegistry = new src.Registry(() => [icon.e, 
 textBoxItem, buttonItem, droneTopItem, droneFrontItem, droneSideItem, windTurbineItem]);
-;// CONCATENATED MODULE: ./public/app/features/canvas/index.ts
+;
 
 
 
 
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/canvas/runtime/element.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/canvas/runtime/element.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "f": () => (/* binding */ ElementState)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var app_features_canvas__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/canvas/index.ts");
-/* harmony import */ var app_features_canvas_elements_notFound__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/canvas/elements/notFound.tsx");
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/canvas/types.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "f": () => ( ElementState)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var app_features_canvas__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./public/app/features/canvas/index.ts");
+ var app_features_canvas_elements_notFound__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./public/app/features/canvas/elements/notFound.tsx");
+ var _types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./public/app/features/canvas/types.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1040,10 +1012,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 let counter = 0;
 class ElementState {
-  // UID necessary for moveable to work (for now)
-  // Filled in by ref
-  // Calculated
-  // depends on the type
   constructor(item, options, parent) {
     var _options$constraint, _options$placement;
 
@@ -1084,10 +1052,10 @@ class ElementState {
         vertical,
         horizontal
       } = constraint !== null && constraint !== void 0 ? constraint : {};
-      const top = vertical === _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.Top */ .fJ.Top || vertical === _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.TopBottom */ .fJ.TopBottom;
-      const bottom = vertical === _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.Bottom */ .fJ.Bottom || vertical === _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.TopBottom */ .fJ.TopBottom;
-      const left = horizontal === _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.Left */ ._5.Left || horizontal === _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.LeftRight */ ._5.LeftRight;
-      const right = horizontal === _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.Right */ ._5.Right || horizontal === _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.LeftRight */ ._5.LeftRight;
+      const top = vertical === _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.Top || vertical === _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.TopBottom;
+      const bottom = vertical === _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.Bottom || vertical === _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.TopBottom;
+      const left = horizontal === _types__WEBPACK_IMPORTED_MODULE_3__ ._5.Left || horizontal === _types__WEBPACK_IMPORTED_MODULE_3__ ._5.LeftRight;
+      const right = horizontal === _types__WEBPACK_IMPORTED_MODULE_3__ ._5.Right || horizontal === _types__WEBPACK_IMPORTED_MODULE_3__ ._5.LeftRight;
       const style = event.target.style;
       const deltaX = event.delta[0];
       const deltaY = event.delta[1];
@@ -1095,7 +1063,6 @@ class ElementState {
       const dirTB = event.direction[1];
 
       if (dirLR === 1) {
-        // RIGHT
         if (right) {
           placement.right -= deltaX;
           style.right = `${placement.right}px`;
@@ -1109,7 +1076,6 @@ class ElementState {
           style.width = `${placement.width}px`;
         }
       } else if (dirLR === -1) {
-        // LEFT
         if (left) {
           placement.left -= deltaX;
           placement.width = event.width;
@@ -1122,7 +1088,6 @@ class ElementState {
       }
 
       if (dirTB === -1) {
-        // TOP
         if (top) {
           placement.top -= deltaY;
           placement.height = event.height;
@@ -1133,7 +1098,6 @@ class ElementState {
           style.height = `${placement.height}px`;
         }
       } else if (dirTB === 1) {
-        // BOTTOM
         if (bottom) {
           placement.bottom -= deltaY;
           placement.height = event.height;
@@ -1159,8 +1123,8 @@ class ElementState {
     }
 
     options.constraint = (_options$constraint = options.constraint) !== null && _options$constraint !== void 0 ? _options$constraint : {
-      vertical: _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.Top */ .fJ.Top,
-      horizontal: _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.Left */ ._5.Left
+      vertical: _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.Top,
+      horizontal: _types__WEBPACK_IMPORTED_MODULE_3__ ._5.Left
     };
     options.placement = (_options$placement = options.placement) !== null && _options$placement !== void 0 ? _options$placement : {
       width: 100,
@@ -1195,14 +1159,12 @@ class ElementState {
   getName() {
     return this.options.name;
   }
-  /** Use the configured options to update CSS style properties directly on the wrapper div **/
 
 
   applyLayoutStylesToDiv() {
     var _this$options$placeme, _placement$top, _placement$height, _placement$bottom, _placement$height2, _placement$top2, _placement$bottom2, _placement$top3, _placement$height3, _placement$top4, _placement$bottom3, _placement$left, _placement$width, _placement$right, _placement$width2, _placement$left2, _placement$right2, _placement$left3, _placement$width3, _placement$left4, _placement$right3;
 
     if (this.isRoot()) {
-      // Root supersedes layout engine and is always 100% width + height of panel
       return;
     }
 
@@ -1220,7 +1182,7 @@ class ElementState {
     const translate = ['0px', '0px'];
 
     switch (vertical) {
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.Top */ .fJ.Top:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.Top:
         placement.top = (_placement$top = placement.top) !== null && _placement$top !== void 0 ? _placement$top : 0;
         placement.height = (_placement$height = placement.height) !== null && _placement$height !== void 0 ? _placement$height : 100;
         style.top = `${placement.top}px`;
@@ -1228,7 +1190,7 @@ class ElementState {
         delete placement.bottom;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.Bottom */ .fJ.Bottom:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.Bottom:
         placement.bottom = (_placement$bottom = placement.bottom) !== null && _placement$bottom !== void 0 ? _placement$bottom : 0;
         placement.height = (_placement$height2 = placement.height) !== null && _placement$height2 !== void 0 ? _placement$height2 : 100;
         style.bottom = `${placement.bottom}px`;
@@ -1236,7 +1198,7 @@ class ElementState {
         delete placement.top;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.TopBottom */ .fJ.TopBottom:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.TopBottom:
         placement.top = (_placement$top2 = placement.top) !== null && _placement$top2 !== void 0 ? _placement$top2 : 0;
         placement.bottom = (_placement$bottom2 = placement.bottom) !== null && _placement$bottom2 !== void 0 ? _placement$bottom2 : 0;
         style.top = `${placement.top}px`;
@@ -1244,7 +1206,7 @@ class ElementState {
         delete placement.height;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.Center */ .fJ.Center:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.Center:
         placement.top = (_placement$top3 = placement.top) !== null && _placement$top3 !== void 0 ? _placement$top3 : 0;
         placement.height = (_placement$height3 = placement.height) !== null && _placement$height3 !== void 0 ? _placement$height3 : 100;
         translate[1] = '-50%';
@@ -1253,7 +1215,7 @@ class ElementState {
         delete placement.bottom;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.Scale */ .fJ.Scale:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.Scale:
         placement.top = (_placement$top4 = placement.top) !== null && _placement$top4 !== void 0 ? _placement$top4 : 0;
         placement.bottom = (_placement$bottom3 = placement.bottom) !== null && _placement$bottom3 !== void 0 ? _placement$bottom3 : 0;
         style.top = `${placement.top}%`;
@@ -1263,7 +1225,7 @@ class ElementState {
     }
 
     switch (horizontal) {
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.Left */ ._5.Left:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ ._5.Left:
         placement.left = (_placement$left = placement.left) !== null && _placement$left !== void 0 ? _placement$left : 0;
         placement.width = (_placement$width = placement.width) !== null && _placement$width !== void 0 ? _placement$width : 100;
         style.left = `${placement.left}px`;
@@ -1271,7 +1233,7 @@ class ElementState {
         delete placement.right;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.Right */ ._5.Right:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ ._5.Right:
         placement.right = (_placement$right = placement.right) !== null && _placement$right !== void 0 ? _placement$right : 0;
         placement.width = (_placement$width2 = placement.width) !== null && _placement$width2 !== void 0 ? _placement$width2 : 100;
         style.right = `${placement.right}px`;
@@ -1279,7 +1241,7 @@ class ElementState {
         delete placement.left;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.LeftRight */ ._5.LeftRight:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ ._5.LeftRight:
         placement.left = (_placement$left2 = placement.left) !== null && _placement$left2 !== void 0 ? _placement$left2 : 0;
         placement.right = (_placement$right2 = placement.right) !== null && _placement$right2 !== void 0 ? _placement$right2 : 0;
         style.left = `${placement.left}px`;
@@ -1287,7 +1249,7 @@ class ElementState {
         delete placement.width;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.Center */ ._5.Center:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ ._5.Center:
         placement.left = (_placement$left3 = placement.left) !== null && _placement$left3 !== void 0 ? _placement$left3 : 0;
         placement.width = (_placement$width3 = placement.width) !== null && _placement$width3 !== void 0 ? _placement$width3 : 100;
         translate[0] = '-50%';
@@ -1296,7 +1258,7 @@ class ElementState {
         delete placement.right;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.Scale */ ._5.Scale:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ ._5.Scale:
         placement.left = (_placement$left4 = placement.left) !== null && _placement$left4 !== void 0 ? _placement$left4 : 0;
         placement.right = (_placement$right3 = placement.right) !== null && _placement$right3 !== void 0 ? _placement$right3 : 0;
         style.left = `${placement.left}%`;
@@ -1350,22 +1312,22 @@ class ElementState {
     const height = (_elementContainer$hei = (_elementContainer2 = elementContainer) === null || _elementContainer2 === void 0 ? void 0 : _elementContainer2.height) !== null && _elementContainer$hei !== void 0 ? _elementContainer$hei : 100;
 
     switch (vertical) {
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.Top */ .fJ.Top:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.Top:
         placement.top = relativeTop;
         placement.height = height;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.Bottom */ .fJ.Bottom:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.Bottom:
         placement.bottom = relativeBottom;
         placement.height = height;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.TopBottom */ .fJ.TopBottom:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.TopBottom:
         placement.top = relativeTop;
         placement.bottom = relativeBottom;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.Center */ .fJ.Center:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.Center:
         const elementCenter = elementContainer ? relativeTop + height / 2 : 0;
         const parentCenter = parentContainer ? parentContainer.height / 2 : 0;
         const distanceFromCenter = parentCenter - elementCenter;
@@ -1373,29 +1335,29 @@ class ElementState {
         placement.height = height;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .VerticalConstraint.Scale */ .fJ.Scale:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ .fJ.Scale:
         placement.top = relativeTop / ((_parentContainer$heig = (_parentContainer = parentContainer) === null || _parentContainer === void 0 ? void 0 : _parentContainer.height) !== null && _parentContainer$heig !== void 0 ? _parentContainer$heig : height) * 100;
         placement.bottom = relativeBottom / ((_parentContainer$heig2 = (_parentContainer2 = parentContainer) === null || _parentContainer2 === void 0 ? void 0 : _parentContainer2.height) !== null && _parentContainer$heig2 !== void 0 ? _parentContainer$heig2 : height) * 100;
         break;
     }
 
     switch (horizontal) {
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.Left */ ._5.Left:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ ._5.Left:
         placement.left = relativeLeft;
         placement.width = width;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.Right */ ._5.Right:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ ._5.Right:
         placement.right = relativeRight;
         placement.width = width;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.LeftRight */ ._5.LeftRight:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ ._5.LeftRight:
         placement.left = relativeLeft;
         placement.right = relativeRight;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.Center */ ._5.Center:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ ._5.Center:
         const elementCenter = elementContainer ? relativeLeft + width / 2 : 0;
         const parentCenter = parentContainer ? parentContainer.width / 2 : 0;
         const distanceFromCenter = parentCenter - elementCenter;
@@ -1403,7 +1365,7 @@ class ElementState {
         placement.width = width;
         break;
 
-      case _types__WEBPACK_IMPORTED_MODULE_3__/* .HorizontalConstraint.Scale */ ._5.Scale:
+      case _types__WEBPACK_IMPORTED_MODULE_3__ ._5.Scale:
         placement.left = relativeLeft / ((_parentContainer$widt = (_parentContainer3 = parentContainer) === null || _parentContainer3 === void 0 ? void 0 : _parentContainer3.width) !== null && _parentContainer$widt !== void 0 ? _parentContainer$widt : width) * 100;
         placement.right = relativeRight / ((_parentContainer$widt2 = (_parentContainer4 = parentContainer) === null || _parentContainer4 === void 0 ? void 0 : _parentContainer4.width) !== null && _parentContainer$widt2 !== void 0 ? _parentContainer$widt2 : width) * 100;
         break;
@@ -1419,7 +1381,7 @@ class ElementState {
 
     if (this.item.prepareData) {
       this.data = this.item.prepareData(ctx, this.options.config);
-      this.revId++; // rerender
+      this.revId++; 
     }
 
     const {
@@ -1443,26 +1405,26 @@ class ElementState {
           if (v) {
             css.backgroundImage = `url("${v}")`;
 
-            switch ((_background$size = background.size) !== null && _background$size !== void 0 ? _background$size : app_features_canvas__WEBPACK_IMPORTED_MODULE_1__/* .BackgroundImageSize.Contain */ .Uy.Contain) {
-              case app_features_canvas__WEBPACK_IMPORTED_MODULE_1__/* .BackgroundImageSize.Contain */ .Uy.Contain:
+            switch ((_background$size = background.size) !== null && _background$size !== void 0 ? _background$size : app_features_canvas__WEBPACK_IMPORTED_MODULE_1__ .Uy.Contain) {
+              case app_features_canvas__WEBPACK_IMPORTED_MODULE_1__ .Uy.Contain:
                 css.backgroundSize = 'contain';
                 css.backgroundRepeat = 'no-repeat';
                 break;
 
-              case app_features_canvas__WEBPACK_IMPORTED_MODULE_1__/* .BackgroundImageSize.Cover */ .Uy.Cover:
+              case app_features_canvas__WEBPACK_IMPORTED_MODULE_1__ .Uy.Cover:
                 css.backgroundSize = 'cover';
                 css.backgroundRepeat = 'no-repeat';
                 break;
 
-              case app_features_canvas__WEBPACK_IMPORTED_MODULE_1__/* .BackgroundImageSize.Original */ .Uy.Original:
+              case app_features_canvas__WEBPACK_IMPORTED_MODULE_1__ .Uy.Original:
                 css.backgroundRepeat = 'no-repeat';
                 break;
 
-              case app_features_canvas__WEBPACK_IMPORTED_MODULE_1__/* .BackgroundImageSize.Tile */ .Uy.Tile:
+              case app_features_canvas__WEBPACK_IMPORTED_MODULE_1__ .Uy.Tile:
                 css.backgroundRepeat = 'repeat';
                 break;
 
-              case app_features_canvas__WEBPACK_IMPORTED_MODULE_1__/* .BackgroundImageSize.Fill */ .Uy.Fill:
+              case app_features_canvas__WEBPACK_IMPORTED_MODULE_1__ .Uy.Fill:
                 css.backgroundSize = '100% 100%';
                 break;
             }
@@ -1475,7 +1437,7 @@ class ElementState {
       const color = ctx.getColor(border.color);
       css.borderWidth = border.width;
       css.borderStyle = 'solid';
-      css.borderColor = color.value(); // Move the image to inside the border
+      css.borderColor = color.value(); 
 
       if (css.backgroundImage) {
         css.backgroundOrigin = 'padding-box';
@@ -1489,7 +1451,6 @@ class ElementState {
   isRoot() {
     return false;
   }
-  /** Recursively visit all nodes */
 
 
   visit(visitor) {
@@ -1500,8 +1461,8 @@ class ElementState {
     if (this.item.id !== options.type) {
       var _canvasElementRegistr;
 
-      this.item = (_canvasElementRegistr = app_features_canvas__WEBPACK_IMPORTED_MODULE_1__/* .canvasElementRegistry.getIfExists */ .Jk.getIfExists(options.type)) !== null && _canvasElementRegistr !== void 0 ? _canvasElementRegistr : app_features_canvas_elements_notFound__WEBPACK_IMPORTED_MODULE_2__/* .notFoundItem */ .C;
-    } // rename handling
+      this.item = (_canvasElementRegistr = app_features_canvas__WEBPACK_IMPORTED_MODULE_1__ .Jk.getIfExists(options.type)) !== null && _canvasElementRegistr !== void 0 ? _canvasElementRegistr : app_features_canvas_elements_notFound__WEBPACK_IMPORTED_MODULE_2__ .C;
+    } 
 
 
     const oldName = this.options.name;
@@ -1536,9 +1497,9 @@ class ElementState {
     const {
       item
     } = this;
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       ref: this.initElement,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(item.display, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(item.display, {
         config: this.options.config,
         data: this.data
       }, `${this.UID}/${this.revId}`)
@@ -1547,16 +1508,16 @@ class ElementState {
 
 }
 
-/***/ }),
+ }),
 
-/***/ "./public/app/features/canvas/types.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/features/canvas/types.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Uy": () => (/* binding */ BackgroundImageSize),
-/* harmony export */   "_5": () => (/* binding */ HorizontalConstraint),
-/* harmony export */   "fJ": () => (/* binding */ VerticalConstraint)
-/* harmony export */ });
+ __webpack_require__.d(__webpack_exports__, {
+   "Uy": () => ( BackgroundImageSize),
+   "_5": () => ( HorizontalConstraint),
+   "fJ": () => ( VerticalConstraint)
+ });
 let HorizontalConstraint;
 
 (function (HorizontalConstraint) {
@@ -1587,21 +1548,21 @@ let BackgroundImageSize;
   BackgroundImageSize["Tile"] = "tile";
 })(BackgroundImageSize || (BackgroundImageSize = {}));
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/panel/canvas/editor/APIEditor.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/panel/canvas/editor/APIEditor.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "U": () => (/* binding */ APIEditor),
-/* harmony export */   "t": () => (/* binding */ callApi)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-/* harmony import */ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
-/* harmony import */ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
-/* harmony import */ var app_core_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/core.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
+ __webpack_require__.d(__webpack_exports__, {
+   "U": () => ( APIEditor),
+   "t": () => ( callApi)
+ });
+ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
+ var _grafana_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./packages/grafana-data/src/index.ts");
+ var _grafana_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./packages/grafana-runtime/src/index.ts");
+ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./packages/grafana-ui/src/index.ts");
+ var app_core_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./public/app/core/core.ts");
+ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
 var _JSONFormatter, _br;
 
 
@@ -1628,13 +1589,13 @@ const callApi = function (api) {
     }).subscribe({
       error: error => {
         if (isTest) {
-          app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .appEvents.emit */ .h$.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_1__.AppEvents.alertError, ['Error has occurred: ', JSON.stringify(error)]);
+          app_core_core__WEBPACK_IMPORTED_MODULE_4__ .h$.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_1__.AppEvents.alertError, ['Error has occurred: ', JSON.stringify(error)]);
           console.error(error);
         }
       },
       complete: () => {
         if (isTest) {
-          app_core_core__WEBPACK_IMPORTED_MODULE_4__/* .appEvents.emit */ .h$.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_1__.AppEvents.alertSuccess, ['Test successful']);
+          app_core_core__WEBPACK_IMPORTED_MODULE_4__ .h$.emit(_grafana_data__WEBPACK_IMPORTED_MODULE_1__.AppEvents.alertSuccess, ['Test successful']);
         }
       }
     });
@@ -1663,7 +1624,7 @@ const APIEditor = props => {
   const renderJSON = data => {
     try {
       const json = JSON.parse(data);
-      return _JSONFormatter || (_JSONFormatter = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.JSONFormatter, {
+      return _JSONFormatter || (_JSONFormatter = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.JSONFormatter, {
         json: json
       }));
     } catch (error) {
@@ -1673,7 +1634,7 @@ const APIEditor = props => {
 
   const renderTestAPIButton = api => {
     if (api && api.endpoint) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Button, {
+      return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.Button, {
         onClick: () => callApi(api, true),
         title: 'Test API',
         children: "Test API"
@@ -1683,37 +1644,37 @@ const APIEditor = props => {
     return;
   };
 
-  return _grafana_runtime__WEBPACK_IMPORTED_MODULE_2__.config.disableSanitizeHtml ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineFieldRow, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineField, {
+  return _grafana_runtime__WEBPACK_IMPORTED_MODULE_2__.config.disableSanitizeHtml ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineFieldRow, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineField, {
         label: 'Endpoint',
         labelWidth: labelWidth,
         grow: true,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.StringValueEditor, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.StringValueEditor, {
           context: context,
           value: value === null || value === void 0 ? void 0 : value.endpoint,
           onChange: onEndpointChange,
           item: dummyStringSettings
         })
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineFieldRow, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineField, {
+    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineFieldRow, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.InlineField, {
         label: 'Data',
         labelWidth: labelWidth,
         grow: true,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.StringValueEditor, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__.StringValueEditor, {
           context: context,
           value: (_value$data = value === null || value === void 0 ? void 0 : value.data) !== null && _value$data !== void 0 ? _value$data : '{}',
           onChange: onDataChange,
           item: dummyStringSettings
         })
       })
-    }), renderTestAPIButton(value), _br || (_br = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("br", {})), renderJSON((_value$data2 = value === null || value === void 0 ? void 0 : value.data) !== null && _value$data2 !== void 0 ? _value$data2 : '{}')]
-  }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+    }), renderTestAPIButton(value), _br || (_br = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("br", {})), renderJSON((_value$data2 = value === null || value === void 0 ? void 0 : value.data) !== null && _value$data2 !== void 0 ? _value$data2 : '{}')]
+  }) : (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
     children: "Must enable disableSanitizeHtml feature flag to access"
   });
 };
 
-/***/ })
+ })
 
 }]);

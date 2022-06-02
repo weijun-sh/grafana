@@ -1,18 +1,16 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[2462],{
 
-/***/ "./packages/grafana-ui/src/components/Monaco/ReactMonacoEditor.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./packages/grafana-ui/src/components/Monaco/ReactMonacoEditor.tsx":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "ReactMonacoEditor": () => (/* binding */ ReactMonacoEditor)
+  "ReactMonacoEditor": () => ( ReactMonacoEditor)
 });
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-loader-virtual-3ea47d31f8/0/cache/@monaco-editor-loader-npm-1.2.0-dfa48eef64-b483d8d748.zip/node_modules/@monaco-editor/loader/lib/es/_virtual/_rollupPluginBabelHelpers.js
+;
 function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
@@ -120,7 +118,7 @@ function _nonIterableRest() {
 
 
 
-;// CONCATENATED MODULE: ./.yarn/cache/state-local-npm-1.0.7-9005e49ea6-d1afcf1429.zip/node_modules/state-local/lib/es/state-local.js
+;
 function state_local_defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
@@ -313,18 +311,18 @@ var index = {
   create: create
 };
 
-/* harmony default export */ const state_local = (index);
+ const state_local = (index);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-loader-virtual-3ea47d31f8/0/cache/@monaco-editor-loader-npm-1.2.0-dfa48eef64-b483d8d748.zip/node_modules/@monaco-editor/loader/lib/es/config/index.js
+;
 var config = {
   paths: {
     vs: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.28.1/min/vs'
   }
 };
 
-/* harmony default export */ const es_config = (config);
+ const es_config = (config);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-loader-virtual-3ea47d31f8/0/cache/@monaco-editor-loader-npm-1.2.0-dfa48eef64-b483d8d748.zip/node_modules/@monaco-editor/loader/lib/es/utils/curry.js
+;
 function curry_curry(fn) {
   return function curried() {
     var _this = this;
@@ -343,24 +341,19 @@ function curry_curry(fn) {
   };
 }
 
-/* harmony default export */ const utils_curry = (curry_curry);
+ const utils_curry = (curry_curry);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-loader-virtual-3ea47d31f8/0/cache/@monaco-editor-loader-npm-1.2.0-dfa48eef64-b483d8d748.zip/node_modules/@monaco-editor/loader/lib/es/utils/isObject.js
+;
 function isObject_isObject(value) {
   return {}.toString.call(value).includes('Object');
 }
 
-/* harmony default export */ const utils_isObject = (isObject_isObject);
+ const utils_isObject = (isObject_isObject);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-loader-virtual-3ea47d31f8/0/cache/@monaco-editor-loader-npm-1.2.0-dfa48eef64-b483d8d748.zip/node_modules/@monaco-editor/loader/lib/es/validators/index.js
+;
 
 
 
-/**
- * validates the configuration object and informs about deprecation
- * @param {Object} config - the configuration object 
- * @return {Object} config - the validated configuration object
- */
 
 function validateConfig(config) {
   if (!config) validators_errorHandler('configIsRequired');
@@ -377,9 +370,6 @@ function validateConfig(config) {
 
   return config;
 }
-/**
- * logs deprecation message
- */
 
 
 function informAboutDeprecation() {
@@ -401,10 +391,10 @@ var validators_validators = {
   config: validateConfig
 };
 
-/* harmony default export */ const es_validators = (validators_validators);
+ const es_validators = (validators_validators);
 
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-loader-virtual-3ea47d31f8/0/cache/@monaco-editor-loader-npm-1.2.0-dfa48eef64-b483d8d748.zip/node_modules/@monaco-editor/loader/lib/es/utils/compose.js
+;
 var compose_compose = function compose() {
   for (var _len = arguments.length, fns = new Array(_len), _key = 0; _key < _len; _key++) {
     fns[_key] = arguments[_key];
@@ -417,9 +407,9 @@ var compose_compose = function compose() {
   };
 };
 
-/* harmony default export */ const utils_compose = (compose_compose);
+ const utils_compose = (compose_compose);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-loader-virtual-3ea47d31f8/0/cache/@monaco-editor-loader-npm-1.2.0-dfa48eef64-b483d8d748.zip/node_modules/@monaco-editor/loader/lib/es/utils/deepMerge.js
+;
 
 
 function merge(target, source) {
@@ -433,10 +423,9 @@ function merge(target, source) {
   return _objectSpread2(_objectSpread2({}, target), source);
 }
 
-/* harmony default export */ const deepMerge = (merge);
+ const deepMerge = (merge);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-loader-virtual-3ea47d31f8/0/cache/@monaco-editor-loader-npm-1.2.0-dfa48eef64-b483d8d748.zip/node_modules/@monaco-editor/loader/lib/es/utils/makeCancelable.js
-// The source (has been changed) is https://github.com/facebook/react/issues/5465#issuecomment-157888325
+;
 var CANCELATION_MESSAGE = {
   type: 'cancelation',
   msg: 'operation is manually canceled'
@@ -455,19 +444,18 @@ function makeCancelable(promise) {
   }, wrappedPromise;
 }
 
-/* harmony default export */ const utils_makeCancelable = (makeCancelable);
+ const utils_makeCancelable = (makeCancelable);
 
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-loader-virtual-3ea47d31f8/0/cache/@monaco-editor-loader-npm-1.2.0-dfa48eef64-b483d8d748.zip/node_modules/@monaco-editor/loader/lib/es/loader/index.js
-
-
-
+;
 
 
 
 
 
-/** the local state of the module */
+
+
+
 
 var _state$create = state_local.create({
   config: es_config,
@@ -479,10 +467,6 @@ var _state$create = state_local.create({
     _state$create2 = _slicedToArray(_state$create, 2),
     getState = _state$create2[0],
     setState = _state$create2[1];
-/**
- * set the loader configuration
- * @param {Object} config - the configuration object
- */
 
 
 function loader_config(config) {
@@ -492,10 +476,6 @@ function loader_config(config) {
     };
   });
 }
-/**
- * handles the initialization of the monaco-editor
- * @return {Promise} - returns an instance of monaco (with a cancelable promise)
- */
 
 
 function init() {
@@ -520,31 +500,17 @@ function init() {
 
   return utils_makeCancelable(wrapperPromise);
 }
-/**
- * injects provided scripts into the document.body
- * @param {Object} script - an HTML script element
- * @return {Object} - the injected HTML script element
- */
 
 
 function injectScripts(script) {
   return document.body.appendChild(script);
 }
-/**
- * creates an HTML script element with/without provided src
- * @param {string} [src] - the source path of the script
- * @return {Object} - the created HTML script element
- */
 
 
 function createScript(src) {
   var script = document.createElement('script');
   return src && (script.src = src), script;
 }
-/**
- * creates an HTML script element with the monaco loader src
- * @return {Object} - the created HTML script element
- */
 
 
 function getMonacoLoaderScript(configureLoader) {
@@ -565,9 +531,6 @@ function getMonacoLoaderScript(configureLoader) {
   loaderScript.onerror = state.reject;
   return loaderScript;
 }
-/**
- * configures the monaco loader
- */
 
 
 function configureLoader() {
@@ -592,9 +555,6 @@ function configureLoader() {
     state.reject(error);
   });
 }
-/**
- * store monaco instance in local state
- */
 
 
 function storeMonacoInstance(monaco) {
@@ -604,11 +564,6 @@ function storeMonacoInstance(monaco) {
     });
   }
 }
-/**
- * internal helper function
- * extracts stored monaco instance
- * @return {Object|null} - the monaco instance
- */
 
 
 function __getMonacoInstance() {
@@ -630,18 +585,16 @@ var loader = {
   __getMonacoInstance: __getMonacoInstance
 };
 
-/* harmony default export */ const es_loader = (loader);
+ const es_loader = (loader);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-loader-virtual-3ea47d31f8/0/cache/@monaco-editor-loader-npm-1.2.0-dfa48eef64-b483d8d748.zip/node_modules/@monaco-editor/loader/lib/es/index.js
+;
 
 
 
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./.yarn/cache/prop-types-npm-15.7.2-d7a04f2274-5eef82fdda.zip/node_modules/prop-types/index.js
 var prop_types = __webpack_require__("./.yarn/cache/prop-types-npm-15.7.2-d7a04f2274-5eef82fdda.zip/node_modules/prop-types/index.js");
-var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/_virtual/_rollupPluginBabelHelpers.js
+var prop_types_default = __webpack_require__.n(prop_types);
+;
 function _extends() {
   _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -662,7 +615,7 @@ function _extends() {
 
 
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/Loading/Loading.js
+;
 
 
 const loadingStyles = {
@@ -676,14 +629,14 @@ const loadingStyles = {
 function Loading({
   content
 }) {
-  return /*#__PURE__*/react.createElement("div", {
+  return react.createElement("div", {
     style: loadingStyles
   }, content);
 }
 
-/* harmony default export */ const Loading_Loading = (Loading);
+ const Loading_Loading = (Loading);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/MonacoContainer/styles.js
+;
 const styles = {
   wrapper: {
     display: 'flex',
@@ -698,16 +651,15 @@ const styles = {
   }
 };
 
-/* harmony default export */ const MonacoContainer_styles = (styles);
+ const MonacoContainer_styles = (styles);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/MonacoContainer/MonacoContainer.js
-
-
+;
 
 
 
 
-// one of the reasons why we use a separate prop for passing ref instead of using forwardref
+
+
 
 function MonacoContainer({
   width,
@@ -718,14 +670,14 @@ function MonacoContainer({
   className,
   wrapperProps
 }) {
-  return /*#__PURE__*/react.createElement("section", _extends({
+  return react.createElement("section", _extends({
     style: { ...MonacoContainer_styles.wrapper,
       width,
       height
     }
-  }, wrapperProps), !isEditorReady && /*#__PURE__*/react.createElement(Loading_Loading, {
+  }, wrapperProps), !isEditorReady && react.createElement(Loading_Loading, {
     content: loading
-  }), /*#__PURE__*/react.createElement("div", {
+  }), react.createElement("div", {
     ref: _ref,
     style: { ...MonacoContainer_styles.fullWidth,
       ...(!isEditorReady && MonacoContainer_styles.hide)
@@ -743,26 +695,26 @@ MonacoContainer.propTypes = {
   wrapperProps: (prop_types_default()).object
 };
 
-/* harmony default export */ const MonacoContainer_MonacoContainer = (MonacoContainer);
+ const MonacoContainer_MonacoContainer = (MonacoContainer);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/MonacoContainer/index.js
+;
 
 
 
-var es_MonacoContainer_MonacoContainer = /*#__PURE__*/(0,react.memo)(MonacoContainer_MonacoContainer);
+var es_MonacoContainer_MonacoContainer = (0,react.memo)(MonacoContainer_MonacoContainer);
 
-/* harmony default export */ const es_MonacoContainer = (es_MonacoContainer_MonacoContainer);
+ const es_MonacoContainer = (es_MonacoContainer_MonacoContainer);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/hooks/useMount/index.js
+;
 
 
 function useMount(effect) {
   (0,react.useEffect)(effect, []);
 }
 
-/* harmony default export */ const hooks_useMount = (useMount);
+ const hooks_useMount = (useMount);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/hooks/useUpdate/index.js
+;
 
 
 function useUpdate(effect, deps, applyChanges = true) {
@@ -772,9 +724,9 @@ function useUpdate(effect, deps, applyChanges = true) {
   } : effect, deps);
 }
 
-/* harmony default export */ const hooks_useUpdate = (useUpdate);
+ const hooks_useUpdate = (useUpdate);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/utils/index.js
+;
 function noop() {}
 
 function getOrCreateModel(monaco, value, language, path) {
@@ -799,7 +751,7 @@ function isUndefined(input) {
 
 
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/DiffEditor/DiffEditor.js
+;
 
 
 
@@ -815,7 +767,6 @@ function DiffEditor({
   originalLanguage,
   modifiedLanguage,
 
-  /* === */
   originalModelPath,
   modifiedModelPath,
   keepCurrentOriginalModel,
@@ -824,13 +775,11 @@ function DiffEditor({
   loading,
   options,
 
-  /* === */
   height,
   width,
   className,
   wrapperProps,
 
-  /* === */
   beforeMount,
   onMount
 }) {
@@ -924,7 +873,7 @@ function DiffEditor({
     editorRef.current.dispose();
   }
 
-  return /*#__PURE__*/react.createElement(es_MonacoContainer, {
+  return react.createElement(es_MonacoContainer, {
     width: width,
     height: height,
     isEditorReady: isEditorReady,
@@ -942,7 +891,6 @@ DiffEditor.propTypes = {
   originalLanguage: (prop_types_default()).string,
   modifiedLanguage: (prop_types_default()).string,
 
-  /* === */
   originalModelPath: (prop_types_default()).string,
   modifiedModelPath: (prop_types_default()).string,
   keepCurrentOriginalModel: (prop_types_default()).bool,
@@ -951,13 +899,11 @@ DiffEditor.propTypes = {
   loading: prop_types_default().oneOfType([(prop_types_default()).element, (prop_types_default()).string]),
   options: (prop_types_default()).object,
 
-  /* === */
   width: prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).string]),
   height: prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).string]),
   className: (prop_types_default()).string,
   wrapperProps: (prop_types_default()).object,
 
-  /* === */
   beforeMount: (prop_types_default()).func,
   onMount: (prop_types_default()).func
 };
@@ -968,27 +914,25 @@ DiffEditor.defaultProps = {
   keepCurrentOriginalModel: false,
   keepCurrentModifiedModel: false,
 
-  /* === */
   width: '100%',
   height: '100%',
   wrapperProps: {},
 
-  /* === */
   beforeMount: noop,
   onMount: noop
 };
 
-/* harmony default export */ const DiffEditor_DiffEditor = (DiffEditor);
+ const DiffEditor_DiffEditor = (DiffEditor);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/DiffEditor/index.js
+;
 
 
 
-var DiffEditor_index = /*#__PURE__*/(0,react.memo)(DiffEditor_DiffEditor);
+var DiffEditor_index = (0,react.memo)(DiffEditor_DiffEditor);
 
-/* harmony default export */ const es_DiffEditor = ((/* unused pure expression or super */ null && (DiffEditor_index)));
+ const es_DiffEditor = (( null && (DiffEditor_index)));
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/hooks/useMonaco/index.js
+;
 
 
 
@@ -1014,9 +958,9 @@ function useMonaco() {
   return monaco;
 }
 
-/* harmony default export */ const hooks_useMonaco = (useMonaco);
+ const hooks_useMonaco = (useMonaco);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/hooks/usePrevious/index.js
+;
 
 
 function usePrevious(value) {
@@ -1027,9 +971,9 @@ function usePrevious(value) {
   return ref.current;
 }
 
-/* harmony default export */ const hooks_usePrevious = (usePrevious);
+ const hooks_usePrevious = (usePrevious);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/Editor/Editor.js
+;
 
 
 
@@ -1049,7 +993,6 @@ function Editor({
   language,
   path,
 
-  /* === */
   theme,
   line,
   loading,
@@ -1058,13 +1001,11 @@ function Editor({
   saveViewState,
   keepCurrentModel,
 
-  /* === */
   width,
   height,
   className,
   wrapperProps,
 
-  /* === */
   beforeMount,
   onMount,
   onChange,
@@ -1115,7 +1056,6 @@ function Editor({
     monacoRef.current.editor.setModelLanguage(editorRef.current.getModel(), language);
   }, [language], isEditorReady);
   hooks_useUpdate(() => {
-    // reason for undefined check: https://github.com/suren-atoyan/monaco-react/pull/188
     if (!isUndefined(line)) {
       editorRef.current.revealLine(line);
     }
@@ -1143,8 +1083,7 @@ function Editor({
   }, [isEditorReady]);
   (0,react.useEffect)(() => {
     !isMonacoMounting && !isEditorReady && createEditor();
-  }, [isMonacoMounting, isEditorReady, createEditor]); // subscription
-  // to avoid unnecessary updates (attach - dispose listener) in subscription
+  }, [isMonacoMounting, isEditorReady, createEditor]); 
 
   valueRef.current = value;
   (0,react.useEffect)(() => {
@@ -1160,7 +1099,7 @@ function Editor({
         }
       });
     }
-  }, [isEditorReady, onChange]); // onValidate
+  }, [isEditorReady, onChange]); 
 
   (0,react.useEffect)(() => {
     if (isEditorReady) {
@@ -1202,7 +1141,7 @@ function Editor({
     editorRef.current.dispose();
   }
 
-  return /*#__PURE__*/react.createElement(es_MonacoContainer, {
+  return react.createElement(es_MonacoContainer, {
     width: width,
     height: height,
     isEditorReady: isEditorReady,
@@ -1221,7 +1160,6 @@ Editor.propTypes = {
   language: (prop_types_default()).string,
   path: (prop_types_default()).string,
 
-  /* === */
   theme: (prop_types_default()).string,
   line: (prop_types_default()).number,
   loading: prop_types_default().oneOfType([(prop_types_default()).element, (prop_types_default()).string]),
@@ -1230,13 +1168,11 @@ Editor.propTypes = {
   saveViewState: (prop_types_default()).bool,
   keepCurrentModel: (prop_types_default()).bool,
 
-  /* === */
   width: prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).string]),
   height: prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).string]),
   className: (prop_types_default()).string,
   wrapperProps: (prop_types_default()).object,
 
-  /* === */
   beforeMount: (prop_types_default()).func,
   onMount: (prop_types_default()).func,
   onChange: (prop_types_default()).func,
@@ -1250,36 +1186,33 @@ Editor.defaultProps = {
   saveViewState: true,
   keepCurrentModel: false,
 
-  /* === */
   width: '100%',
   height: '100%',
   wrapperProps: {},
 
-  /* === */
   beforeMount: noop,
   onMount: noop,
   onValidate: noop
 };
 
-/* harmony default export */ const Editor_Editor = (Editor);
+ const Editor_Editor = (Editor);
 
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/Editor/index.js
-
-
-
-var Editor_index = /*#__PURE__*/(0,react.memo)(Editor_Editor);
-
-/* harmony default export */ const es_Editor = (Editor_index);
-
-;// CONCATENATED MODULE: ./.yarn/__virtual__/@monaco-editor-react-virtual-97b49dd0c6/0/cache/@monaco-editor-react-npm-4.3.1-c128c62d31-477349e640.zip/node_modules/@monaco-editor/react/lib/es/index.js
+;
 
 
 
+var Editor_index = (0,react.memo)(Editor_Editor);
+
+ const es_Editor = (Editor_index);
+
+;
 
 
-// EXTERNAL MODULE: ./packages/grafana-ui/src/themes/index.ts + 7 modules
+
+
+
 var themes = __webpack_require__("./packages/grafana-ui/src/themes/index.ts");
-;// CONCATENATED MODULE: ./packages/grafana-ui/src/components/Monaco/theme.ts
+;
 function getColors(theme) {
   if (theme === undefined) {
     return {};
@@ -1289,18 +1222,15 @@ function getColors(theme) {
       'minimap.background': theme.colors.background.secondary
     };
   }
-} // we support calling this without a theme, it will make sure the themes
-// are registered in monaco, even if the colors are not perfect.
+} 
 
 
 function defineThemes(monaco, theme) {
-  // color tokens are defined here https://github.com/microsoft/vscode/blob/main/src/vs/platform/theme/common/colorRegistry.ts#L174
   const colors = getColors(theme);
   monaco.editor.defineTheme('grafana-dark', {
     base: 'vs-dark',
     inherit: true,
     colors: colors,
-    // fallback syntax highlighting for languages that microsoft doesn't handle (ex cloudwatch's metric math)
     rules: [{
       token: 'predefined',
       foreground: theme === null || theme === void 0 ? void 0 : theme.visualization.getColorByName('purple')
@@ -1316,7 +1246,6 @@ function defineThemes(monaco, theme) {
     base: 'vs',
     inherit: true,
     colors: colors,
-    // fallback syntax highlighting for languages that microsoft doesn't handle (ex cloudwatch's metric math)
     rules: [{
       token: 'predefined',
       foreground: theme === null || theme === void 0 ? void 0 : theme.visualization.getColorByName('purple')
@@ -1329,9 +1258,8 @@ function defineThemes(monaco, theme) {
     }]
   });
 }
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./packages/grafana-ui/src/components/Monaco/ReactMonacoEditor.tsx
+;
 
 
 
@@ -1353,31 +1281,25 @@ function initMonaco() {
   });
   initalized = true;
   es_loader.init().then(monaco => {
-    // this call makes sure the themes exist.
-    // they will not have the correct colors,
-    // but we need them to exist since the beginning,
-    // because if we start a monaco instance with
-    // a theme that does not exist, it will not work well.
     defineThemes(monaco);
   });
 }
 
 const ReactMonacoEditor = props => {
-  const theme = (0,themes/* useTheme2 */.l4)();
+  const theme = (0,themes.l4)();
   const monaco = hooks_useMonaco();
   (0,react.useEffect)(() => {
-    // monaco can be null at the beginning, because it is loaded in asynchronously
     if (monaco !== null) {
       defineThemes(monaco, theme);
     }
   }, [monaco, theme]);
   initMonaco();
   const monacoTheme = theme.isDark ? 'grafana-dark' : 'grafana-light';
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(es_Editor, Object.assign({
+  return (0,jsx_runtime.jsx)(es_Editor, Object.assign({
     theme: monacoTheme
   }, props));
 };
 
-/***/ })
+ })
 
 }]);

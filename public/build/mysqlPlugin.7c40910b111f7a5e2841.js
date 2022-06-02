@@ -1,50 +1,36 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[4251],{
 
-/***/ "./public/app/plugins/datasource/mysql/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/mysql/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "AnnotationsQueryCtrl": () => (/* binding */ MysqlAnnotationsQueryCtrl),
-  "ConfigCtrl": () => (/* binding */ MysqlConfigCtrl),
-  "Datasource": () => (/* reexport */ MysqlDatasource),
-  "MysqlDatasource": () => (/* reexport */ MysqlDatasource),
-  "QueryCtrl": () => (/* reexport */ MysqlQueryCtrl),
-  "plugin": () => (/* binding */ module_plugin)
+  "AnnotationsQueryCtrl": () => ( MysqlAnnotationsQueryCtrl),
+  "ConfigCtrl": () => ( MysqlConfigCtrl),
+  "Datasource": () => ( MysqlDatasource),
+  "MysqlDatasource": () => ( MysqlDatasource),
+  "QueryCtrl": () => ( MysqlQueryCtrl),
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./public/app/features/datasources/utils/passwordHandlers.ts
 var passwordHandlers = __webpack_require__("./public/app/features/datasources/utils/passwordHandlers.ts");
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js
 var lastValueFrom = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/lastValueFrom.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js
 var catchError = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/catchError.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mapTo.js
 var mapTo = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/mapTo.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/utils/queryResponse.ts
 var queryResponse = __webpack_require__("./packages/grafana-runtime/src/utils/queryResponse.ts");
-// EXTERNAL MODULE: ./public/app/features/templating/template_srv.ts + 1 modules
 var template_srv = __webpack_require__("./public/app/features/templating/template_srv.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/mysql/mysql_query_model.ts
+;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 class MySQLQueryModel {
-  /** @ngInject */
   constructor(target, templateSrv, scopedVars) {
     _defineProperty(this, "target", void 0);
 
@@ -67,21 +53,19 @@ class MySQLQueryModel {
     target.select = target.select || [[{
       type: 'column',
       params: ['value']
-    }]]; // handle pre query gui panels gracefully
+    }]]; 
 
     if (!('rawQuery' in this.target)) {
       if ('rawSql' in target) {
-        // pre query gui panel
         target.rawQuery = true;
       } else {
-        // new panel
         target.rawQuery = false;
       }
-    } // give interpolateQueryStr access to this
+    } 
 
 
     this.interpolateQueryStr = this.interpolateQueryStr.bind(this);
-  } // remove identifier quoting from identifier to use in metadata queries
+  } 
 
 
   unquoteIdentifier(value) {
@@ -113,7 +97,6 @@ class MySQLQueryModel {
   }
 
   interpolateQueryStr(value, variable, defaultFormatFn) {
-    // if no multi or include all do not regexEscape
     if (!variable.multi && !variable.includeAll) {
       return this.escapeLiteral(value);
     }
@@ -127,7 +110,7 @@ class MySQLQueryModel {
   }
 
   render(interpolate) {
-    const target = this.target; // new query with no table set yet
+    const target = this.target; 
 
     if (!this.target.rawQuery && !('table' in this.target)) {
       return '';
@@ -289,9 +272,8 @@ class MySQLQueryModel {
 
 }
 MySQLQueryModel.$inject = ["target", "templateSrv", "scopedVars"];
-// EXTERNAL MODULE: ./public/app/features/variables/utils.ts
 var utils = __webpack_require__("./public/app/features/variables/utils.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/mysql/response_parser.ts
+;
 
 class ResponseParser {
   transformMetricFindResponse(raw) {
@@ -369,7 +351,7 @@ class ResponseParser {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/mysql/datasource.ts
+;
 function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -383,7 +365,7 @@ function datasource_defineProperty(obj, key, value) { if (key in obj) { Object.d
 
 class MysqlDatasource extends grafana_runtime_src.DataSourceWithBackend {
   constructor(instanceSettings) {
-    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv/* getTemplateSrv */.J)();
+    let templateSrv = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,template_srv.J)();
     super(instanceSettings);
     this.templateSrv = templateSrv;
 
@@ -471,7 +453,7 @@ class MysqlDatasource extends grafana_runtime_src.DataSourceWithBackend {
       rawSql: this.templateSrv.replace(options.annotation.rawQuery, options.scopedVars, this.interpolateVariable),
       format: 'table'
     };
-    return (0,lastValueFrom/* lastValueFrom */.n)((0,grafana_runtime_src.getBackendSrv)().fetch({
+    return (0,lastValueFrom.n)((0,grafana_runtime_src.getBackendSrv)().fetch({
       url: '/api/ds/query',
       method: 'POST',
       data: {
@@ -480,7 +462,7 @@ class MysqlDatasource extends grafana_runtime_src.DataSourceWithBackend {
         queries: [query]
       },
       requestId: options.annotation.name
-    }).pipe((0,map/* map */.U)(async res => await this.responseParser.transformAnnotationResponse(options, res.data))));
+    }).pipe((0,map.U)(async res => await this.responseParser.transformAnnotationResponse(options, res.data))));
   }
 
   metricFindQuery(query, optionalOptions) {
@@ -492,7 +474,7 @@ class MysqlDatasource extends grafana_runtime_src.DataSourceWithBackend {
       refId = optionalOptions.variable.name;
     }
 
-    const rawSql = this.templateSrv.replace(query, (0,utils/* getSearchFilterScopedVar */._6)({
+    const rawSql = this.templateSrv.replace(query, (0,utils._6)({
       query,
       wildcardChar: '%',
       options: optionalOptions
@@ -504,7 +486,7 @@ class MysqlDatasource extends grafana_runtime_src.DataSourceWithBackend {
       format: 'table'
     };
     const range = optionalOptions === null || optionalOptions === void 0 ? void 0 : optionalOptions.range;
-    return (0,lastValueFrom/* lastValueFrom */.n)((0,grafana_runtime_src.getBackendSrv)().fetch({
+    return (0,lastValueFrom.n)((0,grafana_runtime_src.getBackendSrv)().fetch({
       url: '/api/ds/query',
       method: 'POST',
       data: {
@@ -513,15 +495,15 @@ class MysqlDatasource extends grafana_runtime_src.DataSourceWithBackend {
         queries: [interpolatedQuery]
       },
       requestId: refId
-    }).pipe((0,map/* map */.U)(rsp => {
+    }).pipe((0,map.U)(rsp => {
       return this.responseParser.transformMetricFindResponse(rsp);
-    }), (0,catchError/* catchError */.K)(err => {
+    }), (0,catchError.K)(err => {
       return (0,of.of)([]);
     })));
   }
 
   testDatasource() {
-    return (0,lastValueFrom/* lastValueFrom */.n)((0,grafana_runtime_src.getBackendSrv)().fetch({
+    return (0,lastValueFrom.n)((0,grafana_runtime_src.getBackendSrv)().fetch({
       url: '/api/ds/query',
       method: 'POST',
       data: {
@@ -536,11 +518,11 @@ class MysqlDatasource extends grafana_runtime_src.DataSourceWithBackend {
           format: 'table'
         }]
       }
-    }).pipe((0,mapTo/* mapTo */.h)({
+    }).pipe((0,mapTo.h)({
       status: 'success',
       message: 'Database Connection OK'
-    }), (0,catchError/* catchError */.K)(err => {
-      return (0,of.of)((0,queryResponse/* toTestingStatus */.Gw)(err));
+    }), (0,catchError.K)(err => {
+      return (0,of.of)((0,queryResponse.Gw)(err));
     })));
   }
 
@@ -559,13 +541,10 @@ class MysqlDatasource extends grafana_runtime_src.DataSourceWithBackend {
   }
 
 }
-// EXTERNAL MODULE: ./public/app/core/app_events.ts
 var app_events = __webpack_require__("./public/app/core/app_events.ts");
-// EXTERNAL MODULE: ./public/app/plugins/sdk.ts
 var sdk = __webpack_require__("./public/app/plugins/sdk.ts");
-// EXTERNAL MODULE: ./public/app/types/events.ts
 var events = __webpack_require__("./public/app/types/events.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/mysql/meta_query.ts
+;
 class MysqlMetaQuery {
   constructor(target, queryModel) {
     this.target = target;
@@ -597,7 +576,7 @@ class MysqlMetaQuery {
           return ['=', '!=', '<', '<=', '>', '>=', 'IN', 'NOT IN'];
         }
     }
-  } // quote identifier as literal to use in metadata queries
+  } 
 
 
   quoteIdentAsLiteral(value) {
@@ -605,7 +584,6 @@ class MysqlMetaQuery {
   }
 
   findMetricTable() {
-    // query that returns first table found that has a timestamp(tz) column and a float column
     const query = `
   SELECT
     table_name as table_name,
@@ -652,7 +630,7 @@ class MysqlMetaQuery {
   }
 
   buildTableConstraint(table) {
-    let query = ''; // check for schema qualified table
+    let query = ''; 
 
     if (table.includes('.')) {
       const parts = table.split('.');
@@ -723,9 +701,8 @@ WHERE `;
   }
 
 }
-// EXTERNAL MODULE: ./public/app/angular/components/sql_part/sql_part.ts
 var sql_part = __webpack_require__("./public/app/angular/components/sql_part/sql_part.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/mysql/sql_part.ts
+;
 
 const index = [];
 
@@ -736,11 +713,11 @@ function createPart(part) {
     return null;
   }
 
-  return new sql_part/* SqlPart */.H(part, def);
+  return new sql_part.H(part, def);
 }
 
 function register(options) {
-  index[options.type] = new sql_part/* SqlPartDef */.m(options);
+  index[options.type] = new sql_part.m(options);
 }
 
 register({
@@ -813,10 +790,10 @@ register({
   }],
   defaultParams: ['$__interval', 'none']
 });
-/* harmony default export */ const mysql_sql_part = ({
+ const mysql_sql_part = ({
   create: createPart
 });
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/mysql/query_ctrl.ts
+;
 function query_ctrl_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -836,7 +813,6 @@ WHERE $__timeFilter(time_column)
 ORDER BY <time_column> ASC
 `;
 class MysqlQueryCtrl extends sdk.QueryCtrl {
-  /** @ngInject */
   constructor($scope, $injector, templateSrv, uiSegmentSrv) {
     super($scope, $injector);
     this.templateSrv = templateSrv;
@@ -887,7 +863,6 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
     }];
 
     if (!this.target.rawSql) {
-      // special handling when in table panel
       if (this.panelCtrl.panel.type === 'table') {
         this.target.format = 'table';
         this.target.rawSql = 'SELECT 1';
@@ -1017,22 +992,18 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
 
   toggleEditorMode() {
     if (this.target.rawQuery) {
-      app_events/* default.publish */.Z.publish(new events/* ShowConfirmModalEvent */.VJ({
+      app_events.Z.publish(new events.VJ({
         title: 'Warning',
         text2: 'Switching to query builder may overwrite your raw SQL.',
         icon: 'exclamation-triangle',
         yesText: 'Switch',
         onConfirm: () => {
-          // This could be called from React, so wrap in $evalAsync.
-          // Will then either run as part of the current digest cycle or trigger a new one.
           this.$scope.$evalAsync(() => {
             this.target.rawQuery = !this.target.rawQuery;
           });
         }
       }));
     } else {
-      // This could be called from React, so wrap in $evalAsync.
-      // Will then either run as part of the current digest cycle or trigger a new one.
       this.$scope.$evalAsync(() => {
         this.target.rawQuery = !this.target.rawQuery;
       });
@@ -1059,7 +1030,6 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
     this.metricColumnSegment.value = segment.value;
     this.target.metricColumn = 'none';
     const task1 = this.datasource.metricFindQuery(this.metaBuilder.buildColumnQuery('time')).then(result => {
-      // check if time column is still valid
       if (result.length > 0 && !(0,lodash.find)(result, r => r.text === this.target.timeColumn)) {
         const segment = this.uiSegmentSrv.newSegment(result[0].text);
         this.timeColumnSegment.html = segment.html;
@@ -1111,7 +1081,6 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
         }
 
         if (this.whereParts.length >= 1 && this.whereParts[0].def.type === 'macro') {
-          // replace current macro
           this.whereParts[0] = partModel;
         } else {
           this.whereParts.splice(0, 0, partModel);
@@ -1230,7 +1199,6 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
 
       case 'percentile':
       case 'aggregate':
-        // add group by if no group by yet
         if (this.target.group.length === 0) {
           this.addGroup('time', '$__interval');
         }
@@ -1238,7 +1206,6 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
         const aggIndex = this.findAggregateIndex(selectParts);
 
         if (aggIndex !== -1) {
-          // replace current aggregation
           selectParts[aggIndex] = partModel;
         } else {
           selectParts.splice(1, 0, partModel);
@@ -1255,7 +1222,6 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
         const windowIndex = this.findWindowIndex(selectParts);
 
         if (windowIndex !== -1) {
-          // replace current window function
           selectParts[windowIndex] = partModel;
         } else {
           const aggIndex = this.findAggregateIndex(selectParts);
@@ -1279,7 +1245,6 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
     }
 
     if (addAlias) {
-      // set initial alias name to column name
       partModel = mysql_sql_part.create({
         type: 'alias',
         params: [selectParts[0].params[0].replace(/"/g, '')]
@@ -1298,7 +1263,6 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
 
   removeSelectPart(selectParts, part) {
     if (part.def.type === 'column') {
-      // remove all parts of column unless its last column
       if (this.selectParts.length > 1) {
         const modelsIndex = (0,lodash.indexOf)(this.selectParts, selectParts);
         this.selectParts.splice(modelsIndex, 1);
@@ -1316,11 +1280,6 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
       case 'get-param-options':
         {
           switch (part.def.type) {
-            // case 'aggregate':
-            //   return this.datasource
-            //     .metricFindQuery(this.metaBuilder.buildAggregateQuery())
-            //     .then(this.transformToSegments({}))
-            //     .catch(this.handleQueryError.bind(this));
             case 'column':
               return this.datasource.metricFindQuery(this.metaBuilder.buildColumnQuery('value')).then(this.transformToSegments({})).catch(this.handleQueryError.bind(this));
           }
@@ -1394,11 +1353,10 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
     });
 
     if (partType === 'time') {
-      // put timeGroup at start
       this.groupParts.splice(0, 0, partModel);
     } else {
       this.groupParts.push(partModel);
-    } // add aggregates when adding group by
+    } 
 
 
     for (const selectParts of this.selectParts) {
@@ -1424,7 +1382,6 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
 
   removeGroup(part, index) {
     if (part.def.type === 'time') {
-      // remove aggregations
       this.selectParts = (0,lodash.map)(this.selectParts, s => {
         return (0,lodash.filter)(s, part => {
           if (part.def.type === 'aggregate' || part.def.type === 'percentile') {
@@ -1450,7 +1407,6 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
 
             case 'right':
               if (['int', 'bigint', 'double', 'datetime'].indexOf(part.datatype) > -1) {
-                // don't do value lookups for numerical fields
                 return Promise.resolve([]);
               } else {
                 return this.datasource.metricFindQuery(this.metaBuilder.buildValueQuery(part.params[0])).then(this.transformToSegments({
@@ -1483,7 +1439,6 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
 
       case 'action':
         {
-          // remove element
           whereParts.splice(index, 1);
           this.updatePersistedParts();
           this.updateRawSqlAndRefresh();
@@ -1533,7 +1488,6 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
           });
 
           if (this.whereParts.length >= 1 && this.whereParts[0].def.type === 'macro') {
-            // replace current macro
             this.whereParts[0] = partModel;
           } else {
             this.whereParts.splice(0, 0, partModel);
@@ -1599,7 +1553,7 @@ class MysqlQueryCtrl extends sdk.QueryCtrl {
 MysqlQueryCtrl.$inject = ["$scope", "$injector", "templateSrv", "uiSegmentSrv"];
 
 query_ctrl_defineProperty(MysqlQueryCtrl, "templateUrl", 'partials/query.editor.html');
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/mysql/module.ts
+;
 function module_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1615,8 +1569,8 @@ class MysqlConfigCtrl {
 
     module_defineProperty(this, "onPasswordChange", void 0);
 
-    this.onPasswordReset = (0,passwordHandlers/* createResetHandler */.Xr)(this, passwordHandlers/* PasswordFieldEnum.Password */.HX.Password);
-    this.onPasswordChange = (0,passwordHandlers/* createChangeHandler */.wP)(this, passwordHandlers/* PasswordFieldEnum.Password */.HX.Password);
+    this.onPasswordReset = (0,passwordHandlers.Xr)(this, passwordHandlers.HX.Password);
+    this.onPasswordChange = (0,passwordHandlers.wP)(this, passwordHandlers.HX.Password);
   }
 
 }
@@ -1634,7 +1588,6 @@ const module_defaultQuery = `SELECT
   `;
 
 class MysqlAnnotationsQueryCtrl {
-  /** @ngInject */
   constructor($scope) {
     this.annotation = $scope.ctrl.annotation;
     this.annotation.rawQuery = this.annotation.rawQuery || module_defaultQuery;
@@ -1649,6 +1602,6 @@ module_defineProperty(MysqlAnnotationsQueryCtrl, "templateUrl", 'partials/annota
 
 const module_plugin = new src.DataSourcePlugin(MysqlDatasource).setQueryCtrl(MysqlQueryCtrl).setConfigCtrl(MysqlConfigCtrl).setAnnotationQueryCtrl(MysqlAnnotationsQueryCtrl);
 
-/***/ })
+ })
 
 }]);

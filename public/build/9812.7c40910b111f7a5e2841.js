@@ -1,22 +1,15 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[9812],{
 
-/***/ "./.yarn/cache/monaco-editor-npm-0.31.1-d8d5ee78bb-65be40c557.zip/node_modules/monaco-editor/esm/vs/basic-languages/tcl/tcl.js":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./.yarn/cache/monaco-editor-npm-0.31.1-d8d5ee78bb-65be40c557.zip/node_modules/monaco-editor/esm/vs/basic-languages/tcl/tcl.js":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "conf": () => (/* binding */ conf),
-/* harmony export */   "language": () => (/* binding */ language)
-/* harmony export */ });
-/*!-----------------------------------------------------------------------------
- * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.31.1(337587859b1c171314b40503171188b6cea6a32a)
- * Released under the MIT license
- * https://github.com/microsoft/monaco-editor/blob/main/LICENSE.txt
- *-----------------------------------------------------------------------------*/
+ __webpack_require__.d(__webpack_exports__, {
+   "conf": () => ( conf),
+   "language": () => ( language)
+ });
 
-// src/basic-languages/tcl/tcl.ts
 var conf = {
   brackets: [
     ["{", "}"],
@@ -243,6 +236,6 @@ var language = {
 
 
 
-/***/ })
+ })
 
 }]);

@@ -1,30 +1,22 @@
 "use strict";
 (self["webpackChunkgrafana"] = self["webpackChunkgrafana"] || []).push([[7537],{
 
-/***/ "./public/app/plugins/datasource/grafana/module.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/grafana/module.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "plugin": () => (/* binding */ module_plugin)
+  "plugin": () => ( module_plugin)
 });
 
-// EXTERNAL MODULE: ./packages/grafana-data/src/index.ts + 10 modules
 var src = __webpack_require__("./packages/grafana-data/src/index.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js
 var react = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/index.js");
-// EXTERNAL MODULE: ./packages/grafana-runtime/src/index.ts + 8 modules
 var grafana_runtime_src = __webpack_require__("./packages/grafana-runtime/src/index.ts");
-// EXTERNAL MODULE: ./packages/grafana-ui/src/index.ts + 14 modules
 var grafana_ui_src = __webpack_require__("./packages/grafana-ui/src/index.ts");
-// EXTERNAL MODULE: ./public/app/plugins/datasource/grafana/types.ts
 var types = __webpack_require__("./public/app/plugins/datasource/grafana/types.ts");
-// EXTERNAL MODULE: ./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/jsx-runtime.js");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana/components/QueryEditor.tsx
+;
 var _Alert, _Alert2;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -49,15 +41,15 @@ class QueryEditor extends react.PureComponent {
 
     _defineProperty(this, "queryTypes", [{
       label: 'Random Walk',
-      value: types/* GrafanaQueryType.RandomWalk */.hR.RandomWalk,
+      value: types.hR.RandomWalk,
       description: 'Random signal within the selected time range'
     }, {
       label: 'Live Measurements',
-      value: types/* GrafanaQueryType.LiveMeasurements */.hR.LiveMeasurements,
+      value: types.hR.LiveMeasurements,
       description: 'Stream real-time measurements from Grafana'
     }, {
       label: 'List public files',
-      value: types/* GrafanaQueryType.List */.hR.List,
+      value: types.hR.List,
       description: 'Show directory listings for public resources'
     }]);
 
@@ -70,7 +62,7 @@ class QueryEditor extends react.PureComponent {
       onChange(Object.assign({}, query, {
         queryType: sel.value
       }));
-      onRunQuery(); // Reload the channel list
+      onRunQuery(); 
 
       this.loadChannelInfo();
     });
@@ -101,7 +93,7 @@ class QueryEditor extends react.PureComponent {
         fields = item.map(v => v.value);
       } else if (item.value) {
         fields = [item.value];
-      } // When adding the first field, also add time (if it exists)
+      } 
 
 
       if (fields.length === 1 && !((_query$filter = query.filter) !== null && _query$filter !== void 0 && (_query$filter$fields = _query$filter.fields) !== null && _query$filter$fields !== void 0 && _query$filter$fields.length) && query.channel) {
@@ -192,7 +184,7 @@ class QueryEditor extends react.PureComponent {
     _defineProperty(this, "onSaveSearchJSON", rawSearchJSON => {
       try {
         const json = JSON.parse(rawSearchJSON);
-        json.queryType = types/* GrafanaQueryType.Search */.hR.Search;
+        json.queryType = types.hR.Search;
         this.props.onChange(json);
         this.props.onRunQuery();
       } catch (ex) {
@@ -203,7 +195,7 @@ class QueryEditor extends react.PureComponent {
     if (grafana_runtime_src.config.featureToggles.panelTitleSearch) {
       this.queryTypes.push({
         label: 'Search',
-        value: types/* GrafanaQueryType.Search */.hR.Search,
+        value: types.hR.Search,
         description: 'Search for grafana resources'
       });
     }
@@ -252,7 +244,7 @@ class QueryEditor extends react.PureComponent {
   loadFolderInfo() {
     const query = {
       targets: [{
-        queryType: types/* GrafanaQueryType.List */.hR.List,
+        queryType: types.hR.List,
         refId: 'A'
       }]
     };
@@ -303,21 +295,7 @@ class QueryEditor extends react.PureComponent {
     }
 
     const distinctFields = new Set();
-    const fields = channel ? (_channelFields$channe = channelFields[channel]) !== null && _channelFields$channe !== void 0 ? _channelFields$channe : [] : []; // if (data && data.series?.length) {
-    //   for (const frame of data.series) {
-    //     for (const field of frame.fields) {
-    //       if (distinctFields.has(field.name) || !field.name) {
-    //         continue;
-    //       }
-    //       fields.push({
-    //         value: field.name,
-    //         label: field.name,
-    //         description: `(${getFrameDisplayName(frame)} / ${field.type})`,
-    //       });
-    //       distinctFields.add(field.name);
-    //     }
-    //   }
-    // }
+    const fields = channel ? (_channelFields$channe = channelFields[channel]) !== null && _channelFields$channe !== void 0 ? _channelFields$channe : [] : []; 
 
     if (filter !== null && filter !== void 0 && filter.fields) {
       for (const f of filter.fields) {
@@ -338,14 +316,14 @@ class QueryEditor extends react.PureComponent {
       formattedTime = src.rangeUtil.secondsToHms(buffer / 1000);
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)("div", {
         className: "gf-form",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Channel",
           grow: true,
           labelWidth: labelWidth,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
             options: channels,
             value: currentChannel || '',
             onChange: this.onChannelChange,
@@ -357,13 +335,13 @@ class QueryEditor extends react.PureComponent {
             formatCreateLabel: input => `Connect to: ${input}`
           })
         })
-      }), channel && /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), channel && (0,jsx_runtime.jsxs)("div", {
         className: "gf-form",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+        children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Fields",
           grow: true,
           labelWidth: labelWidth,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
             options: fields,
             value: (filter === null || filter === void 0 ? void 0 : filter.fields) || [],
             onChange: this.onFieldNamesChange,
@@ -376,9 +354,9 @@ class QueryEditor extends react.PureComponent {
             isSearchable: true,
             isMulti: true
           })
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+        }), (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Buffer",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
             placeholder: "Auto",
             width: 12,
             defaultValue: formattedTime,
@@ -387,7 +365,7 @@ class QueryEditor extends react.PureComponent {
             spellCheck: false
           })
         })]
-      }), _Alert || (_Alert = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+      }), _Alert || (_Alert = (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
         title: "Grafana Live - Measurements",
         severity: "info",
         children: "This supports real-time event streams in Grafana core. This feature is under heavy development. Expect the interfaces and structures to change as this becomes more production ready."
@@ -417,12 +395,12 @@ class QueryEditor extends react.PureComponent {
       }];
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    return (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
         label: "Path",
         grow: true,
         labelWidth: labelWidth,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
           options: folders,
           value: currentFolder || '',
           onChange: this.onFolderChanged,
@@ -443,7 +421,6 @@ class QueryEditor extends react.PureComponent {
     const emptySearchQuery = {
       query: '*',
       location: '',
-      // general, etc
       ds_uid: '',
       sort: 'score desc',
       tags: [],
@@ -471,17 +448,17 @@ class QueryEditor extends react.PureComponent {
       }
     }
 
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [_Alert2 || (_Alert2 = /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [_Alert2 || (_Alert2 = (0,jsx_runtime.jsx)(grafana_ui_src.Alert, {
         title: "Grafana Search",
         severity: "info",
         children: "This interface to the grafana search API is experimental, and subject to change at any time without notice"
-      })), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+      })), (0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Query",
           grow: true,
           labelWidth: labelWidth,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Input, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Input, {
             placeholder: "Everything",
             defaultValue: (_query$query = query.query) !== null && _query$query !== void 0 ? _query$query : '',
             onKeyDown: this.handleSearchEnterKey,
@@ -489,7 +466,7 @@ class QueryEditor extends react.PureComponent {
             spellCheck: false
           })
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.CodeEditor, {
         height: 300,
         language: "json",
         value: json,
@@ -502,45 +479,35 @@ class QueryEditor extends react.PureComponent {
   }
 
   render() {
-    const query = Object.assign({}, types/* defaultQuery */.wi, this.props.query);
-    return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
+    const query = Object.assign({}, types.wi, this.props.query);
+    return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.InlineFieldRow, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.InlineField, {
           label: "Query type",
           grow: true,
           labelWidth: labelWidth,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+          children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
             options: this.queryTypes,
             value: this.queryTypes.find(v => v.value === query.queryType) || this.queryTypes[0],
             onChange: this.onQueryTypeChange
           })
         })
-      }), query.queryType === types/* GrafanaQueryType.LiveMeasurements */.hR.LiveMeasurements && this.renderMeasurementsQuery(), query.queryType === types/* GrafanaQueryType.List */.hR.List && this.renderListPublicFiles(), query.queryType === types/* GrafanaQueryType.Search */.hR.Search && this.renderSearch()]
+      }), query.queryType === types.hR.LiveMeasurements && this.renderMeasurementsQuery(), query.queryType === types.hR.List && this.renderListPublicFiles(), query.queryType === types.hR.Search && this.renderSearch()]
     });
   }
 
 }
-// EXTERNAL MODULE: ./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js
 var lodash = __webpack_require__("./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/lodash.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/from.js
 var from = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/from.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/merge.js
 var merge = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/merge.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js
 var of = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/observable/of.js");
-// EXTERNAL MODULE: ./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js
 var map = __webpack_require__("./.yarn/cache/rxjs-npm-7.5.5-d0546b1ccb-e034f60805.zip/node_modules/rxjs/dist/esm5/internal/operators/map.js");
-// EXTERNAL MODULE: ./public/app/features/dashboard/state/DashboardMigrator.ts + 2 modules
 var DashboardMigrator = __webpack_require__("./public/app/features/dashboard/state/DashboardMigrator.ts");
-// EXTERNAL MODULE: ./public/app/features/dashboard/services/DashboardSrv.ts
 var DashboardSrv = __webpack_require__("./public/app/features/dashboard/services/DashboardSrv.ts");
-// EXTERNAL MODULE: ./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js + 1 modules
 var emotion_css_esm = __webpack_require__("./.yarn/__virtual__/@emotion-css-virtual-72c314ddb1/0/cache/@emotion-css-npm-11.7.1-25ff8755a7-ac1f56656f.zip/node_modules/@emotion/css/dist/emotion-css.esm.js");
-// EXTERNAL MODULE: ./public/app/core/components/TagFilter/TagFilter.tsx + 1 modules
 var TagFilter = __webpack_require__("./public/app/core/components/TagFilter/TagFilter.tsx");
-// EXTERNAL MODULE: ./public/app/features/annotations/api.ts
 var api = __webpack_require__("./public/app/features/annotations/api.ts");
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana/components/AnnotationQueryEditor.tsx
+;
 
 
 
@@ -552,17 +519,17 @@ var api = __webpack_require__("./public/app/features/annotations/api.ts");
 
 const matchTooltipContent = 'Enabling this returns annotations that match any of the tags specified below';
 
-const tagsTooltipContent = /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+const tagsTooltipContent = (0,jsx_runtime.jsx)("div", {
   children: "Specify a list of tags to match. To specify a key and value tag use `key:value` syntax."
 });
 
 const annotationTypes = [{
   label: 'Dashboard',
-  value: types/* GrafanaAnnotationType.Dashboard */._$.Dashboard,
+  value: types._$.Dashboard,
   description: 'Query for events created on this dashboard and show them in the panels where they where created'
 }, {
   label: 'Tags',
-  value: types/* GrafanaAnnotationType.Tags */._$.Tags,
+  value: types._$.Tags,
   description: 'This will fetch any annotation events that match the tags filter'
 }];
 const limitOptions = [10, 50, 100, 200, 300, 500, 1000, 2000].map(limit => ({
@@ -601,43 +568,43 @@ function AnnotationQueryEditor(_ref) {
 
   const onFormatCreateLabel = input => `Use custom value: ${input}`;
 
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(grafana_ui_src.FieldSet, {
+  return (0,jsx_runtime.jsxs)(grafana_ui_src.FieldSet, {
     className: styles.container,
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+    children: [(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
       label: "Filter by",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         inputId: "grafana-annotations__filter-by",
         options: annotationTypes,
         value: type,
         onChange: onFilterByChange
       })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+    }), (0,jsx_runtime.jsx)(grafana_ui_src.Field, {
       label: "Max limit",
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Select, {
+      children: (0,jsx_runtime.jsx)(grafana_ui_src.Select, {
         inputId: "grafana-annotations__limit",
         width: 16,
         options: limitOptions,
         value: limit,
         onChange: onMaxLimitChange
       })
-    }), type === types/* GrafanaAnnotationType.Tags */._$.Tags && /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+    }), type === types._$.Tags && (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+      children: [(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
         label: "Match any",
         description: matchTooltipContent,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Switch, {
+        children: (0,jsx_runtime.jsx)(grafana_ui_src.Switch, {
           id: "grafana-annotations__match-any",
           value: matchAny,
           onChange: onMatchAnyChange
         })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(grafana_ui_src.Field, {
+      }), (0,jsx_runtime.jsx)(grafana_ui_src.Field, {
         label: "Tags",
         description: tagsTooltipContent,
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)(TagFilter/* TagFilter */.D, {
+        children: (0,jsx_runtime.jsx)(TagFilter.D, {
           allowCustomValue: true,
           formatCreateLabel: onFormatCreateLabel,
           inputId: "grafana-annotations__tags",
           onChange: onTagsChange,
-          tagOptions: api/* getAnnotationTags */.lK,
+          tagOptions: api.lK,
           tags: tags !== null && tags !== void 0 ? tags : []
         })
       })]
@@ -652,7 +619,7 @@ const getStyles = () => {
     `
   };
 };
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana/datasource.ts
+;
 
 
 
@@ -672,14 +639,12 @@ class GrafanaDatasource extends grafana_runtime_src.DataSourceWithBackend {
       prepareAnnotation(json) {
         var _json$target, _json$type, _json$limit, _json$tags, _json$matchAny;
 
-        // Previously, these properties lived outside of target
-        // This should handle migrating them
         json.target = (_json$target = json.target) !== null && _json$target !== void 0 ? _json$target : {
-          type: (_json$type = json.type) !== null && _json$type !== void 0 ? _json$type : types/* GrafanaAnnotationType.Dashboard */._$.Dashboard,
+          type: (_json$type = json.type) !== null && _json$type !== void 0 ? _json$type : types._$.Dashboard,
           limit: (_json$limit = json.limit) !== null && _json$limit !== void 0 ? _json$limit : 100,
           tags: (_json$tags = json.tags) !== null && _json$tags !== void 0 ? _json$tags : [],
           matchAny: (_json$matchAny = json.matchAny) !== null && _json$matchAny !== void 0 ? _json$matchAny : false
-        }; // using spread syntax caused an infinite loop in StandardAnnotationQueryEditor
+        }; 
 
         return json;
       },
@@ -688,7 +653,7 @@ class GrafanaDatasource extends grafana_runtime_src.DataSourceWithBackend {
         let datasource = undefined;
 
         if ((0,lodash.isString)(anno.datasource)) {
-          const ref = (0,DashboardMigrator/* migrateDatasourceNameToRef */.p)(anno.datasource, {
+          const ref = (0,DashboardMigrator.p)(anno.datasource, {
             returnDefaultAsNull: false
           });
 
@@ -701,7 +666,7 @@ class GrafanaDatasource extends grafana_runtime_src.DataSourceWithBackend {
 
         return Object.assign({}, anno, {
           refId: anno.name,
-          queryType: types/* GrafanaQueryType.Annotations */.hR.Annotations,
+          queryType: types.hR.Annotations,
           datasource
         });
       }
@@ -715,12 +680,12 @@ class GrafanaDatasource extends grafana_runtime_src.DataSourceWithBackend {
     const templateSrv = (0,grafana_runtime_src.getTemplateSrv)();
 
     for (const target of request.targets) {
-      if (target.queryType === types/* GrafanaQueryType.Annotations */.hR.Annotations) {
-        return (0,from/* from */.D)(this.getAnnotations({
+      if (target.queryType === types.hR.Annotations) {
+        return (0,from.D)(this.getAnnotations({
           range: request.range,
           rangeRaw: request.range.raw,
           annotation: target,
-          dashboard: (0,DashboardSrv/* getDashboardSrv */.h4)().getCurrent()
+          dashboard: (0,DashboardSrv.h4)().getCurrent()
         }));
       }
 
@@ -728,18 +693,17 @@ class GrafanaDatasource extends grafana_runtime_src.DataSourceWithBackend {
         continue;
       }
 
-      if (target.queryType === types/* GrafanaQueryType.LiveMeasurements */.hR.LiveMeasurements) {
+      if (target.queryType === types.hR.LiveMeasurements) {
         var _request$maxDataPoint, _request$rangeRaw;
 
         let channel = templateSrv.replace(target.channel, request.scopedVars);
         const {
           filter
-        } = target; // Help migrate pre-release channel paths saved in dashboards
-        // NOTE: this should be removed before V8 is released
+        } = target; 
 
         if (channel && channel.startsWith('telegraf/')) {
           channel = 'stream/' + channel;
-          target.channel = channel; // mutate the current query object so it is saved with `stream/` prefix
+          target.channel = channel; 
         }
 
         const addr = (0,src.parseLiveChannelAddress)(channel);
@@ -754,7 +718,7 @@ class GrafanaDatasource extends grafana_runtime_src.DataSourceWithBackend {
 
         if (target.buffer) {
           buffer.maxDelta = target.buffer;
-          buffer.maxLength = buffer.maxLength * 2; //??
+          buffer.maxLength = buffer.maxLength * 2; 
         } else if (((_request$rangeRaw = request.rangeRaw) === null || _request$rangeRaw === void 0 ? void 0 : _request$rangeRaw.to) === 'now') {
           buffer.maxDelta = request.range.to.valueOf() - request.range.from.valueOf();
         }
@@ -767,7 +731,7 @@ class GrafanaDatasource extends grafana_runtime_src.DataSourceWithBackend {
         }));
       } else {
         if (!target.queryType) {
-          target.queryType = types/* GrafanaQueryType.RandomWalk */.hR.RandomWalk;
+          target.queryType = types.hR.RandomWalk;
         }
 
         targets.push(target);
@@ -781,25 +745,24 @@ class GrafanaDatasource extends grafana_runtime_src.DataSourceWithBackend {
     }
 
     if (results.length) {
-      // With a single query just return the results
       if (results.length === 1) {
         return results[0];
       }
 
-      return (0,merge/* merge */.T)(...results);
+      return (0,merge.T)(...results);
     }
 
-    return (0,of.of)(); // nothing
+    return (0,of.of)(); 
   }
 
   listFiles(path) {
     return this.query({
       targets: [{
         refId: 'A',
-        queryType: types/* GrafanaQueryType.List */.hR.List,
+        queryType: types.hR.List,
         path
       }]
-    }).pipe((0,map/* map */.U)(v => {
+    }).pipe((0,map.U)(v => {
       var _v$data$;
 
       const frame = (_v$data$ = v.data[0]) !== null && _v$data$ !== void 0 ? _v$data$ : new src.MutableDataFrame();
@@ -825,20 +788,18 @@ class GrafanaDatasource extends grafana_runtime_src.DataSourceWithBackend {
       matchAny: target.matchAny
     };
 
-    if (target.type === types/* GrafanaAnnotationType.Dashboard */._$.Dashboard) {
-      // if no dashboard id yet return
+    if (target.type === types._$.Dashboard) {
       if (!options.dashboard.id) {
         return Promise.resolve({
           data: []
         });
-      } // filter by dashboard id
+      } 
 
 
-      params.dashboardId = options.dashboard.id; // remove tags filter if any
+      params.dashboardId = options.dashboard.id; 
 
       delete params.tags;
     } else {
-      // require at least one tag
       if (!Array.isArray(target.tags) || target.tags.length === 0) {
         return Promise.resolve({
           data: []
@@ -876,25 +837,22 @@ class GrafanaDatasource extends grafana_runtime_src.DataSourceWithBackend {
   }
 
 }
-;// CONCATENATED MODULE: ./public/app/plugins/datasource/grafana/module.ts
+;
 
 
 
 const module_plugin = new src.DataSourcePlugin(GrafanaDatasource).setQueryEditor(QueryEditor);
 
-/***/ }),
+ }),
 
-/***/ "./public/app/plugins/datasource/grafana/types.ts":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ "./public/app/plugins/datasource/grafana/types.ts":
+ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "_$": () => (/* binding */ GrafanaAnnotationType),
-/* harmony export */   "hR": () => (/* binding */ GrafanaQueryType),
-/* harmony export */   "wi": () => (/* binding */ defaultQuery)
-/* harmony export */ });
-//----------------------------------------------
-// Query
-//----------------------------------------------
+ __webpack_require__.d(__webpack_exports__, {
+   "_$": () => ( GrafanaAnnotationType),
+   "hR": () => ( GrafanaQueryType),
+   "wi": () => ( defaultQuery)
+ });
 let GrafanaQueryType;
 
 (function (GrafanaQueryType) {
@@ -906,13 +864,10 @@ let GrafanaQueryType;
   GrafanaQueryType["Search"] = "search";
 })(GrafanaQueryType || (GrafanaQueryType = {}));
 
-// NOTE, query will have more field!!!
 const defaultQuery = {
   refId: 'A',
   queryType: GrafanaQueryType.RandomWalk
-}; //----------------------------------------------
-// Annotations
-//----------------------------------------------
+}; 
 
 let GrafanaAnnotationType;
 
@@ -921,6 +876,6 @@ let GrafanaAnnotationType;
   GrafanaAnnotationType["Tags"] = "tags";
 })(GrafanaAnnotationType || (GrafanaAnnotationType = {}));
 
-/***/ })
+ })
 
 }]);
