@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
-const { merge } = require('webpack-merge');
+const {merge} = require('webpack-merge');
 
 const common = require('./webpack.common.js');
 
@@ -45,8 +45,19 @@ module.exports = (env = {}) =>
       nodeEnv: 'production',
       minimize: parseInt(env.noMinify, 10) !== 1,
       minimizer: [
-     new TerserPlugin({
-     }),
+        new TerserPlugin({
+          parallel: true,
+          terserOptions: {
+            compress: {
+              drop_console: true,
+              drop_debugger: true,
+            },
+            format: {
+              comments: false,
+            },
+          },
+          extractComments: false,
+        }),
         new CssMinimizerPlugin(),
       ],
     },
