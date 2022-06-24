@@ -156,8 +156,8 @@ compilation-stats.json
 !pkg/services/featuremgmt/toggles_gen.go
 
 # Auto-generated localisation files
-public/locales/_build/
-public/locales/**/*.js
+# public/locales/_build/
+# public/locales/**/*.js
 
 deployment_tools_config.json
 

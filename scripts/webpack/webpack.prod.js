@@ -45,9 +45,8 @@ module.exports = (env = {}) =>
       nodeEnv: 'production',
       minimize: parseInt(env.noMinify, 10) !== 1,
       minimizer: [
-//      new TerserPlugin({
-//        parallel: false,
-//      }),
+     new TerserPlugin({
+     }),
         new CssMinimizerPlugin(),
       ],
     },
